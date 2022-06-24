@@ -1,0 +1,710 @@
+[
+  {
+    "translation": "аптека",
+    "name": "chemist's (shop)",
+    "transcription": "[ˈkemɪsts] [ʃɒp]",
+    "category": "city"
+  },
+  {
+    "translation": "арка",
+    "name": "arch",
+    "transcription": "[ɑːtʃ]",
+    "category": "city"
+  },
+  {
+    "translation": "банк",
+    "name": "bank",
+    "transcription": "[bæŋk]",
+    "category": "city"
+  },
+  {
+    "translation": "бар",
+    "name": "bar",
+    "transcription": "[bɑː]",
+    "category": "city"
+  },
+  {
+    "translation": "бассейн",
+    "name": "swimming pool / baths",
+    "transcription": "[ˈswɪmɪŋ puːl] [bɑːðz]",
+    "category": "city"
+  },
+  {
+    "translation": "библиотека",
+    "name": "library",
+    "transcription": "[ˈlaɪbrəri]",
+    "category": "city"
+  },
+  {
+    "translation": "больница",
+    "name": "hospital",
+    "transcription": "[ˈhɒspɪtl̩]",
+    "category": "city"
+  },
+  {
+    "translation": "булочная",
+    "name": "bakery, baker's (shop)",
+    "transcription": "[ˈbeɪkəri] [ˈbeɪkəz ʃɒp]",
+    "category": "city"
+  },
+  {
+    "translation": "бюро находок",
+    "name": "lost property office",
+    "transcription": "[lɒst ˈprɒpəti ˈɒfɪs]",
+    "category": "city"
+  },
+  {
+    "translation": "витрина",
+    "name": "(shop) window",
+    "transcription": "[ʃɒp ˈwɪndəʊ]",
+    "category": "city"
+  },
+  {
+    "translation": "ворота",
+    "name": "gate(s)",
+    "transcription": "[ɡeɪt ˈes]",
+    "category": "city"
+  },
+  {
+    "translation": "впечатляющий",
+    "name": "impressive",
+    "transcription": "[ɪmˈpresɪv]",
+    "category": "city"
+  },
+  {
+    "translation": "вход",
+    "name": "entrance, way in",
+    "transcription": "[ɪnˈtrɑːns] [ˈweɪ ɪn]",
+    "category": "city"
+  },
+  {
+    "translation": "выбирать / выбрать",
+    "name": "to choose, to select, to pick",
+    "transcription": "[tə tʃuːz] [tə sɪˈlekt] [tə pɪk]",
+    "category": "city"
+  },
+  {
+    "translation": "высококачественный",
+    "name": "high-quality",
+    "transcription": "[haɪ ˈkwɒlɪti]",
+    "category": "city"
+  },
+  {
+    "translation": "выход",
+    "name": "exit, way out",
+    "transcription": "[ˈeksɪt] [ˈweɪ aʊt]",
+    "category": "city"
+  },
+  {
+    "translation": "галерея",
+    "name": "gallery",
+    "transcription": "[ˈɡæləri]",
+    "category": "city"
+  },
+  {
+    "translation": "гастроном",
+    "name": "grocer's / grocery (shop)",
+    "transcription": "[ˈɡrosərz] [ˈɡrəʊsəri ʃɒp]",
+    "category": "city"
+  },
+  {
+    "translation": "гулять / погулять",
+    "name": "to (go for a) walk / stroll",
+    "transcription": "[tə ɡəʊ fər ə wɔːk] [strəʊl]",
+    "category": "city"
+  },
+  {
+    "translation": "движение",
+    "name": "traffic",
+    "transcription": "[ˈtræfɪk]",
+    "category": "city"
+  },
+  {
+    "translation": "делать / сделать покупки",
+    "name": "to shop, to go shopping",
+    "transcription": "[tə ʃɒp] [tə ɡəʊ ˈʃɒpɪŋ]",
+    "category": "city"
+  },
+  {
+    "translation": "денежный автомат",
+    "name": "cash machine / dispenser",
+    "transcription": "[kæʃ məˈʃiːn] [dɪˈspensə]",
+    "category": "city"
+  },
+  {
+    "translation": "деньги",
+    "name": "money",
+    "transcription": "[ˈmʌni]",
+    "category": "city"
+  },
+  {
+    "translation": "дешёвый",
+    "name": "cheap",
+    "transcription": "[tʃiːp]",
+    "category": "city"
+  },
+  {
+    "translation": "дорога",
+    "name": "road",
+    "transcription": "[rəʊd]",
+    "category": "city"
+  },
+  {
+    "translation": "дорогой",
+    "name": "dear (чувства), expensive (стоимость)",
+    "transcription": "[dɪə] [ɪkˈspensɪv]",
+    "category": "city"
+  },
+  {
+    "translation": "дорожный знак",
+    "name": "road sign",
+    "transcription": "[rəʊd saɪn]",
+    "category": "city"
+  },
+  {
+    "translation": "заблудиться",
+    "name": "to get lost, to lose one's way",
+    "transcription": "[tə ˈɡet lɒst] [tə luːz wʌnz ˈweɪ]",
+    "category": "city"
+  },
+  {
+    "translation": "затор",
+    "name": "traffic jam, congestion",
+    "transcription": "[ˈtræfɪk dʒæm] [kənˈdʒestʃən]",
+    "category": "city"
+  },
+  {
+    "translation": "здание",
+    "name": "building",
+    "transcription": "[ˈbɪldɪŋ]",
+    "category": "city"
+  },
+  {
+    "translation": "зоопарк",
+    "name": "zoo",
+    "transcription": "[zuː]",
+    "category": "city"
+  },
+  {
+    "translation": "игрушечный магазин",
+    "name": "toyshop",
+    "transcription": "[ˈtɔɪʃɒp]",
+    "category": "city"
+  },
+  {
+    "translation": "искать",
+    "name": "to look for, search for, to seek",
+    "transcription": "[tə lʊk fɔː] [sɜːtʃ fɔː] [tə siːk]",
+    "category": "city"
+  },
+  {
+    "translation": "касса",
+    "name": "checkout, cash-desk; till, cash register",
+    "transcription": "[ˈtʃekaʊt] [kæʃ desk] [tɪl] [kæʃ ˈredʒɪstə]",
+    "category": "city"
+  },
+  {
+    "translation": "кафе",
+    "name": "cafe / cafe",
+    "transcription": "[ˈkæfeɪ]",
+    "category": "city"
+  },
+  {
+    "translation": "квитанция (чек)",
+    "name": "receipt",
+    "transcription": "[rɪˈsiːt]",
+    "category": "city"
+  },
+  {
+    "translation": "кино",
+    "name": "cinema",
+    "transcription": "[ˈsɪnəmə]",
+    "category": "city"
+  },
+  {
+    "translation": "киоск",
+    "name": "stall",
+    "transcription": "[stɔːl]",
+    "category": "city"
+  },
+  {
+    "translation": "клумба",
+    "name": "flower-bed",
+    "transcription": "[ˈflaʊəbed]",
+    "category": "city"
+  },
+  {
+    "translation": "книжный магазин",
+    "name": "bookshop",
+    "transcription": "[ˈbʊkʃɒp]",
+    "category": "city"
+  },
+  {
+    "translation": "кредитная карточка",
+    "name": "credit card",
+    "transcription": "[ˈkredɪt kɑːd]",
+    "category": "city"
+  },
+  {
+    "translation": "лифт",
+    "name": "lift",
+    "transcription": "[lɪft]",
+    "category": "city"
+  },
+  {
+    "translation": "магазин",
+    "name": "shop",
+    "transcription": "[ʃɒp]",
+    "category": "city"
+  },
+  {
+    "translation": "мелочь",
+    "name": "(small) change",
+    "transcription": "[smɔːl tʃeɪndʒ]",
+    "category": "city"
+  },
+  {
+    "translation": "мечеть",
+    "name": "mosque",
+    "transcription": "[mɒsk]",
+    "category": "city"
+  },
+  {
+    "translation": "монета",
+    "name": "coin",
+    "transcription": "[kɔɪn]",
+    "category": "city"
+  },
+  {
+    "translation": "мост",
+    "name": "bridge",
+    "transcription": "[brɪdʒ]",
+    "category": "city"
+  },
+  {
+    "translation": "музей",
+    "name": "museum",
+    "transcription": "[mjuːˈzɪəm]",
+    "category": "city"
+  },
+  {
+    "translation": "мясной магазин",
+    "name": "butcher's (shop)",
+    "transcription": "[ˈbʊtʃərz ʃɒp]",
+    "category": "city"
+  },
+  {
+    "translation": "на втором этаже",
+    "name": "on the first floor (second storey)",
+    "transcription": "[ɒn ðə ˈfɜːst flɔː] [ˈsekənd ˈstɔːri]",
+    "category": "city"
+  },
+  {
+    "translation": "на первом этаже",
+    "name": "on the ground floor (first storey)",
+    "transcription": "[ɒn ðə ɡraʊnd flɔː] [ˈfɜːst ˈstɔːri]",
+    "category": "city"
+  },
+  {
+    "translation": "налево",
+    "name": "on / to the left",
+    "transcription": "[ɒn] [tə ðə left]",
+    "category": "city"
+  },
+  {
+    "translation": "направо",
+    "name": "on / to the right",
+    "transcription": "[ɒn] [tə ðə raɪt]",
+    "category": "city"
+  },
+  {
+    "translation": "находить/найти",
+    "name": "to find",
+    "transcription": "[tə faɪnd]",
+    "category": "city"
+  },
+  {
+    "translation": "новый",
+    "name": "new",
+    "transcription": "[njuː]",
+    "category": "city"
+  },
+  {
+    "translation": "ночной клуб",
+    "name": "nightclub",
+    "transcription": "[ˈnaɪtklʌb]",
+    "category": "city"
+  },
+  {
+    "translation": "обувной магазин",
+    "name": "shoe shop",
+    "transcription": "[ʃuː ʃɒp]",
+    "category": "city"
+  },
+  {
+    "translation": "памятник",
+    "name": "memorial, monument",
+    "transcription": "[mɪˈmɔːrɪəl] [ˈmɒnjʊmənt]",
+    "category": "city"
+  },
+  {
+    "translation": "парикмахерская",
+    "name": "hairdresser's, hair salon",
+    "transcription": "[ˈheədresəɪz] [heə ˈsælɒn]",
+    "category": "city"
+  },
+  {
+    "translation": "парк",
+    "name": "park",
+    "transcription": "[pɑːk]",
+    "category": "city"
+  },
+  {
+    "translation": "перекрёсток",
+    "name": "crossroads, junction",
+    "transcription": "[ˈkrɒsrəʊdz] [ˈdʒʌŋkʃn̩]",
+    "category": "city"
+  },
+  {
+    "translation": "переход (зебра)",
+    "name": "(pedestrian) crossing (zebra crossing)",
+    "transcription": "[pɪˈdestrɪən ˈkrɒsɪŋ] [ˈzebrə ˈkrɒsɪŋ]",
+    "category": "city"
+  },
+  {
+    "translation": "перейти (через) улицу",
+    "name": "to cross the street / road",
+    "transcription": "[tə krɒs ðə striːt] [rəʊd]",
+    "category": "city"
+  },
+  {
+    "translation": "пешеход",
+    "name": "pedestrian",
+    "transcription": "[pɪˈdestrɪən]",
+    "category": "city"
+  },
+  {
+    "translation": "план города",
+    "name": "town plan, street map",
+    "transcription": "[taʊn plæn] [striːt mæp]",
+    "category": "city"
+  },
+  {
+    "translation": "платить / заплатить (за что)",
+    "name": "to pay (for)",
+    "transcription": "[tə peɪ fɔː]",
+    "category": "city"
+  },
+  {
+    "translation": "платить / заплатить наличными",
+    "name": "to pay (in) cash",
+    "transcription": "[tə peɪ ɪn kæʃ]",
+    "category": "city"
+  },
+  {
+    "translation": "площадь",
+    "name": "(town) square",
+    "transcription": "[taʊn skweə]",
+    "category": "city"
+  },
+  {
+    "translation": "подарок",
+    "name": "present, gift",
+    "transcription": "[prɪˈzent] [ɡɪft]",
+    "category": "city"
+  },
+  {
+    "translation": "подержанный",
+    "name": "second-hand",
+    "transcription": "[ˈsekənd hænd]",
+    "category": "city"
+  },
+  {
+    "translation": "подземный переход",
+    "name": "underpass, subway",
+    "transcription": "[ˈʌndəpɑːs] [ˈsʌbweɪ]",
+    "category": "city"
+  },
+  {
+    "translation": "пожарное депо",
+    "name": "fire station",
+    "transcription": "[ˈfaɪə ˈsteɪʃn̩]",
+    "category": "city"
+  },
+  {
+    "translation": "покупатель",
+    "name": "buyer, purchaser; customer",
+    "transcription": "[ˈbaɪə] [ˈpɜːtʃəsə] [ˈkʌstəmə]",
+    "category": "city"
+  },
+  {
+    "translation": "покупать / купить",
+    "name": "to buy, to purchase",
+    "transcription": "[tə baɪ] [tə ˈpɜːtʃəs]",
+    "category": "city"
+  },
+  {
+    "translation": "получить",
+    "name": "to receive",
+    "transcription": "[tə rɪˈsiːv]",
+    "category": "city"
+  },
+  {
+    "translation": "послать письмо",
+    "name": "to send / post a letter",
+    "transcription": "[tə send]] pəʊst ə ˈletə]",
+    "category": "city"
+  },
+  {
+    "translation": "почта",
+    "name": "post office",
+    "transcription": "[pəʊst ˈɒfɪs]",
+    "category": "city"
+  },
+  {
+    "translation": "почтовый ящик",
+    "name": "postbox, pillar box",
+    "transcription": "[ˈpəʊstbɒks] [ˈpɪlə bɒks]",
+    "category": "city"
+  },
+  {
+    "translation": "прилавок",
+    "name": "counter",
+    "transcription": "[ˈkaʊntə]",
+    "category": "city"
+  },
+  {
+    "translation": "примерочная",
+    "name": "fitting / changing room",
+    "transcription": "[ˈfɪtɪŋ] [ˈtʃeɪndʒɪŋ ruːm]",
+    "category": "city"
+  },
+  {
+    "translation": "примерять",
+    "name": "to try on",
+    "transcription": "[tə traɪ ɒn]",
+    "category": "city"
+  },
+  {
+    "translation": "продавать",
+    "name": "to sell",
+    "transcription": "[tə sel]",
+    "category": "city"
+  },
+  {
+    "translation": "распродажа",
+    "name": "(clearance) sale",
+    "transcription": "[ˈklɪərəns seɪl]",
+    "category": "city"
+  },
+  {
+    "translation": "ресторан",
+    "name": "restaurant",
+    "transcription": "[ˈrestrɒnt]",
+    "category": "city"
+  },
+  {
+    "translation": "рыбный магазин",
+    "name": "fish shop, fishmonger's (shop)",
+    "transcription": "[fɪʃ ʃɒp] [ˈfɪʃmʌŋɡəɪz ʃɒp]",
+    "category": "city"
+  },
+  {
+    "translation": "рынок",
+    "name": "market",
+    "transcription": "[ˈmɑːkɪt]",
+    "category": "city"
+  },
+  {
+    "translation": "светофор",
+    "name": "(set of) traffic lights",
+    "transcription": "[set əv ˈtræfɪk laɪts]",
+    "category": "city"
+  },
+  {
+    "translation": "синагога",
+    "name": "synagogue",
+    "transcription": "[ˈsɪnəɡɒɡ]",
+    "category": "city"
+  },
+  {
+    "translation": "скамья",
+    "name": "bench, seat",
+    "transcription": "[bentʃ] [siːt]",
+    "category": "city"
+  },
+  {
+    "translation": "скидка",
+    "name": "discount, (price) reduction",
+    "transcription": "[ˈdɪskaʊnt] [praɪs rɪˈdʌkʃn̩]",
+    "category": "city"
+  },
+  {
+    "translation": "собор",
+    "name": "cathedral",
+    "transcription": "[kəˈθiːdrəl]",
+    "category": "city"
+  },
+  {
+    "translation": "стадион",
+    "name": "stadium",
+    "transcription": "[ˈsteɪdɪəm]",
+    "category": "city"
+  },
+  {
+    "translation": "статуя",
+    "name": "statue",
+    "transcription": "[ˈstætʃuː]",
+    "category": "city"
+  },
+  {
+    "translation": "стоить",
+    "name": "to cost",
+    "transcription": "[tə kɒst]",
+    "category": "city"
+  },
+  {
+    "translation": "стоянка машин",
+    "name": "car park",
+    "transcription": "[kɑː pɑːk]",
+    "category": "city"
+  },
+  {
+    "translation": "стоянка такси",
+    "name": "taxi-rank",
+    "transcription": "[ˈtæksi ræŋk]",
+    "category": "city"
+  },
+  {
+    "translation": "стоять в очереди",
+    "name": "to queue up (for)",
+    "transcription": "[tə kjuː ʌp fɔː]",
+    "category": "city"
+  },
+  {
+    "translation": "театр",
+    "name": "theatre",
+    "transcription": "[ˈθɪətə]",
+    "category": "city"
+  },
+  {
+    "translation": "торговаться (с кем-л.)",
+    "name": "to bargain / haggle (with)",
+    "transcription": "[tə ˈbɑːɡɪn] [ˈhæɡl̩ wɪð]",
+    "category": "city"
+  },
+  {
+    "translation": "торговый центр",
+    "name": "shopping centre",
+    "transcription": "[ˈʃɒpɪŋ ˈsentə]",
+    "category": "city"
+  },
+  {
+    "translation": "тротуар (мостовая)",
+    "name": "pavement",
+    "transcription": "[ˈpeɪvmənt]",
+    "category": "city"
+  },
+  {
+    "translation": "тупик",
+    "name": "dead end, blind alley",
+    "transcription": "[ded end] [blaɪnd ˈæli]",
+    "category": "city"
+  },
+  {
+    "translation": "угол",
+    "name": "corner",
+    "transcription": "[ˈkɔːnə]",
+    "category": "city"
+  },
+  {
+    "translation": "узкий",
+    "name": "narrow",
+    "transcription": "[ˈnærəʊ]",
+    "category": "city"
+  },
+  {
+    "translation": "улица",
+    "name": "street",
+    "transcription": "[striːt]",
+    "category": "city"
+  },
+  {
+    "translation": "универмаг",
+    "name": "department store",
+    "transcription": "[dɪˈpɑːtmənt stɔː]",
+    "category": "city"
+  },
+  {
+    "translation": "универсам",
+    "name": "supermarket",
+    "transcription": "[ˈsuːpəmɑːkɪt]",
+    "category": "city"
+  },
+  {
+    "translation": "уставать",
+    "name": "to get / grow tired",
+    "transcription": "[tə ˈɡet] [ɡrəʊ ˈtaɪəd]",
+    "category": "city"
+  },
+  {
+    "translation": "фонтан",
+    "name": "fountain",
+    "transcription": "[ˈfaʊntɪn]",
+    "category": "city"
+  },
+  {
+    "translation": "цена",
+    "name": "price, cost",
+    "transcription": "[praɪs] [kɒst]",
+    "category": "city"
+  },
+  {
+    "translation": "церковь",
+    "name": "church",
+    "transcription": "[tʃɜːtʃ]",
+    "category": "city"
+  },
+  {
+    "translation": "цирк",
+    "name": "circus",
+    "transcription": "[ˈsɜːkəs]",
+    "category": "city"
+  },
+  {
+    "translation": "чек (банковский)",
+    "name": "cheque",
+    "transcription": "[tʃek]",
+    "category": "city"
+  },
+  {
+    "translation": "чековая книжка",
+    "name": "chequebook",
+    "transcription": "[ˈtʃekbʊk]",
+    "category": "city"
+  },
+  {
+    "translation": "широкий",
+    "name": "wide, broad",
+    "transcription": "[waɪd] [brɔːd]",
+    "category": "city"
+  },
+  {
+    "translation": "эскалатор",
+    "name": "escalator",
+    "transcription": "[ˈeskəleɪtə]",
+    "category": "city"
+  },
+  {
+    "translation": "этаж",
+    "name": "floor, storey",
+    "transcription": "[flɔː] [ˈstɔːri]",
+    "category": "city"
+  },
+  {
+    "translation": "ювелирный магазин",
+    "name": "jeweller's (shop), jewellery shop",
+    "transcription": "[ˈdʒuːələɪz ʃɒp] [ˈdʒuːəlri ʃɒp]",
+    "category": "city"
+  }
+]

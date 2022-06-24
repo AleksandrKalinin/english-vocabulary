@@ -1,0 +1,182 @@
+[
+  {
+    "translation": "акация",
+    "name": "acacia",
+    "transcription": "[ə'kei∫ə]"
+  },
+  {
+    "translation": "баобаб",
+    "name": "baobab",
+    "transcription": "['beiəubæb]"
+  },
+  {
+    "translation": "берёза",
+    "name": "birch",
+    "transcription": "[bε:t∫]"
+  },
+  {
+    "translation": "бук",
+    "name": "beech",
+    "transcription": "[bi:t∫]"
+  },
+  {
+    "translation": "вяз",
+    "name": "elm",
+    "transcription": "[elm]"
+  },
+  {
+    "translation": "грецкий орех",
+    "name": "walnut",
+    "transcription": "['wo:lnΛt]"
+  },
+  {
+    "translation": "груша",
+    "name": "pear tree",
+    "transcription": "[pεə tri:]"
+  },
+  {
+    "translation": "дуб",
+    "name": "oak",
+    "transcription": "[əuk]"
+  },
+  {
+    "translation": "ель",
+    "name": "spruce",
+    "transcription": "[spru:s]"
+  },
+  {
+    "translation": "ива",
+    "name": "willow",
+    "transcription": "['wiləu]"
+  },
+  {
+    "translation": "инжир , смоковница , фига",
+    "name": "fig",
+    "transcription": "[fig]"
+  },
+  {
+    "translation": "каштан",
+    "name": "chestnut",
+    "transcription": "['t∫esnΛt]"
+  },
+  {
+    "translation": "кедр",
+    "name": "cedar",
+    "transcription": "['si:də]"
+  },
+  {
+    "translation": "кипарис",
+    "name": "cypress",
+    "transcription": "['saiprəs]"
+  },
+  {
+    "translation": "клён",
+    "name": "maple",
+    "transcription": "['meipl]"
+  },
+  {
+    "translation": "лавр",
+    "name": "bay",
+    "transcription": "[bei]"
+  },
+  {
+    "translation": "лиственница",
+    "name": "larch",
+    "transcription": "[la:t∫]"
+  },
+  {
+    "translation": "маслина , олива",
+    "name": "olive",
+    "transcription": "['oliv]"
+  },
+  {
+    "translation": "мирт",
+    "name": "myrtle",
+    "transcription": "['mε:tl]"
+  },
+  {
+    "translation": "можжевельник",
+    "name": "juniper",
+    "transcription": "['d3u:nipə]"
+  },
+  {
+    "translation": "ольха",
+    "name": "alder",
+    "transcription": "['o:ldə]"
+  },
+  {
+    "translation": "орешник",
+    "name": "hazel",
+    "transcription": "['heizəl]"
+  },
+  {
+    "translation": "осина",
+    "name": "aspen",
+    "transcription": "['æspən]"
+  },
+  {
+    "translation": "пальма",
+    "name": "palm",
+    "transcription": "[pa:m]"
+  },
+  {
+    "translation": "пихта",
+    "name": "fir",
+    "transcription": "[fε:], silver fir"
+  },
+  {
+    "translation": "платан",
+    "name": "plane",
+    "transcription": "[plein], sycamore"
+  },
+  {
+    "translation": "рябина",
+    "name": "mountain ash",
+    "transcription": "['mauntin æ∫], rowan"
+  },
+  {
+    "translation": "секвойя",
+    "name": "sequoia",
+    "transcription": "[si'kwoiə]"
+  },
+  {
+    "translation": "сирень",
+    "name": "lilac",
+    "transcription": "['lailək]"
+  },
+  {
+    "translation": "слива",
+    "name": "plum tree",
+    "transcription": "['plΛm tri:]"
+  },
+  {
+    "translation": "сосна",
+    "name": "pine",
+    "transcription": "[pain]"
+  },
+  {
+    "translation": "тис",
+    "name": "yew tree",
+    "transcription": "['ju: tri:]"
+  },
+  {
+    "translation": "тополь",
+    "name": "poplar",
+    "transcription": "['poplə]"
+  },
+  {
+    "translation": "эвкалипт",
+    "name": "eucalyptus",
+    "transcription": "[ju:kə'liptəs]"
+  },
+  {
+    "translation": "яблоня",
+    "name": "apple tree",
+    "transcription": "['æpl tri:]"
+  },
+  {
+    "translation": "ясень",
+    "name": "ash",
+    "transcription": "[æ∫]"
+  }
+]

@@ -1,0 +1,548 @@
+[
+  {
+    "translation": "семья",
+    "name": "family",
+    "transcription": "[ˈfæməli]",
+    "category": "family"
+  },
+  {
+    "translation": "родственник",
+    "name": "relative",
+    "transcription": "[ˈrelətɪv] [rɪˈleɪʃən]",
+    "category": "family"
+  },
+  {
+    "translation": "родители",
+    "name": "parents",
+    "transcription": "[ˈpeərənts]",
+    "category": "family"
+  },
+  {
+    "translation": "мать (мама)",
+    "name": "mother (mom, mum, mama, mamma, mummy, ma)",
+    "transcription": "[ˈmʌðə mɒm] [mʌm] [məˈmɑː] ",
+    "category": "family"
+  },
+  {
+    "translation": "отец (папа)",
+    "name": "father (dad, daddy, papa, pa)",
+    "transcription": "[ˈfɑːðə [dæd] [ˈdædi] [pəˈpɑː] [pɑː]",
+    "category": "family"
+  },
+  {
+    "translation": "жена",
+    "name": "wife",
+    "transcription": "[waɪf]",
+    "category": "family"
+  },
+  {
+    "translation": "муж",
+    "name": "husband",
+    "transcription": "[ˈhʌzbənd]",
+    "category": "family"
+  },
+  {
+    "translation": "супруг(а)",
+    "name": "spouse",
+    "transcription": "[spaʊz]",
+    "category": "family"
+  },
+  {
+    "translation": "ребенок, дети",
+    "name": "child, children",
+    "transcription": "[tʃaɪld] [ˈtʃɪldrən]",
+    "category": "family"
+  },
+  {
+    "translation": "дочь",
+    "name": "daughter",
+    "transcription": "[ˈdɔːtə]",
+    "category": "family"
+  },
+  {
+    "translation": "сын",
+    "name": "son",
+    "transcription": "[sʌn]",
+    "category": "family"
+  },
+  {
+    "translation": "сестра",
+    "name": "sister",
+    "transcription": "[ˈsɪstə]",
+    "category": "family"
+  },
+  {
+    "translation": "брат",
+    "name": "brother",
+    "transcription": "[ˈbrʌðə]",
+    "category": "family"
+  },
+  {
+    "translation": "единственный ребенок",
+    "name": "only child",
+    "transcription": "[ˈəʊnli tʃaɪld]",
+    "category": "family"
+  },
+  {
+    "translation": "близнец",
+    "name": "twin",
+    "transcription": "[twɪn]",
+    "category": "family"
+  },
+  {
+    "translation": "близнецы, двойняшки",
+    "name": "twins",
+    "transcription": "[twɪnz]",
+    "category": "family"
+  },
+  {
+    "translation": "брат-близнец",
+    "name": "twin brother",
+    "transcription": "[twɪn ˈbrʌðə]",
+    "category": "family"
+  },
+  {
+    "translation": "сестра-близнец",
+    "name": "twin sister",
+    "transcription": "[twɪn ˈsɪstə]",
+    "category": "family"
+  },
+  {
+    "translation": "однояйцевые близнецы",
+    "name": "identical twins",
+    "transcription": "[aɪˈdentɪkəl twɪnz]",
+    "category": "family"
+  },
+  {
+    "translation": "тройняшки",
+    "name": "triplets",
+    "transcription": "[ˈtrɪpləts]",
+    "category": "family"
+  },
+  {
+    "translation": "бабушка и дедушка",
+    "name": "grandparents",
+    "transcription": "[ˈɡrænpeərənts]",
+    "category": "family"
+  },
+  {
+    "translation": "бабушка",
+    "name": "grandmother (grandma, granny, grandmamma)",
+    "transcription": "[ˈɡræn ˌmʌðə ˈɡrænmɑː] ",
+    "category": "family"
+  },
+  {
+    "translation": "[ˈɡræni] [ˈɡrænməˌmɑː]",
+    "category": "family"
+  },
+  {
+    "translation": "дедушка",
+    "name": "grandfather (grandpa, granddad, grandpapa, gran-dad)",
+    "transcription": "[ˈɡrænfɑːðə ˈɡrænpɑː] ",
+    "category": "family"
+  },
+  {
+    "translation": "[ˈɡrændæd] [ˈɡrænpəˌpɑː] ",
+    "category": "family"
+  },
+  {
+    "translation": "[ˈɡrændæd]",
+    "category": "family"
+  },
+  {
+    "translation": "внуки",
+    "name": "grandchildren",
+    "transcription": "[ˈɡræntʃɪldrən]",
+    "category": "family"
+  },
+  {
+    "translation": "внучка",
+    "name": "granddaughter",
+    "transcription": "[ˈɡrændɔːtə]",
+    "category": "family"
+  },
+  {
+    "translation": "внук",
+    "name": "grandson",
+    "transcription": "[ˈɡrænsʌn]",
+    "category": "family"
+  },
+  {
+    "translation": "прабабушка",
+    "name": "great-grandmother",
+    "transcription": "[ˈɡreɪt ˈɡræn ˌmʌðə]",
+    "category": "family"
+  },
+  {
+    "translation": "прадедушка",
+    "name": "great-grandfather",
+    "transcription": "[ˈɡreɪtˈɡrændˌfɑːðə]",
+    "category": "family"
+  },
+  {
+    "translation": "прабабушка и прадедушка",
+    "name": "great-grandparents",
+    "transcription": "[ˈɡreɪt ˈɡrænpeərənts]",
+    "category": "family"
+  },
+  {
+    "translation": "правнуки",
+    "name": "great-grandchildren",
+    "transcription": "[ˈɡreɪt ˈɡræntʃɪldrən]",
+    "category": "family"
+  },
+  {
+    "translation": "тётя",
+    "name": "aunt",
+    "transcription": "[ɑːnt]",
+    "category": "family"
+  },
+  {
+    "translation": "дядя",
+    "name": "uncle",
+    "transcription": "[ˈʌŋkəl]",
+    "category": "family"
+  },
+  {
+    "translation": "крестный (отец)",
+    "name": "godfather",
+    "transcription": "[ˈɡɒdfɑːðə]",
+    "category": "family"
+  },
+  {
+    "translation": "крестная (мать)",
+    "name": "godmother",
+    "transcription": "[ˈɡɒdmʌðə]",
+    "category": "family"
+  },
+  {
+    "translation": "отчим, приемный отец",
+    "name": "stepfather",
+    "transcription": "[ˈstepfɑːðə]",
+    "category": "family"
+  },
+  {
+    "translation": "мачеха, приемная мать",
+    "name": "stepmother",
+    "transcription": "[ˈstepmʌðə]",
+    "category": "family"
+  },
+  {
+    "translation": "сводный брат",
+    "name": "stepbrother",
+    "transcription": "[ˈstep ˌbrʌðə]",
+    "category": "family"
+  },
+  {
+    "translation": "сводная сестра",
+    "name": "stepsister",
+    "transcription": "[ˈstepsɪstə]",
+    "category": "family"
+  },
+  {
+    "translation": "брат по одному из родителей",
+    "name": "half-brother",
+    "transcription": "[ˈhɑːf ˌbrʌðə]",
+    "category": "family"
+  },
+  {
+    "translation": "сестра по одному из родителей",
+    "name": "half-sister",
+    "transcription": "[ˈhɑːf sɪstə]",
+    "category": "family"
+  },
+  {
+    "translation": "приемный, усыновленный сын",
+    "name": "adopted son",
+    "transcription": "[əˈdɒptɪd sʌn]",
+    "category": "family"
+  },
+  {
+    "translation": "приемная, удочеренная дочь",
+    "name": "adopted daughter",
+    "transcription": "[əˈdɒptɪd ˈdɔːtə]",
+    "category": "family"
+  },
+  {
+    "translation": "приемный ребенок",
+    "name": "adopted child",
+    "transcription": "[əˈdɒptɪd tʃaɪld]",
+    "category": "family"
+  },
+  {
+    "translation": "патронатная семья, приемная семья",
+    "name": "foster family",
+    "transcription": "[ˈfɒstə ˈfæməli]",
+    "category": "family"
+  },
+  {
+    "translation": "приемный отец",
+    "name": "foster father",
+    "transcription": "[ˈfɒstə ˈfɑːðə]",
+    "category": "family"
+  },
+  {
+    "translation": "приемная мать",
+    "name": "foster mother",
+    "transcription": "[ˈfɒstə ˈmʌðə]",
+    "category": "family"
+  },
+  {
+    "translation": "приемные родители",
+    "name": "foster parents",
+    "transcription": "[ˈfɒstə ˈpeərənts]",
+    "category": "family"
+  },
+  {
+    "translation": "приемный сын",
+    "name": "foster son",
+    "transcription": "[ˈfɒstə sʌn]",
+    "category": "family"
+  },
+  {
+    "translation": "приемная дочь",
+    "name": "foster daughter",
+    "transcription": "[ˈfɒstə ˈdɔːtə]",
+    "category": "family"
+  },
+  {
+    "translation": "приемный ребенок",
+    "name": "foster child",
+    "transcription": "[ˈfɒstə tʃaɪld]",
+    "category": "family"
+  },
+  {
+    "translation": "неполная семья (с одним родителем)",
+    "name": "single-parent family",
+    "transcription": "[ˈsɪŋɡəl ˈpeərənt ˈfæməli]",
+    "category": "family"
+  },
+  {
+    "translation": "родня",
+    "name": "the kin, the folks",
+    "transcription": "[ðə kɪn] [ðə fəʊks]",
+    "category": "family"
+  },
+  {
+    "translation": "племянница",
+    "name": "niece",
+    "transcription": "[niːs]",
+    "category": "family"
+  },
+  {
+    "translation": "племянник",
+    "name": "nephew",
+    "transcription": "[ˈnevjuː]",
+    "category": "family"
+  },
+  {
+    "translation": "двоюродный брат",
+    "name": "cousin (male)",
+    "transcription": "[ˈkʌzən meɪl]",
+    "category": "family"
+  },
+  {
+    "translation": "двоюродная сестра",
+    "name": "cousin (female)",
+    "transcription": "[ˈkʌzən ˈfiːmeɪl]",
+    "category": "family"
+  },
+  {
+    "translation": "двоюродный брат (сестра), кузен (кузина)",
+    "name": "first cousin",
+    "transcription": "[ˈfɜːst ˈkʌzən]",
+    "category": "family"
+  },
+  {
+    "translation": "троюродный брат (сестра)",
+    "name": "second cousin",
+    "transcription": "[ˈsekənd ˈkʌzən]",
+    "category": "family"
+  },
+  {
+    "translation": "четвероюродный брат (сестра)",
+    "name": "third cousin",
+    "transcription": "[ˈθɜːd ˈkʌzən]",
+    "category": "family"
+  },
+  {
+    "translation": "родня со стороны мужа или жены",
+    "name": "in-laws",
+    "transcription": "[ˈɪn lɔːz]",
+    "category": "family"
+  },
+  {
+    "translation": "свекровь",
+    "name": "mother-in-law (husband's mother)",
+    "transcription": "[ˈmʌðərɪnˌlɔː ˈhəzbəndz ˈmʌðə]",
+    "category": "family"
+  },
+  {
+    "translation": "свёкор",
+    "name": "father-in-law (husband's father)",
+    "transcription": "[ˈfɑːðər ɪnˌlɔː ˈhəzbəndz ˈfɑːðə]",
+    "category": "family"
+  },
+  {
+    "translation": "тёща",
+    "name": "mother-in-law (wife's mother)",
+    "transcription": "[ˈmʌðərɪnˌlɔː waɪfs ˈmʌðə]",
+    "category": "family"
+  },
+  {
+    "translation": "тесть",
+    "name": "father-in-law (wife's father)",
+    "transcription": "[ˈfɑːðər ɪnˌlɔː waɪfs ˈfɑːðə]",
+    "category": "family"
+  },
+  {
+    "translation": "невестка, сноха",
+    "name": "daughter-in-law",
+    "transcription": "[ˈdɔːtərɪnˌlɔː]",
+    "category": "family"
+  },
+  {
+    "translation": "зять",
+    "name": "son-in-law",
+    "transcription": "[ˈsʌnɪnˌlɔː]",
+    "category": "family"
+  },
+  {
+    "translation": "шурин, свояк, зять, деверь",
+    "name": "brother-in-law",
+    "transcription": "[ˈbrʌðərɪnˌlɔː]",
+    "category": "family"
+  },
+  {
+    "translation": "свояченица, золовка, невестка",
+    "name": "sister-in-law",
+    "transcription": "[ˈsɪstərɪnˌlɔː]",
+    "category": "family"
+  },
+  {
+    "translation": "семейное положение",
+    "name": "marital status",
+    "transcription": "[ˈmærɪtəl ˈsteɪtəs]",
+    "category": "family"
+  },
+  {
+    "translation": "холостой, неженатый, незамужняя",
+    "name": "single",
+    "transcription": "[ˈsɪŋɡəl]",
+    "category": "family"
+  },
+  {
+    "translation": "женатый, замужняя",
+    "name": "married",
+    "transcription": "[ˈmærɪd]",
+    "category": "family"
+  },
+  {
+    "translation": "брак",
+    "name": "marriage",
+    "transcription": "[ˈmærɪdʒ]",
+    "category": "family"
+  },
+  {
+    "translation": "помолвка",
+    "name": "engagement",
+    "transcription": "[ɪnˈɡeɪdʒmənt]",
+    "category": "family"
+  },
+  {
+    "translation": "помолвленный, обрученный",
+    "name": "engaged",
+    "transcription": "[ɪnˈɡeɪdʒd]",
+    "category": "family"
+  },
+  {
+    "translation": "развод",
+    "name": "divorce",
+    "transcription": "[dɪˈvɔːs]",
+    "category": "family"
+  },
+  {
+    "translation": "разведенный",
+    "name": "divorced",
+    "transcription": "[dɪˈvɔːst]",
+    "category": "family"
+  },
+  {
+    "translation": "бывший муж",
+    "name": "ex-husband",
+    "transcription": "[ˈeks ˈhʌzbənd]",
+    "category": "family"
+  },
+  {
+    "translation": "бывшая жена",
+    "name": "ex-wife",
+    "transcription": "[ˈeks waɪf]",
+    "category": "family"
+  },
+  {
+    "translation": "расставшиеся, не разведенные, но не проживающие одной семьей",
+    "name": "separated",
+    "transcription": "[ˈsepəreɪtɪd]",
+    "category": "family"
+  },
+  {
+    "translation": "вдова",
+    "name": "widow",
+    "transcription": "[ˈwɪdəʊ]",
+    "category": "family"
+  },
+  {
+    "translation": "вдовец",
+    "name": "widower",
+    "transcription": "[ˈwɪdəʊə]",
+    "category": "family"
+  },
+  {
+    "translation": "подружка, невеста",
+    "name": "girlfriend",
+    "transcription": "[ˈɡɜːlfrend]",
+    "category": "family"
+  },
+  {
+    "translation": "друг, парень, ухажер",
+    "name": "boyfriend",
+    "transcription": "[ˈbɔɪfrend]",
+    "category": "family"
+  },
+  {
+    "translation": "любовник, любовница",
+    "name": "lover",
+    "transcription": "[ˈlʌvə]",
+    "category": "family"
+  },
+  {
+    "translation": "ухажер, жених, подружка, невеста, обрученный",
+    "name": "fiance",
+    "transcription": "[fiˈɒnseɪ]",
+    "category": "family"
+  },
+  {
+    "translation": "свадьба",
+    "name": "wedding",
+    "transcription": "[ˈwedɪŋ]",
+    "category": "family"
+  },
+  {
+    "translation": "невеста на свадьбе",
+    "name": "bride",
+    "transcription": "[braɪd]",
+    "category": "family"
+  },
+  {
+    "translation": "жених на свадьбе",
+    "name": "(bride)groom",
+    "transcription": "[braɪd ɡruːm]",
+    "category": "family"
+  },
+  {
+    "translation": "медовый месяц",
+    "name": "honeymoon",
+    "transcription": "[ˈhʌnɪmuːn]",
+    "category": "family"
+  }
+]

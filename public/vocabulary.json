@@ -1,0 +1,382 @@
+[
+  {
+    "id": 0,
+    "name": "ubiquitous",
+    "translation": "вездесущий",
+    "meaning": "present, appearing, or found everywhere",
+    "image": "data/ubiquitos.jpg",
+    "date": "Sun, 24 Feb 2019 12:47:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 1,
+    "name": "alacrity",
+    "translation": "живость",
+    "meaning": "brisk and cheerful readiness",
+    "image": "data/alacrity.jpg",
+    "date": "Sun, 24 Feb 2019 13:47:31 GMT",
+    "category": "animals"
+  },
+  {
+    "id": 2,
+    "name": "influenza",
+    "translation": "грипп",
+    "meaning": "a highly contagious viral infection of the respiratory passages causing fever, severe aching, and catarrh, and often occurring in epidemics.",
+    "image": "data/influenza.jpg",
+    "date": "Sun, 15 Feb 2018 17:47:31 GMT",
+    "category": "animals"
+  },
+  {
+    "id": 3,
+    "name": "miserable",
+    "translation": "несчастный",
+    "meaning": "wretchedly unhappy or uncomfortable",
+    "image": "data/miserable.jpg",
+    "date": "Sun, 21 Feb 2019 17:47:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 4,
+    "name": "sorrowful",
+    "translation": "скорбный",
+    "meaning": "feeling or showing grief",
+    "image": "data/sorrowful.jpg",
+    "date": "Sun, 22 Feb 2019 17:47:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 5,
+    "name": "mother",
+    "translation": "мать",
+    "meaning": "a woman in relation to a child or children to whom she has given birth",
+    "image": "data/mother.jpg",
+    "date": "Sun, 27 Feb 2017 17:47:31 GMT",
+    "category": "emotions"
+  },
+  {
+    "id": 6,
+    "name": "lemon",
+    "translation": "лимон",
+    "meaning": "a yellow, oval citrus fruit with thick skin and fragrant, acidic juice",
+    "image": "data/lemon.jpg",
+    "date": "Sun, 24 Feb 2019 11:47:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 7,
+    "name": "honey",
+    "translation": "мед",
+    "meaning": "a sweet, sticky, yellowish-brown fluid made by bees and other insects from nectar collected from flowers",
+    "image": "data/honey.jpg",
+    "date": "Sun, 14 Feb 2015 17:47:31 GMT",
+    "category": "emotions"
+  },
+  {
+    "id": 8,
+    "name": "liquid",
+    "translation": "жидкий",
+    "meaning": "having a consistency like that of water or oil, i.e., flowing freely but of constant volume",
+    "image": "data/liquid.jpg",
+    "date": "Sun, 28 Feb 2013 17:47:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 9,
+    "name": "cheetah",
+    "translation": "гепард",
+    "meaning": "a large spotted cat found in Africa and parts of Asia. It is the fastest animal on land",
+    "image": "data/cheetah.jpg",
+    "date": "Sun, 24 Feb 2019 17:17:31 GMT",
+    "category": "emotions"
+  }, 
+  {
+    "id": 10,
+    "name": "pelican",
+    "translation": "пеликан",
+    "meaning": "a large gregarious waterbird with a long bill, an extensible throat pouch for scooping up fish, and mainly white or gray plumage",
+    "image": "data/pelican.jpg",
+    "date": "Sun, 16 Feb 2016 17:47:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 11,
+    "name": "engineer",
+    "translation": "инженер",
+    "meaning": "a person who designs, builds, or maintains engines, machines, or public works.",
+    "image": "data/engineer.jpg",
+    "date": "Sun, 22 Feb 2019 17:37:31 GMT",
+    "category": "emotions"
+  },
+  {
+    "id": 12,
+    "name": "adulation",
+    "translation": "низкопоклонство",
+    "meaning": "obsequious flattery; excessive admiration or praise",
+    "image": "data/adulation.jpg",
+    "date": "Sun, 14 Feb 2019 07:47:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 13,
+    "name": "ecstatic",
+    "translation": "восторженный",
+    "meaning": "feeling or expressing overwhelming happiness or joyful excitement",
+    "image": "data/ecstatic.jpg",
+    "date": "Sun, 24 Feb 2017 13:47:31 GMT",
+    "category": "emotions"
+  },
+  {
+    "id": 14,
+    "name": "tiger",
+    "translation": "тигр",
+    "meaning": "a very large solitary cat with a yellow-brown coat striped with black, native to the forests of Asia but becoming increasingly rare",
+    "image": "data/tiger.jpg",
+    "date": "Sun, 22 Feb 2019 17:43:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 15,
+    "name": "crow",
+    "translation": "ворон",
+    "meaning": "a large perching bird with mostly glossy black plumage, a heavy bill, and a raucous voice.",
+    "image": "data/crow.jpg",
+    "date": "Sun, 24 Feb 2018 17:41:31 GMT",
+    "category": "animals"
+  },
+  {
+    "id": 16,
+    "name": "knight",
+    "translation": "рыцарь",
+    "meaning": "a man who served his sovereign or lord as a mounted soldier in armor",
+    "image": "data/knight.jpg",
+    "date": "Sun, 28 Feb 2018 14:47:31 GMT",
+    "category": "emotions"
+  },
+  {
+    "id": 17,
+    "name": "plumber",
+    "translation": "сантехник",
+    "meaning": "a person who installs and repairs the pipes and fittings of water supply, sanitation, or heating systems",
+    "image": "data/plumber.jpg",
+    "date": "Sun, 24 Feb 2015 17:47:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 18,
+    "name": "programmer",
+    "translation": "программист",
+    "meaning": "a person who writes computer programs.",
+    "image": "data/programmer.jpg",
+    "date": "Sun, 24 Feb 2017 17:47:31 GMT",
+    "category": "animals"
+  },
+  {
+    "id": 19,
+    "name": "infantry",
+    "translation": "пехота",
+    "meaning": "soldiers marching or fighting on foot; foot soldiers collectively",
+    "image": "data/infantry.jpg",
+    "date": "Sun, 21 Feb 2019 18:27:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 20,
+    "name": "kettle",
+    "translation": "чайник",
+    "meaning": "a vessel, usually made of metal and with a handle, used for boiling liquids or cooking foods",
+    "image": "data/kettle.jpg",
+    "date": "Sun, 21 Feb 2017 04:47:38 GMT",
+    "category": "animals"
+  },
+  {
+    "id": 21,
+    "name": "fork",
+    "translation": "вилка",
+    "meaning": "an implement with two or more prongs used for lifting food to the mouth or holding it when cutting",
+    "image": "data/fork.jpg",
+    "date": "Sun, 21 Feb 2014 15:47:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 22,
+    "name": "flexibility",
+    "translation": "гибкость",
+    "meaning": "the quality of bending easily without breaking",
+    "image": "data/flexibility.jpg",
+    "date": "Sun, 22 Feb 2017 14:47:31 GMT",
+    "category": "animals"
+  },
+  {
+    "id": 23,
+    "name": "despondent",
+    "translation": "подавленный",
+    "meaning": "in low spirits from loss of hope or courage",
+    "image": "data/despondent.jpg",
+    "date": "Sun, 21 Feb 2016 15:41:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 24,
+    "name": "bully",
+    "translation": "хулиган",
+    "meaning": "a person who uses strength or power to harm or intimidate those who are weaker.",
+    "image": "data/bully.jpg",
+    "date": "Sun, 22 Feb 2016 17:41:31 GMT",
+    "category": "emotions"
+  },
+  {
+    "id": 25,
+    "name": "pincers",
+    "translation": "клешни",
+    "meaning": "a tool made of two pieces of metal bearing blunt concave jaws that are arranged like the blades of scissors, used for gripping and pulling things",
+    "image": "data/pincers.jpg",
+    "date": "Sun, 12 Feb 2017 17:40:31 GMT",
+    "category": "emotions"
+  },
+  {
+    "id": 26,
+    "name": "gullible",
+    "translation": "доверчивый",
+    "meaning": "easily persuaded to believe something; credulous",
+    "image": "data/gullible.jpg",
+    "date": "Sun, 21 Feb 2019 17:40:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 27,
+    "name": "guitar",
+    "translation": "гитара",
+    "meaning": "a stringed musical instrument with a fretted fingerboard, typically incurved sides, and six or twelve strings, played by plucking or strumming with the fingers or a plectrum.",
+    "image": "data/guitar.jpg",
+    "date": "Sun, 18 Feb 2014 17:40:31 GMT",
+    "category": "emotions"
+  },
+  {
+    "id": 28,
+    "name": "pineapple",
+    "translation": "ананас",
+    "meaning": "a large juicy tropical fruit consisting of aromatic edible yellow flesh surrounded by a tough segmented skin and topped with a tuft of stiff leaves",
+    "image": "data/pineapple.jpg",
+    "date": "Sun, 12 Feb 2018 13:47:31 GMT",
+    "category": "jobs"
+  },
+  {
+    "id": 29,
+    "name": "bias",
+    "translation": "предвзятость",
+    "meaning": "prejudice in favor of or against one thing, person, or group compared with another, usually in a way considered to be unfair",
+    "image": "data/bias.jpg",
+    "date": "Sun, 23 Feb 2018 13:47:31 GMT",
+    "category": "emotions"
+  },
+  {
+    "name": "sack",
+    "transcription": "[sxk]",
+    "translation": "мешок; v- (редко) класть в мешок; выгонять с работы",
+    "category": "common",
+    "id": 3301,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  },
+  {
+    "name": "sad",
+    "transcription": "[sxd]",
+    "translation": "печальный, грустный.",
+    "category": "common",
+    "id": 3302,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  },
+  {
+    "name": "safe",
+    "transcription": "[seIf]",
+    "translation": "безопасный; надежный; сейф; safely- adv безопасно; safety- n безопасность.",
+    "category": "common",
+    "id": 3303,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  },
+  {
+    "name": "sail",
+    "transcription": "[seIl]",
+    "translation": "парус; плавание (на кораб.); v- плыть (на кораб.); парить (в возд.).",
+    "category": "common",
+    "id": 3304,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  },
+  {
+    "name": "sailor",
+    "transcription": "['seIlq]",
+    "translation": "моряк, матрос.",
+    "category": "common",
+    "id": 3305,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  },
+  {
+    "name": "sake",
+    "transcription": "[seIk]",
+    "translation": "for the ~ of, for smb.'s ~ для/ради кого-либо.",
+    "category": "common",
+    "id": 3306,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  },
+  {
+    "name": "sale",
+    "transcription": "[seIl]",
+    "translation": "продажа, распродажа.",
+    "category": "common",
+    "id": 3307,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  },
+  {
+    "name": "same",
+    "transcription": "[seIm]",
+    "translation": "тот же самый.",
+    "category": "common",
+    "id": 3308,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  },
+  {
+    "name": "sand",
+    "transcription": "[sxnd]",
+    "translation": "песок.",
+    "category": "common",
+    "id": 3309,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  },
+  {
+    "name": "sandwich",
+    "transcription": "['sxnwIG]",
+    "translation": "сандвич, бутерброд.",
+    "category": "common",
+    "id": 3310,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  },
+  {
+    "name": "satisfy",
+    "transcription": "['sxtIsfaI]",
+    "translation": "v- удовлетворять; доставлять удовольствие; соответствовать; satisfied также удовлетворенный и т.п.",
+    "category": "common",
+    "id": 3311,
+    "date": "Sun, 17 Mar 2019 16:50:49 GMT",
+    "meaning": "just a random meaning",
+    "image": "data/ubiquitos.jpg"
+  }                        
+ ] 

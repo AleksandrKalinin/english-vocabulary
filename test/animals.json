@@ -1,0 +1,686 @@
+[
+  {
+    "name": "ant",
+    "transcription": "[ænt]",
+    "translation": "муравей",
+    "category": "animals"
+  },
+  {
+    "name": "antelope",
+    "transcription": "[ˈæntɪləʊp]",
+    "translation": "антилопа",
+    "category": "animals"
+  },
+  {
+    "name": "badger",
+    "transcription": "[ˈbædʒə]",
+    "translation": "барсук",
+    "category": "animals"
+  },
+  {
+    "name": "bat",
+    "transcription": "[bæt]",
+    "translation": "летучая мышь",
+    "category": "animals"
+  },
+  {
+    "name": "bear",
+    "transcription": "[beə]",
+    "translation": "медведь",
+    "category": "animals"
+  },
+  {
+    "name": "beaver",
+    "transcription": "[ˈbiːvə]",
+    "translation": "бобр",
+    "category": "animals"
+  },
+  {
+    "name": "bee",
+    "transcription": "[biː]",
+    "translation": "пчела",
+    "category": "animals"
+  },
+  {
+    "name": "beetle",
+    "transcription": "[ˈbiːtl̩]",
+    "translation": "жук",
+    "category": "animals"
+  },
+  {
+    "name": "blackbird",
+    "transcription": "[ˈblækbɜːd]",
+    "translation": "дрозд",
+    "category": "animals"
+  },
+  {
+    "name": "budgie",
+    "transcription": "[ˈbʌdʒi]",
+    "translation": "волнистый попугайчик",
+    "category": "animals"
+  },
+  {
+    "name": "bug",
+    "transcription": "[bʌɡ]",
+    "translation": "клоп",
+    "category": "animals"
+  },
+  {
+    "name": "bull",
+    "transcription": "[bʊl]",
+    "translation": "бык",
+    "category": "animals"
+  },
+  {
+    "name": "butterfly",
+    "transcription": "[ˈbʌtəflaɪ]",
+    "translation": "бабочка",
+    "category": "animals"
+  },
+  {
+    "name": "buzzard",
+    "transcription": "[ˈbʌzəd]",
+    "translation": "канюк",
+    "category": "animals"
+  },
+  {
+    "name": "calf",
+    "transcription": "[kɑːf]",
+    "translation": "теленок",
+    "category": "animals"
+  },
+  {
+    "name": "canary",
+    "transcription": "[kəˈneəri]",
+    "translation": "канарейка",
+    "category": "animals"
+  },
+  {
+    "name": "cat",
+    "transcription": "[kæt]",
+    "translation": "кот",
+    "category": "animals"
+  },
+  {
+    "name": "caterpillar",
+    "transcription": "[ˈkætəpɪlə]",
+    "translation": "гусеница",
+    "category": "animals"
+  },
+  {
+    "name": "chicken",
+    "transcription": "[ˈtʃɪkɪn]",
+    "translation": "цыпленок",
+    "category": "animals"
+  },
+  {
+    "name": "cock",
+    "transcription": "[ˈkɒk]",
+    "translation": "петух",
+    "category": "animals"
+  },
+  {
+    "name": "cockroach",
+    "transcription": "[ˈkɒkrəʊtʃ]",
+    "translation": "таракан",
+    "category": "animals"
+  },
+  {
+    "name": "cow",
+    "transcription": "[kaʊ]",
+    "translation": "корова",
+    "category": "animals"
+  },
+  {
+    "name": "crane",
+    "transcription": "[kreɪn]",
+    "translation": "журавль",
+    "category": "animals"
+  },
+  {
+    "name": "crocodile",
+    "transcription": "[ˈkrɒkədaɪl]",
+    "translation": "крокодил",
+    "category": "animals"
+  },
+  {
+    "name": "crow",
+    "transcription": "[krəʊ]",
+    "translation": "ворона",
+    "category": "animals"
+  },
+  {
+    "name": "cuckoo",
+    "transcription": "[ˈkʊkuː]",
+    "translation": "кукушка",
+    "category": "animals"
+  },
+  {
+    "name": "deer",
+    "transcription": "[dɪə]",
+    "translation": "олень",
+    "category": "animals"
+  },
+  {
+    "name": "dog",
+    "transcription": "[dɒɡ]",
+    "translation": "собака",
+    "category": "animals"
+  },
+  {
+    "name": "donkey",
+    "transcription": "[ˈdɒŋki]",
+    "translation": "осел",
+    "category": "animals"
+  },
+  {
+    "name": "duck",
+    "transcription": "[dʌk]",
+    "translation": "утка",
+    "category": "animals"
+  },
+  {
+    "name": "duckling",
+    "transcription": "[ˈdʌkl̩ɪŋ]",
+    "translation": "утенок",
+    "category": "animals"
+  },
+  {
+    "name": "eagle",
+    "transcription": "[ˈiːɡl̩]",
+    "translation": "орел",
+    "category": "animals"
+  },
+  {
+    "name": "elephant",
+    "transcription": "[ˈelɪfənt]",
+    "translation": "слон",
+    "category": "animals"
+  },
+  {
+    "name": "elk",
+    "transcription": "[elk]",
+    "translation": "лось",
+    "category": "animals"
+  },
+  {
+    "name": "falcon",
+    "transcription": "[ˈfɔːlkən]",
+    "translation": "сокол",
+    "category": "animals"
+  },
+  {
+    "name": "ferret",
+    "transcription": "[ˈferɪt]",
+    "translation": "хорёк",
+    "category": "animals"
+  },
+  {
+    "name": "flamingo",
+    "transcription": "[fləˈmɪŋɡəʊ]",
+    "translation": "фламинго",
+    "category": "animals"
+  },
+  {
+    "name": "fly",
+    "transcription": "[flaɪ]",
+    "translation": "муха",
+    "category": "animals"
+  },
+  {
+    "name": "fox",
+    "transcription": "[fɒks]",
+    "translation": "лисица",
+    "category": "animals"
+  },
+  {
+    "name": "frog",
+    "transcription": "[frɒɡ]",
+    "translation": "лягушка",
+    "category": "animals"
+  },
+  {
+    "name": "giraffe",
+    "transcription": "[dʒɪˈrɑːf]",
+    "translation": "жираф",
+    "category": "animals"
+  },
+  {
+    "name": "gnat",
+    "transcription": "[næt]",
+    "translation": "комар, москит",
+    "category": "animals"
+  },
+  {
+    "name": "goat",
+    "transcription": "[ɡəʊt]",
+    "translation": "козел",
+    "category": "animals"
+  },
+  {
+    "name": "goose",
+    "transcription": "[ɡuːs]",
+    "translation": "гусь",
+    "category": "animals"
+  },
+  {
+    "name": "gorilla",
+    "transcription": "[ɡəˈrɪlə]",
+    "translation": "горилла",
+    "category": "animals"
+  },
+  {
+    "name": "grasshopper",
+    "transcription": "[ˈɡrɑːshɒpə]",
+    "translation": "кузнечик",
+    "category": "animals"
+  },
+  {
+    "name": "guinea pig",
+    "transcription": "[ˈɡɪni pɪɡ]",
+    "translation": "морская свинка",
+    "category": "animals"
+  },
+  {
+    "name": "hare",
+    "transcription": "[heə]",
+    "translation": "заяц",
+    "category": "animals"
+  },
+  {
+    "name": "hawk",
+    "transcription": "[hɔːk]",
+    "translation": "ястреб",
+    "category": "animals"
+  },
+  {
+    "name": "heath-cock",
+    "transcription": "[ˈhiːθkɒk]",
+    "translation": "тетерев",
+    "category": "animals"
+  },
+  {
+    "name": "hedgehog",
+    "transcription": "[ˈhedʒhɒɡ]",
+    "translation": "ёж",
+    "category": "animals"
+  },
+  {
+    "name": "hen",
+    "transcription": "[hen]",
+    "translation": "курица",
+    "category": "animals"
+  },
+  {
+    "name": "heron",
+    "transcription": "[ˈherən]",
+    "translation": "цапля",
+    "category": "animals"
+  },
+  {
+    "name": "horse",
+    "transcription": "[hɔːs]",
+    "translation": "лошадь",
+    "category": "animals"
+  },
+  {
+    "name": "kangaroo",
+    "transcription": "[ˌkæŋɡəˈruː]",
+    "translation": "кенгуру",
+    "category": "animals"
+  },
+  {
+    "name": "kid",
+    "transcription": "[kɪd]",
+    "translation": "козленок",
+    "category": "animals"
+  },
+  {
+    "name": "kitten",
+    "transcription": "[ˈkɪtn̩]",
+    "translation": "котенок",
+    "category": "animals"
+  },
+  {
+    "name": "ladybird",
+    "transcription": "[ˈleɪdɪbɜːd]",
+    "translation": "божья коровка",
+    "category": "animals"
+  },
+  {
+    "name": "lamb",
+    "transcription": "[læm]",
+    "translation": "ягненок",
+    "category": "animals"
+  },
+  {
+    "name": "lark",
+    "transcription": "[lɑːk]",
+    "translation": "жаворонок",
+    "category": "animals"
+  },
+  {
+    "name": "leech",
+    "transcription": "[liːtʃ]",
+    "translation": "пиявка",
+    "category": "animals"
+  },
+  {
+    "name": "lion",
+    "transcription": "[ˈlaɪən]",
+    "translation": "лев",
+    "category": "animals"
+  },
+  {
+    "name": "lizard",
+    "transcription": "[ˈlɪzəd]",
+    "translation": "ящерица",
+    "category": "animals"
+  },
+  {
+    "name": "lynx",
+    "transcription": "[lɪŋks]",
+    "translation": "рысь",
+    "category": "animals"
+  },
+  {
+    "name": "magpie",
+    "transcription": "[ˈmæɡpaɪ]",
+    "translation": "сорока",
+    "category": "animals"
+  },
+  {
+    "name": "monkey",
+    "transcription": "[ˈmʌŋki]",
+    "translation": "обезьяна",
+    "category": "animals"
+  },
+  {
+    "name": "moth",
+    "transcription": "[mɒθ]",
+    "translation": "моль",
+    "category": "animals"
+  },
+  {
+    "name": "mouse",
+    "transcription": "[maʊs]",
+    "translation": "мышь",
+    "category": "animals"
+  },
+  {
+    "name": "nightingale",
+    "transcription": "[ˈnaɪtɪŋɡeɪl]",
+    "translation": "соловей",
+    "category": "animals"
+  },
+  {
+    "name": "ostrich",
+    "transcription": "[ˈɒstrɪtʃ]",
+    "translation": "страус",
+    "category": "animals"
+  },
+  {
+    "name": "owl",
+    "transcription": "[aʊl]",
+    "translation": "сова",
+    "category": "animals"
+  },
+  {
+    "name": "ox",
+    "transcription": "[ɒks]",
+    "translation": "вол, бык",
+    "category": "animals"
+  },
+  {
+    "name": "parrot",
+    "transcription": "[ˈpærət]",
+    "translation": "попугай",
+    "category": "animals"
+  },
+  {
+    "name": "partridge",
+    "transcription": "[ˈpɑːtrɪdʒ]",
+    "translation": "куропатка",
+    "category": "animals"
+  },
+  {
+    "name": "peakcock",
+    "transcription": "[ˈpiːkɒk]",
+    "translation": "павлин",
+    "category": "animals"
+  },
+  {
+    "name": "penguin",
+    "transcription": "[ˈpeŋɡwɪn]",
+    "translation": "пингвин",
+    "category": "animals"
+  },
+  {
+    "name": "pheasant",
+    "transcription": "[ˈfeznt]",
+    "translation": "фазан",
+    "category": "animals"
+  },
+  {
+    "name": "pig",
+    "transcription": "[pɪɡ]",
+    "translation": "поросенок",
+    "category": "animals"
+  },
+  {
+    "name": "pigeon, dove",
+    "transcription": "[ˈpɪdʒən] [dʌv]",
+    "translation": "голубь",
+    "category": "animals"
+  },
+  {
+    "name": "polar bear",
+    "transcription": "[ˈpəʊlə beə]",
+    "translation": "белый медведь",
+    "category": "animals"
+  },
+  {
+    "name": "pony",
+    "transcription": "[ˈpəʊni]",
+    "translation": "пони",
+    "category": "animals"
+  },
+  {
+    "name": "puppy",
+    "transcription": "[ˈpʌpi]",
+    "translation": "щенок",
+    "category": "animals"
+  },
+  {
+    "name": "rabbit",
+    "transcription": "[ˈræbɪt]",
+    "translation": "кролик",
+    "category": "animals"
+  },
+  {
+    "name": "ram",
+    "transcription": "[ræm]",
+    "translation": "баран",
+    "category": "animals"
+  },
+  {
+    "name": "rat",
+    "transcription": "[ræt]",
+    "translation": "крыса",
+    "category": "animals"
+  },
+  {
+    "name": "raven",
+    "transcription": "[ˈreɪvn̩]",
+    "translation": "ворон",
+    "category": "animals"
+  },
+  {
+    "name": "rhino, rhinoceros",
+    "transcription": "[ˈraɪnəʊ] [raɪˈnɒsərəs]",
+    "translation": "носорог",
+    "category": "animals"
+  },
+  {
+    "name": "scorpion",
+    "transcription": "[ˈskɔːpɪən]",
+    "translation": "скорпион",
+    "category": "animals"
+  },
+  {
+    "name": "seagull",
+    "transcription": "[ˈsiːɡʌl]",
+    "translation": "чайка",
+    "category": "animals"
+  },
+  {
+    "name": "seal",
+    "transcription": "[siːl]",
+    "translation": "тюлень",
+    "category": "animals"
+  },
+  {
+    "name": "shark",
+    "transcription": "[ʃɑːk]",
+    "translation": "акула",
+    "category": "animals"
+  },
+  {
+    "name": "sheep",
+    "transcription": "[ʃiːp]",
+    "translation": "овца",
+    "category": "animals"
+  },
+  {
+    "name": "snail",
+    "transcription": "[sneɪl]",
+    "translation": "улитка",
+    "category": "animals"
+  },
+  {
+    "name": "snake",
+    "transcription": "[sneɪk]",
+    "translation": "змея",
+    "category": "animals"
+  },
+  {
+    "name": "sparrow",
+    "transcription": "[ˈspærəʊ]",
+    "translation": "воробей",
+    "category": "animals"
+  },
+  {
+    "name": "spider",
+    "transcription": "[ˈspaɪdə]",
+    "translation": "паук",
+    "category": "animals"
+  },
+  {
+    "name": "squirrel",
+    "transcription": "[ˈskwɪrəl]",
+    "translation": "белка",
+    "category": "animals"
+  },
+  {
+    "name": "starfish",
+    "transcription": "[ˈstɑːfɪʃ]",
+    "translation": "морская звезда",
+    "category": "animals"
+  },
+  {
+    "name": "stork",
+    "transcription": "[stɔːk]",
+    "translation": "аист",
+    "category": "animals"
+  },
+  {
+    "name": "swallow",
+    "transcription": "[ˈswɒləʊ]",
+    "translation": "ласточка",
+    "category": "animals"
+  },
+  {
+    "name": "swan",
+    "transcription": "[swɒn]",
+    "translation": "лебедь",
+    "category": "animals"
+  },
+  {
+    "name": "tiger",
+    "transcription": "[ˈtaɪɡə]",
+    "translation": "тигр",
+    "category": "animals"
+  },
+  {
+    "name": "titmouse",
+    "transcription": "[ˈtɪtmaʊs]",
+    "translation": "синица",
+    "category": "animals"
+  },
+  {
+    "name": "tortoise",
+    "transcription": "[ˈtɔːtəs]",
+    "translation": "черепаха",
+    "category": "animals"
+  },
+  {
+    "name": "turkey",
+    "transcription": "[ˈtɜːki]",
+    "translation": "индюк",
+    "category": "animals"
+  },
+  {
+    "name": "turtledove",
+    "transcription": "[ˈtɜːtldʌv]",
+    "translation": "горлица",
+    "category": "animals"
+  },
+  {
+    "name": "viper",
+    "transcription": "[ˈvaɪpə]",
+    "translation": "гадюка",
+    "category": "animals"
+  },
+  {
+    "name": "vulture",
+    "transcription": "[ˈvʌltʃə]",
+    "translation": "гриф",
+    "category": "animals"
+  },
+  {
+    "name": "wasp",
+    "transcription": "[wɒsp]",
+    "translation": "оса",
+    "category": "animals"
+  },
+  {
+    "name": "wild boar",
+    "transcription": "[waɪld bɔː]",
+    "translation": "дикий кабан",
+    "category": "animals"
+  },
+  {
+    "name": "wolf",
+    "transcription": "[wʊlf]",
+    "translation": "волк",
+    "category": "animals"
+  },
+  {
+    "name": "woodpecker",
+    "transcription": "[ˈwʊdpekə]",
+    "translation": "дятел",
+    "category": "animals"
+  },
+  {
+    "name": "worm",
+    "transcription": "[wɜːm]",
+    "translation": "червь",
+    "category": "animals"
+  },
+  {
+    "name": "zebra",
+    "transcription": "[ˈzebrə]",
+    "translation": "зебра",
+    "category": "animals"
+  }
+]

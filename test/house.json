@@ -1,0 +1,1118 @@
+[
+  {
+    "name": "adjacent",
+    "transcription": "[əˈdʒeɪsnt]",
+    "translation": "примыкающий",
+    "category": "house"
+  },
+  {
+    "name": "adorn",
+    "transcription": "[əˈdɔːn]",
+    "translation": "украшать",
+    "category": "house"
+  },
+  {
+    "name": "alcove",
+    "transcription": "[ˈælkəʊv]",
+    "translation": "альков, ниша",
+    "category": "house"
+  },
+  {
+    "name": "appliance",
+    "transcription": "[əˈplaɪəns]",
+    "translation": "приспособление, устройство, прибор",
+    "category": "house"
+  },
+  {
+    "name": "armchair",
+    "transcription": "[ˈɑːmtʃeə]",
+    "translation": "кресло",
+    "category": "house"
+  },
+  {
+    "name": "apartment",
+    "transcription": "[əˈpɑːtmənt]",
+    "translation": "квартира",
+    "category": "house"
+  },
+  {
+    "name": "balcony",
+    "transcription": "[ˈbælkəni]",
+    "translation": "балкон",
+    "category": "house"
+  },
+  {
+    "name": "bathroom",
+    "transcription": "[ˈbɑːθruːm]",
+    "translation": "ванная комната",
+    "category": "house"
+  },
+  {
+    "name": "basement",
+    "transcription": "[ˈbeɪsmənt]",
+    "translation": "подвал, фундамент",
+    "category": "house"
+  },
+  {
+    "name": "be crammed up with furniture",
+    "transcription": "[bi kræmd ʌp wɪð ˈfɜːnɪtʃə]",
+    "translation": "быть заставленным мебелью",
+    "category": "house"
+  },
+  {
+    "name": "be cramped for space",
+    "transcription": "[bi kræmpt fə speɪs]",
+    "translation": "мало места",
+    "category": "house"
+  },
+  {
+    "name": "be short of light",
+    "transcription": "[bi ʃɔːt əv laɪt]",
+    "translation": "мало света",
+    "category": "house"
+  },
+  {
+    "name": "bedroom",
+    "transcription": "[ˈbedruːm]",
+    "translation": "спальня",
+    "category": "house"
+  },
+  {
+    "name": "bedside table",
+    "transcription": "[ˈbedsaɪd ˈteɪbl̩]",
+    "translation": "тумбочка",
+    "category": "house"
+  },
+  {
+    "name": "bedspread",
+    "transcription": "[ˈbedspred]",
+    "translation": "покрывало",
+    "category": "house"
+  },
+  {
+    "name": "blind",
+    "transcription": "[blaɪnd]",
+    "translation": "штора",
+    "category": "house"
+  },
+  {
+    "name": "block of flats",
+    "transcription": "[ˈblɒk əv flæts]",
+    "translation": "многоквартирный дом",
+    "category": "house"
+  },
+  {
+    "name": "block out the light",
+    "transcription": "[ˈblɒk aʊt ðə laɪt]",
+    "translation": "загораживать свет",
+    "category": "house"
+  },
+  {
+    "name": "bookcase",
+    "transcription": "[ˈbʊk keɪs]",
+    "translation": "книжный шкаф",
+    "category": "house"
+  },
+  {
+    "name": "building",
+    "transcription": "[ˈbɪldɪŋ]",
+    "translation": "здание",
+    "category": "house"
+  },
+  {
+    "name": "building society",
+    "transcription": "[ˈbɪldɪŋ səˈsaɪəti]",
+    "translation": "строительное общество",
+    "category": "house"
+  },
+  {
+    "name": "bungalow",
+    "transcription": "[ˈbʌŋɡələʊ]",
+    "translation": "бунгало",
+    "category": "house"
+  },
+  {
+    "name": "bunk bed",
+    "transcription": "[bʌŋk bed]",
+    "translation": "двухъярусная кровать",
+    "category": "house"
+  },
+  {
+    "name": "camp bed",
+    "transcription": "[kæmp bed]",
+    "translation": "раскладушка",
+    "category": "house"
+  },
+  {
+    "name": "carpet",
+    "transcription": "[ˈkɑːpɪt]",
+    "translation": "ковёр",
+    "category": "house"
+  },
+  {
+    "name": "ceiling",
+    "transcription": "[ˈsiːlɪŋ]",
+    "translation": "потолок",
+    "category": "house"
+  },
+  {
+    "name": "cellar",
+    "transcription": "[ˈselə]",
+    "translation": "подвал, погреб",
+    "category": "house"
+  },
+  {
+    "name": "central heating",
+    "transcription": "[ˈsentrəl ˈhiːtɪŋ]",
+    "translation": "центральное отопление",
+    "category": "house"
+  },
+  {
+    "name": "chair",
+    "transcription": "[tʃeə]",
+    "translation": "стул",
+    "category": "house"
+  },
+  {
+    "name": "chandelier",
+    "transcription": "[ˌʃændəˈlɪə]",
+    "translation": "люстра",
+    "category": "house"
+  },
+  {
+    "name": "chest of drawers",
+    "transcription": "[tʃest əv drɔːəz]",
+    "translation": "комод",
+    "category": "house"
+  },
+  {
+    "name": "china",
+    "transcription": "[ˈtʃaɪnə]",
+    "translation": "фарфор",
+    "category": "house"
+  },
+  {
+    "name": "closet",
+    "transcription": "[ˈklɒzɪt]",
+    "translation": "стенной шкаф, чулан",
+    "category": "house"
+  },
+  {
+    "name": "coat rack",
+    "transcription": "[ˈkəʊt ræk]",
+    "translation": "вешалка",
+    "category": "house"
+  },
+  {
+    "name": "coffee table",
+    "transcription": "[ˈkɒfi ˈteɪbl̩]",
+    "translation": "журнальный столик",
+    "category": "house"
+  },
+  {
+    "name": "convenience",
+    "transcription": "[kənˈviːnɪəns]",
+    "translation": "удобство",
+    "category": "house"
+  },
+  {
+    "name": "cosy",
+    "transcription": "[ˈkəʊzi]",
+    "translation": "уютный",
+    "category": "house"
+  },
+  {
+    "name": "cooker",
+    "transcription": "[ˈkʊkə]",
+    "translation": "плита",
+    "category": "house"
+  },
+  {
+    "name": "cooker hood",
+    "transcription": "[ˈkʊkə hʊd]",
+    "translation": "вытяжка",
+    "category": "house"
+  },
+  {
+    "name": "corridor",
+    "transcription": "[ˈkɒrɪdɔː]",
+    "translation": "коридор",
+    "category": "house"
+  },
+  {
+    "name": "cottage",
+    "transcription": "[ˈkɒtɪdʒ]",
+    "translation": "коттедж, домик",
+    "category": "house"
+  },
+  {
+    "name": "country-house",
+    "transcription": "[ˌkʌntriˈhaʊs]",
+    "translation": "загородный дом",
+    "category": "house"
+  },
+  {
+    "name": "cover with dust sheets",
+    "transcription": "[ˈkʌvə wɪð dʌst ʃiːts]",
+    "translation": "покрыть чехлами (о мебели)",
+    "category": "house"
+  },
+  {
+    "name": "cover",
+    "transcription": "[ˈkʌvə]",
+    "translation": "покрывало",
+    "category": "house"
+  },
+  {
+    "name": "crammed up with things",
+    "transcription": "[kræmd ʌp wɪð ˈθɪŋz]",
+    "translation": "забитый вещами",
+    "category": "house"
+  },
+  {
+    "name": "crockery",
+    "transcription": "[ˈkrɒkəri]",
+    "translation": "фарфоровая и фаянсовая посуда",
+    "category": "house"
+  },
+  {
+    "name": "crystal",
+    "transcription": "[ˈkrɪstl̩]",
+    "translation": "хрусталь",
+    "category": "house"
+  },
+  {
+    "name": "cupboard",
+    "transcription": "[ˈkʌbəd]",
+    "translation": "шкаф, сервант",
+    "category": "house"
+  },
+  {
+    "name": "curtain",
+    "transcription": "[ˈkɜːtn̩]",
+    "translation": "занавеска",
+    "category": "house"
+  },
+  {
+    "name": "curtain rail",
+    "transcription": "[ˈkɜːtn̩ reɪl]",
+    "translation": "карниз",
+    "category": "house"
+  },
+  {
+    "name": "cushion",
+    "transcription": "[ˈkʊʃn̩]",
+    "translation": "диванная подушка",
+    "category": "house"
+  },
+  {
+    "name": "cutlery",
+    "transcription": "[ˈkʌtləri]",
+    "translation": "ножевые изделия, металлические столовые приборы",
+    "category": "house"
+  },
+  {
+    "name": "decorate",
+    "transcription": "[ˈdekəreɪt]",
+    "translation": "оформлять, украшать",
+    "category": "house"
+  },
+  {
+    "name": "detached house",
+    "transcription": "[dɪˈtætʃt ˈhaʊs]",
+    "translation": "отдельный дом",
+    "category": "house"
+  },
+  {
+    "name": "dining room",
+    "transcription": "[ˈdaɪnɪŋ ruːm]",
+    "translation": "столовая",
+    "category": "house"
+  },
+  {
+    "name": "dinner set",
+    "transcription": "[ˈdɪnə set]",
+    "translation": "столовый сервиз",
+    "category": "house"
+  },
+  {
+    "name": "dish-drainer",
+    "transcription": "[dɪʃ ˈdreɪnə]",
+    "translation": "сушилка для посуды",
+    "category": "house"
+  },
+  {
+    "name": "do the decorating",
+    "transcription": "[də ðə ˈdekəreɪtɪŋ]",
+    "translation": "делать косметический ремонт",
+    "category": "house"
+  },
+  {
+    "name": "door-handle",
+    "transcription": "[ˈdɔːhændl̩]",
+    "translation": "дверная ручка",
+    "category": "house"
+  },
+  {
+    "name": "double bed",
+    "transcription": "[ˈdʌbl̩ bed]",
+    "translation": "двуспальная кровать",
+    "category": "house"
+  },
+  {
+    "name": "drawing room",
+    "transcription": "[ˈdrɔːɪŋ ruːm]",
+    "translation": "гостиная",
+    "category": "house"
+  },
+  {
+    "name": "dressing-table",
+    "transcription": "[ˈdresɪŋ teɪbl̩]",
+    "translation": "туалетный столик",
+    "category": "house"
+  },
+  {
+    "name": "drive in a nail",
+    "transcription": "[draɪv ɪn ə neɪl]",
+    "translation": "забить гвоздь",
+    "category": "house"
+  },
+  {
+    "name": "dustbin",
+    "transcription": "[ˈdʌstbɪn]",
+    "translation": "мусорное ведро",
+    "category": "house"
+  },
+  {
+    "name": "dwelling",
+    "transcription": "[ˈdwelɪŋ]",
+    "translation": "жилище",
+    "category": "house"
+  },
+  {
+    "name": "entrance",
+    "transcription": "[ɪnˈtrɑːns]",
+    "translation": "вход",
+    "category": "house"
+  },
+  {
+    "name": "fail to operate",
+    "transcription": "[feɪl tu ˈɒpəreɪt]",
+    "translation": "сломаться",
+    "category": "house"
+  },
+  {
+    "name": "feel at home",
+    "transcription": "[fiːl ət həʊm]",
+    "translation": "чувствовать себя как дома",
+    "category": "house"
+  },
+  {
+    "name": "fence",
+    "transcription": "[fens]",
+    "translation": "забор",
+    "category": "house"
+  },
+  {
+    "name": "fitted carpet",
+    "transcription": "[ˈfɪtɪd ˈkɑːpɪt]",
+    "translation": "палас, ковровое покрытие",
+    "category": "house"
+  },
+  {
+    "name": "fireplace",
+    "transcription": "[ˈfaɪəpleɪs]",
+    "translation": "камин",
+    "category": "house"
+  },
+  {
+    "name": "flight of stairs",
+    "transcription": "[flaɪt əv steəz]",
+    "translation": "лестничный пролёт",
+    "category": "house"
+  },
+  {
+    "name": "floor (parquet, polished)",
+    "transcription": "[flɔː ˈpɑːkeɪ] ˈpɒlɪʃt]",
+    "translation": "пол (паркетный, натёртый)",
+    "category": "house"
+  },
+  {
+    "name": "floor polisher",
+    "transcription": "[flɔː ˈpɒlɪʃə]",
+    "translation": "полотёр",
+    "category": "house"
+  },
+  {
+    "name": "flowered",
+    "transcription": "[ˈflaʊəd]",
+    "translation": "цветастый",
+    "category": "house"
+  },
+  {
+    "name": "fluorescent lamp",
+    "transcription": "[flʊəˈresnt læmp]",
+    "translation": "лампа дневного света",
+    "category": "house"
+  },
+  {
+    "name": "flush-toilet",
+    "transcription": "[flʌʃ ˈtɔɪlɪt]",
+    "translation": "унитаз",
+    "category": "house"
+  },
+  {
+    "name": "freezer",
+    "transcription": "[ˈfriːzə]",
+    "translation": "морозильная камера",
+    "category": "house"
+  },
+  {
+    "name": "fridge",
+    "transcription": "[frɪdʒ]",
+    "translation": "холодильник",
+    "category": "house"
+  },
+  {
+    "name": "front of the house",
+    "transcription": "[frʌnt əv ðə ˈhaʊs]",
+    "translation": "фасад дома",
+    "category": "house"
+  },
+  {
+    "name": "focus of the room",
+    "transcription": "[ˈfəʊkəs əv ðə ruːm]",
+    "translation": "центральное место в комнате",
+    "category": "house"
+  },
+  {
+    "name": "furnish",
+    "transcription": "[ˈfɜːnɪʃ]",
+    "translation": "меблировать",
+    "category": "house"
+  },
+  {
+    "name": "furniture",
+    "transcription": "[ˈfɜːnɪtʃə]",
+    "translation": "мебель",
+    "category": "house"
+  },
+  {
+    "name": "garage",
+    "transcription": "[ˈɡærɑːʒ]",
+    "translation": "гараж",
+    "category": "house"
+  },
+  {
+    "name": "get rickety",
+    "transcription": "[ˈɡet ˈrɪkəti]",
+    "translation": "расшататься (о мебели)",
+    "category": "house"
+  },
+  {
+    "name": "hall",
+    "transcription": "[hɔːl]",
+    "translation": "прихожая",
+    "category": "house"
+  },
+  {
+    "name": "hangings",
+    "transcription": "[ˈhæŋɪŋz]",
+    "translation": "портьеры",
+    "category": "house"
+  },
+  {
+    "name": "hedge",
+    "transcription": "[hedʒ]",
+    "translation": "изгородь",
+    "category": "house"
+  },
+  {
+    "name": "home",
+    "transcription": "[həʊm]",
+    "translation": "дом, домашний очаг",
+    "category": "house"
+  },
+  {
+    "name": "houseplant",
+    "transcription": "[ˈhaʊsplɑːnt]",
+    "translation": "комнатное растение",
+    "category": "house"
+  },
+  {
+    "name": "housewarming party",
+    "transcription": "[ˈhaʊs ˈwɔːmɪŋ ˈpɑːti]",
+    "translation": "новоселье",
+    "category": "house"
+  },
+  {
+    "name": "interior",
+    "transcription": "[ɪnˈtɪərɪə]",
+    "translation": "интерьер",
+    "category": "house"
+  },
+  {
+    "name": "keyhole",
+    "transcription": "[ˈkiːhəʊl]",
+    "translation": "замочная скважина",
+    "category": "house"
+  },
+  {
+    "name": "kitchen",
+    "transcription": "[ˈkɪtʃɪn]",
+    "translation": "кухня",
+    "category": "house"
+  },
+  {
+    "name": "know where things go",
+    "transcription": "[nəʊ weə ˈθɪŋz ɡəʊ]",
+    "translation": "знать, где что лежит",
+    "category": "house"
+  },
+  {
+    "name": "lamp",
+    "transcription": "[læmp]",
+    "translation": "лампа",
+    "category": "house"
+  },
+  {
+    "name": "lavatory",
+    "transcription": "[ˈlævətr̩i]",
+    "translation": "туалет",
+    "category": "house"
+  },
+  {
+    "name": "let a flat",
+    "transcription": "[let ə flæt]",
+    "translation": "сдавать квартиру",
+    "category": "house"
+  },
+  {
+    "name": "lift",
+    "transcription": "[lɪft]",
+    "translation": "лифт",
+    "category": "house"
+  },
+  {
+    "name": "lights fuse / go out",
+    "transcription": "[laɪts fjuːz / ɡəʊ aʊt]",
+    "translation": "лампочки перегорают",
+    "category": "house"
+  },
+  {
+    "name": "linoleum",
+    "transcription": "[lɪˈnəʊlɪəm]",
+    "translation": "линолеум",
+    "category": "house"
+  },
+  {
+    "name": "living room",
+    "transcription": "[ˈlɪvɪŋ ruːm]",
+    "translation": "гостиная",
+    "category": "house"
+  },
+  {
+    "name": "look out onto ...",
+    "transcription": "[lʊk aʊt ˈɒntu]",
+    "translation": "выходить на ... (об окнах)",
+    "category": "house"
+  },
+  {
+    "name": "lounge",
+    "transcription": "[laʊndʒ]",
+    "translation": "гостиная",
+    "category": "house"
+  },
+  {
+    "name": "lustre",
+    "transcription": "[ˈlʌstə]",
+    "translation": "люстра",
+    "category": "house"
+  },
+  {
+    "name": "mansion",
+    "transcription": "[ˈmænʃn̩]",
+    "translation": "особняк, большой дом",
+    "category": "house"
+  },
+  {
+    "name": "mat",
+    "transcription": "[mæt]",
+    "translation": "коврик, циновка",
+    "category": "house"
+  },
+  {
+    "name": "mixer tap",
+    "transcription": "[ˈmɪksə tæp]",
+    "translation": "смеситель, кран",
+    "category": "house"
+  },
+  {
+    "name": "modem accomodations",
+    "transcription": "[ˈməʊdem əˌkɒməˈdeɪʃn̩z]",
+    "translation": "современные удобства",
+    "category": "house"
+  },
+  {
+    "name": "mortgage",
+    "transcription": "[ˈmɔːɡɪdʒ]",
+    "translation": "ссуда, заём (при покупке дома), ипотека",
+    "category": "house"
+  },
+  {
+    "name": "move in/to",
+    "transcription": "[muːv ɪn tuː]",
+    "translation": "въезжать, переезжать",
+    "category": "house"
+  },
+  {
+    "name": "move the furniture around",
+    "transcription": "[muːv ðə ˈfɜːnɪtʃər əˈraʊnd]",
+    "translation": "передвигать мебель",
+    "category": "house"
+  },
+  {
+    "name": "neighbour",
+    "transcription": "[ˈneɪbə]",
+    "translation": "сосед",
+    "category": "house"
+  },
+  {
+    "name": "nursery",
+    "transcription": "[ˈnɜːsəri]",
+    "translation": "детская комната",
+    "category": "house"
+  },
+  {
+    "name": "one / two /...-room flat",
+    "transcription": "[wʌn / tuː / ruːm flæt]",
+    "translation": "одно / двух /... комнатная квартира",
+    "category": "house"
+  },
+  {
+    "name": "one /two /...-storeyed house",
+    "transcription": "[wʌn / tuː / ˈstɔːrɪd ˈhaʊs]",
+    "translation": "одно / двух /...этажный дом",
+    "category": "house"
+  },
+  {
+    "name": "oven",
+    "transcription": "[ˈʌvn̩]",
+    "translation": "духовка",
+    "category": "house"
+  },
+  {
+    "name": "owner",
+    "transcription": "[ˈəʊnə]",
+    "translation": "владелец, собственник",
+    "category": "house"
+  },
+  {
+    "name": "palace",
+    "transcription": "[ˈpælɪs]",
+    "translation": "дворец",
+    "category": "house"
+  },
+  {
+    "name": "papered",
+    "transcription": "[ˈpeɪpəd]",
+    "translation": "оклеенный обоями",
+    "category": "house"
+  },
+  {
+    "name": "parquet",
+    "transcription": "[ˈpɑːkeɪ]",
+    "translation": "паркет",
+    "category": "house"
+  },
+  {
+    "name": "patterned",
+    "transcription": "[ˈpætn̩d]",
+    "translation": "с рисунком",
+    "category": "house"
+  },
+  {
+    "name": "pillow",
+    "transcription": "[ˈpɪləʊ]",
+    "translation": "подушка",
+    "category": "house"
+  },
+  {
+    "name": "pillow-case",
+    "transcription": "[ˈpɪləʊkeɪs]",
+    "translation": "наволочка",
+    "category": "house"
+  },
+  {
+    "name": "pipes get clogged",
+    "transcription": "[paɪps ˈɡet klɒɡd]",
+    "translation": "трубы засоряются",
+    "category": "house"
+  },
+  {
+    "name": "plain",
+    "transcription": "[pleɪn]",
+    "translation": "однотонный (о ткани)",
+    "category": "house"
+  },
+  {
+    "name": "portable",
+    "transcription": "[ˈpɔːtəbl̩]",
+    "translation": "переносной",
+    "category": "house"
+  },
+  {
+    "name": "put things right",
+    "transcription": "[ˈpʊt ˈθɪŋz raɪt]",
+    "translation": "починить, исправить",
+    "category": "house"
+  },
+  {
+    "name": "quilt",
+    "transcription": "[kwɪlt]",
+    "translation": "стёганое одеяло",
+    "category": "house"
+  },
+  {
+    "name": "radiator",
+    "transcription": "[ˈreɪdɪeɪtə]",
+    "translation": "батарея центрального отопления",
+    "category": "house"
+  },
+  {
+    "name": "real estate agency",
+    "transcription": "[rɪəl ɪˈsteɪt ˈeɪdʒənsi]",
+    "translation": "агентство недвижимости",
+    "category": "house"
+  },
+  {
+    "name": "refrigerator",
+    "transcription": "[rɪˈfrɪdʒəreɪtə]",
+    "translation": "холодильник",
+    "category": "house"
+  },
+  {
+    "name": "refuse-chute",
+    "transcription": "['refjuːs ʃuːt]",
+    "translation": "мусоропровод",
+    "category": "house"
+  },
+  {
+    "name": "renovate",
+    "transcription": "[ˈrenəveɪt]",
+    "translation": "подновлять, ремонтировать, реконструировать",
+    "category": "house"
+  },
+  {
+    "name": "repair",
+    "transcription": "[rɪˈpeə]",
+    "translation": "ремонт",
+    "category": "house"
+  },
+  {
+    "name": "room",
+    "transcription": "[ruːm]",
+    "translation": "комната",
+    "category": "house"
+  },
+  {
+    "name": "rent a flat",
+    "transcription": "[rent ə flæt]",
+    "translation": "снимать квартиру",
+    "category": "house"
+  },
+  {
+    "name": "rug",
+    "transcription": "[rʌɡ]",
+    "translation": "пушистый коврик",
+    "category": "house"
+  },
+  {
+    "name": "running water",
+    "transcription": "[ˈrʌnɪŋ ˈwɔːtə]",
+    "translation": "водопровод",
+    "category": "house"
+  },
+  {
+    "name": "self-contained flat",
+    "transcription": "[ˌself kənˈteɪnd flæt]",
+    "translation": "отдельная квартира",
+    "category": "house"
+  },
+  {
+    "name": "semi-detached house",
+    "transcription": "[ˌsemɪdɪˈtætʃt ˈhaʊs]",
+    "translation": "один из двух домов под общей крышей",
+    "category": "house"
+  },
+  {
+    "name": "share a room with smb.",
+    "transcription": "[ʃeər ə ruːm wɪð]",
+    "translation": "проживать в одной комнате с кем-либо",
+    "category": "house"
+  },
+  {
+    "name": "sheet",
+    "transcription": "[ʃiːt]",
+    "translation": "простыня",
+    "category": "house"
+  },
+  {
+    "name": "shift",
+    "transcription": "[ʃɪft]",
+    "translation": "передвигать",
+    "category": "house"
+  },
+  {
+    "name": "show the dirt",
+    "transcription": "[ʃəʊ ðə dɜːt]",
+    "translation": "пачкаться",
+    "category": "house"
+  },
+  {
+    "name": "single bed",
+    "transcription": "[ˈsɪŋɡl̩ bed]",
+    "translation": "односпальная кровать",
+    "category": "house"
+  },
+  {
+    "name": "sink",
+    "transcription": "[sɪŋk]",
+    "translation": "раковина (на кухне)",
+    "category": "house"
+  },
+  {
+    "name": "sky-scraper",
+    "transcription": "[ˈskaɪˌskreɪpə]",
+    "translation": "небоскрёб",
+    "category": "house"
+  },
+  {
+    "name": "sofa",
+    "transcription": "[ˈsəʊfə]",
+    "translation": "диван",
+    "category": "house"
+  },
+  {
+    "name": "sewing-machine",
+    "transcription": "[ˈsəʊɪŋ məʃiːn]",
+    "translation": "швейная машина",
+    "category": "house"
+  },
+  {
+    "name": "space",
+    "transcription": "[speɪs]",
+    "translation": "место, пространство",
+    "category": "house"
+  },
+  {
+    "name": "spacious",
+    "transcription": "[ˈspeɪʃəs]",
+    "translation": "просторный",
+    "category": "house"
+  },
+  {
+    "name": "spyhole",
+    "transcription": "[ˈspaɪhəʊl]",
+    "translation": "дверной глазок",
+    "category": "house"
+  },
+  {
+    "name": "stack chairs",
+    "transcription": "[stæk tʃeəz]",
+    "translation": "составлять стулья",
+    "category": "house"
+  },
+  {
+    "name": "standard lamp",
+    "transcription": "[ˈstændəd læmp]",
+    "translation": "торшер",
+    "category": "house"
+  },
+  {
+    "name": "statuette",
+    "transcription": "[ˌstætʃʊˈet]",
+    "translation": "статуэтка",
+    "category": "house"
+  },
+  {
+    "name": "stereo system",
+    "transcription": "[ˈsterɪəʊ ˈsɪstəm]",
+    "translation": "стереосистема",
+    "category": "house"
+  },
+  {
+    "name": "stool",
+    "transcription": "[stuːl]",
+    "translation": "табурет",
+    "category": "house"
+  },
+  {
+    "name": "storeroom",
+    "transcription": "[ˈstɔːruːm]",
+    "translation": "кладовая",
+    "category": "house"
+  },
+  {
+    "name": "stove",
+    "transcription": "[stəʊv]",
+    "translation": "плита, печь",
+    "category": "house"
+  },
+  {
+    "name": "tap",
+    "transcription": "[tæp]",
+    "translation": "кран",
+    "category": "house"
+  },
+  {
+    "name": "tea set",
+    "transcription": "[tiː set]",
+    "translation": "чайный сервиз",
+    "category": "house"
+  },
+  {
+    "name": "three quarter bed",
+    "transcription": "[θriː ˈkwɔːtə bed]",
+    "translation": "полутораспальная кровать",
+    "category": "house"
+  },
+  {
+    "name": "TV set",
+    "transcription": "[ˌtiːˈviː set]",
+    "translation": "телевизор",
+    "category": "house"
+  },
+  {
+    "name": "throw open",
+    "transcription": "[ˈθrəʊ ˈəʊpən]",
+    "translation": "распахнуть",
+    "category": "house"
+  },
+  {
+    "name": "threshold",
+    "transcription": "[ˈθreʃhəʊld]",
+    "translation": "порог",
+    "category": "house"
+  },
+  {
+    "name": "tiled",
+    "transcription": "[taɪld]",
+    "translation": "покрытый кафельной плиткой",
+    "category": "house"
+  },
+  {
+    "name": "toilet",
+    "transcription": "[ˈtɔɪlɪt]",
+    "translation": "туалет",
+    "category": "house"
+  },
+  {
+    "name": "tubular steel chair",
+    "transcription": "[ˈtjuːbjʊlə stiːl tʃeə]",
+    "translation": "стул с алюминиевыми ножками",
+    "category": "house"
+  },
+  {
+    "name": "unlock the door",
+    "transcription": "[ʌnˈlɒk ðə dɔː]",
+    "translation": "отпереть дверь",
+    "category": "house"
+  },
+  {
+    "name": "upholstered furniture",
+    "transcription": "[ˌʌpˈhəʊlstəd ˈfɜːnɪtʃə]",
+    "translation": "мягкая мебель",
+    "category": "house"
+  },
+  {
+    "name": "upholstery",
+    "transcription": "[ˌʌpˈhəʊlstəri]",
+    "translation": "обивка",
+    "category": "house"
+  },
+  {
+    "name": "utensil",
+    "transcription": "[juːˈtensɪl]",
+    "translation": "посуда, утварь",
+    "category": "house"
+  },
+  {
+    "name": "vacuum cleaner",
+    "transcription": "[ˈvækjʊəm ˈkliːnə]",
+    "translation": "пылесос",
+    "category": "house"
+  },
+  {
+    "name": "vegetable cutter",
+    "transcription": "[ˈvedʒɪtəbl̩ ˈkʌtə]",
+    "translation": "овощерезка",
+    "category": "house"
+  },
+  {
+    "name": "waffle-maker",
+    "transcription": "[ˈwɒfəl ˈmeɪkə]",
+    "translation": "вафельница",
+    "category": "house"
+  },
+  {
+    "name": "wall lamp",
+    "transcription": "[wɔːl læmp]",
+    "translation": "бра",
+    "category": "house"
+  },
+  {
+    "name": "wall-paper",
+    "transcription": "[ˈwɔːlpeɪpə]",
+    "translation": "обои",
+    "category": "house"
+  },
+  {
+    "name": "wall units",
+    "transcription": "[wɔːl ˈjuːnɪts]",
+    "translation": "стенка",
+    "category": "house"
+  },
+  {
+    "name": "wardrobe",
+    "transcription": "[ˈwɔːdrəʊb]",
+    "translation": "шкаф",
+    "category": "house"
+  },
+  {
+    "name": "washing machine",
+    "transcription": "[ˈwɒʃɪŋ məˈʃiːn]",
+    "translation": "стиральная машина",
+    "category": "house"
+  },
+  {
+    "name": "wash-basin",
+    "transcription": "[ˈwɒʃbeɪsn̩]",
+    "translation": "(умывальный) таз, умывальная раковина",
+    "category": "house"
+  },
+  {
+    "name": "washing wall-paper",
+    "transcription": "[ˈwɒʃɪŋ ˈwɔːlpeɪpə]",
+    "translation": "моющиеся обои",
+    "category": "house"
+  },
+  {
+    "name": "whitewash",
+    "transcription": "[ˈwaɪtwɒʃ]",
+    "translation": "побелка; белить, делать побелку",
+    "category": "house"
+  },
+  {
+    "name": "window-sill",
+    "transcription": "[ˈwɪndəʊsɪl]",
+    "translation": "подоконник",
+    "category": "house"
+  },
+  {
+    "name": "yard",
+    "transcription": "[jɑːd]",
+    "translation": "двор",
+    "category": "house"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 0,
+    "name": "ubiquitous",
+    "translation": "вездесущий",
+    "meaning": "present, appearing, or found everywhere",
+    "image": "data/ubiquitos.jpg",
+    "date": 11,
+    "category": "jobs"
+  },
+  {
+    "id": 1,
+    "name": "alacrity",
+    "translation": "живость",
+    "meaning": "brisk and cheerful readiness",
+    "image": "data/alacrity.jpg",
+    "date": 12,
+    "category": "animals"
+  },
+  {
+    "id": 2,
+    "name": "influenza",
+    "translation": "грипп",
+    "meaning": "a highly contagious viral infection of the respiratory passages causing fever, severe aching, and catarrh, and often occurring in epidemics.",
+    "image": "data/influenza.jpg",
+    "date": "Sun, 15 Feb 2018 17:47:31 GMT",
+    "category": "animals"
+  },
+  {
+    "id": 3,
+    "name": "miserable",
+    "translation": "несчастный",
+    "meaning": "wretchedly unhappy or uncomfortable",
+    "image": "data/miserable.jpg",
+    "date": 14,
+    "category": "jobs"
+  },
+  {
+    "id": 4,
+    "name": "sorrowful",
+    "translation": "скорбный",
+    "meaning": "feeling or showing grief",
+    "image": "data/sorrowful.jpg",
+    "date": 23,
+    "category": "jobs"
+  }
+ ] 

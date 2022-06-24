@@ -1,0 +1,98 @@
+[
+  {
+    "id": 0,
+    "name": "TED talks",
+    "description": "TED Talks shares the best ideas from the TED Conference with the world, for free: trusted voices and convention-breaking mavericks, icons and geniuses, all giving the talk of their lives in 18 minutes",
+    "channelID":  "UCAuUUnT6oDeKwE6v1NGQxug",    
+    "image": "thumbnails/ted.jpg",
+    "link": "/ted"
+  },
+  {
+    "id": 1,
+    "name": "British Council",
+    "description": "The British Council is the United Kingdom’s international organisation for cultural relations and educational opportunities.",
+    "channelID": "UCOtnu-KKoAbN47IuYMeDPOg",
+    "image": "thumbnails/britishcouncil.png",
+    "link": "/britishcouncil"
+  },
+  {
+    "id": 2,
+    "name": "EngVideo",
+    "description": "Start learning English right now with 1000+ free videos covering English grammar, vocabulary, pronunciation, accent, slang, phrasal verbs, idioms, culture, IELTS, TOEFL, business English, and more.",
+    "channelID": "UCKRBA9XfgzAtJodE4t8cUeg",
+    "image": "thumbnails/engvid.jpg",
+    "link": "/engvideo"
+  },
+  {
+    "id": 3,
+    "name": "Khan Academy",
+    "description": "Khan Academy is a 501(c)(3) nonprofit organization with the mission of providing a free, world-class education for anyone, anywhere. ",
+    "channelID": "UC4a-Gbdw7vOaccHmFo40b9g",
+    "image": "thumbnails/khan.jpg",
+    "link": "/khan"
+  },
+  {
+    "id": 4,
+    "name": "Coursera",
+    "description": "Learn online and earn valuable credentials from top universities like Yale, Michigan, Stanford, and leading companies like Google and IBM. Join Coursera for free and transform your career with degrees, certificates, Specializations, & MOOCs in data science, computer science, business, and dozens of other topics.",
+    "channelID": "UCZ50rYSkYQG31YDEJm9Di_g",    
+    "image": "thumbnails/coursera.jpg",
+    "link": "/coursera"
+  },
+  {
+    "id": 5,
+    "name": "Jimmy Fallon",
+    "description": "The Tonight Show Starring Jimmy Fallon features hilarious highlights from the show including: comedy sketches, music parodies, celebrity interviews, ridiculous games, and, of course, Jimmy's Thank You Notes and hashtags! You'll also find behind the scenes videos and other great web exclusives",
+    "channelID": "UC8-Th83bH_thdKZDJCrn88g",    
+    "image": "thumbnails/jimmyfallon.jpg",
+    "link": "/jimmyfallon"
+  },
+  {
+    "id": 6,
+    "name": "Jimmy Kimmel",
+    "description": "The official Jimmy Kimmel Live! YouTube Channel. Home of Celebrities Read Mean Tweets, YouTube Challenges and the rest of your favorite viral late night videos.",
+    "channelID": "UCa6vGFO9ty8v5KZJXQxdhaw",    
+    "image": "thumbnails/jimmykimmel.jpg",
+    "link": "/jimmykimmel"
+  },
+  {
+    "id": 7,
+    "name": "Conan O'Brien",
+    "description": "Conan O'Brien presents: the official YouTube channel for CONAN on TBS.",
+    "channelID": "UCi7GJNg51C3jgmYTUwqoUXA",    
+    "image": "thumbnails/conanobrien.jpg",
+    "link": "/conanobrien"
+  },
+  {
+    "id": 8,
+    "name": "Seth Meyers",
+    "description": "Beloved 'Saturday Night Live' personality — and the longest serving anchor on the show's wildly popular 'Weekend Update' — Seth Meyers takes over as host of NBC's 'Late Night', home to A-list celebrity guests, memorable comedy and the best in musical talent. ",
+    "channelID":  "UCVTyTA7-g9nopHeHbeuvpRA",
+    "image": "thumbnails/sethmeyers.jpg",
+    "link": "/sethmeyers"
+  },
+  {
+    "id": 9,
+    "name": "Stephen Colbert",
+    "description": "Welcome to the official YouTube channel for 'The Late Show with Stephen Colbert'!",
+    "channelID": "UCMtFAi84ehTSYSE9XoHefig",    
+    "image": "thumbnails/stephencolbert.jpg",
+    "link": "/stephencolbert"
+  },
+  {
+    "id": 10,
+    "name": "James Corden",
+    "description": "This is the official YouTube channel for The Late Late Show with James Corden on CBS.",
+    "channelID": "UCJ0uqCI0Vqr2Rrt1HseGirg",    
+    "image": "thumbnails/jamescorden.jpg",
+    "link": "/jamescorden"
+  },
+  {
+    "id": 11,
+    "name": "Ellen",
+    "description": "For 15 incredible, eventful and sometimes life-changing seasons, Ellen has been making audiences laugh all over the world with her signature brand of humor and her powerful message of kindness. There's nobody better at making you laugh!",
+    "channelID": "UCp0hYYBW6IMayGgR-WeoCvQ",    
+    "image": "thumbnails/ellen.jpg",
+    "link": "/ellen"
+  }                                 
+ ] 

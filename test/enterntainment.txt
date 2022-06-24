@@ -1,0 +1,375 @@
+balcony / tier Ч €рус, балкон
+box Ч ложа
+[baks]
+box office Ч билетна€ касса
+character Ч действующее лицо
+['k?r?kt?]
+checkroom Ч гардероб
+[-?ro?om]
+comedian Ч актер-комик
+[k?'mi:di?n]
+comedy Ч комеди€
+[?kam?de]
+company (of actors) Ч труппа (актеров)
+crowd scenes Ч массовые сцены
+drama Ч драма
+[?dram?]
+Drama Theatre Ч драматический театр
+dress circle Ч балкон первого €руса, бельэтаж
+dress rehearsal Ч генеральна€ репетици€
+dresses / costumes Ч костюмы
+entrance Ч вход
+['entr?ns]
+evening performance Ч вечерний спектакль
+exit Ч выход
+[?eksit]
+first night / premiere Ч премьера
+footlights Ч рампа
+[?fo?ot?lits]
+gallery Ч галерка
+[?gal?re]
+make-up man Ч гример
+matinee (performance) Ч спектакль (как правило, утренний или дневной)
+['m?tinei]
+opera Ч опера
+[?ap(?)r?]
+Opera and Ballet Theatre Ч театр оперы и балета
+Opera House Ч оперный театр
+performance Ч представление, спектакль
+[p?r?form?ns]
+pit Ч амфитеатр
+[pit]
+play Ч пьеса
+[pla]
+producer Ч режиссер, постановщик
+[pro-]
+prompter Ч суфлер
+[?prampt?r]
+Puppet Theatre Ч театр кукол
+Satire Theatre Ч театр сатиры
+scenery Ч декораци€
+['si:n?ri]
+scriptwriter Ч сценарист
+[?skript?rit?r]
+sets Ч декорации к определенной сцене
+[set]
+setting Ч место действи€ (декорации, обстановка действи€)
+[?setiNG]
+sketch Ч эскиз
+[skeCH]
+stage Ч сцена
+[staj]
+stalls / parquet Ч партер
+['p?:kei]
+theatre / theater Ч театр
+theatre-goer Ч театрал
+ticket Ч билет
+[?tikit]
+tragedy Ч трагеди€
+[?trajide]
+tragic actor / tragedian Ч актер-трагик
+ инотеатр, фильмы
+actor Ч актер
+[?akt?r]
+actress Ч актриса
+[?aktris]
+animated cartoon / cartoon Ч мультипликационный фильм / мультфильм
+assistant director Ч помощник режиссера
+black and white film Ч черно-белый фильм
+camera operator / cameraman Ч (разговорна€ форма) оператор камеры
+children's film Ч детский фильм
+cinemascope Ч фильм дл€ широкого экрана
+[?sin?m??skop]
+close-up Ч кадр, сн€тый крупным планом
+[?klos ??p]
+color documentary film Ч цветной документальный фильм
+comedy (film) Ч комеди€
+['k?m?di]
+credits Ч титры
+[?kredit]
+direct a film Ч режиссировать фильм
+director Ч режиссер
+[di?rekt?r]
+dub (in) a film Ч дублировать фильм
+educational film Ч учебный фильм
+episode Ч эпизод
+['epis?ud]
+executive producer Ч исполнительный продюсер
+feature film Ч художественный фильм
+film crew Ч команда фильма (люди, работающие над созданием фильма)
+full-length film Ч полнометражный фильм
+genre Ч жанр
+['??:nr?]
+historical film Ч исторический фильм
+motion picture Ч кинофильм
+movie star / film star / cinema star Ч кинозвезда
+movie theater, movie house / cinema Ч кинотеатр
+movie-goer / film-fan Ч любитель кино
+newsreel Ч хроника, киножурнал
+[?n(y)o?oz?rel]
+popular science film Ч научно-попул€рный фильм
+prequel Ч приквел (фильм, действие которого происходит до действи€ другого фильма)
+[-kwil]
+producer Ч продюсер
+[pro-]
+release a film Ч выпускать фильм на экран
+review Ч рецензи€
+[ri?vyo?o]
+reviewer Ч критик
+[ri?vyo?o?r]
+scene / shot Ч кадр
+['si:n]
+screen Ч экран; экранизировать
+[skren]
+screen adaptation / film adaptation / screen version Ч экранизаци€
+script of a film Ч сценарий фильма
+sequel Ч сиквел (фильм, продолжающий по сюжету другой фильм)
+[?sekw?l]
+shoot a film Ч снимать фильм
+short film Ч короткометражный фильм
+show Ч сеанс (в кинотеатре)
+[SHo]
+show a film Ч демонстрировать фильм
+silent film Ч немой фильм
+sound film / talkie Ч разг. звуковой фильм
+star (in a film) Ч по€вл€тьс€ в ведущей роли (в фильме)
+subtitles / captions Ч субтитры
+thriller Ч триллер
+[?THril?r]
+title of the film Ч название фильма
+trailer Ч трейлер (небольшой видеоролик, €вл€ющийс€ анонсом гр€дущего фильма, и, как правило, содержащий наиболее зрелищные его фрагменты)
+[?tral?r]
+viewing Ч просмотр фильма
+[?vyo?oiNG]
+wide-screen film Ч широкоэкранный фильм
+ћузыка
+balalaika Ч балалайка
+[?b?l?'laik?]
+banjo Ч банджо
+[?banjo]
+baritone Ч баритон
+[?bari?ton]
+bass Ч бас
+[bas]
+bassoon Ч фагот
+[ba-]
+baton Ч дирижерска€ палочка
+['b?t?n]
+castanets Ч кастаньеты
+[?k?st?'nets]
+chorus Ч хор
+[?kor?s]
+clarinet Ч кларнет
+[?klar??net]
+classical music Ч классическа€ музыка
+composer Ч композитор
+[k?m?poz?r]
+concert Ч концерт
+[?kans?rt]
+concert hall Ч филармони€, концертный зал
+concert of chamber music Ч концерт камерной музыки
+concert of classical music Ч концерт классической музыки
+concert of folk music Ч концерт народной музыки
+conductor Ч дирижер
+[k?n?d?kt?r]
+contralto Ч контральто
+[k?n?tralto]
+cornet Ч корнет
+[?korn?t]
+cymbals Ч цимбалы
+['simblz]
+drum Ч барабан
+[dr?m]
+duet Ч дуэт
+['djuet]
+flute Ч флейта
+[flo?ot]
+folk-song Ч народна€ песн€
+gong Ч гонг
+[goNG]
+grand piano Ч ро€ль
+guitar Ч гитара
+[gi't?:]
+harp Ч арфа
+[harp]
+hautboy Ч гобой
+horn Ч рожок, рог
+[horn]
+jazz Ч джаз
+[jaz]
+lyrics Ч слова песни
+[?lirik]
+mandolin / mandoline Ч мандолина
+mass singing Ч массовое пение
+melody Ч мелоди€
+[?mel?de]
+mezzo-soprano Ч меццо-сопрано
+mixed chorus Ч смешанный хор
+music Ч музыка
+[?myo?ozik]
+musical Ч мюзикл
+[?myo?ozik?l]
+musical instrument Ч музыкальный инструмент
+musician Ч музыкант
+[myo?o?ziSH?n]
+orchestra Ч оркестр
+['?:kistr?]
+performer Ч исполнитель
+[p?r?form?r]
+piano Ч пианино
+[pe?ano]
+quartet Ч квартет
+[kwor?tet]
+quintet Ч квинтет
+[kwin?tet]
+rhythm Ч ритм
+['ri??m]
+septet Ч септет
+[sep?tet]
+sextet Ч секстет
+[sek?stet]
+singing Ч пение
+[siNG]
+solo Ч соло
+[?solo]
+soloist Ч солист
+['s?ul?uist]
+sonata Ч соната
+[s??nat?]
+song Ч песн€
+[soNG]
+soprano Ч сопрано
+[s??prano]
+symphony Ч симфони€
+[?simf?ne]
+tenor Ч тенор
+[?ten?r]
+trio Ч трио
+[?tre-o]
+trombone Ч тромбон
+[tr?m-]
+trumpet Ч труба
+[?tr?mpit]
+tune Ч мелоди€, мотив
+[t(y)o?on]
+tuning fork Ч камертон
+violin Ч скрипка
+[?vai?'lin]
+waltz Ч вальс
+[wolts]
+ћузей
+ancients coins Ч старинные монеты
+antique Ч античное искусство
+[?n'ti:k]
+articles of glass (bone, stone, iron) Ч предметы, сделанные из стекла (кости, камн€, железа)
+decorations Ч украшени€
+[?dek??raSH?n]
+exhibit Ч экспонат
+[ig'zibit]
+exhibition Ч выставка
+[?eksi'bi?n]
+manuscript Ч рукопись
+[?many??skript]
+mosaic works Ч мозаичные работы
+museum Ч музей
+[mju'zi:?m]
+museum of Fine Arts Ч музей изобразительных искусств
+painter / artist Ч художник
+painting / picture Ч картина
+portrait Ч портрет
+['p?:tr?t]
+restoration work Ч реставрационна€ работа
+vase Ч ваза
+['v?:z]
+work of art Ч произведение искусства
+јзартные игры
+baccarat Ч баккара (карточна€ игра)
+['b?k
+bet Ч пари
+[bet]
+blackjack Ч "блэк джек", "очко" (карточна€ игра)
+[?blak?jak]
+casino Ч казино
+[k?'si:n?u]
+chip Ч фишка (деньги казино)
+[CHip]
+craps Ч карточна€ игра типа "блэк джек"
+[kraps]
+dealer Ч сдающий карты
+[?del?r]
+horse race Ч лошадиные бега
+keno Ч "кено" (разновидность лото)
+[ki'n?u]
+poker Ч покер
+[?pok?r]
+pool Ч пул (биль€рд)
+[po?ol]
+roulette Ч рулетка
+[ru'let]
+writer Ч тот, кто ведет запись (при игре в "кено")
+[?rit?r]
+–адио
+(radio) broadcast Ч передача (по радио); передавать (по радио)
+aerial / antenna Ч антенна
+['e?ri?l]
+AM (amplitude modulation) Ч јћ, амплитудна€ модул€ци€
+announcer Ч диктор
+[??nouns?r]
+FM (frequency modulation) Ч частотна€ модул€ци€
+frequency Ч частота
+[?frekw?nse]
+on air Ч в эфире
+radio Ч радио
+[?rade?o]
+radio set Ч радиоприемник
+radio station Ч радиостанци€
+radio wave Ч радиоволна
+signal Ч сигнал
+[?sign?l]
+speech Ч речь
+[speCH]
+weather report Ч сводка погоды
+“елевидение
+aerial / antenna Ч антенна
+channel Ч канал
+[?CHanl]
+HDTV (= high definition television) Ч “¬„ (= телевидение высокой четкости)
+liquid-crystal display televisions (= LCD TV) Ч телевизор с жидкокристаллическим экраном
+picture Ч изображение
+[?pikCH?r]
+plasma display panel (= PDP) Ч плазменна€ панель, газоразр€дный экран
+program / programme Ч программа
+screen Ч экран
+[skren]
+telecast Ч телепередача; передавать, показывать (по телевидению)
+[?tel??kast]
+television (TV) Ч телевидение
+tube / cathode ray tube (CRT) Ч кинескоп
+TV set Ч телевизор
+TV station Ч “¬ станци€
+“анцы
+ballet Ч балет
+[ba?la]
+boogie-woogie Ч буги-вуги
+dance Ч танец; танцевать
+[dans]
+dancer Ч танцор
+[?dans?r]
+dancing Ч танцы
+[dans]
+foxtrot Ч фокстрот
+[?faks?trat]
+polka Ч полька
+[?po(l)k?]
+quickstep Ч квикстеп
+[?kwik?step]
+rumba Ч румба
+[?ro?om-]
+salsa Ч сальса
+[?sals?]
+samba Ч самба
+[?sam-]
+tango Ч танго
+[?taNGgo]
+waltz Ч вальс
+[wolts]

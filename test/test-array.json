@@ -1,0 +1,182 @@
+[
+  {
+    "sentence": "The*child*______*to*school*every*day.",
+    "varians": [
+      "will*goes",
+      "go",
+      "goes"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "His*father*______*him*there*in*his*car.",
+    "varians": [
+      "take",
+      "takes",
+      "taken"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "She*always*______*lunch*at*school.",
+    "varians": [
+      "takes",
+      "have",
+      "has"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "Richard@s*life*in*Paris*is*a*bit*difficult.*He*______*only*English.",
+    "varians": [
+      "understand",
+      "doesn@t*understand",
+      "knows"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "sentence": "What@s*the*matter?*You*______*very*sad.",
+    "varians": [
+      "look",
+      "looks",
+      "looking"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "sentence": "Liz*is*very*good*at*tennis.*She*______*every*game.",
+    "varians": [
+      "gets",
+      "won",
+      "wins"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "Winter*is*warm*here.*It*______*very*seldom.*But*sometimes*it*______.",
+    "varians": [
+      "rain,*snows",
+      "snows,*rains",
+      "snow,*rain"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "Helen*is*on*a*diet.*She*______*very*little.",
+    "varians": [
+      "doesn@t*eat",
+      "eats",
+      "ate"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "He*______*in*a*hurry.",
+    "varians": [
+      "is",
+      "be",
+      "doesn@t*be"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "sentence": "The*exams*at*school*______*in*June.",
+    "varians": [
+      "have",
+      "start",
+      "starts"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "Linda*and*I*______*for*a*company,*which*______*cars.",
+    "varians": [
+      "works,*produces",
+      "work,*produces",
+      "work,*produce"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "I*______*work*at*ten*o@clock,*and*Linda*______*to*the*office*at*nine.",
+    "varians": [
+      "start,*comes",
+      "start,*goes",
+      "start,*come"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "sentence": "She*______*at*typing,*she*______*letters*and*reports*every*day.*",
+    "varians": [
+      "be*good,*writes",
+      "is*good,*make",
+      "is*good,*writes"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "I*sometimes*______*my*friend*translate*letters,*as*I*______*French*rather*well.",
+    "varians": [
+      "help,*don@t*know",
+      "don@t*help,*know",
+      "help,*know"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "sentence": "The*secretary*______*the*phone*calls,*sometimes*she*______*visitors*around*the*factory.",
+    "varians": [
+      "answer,*show",
+      "don@t*answer,*shows",
+      "answers,*shows"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "She*______*her*job.*She*______*to*be*a*secretary.",
+    "varians": [
+      "isn@t*liked,*wants",
+      "doesn@t*like,*wants",
+      "don@t*like,*want"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "Helen*often*______*meetings*for*her*boss*and*other*managers*of*the*company.",
+    "varians": [
+      "don@t*arrange",
+      "arrange",
+      "arranges"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "They*______*to*going*to*bed*late*at*night.",
+    "varians": [
+      "are*not*accustomed",
+      "don@t*accustomed",
+      "accustom"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "sentence": "Nelly*______*TV*three*times*a*week.",
+    "varians": [
+      "likes",
+      "don@t*watch",
+      "watches"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "______*you*______*where*your*brother*______*?",
+    "varians": [
+      "Do*...*know,*is",
+      "Do*...*know,*was",
+      "Are*...*know,*is*"
+    ],
+    "correct_answer": 0
+  }
+]

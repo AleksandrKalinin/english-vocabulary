@@ -1,0 +1,782 @@
+[
+  {
+    "name": "anatomy",
+    "transcription": "[əˈnætəmi]",
+    "translation": "анатомия",
+    "category": "anathomy"
+  },
+  {
+    "name": "abdomen",
+    "transcription": "[ˈæbdəmən]",
+    "translation": "живот",
+    "category": "anathomy"
+  },
+  {
+    "name": "accouchement",
+    "transcription": "[əˈkuːʃmɒŋ]",
+    "translation": "роды",
+    "category": "anathomy"
+  },
+  {
+    "name": "ankle",
+    "transcription": "[ˈæŋkl̩]",
+    "translation": "голеностоп",
+    "category": "anathomy"
+  },
+  {
+    "name": "anus",
+    "transcription": "[ˈeɪnəs]",
+    "translation": "задний проход",
+    "category": "anathomy"
+  },
+  {
+    "name": "appendix",
+    "transcription": "[əˈpendɪks]",
+    "translation": "аппендикс",
+    "category": "anathomy"
+  },
+  {
+    "name": "arm",
+    "transcription": "[ɑːm]",
+    "translation": "рука",
+    "category": "anathomy"
+  },
+  {
+    "name": "armpit",
+    "transcription": "[ˈɑːmpɪt]",
+    "translation": "подмышка",
+    "category": "anathomy"
+  },
+  {
+    "name": "artery",
+    "transcription": "[ˈɑːtəri]",
+    "translation": "артерия",
+    "category": "anathomy"
+  },
+  {
+    "name": "backbone",
+    "transcription": "[ˈbækbəʊn]",
+    "translation": "позвоночник",
+    "category": "anathomy"
+  },
+  {
+    "name": "bald head",
+    "transcription": "[bɔːld hed]",
+    "translation": "лысина",
+    "category": "anathomy"
+  },
+  {
+    "name": "beard",
+    "transcription": "[bɪəd]",
+    "translation": "борода",
+    "category": "anathomy"
+  },
+  {
+    "name": "biceps",
+    "transcription": "[ˈbaɪseps]",
+    "translation": "бицепс",
+    "category": "anathomy"
+  },
+  {
+    "name": "birth",
+    "transcription": "[bɜːθ]",
+    "translation": "рождение",
+    "category": "anathomy"
+  },
+  {
+    "name": "blood",
+    "transcription": "[blʌd]",
+    "translation": "кровь",
+    "category": "anathomy"
+  },
+  {
+    "name": "blood circulation",
+    "transcription": "[blʌd ˌsɜːkjʊˈleɪʃn̩]",
+    "translation": "кровообращение",
+    "category": "anathomy"
+  },
+  {
+    "name": "blood group",
+    "transcription": "[blʌd ɡruːp]",
+    "translation": "группа крови",
+    "category": "anathomy"
+  },
+  {
+    "name": "blood vessel",
+    "transcription": "[blʌd ˈvesəl]",
+    "translation": "кровеносный сосуд",
+    "category": "anathomy"
+  },
+  {
+    "name": "body",
+    "transcription": "[ˈbɒdi]",
+    "translation": "тело",
+    "category": "anathomy"
+  },
+  {
+    "name": "bone",
+    "transcription": "[bəʊn]",
+    "translation": "кость",
+    "category": "anathomy"
+  },
+  {
+    "name": "bowels",
+    "transcription": "[ˈbaʊəlz]",
+    "translation": "кишечник",
+    "category": "anathomy"
+  },
+  {
+    "name": "brain",
+    "transcription": "[breɪn]",
+    "translation": "мозг",
+    "category": "anathomy"
+  },
+  {
+    "name": "breast",
+    "transcription": "[brest]",
+    "translation": "грудь (женская)",
+    "category": "anathomy"
+  },
+  {
+    "name": "breath",
+    "transcription": "[breθ]",
+    "translation": "дыхание",
+    "category": "anathomy"
+  },
+  {
+    "name": "bronchus",
+    "transcription": "[ˈbrɒŋkəs]",
+    "translation": "бронх",
+    "category": "anathomy"
+  },
+  {
+    "name": "build",
+    "transcription": "[bɪld]",
+    "translation": "телосложение",
+    "category": "anathomy"
+  },
+  {
+    "name": "bust",
+    "transcription": "[bʌst]",
+    "translation": "бюст",
+    "category": "anathomy"
+  },
+  {
+    "name": "buttocks",
+    "transcription": "[bʌtəks]",
+    "translation": "ягодицы",
+    "category": "anathomy"
+  },
+  {
+    "name": "calf",
+    "transcription": "[kɑːf]",
+    "translation": "икра ноги",
+    "category": "anathomy"
+  },
+  {
+    "name": "canine",
+    "transcription": "[ˈkeɪnaɪn]",
+    "translation": "клык",
+    "category": "anathomy"
+  },
+  {
+    "name": "capillary",
+    "transcription": "[kəˈpɪləri]",
+    "translation": "капилляр",
+    "category": "anathomy"
+  },
+  {
+    "name": "cerebrum",
+    "transcription": "[səˈriːbrəm]",
+    "translation": "головной мозг",
+    "category": "anathomy"
+  },
+  {
+    "name": "cheek",
+    "transcription": "[tʃiːk]",
+    "translation": "щека",
+    "category": "anathomy"
+  },
+  {
+    "name": "cheekbone",
+    "transcription": "[ˈtʃiːkbəʊn]",
+    "translation": "скула",
+    "category": "anathomy"
+  },
+  {
+    "name": "chest",
+    "transcription": "[ʧest]",
+    "translation": "грудная клетка",
+    "category": "anathomy"
+  },
+  {
+    "name": "chin",
+    "transcription": "[tʃɪn]",
+    "translation": "подбородок",
+    "category": "anathomy"
+  },
+  {
+    "name": "clavicle",
+    "transcription": "[ˈkl̩ævɪkl]",
+    "translation": "ключица",
+    "category": "anathomy"
+  },
+  {
+    "name": "corpse",
+    "transcription": "[kɔːps]",
+    "translation": "труп",
+    "category": "anathomy"
+  },
+  {
+    "name": "digestion",
+    "transcription": "[dɪˈdʒestʃən]",
+    "translation": "пищеварение",
+    "category": "anathomy"
+  },
+  {
+    "name": "dimple",
+    "transcription": "[ˈdɪmpl̩]",
+    "translation": "ямка на щеке",
+    "category": "anathomy"
+  },
+  {
+    "name": "ear",
+    "transcription": "[ɪə]",
+    "translation": "ухо",
+    "category": "anathomy"
+  },
+  {
+    "name": "elbow",
+    "transcription": "[ˈelbəʊ]",
+    "translation": "локоть",
+    "category": "anathomy"
+  },
+  {
+    "name": "enamel",
+    "transcription": "[ɪˈnæml̩]",
+    "translation": "эмаль (зубная)",
+    "category": "anathomy"
+  },
+  {
+    "name": "entrails",
+    "transcription": "[ˈentreɪlz]",
+    "translation": "кишки",
+    "category": "anathomy"
+  },
+  {
+    "name": "eyebrow",
+    "transcription": "[ˈaɪbraʊ]",
+    "translation": "бровь",
+    "category": "anathomy"
+  },
+  {
+    "name": "eyelash",
+    "transcription": "[ˈaɪlæʃ]",
+    "translation": "ресница",
+    "category": "anathomy"
+  },
+  {
+    "name": "eyelid",
+    "transcription": "[ˈaɪlɪd]",
+    "translation": "веко",
+    "category": "anathomy"
+  },
+  {
+    "name": "finger",
+    "transcription": "[ˈfɪŋɡə]",
+    "translation": "палец на руке",
+    "category": "anathomy"
+  },
+  {
+    "name": "fist",
+    "transcription": "[fɪst]",
+    "translation": "кулак",
+    "category": "anathomy"
+  },
+  {
+    "name": "flat-foot",
+    "transcription": "[ˈflætfʊt]",
+    "translation": "плоскостопие",
+    "category": "anathomy"
+  },
+  {
+    "name": "foot (feet)",
+    "transcription": "[fʊt fiːt]",
+    "translation": "нога' ступня (ноги' ступни)",
+    "category": "anathomy"
+  },
+  {
+    "name": "forearm",
+    "transcription": "[ˌfɔːˈrɑːm]",
+    "translation": "предплечье",
+    "category": "anathomy"
+  },
+  {
+    "name": "forefinger",
+    "transcription": "[ˈfɔːfɪŋɡə]",
+    "translation": "указательный палец",
+    "category": "anathomy"
+  },
+  {
+    "name": "forehead",
+    "transcription": "[ˈfɒrɪd]",
+    "translation": "лоб",
+    "category": "anathomy"
+  },
+  {
+    "name": "fourth finger",
+    "transcription": "[ˈfɔːθ ˈfɪŋɡə]",
+    "translation": "безымянный палец",
+    "category": "anathomy"
+  },
+  {
+    "name": "freckle",
+    "transcription": "[ˈfrekl̩]",
+    "translation": "веснушка",
+    "category": "anathomy"
+  },
+  {
+    "name": "fringe",
+    "transcription": "[frɪndʒ]",
+    "translation": "челка",
+    "category": "anathomy"
+  },
+  {
+    "name": "gland",
+    "transcription": "[ɡlænd]",
+    "translation": "лимфатический узел",
+    "category": "anathomy"
+  },
+  {
+    "name": "groin",
+    "transcription": "[ɡrɔɪn]",
+    "translation": "пах",
+    "category": "anathomy"
+  },
+  {
+    "name": "gum",
+    "transcription": "[ɡʌm]",
+    "translation": "десна",
+    "category": "anathomy"
+  },
+  {
+    "name": "haemoglobin",
+    "transcription": "[ˌhiːməˈɡləʊbɪn]",
+    "translation": "гемоглобин",
+    "category": "anathomy"
+  },
+  {
+    "name": "haemorrhage",
+    "transcription": "['hemərɪʤ]",
+    "translation": "кровотечение",
+    "category": "anathomy"
+  },
+  {
+    "name": "hair",
+    "transcription": "[heə]",
+    "translation": "волосы",
+    "category": "anathomy"
+  },
+  {
+    "name": "hand",
+    "transcription": "[hænd]",
+    "translation": "кисть",
+    "category": "anathomy"
+  },
+  {
+    "name": "head",
+    "transcription": "[hed]",
+    "translation": "голова",
+    "category": "anathomy"
+  },
+  {
+    "name": "health",
+    "transcription": "[helθ]",
+    "translation": "здоровье",
+    "category": "anathomy"
+  },
+  {
+    "name": "heart",
+    "transcription": "[hɑːt]",
+    "translation": "сердце",
+    "category": "anathomy"
+  },
+  {
+    "name": "heel",
+    "transcription": "[hiːl]",
+    "translation": "пятка",
+    "category": "anathomy"
+  },
+  {
+    "name": "immunity",
+    "transcription": "[ɪˈmjuːnɪti]",
+    "translation": "иммунитет",
+    "category": "anathomy"
+  },
+  {
+    "name": "intestine",
+    "transcription": "[ɪnˈtestɪn]",
+    "translation": "кишечник",
+    "category": "anathomy"
+  },
+  {
+    "name": "jaw",
+    "transcription": "[dʒɔː]",
+    "translation": "челюсть",
+    "category": "anathomy"
+  },
+  {
+    "name": "kidney",
+    "transcription": "[ˈkɪdni]",
+    "translation": "почка",
+    "category": "anathomy"
+  },
+  {
+    "name": "knee",
+    "transcription": "[niː]",
+    "translation": "колено",
+    "category": "anathomy"
+  },
+  {
+    "name": "larynx",
+    "transcription": "[ˈlærɪŋks]",
+    "translation": "гортань",
+    "category": "anathomy"
+  },
+  {
+    "name": "leg",
+    "transcription": "[leɡ]",
+    "translation": "нога",
+    "category": "anathomy"
+  },
+  {
+    "name": "lip",
+    "transcription": "[lɪp]",
+    "translation": "губа",
+    "category": "anathomy"
+  },
+  {
+    "name": "liver",
+    "transcription": "[ˈlɪvə]",
+    "translation": "печень",
+    "category": "anathomy"
+  },
+  {
+    "name": "little toe",
+    "transcription": "[ˈlɪtl̩ təʊ]",
+    "translation": "мизинец ноги",
+    "category": "anathomy"
+  },
+  {
+    "name": "little finger",
+    "transcription": "[ˈlɪtl̩ ˈfɪŋɡə]",
+    "translation": "мизинец руки",
+    "category": "anathomy"
+  },
+  {
+    "name": "lung",
+    "transcription": "[lʌŋ]",
+    "translation": "легкое",
+    "category": "anathomy"
+  },
+  {
+    "name": "middle finger",
+    "transcription": "[ˈmɪdl̩ ˈfɪŋɡə]",
+    "translation": "средний палец",
+    "category": "anathomy"
+  },
+  {
+    "name": "milk-tooth",
+    "transcription": "[ˈmɪlk tuːθ]",
+    "translation": "молочный зуб",
+    "category": "anathomy"
+  },
+  {
+    "name": "molar",
+    "transcription": "[ˈməʊlə]",
+    "translation": "коренной зуб",
+    "category": "anathomy"
+  },
+  {
+    "name": "mole",
+    "transcription": "[məʊl]",
+    "translation": "родинка",
+    "category": "anathomy"
+  },
+  {
+    "name": "moustache",
+    "transcription": "[məˈstɑːʃ]",
+    "translation": "усы",
+    "category": "anathomy"
+  },
+  {
+    "name": "mouth",
+    "transcription": "[maʊθ]",
+    "translation": "рот",
+    "category": "anathomy"
+  },
+  {
+    "name": "muscle",
+    "transcription": "[ˈmʌsl̩]",
+    "translation": "мышца",
+    "category": "anathomy"
+  },
+  {
+    "name": "muscles",
+    "transcription": "[ˈmʌsl̩z]",
+    "translation": "мускулатура",
+    "category": "anathomy"
+  },
+  {
+    "name": "nail",
+    "transcription": "[neɪl]",
+    "translation": "ноготь",
+    "category": "anathomy"
+  },
+  {
+    "name": "nape",
+    "transcription": "[neɪp]",
+    "translation": "затылок",
+    "category": "anathomy"
+  },
+  {
+    "name": "navel",
+    "transcription": "[ˈneɪvl̩]",
+    "translation": "пупок",
+    "category": "anathomy"
+  },
+  {
+    "name": "neck",
+    "transcription": "[nek]",
+    "translation": "шея",
+    "category": "anathomy"
+  },
+  {
+    "name": "nerve",
+    "transcription": "[nɜːv]",
+    "translation": "нерв",
+    "category": "anathomy"
+  },
+  {
+    "name": "nose",
+    "transcription": "[nəʊz]",
+    "translation": "нос",
+    "category": "anathomy"
+  },
+  {
+    "name": "nostril",
+    "transcription": "[ˈnɒstrəl]",
+    "translation": "ноздря",
+    "category": "anathomy"
+  },
+  {
+    "name": "oesophagus",
+    "transcription": "[iːˈsɒfəɡəs]",
+    "translation": "пищевод",
+    "category": "anathomy"
+  },
+  {
+    "name": "ovule",
+    "transcription": "[ˈovjuːl]",
+    "translation": "яйцеклетка",
+    "category": "anathomy"
+  },
+  {
+    "name": "palm",
+    "transcription": "[pɑːm]",
+    "translation": "ладонь",
+    "category": "anathomy"
+  },
+  {
+    "name": "pelvis",
+    "transcription": "[ˈpelvɪs]",
+    "translation": "таз",
+    "category": "anathomy"
+  },
+  {
+    "name": "puberty",
+    "transcription": "[ˈpjuːbəti]",
+    "translation": "половая зрелость",
+    "category": "anathomy"
+  },
+  {
+    "name": "pulse",
+    "transcription": "[pʌls]",
+    "translation": "пульс",
+    "category": "anathomy"
+  },
+  {
+    "name": "pupil",
+    "transcription": "[ˈpjuːpl̩]",
+    "translation": "зрачок",
+    "category": "anathomy"
+  },
+  {
+    "name": "rhesus",
+    "transcription": "[ˈriːsəs]",
+    "translation": "резус",
+    "category": "anathomy"
+  },
+  {
+    "name": "rib",
+    "transcription": "[rɪb]",
+    "translation": "ребро",
+    "category": "anathomy"
+  },
+  {
+    "name": "ring-finger",
+    "transcription": "[ˈrɪŋ fɪŋɡə]",
+    "translation": "безымянный палец левой руки",
+    "category": "anathomy"
+  },
+  {
+    "name": "saliva",
+    "transcription": "[səˈlaɪvə]",
+    "translation": "слюна",
+    "category": "anathomy"
+  },
+  {
+    "name": "salivation",
+    "transcription": "[ˈsælɪveɪʃn̩]",
+    "translation": "слюноотделение",
+    "category": "anathomy"
+  },
+  {
+    "name": "scapula",
+    "transcription": "[ˈskæpjʊlə]",
+    "translation": "лопатка",
+    "category": "anathomy"
+  },
+  {
+    "name": "sex",
+    "transcription": "[seks]",
+    "translation": "пол",
+    "category": "anathomy"
+  },
+  {
+    "name": "shoulder",
+    "transcription": "[ˈʃəʊldə]",
+    "translation": "плечо",
+    "category": "anathomy"
+  },
+  {
+    "name": "skeleton",
+    "transcription": "[ˈskelɪtn̩]",
+    "translation": "скелет",
+    "category": "anathomy"
+  },
+  {
+    "name": "skin",
+    "transcription": "[skɪn]",
+    "translation": "кожа",
+    "category": "anathomy"
+  },
+  {
+    "name": "skull",
+    "transcription": "[skʌl]",
+    "translation": "череп",
+    "category": "anathomy"
+  },
+  {
+    "name": "spine",
+    "transcription": "[spaɪn]",
+    "translation": "позвоночный столб",
+    "category": "anathomy"
+  },
+  {
+    "name": "stomach",
+    "transcription": "[ˈstʌmək]",
+    "translation": "желудок",
+    "category": "anathomy"
+  },
+  {
+    "name": "stubble",
+    "transcription": "[ˈstʌbl̩]",
+    "translation": "щетина",
+    "category": "anathomy"
+  },
+  {
+    "name": "temple",
+    "transcription": "[ˈtempl̩]",
+    "translation": "висок",
+    "category": "anathomy"
+  },
+  {
+    "name": "thigh",
+    "transcription": "[θaɪ]",
+    "translation": "бедро",
+    "category": "anathomy"
+  },
+  {
+    "name": "thorax",
+    "transcription": "[ˈθɔːræks]",
+    "translation": "грудная клетка",
+    "category": "anathomy"
+  },
+  {
+    "name": "throat",
+    "transcription": "[θrəʊt]",
+    "translation": "горло",
+    "category": "anathomy"
+  },
+  {
+    "name": "thumb",
+    "transcription": "[θʌm]",
+    "translation": "большой палец руки",
+    "category": "anathomy"
+  },
+  {
+    "name": "toe",
+    "transcription": "[təʊ]",
+    "translation": "палец ноги",
+    "category": "anathomy"
+  },
+  {
+    "name": "tongue",
+    "transcription": "[tʌŋ]",
+    "translation": "язык",
+    "category": "anathomy"
+  },
+  {
+    "name": "tonsil",
+    "transcription": "[ˈtɒnsɪl]",
+    "translation": "миндалина",
+    "category": "anathomy"
+  },
+  {
+    "name": "tooth (teeth)",
+    "transcription": "[tuːθ] [tiːθ]",
+    "translation": "зуб (зубы)",
+    "category": "anathomy"
+  },
+  {
+    "name": "urinary bladder",
+    "transcription": "[ˈjʊərɪnri ˈblædə]",
+    "translation": "мочевой пузырь",
+    "category": "anathomy"
+  },
+  {
+    "name": "urine",
+    "transcription": "[ˈjʊərɪn]",
+    "translation": "моча",
+    "category": "anathomy"
+  },
+  {
+    "name": "vein",
+    "transcription": "[veɪn]",
+    "translation": "вена",
+    "category": "anathomy"
+  },
+  {
+    "name": "vertebra",
+    "transcription": "[ˈvɜːtɪbrə]",
+    "translation": "позвонок",
+    "category": "anathomy"
+  },
+  {
+    "name": "wart",
+    "transcription": "[wɔːt]",
+    "translation": "бородавка",
+    "category": "anathomy"
+  }
+]

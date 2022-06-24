@@ -1,0 +1,530 @@
+[
+  {
+    "translation": "аист",
+    "name": "stork",
+    "transcription": "[stɔːk]",
+    "category": "birds"
+  },
+  {
+    "translation": "альбатрос",
+    "name": "albatross",
+    "transcription": "[ˈælbətrɒs]",
+    "category": "birds"
+  },
+  {
+    "translation": "баклан",
+    "name": "cormorant",
+    "transcription": "[ˈkɔːmərənt]",
+    "category": "birds"
+  },
+  {
+    "translation": "бекас",
+    "name": "snipe",
+    "transcription": "[snaɪp]",
+    "category": "birds"
+  },
+  {
+    "translation": "беркут",
+    "name": "golden eagle",
+    "transcription": "[ˈɡəʊldən ˈiːɡl̩]",
+    "category": "birds"
+  },
+  {
+    "translation": "вальдшнеп",
+    "name": "woodcock",
+    "transcription": "[ˈwʊdkɒk]",
+    "category": "birds"
+  },
+  {
+    "translation": "воробей",
+    "name": "sparrow",
+    "transcription": "[ˈspærəʊ]",
+    "category": "birds"
+  },
+  {
+    "translation": "ворон",
+    "name": "raven",
+    "transcription": "[ˈreɪvn̩]",
+    "category": "birds"
+  },
+  {
+    "translation": "ворона",
+    "name": "crow",
+    "transcription": "[krəʊ]",
+    "category": "birds"
+  },
+  {
+    "translation": "выпь",
+    "name": "bittern",
+    "transcription": "[ˈbɪtən]",
+    "category": "birds"
+  },
+  {
+    "translation": "гагара",
+    "name": "loon,  diver",
+    "transcription": "[luːn] [ˈdaɪvə]",
+    "category": "birds"
+  },
+  {
+    "translation": "галка",
+    "name": "jackdaw,  daw",
+    "transcription": "[ˈdʒækdɔː] [dɔː]",
+    "category": "birds"
+  },
+  {
+    "translation": "глухарь",
+    "name": "cock of the wood,  wood grouse",
+    "transcription": "[ˈkɒk əv ðə wʊd] [wʊd ɡraʊs]",
+    "category": "birds"
+  },
+  {
+    "translation": "гоголь",
+    "name": "goldeneye",
+    "transcription": "[ˈɡoldəˌnaɪ]",
+    "category": "birds"
+  },
+  {
+    "translation": "голубь",
+    "name": "pigeon,  dove",
+    "transcription": "[ˈpɪdʒən] [dʌv]",
+    "category": "birds"
+  },
+  {
+    "translation": "горлица",
+    "name": "turtle-dove",
+    "transcription": "[ˈtɜːtldʌv]",
+    "category": "birds"
+  },
+  {
+    "translation": "грач",
+    "name": "rook",
+    "transcription": "[rʊk]",
+    "category": "birds"
+  },
+  {
+    "translation": "гусь",
+    "name": "goose",
+    "transcription": "[ɡuːs]",
+    "category": "birds"
+  },
+  {
+    "translation": "дрозд",
+    "name": "thrush",
+    "transcription": "[θrʌʃ]",
+    "category": "birds"
+  },
+  {
+    "translation": "дятел",
+    "name": "woodpecker",
+    "transcription": "[ˈwʊdpekə]",
+    "category": "birds"
+  },
+  {
+    "translation": "жаворонок",
+    "name": "lark",
+    "transcription": "[lɑːk]",
+    "category": "birds"
+  },
+  {
+    "translation": "журавль",
+    "name": "crane",
+    "transcription": "[kreɪn]",
+    "category": "birds"
+  },
+  {
+    "translation": "зимородок",
+    "name": "halcyon,  kingfisher",
+    "transcription": "[ˈhælsɪən] ˈkɪŋfɪʃə]",
+    "category": "birds"
+  },
+  {
+    "translation": "зяблик",
+    "name": "chaffinch",
+    "transcription": "[ˈtʃæfɪntʃ]",
+    "category": "birds"
+  },
+  {
+    "translation": "иволга",
+    "name": "oriole",
+    "transcription": "[ˈɔːrɪəʊl]",
+    "category": "birds"
+  },
+  {
+    "translation": "индейка",
+    "name": "turkey",
+    "transcription": "[ˈtɜːki]",
+    "category": "birds"
+  },
+  {
+    "translation": "канарейка",
+    "name": "canary",
+    "transcription": "[kəˈneəri]",
+    "category": "birds"
+  },
+  {
+    "translation": "клёст",
+    "name": "crossbill",
+    "transcription": "[ˈkrɒˌsbɪl]",
+    "category": "birds"
+  },
+  {
+    "translation": "козодой",
+    "name": "dorhawk,  nightjar",
+    "transcription": "['dɔːhɔːk] [ˈnaɪtdʒɑː]",
+    "category": "birds"
+  },
+  {
+    "translation": "колибри",
+    "name": "hummingbird",
+    "transcription": "[ˈhʌmɪŋbɜːd]",
+    "category": "birds"
+  },
+  {
+    "translation": "коноплянка",
+    "name": "linnet",
+    "transcription": "[ˈlɪnɪt]",
+    "category": "birds"
+  },
+  {
+    "translation": "королек",
+    "name": "regulus",
+    "transcription": "[ˈrɛgjʊləs]",
+    "category": "birds"
+  },
+  {
+    "translation": "коростель",
+    "name": "landrail,  corncrake",
+    "transcription": "[ˈlændreɪl] [ˈkɔːnkreɪk]",
+    "category": "birds"
+  },
+  {
+    "translation": "коршун",
+    "name": "kite",
+    "transcription": "[kaɪt]",
+    "category": "birds"
+  },
+  {
+    "translation": "кряква",
+    "name": "wild duck,  mallard",
+    "transcription": "[waɪld dʌk] [ˈmælɑːd]",
+    "category": "birds"
+  },
+  {
+    "translation": "кукушка",
+    "name": "cuckoo",
+    "transcription": "[ˈkʊkuː]",
+    "category": "birds"
+  },
+  {
+    "translation": "кулик",
+    "name": "sandpiper",
+    "transcription": "[ˈsændpaɪpə]",
+    "category": "birds"
+  },
+  {
+    "translation": "курица",
+    "name": "hen",
+    "transcription": "[hen]",
+    "category": "birds"
+  },
+  {
+    "translation": "куропатка",
+    "name": "partridge (серая),  willow grouse (белая)",
+    "transcription": "[ˈpɑːtrɪdʒ] [ˈwɪləʊ ɡraʊs]",
+    "category": "birds"
+  },
+  {
+    "translation": "ласточка",
+    "name": "swallow",
+    "transcription": "[ˈswɒləʊ]",
+    "category": "birds"
+  },
+  {
+    "translation": "лебедь",
+    "name": "swan,  cob (самец),  cob-swan",
+    "transcription": "[swɒn] [kɒb] [ˈkɒbswɒn]",
+    "category": "birds"
+  },
+  {
+    "translation": "малиновка",
+    "name": "robin,  redbreast",
+    "transcription": "[ˈrɒbɪn] [ˈredbrest]",
+    "category": "birds"
+  },
+  {
+    "translation": "мухоловка",
+    "name": "flycatcher",
+    "transcription": "[ˈflaɪkætʃə]",
+    "category": "birds"
+  },
+  {
+    "translation": "неясыть",
+    "name": "tawny owl",
+    "transcription": "[ˈtɔːni aʊl]",
+    "category": "birds"
+  },
+  {
+    "translation": "нырок",
+    "name": "pochard",
+    "transcription": "[ˈpəʊtʃəd]",
+    "category": "birds"
+  },
+  {
+    "translation": "овсянка",
+    "name": "(yellow) bunting,  yellowhammer",
+    "transcription": "[ˈjeləʊ ˈbʌntɪŋ] ['jeləuˌhæmə]",
+    "category": "birds"
+  },
+  {
+    "translation": "оляпка",
+    "name": "dipper,  ouzel",
+    "transcription": "[ˈdɪpə] [ˈuːzl̩]",
+    "category": "birds"
+  },
+  {
+    "translation": "орел",
+    "name": "eagle",
+    "transcription": "[ˈiːɡl̩]",
+    "category": "birds"
+  },
+  {
+    "translation": "павлин",
+    "name": "peacock,  peafowl",
+    "transcription": "[ˈpiːkɒk] [ˈpiːfaʊl]",
+    "category": "birds"
+  },
+  {
+    "translation": "пеночка",
+    "name": "chiffchaff",
+    "transcription": "['ʧɪfʧæf]",
+    "category": "birds"
+  },
+  {
+    "translation": "перепел",
+    "name": "quail",
+    "transcription": "[kweɪl]",
+    "category": "birds"
+  },
+  {
+    "translation": "петух",
+    "name": "cock,  rooster",
+    "transcription": "[ˈkɒk] [ˈruːstə]",
+    "category": "birds"
+  },
+  {
+    "translation": "пигалица = чибис",
+    "name": "lapwing,  pewit",
+    "transcription": "[ˈlæpwɪŋ] [ˈpiːwɪt]",
+    "category": "birds"
+  },
+  {
+    "translation": "пингвин",
+    "name": "penguin",
+    "transcription": "[ˈpeŋɡwɪn]",
+    "category": "birds"
+  },
+  {
+    "translation": "поползень",
+    "name": "nuthatch",
+    "transcription": "[ˈnʌthætʃ]",
+    "category": "birds"
+  },
+  {
+    "translation": "попугай",
+    "name": "parrot",
+    "transcription": "[ˈpærət]",
+    "category": "birds"
+  },
+  {
+    "translation": "пустельга",
+    "name": "kestrel",
+    "transcription": "[ˈkestrəl]",
+    "category": "birds"
+  },
+  {
+    "translation": "рябчик",
+    "name": "hazel-grouse,  hazel-hen",
+    "transcription": "['heɪzəl graus] [ˈheɪzlhen]",
+    "category": "birds"
+  },
+  {
+    "translation": "сапсан",
+    "name": "peregrine",
+    "transcription": "[ˈperɪɡrɪn]",
+    "category": "birds"
+  },
+  {
+    "translation": "свиристель",
+    "name": "waxwing",
+    "transcription": "['wæksˌwɪŋ]",
+    "category": "birds"
+  },
+  {
+    "translation": "синица",
+    "name": "tomtit,  blue titmouse,  blue tit",
+    "transcription": "[ˈtɒmtɪt] [bluː ˈtɪtmaʊs] [bluː tɪt]",
+    "category": "birds"
+  },
+  {
+    "translation": "скворец",
+    "name": "starling",
+    "transcription": "[ˈstɑːlɪŋ]",
+    "category": "birds"
+  },
+  {
+    "translation": "славка",
+    "name": "whitethroat,  warbler",
+    "transcription": "['waɪtθrəut] [ˈwɔːblə]",
+    "category": "birds"
+  },
+  {
+    "translation": "снегирь",
+    "name": "bullfinch",
+    "transcription": "[ˈbʊlfɪntʃ]",
+    "category": "birds"
+  },
+  {
+    "translation": "сова",
+    "name": "owl",
+    "transcription": "[aʊl]",
+    "category": "birds"
+  },
+  {
+    "translation": "сойка",
+    "name": "jay",
+    "transcription": "[dʒeɪ]",
+    "category": "birds"
+  },
+  {
+    "translation": "соловей",
+    "name": "nightingale",
+    "transcription": "[ˈnaɪtɪŋɡeɪl]",
+    "category": "birds"
+  },
+  {
+    "translation": "сорока",
+    "name": "magpie",
+    "transcription": "[ˈmæɡpaɪ]",
+    "category": "birds"
+  },
+  {
+    "translation": "страус",
+    "name": "ostrich",
+    "transcription": "[ˈɒstrɪtʃ]",
+    "category": "birds"
+  },
+  {
+    "translation": "стриж",
+    "name": "swift",
+    "transcription": "[swɪft]",
+    "category": "birds"
+  },
+  {
+    "translation": "сыч",
+    "name": "little owl",
+    "transcription": "[ˈlɪtl̩ aʊl]",
+    "category": "birds"
+  },
+  {
+    "translation": "тетерев",
+    "name": "black grouse,  blackcock",
+    "transcription": "[blæk ɡraʊs] ['blækkɔk]",
+    "category": "birds"
+  },
+  {
+    "translation": "трясогузка",
+    "name": "wagtail",
+    "transcription": "[ˈwæɡteɪl]",
+    "category": "birds"
+  },
+  {
+    "translation": "турухтан",
+    "name": "ruff",
+    "transcription": "[rʌf]",
+    "category": "birds"
+  },
+  {
+    "translation": "удод",
+    "name": "hoopoe",
+    "transcription": "[ˈhuːˌpuː]",
+    "category": "birds"
+  },
+  {
+    "translation": "утка",
+    "name": "duck",
+    "transcription": "[dʌk]",
+    "category": "birds"
+  },
+  {
+    "translation": "фазан",
+    "name": "pheasant",
+    "transcription": "[ˈfeznt]",
+    "category": "birds"
+  },
+  {
+    "translation": "филин",
+    "name": "eagle-owl",
+    "transcription": "[ˈiːɡlˈaʊl]",
+    "category": "birds"
+  },
+  {
+    "translation": "фламинго",
+    "name": "flamingo",
+    "transcription": "[fləˈmɪŋɡəʊ]",
+    "category": "birds"
+  },
+  {
+    "translation": "цапля",
+    "name": "heron,  egret",
+    "transcription": "[ˈherən] [ˈiːɡret]",
+    "category": "birds"
+  },
+  {
+    "translation": "цесарка",
+    "name": "guinea fowl",
+    "transcription": "[ˈɡɪni faʊl]",
+    "category": "birds"
+  },
+  {
+    "translation": "чайка",
+    "name": "gull,  sea gull",
+    "transcription": "[ɡʌl] [siː ɡʌl]",
+    "category": "birds"
+  },
+  {
+    "translation": "чечетка",
+    "name": "redpoll",
+    "transcription": "[ˈredˌpol]",
+    "category": "birds"
+  },
+  {
+    "translation": "чиж",
+    "name": "siskin",
+    "transcription": "[ˈsɪˌskɪn]",
+    "category": "birds"
+  },
+  {
+    "translation": "чирок",
+    "name": "teal",
+    "transcription": "[tiːl]",
+    "category": "birds"
+  },
+  {
+    "translation": "щегол",
+    "name": "goldfinch",
+    "transcription": "[ˈɡəʊldfɪntʃ]",
+    "category": "birds"
+  },
+  {
+    "translation": "юрок",
+    "name": "bramble finch,  brambling",
+    "transcription": "[ˈbræmbl̩ fɪntʃ] ['bræmblɪŋ]",
+    "category": "birds"
+  },
+  {
+    "translation": "ястреб",
+    "name": "hawk",
+    "transcription": "[hɔːk]",
+    "category": "birds"
+  }
+]

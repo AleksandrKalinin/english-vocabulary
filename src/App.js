@@ -1,0 +1,212 @@
+import React, { Component, Fragment } from 'react';
+import { List, Button} from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
+import axios from 'axios';
+import VocabWord from'./VocabWord'
+import VocabSideMenu from'./VocabSideMenu'
+import TopMenu from './TopMenu'
+import VocabTopMenu from './VocabTopMenu'
+import speech from 'speech-synth';
+
+class App extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			words: [],
+			isOldestFirst: true,
+			visible: 15,
+			query: '',
+			searchString: [],
+			search: '',
+			categories: [],
+			categoryValue: 'all'	
+		};
+		this.delete = this.delete;
+		this.voiceWord = this.voiceWord;
+		this.voiceWordFromModal = this.voiceWordFromModal;
+		this.handler = this.handler.bind(this);	
+		this.sortByName = this.sortByName;
+		this.sortByTranslation = this.sortByTranslation;
+		this.sortByDate = this.sortByDate;
+		this.newFunction = this.newFunction;	
+		
+	}
+
+ handler() {
+    this.setState({
+     words: []
+    })
+  }
+
+//подгрузка слов
+	loadMore = () => {
+	    this.setState((prev) => {
+	      return {visible: prev.visible + 15};
+	    });
+	  }
+
+//сортировка по дате
+	sortByDate = () => {
+    const words = this.state.words.slice();
+    let newWords = [];
+    if(this.state.isOldestFirst){
+      newWords = words.sort(function(a,b){
+        return new Date(b.date) - new Date(a.date);
+      });
+    }
+    else{
+      newWords = words.sort(function(a,b){
+        return new Date(a.date) - new Date(b.date);
+      });      
+    }
+    this.setState({
+      isOldestFirst: !this.state.isOldestFirst,
+      words: newWords
+    })
+	} 
+
+//сортировка по имени
+	sortByName = () =>{
+		const words = this.state.words;
+		let newWords = words;
+		if(this.state.isOldestFirst){
+			newWords = words.sort((a,b) => a.name.localeCompare(b.name) /*console.log('a,b ', a,b) */ );
+		} else {
+			newWords = words.sort((a,b) => b.name.localeCompare(a.name) /*console.log('b,a ', b,a) */ );
+		}
+		this.setState({
+			isOldestFirst: !this.state.isOldestFirst,
+			words: newWords
+		})		
+	}
+
+//сортировка по переводу
+	sortByTranslation = () =>{
+		const words = this.state.words;
+		let newWords = words;
+		if(this.state.isOldestFirst){
+			newWords = words.sort((a,b) => a.translation.localeCompare(b.translation));
+		} else {
+			newWords = words.sort((a,b) => b.translation.localeCompare(a.translation));
+		}
+		this.setState({
+			isOldestFirst: !this.state.isOldestFirst,
+			words: newWords
+		})		
+	}
+
+	UNSAFE_componentWillMount(){
+	    axios.get('/working.json')
+	      .then(res => {
+	        const words = res.data;
+	        this.setState({ words });
+	      })
+	  }
+
+
+   delete = (id) =>{
+   	var newWords = this.state.words.slice();
+ 		var newIndex = (id.target.parentElement.parentElement.parentElement.parentElement);
+		const index = [...newIndex.parentElement.children].indexOf(newIndex);
+		newWords.splice(index,1);
+    this.setState({words: newWords});
+   }
+
+   newFunction = () =>{
+   	console.log('new');
+   }
+
+   voiceWord = (el) =>{
+   		var newWords = this.state.words.slice();
+   		var newIndex = (el.target.parentElement.parentElement.parentElement.parentElement);
+   		var first = newIndex.children[1].firstChild.firstChild.textContent;
+   		speech.say(first);
+   }
+
+   voiceWordFromModal = (el) =>{
+   		var newWords = this.state.words.slice();
+   		var newIndex = (el.target.parentElement.parentElement.children[1].textContent);
+   		speech.say(newIndex);
+   }
+
+   myCallback = (dataFromChild) =>{
+   		this.setState({
+   			categoryValue: dataFromChild.value,
+   			options: dataFromChild.options
+   		}) 
+   }
+
+   topMenuCallback = (dataFromChild) =>{
+   		this.setState({
+   			words: dataFromChild
+   		}) 
+   } 
+
+   searchCallback = (dataFromChild) =>{
+   		this.setState({
+   			search: dataFromChild
+   		}) 
+   } 
+
+   consoleState = ()=>{
+   	console.log(this.state)
+   }
+
+  render() {
+  	//let filteredWords = this.state.words;
+  	
+  	let filteredWords = this.state.words.filter(
+  		(word) =>{
+  			return word.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+  		}
+  	);  	
+    return (
+    	<Fragment>
+	    	<div className="content-wrapper">
+	    		<TopMenu></TopMenu>
+	    		<div className="vocab-side-menu">
+	    			<VocabSideMenu callbackFromParent={this.myCallback} items={this.state.words} ></VocabSideMenu>
+	    			<div className="vocab-top-menu">
+	    				<VocabTopMenu 
+	    					words ={this.state.words} 
+	    					handler = {this.handler}
+	    					sortByName={this.sortByName}
+	    					sortByTranslation={this.sortByTranslation}
+	    					sortByDate ={this.sortByDate}
+	     					callbackFromApp={this.topMenuCallback}
+	    					searchFromApp={this.searchCallback} 
+	    					>
+						</VocabTopMenu>
+			 			<List className="vocab-list" relaxed='very'>
+							{filteredWords.slice(0,this.state.visible).map((word,index) => 
+								(this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === word.category) && 
+								<VocabWord
+									newFunction={this.newFunction}
+									voiceWord={this.voiceWord}
+									voiceWordFromModal = {this.voiceWordFromModal}
+									delete={this.delete}
+									key={word.id} 
+									name={word.name}
+									transcription = {word.transcription} 
+									translation={word.translation} 
+									meaning={word.meaning}
+									image={word.image} 
+									index={index}>
+								</VocabWord>
+							)} 
+			  			</List>
+			  			<div className="load-more-button">
+							{this.state.visible < this.state.words.length &&
+				            	<Button onClick={this.loadMore} primary>Загрузить ещё</Button>
+				          	}				  				
+			  			</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<footer></footer>
+	    </Fragment>	
+	);
+  }
+}
+
+export default App;

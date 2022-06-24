@@ -1,0 +1,374 @@
+[
+  {
+    "translation": "аквамарин",
+    "name": "aquamarine",
+    "transcription": "[ˌækwəməˈriːn]",
+    "category": "colors"
+  },
+  {
+    "translation": "бежевый",
+    "name": "beige",
+    "transcription": "[beɪʒ]",
+    "category": "colors"
+  },
+  {
+    "translation": "белоснежный",
+    "name": "snowy, snow-white",
+    "transcription": "[ˈsnəʊɪ] [ˈsnəʊ waɪt]",
+    "category": "colors"
+  },
+  {
+    "translation": "белый",
+    "name": "white",
+    "transcription": "[waɪt]",
+    "category": "colors"
+  },
+  {
+    "translation": "бирюзовый",
+    "name": "turquoise",
+    "transcription": "[ˈtɜːkwɔɪz]",
+    "category": "colors"
+  },
+  {
+    "translation": "бледный",
+    "name": "pale",
+    "transcription": "[peɪl]",
+    "category": "colors"
+  },
+  {
+    "translation": "бордовый",
+    "name": "wine red, bordeaux, claret red",
+    "transcription": "[waɪn red] [bɔːˈdəʊ] [ˈklærət red]",
+    "category": "colors"
+  },
+  {
+    "translation": "бронзовый",
+    "name": "bronze",
+    "transcription": "[brɒnz]",
+    "category": "colors"
+  },
+  {
+    "translation": "желто-зеленый",
+    "name": "yellow green",
+    "transcription": "[ˈjeləʊ ɡriːn]",
+    "category": "colors"
+  },
+  {
+    "translation": "желтый",
+    "name": "yellow",
+    "transcription": "[ˈjeləʊ]",
+    "category": "colors"
+  },
+  {
+    "translation": "жемчужный",
+    "name": "pearl",
+    "transcription": "[pɜːl]",
+    "category": "colors"
+  },
+  {
+    "translation": "зеленый",
+    "name": "green",
+    "transcription": "[ɡriːn]",
+    "category": "colors"
+  },
+  {
+    "translation": "золотистый",
+    "name": "goldenrod",
+    "transcription": "[ˈɡoldənˌrɑːd]",
+    "category": "colors"
+  },
+  {
+    "translation": "золотой",
+    "name": "gold, golden",
+    "transcription": "[ɡəʊld] [ˈɡəʊldən]",
+    "category": "colors"
+  },
+  {
+    "translation": "изумрудный",
+    "name": "emerald",
+    "transcription": "[ˈemərəld]",
+    "category": "colors"
+  },
+  {
+    "translation": "индиго",
+    "name": "indigo",
+    "transcription": "[ˈɪndɪɡəʊ]",
+    "category": "colors"
+  },
+  {
+    "translation": "кирпичный",
+    "name": "firebrick",
+    "transcription": "[ˈfaɪəbrɪk]",
+    "category": "colors"
+  },
+  {
+    "translation": "коралловый",
+    "name": "coral",
+    "transcription": "[ˈkɒrəl]",
+    "category": "colors"
+  },
+  {
+    "translation": "коричневый",
+    "name": "brown",
+    "transcription": "[braʊn]",
+    "category": "colors"
+  },
+  {
+    "translation": "красный",
+    "name": "red",
+    "transcription": "[red]",
+    "category": "colors"
+  },
+  {
+    "translation": "кремовый",
+    "name": "cream",
+    "transcription": "[kriːm]",
+    "category": "colors"
+  },
+  {
+    "translation": "лазурный",
+    "name": "azure",
+    "transcription": "[ˈæʒə]",
+    "category": "colors"
+  },
+  {
+    "translation": "лимонно-зеленый",
+    "name": "lime green",
+    "transcription": "[laɪm ɡriːn]",
+    "category": "colors"
+  },
+  {
+    "translation": "лимонный",
+    "name": "lemon",
+    "transcription": "[ˈlemən]",
+    "category": "colors"
+  },
+  {
+    "translation": "лососевый",
+    "name": "salmon",
+    "transcription": "[ˈsæmən]",
+    "category": "colors"
+  },
+  {
+    "translation": "малиновый",
+    "name": "raspberry",
+    "transcription": "[ˈrɑːzbəri]",
+    "category": "colors"
+  },
+  {
+    "translation": "медный",
+    "name": "copper",
+    "transcription": "[ˈkɒpə]",
+    "category": "colors"
+  },
+  {
+    "translation": "медовый",
+    "name": "honeydew",
+    "transcription": "[ˈhʌnɪdjuː]",
+    "category": "colors"
+  },
+  {
+    "translation": "морская волна",
+    "name": "aqua",
+    "transcription": "[ˈækwə]",
+    "category": "colors"
+  },
+  {
+    "translation": "небесно-голубой",
+    "name": "sky blue",
+    "transcription": "[skaɪ bluː]",
+    "category": "colors"
+  },
+  {
+    "translation": "оливковый",
+    "name": "olive",
+    "transcription": "[ˈɒlɪv]",
+    "category": "colors"
+  },
+  {
+    "translation": "оранжевый",
+    "name": "orange",
+    "transcription": "[ˈɒrɪndʒ]",
+    "category": "colors"
+  },
+  {
+    "translation": "охра",
+    "name": "sienna",
+    "transcription": "[sɪˈenə]",
+    "category": "colors"
+  },
+  {
+    "translation": "пепельно-серый",
+    "name": "ash",
+    "transcription": "[æʃ]",
+    "category": "colors"
+  },
+  {
+    "translation": "персиковый",
+    "name": "peach, peachpuff",
+    "transcription": "[piːtʃ] [ˈpiːtʃˈpʌf]",
+    "category": "colors"
+  },
+  {
+    "translation": "песочный",
+    "name": "sand-coloured",
+    "transcription": "[sænd ˈkʌləd]",
+    "category": "colors"
+  },
+  {
+    "translation": "пурпурный",
+    "name": "purple",
+    "transcription": "[ˈpɜːpəl]",
+    "category": "colors"
+  },
+  {
+    "translation": "розовый",
+    "name": "pink",
+    "transcription": "[pɪŋk]",
+    "category": "colors"
+  },
+  {
+    "translation": "салатовый",
+    "name": "light-green",
+    "transcription": "[laɪt ɡriːn]",
+    "category": "colors"
+  },
+  {
+    "translation": "светлый",
+    "name": "light",
+    "transcription": "[laɪt]",
+    "category": "colors"
+  },
+  {
+    "translation": "серебряный",
+    "name": "silver, silvery",
+    "transcription": "[ˈsɪlvə] [ˈsɪlvəri]",
+    "category": "colors"
+  },
+  {
+    "translation": "серый",
+    "name": "grey, gray",
+    "transcription": "[ɡreɪ]",
+    "category": "colors"
+  },
+  {
+    "translation": "синий",
+    "name": "blue",
+    "transcription": "[bluː]",
+    "category": "colors"
+  },
+  {
+    "translation": "сиреневый",
+    "name": "lilac",
+    "transcription": "[ˈlaɪlək]",
+    "category": "colors"
+  },
+  {
+    "translation": "сливовый",
+    "name": "plum",
+    "transcription": "[plʌm]",
+    "category": "colors"
+  },
+  {
+    "translation": "слоновая кость",
+    "name": "ivory",
+    "transcription": "[ˈaɪvəri]",
+    "category": "colors"
+  },
+  {
+    "translation": "стальной серый",
+    "name": "steel gray",
+    "transcription": "[stiːl ɡreɪ]",
+    "category": "colors"
+  },
+  {
+    "translation": "темно-бордовый",
+    "name": "maroon",
+    "transcription": "[məˈruːn]",
+    "category": "colors"
+  },
+  {
+    "translation": "темный",
+    "name": "dark",
+    "transcription": "[dɑːk]",
+    "category": "colors"
+  },
+  {
+    "translation": "тёмно-синий",
+    "name": "navy (blue)",
+    "transcription": "[ˈneɪvi bluː]",
+    "category": "colors"
+  },
+  {
+    "translation": "терракотовый",
+    "name": "terracotta",
+    "transcription": "[ˌterəˈkɒtə]",
+    "category": "colors"
+  },
+  {
+    "translation": "тусклый",
+    "name": "dull",
+    "transcription": "[dʌl]",
+    "category": "colors"
+  },
+  {
+    "translation": "фиолетовый",
+    "name": "purple",
+    "transcription": "[ˈpɜːpəl]",
+    "category": "colors"
+  },
+  {
+    "translation": "фиолетовый, темно-лиловый",
+    "name": "violet",
+    "transcription": "[ˈvaɪələt]",
+    "category": "colors"
+  },
+  {
+    "translation": "фисташковый, зеленоватый цвет",
+    "name": "pistachio",
+    "transcription": "[pɪˈstɑːtʃɪəʊ]",
+    "category": "colors"
+  },
+  {
+    "translation": "фуксин",
+    "name": "magenta",
+    "transcription": "[məˈdʒentə]",
+    "category": "colors"
+  },
+  {
+    "translation": "фуксия",
+    "name": "fuchsia",
+    "transcription": "[ˈfjuːʃə]",
+    "category": "colors"
+  },
+  {
+    "translation": "хаки",
+    "name": "khaki, forest green",
+    "transcription": "[ˈkɑːki] [ˈfɒrɪst ɡriːn]",
+    "category": "colors"
+  },
+  {
+    "translation": "цвет морской волны",
+    "name": "seagreen",
+    "transcription": "[ˈsiːˈɡriːn]",
+    "category": "colors"
+  },
+  {
+    "translation": "цвет морской пены",
+    "name": "sea foam",
+    "transcription": "[siː fəʊm]",
+    "category": "colors"
+  },
+  {
+    "translation": "черный",
+    "name": "black",
+    "transcription": "[blæk]",
+    "category": "colors"
+  },
+  {
+    "translation": "янтарный",
+    "name": "amber",
+    "transcription": "[ˈæmbə]",
+    "category": "colors"
+  }
+]

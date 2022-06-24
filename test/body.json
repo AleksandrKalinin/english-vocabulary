@@ -1,0 +1,302 @@
+[
+  {
+    "translation": "бедро",
+    "name": "thigh, hip",
+    "transcription": "[θaɪ] [hɪp]",
+    "category": "body"
+  },
+  {
+    "translation": "большой палец",
+    "name": "thumb",
+    "transcription": "[θʌm]",
+    "category": "body"
+  },
+  {
+    "translation": "бровь",
+    "name": "eyebrow",
+    "transcription": "[ˈaɪbraʊ]",
+    "category": "body"
+  },
+  {
+    "translation": "висок",
+    "name": "translationle",
+    "transcription": "[ˈtranslationəl]",
+    "category": "body"
+  },
+  {
+    "translation": "волосы (волос)",
+    "name": "hair",
+    "transcription": "[heə]",
+    "category": "body"
+  },
+  {
+    "translation": "глаз",
+    "name": "eye",
+    "transcription": "[aɪ]",
+    "category": "body"
+  },
+  {
+    "translation": "голова",
+    "name": "head",
+    "transcription": "[hed]",
+    "category": "body"
+  },
+  {
+    "translation": "горло",
+    "name": "throat",
+    "transcription": "[θrəʊt]",
+    "category": "body"
+  },
+  {
+    "translation": "грудь",
+    "name": "chest, breast, bosom, bust",
+    "transcription": "[tʃest] [brest] [ˈbʊzəm] [bʌst]",
+    "category": "body"
+  },
+  {
+    "translation": "желудок",
+    "name": "stomach",
+    "transcription": "[ˈstʌmək]",
+    "category": "body"
+  },
+  {
+    "translation": "живот",
+    "name": "belly, stomach",
+    "transcription": "[ˈbeli] [ˈstʌmək]",
+    "category": "body"
+  },
+  {
+    "translation": "губа",
+    "name": "lip",
+    "transcription": "[lɪp]",
+    "category": "body"
+  },
+  {
+    "translation": "запястье",
+    "name": "wrist",
+    "transcription": "[rɪst]",
+    "category": "body"
+  },
+  {
+    "translation": "зуб",
+    "name": "tooth",
+    "transcription": "[tuːθ]",
+    "category": "body"
+  },
+  {
+    "translation": "кожа",
+    "name": "skin",
+    "transcription": "[skɪn]",
+    "category": "body"
+  },
+  {
+    "translation": "кость",
+    "name": "bone",
+    "transcription": "[bəʊn]",
+    "category": "body"
+  },
+  {
+    "translation": "кровь",
+    "name": "blood",
+    "transcription": "[blʌd]",
+    "category": "body"
+  },
+  {
+    "translation": "лёгкое",
+    "name": "lung",
+    "transcription": "[lʌŋ]",
+    "category": "body"
+  },
+  {
+    "translation": "лицо",
+    "name": "face",
+    "transcription": "[feɪs]",
+    "category": "body"
+  },
+  {
+    "translation": "лоб",
+    "name": "forehead",
+    "transcription": "[ˈfɒrɪd]",
+    "category": "body"
+  },
+  {
+    "translation": "локоть",
+    "name": "elbow",
+    "transcription": "[ˈelbəʊ]",
+    "category": "body"
+  },
+  {
+    "translation": "мозг",
+    "name": "brain",
+    "transcription": "[breɪn]",
+    "category": "body"
+  },
+  {
+    "translation": "нога",
+    "name": "leg",
+    "transcription": "[leɡ]",
+    "category": "body"
+  },
+  {
+    "translation": "ноготь",
+    "name": "(finger / toe)nail",
+    "transcription": "[ˈfɪŋɡə / təʊ neɪl]",
+    "category": "body"
+  },
+  {
+    "translation": "нос",
+    "name": "nose",
+    "transcription": "[nəʊz]",
+    "category": "body"
+  },
+  {
+    "translation": "палец",
+    "name": "finger",
+    "transcription": "[ˈfɪŋɡə]",
+    "category": "body"
+  },
+  {
+    "translation": "палец ноги",
+    "name": "toe",
+    "transcription": "[təʊ]",
+    "category": "body"
+  },
+  {
+    "translation": "пах",
+    "name": "groin",
+    "transcription": "[ɡrɔɪn]",
+    "category": "body"
+  },
+  {
+    "translation": "печень",
+    "name": "liver",
+    "transcription": "[ˈlɪvə]",
+    "category": "body"
+  },
+  {
+    "translation": "плечо",
+    "name": "shoulder",
+    "transcription": "[ˈʃəʊldə]",
+    "category": "body"
+  },
+  {
+    "translation": "подбородок",
+    "name": "chin",
+    "transcription": "[tʃɪn]",
+    "category": "body"
+  },
+  {
+    "translation": "позвоночник",
+    "name": "spine, backbone, spinal column",
+    "transcription": "[spaɪn] [ˈbækbəʊn] [ˈspaɪnəl ˈkɒləm]",
+    "category": "body"
+  },
+  {
+    "translation": "почка",
+    "name": "kidney",
+    "transcription": "[ˈkɪdni]",
+    "category": "body"
+  },
+  {
+    "translation": "пятка",
+    "name": "heel",
+    "transcription": "[hiːl]",
+    "category": "body"
+  },
+  {
+    "translation": "ресница",
+    "name": "eyelash",
+    "transcription": "[ˈaɪlæʃ]",
+    "category": "body"
+  },
+  {
+    "translation": "рот",
+    "name": "mouth",
+    "transcription": "[maʊθ]",
+    "category": "body"
+  },
+  {
+    "translation": "рука",
+    "name": "hand; arm",
+    "transcription": "[hænd] [ɑːm]",
+    "category": "body"
+  },
+  {
+    "translation": "сердце",
+    "name": "heart",
+    "transcription": "[hɑːt]",
+    "category": "body"
+  },
+  {
+    "translation": "скелет",
+    "name": "skeleton",
+    "transcription": "[ˈskelɪtən]",
+    "category": "body"
+  },
+  {
+    "translation": "спина",
+    "name": "back",
+    "transcription": "[ˈbæk]",
+    "category": "body"
+  },
+  {
+    "translation": "стопа",
+    "name": "foot",
+    "transcription": "[fʊt]",
+    "category": "body"
+  },
+  {
+    "translation": "талия",
+    "name": "waist",
+    "transcription": "[weɪst]",
+    "category": "body"
+  },
+  {
+    "translation": "тело",
+    "name": "body",
+    "transcription": "[ˈbɒdi]",
+    "category": "body"
+  },
+  {
+    "translation": "усы",
+    "name": "moustache",
+    "transcription": "[məˈstɑːʃ]",
+    "category": "body"
+  },
+  {
+    "translation": "ухо",
+    "name": "ear",
+    "transcription": "[ɪə]",
+    "category": "body"
+  },
+  {
+    "translation": "челюсть",
+    "name": "jaw(-bone)",
+    "transcription": "[dʒɔː bəʊn]",
+    "category": "body"
+  },
+  {
+    "translation": "череп",
+    "name": "skull",
+    "transcription": "[skʌl]",
+    "category": "body"
+  },
+  {
+    "translation": "шея",
+    "name": "neck",
+    "transcription": "[nek]",
+    "category": "body"
+  },
+  {
+    "translation": "щека",
+    "name": "cheek",
+    "transcription": "[tʃiːk]",
+    "category": "body"
+  },
+  {
+    "translation": "язык",
+    "name": "tongue",
+    "transcription": "[tʌŋ]",
+    "category": "body"
+  }
+]

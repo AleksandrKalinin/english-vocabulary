@@ -1,0 +1,542 @@
+[
+  {
+    "name": "air sickness bag",
+    "transcription": "[eə ˈsɪknəs bæɡ]",
+    "translation": "санитарный пакет  используемый при воздушной болезни",
+    "category": "airport"
+  },
+  {
+    "name": "airport",
+    "transcription": "[ˈeəpɔːt]",
+    "translation": "аэропорт",
+    "category": "airport"
+  },
+  {
+    "name": "aisle",
+    "transcription": "[aɪl]",
+    "translation": "проход",
+    "category": "airport"
+  },
+  {
+    "name": "aisle seat (seat near the aisle)",
+    "transcription": "[aɪl siːt] [siːt nɪə ði aɪl]",
+    "translation": "место у прохода",
+    "category": "airport"
+  },
+  {
+    "name": "armrest",
+    "transcription": "[ˈɑːmrest]",
+    "translation": "подлокотник",
+    "category": "airport"
+  },
+  {
+    "name": "arrival and departure monitor",
+    "transcription": "[əˈraɪvl̩ ənd dɪˈpɑːtʃə ˈmɒnɪtə]",
+    "translation": "монитор вылетов и прилетов",
+    "category": "airport"
+  },
+  {
+    "name": "baggage carousel",
+    "transcription": "[ˈbæɡɪdʒ ˌkærəˈsel]",
+    "translation": "багажный транспортер",
+    "category": "airport"
+  },
+  {
+    "name": "baggage claim area",
+    "transcription": "[ˈbæɡɪdʒ kleɪm ˈeəriə]",
+    "translation": "зонa получения багажа",
+    "category": "airport"
+  },
+  {
+    "name": "baggage claim check",
+    "transcription": "[ˈbæɡɪdʒ kleɪm tʃek]",
+    "translation": "багажный талон",
+    "category": "airport"
+  },
+  {
+    "name": "boarding",
+    "transcription": "[ˈbɔːdɪŋ]",
+    "translation": "посадка",
+    "category": "airport"
+  },
+  {
+    "name": "boarding pass",
+    "transcription": "[ˈbɔːdɪŋ pɑːs]",
+    "translation": "посадочный талон",
+    "category": "airport"
+  },
+  {
+    "name": "cabin",
+    "transcription": "[ˈkæbɪn]",
+    "translation": "салон самолета",
+    "category": "airport"
+  },
+  {
+    "name": "call button",
+    "transcription": "[kɔːl ˈbʌtn̩]",
+    "translation": "кнопкa вызова",
+    "category": "airport"
+  },
+  {
+    "name": "cargo door",
+    "transcription": "[ˈkɑːɡəʊ dɔː]",
+    "translation": "грузовой люк",
+    "category": "airport"
+  },
+  {
+    "name": "carry-on bag",
+    "transcription": "[ˈkæri ɒn bæɡ]",
+    "translation": "ручная кладь",
+    "category": "airport"
+  },
+  {
+    "name": "check-in counter (desk)",
+    "transcription": "[tʃek ɪn ˈkaʊntə] [desk]",
+    "translation": "стойка регистрации",
+    "category": "airport"
+  },
+  {
+    "name": "co-pilot",
+    "transcription": "[ˈkəʊˈpaɪlət]",
+    "translation": "второй пилот",
+    "category": "airport"
+  },
+  {
+    "name": "cockpit",
+    "transcription": "[ˈkɒkpɪt]",
+    "translation": "кабина самолета",
+    "category": "airport"
+  },
+  {
+    "name": "concession stand/snack bar",
+    "transcription": "[kənˈseʃn̩ stænd] [snæk bɑː]",
+    "translation": "закусочная",
+    "category": "airport"
+  },
+  {
+    "name": "control tower",
+    "transcription": "[kənˈtrəʊl ˈtaʊə]",
+    "translation": "диспетчерская вышка",
+    "category": "airport"
+  },
+  {
+    "name": "conveyor belt",
+    "transcription": "[kənˈveɪə belt]",
+    "translation": "транспортер (конвейер) багажа",
+    "category": "airport"
+  },
+  {
+    "name": "customs",
+    "transcription": "[ˈkʌstəmz]",
+    "translation": "таможня",
+    "category": "airport"
+  },
+  {
+    "name": "customs declaration form",
+    "transcription": "[ˈkʌstəmz ˌdekləˈreɪʃn̩ ˈfɔːm]",
+    "translation": "таможенная декларация",
+    "category": "airport"
+  },
+  {
+    "name": "customs officer",
+    "transcription": "[ˈkʌstəmz ˈɒfɪsə]",
+    "translation": "служащий таможни",
+    "category": "airport"
+  },
+  {
+    "name": "to declare",
+    "transcription": "[tə dɪˈkleə]",
+    "translation": "указывать / предъявлять вещи  облагаемые пошлиной",
+    "category": "airport"
+  },
+  {
+    "name": "delay",
+    "transcription": "[dɪˈleɪ]",
+    "translation": "задержка",
+    "category": "airport"
+  },
+  {
+    "name": "departure gate",
+    "transcription": "[dɪˈpɑːtʃə ɡeɪt]",
+    "translation": "выход (на посадку в самолет)",
+    "category": "airport"
+  },
+  {
+    "name": "departure lounge",
+    "transcription": "[dɪˈpɑːtʃə laʊndʒ]",
+    "translation": "зал ожидания (перед выходом на посадку",
+    "category": "airport"
+  },
+  {
+    "name": "departures board",
+    "transcription": "[dɪˈpɑːtʃəz bɔːd]",
+    "translation": "табло",
+    "category": "airport"
+  },
+  {
+    "name": "destination",
+    "transcription": "[ˌdestɪˈneɪʃn̩]",
+    "translation": "место назначения",
+    "category": "airport"
+  },
+  {
+    "name": "duty-free shop",
+    "transcription": "[ˌdjuːtɪ ˈfriː ʃɒp]",
+    "translation": "магазин беспошлинной торговли",
+    "category": "airport"
+  },
+  {
+    "name": "emergency exit",
+    "transcription": "[ɪˈmɜːdʒənsi ˈeksɪt]",
+    "translation": "аварийный выход",
+    "category": "airport"
+  },
+  {
+    "name": "emergency instruction card",
+    "transcription": "[ɪˈmɜːdʒənsi ɪnˈstrʌkʃn̩ kɑːd]",
+    "translation": "инструкция по поведению в чрезвычайных ситуациях",
+    "category": "airport"
+  },
+  {
+    "name": "fasten seat belt sign",
+    "transcription": "[ˈfɑːsn̩ siːt belt saɪn]",
+    "translation": "сигнал \"пристегните ремни\"",
+    "category": "airport"
+  },
+  {
+    "name": "first-class section",
+    "transcription": "[fɜːst ˈklɑːs ˈsekʃn̩]",
+    "translation": "первый класс",
+    "category": "airport"
+  },
+  {
+    "name": "flight",
+    "transcription": "[flaɪt]",
+    "translation": "рейс / полет",
+    "category": "airport"
+  },
+  {
+    "name": "flight attendant",
+    "transcription": "[flaɪt əˈtendənt]",
+    "translation": "бортпроводник",
+    "category": "airport"
+  },
+  {
+    "name": "flight engineer",
+    "transcription": "[flaɪt ˌendʒɪˈnɪə]",
+    "translation": "бортинженер",
+    "category": "airport"
+  },
+  {
+    "name": "fuselage",
+    "transcription": "[ˈfjuːzəlɑːʒ]",
+    "translation": "фюзеляж",
+    "category": "airport"
+  },
+  {
+    "name": "galley",
+    "transcription": "[ˈɡæli]",
+    "translation": "камбуз",
+    "category": "airport"
+  },
+  {
+    "name": "garment bag",
+    "transcription": "[ˈɡɑːmənt bæɡ]",
+    "translation": "мешок для одежды",
+    "category": "airport"
+  },
+  {
+    "name": "gate",
+    "transcription": "[ɡeɪt]",
+    "translation": "вход / выход",
+    "category": "airport"
+  },
+  {
+    "name": "gift shop",
+    "transcription": "[ɡɪft ʃɒp]",
+    "translation": "сувенирный магазин",
+    "category": "airport"
+  },
+  {
+    "name": "green / red channel",
+    "transcription": "[ɡriːn] [red ˈtʃænl̩]",
+    "translation": "зеленый / красный коридор",
+    "category": "airport"
+  },
+  {
+    "name": "hand luggage / carry-on luggage",
+    "transcription": "[hænd lʌgɪʤ] [kæri ɒn ˈlʌɡɪdʒ]",
+    "translation": "ручной багаж  ручная кладь",
+    "category": "airport"
+  },
+  {
+    "name": "hijack",
+    "transcription": "[ˈhaɪdʒæk]",
+    "translation": "угон самолета",
+    "category": "airport"
+  },
+  {
+    "name": "immigration officer",
+    "transcription": "[ˌɪmɪˈɡreɪʃn̩ ˈɒfɪsə]",
+    "translation": "cотрудник иммиграционной службы",
+    "category": "airport"
+  },
+  {
+    "name": "information",
+    "transcription": "[ˌɪnfəˈmeɪʃn̩]",
+    "translation": "справочное бюро",
+    "category": "airport"
+  },
+  {
+    "name": "instrument panel",
+    "transcription": "[ˈɪnstrʊmənt ˈpænl̩]",
+    "translation": "панель контрольно-измерительных приборов",
+    "category": "airport"
+  },
+  {
+    "name": "landing",
+    "transcription": "[ˈlændɪŋ]",
+    "translation": "посадка",
+    "category": "airport"
+  },
+  {
+    "name": "landing gear",
+    "transcription": "[ˈlændɪŋ ɡɪə]",
+    "translation": "шасси",
+    "category": "airport"
+  },
+  {
+    "name": "lavatory",
+    "transcription": "[ˈlævətr̩i]",
+    "translation": "туалет",
+    "category": "airport"
+  },
+  {
+    "name": "life vest",
+    "transcription": "[laɪf vest]",
+    "translation": "спасательный жилет",
+    "category": "airport"
+  },
+  {
+    "name": "liquid",
+    "transcription": "[ˈlɪkwɪd]",
+    "translation": "жидкость",
+    "category": "airport"
+  },
+  {
+    "name": "luggage  baggage",
+    "transcription": "[ˈlʌɡɪdʒ] [ˈbæɡɪdʒ]",
+    "translation": "багаж",
+    "category": "airport"
+  },
+  {
+    "name": "luggage carrier",
+    "transcription": "[ˈlʌɡɪdʒ ˈkærɪə]",
+    "translation": "тележка (для багажа)",
+    "category": "airport"
+  },
+  {
+    "name": "luggage tags / labels",
+    "transcription": "[ˈlʌɡɪdʒ tæɡz] [ˈleɪbl̩z]",
+    "translation": "бирки на багаже",
+    "category": "airport"
+  },
+  {
+    "name": "luggage ticket",
+    "transcription": "[ˈlʌɡɪdʒ ˈtɪkɪt]",
+    "translation": "багажная квитанция",
+    "category": "airport"
+  },
+  {
+    "name": "metal detector",
+    "transcription": "[ˈmetl̩ dɪˈtektə]",
+    "translation": "металлоискатель",
+    "category": "airport"
+  },
+  {
+    "name": "middle seat",
+    "transcription": "[ˈmɪdl̩ siːt]",
+    "translation": "среднее сидение",
+    "category": "airport"
+  },
+  {
+    "name": "no smoking sign",
+    "transcription": "[nəʊ ˈsməʊkɪŋ saɪn]",
+    "translation": "сигнал не курить",
+    "category": "airport"
+  },
+  {
+    "name": "overhead compartment",
+    "transcription": "[ˌəʊvəˈhed kəmˈpɑːtmənt]",
+    "translation": "багажная полка (сверху)",
+    "category": "airport"
+  },
+  {
+    "name": "one way trip / ticket",
+    "transcription": "[wʌn ˈweɪ trɪp] [ˈtɪkɪt]",
+    "translation": "поездка / билет в один конец",
+    "category": "airport"
+  },
+  {
+    "name": "oxygen mask",
+    "transcription": "[ˈɒksɪdʒən mɑːsk]",
+    "translation": "кислородная маска",
+    "category": "airport"
+  },
+  {
+    "name": "passenger",
+    "transcription": "[ˈpæsɪndʒə]",
+    "translation": "пассажир",
+    "category": "airport"
+  },
+  {
+    "name": "passport",
+    "transcription": "[ˈpɑːspɔːt]",
+    "translation": "паспорт",
+    "category": "airport"
+  },
+  {
+    "name": "pilot / captain",
+    "transcription": "[ˈpaɪlət] [ˈkæptɪn]",
+    "translation": "пилот",
+    "category": "airport"
+  },
+  {
+    "name": "to reserve",
+    "transcription": "[tə rɪˈzɜːv]",
+    "translation": "бронировать",
+    "category": "airport"
+  },
+  {
+    "name": "round trip",
+    "transcription": "[ˈraʊnd trɪp]",
+    "translation": "поездка туда и обратно",
+    "category": "airport"
+  },
+  {
+    "name": "round trip ticket",
+    "transcription": "[ˈraʊnd trɪp ˈtɪkɪt]",
+    "translation": "билет туда и обратно",
+    "category": "airport"
+  },
+  {
+    "name": "runway",
+    "transcription": "[ˈrʌnweɪ]",
+    "translation": "взлетно-посадочная полоса",
+    "category": "airport"
+  },
+  {
+    "name": "schedule",
+    "transcription": "[ˈʃedjuːl] [ˈskeʤuːl]",
+    "translation": "расписание",
+    "category": "airport"
+  },
+  {
+    "name": "seat",
+    "transcription": "[siːt]",
+    "translation": "место  сиденье  кресло",
+    "category": "airport"
+  },
+  {
+    "name": "seat belt",
+    "transcription": "[siːt belt]",
+    "translation": "ремень безопасности",
+    "category": "airport"
+  },
+  {
+    "name": "seat pocket",
+    "transcription": "[siːt ˈpɒkɪt]",
+    "translation": "карман кресла",
+    "category": "airport"
+  },
+  {
+    "name": "security checkpoint",
+    "transcription": "[sɪˈkjʊərɪti ˈtʃekpɔɪnt]",
+    "translation": "контрольно-пропускной пункт",
+    "category": "airport"
+  },
+  {
+    "name": "security guard",
+    "transcription": "[sɪˈkjʊərɪti ɡɑːd]",
+    "translation": "охранник",
+    "category": "airport"
+  },
+  {
+    "name": "suitcase",
+    "transcription": "[ˈsuːtkeɪs]",
+    "translation": "чемодан",
+    "category": "airport"
+  },
+  {
+    "name": "tail",
+    "transcription": "[teɪl]",
+    "translation": "хвост",
+    "category": "airport"
+  },
+  {
+    "name": "terminal",
+    "transcription": "[ˈtɜːmɪnl̩]",
+    "translation": "терминал",
+    "category": "airport"
+  },
+  {
+    "name": "ticket",
+    "transcription": "[ˈtɪkɪt]",
+    "translation": "билет",
+    "category": "airport"
+  },
+  {
+    "name": "ticket agent",
+    "transcription": "[ˈtɪkɪt ˈeɪdʒənt]",
+    "translation": "кассир билетной кассы",
+    "category": "airport"
+  },
+  {
+    "name": "ticket counter",
+    "transcription": "[ˈtɪkɪt ˈkaʊntə]",
+    "translation": "касса",
+    "category": "airport"
+  },
+  {
+    "name": "tray",
+    "transcription": "[treɪ]",
+    "translation": "поднос",
+    "category": "airport"
+  },
+  {
+    "name": "trolley",
+    "transcription": "[ˈtrɒli]",
+    "translation": "тележка",
+    "category": "airport"
+  },
+  {
+    "name": "visa",
+    "transcription": "[ˈviːzə]",
+    "translation": "виза",
+    "category": "airport"
+  },
+  {
+    "name": "waiting area",
+    "transcription": "[ˈweɪtɪŋ ˈeəriə]",
+    "translation": "зонa ожидания",
+    "category": "airport"
+  },
+  {
+    "name": "window seat",
+    "transcription": "[ˈwɪndəʊ siːt]",
+    "translation": "место у окна",
+    "category": "airport"
+  },
+  {
+    "name": "wing",
+    "transcription": "[wɪŋ]",
+    "translation": "крыло",
+    "category": "airport"
+  },
+  {
+    "name": "X-ray machine",
+    "transcription": "[ˈeks reɪ məˈʃiːn]",
+    "translation": "рентгеновский аппарат для осмотра багажа",
+    "category": "airport"
+  }
+]

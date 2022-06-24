@@ -1,0 +1,414 @@
+[
+  {
+    "translation": "активный",
+    "name": "active",
+    "transcription": "[ˈæktɪv]",
+    "category": "character"
+  },
+  {
+    "translation": "амбициозный, целеустремленный",
+    "name": "ambitious, high-flying",
+    "transcription": "[æmˈbɪʃəs] [haɪˈflaɪɪŋ]",
+    "category": "character"
+  },
+  {
+    "translation": "безумный",
+    "name": "reckless",
+    "transcription": "[ˈrekləs]",
+    "category": "character"
+  },
+  {
+    "translation": "беспечный",
+    "name": "light-hearted, easygoing",
+    "transcription": "[laɪt ˈhɑːtɪd] [ˌiːzɪˈɡəʊɪŋ]",
+    "category": "character"
+  },
+  {
+    "translation": "бешеный",
+    "name": "furious",
+    "transcription": "[ˈfjʊərɪəs]",
+    "category": "character"
+  },
+  {
+    "translation": "волевой",
+    "name": "strong-willed",
+    "transcription": "[ˈstrɒŋˈwɪld]",
+    "category": "character"
+  },
+  {
+    "translation": "ворчливый",
+    "name": "grumbling",
+    "transcription": "[ˈɡrʌmbəlɪŋ]",
+    "category": "character"
+  },
+  {
+    "translation": "гордый",
+    "name": "proud",
+    "transcription": "[praʊd]",
+    "category": "character"
+  },
+  {
+    "translation": "гуманный",
+    "name": "humane",
+    "transcription": "[hjuːˈmeɪn]",
+    "category": "character"
+  },
+  {
+    "translation": "добрый",
+    "name": "kind",
+    "transcription": "[kaɪnd]",
+    "category": "character"
+  },
+  {
+    "translation": "жадный",
+    "name": "greedy",
+    "transcription": "[ˈɡriːdi]",
+    "category": "character"
+  },
+  {
+    "translation": "желчный",
+    "name": "acrimonious",
+    "transcription": "[ˌækrɪˈməʊniəs]",
+    "category": "character"
+  },
+  {
+    "translation": "жестокий",
+    "name": "cruel",
+    "transcription": "[krʊəl]",
+    "category": "character"
+  },
+  {
+    "translation": "завистливый",
+    "name": "envious",
+    "transcription": "[ˈenvɪəs]",
+    "category": "character"
+  },
+  {
+    "translation": "замкнутый",
+    "name": "unsociable",
+    "transcription": "[ʌnˈsəʊʃəbəl]",
+    "category": "character"
+  },
+  {
+    "translation": "заносчивый, высокомерный",
+    "name": "arrogant",
+    "transcription": "[ˈærəɡənt]",
+    "category": "character"
+  },
+  {
+    "translation": "злой",
+    "name": "angry",
+    "transcription": "[ˈæŋɡri]",
+    "category": "character"
+  },
+  {
+    "translation": "идеальный",
+    "name": "ideal, perfect",
+    "transcription": "[aɪˈdɪəl] [ˈpɜːfɪkt]",
+    "category": "character"
+  },
+  {
+    "translation": "капризный",
+    "name": "capricious, fretful",
+    "transcription": "[kəˈprɪʃəs] [ˈfretfəl]",
+    "category": "character"
+  },
+  {
+    "translation": "коварный, хитрый",
+    "name": "sly",
+    "transcription": "[slaɪ]",
+    "category": "character"
+  },
+  {
+    "translation": "ленивый",
+    "name": "lazy",
+    "transcription": "[ˈleɪzi]",
+    "category": "character"
+  },
+  {
+    "translation": "лживый",
+    "name": "lying, mendacious",
+    "transcription": "[ˈlaɪɪŋ] [menˈdeɪʃəs]",
+    "category": "character"
+  },
+  {
+    "translation": "личность",
+    "name": "personality",
+    "transcription": "[ˌpɜːsəˈnælɪti]",
+    "category": "character"
+  },
+  {
+    "translation": "любопытный",
+    "name": "curious",
+    "transcription": "[ˈkjʊərɪəs]",
+    "category": "character"
+  },
+  {
+    "translation": "мерзкий",
+    "name": "disgusting",
+    "transcription": "[dɪsˈɡʌstɪŋ]",
+    "category": "character"
+  },
+  {
+    "translation": "наглый",
+    "name": "impertinent",
+    "transcription": "[ɪmˈpɜːtɪnənt]",
+    "category": "character"
+  },
+  {
+    "translation": "надежный, верный",
+    "name": "reliable",
+    "transcription": "[rɪˈlaɪəbəl]",
+    "category": "character"
+  },
+  {
+    "translation": "назойливый",
+    "name": "importunate",
+    "transcription": "[ɪmˈpɔːtʃʊnət]",
+    "category": "character"
+  },
+  {
+    "translation": "наивный",
+    "name": "naive",
+    "transcription": "[naɪˈiːv]",
+    "category": "character"
+  },
+  {
+    "translation": "непослушный, капризный (о ребенке)",
+    "name": "naughty",
+    "transcription": "[ˈnɔːti]",
+    "category": "character"
+  },
+  {
+    "translation": "обидчивый",
+    "name": "touchy",
+    "transcription": "[ˈtʌtʃi]",
+    "category": "character"
+  },
+  {
+    "translation": "озорной",
+    "name": "mischievous, naughty",
+    "transcription": "[ˈmɪstʃɪvəs] [ˈnɔːti]",
+    "category": "character"
+  },
+  {
+    "translation": "он человек с характером",
+    "name": "he is a man of (strong) character",
+    "transcription": "[hi z ə mæn əv strɒŋ ˈkærəktə]",
+    "category": "character"
+  },
+  {
+    "translation": "оптимист",
+    "name": "optimist",
+    "transcription": "[ˈɒptɪmɪst]",
+    "category": "character"
+  },
+  {
+    "translation": "остроумный",
+    "name": "witty",
+    "transcription": "[ˈwɪti]",
+    "category": "character"
+  },
+  {
+    "translation": "отважный",
+    "name": "courageous",
+    "transcription": "[kəˈreɪdʒəs]",
+    "category": "character"
+  },
+  {
+    "translation": "ответственный",
+    "name": "responsible",
+    "transcription": "[rɪˈspɒnsəbəl]",
+    "category": "character"
+  },
+  {
+    "translation": "отзывчивый",
+    "name": "responsive",
+    "transcription": "[rɪˈspɒnsɪv]",
+    "category": "character"
+  },
+  {
+    "translation": "пассивный",
+    "name": "passive",
+    "transcription": "[ˈpæsɪv]",
+    "category": "character"
+  },
+  {
+    "translation": "пессимист",
+    "name": "pessimist",
+    "transcription": "[ˈpesɪmɪst]",
+    "category": "character"
+  },
+  {
+    "translation": "позитивный",
+    "name": "positive",
+    "transcription": "[ˈpɒzətɪv]",
+    "category": "character"
+  },
+  {
+    "translation": "покладистый",
+    "name": "complaisant",
+    "transcription": "[kəmˈpleɪzənt]",
+    "category": "character"
+  },
+  {
+    "translation": "равнодушный",
+    "name": "indifferent",
+    "transcription": "[ɪnˈdɪfrənt]",
+    "category": "character"
+  },
+  {
+    "translation": "разумный, сообразительный",
+    "name": "smart",
+    "transcription": "[smɑːt]",
+    "category": "character"
+  },
+  {
+    "translation": "раскованный",
+    "name": "uninhibited",
+    "transcription": "[ˌʌnɪnˈhɪbɪtɪd]",
+    "category": "character"
+  },
+  {
+    "translation": "рассудительный",
+    "name": "sober-minded, reasonable",
+    "transcription": "[ˈsəʊbəˈmaɪndɪd] [ˈriːznəbəl]",
+    "category": "character"
+  },
+  {
+    "translation": "реалист",
+    "name": "realist",
+    "transcription": "[ˈrɪəlɪst]",
+    "category": "character"
+  },
+  {
+    "translation": "резкий",
+    "name": "harsh",
+    "transcription": "[hɑːʃ]",
+    "category": "character"
+  },
+  {
+    "translation": "самокритичный",
+    "name": "self-critical",
+    "transcription": "[self ˈkrɪtɪkəl]",
+    "category": "character"
+  },
+  {
+    "translation": "самолюбивый",
+    "name": "selfish",
+    "transcription": "[ˈselfɪʃ]",
+    "category": "character"
+  },
+  {
+    "translation": "серьезный",
+    "name": "serious",
+    "transcription": "[ˈsɪərɪəs]",
+    "category": "character"
+  },
+  {
+    "translation": "склад ума",
+    "name": "attitude of mind, mentality",
+    "transcription": "[ˈætɪtjuːd əv maɪnd] ",
+    "category": "character"
+  },
+  {
+    "translation": "[menˈtælɪti]",
+    "category": "character"
+  },
+  {
+    "translation": "скромный",
+    "name": "modest",
+    "transcription": "[ˈmɒdɪst]",
+    "category": "character"
+  },
+  {
+    "translation": "смелый",
+    "name": "brave",
+    "transcription": "[breɪv]",
+    "category": "character"
+  },
+  {
+    "translation": "справедливый",
+    "name": "fair, impartial",
+    "transcription": "[feə] [ɪmˈpɑːʃəl]",
+    "category": "character"
+  },
+  {
+    "translation": "талантливый",
+    "name": "talented",
+    "transcription": "[ˈtæləntɪd]",
+    "category": "character"
+  },
+  {
+    "translation": "темперамент",
+    "name": "translationerament",
+    "transcription": "[ˈtranslationrəmənt]",
+    "category": "character"
+  },
+  {
+    "translation": "терпеливый",
+    "name": "patient",
+    "transcription": "[ˈpeɪʃnt]",
+    "category": "character"
+  },
+  {
+    "translation": "тихий",
+    "name": "calm, quiet",
+    "transcription": "[kɑːm] [ˈkwaɪət]",
+    "category": "character"
+  },
+  {
+    "translation": "толерантный",
+    "name": "tolerant",
+    "transcription": "[ˈtɒlərənt]",
+    "category": "character"
+  },
+  {
+    "translation": "тупой",
+    "name": "stupid, dull",
+    "transcription": "[ˈstjuːpɪd] [dʌl]",
+    "category": "character"
+  },
+  {
+    "translation": "умный",
+    "name": "clever",
+    "transcription": "[ˈklevə]",
+    "category": "character"
+  },
+  {
+    "translation": "умный, разумный",
+    "name": "intelligent",
+    "transcription": "[ɪnˈtelɪdʒənt]",
+    "category": "character"
+  },
+  {
+    "translation": "упрямый",
+    "name": "stubborn",
+    "transcription": "[ˈstʌbən]",
+    "category": "character"
+  },
+  {
+    "translation": "циничный",
+    "name": "cynical",
+    "transcription": "[ˈsɪnɪkəl]",
+    "category": "character"
+  },
+  {
+    "translation": "черта характера",
+    "name": "character trait",
+    "transcription": "[ˈkærəktə treɪt]",
+    "category": "character"
+  },
+  {
+    "translation": "чувствительный",
+    "name": "sensitive",
+    "transcription": "[ˈsensətɪv]",
+    "category": "character"
+  },
+  {
+    "translation": "щедрый",
+    "name": "generous",
+    "transcription": "[ˈdʒenərəs]",
+    "category": "character"
+  }
+]

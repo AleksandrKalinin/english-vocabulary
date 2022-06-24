@@ -1,0 +1,416 @@
+[
+  {
+    "translation": "алебарда",
+    "name": "halberd",
+    "transcription": "[ˈhælbəd]",
+    "category": "archeology"
+  },
+  {
+    "translation": "анализировать",
+    "name": "analyze",
+    "transcription": "[ˈænəlaɪz]",
+    "category": "archeology"
+  },
+  {
+    "translation": "арбалет",
+    "name": "crossbow",
+    "transcription": "[ˈkrɒsbəʊ]",
+    "category": "archeology"
+  },
+  {
+    "translation": "археолог",
+    "name": "archeologist, archaeologist",
+    "transcription": "[ˌɑːkiˈɒlədʒɪst]",
+    "category": "archeology"
+  },
+  {
+    "translation": "археология",
+    "name": "archeology, archaeology",
+    "transcription": "[ˌɑːkiˈɒlədʒi]",
+    "category": "archeology"
+  },
+  {
+    "translation": "бронза",
+    "name": "bronze",
+    "transcription": "[brɒnz]",
+    "category": "archeology"
+  },
+  {
+    "translation": "были смоделированы",
+    "name": "were modeled",
+    "transcription": "[wə ˈmɑːdəld]",
+    "category": "archeology"
+  },
+  {
+    "translation": "век",
+    "name": "century",
+    "transcription": "[ˈsentʃəri]",
+    "category": "archeology"
+  },
+  {
+    "translation": "гибель",
+    "name": "death",
+    "transcription": "[deθ]",
+    "category": "archeology"
+  },
+  {
+    "translation": "глина",
+    "name": "clay",
+    "transcription": "[kleɪ]",
+    "category": "archeology"
+  },
+  {
+    "translation": "гробница",
+    "name": "tomb",
+    "transcription": "[tuːm]",
+    "category": "archeology"
+  },
+  {
+    "translation": "делать вывод",
+    "name": "deduce",
+    "transcription": "[dɪˈdjuːs]",
+    "category": "archeology"
+  },
+  {
+    "translation": "до н. э.",
+    "name": "B. C.",
+    "transcription": "[biː] siː]",
+    "category": "archeology"
+  },
+  {
+    "translation": "долото",
+    "name": "chisel",
+    "transcription": "[ˈtʃɪzəl]",
+    "category": "archeology"
+  },
+  {
+    "translation": "древний",
+    "name": "ancient",
+    "transcription": "[ˈeɪnʃənt]",
+    "category": "archeology"
+  },
+  {
+    "translation": "жертвенник",
+    "name": "credence",
+    "transcription": "[ˈkriːdns]",
+    "category": "archeology"
+  },
+  {
+    "translation": "захоронение",
+    "name": "burial",
+    "transcription": "[ˈberɪəl]",
+    "category": "archeology"
+  },
+  {
+    "translation": "измерение",
+    "name": "measurement",
+    "transcription": "[ˈmeʒəmənt]",
+    "category": "archeology"
+  },
+  {
+    "translation": "изображать",
+    "name": "portray",
+    "transcription": "[pɔːˈtreɪ]",
+    "category": "archeology"
+  },
+  {
+    "translation": "исследование",
+    "name": "exploration, research",
+    "transcription": "[ˌekspləˈreɪʃən] [rɪˈsɜːtʃ]",
+    "category": "archeology"
+  },
+  {
+    "translation": "надписи",
+    "name": "inscriptions",
+    "transcription": "[ɪnˈskrɪpʃənz]",
+    "category": "archeology"
+  },
+  {
+    "translation": "историк",
+    "name": "historian",
+    "transcription": "[hɪˈstɔːrɪən]",
+    "category": "archeology"
+  },
+  {
+    "translation": "исходный образец",
+    "name": "initial sample",
+    "transcription": "[ɪˈnɪʃəl ˈsɑːmpəl]",
+    "category": "archeology"
+  },
+  {
+    "translation": "итог",
+    "name": "result",
+    "transcription": "[rɪˈzʌlt]",
+    "category": "archeology"
+  },
+  {
+    "translation": "каверномер",
+    "name": "caliper",
+    "transcription": "[ˈkælɪpə]",
+    "category": "archeology"
+  },
+  {
+    "translation": "кирка",
+    "name": "pick",
+    "transcription": "[pɪk]",
+    "category": "archeology"
+  },
+  {
+    "translation": "ключ к разгадке",
+    "name": "clue",
+    "transcription": "[kluː]",
+    "category": "archeology"
+  },
+  {
+    "translation": "колчан",
+    "name": "quiver",
+    "transcription": "[ˈkwɪvə]",
+    "category": "archeology"
+  },
+  {
+    "translation": "копать",
+    "name": "dig, excavate",
+    "transcription": "[dɪɡ] [ˈekskəveɪt]",
+    "category": "archeology"
+  },
+  {
+    "translation": "копье",
+    "name": "lance",
+    "transcription": "[lɑːns]",
+    "category": "archeology"
+  },
+  {
+    "translation": "мавзолей",
+    "name": "mausoleum",
+    "transcription": "[ˌmɔːsəˈliːəm]",
+    "category": "archeology"
+  },
+  {
+    "translation": "металл",
+    "name": "metal",
+    "transcription": "[ˈmetəl]",
+    "category": "archeology"
+  },
+  {
+    "translation": "меч",
+    "name": "sword",
+    "transcription": "[sɔːd]",
+    "category": "archeology"
+  },
+  {
+    "translation": "музей",
+    "name": "museum",
+    "transcription": "[mjuːˈzɪəm]",
+    "category": "archeology"
+  },
+  {
+    "translation": "наконечник",
+    "name": "arrowhead",
+    "transcription": "[ˈærəʊhed]",
+    "category": "archeology"
+  },
+  {
+    "translation": "насыпь",
+    "name": "mound",
+    "transcription": "[maʊnd]",
+    "category": "archeology"
+  },
+  {
+    "translation": "небесное тело",
+    "name": "celestial body",
+    "transcription": "[sɪˈlestɪəl ˈbɒdi]",
+    "category": "archeology"
+  },
+  {
+    "translation": "некрополь",
+    "name": "necropolis",
+    "transcription": "[nɪˈkrɒpəlɪs]",
+    "category": "archeology"
+  },
+  {
+    "translation": "обнаруживать",
+    "name": "discover",
+    "transcription": "[dɪˈskʌvə]",
+    "category": "archeology"
+  },
+  {
+    "translation": "оружейник",
+    "name": "armorer",
+    "transcription": "[ˈɑːmərə]",
+    "category": "archeology"
+  },
+  {
+    "translation": "оружие",
+    "name": "weapon",
+    "transcription": "[ˈwepən]",
+    "category": "archeology"
+  },
+  {
+    "translation": "открыть заново",
+    "name": "rediscover",
+    "transcription": "[ˌriːdɪˈskʌvə]",
+    "category": "archeology"
+  },
+  {
+    "translation": "отмерять",
+    "name": "mete out",
+    "transcription": "[miːt aʊt]",
+    "category": "archeology"
+  },
+  {
+    "translation": "поверхность",
+    "name": "surface",
+    "transcription": "[ˈsɜːfɪs]",
+    "category": "archeology"
+  },
+  {
+    "translation": "предварительное открытие",
+    "name": "preliminary finding",
+    "transcription": "[prɪˈlɪmɪnəri ˈfaɪndɪŋ]",
+    "category": "archeology"
+  },
+  {
+    "translation": "проект",
+    "name": "project",
+    "transcription": "['prɒdʒekt]",
+    "category": "archeology"
+  },
+  {
+    "translation": "пункт наблюдения",
+    "name": "vantage point",
+    "transcription": "[ˈvɑːntɪdʒ pɔɪnt]",
+    "category": "archeology"
+  },
+  {
+    "translation": "фигура размером с человека",
+    "name": "life-size figure",
+    "transcription": "[ˈlaɪf saɪz ˈfɪɡə]",
+    "category": "archeology"
+  },
+  {
+    "translation": "реконструкция",
+    "name": "reconstruction",
+    "transcription": "[ˌriːkənˈstrʌkʃən]",
+    "category": "archeology"
+  },
+  {
+    "translation": "ремесленник",
+    "name": "artisan",
+    "transcription": "[ˌɑːtɪˈzæn]",
+    "category": "archeology"
+  },
+  {
+    "translation": "символизировать",
+    "name": "represent",
+    "transcription": "[ˌriːprɪˈzent]",
+    "category": "archeology"
+  },
+  {
+    "translation": "создание",
+    "name": "creation",
+    "transcription": "[kriːˈeɪʃən]",
+    "category": "archeology"
+  },
+  {
+    "translation": "сокровище",
+    "name": "treasure",
+    "transcription": "[ˈtreʒə]",
+    "category": "archeology"
+  },
+  {
+    "translation": "сравнивать высоту",
+    "name": "compare height",
+    "transcription": "[kəmˈpeə haɪt]",
+    "category": "archeology"
+  },
+  {
+    "translation": "статистический анализ",
+    "name": "statistical analysis",
+    "transcription": "[stəˈtɪstɪkəl əˈnæləsɪs]",
+    "category": "archeology"
+  },
+  {
+    "translation": "статуя",
+    "name": "statue",
+    "transcription": "[ˈstætʃuː]",
+    "category": "archeology"
+  },
+  {
+    "translation": "строить гипотезу",
+    "name": "hypothesize",
+    "transcription": "[haɪˈpɑːθəˌsaɪz]",
+    "category": "archeology"
+  },
+  {
+    "translation": "терракота",
+    "name": "terra-cotta",
+    "transcription": "[ˌterə ˈkɒtə]",
+    "category": "archeology"
+  },
+  {
+    "translation": "техника",
+    "name": "technology",
+    "transcription": "[tekˈnɒlədʒi]",
+    "category": "archeology"
+  },
+  {
+    "translation": "технология изображения",
+    "name": "imaging technology",
+    "transcription": "[ˈɪmɪdʒɪŋ tekˈnɒlədʒi]",
+    "category": "archeology"
+  },
+  {
+    "translation": "трёхмерный",
+    "name": "three-dimensional",
+    "transcription": "[ˌθriː dɪˈmenʃnəl]",
+    "category": "archeology"
+  },
+  {
+    "translation": "триггер",
+    "name": "trigger",
+    "transcription": "[ˈtrɪɡə]",
+    "category": "archeology"
+  },
+  {
+    "translation": "усовершенствованные методы",
+    "name": "advanced methods",
+    "transcription": "[ədˈvɑːnst ˈmeθədz]",
+    "category": "archeology"
+  },
+  {
+    "translation": "участник",
+    "name": "member",
+    "transcription": "[ˈmembə]",
+    "category": "archeology"
+  },
+  {
+    "translation": "фотографировать",
+    "name": "photograph",
+    "transcription": "[ˈfəʊtəɡrɑːf]",
+    "category": "archeology"
+  },
+  {
+    "translation": "химический состав",
+    "name": "chemical composition",
+    "transcription": "[ˈkemɪkəl ˌkɒmpəˈzɪʃən]",
+    "category": "archeology"
+  },
+  {
+    "translation": "цифровые технологии",
+    "name": "digital technologies",
+    "transcription": "[ˈdɪdʒɪtəl tekˈnɒlədʒɪz]",
+    "category": "archeology"
+  },
+  {
+    "translation": "экспонат",
+    "name": "exhibit",
+    "transcription": "[ɪɡˈzɪbɪt]",
+    "category": "archeology"
+  },
+  {
+    "translation": "яма",
+    "name": "pit",
+    "transcription": "[pɪt]",
+    "category": "archeology"
+  }
+]

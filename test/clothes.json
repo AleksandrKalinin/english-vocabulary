@@ -1,0 +1,2444 @@
+[
+  {
+    "name": "clothes",
+    "transcription": "[kləʊðz]",
+    "translation": "одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "women's clothes",
+    "transcription": "[ˈwɪmɪnz kləʊðz]",
+    "translation": "одежда для женщин",
+    "category": "clothes"
+  },
+  {
+    "name": "men's clothes",
+    "transcription": "[menz kləʊðz]",
+    "translation": "одежда для мужчин",
+    "category": "clothes"
+  },
+  {
+    "name": "children's clothes",
+    "transcription": "[ˈtʃɪldrənz kləʊðz]",
+    "translation": "одежда для детей",
+    "category": "clothes"
+  },
+  {
+    "name": "baby clothes",
+    "transcription": "[ˈbeɪbi kləʊðz]",
+    "translation": "детская одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "sports clothes",
+    "transcription": "[spɔːts kləʊðz]",
+    "translation": "спортивная одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "women's clothing",
+    "transcription": "[ˈwɪmɪnz ˈkləʊðɪŋ]",
+    "translation": "женская одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "ladies' clothing",
+    "transcription": "[ˈleɪdɪz ˈkləʊðɪŋ]",
+    "translation": "дамская одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "men's clothing",
+    "transcription": "[menz ˈkləʊðɪŋ]",
+    "translation": "мужская одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "children's clothing",
+    "transcription": "[ˈtʃɪldrənz ˈkləʊðɪŋ]",
+    "translation": "детская одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "sports clothing",
+    "transcription": "[spɔːts ˈkləʊðɪŋ]",
+    "translation": "спортивная одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "winter clothes",
+    "transcription": "[ˈwɪntə kləʊðz]",
+    "translation": "зимняя одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "winter clothing",
+    "transcription": "[ˈwɪntə ˈkləʊðɪŋ]",
+    "translation": "зимние вещи",
+    "category": "clothes"
+  },
+  {
+    "name": "summer clothes",
+    "transcription": "[ˈsʌmə kləʊðz]",
+    "translation": "летняя одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "casual clothes",
+    "transcription": "[ˈkæʒʊəl kləʊðz]",
+    "translation": "повседневная одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "formal clothes",
+    "transcription": "[ˈfɔːml̩ kləʊðz]",
+    "translation": "официальная одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "expensive clothes",
+    "transcription": "[ɪkˈspensɪv kləʊðz]",
+    "translation": "дорогая одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "cheap clothes",
+    "transcription": "[tʃiːp kləʊðz]",
+    "translation": "дешевая одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "nice clothes",
+    "transcription": "[naɪs kləʊðz]",
+    "translation": "красивая (нарядная) одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "shabby clothes",
+    "transcription": "[ˈʃæbi kləʊðz]",
+    "translation": "поношенная/потрепанная одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "designer clothes",
+    "transcription": "[dɪˈzaɪnə kləʊðz]",
+    "translation": "дизайнерская одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "tailor-made clothes",
+    "transcription": "[ˈteɪlə meɪd kləʊðz]",
+    "translation": "одежда, сшитая на заказ",
+    "category": "clothes"
+  },
+  {
+    "name": "handmade clothes",
+    "transcription": "[hændˈmeɪd kləʊðz]",
+    "translation": "одежда ручной работы",
+    "category": "clothes"
+  },
+  {
+    "name": "ready-made clothes",
+    "transcription": "[ˈredɪ meɪd kləʊðz]",
+    "translation": "готовая одежда (купленная в магазине)",
+    "category": "clothes"
+  },
+  {
+    "name": "work clothes",
+    "transcription": "[ˈwɜːk kləʊðz]",
+    "translation": "рабочая одежда, спецодежда",
+    "category": "clothes"
+  },
+  {
+    "name": "working clothes",
+    "transcription": "[ˈwɜːkɪŋ kləʊðz]",
+    "translation": "рабочая форма",
+    "category": "clothes"
+  },
+  {
+    "name": "uniform",
+    "transcription": "[ˈjuːnɪfɔːm]",
+    "translation": "униформа, рабочая форма",
+    "category": "clothes"
+  },
+  {
+    "name": "protective clothing",
+    "transcription": "[prəˈtektɪv ˈkləʊðɪŋ]",
+    "translation": "спецодежда, защитная одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "footwear",
+    "transcription": "[ˈfʊtweə]",
+    "translation": "обувь",
+    "category": "clothes"
+  },
+  {
+    "name": "headgear",
+    "transcription": "[ˈhedɡɪə]",
+    "translation": "головной убор",
+    "category": "clothes"
+  },
+  {
+    "name": "underwear",
+    "transcription": "[ˈʌndəweə]",
+    "translation": "нижнее белье",
+    "category": "clothes"
+  },
+  {
+    "name": "sportswear",
+    "transcription": "[ˈspɔːtsweə]",
+    "translation": "спортивная одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "swimwear",
+    "transcription": "[ˈswɪmweə]",
+    "translation": "купальный костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "sleepwear",
+    "transcription": "[sˈliːˌpwer]",
+    "translation": "ночное белье",
+    "category": "clothes"
+  },
+  {
+    "name": "clothes",
+    "transcription": "[kləʊðz]",
+    "translation": "одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "clothing",
+    "transcription": "[ˈkləʊðɪŋ]",
+    "translation": "одежда, платье",
+    "category": "clothes"
+  },
+  {
+    "name": "garments",
+    "transcription": "[ˈɡɑːmənts]",
+    "translation": "одежда, одеяние",
+    "category": "clothes"
+  },
+  {
+    "name": "wear",
+    "transcription": "[weə]",
+    "translation": "носка (одежды), одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "dress",
+    "transcription": "[dres]",
+    "translation": "платье",
+    "category": "clothes"
+  },
+  {
+    "name": "outfit",
+    "transcription": "[ˈaʊtfɪt]",
+    "translation": "полный комплект одежды",
+    "category": "clothes"
+  },
+  {
+    "name": "attire",
+    "transcription": "[əˈtaɪə]",
+    "translation": "одеяние, наряд",
+    "category": "clothes"
+  },
+  {
+    "name": "apparel",
+    "transcription": "[əˈpærəl]",
+    "translation": "одежда, предмет одежды",
+    "category": "clothes"
+  },
+  {
+    "name": "fashion",
+    "transcription": "[ˈfæʃn̩]",
+    "translation": "мода",
+    "category": "clothes"
+  },
+  {
+    "name": "style",
+    "transcription": "[staɪl]",
+    "translation": "стиль",
+    "category": "clothes"
+  },
+  {
+    "name": "vogue",
+    "transcription": "[vəʊɡ]",
+    "translation": "мода",
+    "category": "clothes"
+  },
+  {
+    "name": "haute couture",
+    "transcription": "[ˈhot kuˈtjʊə]",
+    "translation": "высокая мода",
+    "category": "clothes"
+  },
+  {
+    "name": "Outer garments",
+    "transcription": "[ˈaʊtə ˈɡɑːmənts]",
+    "translation": "Верхняя одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "warm coat",
+    "transcription": "[wɔːm ˈkəʊt]",
+    "translation": "теплое пальто",
+    "category": "clothes"
+  },
+  {
+    "name": "fur coat",
+    "transcription": "[fɜː ˈkəʊt]",
+    "translation": "шуба",
+    "category": "clothes"
+  },
+  {
+    "name": "sheepskin coat",
+    "transcription": "[ˈʃiːpskɪn ˈkəʊt]",
+    "translation": "(пальто-)дубленка",
+    "category": "clothes"
+  },
+  {
+    "name": "storm coat",
+    "transcription": "[stɔːm ˈkəʊt]",
+    "translation": "плащ на теплой подкладке",
+    "category": "clothes"
+  },
+  {
+    "name": "parka",
+    "transcription": "[ˈpɑːkə]",
+    "translation": "парка (длинная куртка с капюшоном)",
+    "category": "clothes"
+  },
+  {
+    "name": "snowsuit",
+    "transcription": "[ˈsnəʊ suːt]",
+    "translation": "детский зимний комбинезон",
+    "category": "clothes"
+  },
+  {
+    "name": "coat",
+    "transcription": "[ˈkəʊt]",
+    "translation": "пальто",
+    "category": "clothes"
+  },
+  {
+    "name": "topcoat",
+    "transcription": "[ˈtɒpkəʊt]",
+    "translation": "пальто",
+    "category": "clothes"
+  },
+  {
+    "name": "overcoat",
+    "transcription": "[ˈəʊvəkəʊt]",
+    "translation": "пальто, шинель",
+    "category": "clothes"
+  },
+  {
+    "name": "trench coat",
+    "transcription": "[trentʃ ˈkəʊt]",
+    "translation": "длинное непромокаемое пальто",
+    "category": "clothes"
+  },
+  {
+    "name": "raincoat",
+    "transcription": "[ˈreɪnkəʊt]",
+    "translation": "плащ, дождевик",
+    "category": "clothes"
+  },
+  {
+    "name": "waterproof coat",
+    "transcription": "[ˈwɔːtəpruːf ˈkəʊt]",
+    "translation": "водонепроницаемое пальто, дождевик",
+    "category": "clothes"
+  },
+  {
+    "name": "slicker",
+    "transcription": "[ˈslɪkə]",
+    "translation": "непромокаемый плащ, макинтош",
+    "category": "clothes"
+  },
+  {
+    "name": "leather jacket",
+    "transcription": "[ˈleðə ˈdʒækɪt]",
+    "translation": "кожаный жакет, кожанка",
+    "category": "clothes"
+  },
+  {
+    "name": "bomber jacket",
+    "transcription": "[ˈbɒmə ˈdʒækɪt]",
+    "translation": "короткая куртка",
+    "category": "clothes"
+  },
+  {
+    "name": "car coat",
+    "transcription": "[kɑː ˈkəʊt]",
+    "translation": "полупальто",
+    "category": "clothes"
+  },
+  {
+    "name": "windbreaker",
+    "transcription": "[ˈwɪndbreɪkə]",
+    "translation": "ветровка",
+    "category": "clothes"
+  },
+  {
+    "name": "windcheater",
+    "transcription": "[ˈwɪndtʃiːtə]",
+    "translation": "ветровка",
+    "category": "clothes"
+  },
+  {
+    "name": "sports jacket",
+    "transcription": "[spɔːts ˈdʒækɪt]",
+    "translation": "спортивная куртка",
+    "category": "clothes"
+  },
+  {
+    "name": "Women's clothes",
+    "transcription": "[ˈwɪmɪnz kləʊðz]",
+    "translation": "Женская одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "casual dress",
+    "transcription": "[ˈkæʒʊəl dres]",
+    "translation": "повседневная одежда (платье)",
+    "category": "clothes"
+  },
+  {
+    "name": "formal dress",
+    "transcription": "[ˈfɔːml̩ dres]",
+    "translation": "длинное вечернее платье",
+    "category": "clothes"
+  },
+  {
+    "name": "summer dress",
+    "transcription": "[ˈsʌmə dres]",
+    "translation": "летнее платье",
+    "category": "clothes"
+  },
+  {
+    "name": "woolen dress",
+    "transcription": "[ˈwʊlən dres]",
+    "translation": "шерстяное платье",
+    "category": "clothes"
+  },
+  {
+    "name": "cocktail dress",
+    "transcription": "[ˈkɒkteɪl dres]",
+    "translation": "вечернее платье",
+    "category": "clothes"
+  },
+  {
+    "name": "low-cut dress",
+    "transcription": "[ləʊ kʌt dres]",
+    "translation": "платье с глубоким вырезом",
+    "category": "clothes"
+  },
+  {
+    "name": "evening dress",
+    "transcription": "[ˈiːvn̩ɪŋ dres]",
+    "translation": "вечернее платье",
+    "category": "clothes"
+  },
+  {
+    "name": "evening gown",
+    "transcription": "[ˈiːvn̩ɪŋ ɡaʊn]",
+    "translation": "вечернее платье",
+    "category": "clothes"
+  },
+  {
+    "name": "business suit",
+    "transcription": "[ˈbɪznəs suːt]",
+    "translation": "деловой костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "pants suit (pant suit)",
+    "transcription": "[pænts suːt] [pænt suːt]",
+    "translation": "женский брючный костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "uniform",
+    "transcription": "[ˈjuːnɪfɔːm]",
+    "translation": "(рабочая) форма",
+    "category": "clothes"
+  },
+  {
+    "name": "button-through dress",
+    "transcription": "[ˈbʌtn̩ θruː dres]",
+    "translation": "платье-халат",
+    "category": "clothes"
+  },
+  {
+    "name": "pinafore dress",
+    "transcription": "[ˈpɪnəfɔː dres]",
+    "translation": "сарафан",
+    "category": "clothes"
+  },
+  {
+    "name": "house dress",
+    "transcription": "[ˈhaʊs dres]",
+    "translation": "домашнее платье",
+    "category": "clothes"
+  },
+  {
+    "name": "maternity wear",
+    "transcription": "[məˈtɜːnɪti weə]",
+    "translation": "одежда для беременных",
+    "category": "clothes"
+  },
+  {
+    "name": "maternity dress",
+    "transcription": "[məˈtɜːnɪti dres]",
+    "translation": "платье для беременных",
+    "category": "clothes"
+  },
+  {
+    "name": "sweater",
+    "transcription": "[ˈswetə]",
+    "translation": "свитер",
+    "category": "clothes"
+  },
+  {
+    "name": "jersey",
+    "transcription": "[ˈdʒɜːzi]",
+    "translation": "свитер, вязаная кофта",
+    "category": "clothes"
+  },
+  {
+    "name": "cardigan",
+    "transcription": "[ˈkɑːdɪɡən]",
+    "translation": "кардиган",
+    "category": "clothes"
+  },
+  {
+    "name": "jacket",
+    "transcription": "[ˈdʒækɪt]",
+    "translation": "куртка, пиджак",
+    "category": "clothes"
+  },
+  {
+    "name": "vest",
+    "transcription": "[vest]",
+    "translation": "жилет",
+    "category": "clothes"
+  },
+  {
+    "name": "blouse",
+    "transcription": "[blaʊz]",
+    "translation": "блузка",
+    "category": "clothes"
+  },
+  {
+    "name": "shirt",
+    "transcription": "[ʃɜːt]",
+    "translation": "рубашка",
+    "category": "clothes"
+  },
+  {
+    "name": "tunic",
+    "transcription": "[ˈtjuːnɪk]",
+    "translation": "туника, блузка или жакет (обычно с поясом)",
+    "category": "clothes"
+  },
+  {
+    "name": "T-shirt",
+    "transcription": "[ˈtiː ʃɜːt]",
+    "translation": "футболка",
+    "category": "clothes"
+  },
+  {
+    "name": "tank top",
+    "transcription": "[tæŋk tɒp]",
+    "translation": "вязаный жилет, майка на лямках (амер.)",
+    "category": "clothes"
+  },
+  {
+    "name": "halter top",
+    "transcription": "[ˈhɔːltə tɒp]",
+    "translation": "короткий топ",
+    "category": "clothes"
+  },
+  {
+    "name": "skirt",
+    "transcription": "[skɜːt]",
+    "translation": "юбка",
+    "category": "clothes"
+  },
+  {
+    "name": "miniskirt",
+    "transcription": "[ˈmɪniskɜːt]",
+    "translation": "мини-юбка",
+    "category": "clothes"
+  },
+  {
+    "name": "long skirt",
+    "transcription": "[ˈlɒŋ skɜːt]",
+    "translation": "длинная юбка",
+    "category": "clothes"
+  },
+  {
+    "name": "pleated skirt",
+    "transcription": "[ˈpliːtɪd skɜːt]",
+    "translation": "плиссированная юбка",
+    "category": "clothes"
+  },
+  {
+    "name": "black skirt",
+    "transcription": "[blæk skɜːt]",
+    "translation": "черная юбка",
+    "category": "clothes"
+  },
+  {
+    "name": "pants",
+    "transcription": "[pænts]",
+    "translation": "брюки, трусы",
+    "category": "clothes"
+  },
+  {
+    "name": "slacks",
+    "transcription": "[slæks]",
+    "translation": "широкие брюки (мужские или женские)",
+    "category": "clothes"
+  },
+  {
+    "name": "trousers",
+    "transcription": "[ˈtraʊzəz]",
+    "translation": "брюки",
+    "category": "clothes"
+  },
+  {
+    "name": "jeans",
+    "transcription": "[dʒiːnz]",
+    "translation": "джинсы",
+    "category": "clothes"
+  },
+  {
+    "name": "denims",
+    "transcription": "[ˈdenɪmz]",
+    "translation": "джинсы",
+    "category": "clothes"
+  },
+  {
+    "name": "shorts",
+    "transcription": "[ʃɔːts]",
+    "translation": "шорты",
+    "category": "clothes"
+  },
+  {
+    "name": "swimsuit",
+    "transcription": "[ˈswɪmsuːt]",
+    "translation": "купальный костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "swimming suit",
+    "transcription": "[ˈswɪmɪŋ suːt]",
+    "translation": "купальный костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "bathing suit",
+    "transcription": "[ˈbeɪðɪŋ suːt]",
+    "translation": "купальный костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "bikini",
+    "transcription": "[bɪˈkiːni]",
+    "translation": "бикини",
+    "category": "clothes"
+  },
+  {
+    "name": "jumpsuit",
+    "transcription": "[ˈdʒʌmpsuːt]",
+    "translation": "спортивный костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "warm-up suit",
+    "transcription": "[ˈwɔːˌməp suːt]",
+    "translation": "тренировочный костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "training suit",
+    "transcription": "[ˈtreɪnɪŋ suːt]",
+    "translation": "тренировочный (спортивный) костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "Men's clothes",
+    "transcription": "[menz kləʊðz]",
+    "translation": "Мужская одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "business suit",
+    "transcription": "[ˈbɪznəs suːt]",
+    "translation": "деловой костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "three-piece suit",
+    "transcription": "[ˈθriː piːs suːt]",
+    "translation": "костюм «тройка»",
+    "category": "clothes"
+  },
+  {
+    "name": "tuxedo",
+    "transcription": "[tʌkˈsiːdəʊ]",
+    "translation": "смокинг",
+    "category": "clothes"
+  },
+  {
+    "name": "tail coat",
+    "transcription": "[teɪl ˈkəʊt]",
+    "translation": "фрак",
+    "category": "clothes"
+  },
+  {
+    "name": "tails",
+    "transcription": "[teɪlz]",
+    "translation": "фрак",
+    "category": "clothes"
+  },
+  {
+    "name": "black tie",
+    "transcription": "[blæk taɪ]",
+    "translation": "черный галстук-бабочка",
+    "category": "clothes"
+  },
+  {
+    "name": "white tie",
+    "transcription": "[waɪt taɪ]",
+    "translation": "белый галстук-бабочка",
+    "category": "clothes"
+  },
+  {
+    "name": "trousers",
+    "transcription": "[ˈtraʊzəz]",
+    "translation": "брюки",
+    "category": "clothes"
+  },
+  {
+    "name": "slacks",
+    "transcription": "[slæks]",
+    "translation": "широкие брюки",
+    "category": "clothes"
+  },
+  {
+    "name": "jeans",
+    "transcription": "[dʒiːnz]",
+    "translation": "джинсы",
+    "category": "clothes"
+  },
+  {
+    "name": "denims",
+    "transcription": "[ˈdenɪmz]",
+    "translation": "джинсы",
+    "category": "clothes"
+  },
+  {
+    "name": "shorts",
+    "transcription": "[ʃɔːts]",
+    "translation": "шорты",
+    "category": "clothes"
+  },
+  {
+    "name": "jacket",
+    "transcription": "[ˈdʒækɪt]",
+    "translation": "пиджак, куртка",
+    "category": "clothes"
+  },
+  {
+    "name": "blazer",
+    "transcription": "[ˈbleɪzə]",
+    "translation": "блейзер, спортивная куртка",
+    "category": "clothes"
+  },
+  {
+    "name": "vest",
+    "transcription": "[vest]",
+    "translation": "жилет",
+    "category": "clothes"
+  },
+  {
+    "name": "sweater",
+    "transcription": "[ˈswetə]",
+    "translation": "свитер",
+    "category": "clothes"
+  },
+  {
+    "name": "turtleneck sweater",
+    "transcription": "[ˈtɜːtlnek ˈswetə]",
+    "translation": "водолазка",
+    "category": "clothes"
+  },
+  {
+    "name": "pullover",
+    "transcription": "[ˈpʊləʊvə]",
+    "translation": "пуловер, свитер",
+    "category": "clothes"
+  },
+  {
+    "name": "jumper",
+    "transcription": "[ˈdʒʌmpə]",
+    "translation": "джемпер, толстовка",
+    "category": "clothes"
+  },
+  {
+    "name": "sweatshirt",
+    "transcription": "[ˈswetʃɜːt]",
+    "translation": "толстовка, тренировочная рубашка",
+    "category": "clothes"
+  },
+  {
+    "name": "shirt",
+    "transcription": "[ʃɜːt]",
+    "translation": "рубашка",
+    "category": "clothes"
+  },
+  {
+    "name": "polo shirt",
+    "transcription": "[ˈpəʊləʊ ʃɜːt]",
+    "translation": "рубашка-поло",
+    "category": "clothes"
+  },
+  {
+    "name": "T-shirt",
+    "transcription": "[ˈtiː ʃɜːt]",
+    "translation": "футболка",
+    "category": "clothes"
+  },
+  {
+    "name": "tank top",
+    "transcription": "[tæŋk tɒp]",
+    "translation": "вязаный жилет, майка на лямках (амер.)",
+    "category": "clothes"
+  },
+  {
+    "name": "warm-up suit",
+    "transcription": "[ˈwɔːˌməp suːt]",
+    "translation": "тренировочный костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "training suit",
+    "transcription": "[ˈtreɪnɪŋ suːt]",
+    "translation": "спортивный (тренировочный) костюм",
+    "category": "clothes"
+  },
+  {
+    "name": "trunks",
+    "transcription": "[trʌŋks]",
+    "translation": "трусы",
+    "category": "clothes"
+  },
+  {
+    "name": "bathing trunks",
+    "transcription": "[ˈbɑːθɪŋ trʌŋks]",
+    "translation": "плавки",
+    "category": "clothes"
+  },
+  {
+    "name": "swimming trunks",
+    "transcription": "[ˈswɪmɪŋ trʌŋks]",
+    "translation": "плавки",
+    "category": "clothes"
+  },
+  {
+    "name": "swim trunks",
+    "transcription": "[swɪm trʌŋks]",
+    "translation": "плавки",
+    "category": "clothes"
+  },
+  {
+    "name": "swim briefs",
+    "transcription": "[swɪm briːfs]",
+    "translation": "плавки",
+    "category": "clothes"
+  },
+  {
+    "name": "uniform",
+    "transcription": "[ˈjuːnɪfɔːm]",
+    "translation": "рабочая форма",
+    "category": "clothes"
+  },
+  {
+    "name": "work clothes",
+    "transcription": "[ˈwɜːk kləʊðz]",
+    "translation": "рабочая одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "overalls",
+    "transcription": "[ˈəʊvərɔːlz]",
+    "translation": "рабочие брюки, комбинезон",
+    "category": "clothes"
+  },
+  {
+    "name": "Underwear",
+    "transcription": "[ˈʌndəweə]",
+    "translation": "Нижнее белье",
+    "category": "clothes"
+  },
+  {
+    "name": "hosiery",
+    "transcription": "[ˈhəʊzɪəri]",
+    "translation": "трикотажное белье",
+    "category": "clothes"
+  },
+  {
+    "name": "sleepwear",
+    "transcription": "[sˈliːˌpwer]",
+    "translation": "одежда для сна",
+    "category": "clothes"
+  },
+  {
+    "name": "robe",
+    "transcription": "[rəʊb]",
+    "translation": "халат",
+    "category": "clothes"
+  },
+  {
+    "name": "underwear",
+    "transcription": "[ˈʌndəweə]",
+    "translation": "нижнее белье",
+    "category": "clothes"
+  },
+  {
+    "name": "lingerie",
+    "transcription": "[ˈlænʒəriː]",
+    "translation": "дамское белье",
+    "category": "clothes"
+  },
+  {
+    "name": "panties",
+    "transcription": "[ˈpæntɪz]",
+    "translation": "трусики",
+    "category": "clothes"
+  },
+  {
+    "name": "bra",
+    "transcription": "[brɑː]",
+    "translation": "бюстгальтер, лифчик",
+    "category": "clothes"
+  },
+  {
+    "name": "slip",
+    "transcription": "[slɪp]",
+    "translation": "комбинация (белье)",
+    "category": "clothes"
+  },
+  {
+    "name": "half slip",
+    "transcription": "[hɑːf slɪp]",
+    "translation": "нижняя юбка",
+    "category": "clothes"
+  },
+  {
+    "name": "briefs",
+    "transcription": "[briːfs]",
+    "translation": "короткие трусы или подштанники",
+    "category": "clothes"
+  },
+  {
+    "name": "underpants",
+    "transcription": "[ˈʌndəpænts]",
+    "translation": "кальсоны; трусы (мужские)",
+    "category": "clothes"
+  },
+  {
+    "name": "T-shirt",
+    "transcription": "[ˈtiː ʃɜːt]",
+    "translation": "тенниска",
+    "category": "clothes"
+  },
+  {
+    "name": "undershirt",
+    "transcription": "[ˈəndərˌʃərt]",
+    "translation": "майка",
+    "category": "clothes"
+  },
+  {
+    "name": "pantyhose",
+    "transcription": "[ˈpæntiˌhoz]",
+    "translation": "колготки",
+    "category": "clothes"
+  },
+  {
+    "name": "tights",
+    "transcription": "[taɪts]",
+    "translation": "колготки",
+    "category": "clothes"
+  },
+  {
+    "name": "leggings",
+    "transcription": "[ˈleɡɪŋz]",
+    "translation": "леггинсы, лосины",
+    "category": "clothes"
+  },
+  {
+    "name": "stockings",
+    "transcription": "[ˈstɒkɪŋz]",
+    "translation": "чулки",
+    "category": "clothes"
+  },
+  {
+    "name": "socks",
+    "transcription": "[ˈsɒks]",
+    "translation": "носки",
+    "category": "clothes"
+  },
+  {
+    "name": "slouch socks",
+    "transcription": "[slaʊtʃ ˈsɒks]",
+    "translation": "гольфы",
+    "category": "clothes"
+  },
+  {
+    "name": "knee-high socks",
+    "transcription": "[niː ˈhaɪ ˈsɒks]",
+    "translation": "гольфы",
+    "category": "clothes"
+  },
+  {
+    "name": "pajamas (BrE: pyjamas)",
+    "transcription": "[pəˈdʒɑːməz]",
+    "translation": "пижама",
+    "category": "clothes"
+  },
+  {
+    "name": "nightgown",
+    "transcription": "[ˈnaɪtɡaʊn]",
+    "translation": "длинная ночная рубашка",
+    "category": "clothes"
+  },
+  {
+    "name": "sleepshirt",
+    "transcription": "[ˈsliːpʃɜːt]",
+    "translation": "ночная рубашка",
+    "category": "clothes"
+  },
+  {
+    "name": "housecoat",
+    "transcription": "[ˈhaʊskəʊt]",
+    "translation": "женский халат",
+    "category": "clothes"
+  },
+  {
+    "name": "robe",
+    "transcription": "[rəʊb]",
+    "translation": "халат",
+    "category": "clothes"
+  },
+  {
+    "name": "bathrobe",
+    "transcription": "[ˈbɑːθrəʊb]",
+    "translation": "купальный халат",
+    "category": "clothes"
+  },
+  {
+    "name": "terry-cloth robe",
+    "transcription": "[ˈterɪklɒθ rəʊb]",
+    "translation": "махровый халат",
+    "category": "clothes"
+  },
+  {
+    "name": "Parts of clothes and their types",
+    "transcription": "[pɑːts əv kləʊðz ənd ðeə taɪps]",
+    "translation": "Детали одежды и их виды",
+    "category": "clothes"
+  },
+  {
+    "name": "collar",
+    "transcription": "[ˈkɒlə]",
+    "translation": "воротник",
+    "category": "clothes"
+  },
+  {
+    "name": "turtleneck collar",
+    "transcription": "[ˈtɜːtlnek ˈkɒlə]",
+    "translation": "высокий, облегающий шею воротник",
+    "category": "clothes"
+  },
+  {
+    "name": "shawl collar",
+    "transcription": "[ʃɔːl ˈkɒlə]",
+    "translation": "воротник-шаль",
+    "category": "clothes"
+  },
+  {
+    "name": "stand-up collar",
+    "transcription": "[ˈstænd ʌp ˈkɒlə]",
+    "translation": "стоячий воротник",
+    "category": "clothes"
+  },
+  {
+    "name": "V-neck",
+    "transcription": "[ˈviːnek]",
+    "translation": "вырез мысом, в форме буквы",
+    "category": "clothes"
+  },
+  {
+    "name": "crew neck",
+    "transcription": "[kruː nek]",
+    "translation": "круглый вырез",
+    "category": "clothes"
+  },
+  {
+    "name": "collarless",
+    "transcription": "[ˈkɒlələs]",
+    "translation": "без воротника",
+    "category": "clothes"
+  },
+  {
+    "name": "sleeve",
+    "transcription": "[sliːv]",
+    "translation": "рукава",
+    "category": "clothes"
+  },
+  {
+    "name": "long sleeve",
+    "transcription": "[ˈlɒŋ sliːv]",
+    "translation": "длинные рукава",
+    "category": "clothes"
+  },
+  {
+    "name": "short sleeve",
+    "transcription": "[ʃɔːt sliːv]",
+    "translation": "короткие рукава",
+    "category": "clothes"
+  },
+  {
+    "name": "sleeveless",
+    "transcription": "[ˈsliːvləs]",
+    "translation": "без рукавов",
+    "category": "clothes"
+  },
+  {
+    "name": "with long sleeves",
+    "transcription": "[wɪð ˈlɒŋ sliːvz]",
+    "translation": "с длинными рукавами",
+    "category": "clothes"
+  },
+  {
+    "name": "with short sleeves",
+    "transcription": "[wɪð ʃɔːt sliːvz]",
+    "translation": "с короткими рукавами",
+    "category": "clothes"
+  },
+  {
+    "name": "long-sleeved blouse",
+    "transcription": "[ˈlɒŋsliːvd blaʊz]",
+    "translation": "блузка с длинными рукавами",
+    "category": "clothes"
+  },
+  {
+    "name": "short-sleeved dress",
+    "transcription": "[ˈʃɔːtsliːvd dres]",
+    "translation": "платье с короткими рукавами",
+    "category": "clothes"
+  },
+  {
+    "name": "padded shoulders",
+    "transcription": "[ˈpædɪd ˈʃəʊldəz]",
+    "translation": "плечики",
+    "category": "clothes"
+  },
+  {
+    "name": "cuffs",
+    "transcription": "[kʌfs]",
+    "translation": "манжеты",
+    "category": "clothes"
+  },
+  {
+    "name": "pocket",
+    "transcription": "[ˈpɒkɪt]",
+    "translation": "карман",
+    "category": "clothes"
+  },
+  {
+    "name": "front pocket",
+    "transcription": "[frʌnt ˈpɒkɪt]",
+    "translation": "передний карман",
+    "category": "clothes"
+  },
+  {
+    "name": "back pocket",
+    "transcription": "[ˈbæk ˈpɒkɪt]",
+    "translation": "задний карман",
+    "category": "clothes"
+  },
+  {
+    "name": "side pocket",
+    "transcription": "[saɪd ˈpɒkɪt]",
+    "translation": "боковой карман",
+    "category": "clothes"
+  },
+  {
+    "name": "patch pocket",
+    "transcription": "[pætʃ ˈpɒkɪt]",
+    "translation": "накладной карман",
+    "category": "clothes"
+  },
+  {
+    "name": "slash pocket",
+    "transcription": "[slæʃ ˈpɒkɪt]",
+    "translation": "прорезной карман",
+    "category": "clothes"
+  },
+  {
+    "name": "inside pocket",
+    "transcription": "[ɪnˈsaɪd ˈpɒkɪt]",
+    "translation": "внутренний карман",
+    "category": "clothes"
+  },
+  {
+    "name": "Fabric and material",
+    "transcription": "[ˈfæbrɪk ənd məˈtɪərɪəl]",
+    "translation": "Ткань и материал",
+    "category": "clothes"
+  },
+  {
+    "name": "fabric",
+    "transcription": "[ˈfæbrɪk]",
+    "translation": "ткань, материал",
+    "category": "clothes"
+  },
+  {
+    "name": "cloth",
+    "transcription": "[klɒθ]",
+    "translation": "ткань, полотно",
+    "category": "clothes"
+  },
+  {
+    "name": "material",
+    "transcription": "[məˈtɪərɪəl]",
+    "translation": "материал",
+    "category": "clothes"
+  },
+  {
+    "name": "textile",
+    "transcription": "[ˈtekstaɪl]",
+    "translation": "текстиль, ткань",
+    "category": "clothes"
+  },
+  {
+    "name": "cotton",
+    "transcription": "[ˈkɒtn̩]",
+    "translation": "хлопок",
+    "category": "clothes"
+  },
+  {
+    "name": "linen",
+    "transcription": "[ˈlɪnɪn]",
+    "translation": "лен",
+    "category": "clothes"
+  },
+  {
+    "name": "silk",
+    "transcription": "[sɪlk]",
+    "translation": "шелк",
+    "category": "clothes"
+  },
+  {
+    "name": "wool",
+    "transcription": "[wʊl]",
+    "translation": "шерсть",
+    "category": "clothes"
+  },
+  {
+    "name": "mohair",
+    "transcription": "[ˈməʊheə]",
+    "translation": "мохер",
+    "category": "clothes"
+  },
+  {
+    "name": "velvet",
+    "transcription": "[ˈvelvɪt]",
+    "translation": "бархат",
+    "category": "clothes"
+  },
+  {
+    "name": "corduroy",
+    "transcription": "[ˈkɔːdəroɪ]",
+    "translation": "вельвет",
+    "category": "clothes"
+  },
+  {
+    "name": "denim",
+    "transcription": "[ˈdenɪm]",
+    "translation": "джинсовая ткань",
+    "category": "clothes"
+  },
+  {
+    "name": "suede",
+    "transcription": "[sweɪd]",
+    "translation": "замша",
+    "category": "clothes"
+  },
+  {
+    "name": "leather",
+    "transcription": "[ˈleðə]",
+    "translation": "кожа",
+    "category": "clothes"
+  },
+  {
+    "name": "synthetics",
+    "transcription": "[sɪnˈθetɪks]",
+    "translation": "синтетика",
+    "category": "clothes"
+  },
+  {
+    "name": "nylon",
+    "transcription": "[ˈnaɪlɒn]",
+    "translation": "нейлон",
+    "category": "clothes"
+  },
+  {
+    "name": "polyester",
+    "transcription": "[ˌpɒliˈestə]",
+    "translation": "полиэстер",
+    "category": "clothes"
+  },
+  {
+    "name": "lycra",
+    "transcription": "[ˈlaɪkrə]",
+    "translation": "лайкра",
+    "category": "clothes"
+  },
+  {
+    "name": "spandex",
+    "transcription": "[ˈspændəks]",
+    "translation": "спандекс",
+    "category": "clothes"
+  },
+  {
+    "name": "artificial fur",
+    "transcription": "[ˌɑːtɪˈfɪʃl̩ fɜː]",
+    "translation": "искусственный мех",
+    "category": "clothes"
+  },
+  {
+    "name": "natural fur",
+    "transcription": "[ˈnætʃrəl fɜː]",
+    "translation": "натуральный мех",
+    "category": "clothes"
+  },
+  {
+    "name": "mink",
+    "transcription": "[mɪŋk]",
+    "translation": "норковый мех, норка",
+    "category": "clothes"
+  },
+  {
+    "name": "fox",
+    "transcription": "[fɒks]",
+    "translation": "лисий мех",
+    "category": "clothes"
+  },
+  {
+    "name": "sable",
+    "transcription": "[ˈseɪbl̩]",
+    "translation": "соболий мех",
+    "category": "clothes"
+  },
+  {
+    "name": "chinchilla",
+    "transcription": "[tʃɪnˈtʃɪlə]",
+    "translation": "шиншилловый мех",
+    "category": "clothes"
+  },
+  {
+    "name": "beaver",
+    "transcription": "[ˈbiːvə]",
+    "translation": "бобровый мех",
+    "category": "clothes"
+  },
+  {
+    "name": "rabbit",
+    "transcription": "[ˈræbɪt]",
+    "translation": "кроличий мех; кроличья шкурка",
+    "category": "clothes"
+  },
+  {
+    "name": "astrakhan",
+    "transcription": "[ˌæstrəˈkæn]",
+    "translation": "каракулевая шкурка",
+    "category": "clothes"
+  },
+  {
+    "name": "sheepskin",
+    "transcription": "[ˈʃiːpskɪn]",
+    "translation": "овчина",
+    "category": "clothes"
+  },
+  {
+    "name": "knitted garments",
+    "transcription": "[ˈnɪtɪd ˈɡɑːmənts]",
+    "translation": "вязаная одежда",
+    "category": "clothes"
+  },
+  {
+    "name": "knitwear",
+    "transcription": "[ˈnɪtweə]",
+    "translation": "вязаные вещи, трикотаж",
+    "category": "clothes"
+  },
+  {
+    "name": "knitted cap (socks, sweater, etc.)",
+    "transcription": "[ˈnɪtɪd kæp] [ˈsɒks] [ˈswetə]",
+    "translation": "вязаная шапка (носки, свитер и т.д.)",
+    "category": "clothes"
+  },
+  {
+    "name": "embroidery",
+    "transcription": "[ɪmˈbroɪdəri]",
+    "translation": "вышитое изделие",
+    "category": "clothes"
+  },
+  {
+    "name": "embroidered dress (blouse, shirt, etc.)",
+    "transcription": "[ɪmˈbroɪdəd dres] [blaʊz] [ʃɜːt]",
+    "translation": "вышитое плате (блузка, рубашка и т.д.)",
+    "category": "clothes"
+  },
+  {
+    "name": "Patterns and colors",
+    "transcription": "[ˈpætn̩z ənd ˈkʌlərz]",
+    "translation": "Узоры и цвета",
+    "category": "clothes"
+  },
+  {
+    "name": "floral pattern",
+    "transcription": "[ˈflɔːrəl ˈpætn̩]",
+    "translation": "цветочный узор",
+    "category": "clothes"
+  },
+  {
+    "name": "floral print",
+    "transcription": "[ˈflɔːrəl prɪnt]",
+    "translation": "набивная ткань с цветочным рисунком",
+    "category": "clothes"
+  },
+  {
+    "name": "flower pattern",
+    "transcription": "[ˈflaʊə ˈpætn̩]",
+    "translation": "цветочный узор",
+    "category": "clothes"
+  },
+  {
+    "name": "flower print",
+    "transcription": "[ˈflaʊə prɪnt]",
+    "translation": "цветочный узор",
+    "category": "clothes"
+  },
+  {
+    "name": "paisley print",
+    "transcription": "[ˈpeɪzli prɪnt]",
+    "translation": "узор «пейсли»",
+    "category": "clothes"
+  },
+  {
+    "name": "animal print",
+    "transcription": "[ˈænɪml̩ prɪnt]",
+    "translation": "животный принт",
+    "category": "clothes"
+  },
+  {
+    "name": "bright print",
+    "transcription": "[braɪt prɪnt]",
+    "translation": "яркий «принт», рисунок",
+    "category": "clothes"
+  },
+  {
+    "name": "all-over print",
+    "transcription": "[ɔːl ˈəʊvə prɪnt]",
+    "translation": "«принт», рисунок на все изделие",
+    "category": "clothes"
+  },
+  {
+    "name": "print skirt",
+    "transcription": "[prɪnt skɜːt]",
+    "translation": "узорчатая юбка",
+    "category": "clothes"
+  },
+  {
+    "name": "print shirt",
+    "transcription": "[prɪnt ʃɜːt]",
+    "translation": "узорчатая рубашка",
+    "category": "clothes"
+  },
+  {
+    "name": "printed top",
+    "transcription": "[ˈprɪntɪd tɒp]",
+    "translation": "узорчатый топ",
+    "category": "clothes"
+  },
+  {
+    "name": "printed sleeves",
+    "transcription": "[ˈprɪntɪd sliːvz]",
+    "translation": "узорчатые рукава",
+    "category": "clothes"
+  },
+  {
+    "name": "striped",
+    "transcription": "[straɪpt]",
+    "translation": "полосатый",
+    "category": "clothes"
+  },
+  {
+    "name": "checked",
+    "transcription": "[tʃekt]",
+    "translation": "клетчатый",
+    "category": "clothes"
+  },
+  {
+    "name": "checkered",
+    "transcription": "[ˈtʃekəd]",
+    "translation": "клетчатый, в клетку",
+    "category": "clothes"
+  },
+  {
+    "name": "plaid",
+    "transcription": "[plæd]",
+    "translation": "клетчатый, в клетку",
+    "category": "clothes"
+  },
+  {
+    "name": "polka dot",
+    "transcription": "[ˈpɒlkə dɒt]",
+    "translation": "узор в горошек",
+    "category": "clothes"
+  },
+  {
+    "name": "paisley",
+    "transcription": "[ˈpeɪzli]",
+    "translation": "пейсли (разноцветный орнамент)",
+    "category": "clothes"
+  },
+  {
+    "name": "bright colors (BrE: colours)",
+    "transcription": "[braɪt ˈkʌlərz] [ˈkʌləz]",
+    "translation": "яркие цвета",
+    "category": "clothes"
+  },
+  {
+    "name": "colorful",
+    "transcription": "[ˈkələrfəl]",
+    "translation": "красочный",
+    "category": "clothes"
+  },
+  {
+    "name": "pastel colors",
+    "transcription": "[ˈpæstl̩ ˈkʌlərz]",
+    "translation": "пастельные цвета",
+    "category": "clothes"
+  },
+  {
+    "name": "soft colors",
+    "transcription": "[sɒft ˈkʌlərz]",
+    "translation": "мягкие (неяркие) цвета",
+    "category": "clothes"
+  },
+  {
+    "name": "light-blue",
+    "transcription": "[laɪt bluː]",
+    "translation": "светло-голубой",
+    "category": "clothes"
+  },
+  {
+    "name": "dark-green",
+    "transcription": "[dɑːk ɡriːn]",
+    "translation": "темно-зеленый",
+    "category": "clothes"
+  },
+  {
+    "name": "bright-red",
+    "transcription": "[braɪt red]",
+    "translation": "ярко-красный",
+    "category": "clothes"
+  },
+  {
+    "name": "black-and-white",
+    "transcription": "[blæk ənd waɪt]",
+    "translation": "черно-белый",
+    "category": "clothes"
+  },
+  {
+    "name": "black",
+    "transcription": "[blæk]",
+    "translation": "черный",
+    "category": "clothes"
+  },
+  {
+    "name": "blue",
+    "transcription": "[bluː]",
+    "translation": "голубой, синий",
+    "category": "clothes"
+  },
+  {
+    "name": "brown",
+    "transcription": "[braʊn]",
+    "translation": "коричневый",
+    "category": "clothes"
+  },
+  {
+    "name": "gray (BrE: grey)",
+    "transcription": "[ɡreɪ]",
+    "translation": "серый",
+    "category": "clothes"
+  },
+  {
+    "name": "green",
+    "transcription": "[ɡriːn]",
+    "translation": "зеленый",
+    "category": "clothes"
+  },
+  {
+    "name": "navy",
+    "transcription": "[ˈneɪvi]",
+    "translation": "темно-синий",
+    "category": "clothes"
+  },
+  {
+    "name": "orange",
+    "transcription": "[ˈɒrɪndʒ]",
+    "translation": "оранжевый",
+    "category": "clothes"
+  },
+  {
+    "name": "pink",
+    "transcription": "[pɪŋk]",
+    "translation": "розовый",
+    "category": "clothes"
+  },
+  {
+    "name": "purple",
+    "transcription": "[ˈpɜːpl̩]",
+    "translation": "сиреневый",
+    "category": "clothes"
+  },
+  {
+    "name": "red",
+    "transcription": "[red]",
+    "translation": "красный",
+    "category": "clothes"
+  },
+  {
+    "name": "violet",
+    "transcription": "[ˈvaɪələt]",
+    "translation": "фиолетовый",
+    "category": "clothes"
+  },
+  {
+    "name": "white",
+    "transcription": "[waɪt]",
+    "translation": "белый",
+    "category": "clothes"
+  },
+  {
+    "name": "yellow",
+    "transcription": "[ˈjeləʊ]",
+    "translation": "желтый",
+    "category": "clothes"
+  },
+  {
+    "name": "Accessories",
+    "transcription": "[əkˈsesəriz]",
+    "translation": "Аксессуары",
+    "category": "clothes"
+  },
+  {
+    "name": "bag",
+    "transcription": "[bæɡ]",
+    "translation": "сумка",
+    "category": "clothes"
+  },
+  {
+    "name": "handbag",
+    "transcription": "[ˈhændbæɡ]",
+    "translation": "дамская сумочка",
+    "category": "clothes"
+  },
+  {
+    "name": "purse",
+    "transcription": "[pɜːs]",
+    "translation": "кошелек",
+    "category": "clothes"
+  },
+  {
+    "name": "clutch",
+    "transcription": "[klʌtʃ]",
+    "translation": "клатч, ридикюль",
+    "category": "clothes"
+  },
+  {
+    "name": "briefcase",
+    "transcription": "[ˈbriːfkeɪs]",
+    "translation": "портфель",
+    "category": "clothes"
+  },
+  {
+    "name": "attache case",
+    "transcription": "[əˈtæʃeɪ keɪs]",
+    "translation": "дипломат",
+    "category": "clothes"
+  },
+  {
+    "name": "wallet",
+    "transcription": "[ˈwɒlɪt]",
+    "translation": "бумажник, портмоне",
+    "category": "clothes"
+  },
+  {
+    "name": "pocketbook",
+    "transcription": "[ˈpɒkɪtbʊk]",
+    "translation": "кошелек, бумажник",
+    "category": "clothes"
+  },
+  {
+    "name": "billfold",
+    "transcription": "[ˈbɪlfəʊld]",
+    "translation": "(небольшой) бумажник",
+    "category": "clothes"
+  },
+  {
+    "name": "purse",
+    "transcription": "[pɜːs]",
+    "translation": "кошелек (для монет)",
+    "category": "clothes"
+  },
+  {
+    "name": "coin purse",
+    "transcription": "[kɔɪn pɜːs]",
+    "translation": "кошелек (для монет)",
+    "category": "clothes"
+  },
+  {
+    "name": "make-up kit",
+    "transcription": "[ˈmeɪkʌp kɪt]",
+    "translation": "косметичка",
+    "category": "clothes"
+  },
+  {
+    "name": "cosmetic case",
+    "transcription": "[kɒzˈmetɪk keɪs]",
+    "translation": "косметичка",
+    "category": "clothes"
+  },
+  {
+    "name": "shaving kit",
+    "transcription": "[ˈʃeɪvɪŋ kɪt]",
+    "translation": "набор для бритья",
+    "category": "clothes"
+  },
+  {
+    "name": "travel kit",
+    "transcription": "[ˈtrævl̩ kɪt]",
+    "translation": "дорожный набор",
+    "category": "clothes"
+  },
+  {
+    "name": "travel bag",
+    "transcription": "[ˈtrævl̩ bæɡ]",
+    "translation": "(дорожный) несессер",
+    "category": "clothes"
+  },
+  {
+    "name": "duffel bag",
+    "transcription": "[ˈdʌfl̩ bæɡ]",
+    "translation": "вещевой мешок",
+    "category": "clothes"
+  },
+  {
+    "name": "sports bag",
+    "transcription": "[spɔːts bæɡ]",
+    "translation": "спортивная сумка",
+    "category": "clothes"
+  },
+  {
+    "name": "backpack",
+    "transcription": "[ˈbækpæk]",
+    "translation": "рюкзак (туристический)",
+    "category": "clothes"
+  },
+  {
+    "name": "rucksack",
+    "transcription": "[ˈrʌksæk]",
+    "translation": "рюкзак (школьный)",
+    "category": "clothes"
+  },
+  {
+    "name": "tote bag",
+    "transcription": "[təʊt bæɡ]",
+    "translation": "большая сумка",
+    "category": "clothes"
+  },
+  {
+    "name": "hand luggage",
+    "transcription": "[hænd ˈlʌɡɪdʒ]",
+    "translation": "ручная кладь",
+    "category": "clothes"
+  },
+  {
+    "name": "hand baggage",
+    "transcription": "[hænd ˈbæɡɪdʒ]",
+    "translation": "ручная кладь",
+    "category": "clothes"
+  },
+  {
+    "name": "cabin bag",
+    "transcription": "[ˈkæbɪn bæɡ]",
+    "translation": "ручная кладь",
+    "category": "clothes"
+  },
+  {
+    "name": "carry-on bag",
+    "transcription": "[ˈkæri ɒn bæɡ]",
+    "translation": "ручная кладь, ручной багаж",
+    "category": "clothes"
+  },
+  {
+    "name": "flight bag",
+    "transcription": "[flaɪt bæɡ]",
+    "translation": "сумка или чемодан для авиапутешествий",
+    "category": "clothes"
+  },
+  {
+    "name": "suitcase",
+    "transcription": "[ˈsuːtkeɪs]",
+    "translation": "небольшой чемодан",
+    "category": "clothes"
+  },
+  {
+    "name": "garment bag",
+    "transcription": "[ˈɡɑːmənt bæɡ]",
+    "translation": "складной саквояж",
+    "category": "clothes"
+  },
+  {
+    "name": "Pullman bag",
+    "transcription": "[ˈpʊlmən bæɡ]",
+    "translation": "спальный мешок",
+    "category": "clothes"
+  },
+  {
+    "name": "trunk",
+    "transcription": "[trʌŋk]",
+    "translation": "дорожный сундук, кофр, чемодан",
+    "category": "clothes"
+  },
+  {
+    "name": "belt",
+    "transcription": "[belt]",
+    "translation": "пояс, ремень",
+    "category": "clothes"
+  },
+  {
+    "name": "suspenders",
+    "transcription": "[səˈspendəz]",
+    "translation": "подтяжки",
+    "category": "clothes"
+  },
+  {
+    "name": "straps",
+    "transcription": "[stræps]",
+    "translation": "накладки",
+    "category": "clothes"
+  },
+  {
+    "name": "umbrella",
+    "transcription": "[ʌmˈbrelə]",
+    "translation": "зонт",
+    "category": "clothes"
+  },
+  {
+    "name": "button",
+    "transcription": "[ˈbʌtn̩]",
+    "translation": "пуговица",
+    "category": "clothes"
+  },
+  {
+    "name": "zipper",
+    "transcription": "[ˈzɪpə]",
+    "translation": "застежка-молния",
+    "category": "clothes"
+  },
+  {
+    "name": "buckle",
+    "transcription": "[ˈbʌkl̩]",
+    "translation": "пряжка",
+    "category": "clothes"
+  },
+  {
+    "name": "clasp",
+    "transcription": "[klɑːsp]",
+    "translation": "пряжка, запор, застежка",
+    "category": "clothes"
+  },
+  {
+    "name": "Velcro",
+    "transcription": "[ˈvelkrəʊ]",
+    "translation": "застежка \"липучка\"",
+    "category": "clothes"
+  },
+  {
+    "name": "hat",
+    "transcription": "[hæt]",
+    "translation": "шляпа, головной убор",
+    "category": "clothes"
+  },
+  {
+    "name": "fur hat",
+    "transcription": "[fɜː hæt]",
+    "translation": "меховая шапка",
+    "category": "clothes"
+  },
+  {
+    "name": "beret",
+    "transcription": "[ˈbereɪ]",
+    "translation": "берет",
+    "category": "clothes"
+  },
+  {
+    "name": "cap",
+    "transcription": "[kæp]",
+    "translation": "кепка",
+    "category": "clothes"
+  },
+  {
+    "name": "baseball cap",
+    "transcription": "[ˈbeɪsbɔːl kæp]",
+    "translation": "бейсболка",
+    "category": "clothes"
+  },
+  {
+    "name": "hood",
+    "transcription": "[hʊd]",
+    "translation": "капюшон",
+    "category": "clothes"
+  },
+  {
+    "name": "headband",
+    "transcription": "[ˈhedbænd]",
+    "translation": "головная повязка (как украшение)",
+    "category": "clothes"
+  },
+  {
+    "name": "helmet",
+    "transcription": "[ˈhelmɪt]",
+    "translation": "защитный головной убор каска, шлем",
+    "category": "clothes"
+  },
+  {
+    "name": "scarf",
+    "transcription": "[skɑːf]",
+    "translation": "шарф",
+    "category": "clothes"
+  },
+  {
+    "name": "kerchief",
+    "transcription": "[ˈkɜːtʃɪf]",
+    "translation": "косынка",
+    "category": "clothes"
+  },
+  {
+    "name": "silk scarf",
+    "transcription": "[sɪlk skɑːf]",
+    "translation": "шелковый шарф",
+    "category": "clothes"
+  },
+  {
+    "name": "woolen scarf",
+    "transcription": "[ˈwʊlən skɑːf]",
+    "translation": "шерстяной шкаф",
+    "category": "clothes"
+  },
+  {
+    "name": "knitted scarf",
+    "transcription": "[ˈnɪtɪd skɑːf]",
+    "translation": "вязаный шарф",
+    "category": "clothes"
+  },
+  {
+    "name": "muffler",
+    "transcription": "[ˈmʌflə]",
+    "translation": "кашне",
+    "category": "clothes"
+  },
+  {
+    "name": "shawl",
+    "transcription": "[ʃɔːl]",
+    "translation": "платок, шаль",
+    "category": "clothes"
+  },
+  {
+    "name": "gloves",
+    "transcription": "[ɡlʌvz]",
+    "translation": "перчатки",
+    "category": "clothes"
+  },
+  {
+    "name": "mittens",
+    "transcription": "[ˈmɪtn̩z]",
+    "translation": "рукавицы",
+    "category": "clothes"
+  },
+  {
+    "name": "earmuffs",
+    "transcription": "[ˈɪrˌməfs]",
+    "translation": "наушники для защиты от холода или шума",
+    "category": "clothes"
+  },
+  {
+    "name": "handkerchief",
+    "transcription": "[ˈhæŋkətʃɪf]",
+    "translation": "носовой платок, косынка",
+    "category": "clothes"
+  },
+  {
+    "name": "sunglasses",
+    "transcription": "[ˈsʌnɡlæsɪz]",
+    "translation": "солнцезащитные очки",
+    "category": "clothes"
+  },
+  {
+    "name": "glasses",
+    "transcription": "[ˈɡlɑːsɪz]",
+    "translation": "очки",
+    "category": "clothes"
+  },
+  {
+    "name": "contact lenses",
+    "transcription": "[ˈkɒntækt ˈlenzɪz]",
+    "translation": "контактные линзы",
+    "category": "clothes"
+  },
+  {
+    "name": "necktie",
+    "transcription": "[ˈnektaɪ]",
+    "translation": "галстук, шейный платок",
+    "category": "clothes"
+  },
+  {
+    "name": "tie",
+    "transcription": "[taɪ]",
+    "translation": "галстук",
+    "category": "clothes"
+  },
+  {
+    "name": "silk tie",
+    "transcription": "[sɪlk taɪ]",
+    "translation": "шелковый галстук",
+    "category": "clothes"
+  },
+  {
+    "name": "bow tie",
+    "transcription": "[baʊ taɪ]",
+    "translation": "галстук-бабочка",
+    "category": "clothes"
+  },
+  {
+    "name": "Shoes",
+    "transcription": "[ʃuːz]",
+    "translation": "Обувь",
+    "category": "clothes"
+  },
+  {
+    "name": "winter boots",
+    "transcription": "[ˈwɪntə buːts]",
+    "translation": "зимние сапоги",
+    "category": "clothes"
+  },
+  {
+    "name": "ladies' boots",
+    "transcription": "[ˈleɪdɪz buːts]",
+    "translation": "женские сапоги",
+    "category": "clothes"
+  },
+  {
+    "name": "hiking boots",
+    "transcription": "[ˈhaɪkɪŋ buːts]",
+    "translation": "треккинговые ботинки",
+    "category": "clothes"
+  },
+  {
+    "name": "rubber boots",
+    "transcription": "[ˈrʌbə buːts]",
+    "translation": "резиновые сапоги",
+    "category": "clothes"
+  },
+  {
+    "name": "walking shoes",
+    "transcription": "[ˈwɔːkɪŋ ʃuːz]",
+    "translation": "обувь для ходьбы (на низком каблуке)",
+    "category": "clothes"
+  },
+  {
+    "name": "Oxfords",
+    "transcription": "[ˈɑːksfərdz]",
+    "translation": "полуботинки",
+    "category": "clothes"
+  },
+  {
+    "name": "loafers",
+    "transcription": "[ˈləʊfəz]",
+    "translation": "легкие кожаные туфли типа мокасин",
+    "category": "clothes"
+  },
+  {
+    "name": "moccasin",
+    "transcription": "[ˈmɒkəsɪn]",
+    "translation": "мокасины",
+    "category": "clothes"
+  },
+  {
+    "name": "pumps",
+    "transcription": "[pʌmps]",
+    "translation": "туфли-лодочки (на высоком каблуке)",
+    "category": "clothes"
+  },
+  {
+    "name": "evening shoes",
+    "transcription": "[ˈiːvn̩ɪŋ ʃuːz]",
+    "translation": "вечерние туфли",
+    "category": "clothes"
+  },
+  {
+    "name": "patent leather shoes",
+    "transcription": "[ˈpeɪtnt ˈleðə ʃuːz]",
+    "translation": "лакированные туфли",
+    "category": "clothes"
+  },
+  {
+    "name": "suede shoes",
+    "transcription": "[sweɪd ʃuːz]",
+    "translation": "замшевые туфли",
+    "category": "clothes"
+  },
+  {
+    "name": "high-heel shoes",
+    "transcription": "[haɪ hiːl ʃuːz]",
+    "translation": "туфли на высоком каблуке",
+    "category": "clothes"
+  },
+  {
+    "name": "low-heel shoes",
+    "transcription": "[ləʊ hiːl ʃuːz]",
+    "translation": "туфли на низком каблуке",
+    "category": "clothes"
+  },
+  {
+    "name": "flat-heel shoes",
+    "transcription": "[flæt hiːl ʃuːz]",
+    "translation": "туфли на сплошной подошве",
+    "category": "clothes"
+  },
+  {
+    "name": "sandals",
+    "transcription": "[ˈsændl̩z]",
+    "translation": "сандалии, босоножки",
+    "category": "clothes"
+  },
+  {
+    "name": "open-toe shoes",
+    "transcription": "[ˈəʊpən təʊ ʃuːz]",
+    "translation": "туфли с открытым носом",
+    "category": "clothes"
+  },
+  {
+    "name": "slippers",
+    "transcription": "[ˈslɪpəz]",
+    "translation": "тапочки",
+    "category": "clothes"
+  },
+  {
+    "name": "mules",
+    "transcription": "[mjuːlz]",
+    "translation": "шлепанцы",
+    "category": "clothes"
+  },
+  {
+    "name": "rubber thongs",
+    "transcription": "[ˈrʌbə θɒŋz]",
+    "translation": "резиновые сланцы",
+    "category": "clothes"
+  },
+  {
+    "name": "tennis shoes",
+    "transcription": "[ˈtenɪs ʃuːz]",
+    "translation": "теннисные туфли",
+    "category": "clothes"
+  },
+  {
+    "name": "running shoes",
+    "transcription": "[ˈrʌnɪŋ ʃuːz]",
+    "translation": "кроссовки",
+    "category": "clothes"
+  },
+  {
+    "name": "sneakers",
+    "transcription": "[ˈsniːkəz]",
+    "translation": "кроссовки",
+    "category": "clothes"
+  },
+  {
+    "name": "training shoes",
+    "transcription": "[ˈtreɪnɪŋ ʃuːz]",
+    "translation": "кроссовки",
+    "category": "clothes"
+  },
+  {
+    "name": "trainers",
+    "transcription": "[ˈtreɪnəz]",
+    "translation": "кроссовки",
+    "category": "clothes"
+  },
+  {
+    "name": "athletic shoes",
+    "transcription": "[æθˈletɪk ʃuːz]",
+    "translation": "кроссовки",
+    "category": "clothes"
+  },
+  {
+    "name": "sole",
+    "transcription": "[səʊl]",
+    "translation": "подошва",
+    "category": "clothes"
+  },
+  {
+    "name": "insole",
+    "transcription": "[ˈɪnsəʊl]",
+    "translation": "стелька",
+    "category": "clothes"
+  },
+  {
+    "name": "lining",
+    "transcription": "[ˈlaɪnɪŋ]",
+    "translation": "подкладка",
+    "category": "clothes"
+  },
+  {
+    "name": "cushioning",
+    "transcription": "[ˈkʊʃn̩ɪŋ]",
+    "translation": "мягкая стелька",
+    "category": "clothes"
+  },
+  {
+    "name": "heel",
+    "transcription": "[hiːl]",
+    "translation": "каблук",
+    "category": "clothes"
+  },
+  {
+    "name": "tongue",
+    "transcription": "[tʌŋ]",
+    "translation": "язычок (на обуви)",
+    "category": "clothes"
+  },
+  {
+    "name": "buckle",
+    "transcription": "[ˈbʌkl̩]",
+    "translation": "пряжка",
+    "category": "clothes"
+  },
+  {
+    "name": "shoe laces",
+    "transcription": "[ʃuː ˈleɪsɪz]",
+    "translation": "шнурки",
+    "category": "clothes"
+  },
+  {
+    "name": "Jewelry",
+    "transcription": "[ˈdʒuːəlri]",
+    "translation": "Ювелирные изделия",
+    "category": "clothes"
+  },
+  {
+    "name": "gold ring",
+    "transcription": "[ɡəʊld rɪŋ]",
+    "translation": "золотое кольцо",
+    "category": "clothes"
+  },
+  {
+    "name": "diamond ring",
+    "transcription": "[ˈdaɪəmənd rɪŋ]",
+    "translation": "кольцо с бриллиантом",
+    "category": "clothes"
+  },
+  {
+    "name": "engagement ring",
+    "transcription": "[ɪnˈɡeɪdʒmənt rɪŋ]",
+    "translation": "кольцо, подаренное в честь помолвки",
+    "category": "clothes"
+  },
+  {
+    "name": "wedding ring",
+    "transcription": "[ˈwedɪŋ rɪŋ]",
+    "translation": "обручальное кольцо",
+    "category": "clothes"
+  },
+  {
+    "name": "necklace",
+    "transcription": "[ˈnekləs]",
+    "translation": "ожерелье",
+    "category": "clothes"
+  },
+  {
+    "name": "bracelet",
+    "transcription": "[ˈbreɪslɪt]",
+    "translation": "браслет",
+    "category": "clothes"
+  },
+  {
+    "name": "brooch",
+    "transcription": "[brəʊtʃ]",
+    "translation": "брошь",
+    "category": "clothes"
+  },
+  {
+    "name": "earrings",
+    "transcription": "[ˈɪərɪŋz]",
+    "translation": "серьги",
+    "category": "clothes"
+  },
+  {
+    "name": "chain",
+    "transcription": "[tʃeɪn]",
+    "translation": "цепочка",
+    "category": "clothes"
+  },
+  {
+    "name": "pendant",
+    "transcription": "[ˈpendənt]",
+    "translation": "подвеска",
+    "category": "clothes"
+  },
+  {
+    "name": "charms",
+    "transcription": "[tʃɑːmz]",
+    "translation": "амулет, брелок",
+    "category": "clothes"
+  },
+  {
+    "name": "cuff links",
+    "transcription": "[kʌf lɪŋks]",
+    "translation": "запонки",
+    "category": "clothes"
+  },
+  {
+    "name": "tie tack",
+    "transcription": "[taɪ tæk]",
+    "translation": "зажим для галстука",
+    "category": "clothes"
+  },
+  {
+    "name": "tie pin",
+    "transcription": "[taɪ pɪn]",
+    "translation": "булавка для галстука",
+    "category": "clothes"
+  },
+  {
+    "name": "watch",
+    "transcription": "[wɒtʃ]",
+    "translation": "часы",
+    "category": "clothes"
+  },
+  {
+    "name": "wristwatch",
+    "transcription": "[ˈrɪstwɒtʃ]",
+    "translation": "наручные часы",
+    "category": "clothes"
+  },
+  {
+    "name": "jewelry (BrE: jewellery)",
+    "transcription": "[ˈdʒuːəlri]",
+    "translation": "драгоценности",
+    "category": "clothes"
+  },
+  {
+    "name": "precious stone",
+    "transcription": "[ˈpreʃəs stəʊn]",
+    "translation": "драгоценный камень",
+    "category": "clothes"
+  },
+  {
+    "name": "semiprecious stone",
+    "transcription": "[ˌsemiˈpreʃəs stəʊn]",
+    "translation": "полудрагоценный камень, самоцвет",
+    "category": "clothes"
+  },
+  {
+    "name": "jewel",
+    "transcription": "[ˈdʒuːəl]",
+    "translation": "драгоценный камень",
+    "category": "clothes"
+  },
+  {
+    "name": "gem",
+    "transcription": "[dʒem]",
+    "translation": "драгоценный камень, самоцвет",
+    "category": "clothes"
+  },
+  {
+    "name": "gemstone",
+    "transcription": "[dʒem]",
+    "translation": "драгоценный камень",
+    "category": "clothes"
+  },
+  {
+    "name": "diamond",
+    "transcription": "[ˈdaɪəmənd]",
+    "translation": "алмаз, бриллиант",
+    "category": "clothes"
+  },
+  {
+    "name": "ruby",
+    "transcription": "[ˈruːbi]",
+    "translation": "рубин",
+    "category": "clothes"
+  },
+  {
+    "name": "sapphire",
+    "transcription": "[ˈsæfaɪə]",
+    "translation": "сапфир",
+    "category": "clothes"
+  },
+  {
+    "name": "emerald",
+    "transcription": "[ˈemərəld]",
+    "translation": "изумруд",
+    "category": "clothes"
+  },
+  {
+    "name": "alexandrite",
+    "transcription": "[ˌæleɡˈzændraɪt]",
+    "translation": "александрит",
+    "category": "clothes"
+  },
+  {
+    "name": "opal",
+    "transcription": "[ˈəʊpl̩]",
+    "translation": "опал",
+    "category": "clothes"
+  },
+  {
+    "name": "topaz",
+    "transcription": "[ˈtəʊpæz]",
+    "translation": "топаз",
+    "category": "clothes"
+  },
+  {
+    "name": "pearl",
+    "transcription": "[pɜːl]",
+    "translation": "жемчуг",
+    "category": "clothes"
+  }
+]

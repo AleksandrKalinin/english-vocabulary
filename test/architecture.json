@@ -1,0 +1,410 @@
+[
+  {
+    "translation": "апсида",
+    "name": "apse",
+    "transcription": "[æps]",
+    "category": "architecture"
+  },
+  {
+    "translation": "арочная колоннада",
+    "name": "arched colonnade",
+    "transcription": "[ɑːtʃt ˌkɒləˈneɪd]",
+    "category": "architecture"
+  },
+  {
+    "translation": "архитектор эпохи Возрождения (Ренессанса)",
+    "name": "Renaissance architect",
+    "transcription": "[rɪˈneɪsns ˈɑːkɪtekt]",
+    "category": "architecture"
+  },
+  {
+    "translation": "архитектура",
+    "name": "architecture",
+    "transcription": "[ˈɑːkɪtektʃə]",
+    "category": "architecture"
+  },
+  {
+    "translation": "архитектурный патронаж",
+    "name": "architectural patronage",
+    "transcription": "[ˌɑːkɪˈtektʃrəl ˈpætrənɪdʒ]",
+    "category": "architecture"
+  },
+  {
+    "translation": "ассиметричный план",
+    "name": "asymmetric plan",
+    "transcription": "[ˌeɪsɪˈmetrɪk plæn]",
+    "category": "architecture"
+  },
+  {
+    "translation": "баптистерий",
+    "name": "baptistry",
+    "transcription": "[baptistry]",
+    "category": "architecture"
+  },
+  {
+    "translation": "башенка",
+    "name": "pinnacle",
+    "transcription": "[ˈpɪnəkəl]",
+    "category": "architecture"
+  },
+  {
+    "translation": "веранда",
+    "name": "veranda",
+    "transcription": "[vəˈrændə]",
+    "category": "architecture"
+  },
+  {
+    "translation": "внешняя часть",
+    "name": "exterior",
+    "transcription": "[ɪkˈstɪərɪə]",
+    "category": "architecture"
+  },
+  {
+    "translation": "возводить",
+    "name": "to erect",
+    "transcription": "[tu ɪˈrekt]",
+    "category": "architecture"
+  },
+  {
+    "translation": "выставка",
+    "name": "exposition, exhibition",
+    "transcription": "[ˌekspəˈzɪʃən] [ˌeksɪˈbɪʃən]",
+    "category": "architecture"
+  },
+  {
+    "translation": "гармония формы и цвета",
+    "name": "harmony of form and color",
+    "transcription": "[ˈhɑːməni əv ˈfɔːm ənd ˈkʌlər]",
+    "category": "architecture"
+  },
+  {
+    "translation": "глина для кирпича",
+    "name": "clay for brick",
+    "transcription": "[kleɪ fə brɪk]",
+    "category": "architecture"
+  },
+  {
+    "translation": "городские окрестности",
+    "name": "urban surroundings",
+    "transcription": "[ˈɜːbən səˈraʊndɪŋz]",
+    "category": "architecture"
+  },
+  {
+    "translation": "городской центр",
+    "name": "urban core",
+    "transcription": "[ˈɜːbən kɔː]",
+    "category": "architecture"
+  },
+  {
+    "translation": "гравюра на дереве/ксилография",
+    "name": "woodcut",
+    "transcription": "[ˈwʊdkʌt]",
+    "category": "architecture"
+  },
+  {
+    "translation": "греческие храмы",
+    "name": "Greek temples",
+    "transcription": "[ɡriːk ˈtempəlz]",
+    "category": "architecture"
+  },
+  {
+    "translation": "дизайнер",
+    "name": "designer",
+    "transcription": "[dɪˈzaɪnə]",
+    "category": "architecture"
+  },
+  {
+    "translation": "древняя конструкция",
+    "name": "ancient construction",
+    "transcription": "[ˈeɪnʃənt kənˈstrʌkʃən]",
+    "category": "architecture"
+  },
+  {
+    "translation": "живописная архитектура",
+    "name": "picturesque architecture",
+    "transcription": "[ˌpɪktʃəˈresk ˈɑːkɪtektʃə]",
+    "category": "architecture"
+  },
+  {
+    "translation": "известь",
+    "name": "lime",
+    "transcription": "[laɪm]",
+    "category": "architecture"
+  },
+  {
+    "translation": "интерьер помещений",
+    "name": "interior spaces",
+    "transcription": "[ɪnˈtɪərɪə ˈspeɪsɪz]",
+    "category": "architecture"
+  },
+  {
+    "translation": "испанское барокко",
+    "name": "Spanish Baroque",
+    "transcription": "[ˈspænɪʃ bəˈrɒk]",
+    "category": "architecture"
+  },
+  {
+    "translation": "композиционный",
+    "name": "compositional",
+    "transcription": "[ˌkɑːmpəˈzɪʃənəl]",
+    "category": "architecture"
+  },
+  {
+    "translation": "красная черепичная крыша",
+    "name": "red-tiled roof",
+    "transcription": "[ruːf]",
+    "category": "architecture"
+  },
+  {
+    "translation": "крупногабаритный средневековый дымоход",
+    "name": "medieval oversized chimney",
+    "transcription": "[ˌmedɪˈiːvəl ˈəʊvəsaɪzd ˈtʃɪmni]",
+    "category": "architecture"
+  },
+  {
+    "translation": "кузница",
+    "name": "forge",
+    "transcription": "[fɔːdʒ]",
+    "category": "architecture"
+  },
+  {
+    "translation": "купол",
+    "name": "dome",
+    "transcription": "[dəʊm]",
+    "category": "architecture"
+  },
+  {
+    "translation": "ландшафтный архитектор",
+    "name": "landscape architect",
+    "transcription": "[ˈlændskeɪp ˈɑːkɪtekt]",
+    "category": "architecture"
+  },
+  {
+    "translation": "модель в стиле неоренессанса",
+    "name": "neo-Renaissance model",
+    "transcription": "[ˈmɒdəl]",
+    "category": "architecture"
+  },
+  {
+    "translation": "мрамор",
+    "name": "marble",
+    "transcription": "[ˈmɑːbəl]",
+    "category": "architecture"
+  },
+  {
+    "translation": "натуралистический сад",
+    "name": "naturalistic garden",
+    "transcription": "[ˌnætʃrəˈlɪstɪk ˈɡɑːdən]",
+    "category": "architecture"
+  },
+  {
+    "translation": "Неоготический стиль",
+    "name": "Gothic Revival",
+    "transcription": "[ˈɡɒθɪk rɪˈvaɪvəl]",
+    "category": "architecture"
+  },
+  {
+    "translation": "Неогрек",
+    "name": "Greek Revival",
+    "transcription": "[ɡriːk rɪˈvaɪvəl]",
+    "category": "architecture"
+  },
+  {
+    "translation": "неоклассический",
+    "name": "neoclassical",
+    "transcription": "[ˌnioˈklæsɪkəl]",
+    "category": "architecture"
+  },
+  {
+    "translation": "неукрашенный",
+    "name": "unortempnted",
+    "transcription": "[ˌʌnˈɔːnəmentɪd]",
+    "category": "architecture"
+  },
+  {
+    "translation": "основной строительный материал",
+    "name": "primary building material",
+    "transcription": "[ˈpraɪməri ˈbɪldɪŋ məˈtɪərɪəl]",
+    "category": "architecture"
+  },
+  {
+    "translation": "особенность",
+    "name": "mannerism",
+    "transcription": "[ˈmænərɪzəm]",
+    "category": "architecture"
+  },
+  {
+    "translation": "особняк",
+    "name": "mansion",
+    "transcription": "[ˈmænʃən]",
+    "category": "architecture"
+  },
+  {
+    "translation": "остроконечный",
+    "name": "gabled",
+    "transcription": "[ˈɡeɪbəld]",
+    "category": "architecture"
+  },
+  {
+    "translation": "перепланировка",
+    "name": "remodeling",
+    "transcription": "[rəˈmɑːdəlɪŋ]",
+    "category": "architecture"
+  },
+  {
+    "translation": "печь для обжигания кирпича",
+    "name": "kiln for firing brick",
+    "transcription": "[kɪln fə ˈfaɪərɪŋ brɪk]",
+    "category": "architecture"
+  },
+  {
+    "translation": "пиано нобиле/главный этаж",
+    "name": "piano nobile",
+    "transcription": "[pɪˈænəʊ ˈnɑːbəl]",
+    "category": "architecture"
+  },
+  {
+    "translation": "подмастерье",
+    "name": "indentured servant",
+    "transcription": "[ɪnˈdentʃəd ˈsɜːvənt]",
+    "category": "architecture"
+  },
+  {
+    "translation": "подпорка",
+    "name": "buttress",
+    "transcription": "[ˈbʌtrəs]",
+    "category": "architecture"
+  },
+  {
+    "translation": "портик/галерея",
+    "name": "portico",
+    "transcription": "[ˈpɔːtɪkəʊ]",
+    "category": "architecture"
+  },
+  {
+    "translation": "постмодернизм",
+    "name": "postmodernism",
+    "transcription": "[ˌpəʊstˈmɒdənɪzəm]",
+    "category": "architecture"
+  },
+  {
+    "translation": "прикреплять колышком",
+    "name": "to peg",
+    "transcription": "[tə peɡ]",
+    "category": "architecture"
+  },
+  {
+    "translation": "прораб",
+    "name": "superintendent",
+    "transcription": "[ˌsuːpərɪnˈtendənt]",
+    "category": "architecture"
+  },
+  {
+    "translation": "расширение",
+    "name": "expansion",
+    "transcription": "[ɪkˈspænʃən]",
+    "category": "architecture"
+  },
+  {
+    "translation": "ризница",
+    "name": "sacristy",
+    "transcription": "[ˈsækrɪsti]",
+    "category": "architecture"
+  },
+  {
+    "translation": "романская церковь",
+    "name": "Romanesque church",
+    "transcription": "[ˌrəʊməˈnesk tʃɜːtʃ]",
+    "category": "architecture"
+  },
+  {
+    "translation": "с одним проходом между рядами (о церкви)",
+    "name": "single-aisled",
+    "transcription": "[ˈsɪŋɡəl aɪld]",
+    "category": "architecture"
+  },
+  {
+    "translation": "самана",
+    "name": "adobe",
+    "transcription": "[əˈdəʊbi]",
+    "category": "architecture"
+  },
+  {
+    "translation": "стиль поздней английской готики",
+    "name": "Tudor Gothic style",
+    "transcription": "[ˈtuːdə ˈɡɒθɪk staɪl]",
+    "category": "architecture"
+  },
+  {
+    "translation": "стоечно-ригельная конструкция",
+    "name": "post-and-beam construction",
+    "transcription": "[kənˈstrʌkʃən]",
+    "category": "architecture"
+  },
+  {
+    "translation": "столярная мастерская",
+    "name": "carpentry shop",
+    "transcription": "[ˈkɑːpɪntri ʃɒp]",
+    "category": "architecture"
+  },
+  {
+    "translation": "стрельчатая арка",
+    "name": "pointed arch",
+    "transcription": "[ˈpɔɪntɪd ɑːtʃ]",
+    "category": "architecture"
+  },
+  {
+    "translation": "тепидарий",
+    "name": "tepidarium",
+    "transcription": "[ˌtɛpɪˈdɛːrɪəm]",
+    "category": "architecture"
+  },
+  {
+    "translation": "тротуар",
+    "name": "sidewalk",
+    "transcription": "[ˈsaɪdwɔːk]",
+    "category": "architecture"
+  },
+  {
+    "translation": "украшение",
+    "name": "embellishment",
+    "transcription": "[ɪmˈbelɪʃmənt]",
+    "category": "architecture"
+  },
+  {
+    "translation": "участки без отделки",
+    "name": "undecorated stretches",
+    "transcription": "[ˈstretʃɪz]",
+    "category": "architecture"
+  },
+  {
+    "translation": "фасад",
+    "name": "facade",
+    "transcription": "[fəˈsɑːd]",
+    "category": "architecture"
+  },
+  {
+    "translation": "флорентийский ренессанс",
+    "name": "Florentine Renaissance",
+    "transcription": "[ˈflɔːənˌtin rɪˈneɪsns]",
+    "category": "architecture"
+  },
+  {
+    "translation": "фронтон",
+    "name": "pediment",
+    "transcription": "[ˈpedɪmənt]",
+    "category": "architecture"
+  },
+  {
+    "translation": "эклектизм",
+    "name": "eclecticism",
+    "transcription": "[ɪˈklektɪsɪzəm]",
+    "category": "architecture"
+  },
+  {
+    "translation": "эстетическая простота",
+    "name": "aesthetic simplicity",
+    "transcription": "[iːsˈθetɪk sɪmˈplɪsɪti]",
+    "category": "architecture"
+  }
+]

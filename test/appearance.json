@@ -1,0 +1,572 @@
+[
+  {
+    "name": "arched",
+    "transcription": "[ɑːtʃt]",
+    "translation": "дугой (брови)",
+    "category": "appearance"
+  },
+  {
+    "name": "attractive",
+    "transcription": "[əˈtræktɪv]",
+    "translation": "привлекательный",
+    "category": "appearance"
+  },
+  {
+    "name": "bald",
+    "transcription": "[bɔːld]",
+    "translation": "лысый",
+    "category": "appearance"
+  },
+  {
+    "name": "bald patch",
+    "transcription": "[bɔːld pætʃ]",
+    "translation": "лысина",
+    "category": "appearance"
+  },
+  {
+    "name": "beard",
+    "transcription": "[bɪəd]",
+    "translation": "борода",
+    "category": "appearance"
+  },
+  {
+    "name": "beautiful, lovely, pretty",
+    "transcription": "[ˈbjuːtəfl̩] [ˈlʌvli] [ˈprɪti]",
+    "translation": "красивый (о женщине или ребенке)",
+    "category": "appearance"
+  },
+  {
+    "name": "beauty",
+    "transcription": "[ˈbjuːti]",
+    "translation": "красотка",
+    "category": "appearance"
+  },
+  {
+    "name": "big / great toe",
+    "transcription": "[bɪɡ] [ˈɡreɪt təʊ]",
+    "translation": "большой палец (на ноге)",
+    "category": "appearance"
+  },
+  {
+    "name": "breast",
+    "transcription": "[brest]",
+    "translation": "грудь",
+    "category": "appearance"
+  },
+  {
+    "name": "broad forehead",
+    "transcription": "[brɔːd ˈfɒrɪd]",
+    "translation": "широкий лоб",
+    "category": "appearance"
+  },
+  {
+    "name": "brows",
+    "transcription": "[braʊz]",
+    "translation": "брови",
+    "category": "appearance"
+  },
+  {
+    "name": "bushy",
+    "transcription": "[ˈbʊʃi]",
+    "translation": "густые (о бровях)",
+    "category": "appearance"
+  },
+  {
+    "name": "chin",
+    "transcription": "[tʃɪn]",
+    "translation": "подбородок",
+    "category": "appearance"
+  },
+  {
+    "name": "close-set eyes",
+    "transcription": "[ˈkləʊs set aɪz]",
+    "translation": "близко посаженные глаза",
+    "category": "appearance"
+  },
+  {
+    "name": "common",
+    "transcription": "[ˈkɒmən]",
+    "translation": "обычный",
+    "category": "appearance"
+  },
+  {
+    "name": "complexion",
+    "transcription": "[kəmˈplekʃn̩]",
+    "translation": "цвет лица",
+    "category": "appearance"
+  },
+  {
+    "name": "cropped head",
+    "transcription": "[krɒpt hed]",
+    "translation": "стриженная голова",
+    "category": "appearance"
+  },
+  {
+    "name": "curly hair",
+    "transcription": "[ˈkɜːli heə]",
+    "translation": "кудрявые волосы",
+    "category": "appearance"
+  },
+  {
+    "name": "deep-set eyes",
+    "transcription": "[diːp set aɪz]",
+    "translation": "глубоко посаженные глаза",
+    "category": "appearance"
+  },
+  {
+    "name": "dimples",
+    "transcription": "[ˈdɪmpl̩z]",
+    "translation": "ямочки (на щеках)",
+    "category": "appearance"
+  },
+  {
+    "name": "dull glance",
+    "transcription": "[dʌl ɡlɑːns]",
+    "translation": "тусклый взгляд",
+    "category": "appearance"
+  },
+  {
+    "name": "ear",
+    "transcription": "[ɪə]",
+    "translation": "ухо",
+    "category": "appearance"
+  },
+  {
+    "name": "elbow",
+    "transcription": "[ˈelbəʊ]",
+    "translation": "локоть",
+    "category": "appearance"
+  },
+  {
+    "name": "face",
+    "transcription": "[feɪs]",
+    "translation": "лицо",
+    "category": "appearance"
+  },
+  {
+    "name": "fair hair",
+    "transcription": "[feə heə]",
+    "translation": "белокурые волосы",
+    "category": "appearance"
+  },
+  {
+    "name": "fat",
+    "transcription": "[fæt]",
+    "translation": "толстый",
+    "category": "appearance"
+  },
+  {
+    "name": "figure",
+    "transcription": "[ˈfɪɡə]",
+    "translation": "фигура",
+    "category": "appearance"
+  },
+  {
+    "name": "finger",
+    "transcription": "[ˈfɪŋɡə]",
+    "translation": "палец (на руке)",
+    "category": "appearance"
+  },
+  {
+    "name": "first tooth",
+    "transcription": "[ˈfɜːst tuːθ]",
+    "translation": "молочный зуб",
+    "category": "appearance"
+  },
+  {
+    "name": "flush",
+    "transcription": "[flʌʃ]",
+    "translation": "румянец",
+    "category": "appearance"
+  },
+  {
+    "name": "foot",
+    "transcription": "[fʊt]",
+    "translation": "ступня",
+    "category": "appearance"
+  },
+  {
+    "name": "fourth finger",
+    "transcription": "[ˈfɔːθ ˈfɪŋɡə]",
+    "translation": "безымянный палец",
+    "category": "appearance"
+  },
+  {
+    "name": "fresh",
+    "transcription": "[freʃ]",
+    "translation": "свежий",
+    "category": "appearance"
+  },
+  {
+    "name": "glassy eyes",
+    "transcription": "[ˈɡlɑːsi aɪz]",
+    "translation": "тусклые глаза",
+    "category": "appearance"
+  },
+  {
+    "name": "good-looking, handsome",
+    "transcription": "[ɡʊd ˈlʊkɪŋ] [ˈhænsəm]",
+    "translation": "красивый (о мужчине)",
+    "category": "appearance"
+  },
+  {
+    "name": "hair-cut",
+    "transcription": "[ˈheəkʌt]",
+    "translation": "стрижка",
+    "category": "appearance"
+  },
+  {
+    "name": "height",
+    "transcription": "[haɪt]",
+    "translation": "рост",
+    "category": "appearance"
+  },
+  {
+    "name": "hooked nose",
+    "transcription": "[hʊkt nəʊz]",
+    "translation": "нос крючком",
+    "category": "appearance"
+  },
+  {
+    "name": "imposing appearance",
+    "transcription": "[ɪmˈpəʊzɪŋ əˈpɪərəns]",
+    "translation": "внушительная внешность",
+    "category": "appearance"
+  },
+  {
+    "name": "index finger, forefinger",
+    "transcription": "[ˈɪndeks ˈfɪŋɡə] [ˈfɔːfɪŋɡə]",
+    "translation": "указательный палец",
+    "category": "appearance"
+  },
+  {
+    "name": "intelligent expression",
+    "transcription": "[ɪnˈtelɪdʒənt ɪkˈspreʃn̩]",
+    "translation": "умный взгляд",
+    "category": "appearance"
+  },
+  {
+    "name": "knee",
+    "transcription": "[niː]",
+    "translation": "колено",
+    "category": "appearance"
+  },
+  {
+    "name": "lashes",
+    "transcription": "[ˈlæʃɪz]",
+    "translation": "ресницы",
+    "category": "appearance"
+  },
+  {
+    "name": "leg",
+    "transcription": "[leɡ]",
+    "translation": "нога",
+    "category": "appearance"
+  },
+  {
+    "name": "little finger",
+    "transcription": "[ˈlɪtl̩ ˈfɪŋɡə]",
+    "translation": "мизинец (на руке)",
+    "category": "appearance"
+  },
+  {
+    "name": "little toe",
+    "transcription": "[ˈlɪtl̩ təʊ]",
+    "translation": "мизинец (на ноге)",
+    "category": "appearance"
+  },
+  {
+    "name": "lobe",
+    "transcription": "[ləʊb]",
+    "translation": "мочка",
+    "category": "appearance"
+  },
+  {
+    "name": "locks, curls",
+    "transcription": "[lɒks] [kɜːlz]",
+    "translation": "кудри",
+    "category": "appearance"
+  },
+  {
+    "name": "lower lip",
+    "transcription": "[ˈləʊə lɪp]",
+    "translation": "нижняя губа",
+    "category": "appearance"
+  },
+  {
+    "name": "middle / second finger",
+    "transcription": "[ˈmɪdl̩] [ˈsekənd ˈfɪŋɡə]",
+    "translation": "средний палец",
+    "category": "appearance"
+  },
+  {
+    "name": "middle-sized",
+    "transcription": "[ˈmɪdlˈsaɪzd]",
+    "translation": "средний",
+    "category": "appearance"
+  },
+  {
+    "name": "moustache",
+    "transcription": "[məˈstɑːʃ]",
+    "translation": "усы",
+    "category": "appearance"
+  },
+  {
+    "name": "mouth",
+    "transcription": "[maʊθ]",
+    "translation": "рот",
+    "category": "appearance"
+  },
+  {
+    "name": "nail",
+    "transcription": "[neɪl]",
+    "translation": "ноготь",
+    "category": "appearance"
+  },
+  {
+    "name": "neck",
+    "transcription": "[nek]",
+    "translation": "шея",
+    "category": "appearance"
+  },
+  {
+    "name": "oval",
+    "transcription": "[ˈəʊvl̩]",
+    "translation": "овальный",
+    "category": "appearance"
+  },
+  {
+    "name": "pale",
+    "transcription": "[peɪl]",
+    "translation": "бледный",
+    "category": "appearance"
+  },
+  {
+    "name": "palm (of the hand)",
+    "transcription": "[pɑːm] [əv ðə hænd]",
+    "translation": "ладонь",
+    "category": "appearance"
+  },
+  {
+    "name": "penciled",
+    "transcription": "[ˈpensəld]",
+    "translation": "нарисованные",
+    "category": "appearance"
+  },
+  {
+    "name": "plain",
+    "transcription": "[pleɪn]",
+    "translation": "простой",
+    "category": "appearance"
+  },
+  {
+    "name": "plump",
+    "transcription": "[plʌmp]",
+    "translation": "пухлый",
+    "category": "appearance"
+  },
+  {
+    "name": "prominent ears",
+    "transcription": "[ˈprɒmɪnənt ɪəz]",
+    "translation": "оттопыренные уши",
+    "category": "appearance"
+  },
+  {
+    "name": "ring finger",
+    "transcription": "[rɪŋ ˈfɪŋɡə]",
+    "translation": "безымянный палец (на правой руке)",
+    "category": "appearance"
+  },
+  {
+    "name": "round",
+    "transcription": "[ˈraʊnd]",
+    "translation": "круглый",
+    "category": "appearance"
+  },
+  {
+    "name": "shock of hair",
+    "transcription": "[ʃɒk əv heə]",
+    "translation": "шапка волос",
+    "category": "appearance"
+  },
+  {
+    "name": "short",
+    "transcription": "[ʃɔːt]",
+    "translation": "низкий",
+    "category": "appearance"
+  },
+  {
+    "name": "slim",
+    "transcription": "[slɪm]",
+    "translation": "тонкий",
+    "category": "appearance"
+  },
+  {
+    "name": "snow-white teeth",
+    "transcription": "[ˈsnəʊ waɪt tiːθ]",
+    "translation": "белоснежные зубы",
+    "category": "appearance"
+  },
+  {
+    "name": "sparse hair",
+    "transcription": "[spɑːs heə]",
+    "translation": "жидкие волосы",
+    "category": "appearance"
+  },
+  {
+    "name": "splendid hair",
+    "transcription": "[ˈsplendɪd heə]",
+    "translation": "пышные волосы",
+    "category": "appearance"
+  },
+  {
+    "name": "square",
+    "transcription": "[skweə]",
+    "translation": "квадратный",
+    "category": "appearance"
+  },
+  {
+    "name": "stomach, belly",
+    "transcription": "[ˈstʌmək] [ˈbeli]",
+    "translation": "живот",
+    "category": "appearance"
+  },
+  {
+    "name": "stooping",
+    "transcription": "[ˈstuːpɪŋ]",
+    "translation": "согнутый",
+    "category": "appearance"
+  },
+  {
+    "name": "stout",
+    "transcription": "[staʊt]",
+    "translation": "полный",
+    "category": "appearance"
+  },
+  {
+    "name": "straight",
+    "transcription": "[streɪt]",
+    "translation": "прямой",
+    "category": "appearance"
+  },
+  {
+    "name": "tall",
+    "transcription": "[tɔːl]",
+    "translation": "высокий",
+    "category": "appearance"
+  },
+  {
+    "name": "thin",
+    "transcription": "[θɪn]",
+    "translation": "худой",
+    "category": "appearance"
+  },
+  {
+    "name": "thumb",
+    "transcription": "[θʌm]",
+    "translation": "большой палец (на руке)",
+    "category": "appearance"
+  },
+  {
+    "name": "to arrange",
+    "transcription": "[tu əˈreɪndʒ]",
+    "translation": "делать прическу",
+    "category": "appearance"
+  },
+  {
+    "name": "to dye hair",
+    "transcription": "[tə daɪ heə]",
+    "translation": "красить волосы",
+    "category": "appearance"
+  },
+  {
+    "name": "to keep fit",
+    "transcription": "[tə kiːp fɪt]",
+    "translation": "держать форму",
+    "category": "appearance"
+  },
+  {
+    "name": "to paint / rouge cheeks",
+    "transcription": "[tə peɪnt] [ruːʒ tʃiːks]",
+    "translation": "красить щеки",
+    "category": "appearance"
+  },
+  {
+    "name": "to put on lipstick",
+    "transcription": "[tə ˈpʊt ɒn ˈlɪpstɪk]",
+    "translation": "красить губы",
+    "category": "appearance"
+  },
+  {
+    "name": "to use / wear make-up",
+    "transcription": "[tə ˈjuːz] [weə ˈmeɪkʌp]",
+    "translation": "краситься",
+    "category": "appearance"
+  },
+  {
+    "name": "toe",
+    "transcription": "[təʊ]",
+    "translation": "палец (на ноге)",
+    "category": "appearance"
+  },
+  {
+    "name": "tongue",
+    "transcription": "[tʌŋ]",
+    "translation": "язык",
+    "category": "appearance"
+  },
+  {
+    "name": "turned up",
+    "transcription": "[tɜːnd ʌp]",
+    "translation": "вздернутый (нос)",
+    "category": "appearance"
+  },
+  {
+    "name": "ugly",
+    "transcription": "[ˈʌɡli]",
+    "translation": "уродливый",
+    "category": "appearance"
+  },
+  {
+    "name": "unpleasant look in one’s eyes",
+    "transcription": "[ʌnˈpleznt lʊk ɪn wʌnz aɪz]",
+    "translation": "тяжелый взгляд",
+    "category": "appearance"
+  },
+  {
+    "name": "unprepossessing appearance",
+    "transcription": "[ˌʌnpriːpəˈzesɪŋ əˈpɪərəns]",
+    "translation": "непривлекательная внешность",
+    "category": "appearance"
+  },
+  {
+    "name": "upper lip",
+    "transcription": "[ˈʌpə lɪp]",
+    "translation": "верхняя губа",
+    "category": "appearance"
+  },
+  {
+    "name": "waist",
+    "transcription": "[weɪst]",
+    "translation": "талия",
+    "category": "appearance"
+  },
+  {
+    "name": "wavy hair",
+    "transcription": "[ˈweɪvi heə]",
+    "translation": "волнистые волосы",
+    "category": "appearance"
+  },
+  {
+    "name": "weight",
+    "transcription": "[weɪt]",
+    "translation": "вес",
+    "category": "appearance"
+  },
+  {
+    "name": "wrist",
+    "transcription": "[rɪst]",
+    "translation": "запястье",
+    "category": "appearance"
+  }
+]

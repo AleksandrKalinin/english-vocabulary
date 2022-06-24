@@ -1,0 +1,129 @@
+[
+  {
+    "id" : 0,
+    "difficulty": "simple",
+    "rules":[
+      {
+        "name": "Present Simple",
+        "description": "Время Present Simple обозначает действие в настоящем в широком смысле слова. Оно употребляется для обозначения обычных, регулярно повторяющихся или постоянных действий",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Обозначает действие в настоящем в широком смысле слова", 
+                        "Глагол во временной форме Present Simple почти всегда совпадает со своей начальной", 
+                        "Употребляется при регулярные, повторяющиехся действиях"],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Present Simple - простое настоящее время",
+            "description": "Время Present Simple обозначает действие в настоящем в широком смысле слова. Оно употребляется для обозначения обычных, регулярно повторяющихся или постоянных действий, например, когда мы говорим о чьих-либо привычках, режиме дня, расписании и т. д., т. е. Present Simple обозначает действия, которые происходят в настоящее время, но не привязаны именно к моменту речи.",
+            "examples": [
+              {
+                "exampleName": "I live in London.",
+                "exampleDescription": "",
+                "exampleTranslation": "Я живу в Лондоне."
+              },
+              {
+                "exampleName": "The meeting starts at 6 o'clock.",
+                "exampleDescription": "",
+                "exampleTranslation": "Собрание начнется в шесть часов."
+              }              
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Английский глагол во временной форме Present Simple почти всегда совпадает со своей начальной, то есть указанной в словаре, формой без частицы to. Лишь в 3-ем лице единственного числа к ней нужно прибавить окончание -s:",
+            "examples": [
+              {
+                "exampleName": "Лишь в 3-ем лице единственного числа к ней нужно прибавить окончание -s:",
+                "exampleDescription": "",
+                "exampleTranslation": "I work – he works"
+              },
+              {
+                "exampleName": "Если глагол оканчивается на -s, -ss, -sh, -ch, -x, -o, то к нему прибавляется окончание -es:",
+                "exampleDescription": "",
+                "exampleTranslation": "I wish – he wishes"
+              },
+              {
+                "exampleName": "К глаголам на -y с предшествующей согласной тоже прибавляется окончание -es, а -y заменяется на -i-:",
+                "exampleDescription": "",
+                "exampleTranslation": "I try – he tries"
+              },
+              {
+                "exampleName": "Если же глагол оканчивается на -y с предшествующей гласной, то -y сохраняется и добавляется только окончание -s:",
+                "exampleDescription": "",
+                "exampleTranslation": "I play – he plays"
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "Для того, чтобы построить вопросительное предложение, перед подлежащим нужно поставить вспомогательный глагол. Время Present Simple используется без него, поэтому в этом случае добавляется вспомогательный глагол do (или does в 3 л. ед. ч.):",
+            "examples": [
+              {
+                "exampleName": "Do you like rock?",
+                "exampleDescription": "",
+                "exampleTranslation": "Тебе нравится рок?"
+              },
+              {
+                "exampleName": "Does he speak Spanish?",
+                "exampleDescription": "",
+                "exampleTranslation": "Он говорит по-испански?"
+              }                                            
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях тоже используется вспомогательный глагол do/does, но не перед подлежащим, а перед глаголом. После него прибавляется отрицательная частица not. Do/does и not часто сокращаются до don’t и doesn’t соответственно:",
+            "examples": [
+              {
+                "exampleName": "I do not like black coffee",
+                "exampleDescription": "",
+                "exampleTranslation": "Я не люблю черный кофе."
+              },
+              {
+                "exampleName": "She doesn't smoke",
+                "exampleDescription": "",
+                "exampleTranslation": "Она не курит."
+              }                                            
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "I often go to the park.",
+                "exampleDescription": "Регулярные, повторяющиеся действия:",
+                "exampleTranslation": "Я часто хожу в парк."
+              },
+              {
+                "exampleName": "We live in Boston.",
+                "exampleDescription": "Действие в настоящем в широком смысле слова (не обязательно в момент речи):",
+                "exampleTranslation": "Мы живем в Бостоне."
+              },
+              {
+                "exampleName": "The Earth is round.",
+                "exampleDescription": "Общеизвестные факты:",
+                "exampleTranslation": "Земля – круглая."
+              },
+              {
+                "exampleName": "We analyse what our clients may need, develop a new product, produce a sample, improve it and sell it.",
+                "exampleDescription": "Перечисление последовательности действий:",
+                "exampleTranslation": "Мы анализируем, что может понадобиться нашим клиентам, разрабатываем новый продукт, изготавливаем образец, дорабатываем его и продаем."
+              },
+              {
+                "exampleName": "The airplane takes off at 2.30 p.m.",
+                "exampleDescription": "Некоторые случаи указания на будущее время (если имеется в виду некое расписание или план действий, а также в придаточных предложениях времени и условия):",
+                "exampleTranslation": "Самолет взлетает в 14:30."
+              },
+              {
+                "exampleName": "Airplane crashes in Pakistan.",
+                "exampleDescription": "Некоторые случаи указания на прошедшее время (в заголовках газет, при пересказе историй):",
+                "exampleTranslation": "В Пакистане разбился самолет."
+              }                                                                                                                        
+            ]
+          }                                         
+        ]
+      }            
+    ]
+  }     
+] 

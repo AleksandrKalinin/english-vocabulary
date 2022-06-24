@@ -1,0 +1,182 @@
+[
+  {
+    "sentence": "My mother ____ a bad headache.",
+    "varians": [
+      "have got",
+      "am",
+      "has got"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "Where _____ the Johnsons (live)?",
+    "varians": [
+      "do",
+      "are ",
+      "does"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "sentence": "Margie and her sister ____ wonderful voices.",
+    "varians": [
+      "does",
+      "has got",
+      "have got"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "I (not/understand) ____ that man because I (not/know)____ English.",
+    "varians": [
+      "not understand, don’t know",
+      "don’t understand, not know",
+      "don’t understand, don’t know"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "____ you ____ any time to help me? - Sorry, I ____",
+    "varians": [
+      "Do you have, don’t",
+      "Have you got, am not",
+      "Do you have, have got"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "sentence": "Everybody in our family (help) _____ Mummy about the house. Dad (walk) ____ the dog, I (water) ____ the flowers, and my brothers (clean) ____ the rooms.",
+    "varians": [
+      "help, walks, water, clean",
+      "helps, walks, water, clean",
+      "help, walks, water, cleans"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "____ Jane Smith (speak) ____ English?",
+    "varians": [
+      "Is ... speak",
+      "Does ... speak",
+      "Do ... speak"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "The Browns ____ a nice house in the country.",
+    "varians": [
+      "has got",
+      "have got",
+      "had got"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "____ you (like) swimming?",
+    "varians": [
+      "Do you like",
+      "Does you like",
+      "Are you like"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "sentence": "____ Dad ____ any brothers or sisters?",
+    "varians": [
+      "Have Dad got",
+      "Does Dad have",
+      "Does Dad has"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "____ your sister often (go) to the theatre?",
+    "varians": [
+      "Is ... go",
+      "Does ... go",
+      "Do ... go"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "We ____ a car, but we are going to buy it.",
+    "varians": [
+      "don’t have",
+      "aren’t have",
+      "hasn’t"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "sentence": "____ Bob (know) what I want?",
+    "varians": [
+      "Bob knows",
+      "Do Bob knows",
+      "Does Bob know"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "They can’t go out because they ____ rain - coats and umbrellas.",
+    "varians": [
+      "have got",
+      "aren’t have",
+      "don’t have"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "Jack lives not far from us, but we (not/see) ____ him often.",
+    "varians": [
+      "not see",
+      "doesn’t see",
+      "don’t see"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "Don’t give him cigarettes. He (not/smoke) ____.",
+    "varians": [
+      "isn’t smoke",
+      "doesn’t smoke",
+      "don’t smoke"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "sentence": "Can you help me? I (not/know)____ the way to the market.",
+    "varians": [
+      "am not know",
+      "not know",
+      "don’t know"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "____ Peter ____ any beer in the fridge?",
+    "varians": [
+      "Does Peter have",
+      "Do Peter has",
+      "Have Peter got"
+    ],
+    "correct_answer": 0
+  },
+  {
+    "sentence": "My daughter Mary (not/like)____ apples, but she likes oranges.",
+    "varians": [
+      "not likes",
+      "doesn’t likes",
+      "doesn’t like"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "sentence": "What’s the matter? You (look) _____ very happy.",
+    "varians": [
+      "look",
+      "looks ",
+      "does look "
+    ],
+    "correct_answer": 0
+  }
+]

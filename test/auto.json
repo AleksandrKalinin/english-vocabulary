@@ -1,0 +1,512 @@
+[
+  {
+    "﻿name": "bumper",
+    "transcription": "[ˈbʌmpə]",
+    "translation": "бампер",
+    "category": "auto"
+  },
+  {
+    "﻿name": "accelerator",
+    "transcription": "[əkˈseləreɪtə]",
+    "translation": "акселератор",
+    "category": "auto"
+  },
+  {
+    "﻿name": "accumulator",
+    "transcription": "[əˈkjuːmjəleɪtə]",
+    "translation": "аккумулятор",
+    "category": "auto"
+  },
+  {
+    "﻿name": "armrest",
+    "transcription": "[ˈɑːmrest]",
+    "translation": "подлокотник",
+    "category": "auto"
+  },
+  {
+    "﻿name": "back door",
+    "transcription": "[bækˈdɔ:]",
+    "translation": "задняя дверь",
+    "category": "auto"
+  },
+  {
+    "﻿name": "bonnet (BrE) hood (AmE)",
+    "transcription": "[ˈbɒnɪt] [hʊd]",
+    "translation": "капот",
+    "category": "auto"
+  },
+  {
+    "﻿name": "boot",
+    "transcription": "[buːt]",
+    "translation": "багажник",
+    "category": "auto"
+  },
+  {
+    "﻿name": "brake",
+    "transcription": "[breɪk]",
+    "translation": "тормоз",
+    "category": "auto"
+  },
+  {
+    "﻿name": "brake fluid",
+    "transcription": "[breɪk ˈfluːɪd]",
+    "translation": "тормозная жидкость",
+    "category": "auto"
+  },
+  {
+    "﻿name": "brake light",
+    "transcription": "[breɪk laɪt]",
+    "translation": "стоп-сигнал",
+    "category": "auto"
+  },
+  {
+    "﻿name": "bulbs",
+    "transcription": "[bʌlbz]",
+    "translation": "лампы",
+    "category": "auto"
+  },
+  {
+    "﻿name": "bumper",
+    "transcription": "[ˈbʌmpə]",
+    "translation": "бампер",
+    "category": "auto"
+  },
+  {
+    "﻿name": "cab",
+    "transcription": "[kæb]",
+    "translation": "кабина",
+    "category": "auto"
+  },
+  {
+    "﻿name": "car",
+    "transcription": "[kɑː]",
+    "translation": "машина",
+    "category": "auto"
+  },
+  {
+    "﻿name": "automobile",
+    "transcription": "[ˈɔːtəməʊˌbiːl]",
+    "translation": "автомобиль",
+    "category": "auto"
+  },
+  {
+    "﻿name": "car alarm",
+    "transcription": "[kɑːr əˈlɑːm]",
+    "translation": "автосигнализация",
+    "category": "auto"
+  },
+  {
+    "﻿name": "carburettor",
+    "transcription": "[ˌkɑːbəˈretə]",
+    "translation": "карбюратор",
+    "category": "auto"
+  },
+  {
+    "﻿name": "chassis",
+    "transcription": "[ˈʃæsi]",
+    "translation": "шасси",
+    "category": "auto"
+  },
+  {
+    "﻿name": "clutch",
+    "transcription": "[klʌtʃ]",
+    "translation": "сцепление",
+    "category": "auto"
+  },
+  {
+    "﻿name": "cooling system",
+    "transcription": "[ˈkuːlɪŋ ˈsɪstəm]",
+    "translation": "система охлаждения",
+    "category": "auto"
+  },
+  {
+    "﻿name": "crankshaft",
+    "transcription": "[ˈkrænkʃɑːft]",
+    "translation": "коленчатый вал",
+    "category": "auto"
+  },
+  {
+    "﻿name": "cylinder",
+    "transcription": "[ˈsɪlɪndə]",
+    "translation": "цилиндр",
+    "category": "auto"
+  },
+  {
+    "﻿name": "dashboard",
+    "transcription": "[ˈdæʃbɔːd]",
+    "translation": "приборная панель",
+    "category": "auto"
+  },
+  {
+    "﻿name": "diesel",
+    "transcription": "[ˈdiːzl̩]",
+    "translation": "дизельное топливо",
+    "category": "auto"
+  },
+  {
+    "﻿name": "driver's license",
+    "transcription": "[ˈdraɪvərz ˈlaɪsns]",
+    "translation": "водительское удостоверение",
+    "category": "auto"
+  },
+  {
+    "﻿name": "electrical system",
+    "transcription": "[ɪˈlektrɪkl ˈsɪstəm]",
+    "translation": "электрооборудование",
+    "category": "auto"
+  },
+  {
+    "﻿name": "engine",
+    "transcription": "[ˈendʒɪn]",
+    "translation": "двигатель",
+    "category": "auto"
+  },
+  {
+    "﻿name": "exhaust (pipe)",
+    "transcription": "[ɪɡˈzɔːst paɪp]",
+    "translation": "выхлопная труба",
+    "category": "auto"
+  },
+  {
+    "﻿name": "fan belt",
+    "transcription": "[fæn belt]",
+    "translation": "ремень охлаждения",
+    "category": "auto"
+  },
+  {
+    "﻿name": "fender wing",
+    "transcription": "[ˈfendə] [wɪŋ]",
+    "translation": "крыло автомобиля",
+    "category": "auto"
+  },
+  {
+    "﻿name": "filling station",
+    "transcription": "[ˈfɪlɪŋ ˈsteɪʃn̩]",
+    "translation": "азс",
+    "category": "auto"
+  },
+  {
+    "﻿name": "fog lights",
+    "transcription": "[fɒɡ laɪts]",
+    "translation": "противотуманные фары",
+    "category": "auto"
+  },
+  {
+    "﻿name": "front door",
+    "transcription": "[frʌnt dɔː]",
+    "translation": "передняя дверь",
+    "category": "auto"
+  },
+  {
+    "﻿name": "fuel gauge",
+    "transcription": "[ˈfjuːəl ɡeɪdʒ]",
+    "translation": "указатель уровня топлива",
+    "category": "auto"
+  },
+  {
+    "﻿name": "garage",
+    "transcription": "[ˈɡærɑːʒ]",
+    "translation": "гараж",
+    "category": "auto"
+  },
+  {
+    "﻿name": "gear",
+    "transcription": "[ɡɪə]",
+    "translation": "передача",
+    "category": "auto"
+  },
+  {
+    "﻿name": "gear-change shift lever",
+    "transcription": "[ɡɪə tʃeɪndʒ ʃɪft ˈliːvə]",
+    "translation": "рычаг переключения передач",
+    "category": "auto"
+  },
+  {
+    "﻿name": "handbrake",
+    "transcription": "[ˈhændbreɪk]",
+    "translation": "ручной тормоз",
+    "category": "auto"
+  },
+  {
+    "﻿name": "hatchback",
+    "transcription": "[ˈhætʃbæk]",
+    "translation": "хэчбэк",
+    "category": "auto"
+  },
+  {
+    "﻿name": "headlights",
+    "transcription": "[ˈhedlaɪts]",
+    "translation": "фары",
+    "category": "auto"
+  },
+  {
+    "﻿name": "headrest",
+    "transcription": "[ˈhedrest]",
+    "translation": "подголовник",
+    "category": "auto"
+  },
+  {
+    "﻿name": "highway",
+    "transcription": "[ˈhaɪweɪ]",
+    "translation": "автострада",
+    "category": "auto"
+  },
+  {
+    "﻿name": "hood (AmE) bonnet (BrE)",
+    "transcription": "[hʊd] [ˈbɒnɪt]",
+    "translation": "капот",
+    "category": "auto"
+  },
+  {
+    "﻿name": "horn",
+    "transcription": "[hɔːn]",
+    "translation": "сигнал",
+    "category": "auto"
+  },
+  {
+    "﻿name": "hubcap",
+    "transcription": "[ˈhʌbkæp]",
+    "translation": "колпак (колеса)",
+    "category": "auto"
+  },
+  {
+    "﻿name": "ignition",
+    "transcription": "[ɪɡˈnɪʃən]",
+    "translation": "зажигание",
+    "category": "auto"
+  },
+  {
+    "﻿name": "jack",
+    "transcription": "[dʒæk]",
+    "translation": "домкрат",
+    "category": "auto"
+  },
+  {
+    "﻿name": "license plate",
+    "transcription": "[ˈlaɪsns pleɪt]",
+    "translation": "номерной знак",
+    "category": "auto"
+  },
+  {
+    "﻿name": "lorry truck",
+    "transcription": "[ˈlɒri] [trʌk]",
+    "translation": "грузовик",
+    "category": "auto"
+  },
+  {
+    "﻿name": "number plate",
+    "transcription": "[ˈnʌmbə pleɪt]",
+    "translation": "номерной знак",
+    "category": "auto"
+  },
+  {
+    "﻿name": "oil",
+    "transcription": "[ɔɪl]",
+    "translation": "масло",
+    "category": "auto"
+  },
+  {
+    "﻿name": "oil pump",
+    "transcription": "[ɔɪl pʌmp]",
+    "translation": "масляный насос",
+    "category": "auto"
+  },
+  {
+    "﻿name": "parking light",
+    "transcription": "[ˈpɑːkɪŋ laɪt]",
+    "translation": "габаритные огни",
+    "category": "auto"
+  },
+  {
+    "﻿name": "pedal",
+    "transcription": "[ˈpedl̩]",
+    "translation": "педаль",
+    "category": "auto"
+  },
+  {
+    "﻿name": "petrol",
+    "transcription": "[ˈpetrəl]",
+    "translation": "бензин",
+    "category": "auto"
+  },
+  {
+    "﻿name": "pump",
+    "transcription": "[pʌmp]",
+    "translation": "насос",
+    "category": "auto"
+  },
+  {
+    "﻿name": "radiator",
+    "transcription": "[ˈreɪdɪeɪtə]",
+    "translation": "радиатор",
+    "category": "auto"
+  },
+  {
+    "﻿name": "rearview mirror",
+    "transcription": "[ˈrɪrvjuː ˈmɪrə]",
+    "translation": "зеркало заднего вида",
+    "category": "auto"
+  },
+  {
+    "﻿name": "road",
+    "transcription": "[rəʊd]",
+    "translation": "дорога",
+    "category": "auto"
+  },
+  {
+    "﻿name": "screwdriver",
+    "transcription": "[ˈskruːdraɪvə]",
+    "translation": "отвертка",
+    "category": "auto"
+  },
+  {
+    "﻿name": "seatbelt",
+    "transcription": "[ˈsiːtˌbelt]",
+    "translation": "ремень безопастности",
+    "category": "auto"
+  },
+  {
+    "﻿name": "sedan",
+    "transcription": "[sɪˈdæn]",
+    "translation": "седан",
+    "category": "auto"
+  },
+  {
+    "﻿name": "service station",
+    "transcription": "[ˈsɜːvɪs ˈsteɪʃn̩]",
+    "translation": "станция тех обслуживания",
+    "category": "auto"
+  },
+  {
+    "﻿name": "signal",
+    "transcription": "[ˈsɪɡnəl]",
+    "translation": "указатель поворота",
+    "category": "auto"
+  },
+  {
+    "﻿name": "spanner",
+    "transcription": "[ˈspænə]",
+    "translation": "гаечный ключ",
+    "category": "auto"
+  },
+  {
+    "﻿name": "spare parts",
+    "transcription": "[speə pɑːts]",
+    "translation": "запчасти",
+    "category": "auto"
+  },
+  {
+    "﻿name": "spark plug",
+    "transcription": "[spɑːk plʌɡ]",
+    "translation": "свеча",
+    "category": "auto"
+  },
+  {
+    "﻿name": "speedometer",
+    "transcription": "[spiːˈdɒmɪtə]",
+    "translation": "спидометр",
+    "category": "auto"
+  },
+  {
+    "﻿name": "spring",
+    "transcription": "[sprɪŋ]",
+    "translation": "рессора",
+    "category": "auto"
+  },
+  {
+    "﻿name": "starter",
+    "transcription": "[ˈstɑːtə]",
+    "translation": "стартер",
+    "category": "auto"
+  },
+  {
+    "﻿name": "steering wheel",
+    "transcription": "[ˈstɪərɪŋ wiːl]",
+    "translation": "рулевое колесо",
+    "category": "auto"
+  },
+  {
+    "﻿name": "suspension",
+    "transcription": "[səˈspenʃn̩]",
+    "translation": "подвеска",
+    "category": "auto"
+  },
+  {
+    "﻿name": "tail-light",
+    "transcription": "[ˈteɪl laɪt]",
+    "translation": "задний фонарь",
+    "category": "auto"
+  },
+  {
+    "﻿name": "tank",
+    "transcription": "[tæŋk]",
+    "translation": "бензобак",
+    "category": "auto"
+  },
+  {
+    "﻿name": "temperature gauge",
+    "transcription": "[ˈtemprətʃə ɡeɪdʒ]",
+    "translation": "датчик температуры",
+    "category": "auto"
+  },
+  {
+    "﻿name": "tyre (BrE) tire (AmE)",
+    "transcription": "[ˈtaɪə] [ˈtaɪər]",
+    "translation": "шина",
+    "category": "auto"
+  },
+  {
+    "﻿name": "tool",
+    "transcription": "[tuːl]",
+    "translation": "инструмент",
+    "category": "auto"
+  },
+  {
+    "﻿name": "trailer",
+    "transcription": "[ˈtreɪlə]",
+    "translation": "прицеп",
+    "category": "auto"
+  },
+  {
+    "﻿name": "transmission gear box",
+    "transcription": "[trænzˈmɪʃn̩] [ɡɪə bɒks]",
+    "translation": "коробка передач",
+    "category": "auto"
+  },
+  {
+    "﻿name": "trunk",
+    "transcription": "[trʌŋk]",
+    "translation": "багажник",
+    "category": "auto"
+  },
+  {
+    "﻿name": "van",
+    "transcription": "[væn]",
+    "translation": "автофургон",
+    "category": "auto"
+  },
+  {
+    "﻿name": "wheel",
+    "transcription": "[wiːl]",
+    "translation": "колесо",
+    "category": "auto"
+  },
+  {
+    "﻿name": "window roller",
+    "transcription": "[ˈwɪndəʊ ˈrəʊlə]",
+    "translation": "стеклоподъёмник",
+    "category": "auto"
+  },
+  {
+    "﻿name": "windscreen windshield",
+    "transcription": "[wɪndskriːn] [ˈwɪndʃiːld]",
+    "translation": "ветровое стекло",
+    "category": "auto"
+  },
+  {
+    "﻿name": "windscreen wiper",
+    "transcription": "[ˈwɪndskriːn ˈwaɪpə]",
+    "translation": "дворники",
+    "category": "auto"
+  }
+]

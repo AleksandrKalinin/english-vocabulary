@@ -1,0 +1,207 @@
+[
+	{
+		"id": 0,
+		"proverb": "Don’t cross the bridge until you come to it",
+		"translation": "Не говори «гоп», пока не перепрыгнешь"
+	},
+	{
+		"id": 1,
+		"proverb": "Don’t make a mountain out of an anthill",
+		"translation": "Не делай из мухи слона"
+	},
+	{
+		"id": 2,
+		"proverb": "Put your best foot forward",
+		"translation": "Пытайся предстать в наилучшем свете"
+	},
+	{
+		"id": 3,
+		"proverb": "It’s better to be safe than sorry",
+		"translation": "Береженого Бог бережет"
+	},
+	{
+		"id": 4,
+		"proverb": "Don’t bite off more than you can chew",
+		"translation": "Не бери на себя слишком много"
+	},
+	{
+		"id": 5,
+		"proverb": "Still waters run deep",
+		"translation": "В тихом омуте черти водятся"
+	},
+	{
+		"id": 6,
+		"proverb": "Curiosity killed the cat",
+		"translation": "Любопытной Варваре на базаре нос оторвали"
+	},
+	{
+		"id": 7,
+		"proverb": "You scratch my back, I’ll scratch yours",
+		"translation": "Рука руку моет"
+	},
+	{
+		"id": 8,
+		"proverb": "Two wrongs don't make a right",
+		"translation": "Злом зла не поправишь"
+	},
+	{
+		"id": 9,
+		"proverb": "The pen is mightier than the sword",
+		"translation": "Слово страшнее пистолета"
+	},
+	{
+		"id": 10,
+		"proverb": "The squeaky wheel gets the grease",
+		"translation": "Под лежачий камень вода не течет"
+	},
+	{
+		"id": 11,
+		"proverb": "No man is an island",
+		"translation": "Один в поле не воин"
+	},
+	{
+		"id": 12,
+		"proverb": "People who live in glass houses should not throw stones",
+		"translation": "В чужом глазу видит соринку, а в своем бревна не замечает"
+	},
+	{
+		"id": 13,
+		"proverb": "Birds of a feather flock together",
+		"translation": "Рыбак рыбака видит издалека"
+	},
+	{
+		"id": 14,
+		"proverb": "There's no such thing as a free lunch",
+		"translation": "Бесплатный сыр — только в мышеловке"
+	},
+	{
+		"id": 15,
+		"proverb": "The early bird catches the worm",
+		"translation": "Кто рано встает, тому Бог подает"
+	},
+	{
+		"id": 16,
+		"proverb": "Beggars can't be choosers",
+		"translation": "Голод не тетка"
+	},
+	{
+		"id": 17,
+		"proverb": " Beauty is in the eye of the beholder",
+		"translation": "Красоту каждый видит по-своему"
+	},
+	{
+		"id": 18,
+		"proverb": "A penny saved is a penny earned",
+		"translation": "Копейка рубль бережет"
+	},
+	{
+		"id": 19,
+		"proverb": "Absence makes the heart grow fonder",
+		"translation": "Дальше с глаз — ближе к сердцу"
+	},
+	{
+		"id": 20,
+		"proverb": "A cat may look at a king",
+		"translation": "Не святые горшки обжигают"
+	},
+	{
+		"id": 21,
+		"proverb": "A little knowledge is a dangerous thing",
+		"translation": "Недоученный хуже неученого"
+	},
+	{
+		"id": 22,
+		"proverb": "Like father, like son",
+		"translation": "Яблочко от яблоньки недалеко падает"
+	},
+	{
+		"id": 23,
+		"proverb": "All good things must come to an end",
+		"translation": "Хорошего понемножку"
+	},
+	{
+		"id": 24,
+		"proverb": "One drop of poison infects the whole tun of wine",
+		"translation": "Ложка дегтя в бочке меда"
+	},																					
+	{
+		"id": 25,
+		"proverb": "Easy come, easy go",
+		"translation": "Пришло махом — ушло прахом"
+	},
+	{
+		"id": 26,
+		"proverb": "You can’t have your cake and eat it too",
+		"translation": "Любишь кататься, люби и саночки возить"
+	},		
+	{
+		"id": 27,
+		"proverb": "A great dowry is a bed full of brambles",
+		"translation": "Лучше на убогой жениться, чем с богатой браниться"
+	},
+	{
+		"id": 28,
+		"proverb": "A guilty conscience needs no accuser",
+		"translation": "Чует кошка, чье мясо съела"
+	},		
+	{
+		"id": 29,
+		"proverb": "A Jack of all trades is master of none",
+		"translation": "За все берется, да не все удается"
+	},	
+	{
+		"id": 30,
+		"proverb": "A liar is not believed when he speaks the truth",
+		"translation": "Раз солгал — навек лгуном стал"
+	},
+	{
+		"id": 31,
+		"proverb": "A little body often harbours a great soul",
+		"translation": "Мал золотник, да дорог"
+	},		
+	{
+		"id": 32,
+		"proverb": "A rolling stone gathers no moss",
+		"translation": "Кому на месте не сидится, тот добра не наживет"
+	},	
+	{
+		"id": 33,
+		"proverb": "You cannot teach old dogs new tricks",
+		"translation": "Старого пса к цепи не приучишь"
+	},
+	{
+		"id": 34,
+		"proverb": "Who keeps company with the wolf, will learn to howl",
+		"translation": "С кем поведешься, от того и наберешься"
+	},
+	{
+		"id": 35,
+		"proverb": "When the fox preaches, take care of your geese",
+		"translation": "Берегись крокодила, когда он слезы проливает"
+	},
+	{
+		"id": 36,
+		"proverb": "То throw a stone in one's own garden",
+		"translation": "Самому себе подложить свинью"
+	},				
+	{
+		"id": 37,
+		"proverb": "A bird in the hand is worth two in the bush",
+		"translation": "Лучше синица в руках, чем журавль в небе"
+	},	
+	{
+		"id": 38,
+		"proverb": "A leopard cannot change its spots",
+		"translation": "Горбатого могила исправит"
+	},
+	{
+		"id": 39,
+		"proverb": "A chain is only as strong as its weakest link",
+		"translation": "Где тонко, там и рвется"
+	},
+	{
+		"id": 40,
+		"proverb": "As the fool thinks, so the bell clinks",
+		"translation": "Дуракам закон не писан"
+	}			
+]
