@@ -70,6 +70,9 @@ class TopMenu extends Component {
           <Menu.Item>
             <Link to="/statistics">Статистика</Link>
           </Menu.Item>
+          <Menu.Item>
+            <Link to="/audioplayer">Статистика</Link>
+          </Menu.Item>          
       
 
         {/*

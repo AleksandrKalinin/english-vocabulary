@@ -9,7 +9,7 @@ class Fragments extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+        texts: []
     }
   }
 
@@ -44,7 +44,7 @@ class Fragments extends Component {
         comparativeRandomArray: [],
         fragmentArrayIndexes: [],
         rightAnswers: 0,
-        livesCount: 3,
+        //livesCount: 3,
         livesArray: []        
       }, () => this.initialLoad())
     }
@@ -56,13 +56,13 @@ class Fragments extends Component {
           let contentArray = [];
           texts.map((item, index) => contentArray.push(item.content) )
           this.setState({ 
-            texts: texts,
-            contentArray: contentArray
-          }, () => this.consoleParams());
+            texts,
+            contentArray
+          }, () => this.setMenuParams());
         })
     }
 
-    consoleParams = () =>{
+    setMenuParams = () =>{
       let newItems = [];
       this.state.texts.map((item, i) =>
                     newItems.push({ 
@@ -78,8 +78,8 @@ class Fragments extends Component {
     getUnique = () => {
       var arr = this.state.options;
       var comp = 'text';
-        const unique = arr
-            .map(e => e[comp])
+      const unique = arr
+          .map(e => e[comp])
           .map((e, i, final) => final.indexOf(e) === i && i)
           .filter(e => arr[e]).map(e => arr[e]);
       this.setState({
@@ -87,7 +87,7 @@ class Fragments extends Component {
       })    
     }  
 
-    newFunc = () => {
+    selectValue = () => {
       var options = this.state.options.slice();
       var categoryValue = this.state.value;
       this.setState({
@@ -95,7 +95,7 @@ class Fragments extends Component {
       })
     }
 
-    handleChange = (e, { value }) => this.setState({ value }, () => this.newFunc() )         
+    handleChange = (e, { value }) => this.setState({ value }, () => this.selectValue() )         
 
     readMore = (e) =>{
       let texts = this.state.texts.slice();
@@ -139,17 +139,11 @@ class Fragments extends Component {
       })
     }
 
-    consoleState = () =>{
-      console.log(this.state)
-    }
 
-    randomItem = () =>{
-      console.log(this.state.currentRandomWord)
-    }
 
     builtArray = () => {
       let currentOneArray = [];
-	  let activeTargetContent = this.state.content.slice();
+	    let activeTargetContent = this.state.content.slice();
       let currentStringArray = activeTargetContent.split(". ");
       currentStringArray.pop();
       let currentFullArray = [];
@@ -182,14 +176,14 @@ class Fragments extends Component {
       }
 
       this.setState({
-      	currentStringArray: currentStringArray,
-        currentWordArray: currentWordArray,
+      	currentStringArray,
+        currentWordArray,
         currentRandomWord: random,
-        currentFinalArray: currentFinalArray,
-        currentRandomIndexes: currentRandomIndexes,
-        currentRandomArray: currentRandomArray,
-        currentFullArray: currentFullArray,
-        currentOneArray: currentOneArray
+        currentFinalArray,
+        currentRandomIndexes,
+        currentRandomArray,
+        currentFullArray,
+        currentOneArray
       }, () => this.shuffleArray())     
     }
 
@@ -237,12 +231,12 @@ class Fragments extends Component {
 
       activeInput++;
       this.setState({
-			activeInput: activeInput,
-			activeArray: activeArray,
-			fragmentArrayIndexes: fragmentArrayIndexes,
-			currentRandomArray: currentRandomArray,
-			comparativeRandomArray: comparativeRandomArray,
-			sortedRandomArray: sortedRandomArray
+  			activeInput,
+  			activeArray,
+  			fragmentArrayIndexes,
+  			currentRandomArray,
+  			comparativeRandomArray,
+  			sortedRandomArray
 		})
     
   }
@@ -259,19 +253,18 @@ class Fragments extends Component {
 	}
 
     resetValue = (e) =>{
-	  let sortedRandomArray = this.state.sortedRandomArray.slice(); 
+	    let sortedRandomArray = this.state.sortedRandomArray.slice(); 
       let element = e.target;
       if (e.target.textContent !== "") {
       	  sortedRandomArray.push(e.target.textContent);
       	  element.innerText = "";
-	      this.setState({
-	      	sortedRandomArray: sortedRandomArray
-	      })
-	      var indexTarget = 0;
+  	      this.setState({
+  	      	sortedRandomArray: sortedRandomArray
+  	      })
+	        var indexTarget = 0;
 	        while ( (element = element.previousElementSibling) ) {
 	          indexTarget++
-	      }   	  
-          
+	        }
       }
     }
 
@@ -289,13 +282,13 @@ class Fragments extends Component {
     		}
     		
     	}
-    	let rightAnswers = currentSortedArray.length - count;
+    	let rightAnswers = count;
     	this.setState({
     		isCheckButtonVisible: false,
     		isResultVisible: true,
     		isSingleTextVisible: false,
-    		rightAnswers: rightAnswers,
-    		sortedRandomArray: sortedRandomArray
+    		rightAnswers,
+    		sortedRandomArray
     	})
     }
 
@@ -327,7 +320,7 @@ class Fragments extends Component {
         <div className="content-wrapper">
           <TopMenu></TopMenu>
           <div className="texts-wrapper fragments-wrapper">
-          {this.state.isMenuVisible ?
+          {this.state.isMenuVisible && this.state.texts.length ?
             <Menu className="texts-menu" vertical>
               <Menu.Item name='inbox' >
                 <Dropdown 
@@ -388,11 +381,12 @@ class Fragments extends Component {
                 <Card className="single-text-card single-fragments-card">
                   <Card.Content className="fragments-content">
                     <Card.Description className="single-text-card-description p-wrap fragment-description">
-                    	<h2>Осталось расставить {this.state.rightAnswers} слов </h2>
+                    	<h2>Вы расставили правильно {this.state.rightAnswers} из {this.state.currentRandomArray.length} слов </h2>
                     </Card.Description>
                   </Card.Content>
                   <div className="fragment-variants">
-                  	<Button onClick={this.tryAgain}>Попробовать еще раз</Button>
+                  	<Button primary onClick={this.setStateOnStart}>Заново</Button>
+                    <Button primary ><Link className="training-link" to="/training">К тренировкам</Link></Button>
                   </div> 
                 </Card> : null
               }         

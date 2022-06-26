@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Divider, Icon, List, Message, Label, Menu} from 'semantic-ui-react'
+import { Card, Image, Button, Divider, Icon, List, Message, Label, Menu, Dropdown } from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import axios from 'axios';
 import speech from 'speech-synth';
@@ -13,7 +13,7 @@ class RecreateText extends Component {
       texts: [],
       contentArray: [],
       areTextsVisible: false,
-      isMenuVisible: true,
+      isMenuVisible: false,
       isSingleTextVisible: false,
       isResultVisible: false,
       isResultWrong: false,
@@ -24,13 +24,14 @@ class RecreateText extends Component {
       spllittedSentences: [],
       reservedSentences: [],
       seconds: '00',   // responsible for the seconds 
-      minutes: '5',  // responsible for the minutes
+      minutes: '3',  // responsible for the minutes
       secondsRemaining: 0,
       intervalHandle: 0,
       wrongIndexes: [],
       totalSecondsSpent: 0,
       secondsSpent: 0,
-      minutesSpent: 0
+      minutesSpent: 0,
+      categoryValue: ''
 		}
 	}
 
@@ -41,9 +42,9 @@ class RecreateText extends Component {
         let contentArray = [];
         texts.map((item, index) => contentArray.push(item.content) )
         this.setState({ 
-          texts: texts,
-          contentArray: contentArray
-        }, () => this.consoleState());
+          texts,
+          contentArray
+        }, () => this.makeTextsVisible());
       })
   }
 
@@ -52,7 +53,7 @@ class RecreateText extends Component {
       texts: [],
       contentArray: [],
       areTextsVisible: false,
-      isMenuVisible: true,
+      isMenuVisible: false,
       isSingleTextVisible: false,
       isResultVisible: false,
       isResultWrong: false,
@@ -101,10 +102,10 @@ class RecreateText extends Component {
     }
 
 
-    consoleState = () =>{
+    makeTextsVisible = () =>{
       this.setState({
         areTextsVisible: true        
-      });
+      }, () => this.createMenuItems());
     }
 
     backToTexts = () =>{
@@ -156,8 +157,8 @@ class RecreateText extends Component {
         isSingleTextVisible: false,
         splittedSentenceVisible: true,
         spllittedSentences: currentStringArray,
-        reservedSentences: reservedSentences,
-        wrongIndexes: wrongIndexes
+        reservedSentences,
+        wrongIndexes
 
       }, () => this.startCountDown())
     }  
@@ -187,11 +188,8 @@ class RecreateText extends Component {
         }
         if (min === 0 & sec === 0) {
           let time = this.state.totalSecondsSpent;
-          console.log(time);
           let minutes = Math.floor(time / 60);
-          console.log(minutes);
           let seconds = this.state.totalSecondsSpent - (minutes * 60);
-          console.log(seconds);
           clearInterval(this.state.intervalHandle);
           this.timeIsOut();
           this.setState({
@@ -280,7 +278,7 @@ class RecreateText extends Component {
       let minutes = Math.floor(time / 60);
       console.log(minutes);
       let seconds = this.state.totalSecondsSpent - (minutes * 60);
-      console.log(seconds);
+
       clearInterval(this.state.intervalHandle);
       this.setState({
         isResultVisible: true,
@@ -298,7 +296,7 @@ class RecreateText extends Component {
         isResultVisible: false,
         isResultWrong: false,
         seconds: '00',   // responsible for the seconds 
-        minutes: '5',  // responsible for the minutes
+        minutes: '3',  // responsible for the minutes
         secondsRemaining: 0,
         intervalHandle: 0,
         wrongIndexes: [],
@@ -308,8 +306,44 @@ class RecreateText extends Component {
       }) 
   }
 
-  render() {
 
+    createMenuItems = () =>{
+      let newItems = [];
+      this.state.texts.map((item, i) =>
+                    newItems.push({ 
+                        key: item.id, 
+                        text: item.difficulty, 
+                        value: item.difficulty 
+                     }))
+      this.setState({
+        options: newItems
+      }, () => this.getUnique())
+    } 
+
+    getUnique = () => {
+      var arr = this.state.options;
+      var comp = 'text';
+      const unique = arr
+        .map(e => e[comp])
+        .map((e, i, final) => final.indexOf(e) === i && i)
+        .filter(e => arr[e]).map(e => arr[e]);
+      this.setState({
+        options: unique,
+        isMenuVisible: true
+      })    
+    }  
+
+    selectCategory = () =>{
+      var options = this.state.options.slice();
+      var categoryValue = this.state.value;
+      this.setState({
+        categoryValue
+      })
+    }
+
+    menuChange = (e, { value }) => this.setState({ value }, () => this.selectCategory() ) 
+
+  render() {
 
     return (
       <Fragment>
@@ -319,13 +353,23 @@ class RecreateText extends Component {
               {this.state.isMenuVisible ?
                 <Menu className="texts-menu" vertical>
                   <Menu.Item name='inbox' >
-
+                    <Dropdown 
+                      placeholder='Выберите уровень'
+                      fluid
+                      value={this.state.value} 
+                      key={this.state.options.id}
+                      clearable
+                      search
+                      selection
+                      onChange = {this.menuChange}
+                      options={this.state.options} 
+                    />
                   </Menu.Item>
-                </Menu> : null 
+                </Menu> : null
               }          
               {(this.state.texts.length && this.state.areTextsVisible) ? 
               <Card.Group className="texts-cards" itemsPerRow={3} >
-              {this.state.texts.map((item, index) => 
+              {this.state.texts.map((item, index) => (this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === item.difficulty) && 
                 <Card key={index}>
                   <Card.Content>
                     <div className="texts-image-wrapper">

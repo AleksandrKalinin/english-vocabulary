@@ -49,7 +49,7 @@ class Example extends Component {
 
     componentDidUpdate(prevState) {
       if (prevState.currentTest !== this.state.currentTest) {
-        console.log("changed");
+        
       }
     }
 
@@ -103,9 +103,6 @@ class Example extends Component {
       })
     }
 
-    consoleState = () =>{
-      console.log(this.state);
-    }
 
     selectTest = (testId) =>{
       let tests = this.state.tests.slice();
@@ -122,7 +119,6 @@ class Example extends Component {
       for (var i = 0; i < activeTest.tasks.length; i++) {
         currentTest.push(testItem);
       }
-      console.log("currentTest", currentTest);
       this.setState({
         activeTest,
         currentTest,
@@ -175,8 +171,8 @@ class Example extends Component {
         this.setState({
           isResultVisible: true,
           isSingleTestVisible: false,
-          correctAnswers: correctAnswers,
-          incorrectAnswers: incorrectAnswers,
+          correctAnswers,
+          incorrectAnswers,
           isMenuVisible: false,
           isTooltipVisible: false
         })                
@@ -189,14 +185,10 @@ class Example extends Component {
  	
     }
 
-    consoleState = () => {
-      console.log(this.state);
-    }
 
   render() {
     return (
       <Fragment>
-      <button onClick={this.consoleState}>Console</button>
       <div className="content-wrapper">
           <TopMenu></TopMenu>
           <div className="texts-wrapper">

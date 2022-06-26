@@ -24,14 +24,12 @@ class Cards extends Component {
           const words = this.state.words;
           const currentName = words[id].name;
           const currentTranslation = words[id].translation;
-          const currentMeaning = words[id].meaning;
           const currentImage = words[id].image;
           this.setState({ 
             words, 
             currentName, 
             currentImage, 
-            currentTranslation, 
-            currentMeaning });
+            currentTranslation });
     }
 
     renderComponent = () =>{
@@ -48,7 +46,6 @@ class Cards extends Component {
       const words = this.state.words;
       const currentName = words[newId].name;
       const currentTranslation = words[newId].translation;
-      const currentMeaning = words[newId].meaning;
       const currentImage = words[newId].image;
       const currentDate = words[newId].date;
       const currentCategory = words[newId].category;      
@@ -58,45 +55,43 @@ class Cards extends Component {
         currentName, 
         currentImage, 
         currentTranslation, 
-        currentMeaning,
         currentDate,
         currentCategory,
         isTranslationVisible: false        
       })
     }
 
-
-
-    positiveResponse = () =>{
+    checkResponse = (val) => {
       var newObj = {};
-      var positiveWords = this.state.positiveWords.slice();
       newObj.id = this.state.id;
       newObj.name = this.state.currentName;
       newObj.translation = this.state.currentTranslation;
-      newObj.meaning = this.state.currentMeaning;
       newObj.image = this.state.currentImage;
       newObj.date = this.state.currentDate;
-      newObj.category = this.state.currentCategory;
-      positiveWords.push(newObj);
-      this.setState({
-        positiveWords: positiveWords,
-        isTranslationVisible: true,
-        showNavButtons: false,
-        showContinueButton: true,
-      })
-    }
-
-    negativeResponse = () =>{
-      this.setState({
-        isTranslationVisible: true,
-        showNavButtons: false,
-        showContinueButton: true
-      })
+      newObj.category = this.state.currentCategory; 
+      if (val) {
+        var positiveWords = this.state.positiveWords.slice();
+        positiveWords.push(newObj);
+        this.setState({
+          positiveWords,
+          isTranslationVisible: true,
+          showNavButtons: false,
+          showContinueButton: true,
+        })        
+      } else {
+        var negativeWords = this.state.negativeWords.slice();
+        negativeWords.push(newObj);      
+        this.setState({
+          negativeWords,
+          isTranslationVisible: true,
+          showNavButtons: false,
+          showContinueButton: true
+        })        
+      }     
     }
 
     continueTraining = () =>{
       let wordsLength = this.state.words.length;
-
       let newId =this.state.id;
       newId = newId + 1;
       const id = this.state.id;
@@ -104,7 +99,6 @@ class Cards extends Component {
       if(newId < wordsLength){
         const currentName = words[newId].name;
         const currentTranslation = words[newId].translation;
-        const currentMeaning = words[newId].meaning;
         const currentImage = words[newId].image;
         const currentDate = words[newId].date;
         const currentCategory = words[newId].category;     
@@ -114,7 +108,6 @@ class Cards extends Component {
           currentName, 
           currentImage, 
           currentTranslation, 
-          currentMeaning,
           currentDate,
           currentCategory,
           isTranslationVisible: false,
@@ -130,17 +123,9 @@ class Cards extends Component {
           showContinueButton: false, 
           isCardVisible: false,
           isButtonVisible: false
-
       })
     }
 
-    consoleState = () =>{
-      console.log(this.state)
-    }
-
-    consoleMessage = () =>{
-      console.log('hello');
-    }
 
    voiceWord = () =>{
       var newWord = this.state.currentName;
@@ -155,7 +140,6 @@ class Cards extends Component {
       id: 0,
       currentName: '',
       currentTranslation: '',
-      currentMeaning: '',
       currentImage: null,
       currentDate : null,
       currentCategory: '',
@@ -170,24 +154,31 @@ class Cards extends Component {
 
    initialLoad = () => {
     var id = this.state.id;
-      axios.get('/vocabulary2.json')
+      axios.get('/words.json')
         .then(res => {
           const words = res.data;
           const currentName = words[id].name;
           const currentTranslation = words[id].translation;
-          const currentMeaning = words[id].meaning;
           const currentImage = words[id].image;
           const currentDate = words[id].date;
           const currentCategory = words[id].category;           
-          this.setState({ 
-            words, 
+          this.setState({
             currentName, 
             currentImage, 
             currentTranslation, 
-            currentMeaning,
             currentDate,
-            currentCategory });
+            currentCategory }, () => this.randomItem(words));
         })
+   }
+
+   randomItem = (arr) => {
+    let words = [];
+    for (var i = 0; i < 10; i++) {
+      words.push(arr[Math.floor(Math.random() * arr.length)]);
+    }
+    this.setState({
+      words
+    })
    }
 
   render() {
@@ -226,7 +217,7 @@ class Cards extends Component {
                 {this.state.isTranslationVisible ? 
                   <Fragment>
                     <Card.Meta>{this.state.currentTranslation}</Card.Meta>
-                    <Card.Description>{this.state.currentMeaning}</Card.Description>                  
+                    <Card.Description>{}</Card.Description>                  
                   </Fragment>:null
                 }
               </Card.Content>
@@ -234,8 +225,8 @@ class Cards extends Component {
                 <Button.Group className="card-buttons-wrapper">
                 {this.state.showNavButtons ?
                 <Fragment>
-                  <Button onClick={this.positiveResponse} primary>Знаю</Button>
-                  <Button onClick={this.negativeResponse} primary>Не знаю</Button>
+                  <Button onClick={/*this.positiveResponse */ this.checkResponse.bind(this, true)} primary>Знаю</Button>
+                  <Button onClick={/*this.negativeResponse*/ this.checkResponse.bind(this, false)} primary>Не знаю</Button>
                 </Fragment>:null
                 }  
                 {this.state.showContinueButton ?
@@ -254,7 +245,7 @@ class Cards extends Component {
                   <Card.Header>Результаты</Card.Header>
                   <Divider/>
                   <Card.Description className="audio-list-container"> 
-                  {  (this.state.negativeWords.length !== 0 ) ?
+                  { (this.state.negativeWords.length !== 0 ) ?
                     <List className="audio-list">
                     {this.state.negativeWords.map((item, index) => 
                         <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  

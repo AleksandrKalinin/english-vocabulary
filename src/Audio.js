@@ -42,7 +42,6 @@ class Audio extends Component {
       newObj.id = this.state.id;
       newObj.name = this.state.currentName;
       newObj.translation = this.state.currentTranslation;
-      newObj.meaning = this.state.currentMeaning;
       newObj.image = this.state.currentImage;
       newObj.date = this.state.currentDate;
       newObj.category = this.state.currentCategory;
@@ -103,7 +102,6 @@ class Audio extends Component {
         if(newId < wordsLength) {
         const currentName = words[newId].name;
         const currentTranslation = words[newId].translation;
-        const currentMeaning = words[newId].meaning;
         const currentImage = words[newId].image;
         const currentDate = words[newId].date;
         const currentCategory = words[newId].category;          
@@ -113,7 +111,6 @@ class Audio extends Component {
             currentName, 
             currentImage, 
             currentTranslation, 
-            currentMeaning,
             currentDate,
             currentCategory,
             isTranslationVisible: false,
@@ -155,16 +152,6 @@ class Audio extends Component {
     })
    }
 
-   changeColor = () =>{
-    this.setState({
-      metaClass: 'yellow'
-    })
-   } 
-
-   consoleFunction = () =>{
-    console.log(this.state.negativeWords.length);
-   }
-
    setStateOnStart = () => {
       this.setState({
         words: [],
@@ -173,7 +160,6 @@ class Audio extends Component {
         id: 0,
         currentName: '',
         currentTranslation: '',
-        currentMeaning: '',
         currentImage: null,
         currentDate : null,
         currentCategory: '',
@@ -203,19 +189,26 @@ class Audio extends Component {
           const words = res.data;
           const currentName = words[id].name;
           const currentTranslation = words[id].translation;
-          const currentMeaning = words[id].meaning;
           const currentImage = words[id].image;
           const currentDate = words[id].date;
           const currentCategory = words[id].category;           
           this.setState({ 
-            words, 
             currentName, 
             currentImage, 
             currentTranslation, 
-            currentMeaning,
             currentDate,
-            currentCategory });
+            currentCategory }, () => this.randomItem(words));
         })
+   }
+
+   randomItem = (arr) => {
+    let words = [];
+    for (var i = 0; i < 10; i++) {
+      words.push(arr[Math.floor(Math.random() * arr.length)]);
+    }
+    this.setState({
+      words
+    })
    }
 
   render() {
@@ -255,7 +248,7 @@ class Audio extends Component {
                     {this.state.correctNameVisible ? <Card.Meta className={this.state.correctNameClass}>{this.state.currentName}</Card.Meta>: null }
                       <Card.Meta className={this.state.nameClass}>{this.state.tempSearch}</Card.Meta>
                       <Card.Meta className={this.state.metaClass}>{this.state.currentTranslation}</Card.Meta>
-                      <Card.Description className="audio-description">{this.state.currentMeaning}</Card.Description>                  
+                      <Card.Description className="audio-description">{}</Card.Description>                  
                     </Fragment>:null
                   }
                 </Card.Content>

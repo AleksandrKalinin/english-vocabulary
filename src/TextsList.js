@@ -75,20 +75,7 @@ class TextsList extends Component {
     }
 
     handleChange = (e, { value }) => this.setState({ value }, () => this.selectCategory() )         
-/*
-    callIndex = (e) =>{
-      let target = e.target.parentElement;
-      this.getElementIndex(target);
-    }
 
- getElementIndex = (node) => {
-    var index = 0;
-    while ( (node = node.previousElementSibling) ) {
-        index++;
-    }
-    console.log(index);
-}
-*/
     readMore = (e) =>{
       let texts = this.state.texts.slice();
       let target = e.target.parentElement;

@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Divider, Icon, List, Message, Label, Menu} from 'semantic-ui-react'
+import { Card, Image, Button, Divider, Icon, List, Message, Label, Menu, Dropdown} from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import axios from 'axios';
 //import speech from 'speech-synth';
 import Speech from 'speak-tts'
 import SpeechRecognition from 'react-speech-recognition'
+import { Howl } from "howler";
 
 class RecreateAudioText extends Component {
 
@@ -13,114 +14,171 @@ class RecreateAudioText extends Component {
 		this.state = {
 	      texts: [],
 	      contentArray: [],
-	      areTextsVisible: true,
-	      isMenuVisible: true,
+	      areTextsVisible: false,
+	      isMenuVisible: false,
 	      isSingleTextVisible: false,
+        options: [],
+        categoryValue: '',
 	      isResultVisible: false,
 	      isResultWrong: false,
-	      negativeWords: [],
-	      positiveWords: [],
+        title: '',
 	      content: '',
 	      image: null,
-	      spllittedSentences: [],
-	      reservedSentences: [],
-	      seconds: '00',   // responsible for the seconds 
-	      minutes: '5',  // responsible for the minutes
-	      secondsRemaining: 0,
-	      intervalHandle: 0,
-	      wrongIndexes: [],
-	      totalSecondsSpent: 0,
-	      secondsSpent: 0,
-	      minutesSpent: 0,
-	      speech: null,
-	      speechCond: false,
-	      isTimeOver: false
-		}
-	}
-
-
-
-  componentDidMount() {
-    axios.get('/texts.json')
-      .then(res => {
-        let texts = res.data;
-        let contentArray = [];
-        texts.map((item, index) => contentArray.push(item.content) )
-        this.setState({ 
-          texts: texts,
-          contentArray: contentArray
-        }, () => this.consoleState());
-      })
-        
-  }   
-
-
-
-    readMore = (e) =>{
-      let texts = this.state.texts.slice();
-      let target = e.target.parentElement;
-      var index = 0;
-        while ( (target = target.previousElementSibling) ) {
-          index++;
-      }
-      let activeTargetTitle = e.target.parentElement.children[0].children[1].textContent;
-      let activeTargetContent = texts[index].content;
-      let activeTargetImage = e.target.parentElement.children[0].children[0].children[0].src;
-      this.setState({
-        areTextsVisible: false,
-        isSingleTextVisible: true,
-        isMenuVisible: false,
-        title: activeTargetTitle,
-        content: activeTargetContent,
-        image: activeTargetImage
-      })      
-    }
-
-
-    consoleState = () =>{
-      console.log(this.state);
-    }
-
-    backToTexts = () =>{
-      this.setState({
-        areTextsVisible: true,
-        isSingleTextVisible: false,
-        isMenuVisible: true,
-        contentArray: [],
-        currentTempArray: [],
-        currentStringArray: [],
-        currentRandomWord: '',
-        currentFinalArray: [],
-        currentRandomArray: [],
-        currentOneArray: [],
-        activeInput: 0,
-        activeArray: [],
-        sortedRandomArray: [],
-        comparativeRandomArray: [],
-        fragmentArrayIndexes: [],
-        isResultVisible: false,
-        isResultWrong: false,
+        currentTrack: null,
+        playing: false,
         seconds: '00',   // responsible for the seconds 
-        minutes: '5',  // responsible for the minutes
+        minutes: '0.1',  // responsible for the minutes
         secondsRemaining: 0,
         intervalHandle: 0,
         wrongIndexes: [],
         totalSecondsSpent: 0,
         secondsSpent: 0,
         minutesSpent: 0,
-        speech: null,
-        splittedSentenceVisible: false,
-        isTimeOver: false
+        rightAnswers: 0
+		}
+	}
 
-      }, () => console.log(this.state))
+
+
+  componentDidMount() {
+    axios.get('./audiotexts.json')
+      .then(res => {
+        let texts = res.data;
+        this.setState({ 
+          texts,
+          areTextsVisible: true
+         
+        }, () => this.createMenuItems());
+      })        
+  }   
+
+    createMenuItems = () =>{
+      let newItems = [];
+      this.state.texts.map((item, i) =>
+                    newItems.push({ 
+                        key: item.id, 
+                        text: item.difficulty, 
+                        value: item.difficulty 
+                     }))
+      this.setState({
+        options: newItems
+      }, () => this.getUnique())
+    } 
+
+    getUnique = () => {
+      var arr = this.state.options;
+      var comp = 'text';
+      const unique = arr
+        .map(e => e[comp])
+        .map((e, i, final) => final.indexOf(e) === i && i)
+        .filter(e => arr[e]).map(e => arr[e]);
+      this.setState({
+        options: unique,
+        isMenuVisible: true
+      })    
+    }  
+
+    selectCategory = () =>{
+      var options = this.state.options.slice();
+      var categoryValue = this.state.value;
+      this.setState({
+        categoryValue
+      })
     }
 
+    handleChange = (e, { value }) => this.setState({ value }, () => this.selectCategory() )
+
+    createTrack = (id) => {
+      console.log(id);
+      axios
+        .get("tracks.json")
+        .then((res) => {
+          let currentTrack = new Howl({
+            src: "tracks/" + res.data.slice(id - 1, id),
+            html5: true,
+            volume: 0.5 / 10
+          });
+          this.setState({
+            currentTrack,
+            audio: res.data
+          }) 
+        });    
+    }
+
+    readMore = (id) =>{
+
+      let texts = this.state.texts.slice();
+      let title = texts[id - 1].title;
+      let content = texts[id - 1].content;
+      let image = texts[id - 1].src;
+      this.setState({
+        areTextsVisible: false,
+        isSingleTextVisible: true,
+        isMenuVisible: false,
+        title,
+        content,
+        image
+      }, () => this.createTrack(id))       
+    }
+
+
+    backToTexts = () =>{
+      this.setState({
+        areTextsVisible: true,
+        isSingleTextVisible: false,
+        isMenuVisible: true,
+        isResultVisible: false,
+        isResultWrong: false,
+        categoryValue: '',
+        currentTrack: null,
+        playing: false,
+        seconds: '00',   // responsible for the seconds 
+        minutes: '0.1',  // responsible for the minutes
+        secondsRemaining: 0,
+        intervalHandle: 0,
+        wrongIndexes: [],
+        totalSecondsSpent: 0,
+        secondsSpent: 0,
+        minutesSpent: 0,
+        rightAnswers: 0,
+        value: null        
+      })
+    }
+
+
+
+  showFinal = () =>{
+    this.setState({
+      isResultVisible: true  
+    })
+  }
+
+  tryAgain = () =>{
+      this.setState({
+        areTextsVisible: false,
+        isSingleTextVisible: true,
+        isMenuVisible: false,
+        isResultVisible: false,
+        isResultWrong: false,    
+      }) 
+  }
+
+  playText = () => {
+    let playing = !this.state.playing;
+    let currentTrack = this.state.currentTrack;
+    if (playing) {
+      currentTrack.play();
+    } else {
+      currentTrack.pause();
+    }
+    this.setState({
+      playing,
+      currentTrack
+    })
+  }
+
+
     splitText = () =>{
-  	let speech = this.state.speech;
-  	if (speech){
-  		speech.pause();
-  	}
- 	
       let wrongIndexes = [];
       let content = this.state.content;
       let currentStringArray = content.split(". ");
@@ -138,10 +196,9 @@ class RecreateAudioText extends Component {
       this.setState({
         isSingleTextVisible: false,
         splittedSentenceVisible: true,
-        spllittedSentences: currentStringArray,
-        reservedSentences: reservedSentences,
-        wrongIndexes: wrongIndexes,
-        speech: null
+        splittedSentences: currentStringArray,
+        reservedSentences,
+        wrongIndexes
 
       }, () => this.startCountDown())
     }  
@@ -171,52 +228,49 @@ class RecreateAudioText extends Component {
         }
         if (min === 0 & sec === 0) {
           let time = this.state.totalSecondsSpent;
-          console.log(time);
           let minutes = Math.floor(time / 60);
-          console.log(minutes);
           let seconds = this.state.totalSecondsSpent - (minutes * 60);
-          console.log(seconds);
-          clearInterval(this.state.intervalHandle);
+          let intervalHandle = this.state.intervalHandle;
+          clearInterval(intervalHandle);
+          this.timeIsOut();
           this.setState({
             minutesSpent: minutes,
             secondsSpent: seconds,
-            isTimeOver: true
-          }, () => this.timeIsOut())
+            intervalHandle
+          })
 
         }
-        this.state.secondsRemaining--;
-        this.state.totalSecondsSpent++;
-
-   
+        this.setState({
+          secondsRemaining: this.state.secondsRemaining - 1,
+          totalSecondsSpent: this.state.totalSecondsSpent + 1
+        })
+ 
     }
     startCountDown = () => {
-        this.state.intervalHandle = setInterval(this.tick, 1000);
+        let intervalHandle = setInterval(this.tick, 1000);
         let time = this.state.minutes;
-        this.state.secondsRemaining = time * 60;
+        this.setState({
+          intervalHandle,
+          secondsRemaining: time * 60
+        })
     }
 
   onDragStart = (e, index) => {
-    this.draggedItem = this.state.spllittedSentences[index];
+    this.draggedItem = this.state.splittedSentences[index];
     e.dataTransfer.effectAllowed = "move";
     e.dataTransfer.setData("text/html", e.target);
     e.dataTransfer.setDragImage(e.target, 20, 20);
   };
 
   onDragOver = index => {
-    const draggedOverItem = this.state.spllittedSentences[index];
-
-    // if the item is dragged over itself, ignore
+    const draggedOverItem = this.state.splittedSentences[index];
     if (this.draggedItem === draggedOverItem) {
       return;
     }
-
-    // filter out the currently dragged item
-    let items = this.state.spllittedSentences.filter(item => item !== this.draggedItem);
-
-    // add the dragged item after the dragged over item
+    let items = this.state.splittedSentences.filter(item => item !== this.draggedItem);
     items.splice(index, 0, this.draggedItem);
 
-    this.setState({ spllittedSentences: items });
+    this.setState({ splittedSentences: items });
   };
 
   onDragEnd = () => {
@@ -225,11 +279,10 @@ class RecreateAudioText extends Component {
 
   checkSentences = () =>{
     let reservedSentences = this.state.reservedSentences;
-    let splittedSentences = this.state.spllittedSentences;
+    let splittedSentences = this.state.splittedSentences;
     let currentProgress;
-    console.log(splittedSentences);
-    console.log(reservedSentences);
     let wrongIndexes = this.state.wrongIndexes.slice();
+    let rightAnswers = 0;
     let wrongCount = 0;
     for (var i = 0; i < splittedSentences.length; i++) {
       if (splittedSentences[i] !== reservedSentences[i]) {
@@ -238,153 +291,72 @@ class RecreateAudioText extends Component {
       }
       else{
         wrongIndexes[i] = "recreate-text-right"
+        rightAnswers++;
       }
     }
-    if(wrongCount==0){
+    if (wrongCount == 0) {
       this.showFinal();
     }
 
     this.setState({
-      wrongIndexes: wrongIndexes
-    }, () => console.log(this.state))
+      wrongIndexes,
+      rightAnswers
+    })
 
   }
 
 
-  timeIsOut =()=>{
-  	if(this.state.isTimeOver){
-	    this.setState({
-	      isResultWrong: true,
-	      splittedSentenceVisible: false
-	    })
-  	}
+  timeIsOut =() => {
+    this.checkSentences();
+    this.setState({
+      isResultWrong: true,
+      splittedSentenceVisible: false
+    })
   }
 
   showFinal = () =>{
+      let intervalHandle = this.state.intervalHandle;
       let time = this.state.totalSecondsSpent;
-      console.log(time);
       let minutes = Math.floor(time / 60);
-      console.log(minutes);
       let seconds = this.state.totalSecondsSpent - (minutes * 60);
-      console.log(seconds);
-      clearInterval(this.state.intervalHandle);
+
+      clearInterval(intervalHandle);
       this.setState({
         isResultVisible: true,
         splittedSentenceVisible: false,
         minutesSpent: minutes,
-        secondsSpent: seconds        
+        secondsSpent: seconds,
+        intervalHandle        
       })
   }
 
-  tryAgain = () =>{
-      this.setState({
-        areTextsVisible: false,
-        isSingleTextVisible: true,
-        isMenuVisible: false,
-        isResultVisible: false,
-        isResultWrong: false,
-        seconds: '00',   // responsible for the seconds 
-        minutes: '5',  // responsible for the minutes
-        secondsRemaining: 0,
-        intervalHandle: 0,
-        wrongIndexes: [],
-        totalSecondsSpent: 0,
-        secondsSpent: 0,
-        minutesSpent: 0        
-      }) 
-  }
-
-
-
-
-  voiceText = () =>{
-	const speech = new Speech();
-	let activeVoice;
-	let txt = this.state.content;
-	console.log(txt);
-	let speechState = this.state.speechState;
-	speech
-		.init({
-		   	'volume': 0.3,
-		     'lang': 'en-GB',
-		     'rate': 1,
-		     'pitch': 1,
-		     'voice':'Google UK English Male',
-		     'splitSentences': true
-		}).then(data=>{
-			let voices = data.voices;
-			activeVoice = voices[6];
-			console.log(activeVoice);
-			speech.setLanguage('en-GB');
-			//console.log("voices", voices[6]);
-			speech.setVoice(activeVoice.name);
-			speech.speak({
-				text: txt/*,
-				  onstart: () => {
-				    console.log("Start utterance");
-				  },
-				  onend: () => {
-				    console.log("End utterance");
-				  },
-				  onresume: () => {
-				    console.log("Resume utterance");
-				  },
-				  onboundary: event => {
-				    console.log(
-				      event.name +
-				        " boundary reached after " +
-				        event.elapsedTime +
-				        " milliseconds."
-				    );
-				  } */				
-
-			})
-			this.setState({
-				speech: speech
-			})
-		})
-		/*
-		if (speechState == 'paused') {
-			speech.pause();
-		}
-		else */
-  }
-
-  stopSpeech = () =>{
-  	let speech = this.state.speech;
-  	speech.pause();
-  	this.setState({
-  		speech: speech
-  	})
-
-  }
-
-  resumeSpeech = () =>{
-  	let speech = this.state.speech;
-  	speech.resume();
-  	this.setState({
-  		speech: speech
-  	})  	
-  }
 
   render() {
-
-
     return (
       <Fragment>
         <div className="content-wrapper">
           <TopMenu></TopMenu>
           <div className="texts-wrapper fragments-wrapper">
-              {this.state.isMenuVisible ?
-                <Menu className="texts-menu" vertical>
-                  <Menu.Item name='inbox' >
-
-                  </Menu.Item>
-                </Menu> : null 
-              }          
-              {(this.state.texts.length && this.state.areTextsVisible) ? 
+          {this.state.isMenuVisible ?
+            <Menu className="texts-menu" vertical>
+              <Menu.Item name='inbox' >
+                <Dropdown 
+                  placeholder='Выберите уровень'
+                  fluid
+                  value={this.state.value} 
+                  key={this.state.options.id}
+                  clearable
+                  search
+                  selection
+                  onChange = {this.handleChange}
+                  options={this.state.options} 
+                />
+              </Menu.Item>
+            </Menu> : null
+          }         
+              {(this.state.areTextsVisible) ? 
               <Card.Group className="texts-cards" itemsPerRow={3} >
-              {this.state.texts.map((item, index) => 
+              {this.state.texts.map((item, index) => (this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === item.difficulty) && 
                 <Card key={index}>
                   <Card.Content>
                     <div className="texts-image-wrapper">
@@ -395,7 +367,7 @@ class RecreateAudioText extends Component {
                       {item.content.substr(0,250) + ' ...'}
                     </Card.Description>
                   </Card.Content>
-                  <Button onClick={this.readMore} >Читать далее</Button>
+                  <Button onClick={this.readMore.bind(this, item.id)} >Читать далее</Button>
                 </Card>
                )}
               </Card.Group> : null
@@ -411,14 +383,19 @@ class RecreateAudioText extends Component {
                     <Card.Description className="single-text-card-description p-wrap fragment-description recreate-text display-none">
                       { this.state.content}
                     </Card.Description>
-                    <div className="recreate-text-icon" onClick={this.voiceText}>
-                    	<Icon size="big" name="microphone"></Icon>
-                    </div>
+                    {this.state.playing ?
+                      <div className="recreate-text-icon" onClick={this.playText}>
+                        <Icon size="large" name="pause"></Icon>
+                      </div>: null
+                    }
+                    {!this.state.playing ?
+                      <div className="recreate-text-icon" onClick={this.playText}>
+                        <Icon size="large" name="play"></Icon>
+                      </div>: null
+                    }
                     <div className="buttons-wrapper">
 	                    <Button primary onClick={this.splitText}>Я прослушал</Button>
-	                    { /*
-	                    <Button primary onClick={this.stopSpeech}>Приостановить</Button>
-	                    <Button primary onClick={this.resumeSpeech}>Продолжить</Button> */}              	
+           	
                     </div>
                   </Card.Content>
                 </Card>:null
@@ -433,7 +410,7 @@ class RecreateAudioText extends Component {
                   <Card.Content className="fragments-content recreate-text-content">
                     <h1 className="timer">{this.state.minutes}:{this.state.seconds}</h1>
                     <Card.Description className="single-text-card-description p-wrap fragment-description recreate-text">
-                      {this.state.spllittedSentences.map((item, idx) =>
+                      {this.state.splittedSentences.map((item, idx) =>
                           <p className={'recreate-text-sentence drag ' + this.state.wrongIndexes[idx]} 
                               draggable 
                               key = {idx}
@@ -445,8 +422,6 @@ class RecreateAudioText extends Component {
                       )}
                     </Card.Description>
                     <Button primary onClick={this.checkSentences}>Проверить</Button>
-                    {/*<Button primary onClick={this.showFinal}>Final</Button>*/ }
-                    
                   </Card.Content>
                 </Card> : null
               } 
@@ -464,7 +439,6 @@ class RecreateAudioText extends Component {
                     </Card.Description>
                   </Card.Content>
                   <div className="fragment-variants recreate-text-buttons">
-                    <Button primary onClick={this.tryAgain}>Заново</Button>
                     <Button primary onClick={this.backToTexts}>Назад к текстам</Button>
                   </div> 
                 </Card> : null
@@ -478,11 +452,13 @@ class RecreateAudioText extends Component {
                   </div>                   
                   <Card.Content className="fragments-content">
                     <Card.Description className="single-text-card-description p-wrap fragment-description">
-                      <h2>Время вышло</h2>
+                      <div>
+                        <h2>Время вышло</h2>
+                        <h2>Правильно расставлено {this.state.rightAnswers} из {this.state.splittedSentences.length} предложений</h2> 
+                      </div>                      
                     </Card.Description>
                   </Card.Content>
                   <div className="fragment-variants recreate-text-buttons">
-                    <Button primary onClick={this.tryAgain}>Заново</Button>
                     <Button primary onClick={this.backToTexts}>Назад к текстам</Button>
                   </div> 
                 </Card> : null

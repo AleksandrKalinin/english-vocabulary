@@ -231,15 +231,7 @@ initialLoad = () => {
     }
 
     var result = [];
-    var tempObject = {
-      "id": 10000,
-      "name": "minnow",
-      "translation": "пескарь",
-      "meaning": "a small freshwater Eurasian cyprinoid fish that typically forms large shoals",
-      "image": "data/minnow.jpg",
-      "date": 15,
-      "category": "animals"           
-    }
+
     for (var i = 0; i < words.length/5; i++) {
      result[i] = [];
      for (var j = 0; j < 5; j++) {
@@ -258,7 +250,7 @@ initialLoad = () => {
             result[i][j] = el;
           }
           else {
-            result[i][j] = tempObject;
+            result[i][j] = words[Math.floor(Math.random() * words.length)];
           }
         }
       }    

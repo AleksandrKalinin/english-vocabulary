@@ -52,6 +52,7 @@ import GrammarPastPerfect from './grammar/GrammarPastPerfect'
 import GrammarPresentPerfectContinuous from './grammar/GrammarPresentPerfectContinuous'
 import GrammarPastPerfectContinuous from './grammar/GrammarPastPerfectContinuous'
 import GrammarFuturePerfectContinuous from './grammar/GrammarFuturePerfectContinuous'
+import AudioPlayer from './AudioPlayer'
 import {BrowserRouter as Router, Route } from "react-router-dom";
 
 
@@ -110,6 +111,7 @@ ReactDOM.render(
 	<Route path="/grammarpresentperfectcontinuous" component={GrammarPresentPerfectContinuous} />
 	<Route path="/grammarpastperfectcontinuous" component={GrammarPastPerfectContinuous} />
 	<Route path="/grammarfutureperfectcontinuous" component={GrammarFuturePerfectContinuous} />
+	<Route path="/audioplayer" component={AudioPlayer} />
 	</div>
 	</Router>, document.getElementById('root'));
 

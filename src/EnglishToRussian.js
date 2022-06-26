@@ -22,7 +22,7 @@ class EnglishToRussian extends Component {
 
     initialLoad = () => {
       var id = this.state.id;
-      axios.get('/words.json')
+      axios.get('/working.json')
         .then(res => {
           const words = res.data;
           const currentName = words[id].name;
@@ -34,7 +34,7 @@ class EnglishToRussian extends Component {
           const list = [];
           var wholeList = [];
           for (var i = 0; i < words.length/5; i++) {
-            while(list.length < 5) {
+            while(list.length < 10) {
                 var el = words[Math.floor(Math.random() * words.length)];
                 if(list.indexOf(el) === -1) list.push(el);               
               }
@@ -42,16 +42,6 @@ class EnglishToRussian extends Component {
           }
           
           var result = [];
-          var tempObject = {
-            "id": 10000,
-            "name": "minnow",
-            "translation": "пескарь",
-            "meaning": "a small freshwater Eurasian cyprinoid fish that typically forms large shoals",
-            "image": "data/minnow.jpg",
-            "date": 15,
-            "category": "animals"           
-          }
-
           for (var i = 0; i < words.length/5; i++) {
             result[i] = [];
             for (var j = 0; j < 5; j++) {
@@ -70,7 +60,7 @@ class EnglishToRussian extends Component {
                         result[i][j] = el;
                       }
                       else {
-                        result[i][j] = tempObject;
+                        result[i][j] = words[Math.floor(Math.random() * words.length)];
                       }
                     }
                 }    
@@ -91,23 +81,23 @@ class EnglishToRussian extends Component {
             currentWord,
             wholeList: wholeList.slice(0, 10),
             result: result.slice(0, 10),
-            currentPicture }, () => console.log(this.state));
+            currentPicture });
         })
     }
 
     updateComponent = () =>{
-         const id = this.state.id;
-          const words = this.state.words;
-          const currentName = words[id].name;
-          const currentTranslation = words[id].translation;
-          const currentMeaning = words[id].meaning;
-          const currentImage = words[id].image;
-          this.setState({ 
-            words, 
-            currentName, 
-            currentImage, 
-            currentTranslation, 
-            currentMeaning});
+      const id = this.state.id;
+      const words = this.state.words;
+      const currentName = words[id].name;
+      const currentTranslation = words[id].translation;
+      const currentMeaning = words[id].meaning;
+      const currentImage = words[id].image;
+      this.setState({ 
+        words, 
+        currentName, 
+        currentImage, 
+        currentTranslation, 
+        currentMeaning});
     }
 
     startTraining = () =>{
@@ -127,7 +117,7 @@ class EnglishToRussian extends Component {
       newId = newId + 1;
       const words = this.state.wholeList;
       const result = this.state.result;
-        if(newId < wordsLength) {
+      if(newId < wordsLength) {
         const currentName = words[newId].name;
         const currentTranslation = words[newId].translation;
         const currentMeaning = words[newId].meaning;
@@ -155,9 +145,9 @@ class EnglishToRussian extends Component {
             currentWord,
             currentPicture,
             disabled: false
-
           })
-        } 
+        }  
+
       else this.setState({
           isFinalVisible: true,
           isTranslationVisible: false,
@@ -168,8 +158,7 @@ class EnglishToRussian extends Component {
           isImageVisible: false,
           isLinkVisible: false,
           isInputVisible: false,
-          search: ''  
-
+          search: ''
       }) 
     }
 
@@ -205,24 +194,25 @@ class EnglishToRussian extends Component {
       this.setState({
         isImageVisible: true,
         flagState: true,
-        currentPicture: currentPicture,
-        positiveWords: positiveWords,
-        negativeWords: negativeWords,
+        currentPicture,
+        positiveWords,
+        negativeWords,
         disabled: true
       })
     }
-    else{
+
+    else {
       negativeWords.push(newObj);
       this.setState({
         isImageVisible: true,
         flagState: true,
-        currentPicture: currentPicture,
-        positiveWords: positiveWords,
-        negativeWords: negativeWords,
+        currentPicture,
+        positiveWords,
+        negativeWords,
         disabled: true
       })
     } 
-   } 
+  } 
 
    dontKnow = () =>{
     const list = this.state.list;
@@ -230,10 +220,6 @@ class EnglishToRussian extends Component {
       isImageVisible: true,
       flagState: true
     })
-   }
-
-   consoleState = (e) =>{
-    console.log(this.state);
    }
 
    voiceWord = () =>{
@@ -335,7 +321,7 @@ class EnglishToRussian extends Component {
                         <Image src={this.state.currentPicture} className="training-image">
                         </Image>                
                       </div>
-                    {this.state.flagState ?
+                    {this.state.flagState && this.state.isImageVisible ?
                       <Button onClick={this.continueTraining} primary>Продолжить тренировку</Button>:null
                     }                                     
                     </div>: null               
@@ -381,7 +367,7 @@ class EnglishToRussian extends Component {
                         </div>
                       </Card.Description>
                       <Button.Group className="card-buttons-wrapper">
-                        <Button primary onClick={this.setStateOnStart}>Продолжить</Button>
+                        <Button primary onClick={this.setStateOnStart}>К текстам</Button>
                         <Button primary><Link className="training-link" to="/training">К тренировкам</Link></Button>
                       </Button.Group>
                     </Card.Content>

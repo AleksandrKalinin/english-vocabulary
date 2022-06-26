@@ -284,8 +284,10 @@ body a{
 
 .vocab-list .item {
 	padding: 12px 30px !important; 
-	/* border: 1px solid rgba(34,36,38,0.15); */
 	box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .vocab-list .item .content{
@@ -334,7 +336,8 @@ body a{
 	display: flex !important;
 	align-items: center;
 	/*width: 474px !important; */
-	width: 654px !important;
+	/*width: 654px !important; */
+	width: calc(100% - 240px) !important;
 
 }
 
@@ -424,6 +427,7 @@ body a{
 
 .card-buttons-wrapper{
 	width: 100% !important;
+	max-width: 450px !important;
 	display: flex !important;
 	flex-direction: row !important;
 	justify-content: space-around !important;
@@ -449,6 +453,10 @@ body a{
 	background: ##3281F0;
 }
 
+button a.training-link{
+	color: #FFFFFF !important;
+	background: ##3281F0;
+}
 
 #root{
 	width: 100%;
@@ -754,6 +762,7 @@ body a{
 .audio-list .item{
 	padding: 7px 0 !important;
 	font-size: 18px;
+	text-align: left !important;
 
 }
 
@@ -842,7 +851,7 @@ body a{
 	width: 200px !important;
 	height: 290px !important;
 	overflow: hidden !important;
-	padding: 20px !important; 
+	 
 }
 
 .training-wrapper-image{
@@ -1406,17 +1415,15 @@ footer{
 }
 
 .modal-icon-wrapper-delete span{
-	background: #333333;
-	padding: 5px;
-	font-size: 18px;
+	font-size: 24px;
 	color: #3281F0;
-	border-radius: 50%;
 	cursor: pointer;
 	transition: all .1s ease-in-out;	
 }
 
 .modal-icon-wrapper-delete span i{
 	margin: 0 !important;
+	color: #333333;
 }
 
 .modal-icon-wrapper-delete span:hover{
@@ -1436,11 +1443,11 @@ footer{
 
 .modal-word-description .header{
 	width: auto !important;
-	background-color: #333333;
 	padding: 10px 10px !important;
 	color: #fff;
 	margin: 0 !important;
 	text-align: center;
+	color: #333333;
 }
 
 .modal-word-description .header h2 span{
@@ -2334,18 +2341,34 @@ footer{
 	margin-bottom: 30px;
 	border: 1px solid #fff;
 	border-radius: 50%;
-	padding: 10px;
+	padding: 20px;
 	cursor: pointer !important;
+	transition: .2s all;
 }
 
-.recreate-text-icon:hover{
-	transform: scale(1.02);
+.recreate-text-icon i {
+	transition: .2s all;
+	color: #FFFFFF;
+	margin: 0;
+	width: 38px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
 }
 
-.recreate-text-icon i{
-	margin: 0!important;
-	color: #fff !important;
-	
+.recreate-text-icon i:before {
+	transition: .2s all;
+}
+
+.recreate-text-icon:hover i{
+	transform: scale(1.05);
+	color: rgb(50, 129, 240) !important;
+}
+
+.recreate-text-icon:hover {
+	background: #ffffff !important;
 }
 
 .buttons-wrapper{
@@ -2367,8 +2390,10 @@ footer{
 
 .inserted-text{
 	min-height: 64px !important;
-	background: #333333 !important;
+	background: #444444 !important;
 	padding: 15px !important;
+	line-height: 36px !important;
+	margin: 0;
 }
 
 .nav-icon-left{
@@ -2809,12 +2834,13 @@ footer{
 }
 
 .advantage-section{
-	height: 500px;
+	height: 600px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	padding: 50px 0;
 }
 
 .advantage-overlay{
@@ -3216,4 +3242,13 @@ footer{
 	height: 100% !important;
 	object-fit: cover !important;
 	margin: 0 auto;
+}
+
+.recreate-item {
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+.recreate-item__text {
+	line-height: 28px;
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Button, Icon, Image } from 'semantic-ui-react'
 import { List} from 'semantic-ui-react'
 import './style.css'
@@ -25,26 +25,26 @@ class VocabWord extends Component {
 
   consoleState = (el) =>{
     var newIndex = el.target.parentElement.parentElement.parentElement.parentElement;
-    console.log(newIndex);
-    console.log(newIndex.children[1].firstChild.firstChild.textContent);
   }
 
   render() {
     var descriptionVisible = false;
     return (
       <List.Item>
-
-        <Image avatar src={this.props.image} />
-        <List.Content className="word-content">
-          <List.Header as='a'>{this.props.name} - {this.props.transcription} - {this.props.translation}</List.Header>
-          {descriptionVisible ?         
-            <List.Description className="word-meaning">
-                <b>{this.props.meaning}</b>
-            </List.Description> :null
-          }
+        <Fragment>
+          <Image avatar src={this.props.image} />
+          <List.Content className="word-content">
+            <List.Header as='a'>{this.props.name} - {this.props.transcription} - {this.props.translation}</List.Header>
+            {descriptionVisible ?         
+              <List.Description className="word-meaning">
+                  <b>{this.props.meaning}</b>
+              </List.Description> :null
+            }
         </List.Content>
+      </Fragment>  
         <List.Content>
-              <ModalWord key={this.props.id} 
+              <ModalWord 
+                      key={this.props.id} 
                       name={this.props.name} 
                       translation={this.props.translation} 
                       meaning={this.props.meaning}
@@ -63,7 +63,7 @@ class VocabWord extends Component {
               </Button.Group>              
         </List.Content>
       </List.Item>
-  );
+    );
   }
 }
 

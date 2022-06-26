@@ -51,10 +51,10 @@ class Pronunciation extends Component {
           let currentSentence = splittedText[id] + '.'; 
           let currentSentenceContent = splittedText[id].replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').toLowerCase();           
           this.setState({
-            texts: texts,
-            currentSentence: currentSentence,
-            splittedText: splittedText,
-            currentText: currentText,
+            texts,
+            currentSentence,
+            splittedText,
+            currentText,
             transcript: this.props.transcript,
             resetTranscript: this.props.resetTranscript,
             browserSupportsSpeechRecognition: this.props.browserSupportsSpeechRecognition,
@@ -65,12 +65,19 @@ class Pronunciation extends Component {
         }));      
     }
 
-    renderComponent = () =>{
+  setStateOnStart = () => {
+
+  }
+
+  initialLoad = () => {
+
+  }
+
+    startTraining = () =>{
       this.setState({
         isButtonVisible: false,
         isCardVisible: true
-      })
-      this.state.startListening();
+      }, () => this.state.startListening())
     }
 
     submitResponse = () =>{
@@ -82,9 +89,9 @@ class Pronunciation extends Component {
    
       if(currentSentenceContent === objectTranscription){
         alert('true')
-        positiveSentences.push(currentSentence);
-     
+        positiveSentences.push(currentSentence);     
       }
+
       else {
         alert('false')
         negativeSentences.push(currentSentence);
@@ -93,8 +100,8 @@ class Pronunciation extends Component {
         isTranslationVisible: true,
         showNavButtons: false,
         showContinueButton: true,
-        positiveSentences: positiveSentences,
-        negativeSentences: negativeSentences
+        positiveSentences,
+        negativeSentences
 
       }, () => this.continueTraining() )        
     }
@@ -111,8 +118,8 @@ class Pronunciation extends Component {
  
         this.setState({
           id: newId,
-          currentSentence: currentSentence,
-          currentSentenceContent: currentSentenceContent,
+          currentSentence,
+          currentSentenceContent,
           isTranslationVisible: false,
           showNavButtons: true,
           showContinueButton: false        
@@ -132,13 +139,6 @@ class Pronunciation extends Component {
       }  
     }
 
-    consoleState = () =>{
-      var object = document.getElementById('transcription').textContent;
-      console.log(object);
-      console.log(this.state);
-      console.log(this.props.transcript);
-    }
-
     callSubmit = () =>{
       this.state.resetTranscript();
       this.continueTraining();
@@ -147,7 +147,6 @@ class Pronunciation extends Component {
     clearTranscription = () =>{
     	let transcript = this.props.transcript;
     	let newTranscript =	transcript.substring(0,transcript.length - 1);
-    	console.log(newTranscript);
     	this.props.transcript = newTranscript;
     }
 
@@ -172,7 +171,7 @@ class Pronunciation extends Component {
             <Card.Content>
               <Card.Header>Произношение</Card.Header>
               <Card.Description>
-                <Button primary onClick={this.renderComponent} >Начать</Button>
+                <Button primary onClick={this.startTraining} >Начать</Button>
               </Card.Description>
             </Card.Content>
           </Card>          
@@ -260,7 +259,7 @@ class Pronunciation extends Component {
                   </Card.Description>
                   <Button.Group className="card-buttons-wrapper">
                     <Button primary>Продолжить</Button>
-                    <Button primary><Link to="/training">Вернуться</Link></Button>
+                    <Button primary><Link className="training-link" to="/training">К тренировкам</Link></Button>
                   </Button.Group>
                 </Card.Content>
               </Card>          
