@@ -55,65 +55,73 @@ import GrammarFuturePerfectContinuous from './grammar/GrammarFuturePerfectContin
 import AudioPlayer from './AudioPlayer'
 import {BrowserRouter as Router, Route } from "react-router-dom";
 
+import {Provider} from "react-redux";
+import configureStore from "./store/index";
+
+let initialState = [];
+
+let store = configureStore(initialState);
 
 
 ReactDOM.render(  
-	<Router>
-	<div className="router-wrapper">
-	<Route exact path="/" component={Main}/>
-	<Route path="/vocab" component={App} />
-	<Route path="/settings" component={Settings} />
-	<Route path="/grammar" component={GrammarList} />
-	<Route path="/materials" component={Materials} />
-	<Route path="/statistics" component={Statistics} />
-	<Route path="/courses" component={CoursesList} />
-	<Route path="/coursessimple" component={CoursesSimple} />
-	<Route path="/training" component={Training} />		  
-	<Route path="/cards" component={Cards} />
-	<Route path="/rightwrong" component={Rightwrong} />		
-	<Route path="/constructword" component={ConstructWord} />
-	<Route path="/proverbs" component={Proverbs}/>
-	<Route path="/audio" component={Audio} />
-	<Route path="/pronunciation" component={Pronunciation} />
-	<Route path="/recreatetext" component={RecreateText} />
-	<Route path="/recreateaudiotext" component={RecreateAudioText} />
-	<Route path="/insertspaces" component={InsertSpaces} />						
-	<Route path="/englishtorussian" component={EnglishToRussian} />
-	<Route path="/russiantoenglish" component={RussianToEnglish} />
-	<Route path="/videos" component={Videos} />
-	<Route path="/fragments" component={Fragments} />
-	<Route path="/decks" component={Decks} />		
-	<Route path="/ted" component={TED} />
-	<Route path="/engvideo" component={EngVid} />
-	<Route path="/britishcouncil" component={BritishCouncil} />
-	<Route path="/khan" component={Khan} />
-	<Route path="/conanobrien" component={ConanOBrien} />
-	<Route path="/jimmyfallon" component={JimmyFallon} />
-	<Route path="/jimmykimmel" component={JimmyKimmel} />
-	<Route path="/coursera" component={Coursera} />
-	<Route path="/ellen" component={Ellen} />
-	<Route path="/stephencolbert" component={StephenColbert} />
-	<Route path="/jamescorden" component={JamesCorden} />
-	<Route path="/sethmeyers" component={SethMeyers} />
-	<Route path="/texts" component={TextsList} />
-	<Route path="/books" component={BookList} />		
-	<Route path="/tests" component={Example} />
-	<Route path="/audiolist" component={AudioList} />
-	<Route path="/grammarpresentsimple" component={GrammarPresentSimple} />
-	<Route path="/grammarpastsimple" component={GrammarPastSimple} />
-	<Route path="/grammarfuturesimple" component={GrammarFutureSimple} />
-	<Route path="/grammarpresentcontinuous" component={GrammarPresentContinuous} />
-	<Route path="/grammarpastcontinuous" component={GrammarPastContinuous} />
-	<Route path="/grammarfuturecontinuous" component={GrammarFutureContinuous} />
-	<Route path="/grammarpresentperfect" component={GrammarPresentPerfect} />
-	<Route path="/grammarpastperfect" component={GrammarPastPerfect} />
-	<Route path="/grammarfutureperfect" component={GrammarFuturePerfect} />
-	<Route path="/grammarpresentperfectcontinuous" component={GrammarPresentPerfectContinuous} />
-	<Route path="/grammarpastperfectcontinuous" component={GrammarPastPerfectContinuous} />
-	<Route path="/grammarfutureperfectcontinuous" component={GrammarFuturePerfectContinuous} />
-	<Route path="/audioplayer" component={AudioPlayer} />
-	</div>
-	</Router>, document.getElementById('root'));
+	<Provider store={store}>
+		<Router>
+			<div className="router-wrapper">
+				<Route exact path="/" component={Main}/>
+				<Route path="/vocab" component={App} />
+				<Route path="/settings" component={Settings} />
+				<Route path="/grammar" component={GrammarList} />
+				<Route path="/materials" component={Materials} />
+				<Route path="/statistics" component={Statistics} />
+				<Route path="/courses" component={CoursesList} />
+				<Route path="/coursessimple" component={CoursesSimple} />
+				<Route path="/training" component={Training} />		  
+				<Route path="/cards" component={Cards} />
+				<Route path="/rightwrong" component={Rightwrong} />		
+				<Route path="/constructword" component={ConstructWord} />
+				<Route path="/proverbs" component={Proverbs}/>
+				<Route path="/audio" component={Audio} />
+				<Route path="/pronunciation" component={Pronunciation} />
+				<Route path="/recreatetext" component={RecreateText} />
+				<Route path="/recreateaudiotext" component={RecreateAudioText} />
+				<Route path="/insertspaces" component={InsertSpaces} />						
+				<Route path="/englishtorussian" component={EnglishToRussian} />
+				<Route path="/russiantoenglish" component={RussianToEnglish} />
+				<Route path="/videos" component={Videos} />
+				<Route path="/fragments" component={Fragments} />
+				<Route path="/decks" component={Decks} />		
+				<Route path="/ted" component={TED} />
+				<Route path="/engvideo" component={EngVid} />
+				<Route path="/britishcouncil" component={BritishCouncil} />
+				<Route path="/khan" component={Khan} />
+				<Route path="/conanobrien" component={ConanOBrien} />
+				<Route path="/jimmyfallon" component={JimmyFallon} />
+				<Route path="/jimmykimmel" component={JimmyKimmel} />
+				<Route path="/coursera" component={Coursera} />
+				<Route path="/ellen" component={Ellen} />
+				<Route path="/stephencolbert" component={StephenColbert} />
+				<Route path="/jamescorden" component={JamesCorden} />
+				<Route path="/sethmeyers" component={SethMeyers} />
+				<Route path="/texts" component={TextsList} />
+				<Route path="/books" component={BookList} />		
+				<Route path="/tests" component={Example} />
+				<Route path="/audiolist" component={AudioList} />
+				<Route path="/grammarpresentsimple" component={GrammarPresentSimple} />
+				<Route path="/grammarpastsimple" component={GrammarPastSimple} />
+				<Route path="/grammarfuturesimple" component={GrammarFutureSimple} />
+				<Route path="/grammarpresentcontinuous" component={GrammarPresentContinuous} />
+				<Route path="/grammarpastcontinuous" component={GrammarPastContinuous} />
+				<Route path="/grammarfuturecontinuous" component={GrammarFutureContinuous} />
+				<Route path="/grammarpresentperfect" component={GrammarPresentPerfect} />
+				<Route path="/grammarpastperfect" component={GrammarPastPerfect} />
+				<Route path="/grammarfutureperfect" component={GrammarFuturePerfect} />
+				<Route path="/grammarpresentperfectcontinuous" component={GrammarPresentPerfectContinuous} />
+				<Route path="/grammarpastperfectcontinuous" component={GrammarPastPerfectContinuous} />
+				<Route path="/grammarfutureperfectcontinuous" component={GrammarFuturePerfectContinuous} />
+				<Route path="/audioplayer" component={AudioPlayer} />
+			</div>
+		</Router>	
+	</Provider>, document.getElementById('root'));
 
 /*
 	const routes = [

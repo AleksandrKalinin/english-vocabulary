@@ -5,6 +5,10 @@ import axios from 'axios';
 import speech from 'speech-synth';
 import {Link} from "react-router-dom";
 
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
+
 class EnglishToRussian extends Component {
 
 	constructor(props){
@@ -379,7 +383,15 @@ class EnglishToRussian extends Component {
             <footer></footer>
         </Fragment>
     	);
-      }
+    }
 }
 
-export default EnglishToRussian;
+function mapStateToProps(state) {
+  return {store: state.reducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(EnglishToRussian);
