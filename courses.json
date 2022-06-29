@@ -1,0 +1,212 @@
+[
+  {
+    "id": 0,
+    "course": "first-course",
+    "time": 6,
+    "tasks": 2,
+    "exercises": [
+      {
+        "id": 0,
+        "full_sentence": "She doesn't understand it yet",
+        "translation": "Она ещё это не понимает",
+        "number": 5,
+        "words": [
+          {
+            "position": 0,
+            "variants":[
+              "She", "He", "They", "Me"
+            ]
+          },
+          {
+            "position": 1,
+            "variants":[
+              "does", "doesn't", "don't", "do"
+            ]
+          },
+          {
+            "position": 2,
+            "variants":[
+              "understand", "understood", "understanding", "have understand"
+            ]
+          },
+          {
+            "position": 3,
+            "variants":[
+              "it", "these", "those", "this"
+            ]
+          }, 
+          {
+            "position": 4,
+            "variants":[
+              "already", "yet", "soon", "tomorrow"
+            ]
+          }                                             
+        ]
+      },
+      {
+        "id": 1,
+        "full_sentence": "Hello world",
+        "translation": "Привет мир",
+        "number": 2,
+        "words": [
+          {
+            "position": 0,
+            "variants":[
+              "Hello", "Goodbye", "Blabla", "Howdy"
+            ]
+          },
+          {
+            "position": 1,
+            "variants":[
+              "world", "table", "people", "chair"
+            ]
+          }                                         
+        ]
+      },
+      {
+        "id": 2,
+        "full_sentence": "Die with memories",
+        "translation": "Умирай с воспоминаниями",
+        "number": 3,
+        "words": [
+          {
+            "position": 0,
+            "variants":[
+              "Die", "Live", "Blala", "Exist"
+            ]
+          },
+          {
+            "position": 1,
+            "variants":[
+              "with", "on", "in", "without"
+            ]
+          },
+          {
+            "position": 2,
+            "variants":[
+              "memories", "dreams", "reservations", "blabla"
+            ]
+          }                                                   
+        ]
+      },
+      {
+        "id": 3,
+        "full_sentence": "Just do it",
+        "translation": "Просто сделай это",
+        "number": 3,
+        "words": [
+          {
+            "position": 0,
+            "variants":[
+              "Just", "Simply", "Blala", "Again"
+            ]
+          },
+          {
+            "position": 1,
+            "variants":[
+              "do", "done", "does", "don't"
+            ]
+          },
+          {
+            "position": 2,
+            "variants":[
+              "it", "this", "that", "those"
+            ]
+          }                                                   
+        ]
+      },
+      {
+        "id": 4,
+        "full_sentence": "They can ignore you",
+        "translation": "Они могут тебя игнорировать",
+        "number": 4,
+        "words": [
+          {
+            "position": 0,
+            "variants":[
+              "They", "We", "You", "Me"
+            ]
+          },
+          {
+            "position": 1,
+            "variants":[
+              "can", "cannot", "do", "would"
+            ]
+          },
+          {
+            "position": 2,
+            "variants":[
+              "you", "your", "me", "him"
+            ]
+          },
+          {
+            "position": 3,
+            "variants":[
+              "ignore", "reserve", "love", "exceed"
+            ]
+          }
+        ]
+      }                         
+    ] 
+  },
+  {
+    "id": 1,
+    "course": "second-course",
+    "time": 5,
+    "tasks": 3,    
+    "exercises": [
+      {
+        "id": 0,
+        "full_sentence": "One more sentence",
+        "translation": "Ещё одно предложение",
+        "number": 5,
+        "words": [
+          {
+            "position": 0,
+            "variants":[
+              "One", "Two", "Three", "Four"
+            ]
+          },
+          {
+            "position": 1,
+            "variants":[
+              "more", "most", "must", "mist"
+            ]
+          },
+          {
+            "position": 2,
+            "variants":[
+              "sentence", "tence", "electricity", "alacrity"
+            ]
+          }                                            
+        ]
+      },
+      {
+        "id": 1,
+        "full_sentence": "Six feet under",
+        "translation": "на глубине шесть футов",
+        "number": 2,
+        "words": [
+          {
+            "position": 0,
+            "variants":[
+              "Six", "Seven", "Eight", "Nine"
+            ]
+          },
+          {
+            "position": 1,
+            "variants":[
+              "feet", "foot", "leg", "arm"
+            ]
+          },
+          {
+            "position": 2,
+            "variants":[
+              "under", "over", "near", "variant"
+            ]
+          }                                                   
+        ]
+      }
+    ] 
+  }    
+] 

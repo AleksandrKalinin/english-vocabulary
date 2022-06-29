@@ -1,0 +1,72 @@
+[
+  {
+    "name": "appearance",
+    "id": 0,
+    "number": 25,
+    "level": "intermediate",    
+    "image": "https://loremflickr.com/320/240/appearance"
+  },
+  {
+    "name": "animals",
+    "id": 1,
+    "number": 30,
+    "level": "advanced",    
+    "image": "https://loremflickr.com/320/240/animals"
+  },
+  {
+    "name": "anathomy",
+    "id": 2,
+    "number": 30,
+    "level": "beginner",    
+    "image": "https://loremflickr.com/320/240/anathomy"
+  },
+  {
+    "name": "airport",
+    "id": 3,
+    "number": 25,
+    "level": "advanced",    
+    "image": "https://loremflickr.com/320/240/airport"
+  },
+  {
+    "name": "clothes",
+    "id": 4,
+    "number": 10,
+    "level": "beginner",    
+    "image": "https://loremflickr.com/320/240/clothes"
+  },
+  {
+    "name": "colors",
+    "id": 5,
+    "number": 30,
+    "level": "intermediate",    
+    "image": "https://loremflickr.com/320/240/colors"
+  },
+  {
+    "name": "city",
+    "id": 6,
+    "number": 30,
+    "level": "beginner",    
+    "image": "https://loremflickr.com/320/240/city"
+  },
+  {
+    "name": "character",
+    "id": 7,
+    "number": 30,
+    "level": "intermediate",    
+    "image": "https://loremflickr.com/320/240/character"
+  },
+  {
+    "name": "body",
+    "id": 8,
+    "number": 30,
+    "level": "intermediate",
+    "image": "https://loremflickr.com/320/240/body"
+  },
+  {
+    "name": "birds",
+    "id": 9,
+    "number": 30,
+    "level": "intermediate",    
+    "image": "https://loremflickr.com/320/240/birds"
+  }           
+]  

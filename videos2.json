@@ -1,0 +1,98 @@
+[
+  {
+    "id": 0,
+    "name": "TED talks",
+    "description": "TED Talks shares giving the talk of their lives in 18 minutes",
+    "channelID":  "UCAuUUnT6oDeKwE6v1NGQxug",    
+    "image": "thumbnails/ted.jpg",
+    "link": "/ted"
+  },
+  {
+    "id": 1,
+    "name": "British Council",
+    "description": "The British Council is the Unite",
+    "channelID": "UCOtnu-KKoAbN47IuYMeDPOg",
+    "image": "thumbnails/britishcouncil.png",
+    "link": "/britishcouncil"
+  },
+  {
+    "id": 2,
+    "name": "EngVideo",
+    "description": "Start learning English ",
+    "image": "thumbnails/engvid.jpg",
+    "link": "/engvideo"
+  },
+  {
+    "id": 3,
+    "name": "Khan Academy",
+    "meaning": "Khan Academy for anyone, anywhere. ",
+    "channelID": "UC4a-Gbdw7vOaccHmFo40b9g",
+    "image": "thumbnails/khan.jpg",
+    "link": "/khan"
+  },
+  {
+    "id": 4,
+    "name": "Coursera",
+    "translation": "вездесущий",
+    "meaning": "Learn online and earn topics.",
+    "channelID": "UCZ50rYSkYQG31YDEJm9Di_g",    
+    "image": "thumbnails/coursera.jpg",
+    "link": "/coursera"
+  },
+  {
+    "id": 5,
+    "name": "Jimmy Fallon",
+    "description": "The Tonight Show Starring ",
+    "channelID": "UC8-Th83bH_thdKZDJCrn88g",    
+    "image": "thumbnails/jimmyfallon.jpg",
+    "link": "/jimmyfallon"
+  },
+  {
+    "id": 6,
+    "name": "Jimmy Kimmel",
+    "description": "The official s.",
+    "channelID": "UCa6vGFO9ty8v5KZJXQxdhaw",    
+    "image": "thumbnails/jimmykimmel.jpg",
+    "link": "/jimmykimmel"
+  },
+  {
+    "id": 7,
+    "name": "Conan O'Brien",
+    "description": "Conan O'Brien hannel for CONAN on TBS.",
+    "channelID": "UCi7GJNg51C3jgmYTUwqoUXA",    
+    "image": "thumbnails/conanobrien.jpg",
+    "link": "/conanobrien"
+  },
+  {
+    "id": 8,
+    "name": "Seth Meyers",
+    "description": "Beloved  the show's wildlyn musical talent. ",
+    "channelID":  "UCVTyTA7-g9nopHeHbeuvpRA",
+    "image": "thumbnails/sethmeyers.jpg",
+    "link": "/sethmeyers"
+  },
+  {
+    "id": 9,
+    "name": "Stephen Colbert",
+    "description": "Welcome to the official YouTube channel for 'The Late Show with Stephen Colbert'!",
+    "channelID": "UCMtFAi84ehTSYSE9XoHefig",    
+    "image": "thumbnails/stephencolbert.jpg",
+    "link": "/stephencolbert"
+  },
+  {
+    "id": 10,
+    "name": "James Corden",
+    "description": "This is the official YouTube channel for The Late Late Show with James Corden on CBS.",
+    "channelID": "UCJ0uqCI0Vqr2Rrt1HseGirg",    
+    "image": "thumbnails/jamescorden.jpg",
+    "link": "/jamescorden"
+  },
+  {
+    "id": 11,
+    "name": "Ellen",
+    "description": "For 15 incredible, eventful and sometimes life-changing seasons, Ellen has been making audiences laugh all over the world with her signature brand of humor and her powerful message of kindness. There's nobody better at making you laugh!",
+    "channelID": "UCp0hYYBW6IMayGgR-WeoCvQ",    
+    "image": "thumbnails/ellen.jpg",
+    "link": "/ellen"
+  }                                 
+ ] 

@@ -1,0 +1,350 @@
+[
+  {
+    "name": "accompany",
+    "transcription": "[tuː əˈkʌmpəni]",
+    "translation": "аккомпанировать",
+    "category": "music"
+  },
+  {
+    "name": "accordion",
+    "transcription": "[əˈkɔːdjən]",
+    "translation": "аккордеон",
+    "category": "music"
+  },
+  {
+    "name": "album",
+    "transcription": "[ˈælbəm]",
+    "translation": "альбом",
+    "category": "music"
+  },
+  {
+    "name": "bagpipe",
+    "transcription": "[ˈbægpaɪp]",
+    "translation": "волынка",
+    "category": "music"
+  },
+  {
+    "name": "balalaika",
+    "transcription": "[ˌbæləˈlaɪkə]",
+    "translation": "балалайка",
+    "category": "music"
+  },
+  {
+    "name": "ballet",
+    "transcription": "[ˈbæleɪ]",
+    "translation": "балет",
+    "category": "music"
+  },
+  {
+    "name": "band",
+    "transcription": "[bænd]",
+    "translation": "группа",
+    "category": "music"
+  },
+  {
+    "name": "bass",
+    "transcription": "[beɪs]",
+    "translation": "контрабас",
+    "category": "music"
+  },
+  {
+    "name": "bassoon",
+    "transcription": "[bə'suːn]",
+    "translation": "фагот",
+    "category": "music"
+  },
+  {
+    "name": "baton",
+    "transcription": "[ˈbætən]",
+    "translation": "дирижерская палочка",
+    "category": "music"
+  },
+  {
+    "name": "bow",
+    "transcription": "[baʊ]",
+    "translation": "смычок",
+    "category": "music"
+  },
+  {
+    "name": "brass instruments",
+    "transcription": "[brɑːs 'ɪnstrəmənts]",
+    "translation": "медные духовые инструменты",
+    "category": "music"
+  },
+  {
+    "name": "cello",
+    "transcription": "[ˈʧɛləʊ]",
+    "translation": "виолончель",
+    "category": "music"
+  },
+  {
+    "name": "chamber music",
+    "transcription": "[ˈʧeɪmbə ˈmjuːzɪk]",
+    "translation": "камерная музыка",
+    "category": "music"
+  },
+  {
+    "name": "clarinet",
+    "transcription": "[ˌklærɪˈnɛt]",
+    "translation": "кларнет",
+    "category": "music"
+  },
+  {
+    "name": "classical music",
+    "transcription": "[ˈklæsɪkəl ˈmjuːzɪk]",
+    "translation": "классическая музыка",
+    "category": "music"
+  },
+  {
+    "name": "compose",
+    "transcription": "[tuː kəmˈpəʊz]",
+    "translation": "писать музыку",
+    "category": "music"
+  },
+  {
+    "name": "composer",
+    "transcription": "[kəmˈpəʊzə]",
+    "translation": "композитор",
+    "category": "music"
+  },
+  {
+    "name": "concert",
+    "transcription": "[ˈkɒnsət]",
+    "translation": "концерт",
+    "category": "music"
+  },
+  {
+    "name": "conductor",
+    "transcription": "[kənˈdʌktə]",
+    "translation": "дирижер",
+    "category": "music"
+  },
+  {
+    "name": "cymbals",
+    "transcription": "[ˈsɪmbəlz]",
+    "translation": "тарелки",
+    "category": "music"
+  },
+  {
+    "name": "drum",
+    "transcription": "[drʌm]",
+    "translation": "барабан",
+    "category": "music"
+  },
+  {
+    "name": "drum sticks",
+    "transcription": "[drʌm stɪks]",
+    "translation": "барабанные палочки",
+    "category": "music"
+  },
+  {
+    "name": "flute",
+    "transcription": "[fluːt]",
+    "translation": "флейта",
+    "category": "music"
+  },
+  {
+    "name": "grand piano",
+    "transcription": "[grænd pɪˈænəʊ]",
+    "translation": "рояль",
+    "category": "music"
+  },
+  {
+    "name": "guitar",
+    "transcription": "[gɪˈtɑː]",
+    "translation": "гитара",
+    "category": "music"
+  },
+  {
+    "name": "harp",
+    "transcription": "[hɑːp]",
+    "translation": "арфа",
+    "category": "music"
+  },
+  {
+    "name": "horn",
+    "transcription": "[hɔːn]",
+    "translation": "рожок",
+    "category": "music"
+  },
+  {
+    "name": "instrumental music",
+    "transcription": "[ˌɪnstrʊˈmɛntl ˈmjuːzɪk]",
+    "translation": "инструментальная музыка",
+    "category": "music"
+  },
+  {
+    "name": "loudspeaker",
+    "transcription": "[laʊdˈspiːkə]",
+    "translation": "динамик, громкоговоритель",
+    "category": "music"
+  },
+  {
+    "name": "microphone",
+    "transcription": "[ˈmaɪkrəfəʊn]",
+    "translation": "микрофон",
+    "category": "music"
+  },
+  {
+    "name": "musical instruments",
+    "transcription": "['mjuːzɪkl 'ɪnstrəmənts]",
+    "translation": "музыкальные инструменты",
+    "category": "music"
+  },
+  {
+    "name": "musician",
+    "transcription": "[mjuːˈzɪʃən]",
+    "translation": "музыкант",
+    "category": "music"
+  },
+  {
+    "name": "oboe",
+    "transcription": "[ˈəʊbəʊ]",
+    "translation": "гобой",
+    "category": "music"
+  },
+  {
+    "name": "opera",
+    "transcription": "[ˈɒpərə]",
+    "translation": "опера",
+    "category": "music"
+  },
+  {
+    "name": "operetta",
+    "transcription": "[ˌɒpəˈrɛtə]",
+    "translation": "оперетта",
+    "category": "music"
+  },
+  {
+    "name": "orchestra",
+    "transcription": "[ˈɔːkɪstrə]",
+    "translation": "оркестр",
+    "category": "music"
+  },
+  {
+    "name": "organ",
+    "transcription": "[ˈɔːgən]",
+    "translation": "орган",
+    "category": "music"
+  },
+  {
+    "name": "percussion",
+    "transcription": "[pəˈkʌʃən]",
+    "translation": "перкуссия, ударные инструменты",
+    "category": "music"
+  },
+  {
+    "name": "piano",
+    "transcription": "[pɪˈænəʊ]",
+    "translation": "пианино",
+    "category": "music"
+  },
+  {
+    "name": "recital",
+    "transcription": "[rɪˈsaɪtl]",
+    "translation": "сольный концерт",
+    "category": "music"
+  },
+  {
+    "name": "saxophone",
+    "transcription": "[ˈsæksəfəʊn]",
+    "translation": "саксофон",
+    "category": "music"
+  },
+  {
+    "name": "single",
+    "transcription": "[ˈsɪŋgl]",
+    "translation": "сингл – песня, выпущенная и продаваемая без альбома",
+    "category": "music"
+  },
+  {
+    "name": "soloist",
+    "transcription": "[ˈsəʊləʊɪst]",
+    "translation": "солист",
+    "category": "music"
+  },
+  {
+    "name": "song",
+    "transcription": "[sɒŋ]",
+    "translation": "песня",
+    "category": "music"
+  },
+  {
+    "name": "sound",
+    "transcription": "[saʊnd]",
+    "translation": "звук",
+    "category": "music"
+  },
+  {
+    "name": "string instruments",
+    "transcription": "[strɪŋ 'ɪnstrəmənts]",
+    "translation": "струнные инструменты",
+    "category": "music"
+  },
+  {
+    "name": "symphony",
+    "transcription": "[ˈsɪmfəni]",
+    "translation": "симфония",
+    "category": "music"
+  },
+  {
+    "name": "synthesizer",
+    "transcription": "[ˈsɪnθɪˌsaɪzə]",
+    "translation": "синтезатор",
+    "category": "music"
+  },
+  {
+    "name": "transcribe",
+    "transcription": "[tuː trænsˈkraɪb]",
+    "translation": "записывать нотами",
+    "category": "music"
+  },
+  {
+    "name": "trombone",
+    "transcription": "[trɒmˈbəʊn]",
+    "translation": "тромбон",
+    "category": "music"
+  },
+  {
+    "name": "trumpet",
+    "transcription": "[ˈtrʌmpɪt]",
+    "translation": "труба",
+    "category": "music"
+  },
+  {
+    "name": "tuba",
+    "transcription": "[ˈtjuːbə]",
+    "translation": "туба",
+    "category": "music"
+  },
+  {
+    "name": "video (clip)",
+    "transcription": "[ˈvɪdɪəʊ klɪp]",
+    "translation": "видео-клип",
+    "category": "music"
+  },
+  {
+    "name": "viola",
+    "transcription": "[vɪˈəʊlə]",
+    "translation": "альт",
+    "category": "music"
+  },
+  {
+    "name": "violin",
+    "transcription": "[ˌvaɪəˈlɪn]",
+    "translation": "скрипка",
+    "category": "music"
+  },
+  {
+    "name": "virtuoso",
+    "transcription": "[ˌvɜːtjʊˈəʊzəʊ]",
+    "translation": "виртуоз",
+    "category": "music"
+  },
+  {
+    "name": "wind instruments",
+    "transcription": "[wɪnd 'ɪnstrəmənts]",
+    "translation": "духовые инструменты",
+    "category": "music"
+  }
+]

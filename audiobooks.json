@@ -1,0 +1,23 @@
+[
+	{	"id": 0,
+		"genre": "detective",
+		"author": "Arthur Conan-Doyle",
+		"title": "The Hound of the Baskervilles",
+		"links": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],
+        "image": "books/EqualRites.jpg"
+	},
+	{	"id": 1,
+		"genre": "detective",
+		"author": "Arthur Conan-Doyle",
+		"title": "The Hound of the Baskervilles",
+		"links": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],
+        "image": "books/EqualRites.jpg"
+	},
+	{	"id": 2,
+		"genre": "detective",
+		"author": "Arthur Conan-Doyle",
+		"title": "The Hound of the Baskervilles",
+		"links": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],
+        "image": "books/EqualRites.jpg"
+	}						
+]

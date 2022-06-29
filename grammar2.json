@@ -1,0 +1,1077 @@
+[
+  {
+    "id" : 0,
+    "difficulty": "simple",
+    "rules":[
+      {
+        "name": "Present Simple",
+        "link": "/grammarpresentsimple",
+        "description": "Время Present Simple обозначает действие в настоящем в широком смысле слова.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Обозначает действие в настоящем в широком смысле слова", 
+                        "Глагол во временной форме Present Simple почти всегда совпадает со своей начальной", 
+                        "Употребляется при регулярных, повторяющихся действиях"],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Present Simple - простое настоящее время",
+            "description": "Время Present Simple обозначает действие в настоящем в широком смысле слова. Оно употребляется для обозначения обычных, регулярно повторяющихся или постоянных действий, например, когда мы говорим о чьих-либо привычках, режиме дня, расписании и т. д., т. е. Present Simple обозначает действия, которые происходят в настоящее время, но не привязаны именно к моменту речи.",
+            "examples": [
+              {
+                "exampleName": "I live in London.",
+                "exampleDescription": "",
+                "exampleTranslation": "Я живу в Лондоне."
+              },
+              {
+                "exampleName": "The meeting starts at 6 o'clock.",
+                "exampleDescription": "",
+                "exampleTranslation": "Собрание начнется в шесть часов."
+              }              
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Английский глагол во временной форме Present Simple почти всегда совпадает со своей начальной, то есть указанной в словаре, формой без частицы to. Лишь в 3-ем лице единственного числа к ней нужно прибавить окончание -s:",
+            "examples": [
+              {
+                "exampleName": "Лишь в 3-ем лице единственного числа к ней нужно прибавить окончание -s:",
+                "exampleDescription": "",
+                "exampleTranslation": "I work – he works"
+              },
+              {
+                "exampleName": "Если глагол оканчивается на -s, -ss, -sh, -ch, -x, -o, то к нему прибавляется окончание -es:",
+                "exampleDescription": "",
+                "exampleTranslation": "I wish – he wishes"
+              },
+              {
+                "exampleName": "К глаголам на -y с предшествующей согласной тоже прибавляется окончание -es, а -y заменяется на -i-:",
+                "exampleDescription": "",
+                "exampleTranslation": "I try – he tries"
+              },
+              {
+                "exampleName": "Если же глагол оканчивается на -y с предшествующей гласной, то -y сохраняется и добавляется только окончание -s:",
+                "exampleDescription": "",
+                "exampleTranslation": "I play – he plays"
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "Для того, чтобы построить вопросительное предложение, перед подлежащим нужно поставить вспомогательный глагол. Время Present Simple используется без него, поэтому в этом случае добавляется вспомогательный глагол do (или does в 3 л. ед. ч.):",
+            "examples": [
+              {
+                "exampleName": "Do you like rock?",
+                "exampleDescription": "",
+                "exampleTranslation": "Тебе нравится рок?"
+              },
+              {
+                "exampleName": "Does he speak Spanish?",
+                "exampleDescription": "",
+                "exampleTranslation": "Он говорит по-испански?"
+              }                                            
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях тоже используется вспомогательный глагол do/does, но не перед подлежащим, а перед глаголом. После него прибавляется отрицательная частица not. Do/does и not часто сокращаются до don’t и doesn’t соответственно:",
+            "examples": [
+              {
+                "exampleName": "I do not like black coffee",
+                "exampleDescription": "",
+                "exampleTranslation": "Я не люблю черный кофе."
+              },
+              {
+                "exampleName": "She doesn't smoke",
+                "exampleDescription": "",
+                "exampleTranslation": "Она не курит."
+              }                                            
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "I often go to the park.",
+                "exampleDescription": "Регулярные, повторяющиеся действия:",
+                "exampleTranslation": "Я часто хожу в парк."
+              },
+              {
+                "exampleName": "We live in Boston.",
+                "exampleDescription": "Действие в настоящем в широком смысле слова (не обязательно в момент речи):",
+                "exampleTranslation": "Мы живем в Бостоне."
+              },
+              {
+                "exampleName": "The Earth is round.",
+                "exampleDescription": "Общеизвестные факты:",
+                "exampleTranslation": "Земля – круглая."
+              },
+              {
+                "exampleName": "We analyse what our clients may need, develop a new product, produce a sample, improve it and sell it.",
+                "exampleDescription": "Перечисление последовательности действий:",
+                "exampleTranslation": "Мы анализируем, что может понадобиться нашим клиентам, разрабатываем новый продукт, изготавливаем образец, дорабатываем его и продаем."
+              },
+              {
+                "exampleName": "The airplane takes off at 2.30 p.m.",
+                "exampleDescription": "Некоторые случаи указания на будущее время (если имеется в виду некое расписание или план действий, а также в придаточных предложениях времени и условия):",
+                "exampleTranslation": "Самолет взлетает в 14:30."
+              },
+              {
+                "exampleName": "Airplane crashes in Pakistan.",
+                "exampleDescription": "Некоторые случаи указания на прошедшее время (в заголовках газет, при пересказе историй):",
+                "exampleTranslation": "В Пакистане разбился самолет."
+              }                                                                                                                        
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Past Simple",
+        "link": "/grammarpastsimple",
+        "description": "Время Past Simple используется для обозначения действия, которое произошло в определенное время в прошлом и время совершения которого уже истекло.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Используется для обозначения действия, которое произошло в определенное время в прошлом и время совершения которого уже истекло.", 
+                        "В вопросительном предложении нужно использовать вспомогательные глаголы do/does(did в прошедшем времени)", 
+                        "Существует группа неправильных английских глаголов, которые следует запомнить"],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Past Simple - простое прошедшее время ",
+            "description": "Время Past Simple используется для обозначения действия, которое произошло в определенное время в прошлом и время совершения которого уже истекло.Для уточнения момента совершения действия в прошлом при использовании времени Past Simple обычно используются такие слова, как",
+            "examples": [
+              {
+                "exampleName": "five days ago ",
+                "exampleDescription": "",
+                "exampleTranslation": "пять дней назад"
+              },
+              {
+                "exampleName": "last year",
+                "exampleDescription": "",
+                "exampleTranslation": "в прошлом году"
+              },
+              {
+                "exampleName": "yesterday",
+                "exampleDescription": "",
+                "exampleTranslation": "вчера"
+              },
+              {
+                "exampleName": "in 1980",
+                "exampleDescription": "",
+                "exampleTranslation": "в 1980 году"
+              }                                            
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Для того, чтобы поставить английский глагол во время Past Simple, нужно использовать его «вторую форму». Для большинства глаголов она образуется прибавлением окончания -ed. Однако есть также достаточно большая группа неправильных английских глаголов, которые образуют форму прошедшего времени не по общим правилам, для них форму прошедшего времени нужно просто запомнить.",
+            "examples": [
+              {
+                "exampleName": "examine – examined",
+                "exampleDescription": "",
+                "exampleTranslation": ""
+              },
+              {
+                "exampleName": "We saw your dog two blocks from here.",
+                "exampleDescription": "",
+                "exampleTranslation": "Мы видели вашу собаку в двух кварталах отсюда."
+              }                                            
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении перед подлежащим нужно использовать вспомогательный глагол do в прошедшем времени – did, а после подлежащего поставить основной, значимый глагол в начальной форме:",
+            "examples": [
+              {
+                "exampleName": "Did you wash your hands?",
+                "exampleDescription": "",
+                "exampleTranslation": "Ты помыл руки?"
+              },
+              {
+                "exampleName": "Did they sign the contract?",
+                "exampleDescription": "",
+                "exampleTranslation": "Они подписали контракт?"
+              }                                            
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях перед глаголом нужно поставить вспомогательный глагол did и отрицательную частицу not:",
+            "examples": [
+              {
+                "exampleName": "We did not find our car.",
+                "exampleDescription": "",
+                "exampleTranslation": "Мы не нашли свою машину."
+              },
+              {
+                "exampleName": "I did not understand this question.",
+                "exampleDescription": "",
+                "exampleTranslation": "Я не понял этот вопрос."
+              }                                            
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "I saw Jeremy in the bank.",
+                "exampleDescription": "Указание на простое действие в прошлом:",
+                "exampleTranslation": "Я видел Джереми в банке."
+              },
+              {
+                "exampleName": "The old man often visited me.",
+                "exampleDescription": "Регулярные, повторяющиеся действия в прошлом:",
+                "exampleTranslation": "Старик часто меня навещал."
+              },
+              {
+                "exampleName": "I heard a strange sound, looked back, and saw a huge cat sitting on the table.",
+                "exampleDescription": "Перечисление последовательности действий в прошлом:",
+                "exampleTranslation": "Я услышал странный звук, обернулся и увидел здоровенного кота, сидящего на столе."
+              }                                                                                                    
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Future Simple",
+        "link": "/grammarfuturesimple",
+        "description": "Время Future Simple ссылается на действие, которое совершится в неопределенном или отдаленном будущем.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Время Future Simple ссылается на действие, которое совершится в неопределенном или отдаленном будущем.", 
+                        "Простое будущее время в английском языке обычно используется с обстоятельствами:", 
+                        "Для того, чтобы поставить глагол во Future Simple, нужно использовать вспомогательный глагол will"],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Future Simple - простое будущее время ",
+            "description": "Время Future Simple ссылается на действие, которое совершится в неопределенном или отдаленном будущем. Простое будущее время в английском языке обычно используется с обстоятельствами:",
+            "examples": [
+              {
+                "exampleName": "tomorrow",
+                "exampleDescription": "",
+                "exampleTranslation": "завтра"
+              },
+              {
+                "exampleName": "next year",
+                "exampleDescription": "",
+                "exampleTranslation": "в следующем году"
+              },
+              {
+                "exampleName": "in five years ",
+                "exampleDescription": "",
+                "exampleTranslation": "через пять лет"
+              }                                           
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Для того, чтобы поставить глагол во временную форму Future Simple, нужно использовать его начальную форму и вспомогательный глагол will. В устной речи will чаще всего сокращается до формы ‘ll, которая может использоваться во всех лицах.",
+            "examples": [
+              {
+                "exampleName": "I will go to Paris next summer.",
+                "exampleDescription": "в современном английском, особенно в устной речи, will стал использоваться для всех лиц",
+                "exampleTranslation": "Следующим летом я поеду в Париж."
+              },
+              {
+                "exampleName": "Shall we dance?",
+                "exampleDescription": "Глагол shall в настоящее время используется довольно редко в качестве модального глагола в предложении что-то сделать или помочь:",
+                "exampleTranslation": "Может, потанцуем?."
+              }                                            
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении вспомогательный глагол will ставится перед подлежащим. Значимый глагол остается после подлежащего в своей начальной форме:",
+            "examples": [
+              {
+                "exampleName": "Will we go to the beach?",
+                "exampleDescription": "",
+                "exampleTranslation": "Мы пойдем на пляж?"
+              },
+              {
+                "exampleName": "Will your boss agree with our conditions?",
+                "exampleDescription": "",
+                "exampleTranslation": "Ваш босс согласится с нашими условиями?"
+              }                                            
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях за вспомогательным глаголом следует отрицательная частица not. Вместе они могут быть сокращены до формы won’t:",
+            "examples": [
+              {
+                "exampleName": "I will not let you down.",
+                "exampleDescription": "",
+                "exampleTranslation": "Я вас не подведу."
+              },
+              {
+                "exampleName": "Fred won’t agree to help us.",
+                "exampleDescription": "",
+                "exampleTranslation": "Фред не согласится нам помочь."
+              }                                            
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "We’ll return in 4 hours.",
+                "exampleDescription": "Указание на простое действие в будущем:",
+                "exampleTranslation": "Мы вернемся через 4 часа."
+              },
+              {
+                "exampleName": "I promise I’ll visit you every day.",
+                "exampleDescription": "Регулярные, повторяющиеся действия в будущем:",
+                "exampleTranslation": "Обещаю, что буду навещать тебя каждый день."
+              },
+              {
+                "exampleName": "I cannot wait for my vacation. I will go to the river, swim and fish every day.",
+                "exampleDescription": "При перечислении последовательности действий в будущем:",
+                "exampleTranslation": "Не могу дождаться своего отпуска. Буду каждый день ходить к речке, купаться и ловить рыбу."
+              }                                                                                                    
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Present Continuous",
+        "link": "/grammarpresentcontinuous",
+        "description": "Present Continuous указывает на процесс, действие, длящееся в определенный момент в прошлом, настоящем или будущем.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Указывают на процесс, действие, длящееся в определенный момент в прошлом, настоящем или будущем.", 
+                        "Причастие настоящего времени (Participle I) можно получить, прибавив к начальной форме значимого глагола окончание -ing:"
+                        ],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Present Continuous - настоящее длительное время",
+            "description": "Времена группы Continuous указывают на процесс, действие, длящееся в определенный момент в прошлом, настоящем или будущем. Время Present Continuous обычно указывает на процесс, длящийся непосредственно в момент речи. На это могут указывать контекст или такие слова, как now, at the moment",
+            "examples": [
+              {
+                "exampleName": "Sally is doing her homework at the moment.",
+                "exampleDescription": "",
+                "exampleTranslation": "Салли сейчас делает домашнее задание."
+              },
+              {
+                "exampleName": "Dad and me are fishing now.",
+                "exampleDescription": "",
+                "exampleTranslation": "Мы с папой сейчас рыбачим."
+              }              
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Для того, чтобы поставить глагол в форму времени Present Continuous, требуется вспомогательный глагол to be в настоящем времени и причастие настоящего времени (Participle I) смыслового глагола. Причастие настоящего времени (Participle I) можно получить, прибавив к начальной форме значимого глагола окончание -ing:",
+            "examples": [
+              {
+                "exampleName": "Причастие настоящего времени (Participle I) можно получить, прибавив к начальной форме значимого глагола окончание -ing:",
+                "exampleDescription": "",
+                "exampleTranslation": "He is running"
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении вспомогательный глагол выносится на место перед подлежащим, а значимый глагол остается после него:",
+            "examples": [
+              {
+                "exampleName": "Why are you laughing?",
+                "exampleDescription": "",
+                "exampleTranslation": "Почему ты смеешься?"
+              },
+              {
+                "exampleName": "Are you using this dictionary?",
+                "exampleDescription": "",
+                "exampleTranslation": "Вы используете этот словарь?"
+              }                                            
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях за вспомогательным глаголом следует отрицательная частица not. Формы is и are при этом могут быть сокращены до isn’t и aren’t соответственно.",
+            "examples": [
+              {
+                "exampleName": "She is not standing.",
+                "exampleDescription": "",
+                "exampleTranslation": "Она не стоит."
+              },
+              {
+                "exampleName": "Radio isn’t working.",
+                "exampleDescription": "",
+                "exampleTranslation": "Радио не работает."
+              }                                            
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "The doctor is conducting an operation now.",
+                "exampleDescription": "Указание на процесс, происходящий непосредственно в момент разговора:",
+                "exampleTranslation": "Врач сейчас проводит операцию."
+              },
+              {
+                "exampleName": "Are you still working in London?",
+                "exampleDescription": "Действие, находящееся в процессе своего развития, но необязательно происходящее в момент разговора:",
+                "exampleTranslation": "Ты все еще работаешь в Лондоне?"
+              },
+              {
+                "exampleName": "Why are you always interrupting people?",
+                "exampleDescription": "Описание повторяющихся действий с использованием слов always, constantly, forever. Как правило это относится к характерным свойствам и поведению людей, часто с негативной окраской:",
+                "exampleTranslation": "Почему ты вечно перебиваешь людей?"
+              },
+              {
+                "exampleName": "He is speaking at the conference this evening.",
+                "exampleDescription": "Запланированное действие в будущем, часто с глаголами движения:",
+                "exampleTranslation": "Он выступает на конференции этим вечером."
+              },
+              {
+                "exampleName": "I hear you, don’t shout.",
+                "exampleDescription": "Английские глаголы, связанные с восприятием (notice, hear, see, feel ...), эмоциями (love, hate, like ...), процессами умственной деятельности (think, believe, understand ...), владением (have, possess ...) не используются во временах группы Continuous, потому что они сами по себе обозначают процесс. Вместо них используется время Present Simple:",
+                "exampleTranslation": "Я слышу тебя, не кричи."
+              }                                                                                                                                      
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Past Continuous",
+        "link": "/grammarpastcontinuous",
+        "description": "Время Past Continuous указывает на процесс, длившийся в определенный момент или период в прошлом.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Время Past Continuous указывает на процесс, длившийся в определенный момент или период в прошлом.", 
+                        "To be в прошедшем времени имеет две формы: was – 1 и 3 лицо ед. ч. (I was smoking. He was eating.) were – 2 лицо ед. ч. и все формы мн. ч. (They were laughing.)"
+                        ],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Past Continuous - прошедшее длительное время",
+            "description": "Время Past Continuous указывает на процесс, длившийся в определенный момент или период в прошлом. ",
+            "examples": [
+              {
+                "exampleName": "When you called I was taking a shower.",
+                "exampleDescription": "",
+                "exampleTranslation": "Когда ты позвонил, я принимал душ."
+              },
+              {
+                "exampleName": "Charlie and me were already driving home when the engine suddenly stopped.",
+                "exampleDescription": "",
+                "exampleTranslation": "Мы с Чарли уже ехали домой, как вдруг заглох мотор."
+              }              
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Для того, чтобы поставить глагол в форму Past Continuous, нужен вспомогательный глагол to be в прошедшем времени и причастие настоящего времени (Participle I) смыслового глагола.To be в прошедшем времени имеет две формы: was – 1 и 3 лицо ед. ч. (I was smoking. He was eating.) were – 2 лицо ед. ч. и все формы мн. ч. (They were laughing.)",
+            "examples": [
+              {
+                "exampleName": "I was playing",
+                "exampleDescription": "",
+                "exampleTranslation": "Я играл"
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении вспомогательный глагол выносится на место перед подлежащим, а значимый глагол остается после него:",
+            "examples": [
+              {
+                "exampleName": "Were you sleeping when I called? You sounded drowsy.",
+                "exampleDescription": "",
+                "exampleTranslation": "Ты спал, когда я позвонил? Ты казался сонным."
+              }                                            
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях за вспомогательным глаголом следует отрицательная частица not. Формы was и were при этом могут быть сокращены до wasn’t и weren’t соответственно.",
+            "examples": [
+              {
+                "exampleName": "We were not playing chess when you called.",
+                "exampleDescription": "",
+                "exampleTranslation": "Мы не играли в шахматы, когда ты звонил."
+              },
+              {
+                "exampleName": "In the morning our elevator wasn’t working.",
+                "exampleDescription": "",
+                "exampleTranslation": "Утром наш лифт не работал."
+              }                                            
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "I was sleeping when someone knocked at the door.",
+                "exampleDescription": "Указание на процесс, происходивший в конкретный момент времени в прошлом:",
+                "exampleTranslation": "Когда я спал, кто-то постучал в дверь."
+              }                                                                                                                                     
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Future Continuous",
+        "link": "/grammarfuturecontinuous",
+        "description": "Время Future Continuous указывает на процесс, который будет длиться в определенный момент в будущем.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Время Future Continuous указывает на процесс, который будет длиться в определенный момент в будущем", 
+                        " Личные местоимения и вспомогательный глагол часто сокращаются до I’ll, he’ll, they’ll и т. д."
+                        ],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Future Continuous - будущее длительное время",
+            "description": "Время Future Continuous указывает на процесс, который будет длиться в определенный момент в будущем. В отличие от времени Future Simple, этот момент в будущем должен быть назван прямо (tomorrow at 4 o’clock, when we meet) или быть очевидным из контекста.",
+            "examples": [
+              {
+                "exampleName": "Tomorrow this time I will be flying to New York.",
+                "exampleDescription": "",
+                "exampleTranslation": "Завтра в это же время я буду лететь в Нью-Йорк."
+              },
+              {
+                "exampleName": "Don’t disturb me in the evening, I’ll be preparing for exam.",
+                "exampleDescription": "",
+                "exampleTranslation": "Не мешайте мне вечером, я буду готовиться к экзамену."
+              }              
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Для того, чтобы поставить глагол в форму Future Continuous, нужен вспомогательный глагол to be в будущем времени и причастие настоящего времени (Participle I) смыслового глагола. To be в будущем времени имеет форму will be.",
+            "examples": [
+              {
+                "exampleName": "They will be packing presents tomorrow morning.",
+                "exampleDescription": "",
+                "exampleTranslation": "Завтра утром они будут упаковывать подарки."
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении will выносится на место перед подлежащим, а to be и смысловой глагол остаются после него:",
+            "examples": [
+              {
+                "exampleName": "Why did you bring an album? Will we be studying painting?",
+                "exampleDescription": "",
+                "exampleTranslation": "Зачем Вы принесли альбом? Мы будем изучать живопись?"
+              }                                            
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях после will ставится отрицательная частица not. Вместе они могут быть сокращены до формы won’t:",
+            "examples": [
+              {
+                "exampleName": "At 6 I won’t be sleeping yet.",
+                "exampleDescription": "",
+                "exampleTranslation": "В шесть я еще не буду спать."
+              }                                           
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "At 7 o’clock we’ll be having barbecue, you are welcome to join.",
+                "exampleDescription": "Указание на процесс, который будет происходить в определенный момент в будущем:",
+                "exampleTranslation": "В семь часов у нас будет барбекю, приглашаем зайти."
+              }                                                                                                                                     
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Present Perfect",
+        "link": "/grammarpresentperfect",
+        "description": "Время Present Perfect обозначает действие, которое завершилось к настоящему моменту или завершено в период настоящего времени.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Время Present Perfect обозначает действие, которое завершилось к настоящему моменту или завершено в период настоящего времени.", 
+                        " Личные местоимения и вспомогательный глагол часто сокращаются до I’ll, he’ll, they’ll и т. д."
+                        ],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Present Perfect - настоящее совершенное время",
+            "description": "Время Present Perfect обозначает действие, которое завершилось к настоящему моменту или завершено в период настоящего времени. Хотя английские глаголы в Present Perfect обычно переводятся на русский язык в прошедшем времени, следует помнить, что в английском языке эти действия воспринимаются в настоящем времени, так как привязаны к настоящему результатом этого действия.",
+            "examples": [
+              {
+                "exampleName": "I have already done my homework.",
+                "exampleDescription": "",
+                "exampleTranslation": "Я уже сделал домашнее задание."
+              },
+              {
+                "exampleName": "We have no classes today, our teacher has fallen ill.",
+                "exampleDescription": "",
+                "exampleTranslation": "У нас сегодня не будет уроков, наш учитель заболел."
+              }              
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Время Present Perfect образуется при помощи вспомогательного глагола to have в настоящем времени и причастия прошедшего времени значимого глагола, то есть его «третьей формы».To have в настоящем времени имеет две формы:has – 3 лицо, ед. ч. (He has played);have – 1 и 2 лицо ед.ч. и все формы мн. ч. (I have played) Личные местоимения и вспомогательный глагол часто сокращаются до he’s, they’ve и т. п.В зависимости от использованного в предложении времени сокращения типа he’s могут расшифровываться и как he is, и как he has.Причастие второе, или причастие прошедшего времени (Participle II), можно получить, прибавив к начальной форме значимого глагола окончание -ed:" ,
+            "examples": [
+              {
+                "exampleName": "They will be packing presents tomorrow morning.",
+                "exampleDescription": "",
+                "exampleTranslation": "Завтра утром они будут упаковывать подарки."
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении вспомогательный глагол выносится на место перед подлежащим, а значимый глагол остается после него:",
+            "examples": [
+              {
+                "exampleName": "Have you seen this film?",
+                "exampleDescription": "",
+                "exampleTranslation": "Ты смотрел этот фильм?"
+              },
+              {
+                "exampleName": "Has she come yet?",
+                "exampleDescription": "",
+                "exampleTranslation": "Она еще не пришла?"
+              }                                                          
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях за вспомогательным глаголом следует отрицательная частица not. Формы have и has при этом могут быть сокращены до haven’t и hasn’t соответственно:",
+            "examples": [
+              {
+                "exampleName": "I haven’t seen him since then.",
+                "exampleDescription": "",
+                "exampleTranslation": "С тех пор я его так и не видел."
+              }                                           
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "I have been to Paris.",
+                "exampleDescription": "Если говорящему важен сам факт произошедшего действия, а не его время или обстоятельства:",
+                "exampleTranslation": "Я был в Париже."
+              },
+              {
+                "exampleName": "I went to Paris last year.",
+                "exampleDescription": "Если время события имеет значение, то нужно использовать время Past Simple:",
+                "exampleTranslation": "Я был в Париже в прошлом году."
+              },
+              {
+                "exampleName": "I have finished reading “Dracula” this week.",
+                "exampleDescription": "Если период, в который произошло действие, еще не закончился:",
+                "exampleTranslation": "На этой неделе я закончил читать «Дракулу»."
+              },
+              {
+                "exampleName": "I have finished reading “Dracula” this week.",
+                "exampleDescription": "В противном случае используется время Past Simple:",
+                "exampleTranslation": "Я закончил читать «Дракулу» две недели назад."
+              },
+              {
+                "exampleName": "I haven’t seen my hometown for 45 years.",
+                "exampleDescription": "Для обозначения действий, которые начались в прошлом и продолжаются до текущего момента:",
+                "exampleTranslation": "Я не видел свой родной город 45 лет."
+              }                                                                                                                                                                                                
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Past Perfect",
+        "link": "/grammarpastperfect",
+        "description": "Время Past Perfect обозначает действие, которое завершилось до определенного момента в прошлом",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Время Past Perfect обозначает действие, которое завершилось до определенного момента в прошлом", 
+                        "образуется при помощи вспомогательного глагола to have в прошедшем времени и причастия прошедшего времени значимого глагола"
+                        ],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Past Perfect - прошедшее совершенное время",
+            "description": "Время Past Perfect обозначает действие, которое завершилось до определенного момента в прошлом:",
+            "examples": [
+              {
+                "exampleName": "I called Jim too late, he had already left.",
+                "exampleDescription": "",
+                "exampleTranslation": "Я позвонил Джиму слишком поздно, он уже ушел."
+              },
+              {
+                "exampleName": "We had lived in Paris for 12 years before we moved to America.",
+                "exampleDescription": "",
+                "exampleTranslation": "До переезда в Америку мы прожили в Париже 12 лет."
+              }              
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Время Past Perfect образуется при помощи вспомогательного глагола to have в прошедшем времени и причастия прошедшего времени значимого глагола, то есть его «третьей формы». To have в прошедшем времени имеет единственную форму had.Причастие второе, или причастие прошедшего времени (Participle II), можно получить, прибавив к начальной форме значимого глагола окончание -ed:" ,
+            "examples": [
+              {
+                "exampleName": "He / she / it had played",
+                "exampleDescription": "",
+                "exampleTranslation": "Завтра утром они будут упаковывать подарки."
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении вспомогательный глагол выносится на место перед подлежащим, а значимый глагол остается после него:",
+            "examples": [
+              {
+                "exampleName": "Had you brushed your teeth before you went to bed?",
+                "exampleDescription": "",
+                "exampleTranslation": "Ты почистил зубы, прежде чем пойти спать?"
+              },
+              {
+                "exampleName": "Has she come yet?",
+                "exampleDescription": "",
+                "exampleTranslation": "Она еще не пришла?"
+              }                                                          
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях за вспомогательным глаголом следует отрицательная частица not. При этом они могут быть сокращены до формы hadn’t.",
+            "examples": [
+              {
+                "exampleName": "I had not finished my work when he came here.",
+                "exampleDescription": "",
+                "exampleTranslation": "Я не закончил свою работу, когда он сюда пришел."
+              },
+              {
+                "exampleName": "How did you hope to pass the exam if you hadn’t even opened the textbook?",
+                "exampleDescription": "",
+                "exampleTranslation": "Как ты надеялся сдать экзамен, если ты до этого даже учебник не открыл?"
+              }                                                         
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "After the Sun had set, we saw thousands of fireflies.",
+                "exampleDescription": "Действие, закончившееся до определенного момента в прошлом, на которое может указывать точная дата или час, начало другого действия или контекст:",
+                "exampleTranslation": "После того, как зашло солнце, мы увидели тысячи светлячков."
+              },
+              {
+                "exampleName": "I finally caught Lucky and looked around. The nasty dog had scratched the furniture, had torn the wallpapers and had eaten my lunch on the table.",
+                "exampleDescription": "Перечисление действий в прошлом, произошедших до времени повествования в целом:",
+                "exampleTranslation": "Я наконец поймал Лаки и осмотрелся вокруг. Мерзкая собака исцарапала мебель, порвала обои и съела мой обед на столе."
+              }                                                                                                                                                                                               
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Future Perfect",
+        "link": "/grammarfutureperfect",
+        "description": "Время Future Perfect используется довольно редко, оно обозначает действие, которое закончится до определенного момента или начала другого действия в будущем или будет продолжать длиться после него.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Время Future Perfect обозначает действие, которое закончится до определенного момента или начала другого действия в будущем или будет продолжать длиться после него.", 
+                        "образуется при помощи вспомогательного глагола to have в прошедшем времени и причастия прошедшего времени значимого глагола"
+                        ],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Future Perfect - прошедшее совершенное время",
+            "description": "Время Future Perfect используется довольно редко, оно обозначает действие, которое закончится до определенного момента или начала другого действия в будущем или будет продолжать длиться после него.",
+            "examples": [
+              {
+                "exampleName": "Next year we will have been married for 30 years.",
+                "exampleDescription": "",
+                "exampleTranslation": "В следующем году мы будем женаты уже 30 лет."
+              }
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Время Future Perfect образуется при помощи вспомогательного глагола to have в будущем времени и причастия прошедшего времени значимого глагола, то есть его «третьей формы». To have в будущем времени имеет форму will have.",
+            "examples": [
+              {
+                "exampleName": "They will have covered 30 km by sunset.",
+                "exampleDescription": "",
+                "exampleTranslation": "К закату они пройдут 30 км."
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении вспомогательный глагол выносится на место перед подлежащим, а значимый глагол остается после него:",
+            "examples": [
+              {
+                "exampleName": "Will you have read all these books by the exam time?",
+                "exampleDescription": "",
+                "exampleTranslation": "Ты прочтешь все эти книги до начала экзаменов?"
+              },
+              {
+                "exampleName": "Has she come yet?",
+                "exampleDescription": "",
+                "exampleTranslation": "Она еще не пришла?"
+              }                                                          
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях за вспомогательным глаголом следует отрицательная частица not. При этом они могут быть сокращены до формы won’t:",
+            "examples": [
+              {
+                "exampleName": "I guess, I won't have received your next letter before Christmas.",
+                "exampleDescription": "",
+                "exampleTranslation": "Думаю, я не получу твое следующее письмо раньше Рождества."
+              }                                                         
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "You will have spent much efforts before you can run a marathon.",
+                "exampleDescription": "Действие, которое начнется и закончится до определенного момента в будущем:",
+                "exampleTranslation": "Ты потратишь много усилий, прежде чем сможешь пробежать марафон."
+              }                                                                                                                                                                            
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Present Perfect Continuous",
+        "link": "/grammarpresentperfectcontinuous",
+        "description": "Время Present Perfect Continuous указывает на действие, которое началось в прошлом, продолжалось в течение некоторого времени и либо закончилось непосредственно перед разговором или все еще продолжается в момент разговора.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Время Present Perfect Continuous указывает на действие, которое началось в прошлом, продолжалось в течение некоторого времени и либо закончилось непосредственно перед разговором или все еще продолжается в момент разговора.", 
+                        "образуется при помощи вспомогательного глагола to have в прошедшем времени и причастия прошедшего времени значимого глагола"
+                        ],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Present Perfect Continuous - настоящее совершенное длительное время",
+            "description": "Время Present Perfect Continuous указывает на действие, которое началось в прошлом, продолжалось в течение некоторого времени и либо закончилось непосредственно перед разговором или все еще продолжается в момент разговора.",
+            "examples": [
+              {
+                "exampleName": "I have been waiting here for 2 hours!",
+                "exampleDescription": "",
+                "exampleTranslation": "Я прождал здесь два часа!"
+              },
+              {
+                "exampleName": "We have been preparing for our exam since morning.",
+                "exampleDescription": "",
+                "exampleTranslation": "Мы готовились к экзамену с самого утра."
+              }              
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Для того, чтобы поставить глагол в форму времени Present Perfect Continuous, требуется вспомогательный глагол to be во времени Present Perfect и причастие настоящего времени (форма V-ing) смыслового глагола.",
+            "examples": [
+              {
+                "exampleName": "They will have covered 30 km by sunset.",
+                "exampleDescription": "",
+                "exampleTranslation": "К закату они пройдут 30 км."
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении вспомогательный глагол to have выносится на место перед подлежащим, а остальная часть сказуемого располагается после него:",
+            "examples": [
+              {
+                "exampleName": "I smell tobacco. Have you been smoking?",
+                "exampleDescription": "",
+                "exampleTranslation": "Я чувствую запах табака. Ты что, курил?"
+              },
+              {
+                "exampleName": "Has she been using my car again?",
+                "exampleDescription": "",
+                "exampleTranslation": "Она опять пользовалась моей машиной?"
+              }                                                          
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях за вспомогательным глаголом to have следует отрицательная частица not:",
+            "examples": [
+              {
+                "exampleName": "It has not been snowing here since 1993.",
+                "exampleDescription": "",
+                "exampleTranslation": "Здесь не было снега с 1993 года.."
+              }                                                         
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "The workers have been trying to move our wardrobe for half an hour, go help them.",
+                "exampleDescription": "Действие, которое началось в прошлом, продолжалось в течение некоторого времени и все еще продолжается в момент разговора:",
+                "exampleTranslation": "Рабочие вот уже полчаса пытаются сдвинуть наш шкаф с места, помоги им."
+              },
+              {
+                "exampleName": "Do you like this cake? I have been baking it since morning.",
+                "exampleDescription": "Действие, которое началось в прошлом, продолжалось в течение некоторого времени и все еще продолжается в момент разговора:",
+                "exampleTranslation": "Тебе нравится этот пирог? Я пекла его с самого утра."
+              }                                                                                                                                                                                          
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Past Perfect Continuous",
+        "link": "/grammarpastperfectcontinuous",
+        "description": "Время Past Perfect Continuous указывает на действие, которое началось в прошлом, продолжалось в течение некоторого времени и либо закончилось непосредственно перед неким моментом в прошлом или все еще не закончилось к некоему моменту в прошлом.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Время Past Perfect Continuous указывает на действие, которое началось в прошлом, продолжалось в течение некоторого времени и либо закончилось непосредственно перед неким моментом в прошлом или все еще не закончилось к некоему моменту в прошлом.", 
+                        "образуется при помощи вспомогательного глагола to have в прошедшем времени и причастия прошедшего времени значимого глагола"
+                        ],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Past Perfect Continuous - прошедшее совершенное длительное время",
+            "description": "Время Past Perfect Continuous указывает на действие, которое началось в прошлом, продолжалось в течение некоторого времени и либо закончилось непосредственно перед неким моментом в прошлом или все еще не закончилось к некоему моменту в прошлом.",
+            "examples": [
+              {
+                "exampleName": "I had been typing this text for 2 hours and then found it on the Internet.",
+                "exampleDescription": "",
+                "exampleTranslation": "Я набирал этот текст два часа, а потом нашел его в Интернете."
+              },
+              {
+                "exampleName": "I had been waiting for his airplane for 2 hours when it was announced about delay.",
+                "exampleDescription": "",
+                "exampleTranslation": "Я ждал его самолет уже два часа, когда объявили о его задержке."
+              }              
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Для того, чтобы поставить глагол в форму времени Past Perfect Continuous, требуется вспомогательный глагол to be во времени Past Perfect и причастие настоящего времени (форма V-ing) смыслового глагола.To be во времени Past Perfect имеет единственную форму had been.",
+            "examples": [
+              {
+                "exampleName": "They will have covered 30 km by sunset.",
+                "exampleDescription": "",
+                "exampleTranslation": "К закату они пройдут 30 км."
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении вспомогательный глагол had выносится на место перед подлежащим, а остальная часть сказуемого располагается после него:",
+            "examples": [
+              {
+                "exampleName": "I saw many puddles. Had it been raining?",
+                "exampleDescription": "",
+                "exampleTranslation": "Я видел много луж. Шел дождь?"
+              },
+              {
+                "exampleName": "Has she been using my car again?",
+                "exampleDescription": "",
+                "exampleTranslation": "Она опять пользовалась моей машиной?"
+              }                                                          
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях за вспомогательным глаголом had следует отрицательная частица not:",
+            "examples": [
+              {
+                "exampleName": "Of course he did not want to sleep! He had not been working like a horse all the week.",
+                "exampleDescription": "",
+                "exampleTranslation": "Разумеется, ему не хотелось спать! Он-то не работал как вол всю неделю."
+              }                                                         
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "We had been working hard and managed to finish the project in time.",
+                "exampleDescription": "Действие, которое началось в прошлом, продолжалось в течение некоторого времени и закончилось непосредственно перед определенным моментом в прошлом:",
+                "exampleTranslation": "Мы упорно работали и смогли завершить проект вовремя."
+              },
+              {
+                "exampleName": "Her voice started to tremble. I did not realize what a hard time she had been having.",
+                "exampleDescription": "Действие, которое началось в прошлом, продолжалось в течение некоторого времени и все еще продолжалось в определенный момент в прошлом:",
+                "exampleTranslation": "Ее голос задрожал. Я и не представлял, как тяжело ей приходилось."
+              }                                                                                                                                                                                          
+            ]
+          }                                         
+        ]
+      },
+      {
+        "name": "Future Perfect Continuous",
+        "link": "/grammarfutureperfectcontinuous",
+        "description": "Время Future Perfect Continuous указывает на действие, которое началось и продолжалось в течение некоторого времени до определенного момента в будущем.",
+        "image": "data/alacrity.jpg",
+        "main_points": ["Время Present Perfect Continuous указывает на действие, которое началось в прошлом, продолжалось в течение некоторого времени и либо закончилось непосредственно перед разговором или все еще продолжается в момент разговора.", 
+                        "образуется при помощи вспомогательного глагола to have в прошедшем времени и причастия прошедшего времени значимого глагола"
+                        ],
+        "stepsCount": 5,
+        "steps": [
+          {
+            "title": "Future Perfect Continuous - будущее совершенное длительное время",
+            "description": "Время Future Perfect Continuous указывает на действие, которое началось и продолжалось в течение некоторого времени до определенного момента в будущем. Это время используется очень редко, а в устной речи – практически никогда.",
+            "examples": [
+              {
+                "exampleName": "Next month we will have been living together for 25 years.",
+                "exampleDescription": "",
+                "exampleTranslation": "В следующем месяце исполнится 25 лет, как мы живем вместе."
+              }            
+            ]
+          },
+          {
+            "title": "Утвердительная форма",
+            "description": "Для того, чтобы поставить глагол в форму времени Future Perfect Continuous, требуется вспомогательный глагол to be во времени Future Perfect и причастие настоящего времени (форма V-ing) смыслового глагола.To be во времени Future Perfect имеет форму will have been.",
+            "examples": [
+              {
+                "exampleName": "They will have covered 30 km by sunset.",
+                "exampleDescription": "",
+                "exampleTranslation": "К закату они пройдут 30 км."
+              }                                             
+            ]
+          },
+          {
+            "title": "Вопросительная форма",
+            "description": "В вопросительном предложении вспомогательный глагол will выносится на место перед подлежащим, а остальная часть сказуемого располагается после него:",
+            "examples": [
+              {
+                "exampleName": "I hear, you are going to retire next month? For how many years will you have been working here by that time?",
+                "exampleDescription": "",
+                "exampleTranslation": "Я слышал, в следующем месяце вы выходите на пенсию? Сколько к тому времени вы уже здесь будете работать?"
+              }                                                         
+            ]
+          },
+          {
+            "title": "Отрицательная форма",
+            "description": "В отрицательных предложениях за вспомогательным глаголом will следует отрицательная частица not:",
+            "examples": [
+              {
+                "exampleName": "By 2015 you will not have been living in this country long enough to participate in the election.",
+                "exampleDescription": "",
+                "exampleTranslation": "К 2015 году вы не будете жить в этой стране достаточно долго, чтобы принять участие в выборах."
+              }                                                         
+            ]
+          },
+          {
+            "title": "Случаи использования",
+            "description": "",
+            "examples": [
+              {
+                "exampleName": "Next March we will have been living in Bulgaria for 2 years.",
+                "exampleDescription": "Действие, которое началось и продолжалось в течение некоторого времени до определенного момента в будущем:",
+                "exampleTranslation": "В марте исполнится два года с тех пор, как мы живем в Болгарии."
+              }                                                                                                                                                                                         
+            ]
+          }                                         
+        ]
+      }                                                                        
+    ]
+  }     
+] 

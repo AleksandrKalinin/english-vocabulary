@@ -1,0 +1,1758 @@
+[
+	{
+		"title": "Present Simple",
+		"id": "test-0",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "beginner",
+		"color": "#3281F0",
+		"number": 50,
+		"totalScore": 50,
+		"tasks" : [
+					  {
+					    "sentence": "It ... Sunday evening.",
+					    "id": 0,
+					    "variants": [
+					      "wasn't",
+					      "were ",
+					      "be "
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "Everybody looked tired and wanted to go ... home.",
+					    "variants": [
+					      "-",
+					      "at",
+					      "to "
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": "Mr. Candy locked the door and ... outside.",
+					    "variants": [
+					      "went",
+					      "goed",
+					      "goes"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": "The weather ... fine. ",
+					    "variants": [
+					      "were",
+					      "was",
+					      "because"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "... sun was shining brightly in the cloudless sky. ",
+					    "variants": [
+					      "A",
+					      "-",
+					      "Then"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "He decided to go ... home on foot.",
+					    "variants": [
+					      "at",
+					      "-",
+					      "over"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": "The house he lived in was not far ...and soon he was there. ",
+					    "variants": [
+					      "away",
+					      "off ",
+					      "about"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "... door was blocked by the police.",
+					    "variants": [
+					      "Mr. Candy",
+					      "Mr. Candys'",
+					      "Mr. Candy's"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": "No matter how... , he couldn't get in.",
+					    "variants": [
+					      "he tried hard",
+					      "hard he tried",
+					      "tried he hard"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": "It wasn't really funny because Mr. Candy ... a date that night.",
+					    "variants": [
+					      "had ",
+					      "has",
+					      "have "
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 10,
+					    "sentence": "He felt ... bit nervous.",
+					    "variants": [
+					      "a",
+					      "the",
+					      "-"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 11,
+					    "sentence": "Then he suddenly ... to see his father.",
+					    "variants": [
+					      "wants",
+					      "wanted",
+					      "want "
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 12,
+					    "sentence": "His father calmed him ... .",
+					    "variants": [
+					      "away ",
+					      "down ",
+					      "off"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 13,
+					    "sentence": "Mr. Candy realized that everything that ... wasn't really important.",
+					    "variants": [
+					      "happened ",
+					      "had happened ",
+					      "happens "
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 14,
+					    "sentence": "'Things ... happen', he thought.",
+					    "variants": [
+					      "do",
+					      "does",
+					      "did"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 15,
+					    "sentence": "When he ... next morning, he felt as good as never.",
+					    "variants": [
+					      "waked up",
+					      "woke up",
+					      "wakes up"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 16,
+					    "sentence": "He made up his mind to start a new... .",
+					    "variants": [
+					      "leaf",
+					      "loaf",
+					      "life"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 17,
+					    "sentence": "Mr. Candy was sure that his life ... change greatly soon.",
+					    "variants": [
+					      "will",
+					      "would ",
+					      "shall"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 18,
+					    "sentence": "An interesting story happened ... my friends last year. ",
+					    "variants": [
+					      "to",
+					      "with ",
+					      "on"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 19,
+					    "sentence": "... painting disappeared from my friends' house. ",
+					    "variants": [
+					      "The",
+					      "A",
+					      "-"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 20,
+					    "sentence": "Let me explain how the situation ... . ",
+					    "variants": [
+					      "came about ",
+					      "come about",
+					      "came on"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 21,
+					    "sentence": "Somebody stole the picture, that ... in town the day before.",
+					    "variants": [
+					      "arrived",
+					      "did arrive ",
+					      "had arrived"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 22,
+					    "sentence": "It was ... heavy to hang on the wall and was left on the floor of the hall. ",
+					    "variants": [
+					      "too",
+					      "to ",
+					      "two "
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 23,
+					    "sentence": "... wanted to go to the restaurant, so all stayed to have dinner at home. ",
+					    "variants": [
+					      "Nothing ",
+					      "Nobody",
+					      "Everybody"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 24,
+					    "sentence": "The dinner smelled ... good. ",
+					    "variants": [
+					      "-",
+					      "of",
+					      "to"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 25,
+					    "sentence": "All Jim ... that day was a sandwich.",
+					    "variants": [
+					      "eats",
+					      "had eaten ",
+					      "eated"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 26,
+					    "sentence": "'What do you think ... your new painting?' ' asked Bob. ",
+					    "variants": [
+					      "of",
+					      "at",
+					      "by"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 27,
+					    "sentence": "'Oh, it is extremely expensive and beautiful', ... Jim.",
+					    "variants": [
+					      "said",
+					      "told",
+					      "spoke "
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 28,
+					    "sentence": "After dinner he wanted ... the painting but found nothing in the hall. ",
+					    "variants": [
+					      "to have look at ",
+					      "to have a look at ",
+					      "to have a look on"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 29,
+					    "sentence": "We didn't believe him at first, but ... he said was quite true.",
+					    "variants": [
+					      "what ",
+					      "which",
+					      "that"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 30,
+					    "sentence": "The sudden noise... .",
+					    "variants": [
+					      "made everybody jump",
+					      "made everybody to jump",
+					      "made everybody jumped"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 31,
+					    "sentence": "It was Rachel ... arrived.",
+					    "variants": [
+					      "which ",
+					      "that ",
+					      "who"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 32,
+					    "sentence": "Why did she always ... to see Jim at the worst possible moment?",
+					    "variants": [
+					      "come",
+					      "came ",
+					      "comes"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 33,
+					    "sentence": "... at the fact that the painting had disappeared, Rachel couldn't say a word.",
+					    "variants": [
+					      "Feeling astonish ",
+					      "Feel astonished ",
+					      "Feeling astonished "
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 34,
+					    "sentence": "The thief was thought to have escaped by climbing ... the wall.",
+					    "variants": [
+					      "by",
+					      "off ",
+					      "over "
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 35,
+					    "sentence": "In the morning Rachel persuaded me to play ... tennis. ",
+					    "variants": [
+					      "with",
+					      "-",
+					      "in"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 36,
+					    "sentence": "The match was abandoned after... .",
+					    "variants": [
+					      "half an hour ",
+					      "half of an hour ",
+					      "the half an hour"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 37,
+					    "sentence": "Nobody felt ... after what had happened. ",
+					    "variants": [
+					      "at the ease ",
+					      "at ease ",
+					      "with ease"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 38,
+					    "sentence": "The next day I ... to a woman outside the house. ",
+					    "variants": [
+					      "heard a man talked",
+					      "heard a man to talk",
+					      "heard a man talking"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 39,
+					    "sentence": "I ... the woman's voice at once ' no doubt, it was Rachel.",
+					    "variants": [
+					      "realized ",
+					      "understood",
+					      "recognized"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 40,
+					    "sentence": "I was about to ... my chair during the talk.",
+					    "variants": [
+					      "fall off ",
+					      "fall out of ",
+					      "fall from"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 41,
+					    "sentence": "Rachel ... the painting and was ready to sell it at a fabulous price.",
+					    "variants": [
+					      "had stolen",
+					      "stole ",
+					      "is stolen "
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 42,
+					    "sentence": "When I told everybody about it, she ... a terrible look as if she wanted to kill me at the moment.",
+					    "variants": [
+					      "gave to me ",
+					      "gave me",
+					      "gave at me"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 43,
+					    "sentence": "'Sorry, I meant to tell you that I ... take the painting for a while, but I forgot.'",
+					    "variants": [
+					      "will ",
+					      "should ",
+					      "would "
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 44,
+					    "sentence": "So stupid ... we heard that we were shocked.",
+					    "variants": [
+					      "the lie was ",
+					      "was the lie ",
+					      "be the lie"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 45,
+					    "sentence": "This was the first time Jim ... her real nature.",
+					    "variants": [
+					      "saw ",
+					      "seen",
+					      "was seeing"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 46,
+					    "sentence": "She ... out of the house and disappeared in the wood.",
+					    "variants": [
+					      "had rushed ",
+					      "rushing",
+					      "rushed"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 47,
+					    "sentence": "By the time we got to Rachel's hotel, she ... .",
+					    "variants": [
+					      "booked away ",
+					      "had booked out ",
+					      "booked out"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 48,
+					    "sentence": "We couldn't ...how well she managed to get off with the punishment.",
+					    "variants": [
+					      "get over ",
+					      "get away",
+					      "get out "
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 49,
+					    "sentence": "Suffice it to say that she never ... and returned the painting.",
+					    "variants": [
+					      "came in",
+					      "came over ",
+					      "came up "
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  }
+				  ]
+	},
+	{
+		"title": "Past Simple",
+		"id": "test-1",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "beginner",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks" : [
+					  {
+					    "sentence": "I _____ to the mall after school.",
+					    "id": 0,
+					    "variants": [
+					      "goed",
+					      "gone",
+					      "went"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "My brother _____ a bear an hour ago.",
+					    "variants": [
+					      "seen",
+					      "saw",
+					      "sees"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": " _____ Mike visit his grandmother last night?",
+					    "variants": [
+					      "Did",
+					      "Are",
+					      "Does"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": "Alex did not _____ last weekend.",
+					    "variants": [
+					      "working",
+					      "worked",
+					      "work"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "_____ Judy and Liz at last month's meeting?",
+					    "variants": [
+					      "Was",
+					      "Were",
+					      "Are"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "We _____ not happy after the sad ending.",
+					    "variants": [
+					      "were",
+					      "was",
+					      "did"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": "_____ you see Jody's new dog yesterday?",
+					    "variants": [
+					      "Are",
+					      "Did",
+					      "Do"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "Sorry, I ________ hear you at the door.",
+					    "variants": [
+					      "wasn't",
+					      "didn't",
+					      "am not"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": " I _____ English for two years.",
+					    "variants": [
+					      "studying",
+					      "study",
+					      "studied"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": "What _____ you eat for lunch yesterday?",
+					    "variants": [
+					      "do",
+					      "did",
+					      "were"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  }
+				  ]
+	},
+	{
+		"title": "Future Simple",
+		"id": "test-2",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "intermediate",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks" : [
+					  {
+					    "sentence": "He _____ arrive on time.",
+					    "id": 0,
+					    "variants": [
+					      "will",
+					      "is",
+					      "not"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "Will your folks _____ before Tuesday?",
+					    "variants": [
+					      "leaving",
+					      "leave",
+					      "leaves"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": "We _____ get there until after dark.",
+					    "variants": [
+					      "will",
+					      "won't",
+					      "will'nt"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": "We will _____ what your father says.",
+					    "variants": [
+					      "see",
+					      "to see",
+					      "seeing"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "I don't ________ go swimming today.",
+					    "variants": [
+					      "think I",
+					      "think I'll",
+					      "thinking"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "It ________ tomorrow.",
+					    "variants": [
+					      "will snow",
+					      "snows",
+					      "is snowing"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": "We won't ________ until we get there.",
+					    "variants": [
+					      "knowing",
+					      "have know",
+					      "know"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "I ________ back before Friday.",
+					    "variants": [
+					      "'ll be'",
+					      "will",
+					      "am being"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": "Will you _____ at the rehearsal on Saturday?",
+					    "variants": [
+					      "go",
+					      "be",
+					      "have"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": "I'm going to the grocery store. I think _____ buy a turkey.",
+					    "variants": [
+					      "I've",
+					      "I'll",
+					      "I'd"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  }
+				  ]
+	},		
+	{
+		"title": "Present continuous",
+		"id": "test-3",
+		"description": "Average present continuous test",
+		"image": "texts/school.jpg",
+		"difficulty": "beginner",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks": [
+					  {
+					    "sentence": "... they coming over for dinner",
+					    "variants": [
+					      "Is",
+					      "Are",
+					      "Am"
+					    ],
+					    "correct_answer": 1
+					  },
+					  {
+					    "sentence": "Maxwell ... not sleeping on our sofa.",
+					    "variants": [
+					      "is",
+					      "are",
+					      "am"
+					    ],
+					    "correct_answer": 0
+					  },
+					  {
+					    "sentence": " My mother-in-law is ... at our house this week.",
+					    "variants": [
+					      "stay",
+					      "staying",
+					      "be staying"
+					    ],
+					    "correct_answer": 1
+					  },
+					  {
+					    "sentence": "I ... my dinner right now.",
+					    "variants": [
+					      "eat",
+					      "eating",
+					      "am eating"
+					    ],
+					    "correct_answer": 2
+					  },
+					  {
+					    "sentence": " My sister ... Spanish.",
+					    "variants": [
+					      "learn",
+					      "is learning",
+					      "learning"
+					    ],
+					    "correct_answer": 1
+					  },
+					  {
+					    "sentence": "I ... at the hair salon until September.",
+					    "variants": [
+					      "work",
+					      "be working",
+					      "am working"
+					    ],
+					    "correct_answer": 2
+					  },
+					  {
+					    "sentence": "We ... at a fancy restaurant tonight. Jason decided this yesterday.",
+					    "variants": [
+					      "eat",
+					      "are eating",
+					      "eats"
+					    ],
+					    "correct_answer": 1
+					  },
+					  {
+					    "sentence": "Why ... playing football tomorrow?",
+					    "variants": [
+					      "he not is",
+					      "he isn't",
+					      "isn't he"
+					    ],
+					    "correct_answer": 2
+					  },
+					  {
+					    "sentence": "They are ... a new shopping mall downtown.",
+					    "variants": [
+					      "opening",
+					      "openning",
+					      "oppening"
+					    ],
+					    "correct_answer": 0
+					  },
+					  {
+					    "sentence": "Melissa is ... down on her bed.",
+					    "variants": [
+					      "lieing",
+					      "liying",
+					      "lying"
+					    ],
+					    "correct_answer": 2
+					  }				  				  
+				 ]
+	},
+	{
+		"title": "Past Continuous",
+		"id": "test-4",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "intermediate",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks" : [
+					  {
+					    "sentence": "My brother and sister _____ playing tennis at 11am yesterday.",
+					    "id": 0,
+					    "variants": [
+					      "are",
+					      "was",
+					      "were"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "_____ you still working at 7pm last night?",
+					    "variants": [
+					      "Were",
+					      "Are",
+					      "Was"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": "At 8.30am today I _____ driving to work.",
+					    "variants": [
+					      "was",
+					      "am",
+					      "were"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": "We _____ sleeping when the police came.",
+					    "variants": [
+					      "was",
+					      "weren't",
+					      "won't"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "Why _____ he having lunch at 4pm?",
+					    "variants": [
+					      "was",
+					      "does",
+					      "were"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "Was he not _____ his homework?",
+					    "variants": [
+					      "doing",
+					      "do",
+					      "done"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": "Snow _____ lightly. Suddenly a reindeer appeared.",
+					    "variants": [
+					      "fell",
+					      "was falling",
+					      "is falling"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "Somebody threw a shoe at him _____ he was speaking.",
+					    "variants": [
+					      "after",
+					      "when",
+					      "while"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": "They ________ TV when I arrived.",
+					    "variants": [
+					      "were watching",
+					      "were watched",
+					      "watched"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": "I was reading a detective story _____ I heard a noise.",
+					    "variants": [
+					      "during",
+					      "while",
+					      "when"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  }
+				  ]
+	},
+	{
+		"title": "Future Continuous",
+		"id": "test-5",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "intermediate",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks" : [
+					  {
+					    "sentence": " I ________ during rush hour.",
+					    "id": 0,
+					    "variants": [
+					      "will be driving",
+					      "will have drive",
+					      "will be drive"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "He will not be _____ the bus today.",
+					    "variants": [
+					      "take",
+					      "take",
+					      "taking"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": "They ________ the cottage that weekend.",
+					    "variants": [
+					      "using",
+					      "'ll be using",
+					      "'re be using"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": "Nigel _____ be coming to the picnic.",
+					    "variants": [
+					      "won't",
+					      "won't not",
+					      "willn't"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "Where ________ sleeping?",
+					    "variants": [
+					      "you be",
+					      "will you",
+					      "will you be"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "We'll be ________ the news at 10pm.",
+					    "variants": [
+					      "watch",
+					      "watching",
+					      "to watch"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": "I'll try my best to spot you. What ________ wearing?",
+					    "variants": [
+					      "will you",
+					      "will",
+					      "will you be"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "Don't forget your snowpants. It ________ by the time you get to school.",
+					    "variants": [
+					      "will snowing",
+					      "is snowing",
+					      "will be snowing"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": "At noon tomorrow, I ________ on a beach somewhere.",
+					    "variants": [
+					      "'ll ge relaxing",
+					      "relax",
+					      "will being relax"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": "Sorry, I can't. I ________ my daughter to work at that time.",
+					    "variants": [
+					      "will be taking",
+					      "'ll take'",
+					      "won't be take"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  }
+				  ]
+	},
+	{
+		"title": "Present Perfect",
+		"id": "test-6",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "intermediate",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks" : [
+					  {
+					    "sentence": "Lindsay _____ not been to France.",
+					    "id": 0,
+					    "variants": [
+					      "has",
+					      "is",
+					      "have"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "_____ you finished your homework?",
+					    "variants": [
+					      "Have",
+					      "Has",
+					      "Is"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": "They___ gone to a rock concert.",
+					    "variants": [
+					      "'s",
+					      "'es",
+					      "'ve"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": "_____ you been to Japan?",
+					    "variants": [
+					      "Is",
+					      "Have",
+					      "Has"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "We _____ never eaten Mexican food.",
+					    "variants": [
+					      "have",
+					      "has",
+					      "are"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "Andrea has _____ her umbrella.",
+					    "variants": [
+					      "forget",
+					      "forgetting",
+					      "forgotten"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": "_____ the sun come up?",
+					    "variants": [
+					      "Was",
+					      "Have",
+					      "Has"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "The children ________ the lost puppy.",
+					    "variants": [
+					      "have find",
+					      "is finding",
+					      "have found"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": "Wiwi's been a vegetarian _____ three years.",
+					    "variants": [
+					      "since",
+					      "for",
+					      "after"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": "I haven't worked _____ last December.",
+					    "variants": [
+					      "since",
+					      "for",
+					      "by"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  }
+				  ]
+	},
+	{
+		"title": "Past Perfect",
+		"id": "test-7",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "intermediate",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks" : [
+					  {
+					    "sentence": "We ________ finished eating dinner.",
+					    "id": 0,
+					    "variants": [
+					      "had not",
+					      "not had",
+					      "'d had not"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "Had they _____ to her before?",
+					    "variants": [
+					      "spoke",
+					      "spoken",
+					      "spoked"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": "You _____ not left yet.",
+					    "variants": [
+					      "would",
+					      "'d",
+					      "would had"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": "I had never _____ her before.",
+					    "variants": [
+					      "see",
+					      "saw",
+					      "seen"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "We arrived at 8:05, but the train _____ already left.",
+					    "variants": [
+					      "has",
+					      "have",
+					      "had"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "Sarah thought she ________ to that zoo before.",
+					    "variants": [
+					      "has been",
+					      "had be",
+					      "had been"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": "Nobody explained why the project had ________ on time.",
+					    "variants": [
+					      "n't been completed",
+					      "not completed",
+					      "n't complete"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "He _____ us the item had been shipped.",
+					    "variants": [
+					      "told",
+					      "say",
+					      "asked"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": "Dad explained ________ his job due to stress.",
+					    "variants": [
+					      "why he quitted",
+					      "that he had quit",
+					      "that he'd quite"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": "Where _____ the security guard gone?",
+					    "variants": [
+					      "had",
+					      "have",
+					      "did"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  }
+				  ]
+	},
+	{
+		"title": "Future Perfect",
+		"id": "test-8",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "intermediate",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks" : [
+					  {
+					    "sentence": "I ________ by then.",
+					    "id": 0,
+					    "variants": [
+					      "will be leave",
+					      "will have left",
+					      "will leaving"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "Will you ________ by 8am?",
+					    "variants": [
+					      "have arrived",
+					      "be arrive",
+					      "have arriving"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": "You ________ the bill by the time the item arrives.",
+					    "variants": [
+					      "'ll have received",
+					      "will receiving",
+					      "'ve received"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": "Melissa and Mike will be exhausted. They ________ slept for 24 hours.",
+					    "variants": [
+					      "will not",
+					      "will not have",
+					      "will not be"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "He will have ________ all about it by Monday.",
+					    "variants": [
+					      "forgetting",
+					      "forgotten",
+					      "be forgetting"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "Will you ________ the contracts by Thursday?",
+					    "variants": [
+					      "have mailed",
+					      "mailing",
+					      "to have mailed"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": "The boss ________ by the time the orders come in.",
+					    "variants": [
+					      "will leave",
+					      "will be left",
+					      "will have left"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "Where ________ gone?",
+					    "variants": [
+					      "will she have",
+					      "is she has",
+					      "she have"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": "September works for us. Lisa will not ________ by then.",
+					    "variants": [
+					      "graduating",
+					      "have graduated",
+					      "be graduate"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": "I will let you in. I ________ with the keys by the time you come in.",
+					    "variants": [
+					      "will have arrived",
+					      "will be arrival",
+					      "will be arrived"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  }
+				  ]
+	},
+	{
+		"title": "Present Perfect Continuous",
+		"id": "test-9",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "advanced",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks" : [
+					  {
+					    "sentence": "It has _____ snowing a lot this week.",
+					    "id": 0,
+					    "variants": [
+					      "be",
+					      "been",
+					      "being"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "_____ your brother and sister been getting along?",
+					    "variants": [
+					      "Have",
+					      "Has",
+					      "Are"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": "Rick _____ been studying hard this semester.",
+					    "variants": [
+					      "'s",
+					      "s",
+					      "'ve"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": " I'm tired because I _____ been working out.",
+					    "variants": [
+					      "'ve",
+					      "has",
+					      "am"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "Julie ________ living in Italy since May.",
+					    "variants": [
+					      "has being",
+					      "is been",
+					      "has been"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "Did you know he's been teaching German _____ fifteen years?",
+					    "variants": [
+					      "before",
+					      "since",
+					      "for"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": " We have been watching TV _____ we had dinner.",
+					    "variants": [
+					      "for",
+					      "since",
+					      "by"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "He has ________ too hard today.",
+					    "variants": [
+					      "working",
+					      "works",
+					      "been working"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": "Has it _____ raining since you arrived?",
+					    "variants": [
+					      "be",
+					      "been",
+					      "is"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": "My brother has been travelling _____ two months.",
+					    "variants": [
+					      "since",
+					      "for",
+					      "by"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  }
+				  ]
+	},
+	{
+		"title": "Past Perfect Continuous",
+		"id": "test-10",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "advanced",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks" : [
+					  {
+					    "sentence": "My dad ________ smoking in the garage.",
+					    "id": 0,
+					    "variants": [
+					      "has",
+					      "had",
+					      "had been"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "The printer ________ working well.",
+					    "variants": [
+					      "had not been",
+					      "hadn't",
+					      "had not"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": "Had the players _____ playing by the rules?",
+					    "variants": [
+					      "been",
+					      "have",
+					      "be"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": "She ________ expecting the worst.",
+					    "variants": [
+					      "had",
+					      "'d been",
+					      "had being"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "Had the teachers ________ before the strike?",
+					    "variants": [
+					      "been work",
+					      "working",
+					      "been working"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "Our pool pump ________ running properly before the storm.",
+					    "variants": [
+					      "had not have",
+					      "hadn't been",
+					      "hadn't being"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": "My sister’s roommate was upset. She _____ been waiting for an hour.",
+					    "variants": [
+					      "had",
+					      "has",
+					      "have"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "I just heard about the accident. ________ been working all night?",
+					    "variants": [
+					      "Had the driver",
+					      "Had the driving",
+					      "Have the driver"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": "We were shocked to see her. ________ been expecting her.",
+					    "variants": [
+					      "We are",
+					      "We have",
+					      "We'd not"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": "I finally reached my mom. ________ her all day.",
+					    "variants": [
+					      "I'd been calling",
+					      "I have called",
+					      "I called"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  }
+				  ]
+	},
+	{
+		"title": "Future Perfect Continuous",
+		"id": "test-11",
+		"description": "Standart present simple test",
+		"image": "texts/school.jpg",
+		"difficulty": "advanced",
+		"number": 10,
+		"totalScore": 10,
+		"color": "#3281F0",
+		"tasks" : [
+					  {
+					    "sentence": "My mom ________ for two days by the time I see her.",
+					    "id": 0,
+					    "variants": [
+					      "has been travelling",
+					      "will have been travelling",
+					      "will has been travelling"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  {
+					  	"id": 1,
+					    "sentence": "They'll be exhausted by dinner. They will have been _____ hockey for seven hours.",
+					    "variants": [
+					      "playing",
+					      "played",
+					      "play"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 2,
+					    "sentence": "Will you ________ here for ten years by the time of the Christmas party?",
+					    "variants": [
+					      "have been worked",
+					      "have to work",
+					      "have been working"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 3,
+					    "sentence": "It's a 24-hour relay. They'll only have been ________ for half the time by 6pm.",
+					    "variants": [
+					      "ran",
+					      "run",
+					      "running"
+					    ],
+					    "correct_answer": 2,
+					    "checked": false
+					  },
+					  { "id": 4,
+					    "sentence": "We ________ been waiting long.",
+					    "variants": [
+					      "will not have",
+					      "have not will",
+					      "will have not"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 5,
+					    "sentence": "I ________ working for two years.",
+					    "variants": [
+					      "willn't have been",
+					      "won't have been",
+					      "not have been"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 6,
+					    "sentence": "Won't they ________ travelling for two weeks by then?",
+					    "variants": [
+					      "have been",
+					      "had been",
+					      "has been"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 7,
+					    "sentence": "The teachers will ________ for a month by the time the deal is made.",
+					    "variants": [
+					      "have been striking",
+					      "will strike",
+					      "will be striking"
+					    ],
+					    "correct_answer": 0,
+					    "checked": false
+					  },
+					  { "id": 8,
+					    "sentence": "The films run all night. We ________ movies for six hours by the time the feature comes on.",
+					    "variants": [
+					      "watched",
+					      "will have been watching",
+					      "will watch"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  },
+					  { "id": 9,
+					    "sentence": " She'll still be groggy. She ________ undergoing surgery for three hours.",
+					    "variants": [
+					      "will has been",
+					      "will have been",
+					      "will be have"
+					    ],
+					    "correct_answer": 1,
+					    "checked": false
+					  }
+				  ]
+	}								
+]
