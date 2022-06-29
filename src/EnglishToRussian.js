@@ -117,21 +117,21 @@ class EnglishToRussian extends Component {
 
     continueTraining = () =>{
       let wordsLength = this.state.wholeList.length;
-      let newId = this.state.id;
-      newId = newId + 1;
+      let id = this.state.id;
+      id = id + 1;
       const words = this.state.wholeList;
       const result = this.state.result;
-      if(newId < wordsLength) {
-        const currentName = words[newId].name;
-        const currentTranslation = words[newId].translation;
-        const currentMeaning = words[newId].meaning;
-        const currentImage = words[newId].image;
-        const currentDate = words[newId].date;
-        const currentCategory = words[newId].category; 
-        const currentWord =  result[newId][Math.floor(Math.random() * result[newId].length)]
+      if(id < wordsLength) {
+        const currentName = words[id].name;
+        const currentTranslation = words[id].translation;
+        const currentMeaning = words[id].meaning;
+        const currentImage = words[id].image;
+        const currentDate = words[id].date;
+        const currentCategory = words[id].category; 
+        const currentWord =  result[id][Math.floor(Math.random() * result[id].length)]
         const currentPicture = currentWord.image; 
           this.setState({
-            id: newId,
+            id,
             words, 
             currentName, 
             currentImage, 
@@ -167,8 +167,8 @@ class EnglishToRussian extends Component {
     }
 
    voiceWord = () =>{
-      var newWords = this.state.currentName;
-      speech.say(newWords);
+      var name = this.state.currentName;
+      speech.say(name);
    }  
 
    showImage = ()=>{
@@ -219,17 +219,11 @@ class EnglishToRussian extends Component {
   } 
 
    dontKnow = () =>{
-    const list = this.state.list;
     this.setState({
       isImageVisible: true,
       flagState: true
     })
    }
-
-   voiceWord = () =>{
-      var newWords = this.state.currentWord.name;
-      speech.say(newWords);
-   } 
 
    setStateOnStart = () => {
     this.setState({

@@ -1,6 +1,7 @@
 {
   "name": "vocab",
   "version": "0.1.0",
+  "homepage": "https://aleksandrkalinin.gitgub.io/english-vocabulary",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
@@ -38,6 +39,8 @@
     "typeface-roboto": "0.0.54"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,5 +54,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
