@@ -35,42 +35,18 @@ class EnglishToRussian extends Component {
           const currentImage = words[id].image;
           const currentDate = words[id].date;
           const currentCategory = words[id].category;
-          const list = [];
-          var wholeList = [];
-          for (var i = 0; i < words.length/5; i++) {
-            while(list.length < 10) {
-                var el = words[Math.floor(Math.random() * words.length)];
-                if(list.indexOf(el) === -1) list.push(el);               
-              }
-              wholeList.push(list);
-          }
-          
-          var result = [];
-          for (var i = 0; i < words.length/5; i++) {
-            result[i] = [];
-            for (var j = 0; j < 5; j++) {
-                var el = words[Math.floor(Math.random() * words.length)]
-                if (result[i].indexOf(el) === -1){
-                  result[i][j] = el; 
-                }  
-                else {
-                    el = words[Math.floor(Math.random() * words.length)]
-                    if(result[i].indexOf(el) === -1){
-                      result[i][j] = el;
-                    }
-                    else {
-                      el = words[Math.floor(Math.random() * words.length)]
-                      if(result[i].indexOf(el) === -1){
-                        result[i][j] = el;
-                      }
-                      else {
-                        result[i][j] = words[Math.floor(Math.random() * words.length)];
-                      }
-                    }
-                }    
+          let result = [];
+          for (var i = 0; i < 10; i++) {
+            let item = [];
+            while(item.length < 5) {
+              var el = words[Math.floor(Math.random() * words.length)];
+              if (item.indexOf(el) === -1) {
+                item.push(el)
+              };                
             }
+            result.push(item);
           }
-          
+
           const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
           const currentPicture = currentWord.image;          
           this.setState({ 
@@ -81,10 +57,8 @@ class EnglishToRussian extends Component {
             currentMeaning,
             currentDate,
             currentCategory,
-            list,
             currentWord,
-            wholeList: wholeList.slice(0, 10),
-            result: result.slice(0, 10),
+            result,
             currentPicture });
         })
     }
@@ -116,10 +90,10 @@ class EnglishToRussian extends Component {
     }  
 
     continueTraining = () =>{
-      let wordsLength = this.state.wholeList.length;
+      let wordsLength = this.state.result.length;
       let id = this.state.id;
       id = id + 1;
-      const words = this.state.wholeList;
+      const words = this.state.result;
       const result = this.state.result;
       if(id < wordsLength) {
         const currentName = words[id].name;
@@ -179,10 +153,13 @@ class EnglishToRussian extends Component {
    }
 
 
-   compareWord = (e) =>{
+   compareWord = (id) =>{
+    let compWord = this.state.result[this.state.id].find(x => x.id === id);
+    console.log(compWord);
+    console.log(id);
     var positiveWords = this.state.positiveWords.slice();
     var negativeWords = this.state.negativeWords.slice();    
-    const param = e.target.textContent;
+    const param = id.target.textContent;
     const name = this.state.currentWord.translation;
     const currentPicture = this.state.currentPicture;
     let newObj = {}
@@ -250,8 +227,6 @@ class EnglishToRussian extends Component {
       metaClass: 'blue',
       nameClass: '',
       randomValues: [],
-      list: [],
-      wholeList: [],
       currentWord: '',
       currentButtonColor: '',
       flagState: false,
@@ -300,7 +275,7 @@ class EnglishToRussian extends Component {
     			            <List.Item key={index} className="training-list-item">
     			              <List.Content>
     			                <List.Header as='a'>
-                            <Button  ref={btn => { this.btn = btn; }}  className={this.state.currentButtonColor} onClick={this.compareWord} >{word.translation}</Button>
+                            <Button  ref={btn => { this.btn = btn; }}  className={this.state.currentButtonColor} onClick={this.compareWord.bind(this, word.id)} >{word.translation}</Button>
                           </List.Header>
     			              </List.Content>
     			            </List.Item>
@@ -365,7 +340,7 @@ class EnglishToRussian extends Component {
                         </div>
                       </Card.Description>
                       <Button.Group className="card-buttons-wrapper">
-                        <Button primary onClick={this.setStateOnStart}>К текстам</Button>
+                        <Button primary onClick={this.setStateOnStart}>Заново</Button>
                         <Button primary><Link className="training-link" to="/training">К тренировкам</Link></Button>
                       </Button.Group>
                     </Card.Content>

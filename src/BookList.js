@@ -80,7 +80,6 @@ class BookList extends Component {
       axios.get('/books.json')
         .then(res => {
           let books = res.data;
-          console.log(books);
           let contentArray = [];
           let thumbArray = [];
           books.map((item, index) =>{ 
@@ -92,11 +91,11 @@ class BookList extends Component {
           newAudio.volume = 0.5;
           newAudio.controls = true;
           this.setState({ 
-            books: books,
-            contentArray: contentArray,
-            currentAudio: currentAudio,
-            newAudio: newAudio,
-            thumbArray: thumbArray
+            books,
+            contentArray,
+            currentAudio,
+            newAudio,
+            thumbArray
           }, () => this.consoleParams() );
         })
     }
@@ -104,7 +103,6 @@ class BookList extends Component {
     callFunctions = () =>{
     	this.consoleParams();
     	this.populateDropdown();
-    	console.log("functions called");
     }
 
     consoleParams = () =>{
@@ -123,29 +121,26 @@ class BookList extends Component {
     getUnique = () => {
       var arr = this.state.options;
       var comp = 'text';
-        const unique = arr
-            .map(e => e[comp])
+      const unique = arr
+          .map(e => e[comp])
           .map((e, i, final) => final.indexOf(e) === i && i)
           .filter(e => arr[e]).map(e => arr[e]);
-          console.log(unique);
       this.setState({
         options: unique
       })    
     }  
 
     newFunc = () =>{
-      var options = this.state.options.slice();
       var categoryValue = this.state.value;
       this.setState({
-        categoryValue: categoryValue
+        categoryValue
       })
     }
 
     newPage = () =>{
-      var bookPages = this.state.bookPages.slice();
       var bookVal = this.state.bookValue;
       this.setState({
-        bookVal: bookVal
+        bookVal
       })
   
     }
@@ -160,7 +155,6 @@ class BookList extends Component {
   	    while ( (node = node.previousElementSibling) ) {
   	        index++;
   	    }
-  	    console.log(index);
   	}
 
     readMore = (e) =>{
@@ -172,19 +166,17 @@ class BookList extends Component {
         while ( (target = target.previousElementSibling) ) {
           index++;
       }
-      let audio = books[index].audio;
+      let audiobooks = books[index].audio;
       let image = books[index].image;
-      console.log(audio);
       var link = books[index].link;
-      console.log('/'+ link);
       axios.all([axios.get('/books/'+ link)])
                    .then(axios.spread((firstResponse) => {           
                     let currentBook = firstResponse.data;
                     var parsedBook = HTMLReactParser(currentBook);
                     this.setState({ 
-                      currentBook: currentBook,
-                      parsedBook: parsedBook,
-                      audiobooks: audio
+                      currentBook,
+                      parsedBook,
+                      audiobooks
                     }, () => this.splitBook(this.state.currentBook));
               }))
       let activeTargetTitle = e.target.parentElement.children[0].children[2].children[0].textContent;
@@ -200,7 +192,7 @@ class BookList extends Component {
         content: activeTargetContent,
         author: activeTargetAuthor,
         description: activeTargetDescription,
-        image: image
+        image
       }, () => this.populateDropdown())
     }
 
@@ -228,7 +220,7 @@ class BookList extends Component {
     		indexArray.push(i);
     	}
     	this.setState({
-    		currentArrayBooks: currentArrayBooks,
+    		currentArrayBooks,
     		currentPage: currentArrayBooks[0],
     		currentIndexArray: indexArray
     	})
@@ -248,7 +240,7 @@ class BookList extends Component {
     		indexArray.push(i);
     	}
     	this.setState({
-    		currentArrayBooks: currentArrayBooks,
+    		currentArrayBooks,
     		currentPage: currentArrayBooks[0],
     		currentIndexArray: indexArray
     	})    	
@@ -268,13 +260,11 @@ class BookList extends Component {
     }
 
     handleClick = (e) =>{
-    	console.log("current Page", this.state.currentPage.length );
     	let pages = this.state.currentArrayBooks.slice();
-    	console.log("newPage", pages[e.target.id].length);
     	this.setState({
     		currentPageIndex: e.target.id,
     		currentPage: pages[e.target.id]
-    	}, () => console.log("New page in state", this.state.currentPage.length))
+    	})
     }
 
     consoleState = () =>{
@@ -305,7 +295,7 @@ class BookList extends Component {
       let currentPage = pages[currentId];
       this.setState({
           currentPageIndex: currentId,
-          currentPage: currentPage
+          currentPage
       }, this.scrollToTop())
     }
 
@@ -329,7 +319,7 @@ class BookList extends Component {
       let currentPage = pages[currentId];
       this.setState({
           currentPageIndex: currentId,
-          currentPage: currentPage
+          currentPage
       },this.scrollToTop())
     }   
 
@@ -359,10 +349,9 @@ class BookList extends Component {
     		bookObject["value"] = i;
     		bookPages.push(bookObject);
     	}
-    	console.log(bookPages);
     	this.setState({
-    		bookPages: bookPages
-    	}, () => console.log("populateDropdown"))
+    		bookPages
+    	})
     }
 
 	  addComment = () =>{
@@ -377,7 +366,7 @@ class BookList extends Component {
 		    temp['comment'] = currentComment;
 		    comments.unshift(temp);
 		    this.setState({
-		      comments: comments,
+		      comments,
 		      currentName: '',
 		      currentComment: '',
 		      currentEmail: ''
@@ -421,7 +410,7 @@ class BookList extends Component {
       let checked = this.state.checked;
       this.setState({
       	checked: !checked
-      }, () => console.log(this.state.checked) )
+      })
     } 
 
     handleRate = (e, { rating, maxRating }) => this.setState({ rating, maxRating })
@@ -451,10 +440,9 @@ class BookList extends Component {
       this.setState({
         currentAudio: audio,
         currentDuration: duration,
-        minutes: minutes,
-        seconds: seconds,
-        hours: hours
-
+        minutes,
+        seconds,
+        hours
       })
     }
 
@@ -500,17 +488,14 @@ class BookList extends Component {
     setVolume = (e) =>{
       let volValue = this.state.currentValue;
       var player = this.state.newAudio;
-      console.log('Before: ' + player.volume);
       player.volume = e.target.value / 100;
       this.setState({
         newAudio: player,
         currentVolume: e.target.value
       })
-      console.log('After: ' + player.volume);
     }
 
-    setRange = (e) =>{
-      
+    setRange = (e) =>{      
       let rangeValue = this.state.currentRange;
       var player = this.state.newAudio;
       player.currentTime = e.target.value;
@@ -560,11 +545,11 @@ class BookList extends Component {
                   <Card.Header className="books-header"><span className="books-title">{item.title}</span> <span className="books-genre">{item.genre}</span></Card.Header>
                   <div className="books-information">
                     <div className="books-views">
-                      <Icon name='eye' size='' /> 
+                      <span><Icon name='eye' size='' /> </span>
                       <span>1234</span>
                     </div>
                     <div className="books-favourites">
-                      <Icon name='heart' size='' /> 
+                      <span><Icon name='heart' size='' /></span> 
                       <span>39</span>
                     </div>
                     <Rating className = "books-rating" maxRating={5} onRate={this.handleRate} />
