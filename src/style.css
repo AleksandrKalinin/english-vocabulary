@@ -802,6 +802,11 @@ button a.training-link{
 	background: #3281F0!important;
 	color: #fff !important;
 	height: 40px !important;
+	transition: .2s all;
+}
+
+.training-list-item button:hover{
+	filter: brightness(0.9);
 }
 
 .training-list-item button.help {

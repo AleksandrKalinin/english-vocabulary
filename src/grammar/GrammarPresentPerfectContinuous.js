@@ -30,7 +30,6 @@ class GrammarPresentPerfectContinuous extends Component {
 
 
   componentDidMount() {
-    var id = this.state.id;
     var stepId = this.state.stepId;
       axios.get('/grammar2.json')
         .then(res => {
@@ -41,11 +40,11 @@ class GrammarPresentPerfectContinuous extends Component {
           let currentDescription = fullData[stepId].description;
           let currentExamples = fullData[stepId].examples;
           this.setState({ 
-            fullData: fullData,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples,
-            main_points: main_points
+            fullData,
+            currentTitle,
+            currentDescription,
+            currentExamples,
+            main_points
           });
         })
     }
@@ -62,16 +61,15 @@ class GrammarPresentPerfectContinuous extends Component {
       let length = fullData.length;
       let newId = this.state.stepId;
       newId  = newId - 1;
-      console.log(newId);
       if( (newId < length) && (newId > 0) ){
           let currentTitle = fullData[newId].title;
           let currentDescription = fullData[newId].description;
           let currentExamples = fullData[newId].examples;
           this.setState({
             stepId: newId,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples            
+            currentTitle,
+            currentDescription,
+            currentExamples           
           })       
       }
 
@@ -82,9 +80,9 @@ class GrammarPresentPerfectContinuous extends Component {
           this.setState({
             isBackButtonVisible: false,
             stepId: newId,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples            
+            currentTitle,
+            currentDescription,
+            currentExamples            
           })         
       }
 
@@ -109,9 +107,9 @@ class GrammarPresentPerfectContinuous extends Component {
           this.setState({
             isBackButtonVisible: true,
             stepId: newId,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples            
+            currentTitle,
+            currentDescription,
+            currentExamples            
           })       
       }
 
@@ -126,7 +124,6 @@ class GrammarPresentPerfectContinuous extends Component {
 
    voiceWord = () =>{
       var newfullData = this.state.currentName;
-      console.log(newfullData);
       speech.say(newfullData);
    }  
 
@@ -134,8 +131,6 @@ class GrammarPresentPerfectContinuous extends Component {
    consoleFunction = () =>{
     console.log(this.state);
    }
-
-
 
   render() {
     return (

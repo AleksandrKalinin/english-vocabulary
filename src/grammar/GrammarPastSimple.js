@@ -30,22 +30,20 @@ class GrammarPastSimple extends Component {
 
 
   componentDidMount() {
-    var id = this.state.id;
     var stepId = this.state.stepId;
       axios.get('/grammar2.json')
         .then(res => {
-          console.log(res.data);
           let main_points = res.data[0].rules[1].main_points;
           const fullData = res.data[0].rules[1].steps;
           let currentTitle = fullData[stepId].title;
           let currentDescription = fullData[stepId].description;
           let currentExamples = fullData[stepId].examples;
           this.setState({ 
-            fullData: fullData,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples,
-            main_points: main_points
+            fullData,
+            currentTitle,
+            currentDescription,
+            currentExamples,
+            main_points
           });
         })
     }
@@ -69,9 +67,9 @@ class GrammarPastSimple extends Component {
           let currentExamples = fullData[newId].examples;
           this.setState({
             stepId: newId,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples            
+            currentTitle,
+            currentDescription,
+            currentExamples            
           })       
       }
 
@@ -82,9 +80,9 @@ class GrammarPastSimple extends Component {
           this.setState({
             isBackButtonVisible: false,
             stepId: newId,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples            
+            currentTitle,
+            currentDescription,
+            currentExamples            
           })         
       }
 
@@ -109,9 +107,9 @@ class GrammarPastSimple extends Component {
           this.setState({
             isBackButtonVisible: true,
             stepId: newId,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples            
+            currentTitle,
+            currentDescription,
+            currentExamples            
           })       
       }
 
@@ -126,7 +124,6 @@ class GrammarPastSimple extends Component {
 
    voiceWord = () =>{
       var newfullData = this.state.currentName;
-      console.log(newfullData);
       speech.say(newfullData);
    }  
 
@@ -134,8 +131,6 @@ class GrammarPastSimple extends Component {
    consoleFunction = () =>{
     console.log(this.state);
    }
-
-
 
   render() {
     return (

@@ -30,7 +30,6 @@ class GrammarFutureContinuos extends Component {
 
 
   componentDidMount() {
-    var id = this.state.id;
     var stepId = this.state.stepId;
       axios.get('/grammar2.json')
         .then(res => {
@@ -41,11 +40,11 @@ class GrammarFutureContinuos extends Component {
           let currentDescription = fullData[stepId].description;
           let currentExamples = fullData[stepId].examples;
           this.setState({ 
-            fullData: fullData,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples,
-            main_points: main_points
+            fullData,
+            currentTitle,
+            currentDescription,
+            currentExamples,
+            main_points
           });
         })
     }
@@ -69,9 +68,9 @@ class GrammarFutureContinuos extends Component {
           let currentExamples = fullData[newId].examples;
           this.setState({
             stepId: newId,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples            
+            currentTitle,
+            currentDescription,
+            currentExamples            
           })       
       }
 
@@ -82,9 +81,9 @@ class GrammarFutureContinuos extends Component {
           this.setState({
             isBackButtonVisible: false,
             stepId: newId,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples            
+            currentTitle,
+            currentDescription,
+            currentExamples            
           })         
       }
 
@@ -109,9 +108,9 @@ class GrammarFutureContinuos extends Component {
           this.setState({
             isBackButtonVisible: true,
             stepId: newId,
-            currentTitle: currentTitle,
-            currentDescription: currentDescription,
-            currentExamples: currentExamples            
+            currentTitle,
+            currentDescription,
+            currentExamples            
           })       
       }
 
@@ -126,7 +125,6 @@ class GrammarFutureContinuos extends Component {
 
    voiceWord = () =>{
       var newfullData = this.state.currentName;
-      console.log(newfullData);
       speech.say(newfullData);
    }  
 

@@ -90,29 +90,13 @@ class EnglishToRussian extends Component {
     }  
 
     continueTraining = () =>{
-      let wordsLength = this.state.result.length;
       let id = this.state.id;
       id = id + 1;
-      const words = this.state.result;
       const result = this.state.result;
-      if(id < wordsLength) {
-        const currentName = words[id].name;
-        const currentTranslation = words[id].translation;
-        const currentMeaning = words[id].meaning;
-        const currentImage = words[id].image;
-        const currentDate = words[id].date;
-        const currentCategory = words[id].category; 
-        const currentWord =  result[id][Math.floor(Math.random() * result[id].length)]
-        const currentPicture = currentWord.image; 
+      if (id < result.length) {
+        const currentWord =  result[id][Math.floor(Math.random() * result[0].length)];
           this.setState({
             id,
-            words, 
-            currentName, 
-            currentImage, 
-            currentTranslation, 
-            currentMeaning,
-            currentDate,
-            currentCategory,
             isTranslationVisible: false,
             showNavButtons: true,
             showContinueButton: false,
@@ -121,7 +105,6 @@ class EnglishToRussian extends Component {
             isInputVisible: true,
             search: '',
             currentWord,
-            currentPicture,
             disabled: false
           })
         }  
@@ -154,28 +137,14 @@ class EnglishToRussian extends Component {
 
 
    compareWord = (id) =>{
-    let compWord = this.state.result[this.state.id].find(x => x.id === id);
-    console.log(compWord);
-    console.log(id);
+    let selectedWord = this.state.result[this.state.id].find(x => x.id === id);
     var positiveWords = this.state.positiveWords.slice();
     var negativeWords = this.state.negativeWords.slice();    
-    const param = id.target.textContent;
-    const name = this.state.currentWord.translation;
-    const currentPicture = this.state.currentPicture;
-    let newObj = {}
-    newObj.id = this.state.id;
-    newObj.name = this.state.currentWord.name;
-    newObj.translation = this.state.currentWord.translation;
-    newObj.meaning = this.state.currentWord.meaning;
-    newObj.image = this.state.currentWord.image;
-    newObj.date = this.state.currentWord.date;
-    newObj.category = this.state.currentWord.category;
-    if(param === name){
-      positiveWords.push(newObj);
+    if(this.state.currentWord.id === selectedWord.id){
+      positiveWords.push(this.state.currentWord);
       this.setState({
         isImageVisible: true,
         flagState: true,
-        currentPicture,
         positiveWords,
         negativeWords,
         disabled: true
@@ -183,11 +152,10 @@ class EnglishToRussian extends Component {
     }
 
     else {
-      negativeWords.push(newObj);
+      negativeWords.push(this.state.currentWord);
       this.setState({
         isImageVisible: true,
         flagState: true,
-        currentPicture,
         positiveWords,
         negativeWords,
         disabled: true
@@ -275,7 +243,7 @@ class EnglishToRussian extends Component {
     			            <List.Item key={index} className="training-list-item">
     			              <List.Content>
     			                <List.Header as='a'>
-                            <Button  ref={btn => { this.btn = btn; }}  className={this.state.currentButtonColor} onClick={this.compareWord.bind(this, word.id)} >{word.translation}</Button>
+                            <Button disabled={this.state.disabled}  ref={btn => { this.btn = btn; }}  className={this.state.currentButtonColor} onClick={this.compareWord.bind(this, word.id)} >{word.translation}</Button>
                           </List.Header>
     			              </List.Content>
     			            </List.Item>
@@ -291,7 +259,7 @@ class EnglishToRussian extends Component {
                   {this.state.isImageVisible ?
                     <div className="training-right-wrapper">
                       <div className="training-image-wrapper">
-                        <Image src={this.state.currentPicture} className="training-image">
+                        <Image src={this.state.currentWord.image} className="training-image">
                         </Image>                
                       </div>
                     {this.state.flagState && this.state.isImageVisible ?
@@ -334,7 +302,7 @@ class EnglishToRussian extends Component {
                         </div>
                         <div className="negative-results-wrapper"> 
                           <div className="negative-results">
-                            {this.state.words.length - this.state.positiveWords.length}
+                            {this.state.result.length - this.state.positiveWords.length}
                           </div> 
                           <Label>Неверно</Label>                   
                         </div>

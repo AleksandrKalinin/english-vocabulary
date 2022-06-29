@@ -65,7 +65,7 @@ let store = configureStore(initialState);
 
 ReactDOM.render(  
 	<Provider store={store}>
-		<Router>
+		<Router basename={process.env.PUBLIC_URL}>
 			<div className="router-wrapper">
 				<Route exact path="/" component={Main}/>
 				<Route path="/vocab" component={App} />
