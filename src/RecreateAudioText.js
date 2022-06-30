@@ -46,8 +46,7 @@ class RecreateAudioText extends Component {
         let texts = res.data;
         this.setState({ 
           texts,
-          areTextsVisible: true
-         
+          areTextsVisible: true         
         }, () => this.createMenuItems());
       })        
   }   
@@ -89,7 +88,6 @@ class RecreateAudioText extends Component {
     handleChange = (e, { value }) => this.setState({ value }, () => this.selectCategory() )
 
     createTrack = (id) => {
-      console.log(id);
       axios
         .get("tracks.json")
         .then((res) => {
@@ -210,32 +208,32 @@ class RecreateAudioText extends Component {
     }  
 
     tick = () => {
-        var min = Math.floor(this.state.secondsRemaining / 60);
-        var sec = this.state.secondsRemaining - (min * 60);
+        var minutes = Math.floor(this.state.secondsRemaining / 60);
+        var seconds = this.state.secondsRemaining - (minutes * 60);
         this.setState({
-          minutes: min,
-          seconds: sec
+          minutes,
+          seconds
         })
-        if (sec < 10) {
+        if (seconds < 10) {
           this.setState({
             seconds: "0" + this.state.seconds,
           })
         }
-        if (min < 10) {
+        if (minutes < 10) {
           this.setState({
-            value: "0" + min,
+            value: "0" + minutes,
            })
         }
-        if (min === 0 & sec === 0) {
+        if (minutes === 0 & seconds === 0) {
           let time = this.state.totalSecondsSpent;
-          let minutes = Math.floor(time / 60);
-          let seconds = this.state.totalSecondsSpent - (minutes * 60);
+          let minutesSpent = Math.floor(time / 60);
+          let secondsSpent = this.state.totalSecondsSpent - (minutesSpent * 60);
           let intervalHandle = this.state.intervalHandle;
           clearInterval(intervalHandle);
           this.timeIsOut();
           this.setState({
-            minutesSpent: minutes,
-            secondsSpent: seconds,
+            minutesSpent,
+            secondsSpent,
             intervalHandle
           })
 
@@ -317,15 +315,15 @@ class RecreateAudioText extends Component {
   showFinal = () =>{
       let intervalHandle = this.state.intervalHandle;
       let time = this.state.totalSecondsSpent;
-      let minutes = Math.floor(time / 60);
-      let seconds = this.state.totalSecondsSpent - (minutes * 60);
+      let minutesSpent = Math.floor(time / 60);
+      let secondsSpent = this.state.totalSecondsSpent - (minutesSpent * 60);
 
       clearInterval(intervalHandle);
       this.setState({
         isResultVisible: true,
         splittedSentenceVisible: false,
-        minutesSpent: minutes,
-        secondsSpent: seconds,
+        minutesSpent,
+        secondsSpent,
         intervalHandle        
       })
   }

@@ -81,23 +81,19 @@ class RecreateText extends Component {
 
 
 
-    readMore = (e) =>{
+    readMore = (id) =>{
       let texts = this.state.texts.slice();
-      let target = e.target.parentElement;
-      var index = 0;
-        while ( (target = target.previousElementSibling) ) {
-          index++;
-      }
-      let activeTargetTitle = e.target.parentElement.children[0].children[1].textContent;
-      let activeTargetContent = texts[index].content;
-      let activeTargetImage = e.target.parentElement.children[0].children[0].children[0].src;
+
+      let title = texts[id].title;
+      let content = texts[id].content;
+      let image = texts[id].image
       this.setState({
         areTextsVisible: false,
         isSingleTextVisible: true,
         isMenuVisible: false,
-        title: activeTargetTitle,
-        content: activeTargetContent,
-        image: activeTargetImage
+        title,
+        content,
+        image
       })      
     }
 
@@ -152,7 +148,6 @@ class RecreateText extends Component {
           const j = Math.floor(Math.random() * (i + 1));
           [currentStringArray[i], currentStringArray[j]] = [currentStringArray[j], currentStringArray[i]];
       }             
-      console.log(currentStringArray);
       this.setState({
         isSingleTextVisible: false,
         splittedSentenceVisible: true,
@@ -170,31 +165,31 @@ class RecreateText extends Component {
     }  
 
     tick = () => {
-        var min = Math.floor(this.state.secondsRemaining / 60);
-        var sec = this.state.secondsRemaining - (min * 60);
+        var minutes = Math.floor(this.state.secondsRemaining / 60);
+        var seconds = this.state.secondsRemaining - (minutes * 60);
         this.setState({
-          minutes: min,
-          seconds: sec
+          minutes,
+          seconds
         })
-        if (sec < 10) {
+        if (seconds < 10) {
           this.setState({
             seconds: "0" + this.state.seconds,
           })
         }
-        if (min < 10) {
+        if (minutes < 10) {
           this.setState({
-            value: "0" + min,
+            value: "0" + minutes,
            })
         }
-        if (min === 0 & sec === 0) {
+        if (minutes === 0 & seconds === 0) {
           let time = this.state.totalSecondsSpent;
-          let minutes = Math.floor(time / 60);
-          let seconds = this.state.totalSecondsSpent - (minutes * 60);
+          let minutesSpent = Math.floor(time / 60);
+          let secondsSpent = this.state.totalSecondsSpent - (minutes * 60);
           clearInterval(this.state.intervalHandle);
           this.timeIsOut();
           this.setState({
-            minutesSpent: minutes,
-            secondsSpent: seconds
+            minutesSpent,
+            secondsSpent
           })
 
         }
@@ -241,8 +236,6 @@ class RecreateText extends Component {
     let reservedSentences = this.state.reservedSentences;
     let splittedSentences = this.state.spllittedSentences;
     let currentProgress;
-    console.log(splittedSentences);
-    console.log(reservedSentences);
     let wrongIndexes = this.state.wrongIndexes.slice();
     let wrongCount = 0;
     for (var i = 0; i < splittedSentences.length; i++) {
@@ -259,8 +252,8 @@ class RecreateText extends Component {
     }
 
     this.setState({
-      wrongIndexes: wrongIndexes
-    }, () => console.log(this.state))
+      wrongIndexes
+    })
 
   }
 
@@ -274,17 +267,15 @@ class RecreateText extends Component {
 
   showFinal = () =>{
       let time = this.state.totalSecondsSpent;
-      console.log(time);
-      let minutes = Math.floor(time / 60);
-      console.log(minutes);
-      let seconds = this.state.totalSecondsSpent - (minutes * 60);
+      let minutesSpent = Math.floor(time / 60);
+      let secondsSpent = this.state.totalSecondsSpent - (minutesSpent * 60);
 
       clearInterval(this.state.intervalHandle);
       this.setState({
         isResultVisible: true,
         splittedSentenceVisible: false,
-        minutesSpent: minutes,
-        secondsSpent: seconds        
+        minutesSpent,
+        secondsSpent       
       })
   }
 
@@ -380,7 +371,7 @@ class RecreateText extends Component {
                       {item.content.substr(0,250) + ' ...'}
                     </Card.Description>
                   </Card.Content>
-                  <Button onClick={this.readMore} >Читать далее</Button>
+                  <Button onClick={this.readMore.bind(this, item.id)} >Читать далее</Button>
                 </Card>
                )}
               </Card.Group> : null

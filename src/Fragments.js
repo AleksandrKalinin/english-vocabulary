@@ -63,58 +63,52 @@ class Fragments extends Component {
     }
 
     setMenuParams = () =>{
-      let newItems = [];
+      let options = [];
       this.state.texts.map((item, i) =>
-                    newItems.push({ 
+                    options.push({ 
                         key: item.id, 
                         text: item.difficulty, 
                         value: item.difficulty 
                      }))
       this.setState({
-        options: newItems
+        options
       }, () => this.getUnique())
     } 
 
     getUnique = () => {
-      var arr = this.state.options;
+      var options = this.state.options.slice();
       var comp = 'text';
-      const unique = arr
+      const unique = options
           .map(e => e[comp])
           .map((e, i, final) => final.indexOf(e) === i && i)
-          .filter(e => arr[e]).map(e => arr[e]);
+          .filter(e => options[e]).map(e => options[e]);
       this.setState({
-        options: unique
+        options
       })    
     }  
 
     selectValue = () => {
-      var options = this.state.options.slice();
       var categoryValue = this.state.value;
       this.setState({
-        categoryValue: categoryValue
+        categoryValue
       })
     }
 
     handleChange = (e, { value }) => this.setState({ value }, () => this.selectValue() )         
 
-    readMore = (e) =>{
+    readMore = (id) =>{
       let texts = this.state.texts.slice();
-      let target = e.target.parentElement;
-      var index = 0;
-        while ( (target = target.previousElementSibling) ) {
-          index++;
-      }
-      let activeTargetTitle = e.target.parentElement.children[0].children[1].textContent;
-      let activeTargetContent = texts[index].content;
-      let activeTargetImage = e.target.parentElement.children[0].children[0].children[0].src;
+      let title = texts[id].title;
+      let content = texts[id].content;
+      let image = texts[id].image
       this.buildLives();
       this.setState({
         areTextsVisible: false,
         isSingleTextVisible: true,
         isMenuVisible: false,
-        title: activeTargetTitle,
-        content: activeTargetContent,
-        image: activeTargetImage
+        title,
+        content,
+        image
       }, () => this.builtArray())
     }
 
@@ -350,7 +344,7 @@ class Fragments extends Component {
                       {item.content.substr(0,250) + ' ...'}
                     </Card.Description>
                   </Card.Content>
-                  <Button onClick={this.readMore} >Читать далее</Button>
+                  <Button onClick={this.readMore.bind(this, item.id)} >Читать далее</Button>
                 </Card>
                )}
               </Card.Group> : null
