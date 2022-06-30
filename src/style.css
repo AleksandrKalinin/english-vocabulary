@@ -191,7 +191,7 @@ body a{
 
 .list{
 	margin-top: 0 !important;
-	width: 80% !important;
+	width: 100% !important;
 }
 .list .item{
 	display: flex !important;
@@ -755,8 +755,7 @@ button a.training-link{
 }
 
 .audio-list{
-	height: 100%!important;
-	overflow-y: scroll!important;
+	height: auto !important;
 }
 
 .audio-list .item{
@@ -3256,4 +3255,10 @@ footer{
 
 .recreate-item__text {
 	line-height: 28px;
+}
+
+.answers-wrapper {
+	width: 80%;
+	overflow-x: hidden;
+	overflow-y: auto;
 }

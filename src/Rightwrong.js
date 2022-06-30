@@ -19,20 +19,49 @@ class Rightwrong extends Component {
     this.setStateOnStart();
   }
 
-    updateComponent = () =>{
-      const id = this.state.id;
-      const words = this.state.words;
-      const currentName = words[id].name;
-      const currentTranslation = words[id].translation;
-      const currentMeaning = words[id].meaning;
-      const currentImage = words[id].image;
-      this.setState({ 
-        words, 
-        currentName, 
-        currentImage, 
-        currentTranslation, 
-        currentMeaning });
-    }
+   setStateOnStart = () => {
+      this.setState({
+        words: [],
+        negativeWords: [],
+        positiveWords: [],
+        id: 0,
+        isCardVisible: false,
+        isImageVisible: false,
+        isButtonVisible: true,
+        isTranslationVisible: false,
+        showNavButtons: true,
+        showContinueButton: false,
+        isFinalVisible: false         
+      }, () => this.initialLoad())
+   } 
+
+   initialLoad = () => {
+      var id = this.state.id;
+      axios.get('/working.json')
+        .then(res => {
+          const words = res.data;
+          let result = [];
+ 
+          for (var i = 0; i < 3; i++) {
+            let item = [];
+            while(item.length < 5) {
+              var el = words[Math.floor(Math.random() * words.length)];
+              if (item.indexOf(el) === -1) {
+                item.push(el)
+              };                
+            }
+            result.push(item);
+          }  
+
+          const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
+          console.log(result);               
+          this.setState({ 
+            words, 
+            result,
+            currentWord });
+        })
+   }
+
 
     renderComponent = () =>{
       this.setState({
@@ -41,83 +70,33 @@ class Rightwrong extends Component {
       })
     }
 
-    updateState = () =>{
-      let newId =this.state.id;
-      newId = newId + 1;
-      const id = this.state.id;
-      const words = this.state.words;
-      const currentName = words[newId].name;
-      const currentTranslation = words[newId].translation;
-      const currentMeaning = words[newId].meaning;
-      const currentImage = words[newId].image;
-      const currentDate = words[newId].date;
-      const currentCategory = words[newId].category;      
-      this.setState({
-        id: newId,
-        words, 
-        currentName, 
-        currentImage, 
-        currentTranslation, 
-        currentMeaning,
-        currentDate,
-        currentCategory,
-        isTranslationVisible: false        
-      })
-    }
-
-
-
-    positiveResponse = () =>{
-      var newObj = {};
-      var positiveWords = this.state.positiveWords.slice();
-      newObj.id = this.state.id;
-      newObj.name = this.state.currentName;
-      newObj.translation = this.state.currentTranslation;
-      newObj.meaning = this.state.currentMeaning;
-      newObj.image = this.state.currentImage;
-      newObj.date = this.state.currentDate;
-      newObj.category = this.state.currentCategory;
-      positiveWords.push(newObj);
-      this.setState({
-        positiveWords,
-        isImageVisible: true,
-        isTranslationVisible: true,
-        showNavButtons: false,
-        showContinueButton: true,
-      })
-    }
-
-    negativeResponse = () =>{
+    checkResponse = (response) => {
+      if (response) {
+        let positiveWords = this.state.positiveWords.slice();        
+        positiveWords.push(this.state.currentWord); 
+        this.setState({ positiveWords })       
+      } else {
+          let negativeWords = this.state.negativeWords.slice();          
+          negativeWords.push(this.state.currentWord);
+          this.setState({ negativeWords })          
+      }
       this.setState({
         isTranslationVisible: true,
         showNavButtons: false,
         showContinueButton: true,
         isImageVisible: true
-      })
+      })      
     }
 
     continueTraining = () =>{
-      let wordsLength = this.state.words.length;
-      let newId =this.state.id;
-      newId = newId + 1;
-      const id = this.state.id;
-      const words = this.state.words;
-      if(newId < wordsLength){
-        const currentName = words[newId].name;
-        const currentTranslation = words[newId].translation;
-        const currentMeaning = words[newId].meaning;
-        const currentImage = words[newId].image;
-        const currentDate = words[newId].date;
-        const currentCategory = words[newId].category;     
+      let id =this.state.id;
+      id = id + 1;
+      const result = this.state.result;
+      if(id < this.state.result.length){
+        const currentWord =  result[id][Math.floor(Math.random() * result[0].length)];     
         this.setState({
-          id: newId,
-          words, 
-          currentName, 
-          currentImage, 
-          currentTranslation, 
-          currentMeaning,
-          currentDate,
-          currentCategory,
+          id,
+          currentWord, 
           isImageVisible: false,
           isTranslationVisible: false,
           showNavButtons: true,
@@ -132,66 +111,13 @@ class Rightwrong extends Component {
           showContinueButton: false, 
           isCardVisible: false,
           isButtonVisible: false
-
       })
-    }
-
-    consoleState = () =>{
-      console.log(this.state)
-    }
-
-    consoleMessage = () =>{
-      console.log('hello');
     }
 
    voiceWord = () =>{
       var newWord = this.state.currentName;
       speech.say(newWord);
    }   
-
-   setStateOnStart = () => {
-      this.setState({
-        words: [],
-        negativeWords: [],
-        positiveWords: [],
-        id: 0,
-        currentName: '',
-        currentTranslation: '',
-        currentMeaning: '',
-        currentImage: null,
-        currentDate : null,
-        currentCategory: '',
-        isCardVisible: false,
-        isImageVisible: false,
-        isButtonVisible: true,
-        isTranslationVisible: false,
-        showNavButtons: true,
-        showContinueButton: false,
-        isFinalVisible: false         
-      }, () => this.initialLoad())
-   } 
-
-   initialLoad = () => {
-      var id = this.state.id;
-      axios.get('/vocabulary2.json')
-        .then(res => {
-          const words = res.data;
-          const currentName = words[id].name;
-          const currentTranslation = words[id].translation;
-          const currentMeaning = words[id].meaning;
-          const currentImage = words[id].image;
-          const currentDate = words[id].date;
-          const currentCategory = words[id].category;           
-          this.setState({ 
-            words, 
-            currentName, 
-            currentImage, 
-            currentTranslation, 
-            currentMeaning,
-            currentDate,
-            currentCategory }, () => console.log(this.state));
-        })
-   }
 
   render() {
     return (
@@ -220,13 +146,13 @@ class Rightwrong extends Component {
               <Card.Content>
                 <Card.Header className="rightwrong-timer"> 
                 </Card.Header>
-                <Card.Header className="rightwrong-header">{this.state.currentName} 
+                <Card.Header className="rightwrong-header">{this.state.currentWord.name} 
                 </Card.Header>                
-                <Card.Header>{this.state.currentTranslation} 
+                <Card.Header>{this.state.currentWord.translation} 
                 </Card.Header>
                 <div className="rightwrong-image-wrapper">
                 {this.state.isImageVisible ?
-                  <Image src={this.state.currentImage} className="rightwrong-image"></Image> : null               
+                  <Image src={this.state.currentWord.image} className="rightwrong-image"></Image> : null               
                 }
                 </div>
               </Card.Content>
@@ -234,8 +160,8 @@ class Rightwrong extends Component {
                 <Button.Group className="card-buttons-wrapper">
                 {this.state.showNavButtons ?
                 <Fragment>
-                  <Button onClick={this.negativeResponse} className="red false-button" primary>Неверно</Button>
-                  <Button onClick={this.positiveResponse} className="green true-button" primary>Верно</Button>
+                  <Button onClick={this.checkResponse.bind(this, false)} className="red false-button" primary>Неверно</Button>
+                  <Button onClick={this.checkResponse.bind(this, true)} className="green true-button" primary>Верно</Button>
                 </Fragment>:null
                 }  
                 {this.state.showContinueButton ?
@@ -254,12 +180,21 @@ class Rightwrong extends Component {
                   <Card.Header>Результаты</Card.Header>
                   <Divider/>
                   <Card.Description className="audio-list-container"> 
-                  {  (this.state.negativeWords.length !== 0 ) ?
-                    <List className="audio-list">
-                    {this.state.negativeWords.map((item, index) => 
-                        <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
-                      )}
-                   </List>: 
+                  {(this.state.negativeWords.length !== 0 ) ?
+                    <div className="answers-wrapper">
+                      <List className="audio-list">
+                      <h2>Верные ответы</h2>
+                      {this.state.positiveWords.map((item, index) => 
+                          <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
+                        )}
+                     </List>
+                      <List className="audio-list">
+                      <h2>Неверные ответы</h2>
+                      {this.state.negativeWords.map((item, index) => 
+                          <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
+                        )}
+                     </List>
+                   </div> : 
                    <Message>
                       <Message.Header>Поздравляем!</Message.Header>
                       <p>
@@ -278,7 +213,7 @@ class Rightwrong extends Component {
                     </div>
                     <div className="negative-results-wrapper"> 
                       <div className="negative-results">
-                        {this.state.words.length - this.state.positiveWords.length}
+                        {this.state.result.length - this.state.positiveWords.length}
                       </div> 
                       <Label>Неверно</Label>                   
                     </div>

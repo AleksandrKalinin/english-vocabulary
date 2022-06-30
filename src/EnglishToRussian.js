@@ -279,7 +279,7 @@ class EnglishToRussian extends Component {
                       <Card.Header>Результаты</Card.Header>
                       <Divider/>
                       <Card.Description className="audio-list-container"> 
-                      {  (this.state.negativeWords.length !== 0 ) ?
+                      {(this.state.negativeWords.length !== 0 ) ?
                         <List className="audio-list">
                         {this.state.negativeWords.map((item, index) => 
                             <List.Item key={index} ><span>{item.name}</span>  -  {item.translation}</List.Item>  

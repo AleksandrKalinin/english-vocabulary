@@ -21,10 +21,7 @@ class GrammarList extends Component {
         })
     } 
 
-  consoleState = () => {
-      console.log(this.state.grammar);
-      console.log(this.state.grammar[0]);
-  } 
+
 
   render() {
 
@@ -33,12 +30,6 @@ class GrammarList extends Component {
         <div className="content-wrapper">
           <TopMenu></TopMenu>
           <div className="texts-wrapper">
-        {/*
-            <Menu className="texts-menu" vertical>
-
-            </Menu> 
-        */}
-   
           {(this.state.grammar.length) ?
           <Table celled fixed className="grammar-list">
             <Table.Header>
