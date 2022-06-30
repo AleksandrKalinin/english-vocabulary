@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Icon, Menu, Input} from 'semantic-ui-react'
+import { Card, Image, Button, Icon, Menu, Input, Dropdown} from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import axios from 'axios';
 import speech from 'speech-synth';
@@ -11,6 +11,17 @@ class InsertSpaces extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
+
+		}
+	}
+
+  componentDidMount() {
+    this.setStateOnStart();
+  }   
+
+
+  setStateOnStart = () => {
+    this.setState({
       texts: [],
       contentArray: [],
       areTextsVisible: true,
@@ -25,10 +36,13 @@ class InsertSpaces extends Component {
       textContent: '',
       newContent: '',
       image: null,
-		}
-	}
+      options: [],
+      textsLoaded: false,
+      categoryValue: ''
+    }, () => this.initialLoad())
+  }
 
-  componentDidMount() {
+  initialLoad = () => {
     axios.get('/texts.json')
       .then(res => {
         let texts = res.data;
@@ -37,74 +51,49 @@ class InsertSpaces extends Component {
         this.setState({ 
           texts,
           contentArray
-        });
-      })        
-  }   
+        }, () => {
+            this.setState({
+              textsLoaded: true
+            })
+            this.createMenuItems()
+          });
+      }) 
+  }
 
 
-
-    readMore = (e) =>{
+    readMore = (id) =>{
       let texts = this.state.texts.slice();
-      let target = e.target.parentElement;
-      var index = 0;
-        while ( (target = target.previousElementSibling) ) {
-          index++;
-      }
-      let activeTargetTitle = e.target.parentElement.children[0].children[1].textContent;
-      let activeTargetContent = texts[index].content;
-      let inputContent = texts[index].content;
+      let title = texts[id].title;
+      let content = texts[id].content;
+      let inputContent = texts[id].content;
       inputContent = inputContent.replace(/\s/g, '');
-      let activeTargetImage = e.target.parentElement.children[0].children[0].children[0].src;
+      let image = texts[id].src;
       this.setState({
         areTextsVisible: false,
         isSingleTextVisible: true,
         isMenuVisible: false,
-        title: activeTargetTitle,
-        content: activeTargetContent,
-        image: activeTargetImage,
+        title,
+        content,
+        image,
         inputContent
       })      
     }
 
 
-    handleChange = (event) => {
-     this.setState({
-       minutes: event.target.value
-     })
-    }  
-
   showFinal = () =>{
-      let intervalHandle = this.state.intervalHandle;
-      let time = this.state.totalSecondsSpent;
-      let minutes = Math.floor(time / 60);
-      let seconds = this.state.totalSecondsSpent - (minutes * 60);
-      clearInterval(intervalHandle);
       this.setState({
-        intervalHandle,
         isResultVisible: true,
-        isTaskStarted: false,
-        minutesSpent: minutes,
-        secondsSpent: seconds        
+        isTaskStarted: false
+   
       })
   }
 
-  tryAgain = () =>{
-      this.setState({
-        areTextsVisible: false,
-        isSingleTextVisible: true,
-        isMenuVisible: false,
-        isResultVisible: false,
-        isResultWrong: false,  
-      }) 
-  }
-
 setCaretPosition = (ctrl, pos) => {
-  // Modern browsers
+
   if (ctrl.setSelectionRange) {
     ctrl.focus();
     ctrl.setSelectionRange(pos, pos);
-  
-  // IE8 and below
+
   } else if (ctrl.createTextRange) {
     var range = ctrl.createTextRange();
     range.collapse(true);
@@ -123,7 +112,7 @@ setCaretPosition = (ctrl, pos) => {
     let newstr = event.target.value.substring(indexOfSpace);
     newContent = newContent + (word + ' ');
       this.setState({
-      	newContent: newContent,
+      	newContent,
         inputContent: newstr
       }, () => this.setCaretPosition(target, 0));
   }
@@ -135,6 +124,40 @@ setCaretPosition = (ctrl, pos) => {
     })
   }
 
+    createMenuItems = () =>{
+      let newItems = [];
+      this.state.texts.map((item, i) =>
+                    newItems.push({ 
+                        key: item.id, 
+                        text: item.difficulty, 
+                        value: item.difficulty 
+                     }))
+      this.setState({
+        options: newItems
+      }, () => this.getUnique())
+    } 
+
+    getUnique = () => {
+      var arr = this.state.options;
+      var comp = 'text';
+      const unique = arr
+        .map(e => e[comp])
+        .map((e, i, final) => final.indexOf(e) === i && i)
+        .filter(e => arr[e]).map(e => arr[e]);
+      this.setState({
+        options: unique
+      })    
+    }  
+
+    selectCategory = () =>{
+      var categoryValue = this.state.value;
+      this.setState({
+        categoryValue
+      })
+    }
+
+    handleChange = (e, { value }) => this.setState({ value }, () => this.selectCategory() )
+
   render() {
     return (
       <Fragment>
@@ -144,13 +167,23 @@ setCaretPosition = (ctrl, pos) => {
               {this.state.isMenuVisible ?
                 <Menu className="texts-menu" vertical>
                   <Menu.Item name='inbox' >
-
+                    <Dropdown 
+                      placeholder='Выберите уровень'
+                      fluid
+                      value={this.state.value} 
+                      key={this.state.options.id}
+                      clearable
+                      search
+                      selection
+                      onChange = {this.handleChange}
+                      options={this.state.options} 
+                    />
                   </Menu.Item>
                 </Menu> : null 
               }          
-              {(this.state.texts.length && this.state.areTextsVisible) ? 
+              {(this.state.textsLoaded && this.state.areTextsVisible) ? 
               <Card.Group className="texts-cards" itemsPerRow={3} >
-              {this.state.texts.map((item, index) => 
+              {this.state.texts.map((item, index) => (this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === item.difficulty) && 
                 <Card key={index}>
                   <Card.Content>
                     <div className="texts-image-wrapper">
@@ -161,7 +194,7 @@ setCaretPosition = (ctrl, pos) => {
                       {item.content.substr(0,250) + ' ...'}
                     </Card.Description>
                   </Card.Content>
-                  <Button onClick={this.readMore} >Читать далее</Button>
+                  <Button onClick={this.readMore.bind(this, item.id)} >Читать далее</Button>
                 </Card>
                )}
               </Card.Group> : null
@@ -219,7 +252,7 @@ setCaretPosition = (ctrl, pos) => {
                     </div>                                     
                   </Card.Content>
                   <div className="fragment-variants">
-                    <Button primary onClick={this.tryAgain}>Заново</Button>
+                    <Button primary onClick={this.setStateOnStart}>Заново</Button>
                     <Button primary><Link className="training-link" to="/training">К тренировкам</Link></Button>
                   </div> 
                 </Card> : null

@@ -81,8 +81,7 @@ continueTraining = () =>{
   id = id + 1;
   const result = this.state.result;
   if(id < result.length) {
-    const currentWord =  result[id][Math.floor(Math.random() * result[id].length)]
-
+    const currentWord =  result[id][Math.floor(Math.random() * result[id].length)];
     this.setState({
       id,
       currentWord, 
@@ -158,10 +157,6 @@ dontKnow = () =>{
   })
 }
 
-consoleState = (e) =>{
-  console.log(this.state);
-}
-
 voiceWord = () =>{
   var newWords = this.state.currentWord.name;
   speech.say(newWords);
@@ -203,7 +198,7 @@ render() {
              <List.Item key={index} className="training-list-item">
              <List.Content>
              <List.Header as='a'>
-             <Button  ref={btn => { this.btn = btn; }}  className={this.state.currentButtonColor} onClick={this.compareWord.bind(this, word.id)} >{word.name}</Button>
+             <Button disabled={this.state.disabled}  ref={btn => { this.btn = btn; }}  className={this.state.currentButtonColor} onClick={this.compareWord.bind(this, word.id)} >{word.name}</Button>
              </List.Header>
              </List.Content>
              </List.Item>
