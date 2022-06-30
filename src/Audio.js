@@ -34,19 +34,13 @@ class Audio extends Component {
 
 
     positiveResponse = () =>{
-      var newObj = {};
-      var positiveWords = this.state.positiveWords.slice();
-      var negativeWords = this.state.negativeWords.slice();
-      var currentWord = this.state.currentName;
-      var searchValue = this.state.search;
-      newObj.id = this.state.id;
-      newObj.name = this.state.currentName;
-      newObj.translation = this.state.currentTranslation;
-      newObj.image = this.state.currentImage;
-      newObj.date = this.state.currentDate;
-      newObj.category = this.state.currentCategory;
-      if(currentWord === searchValue){
-        positiveWords.push(newObj);
+      let positiveWords = this.state.positiveWords.slice();
+      let negativeWords = this.state.negativeWords.slice();
+      let currentWord = this.state.currentWord;
+      let search = this.state.search;
+
+      if(currentWord.name === search){
+        positiveWords.push(currentWord);
         this.setState({
           positiveWords,
           isTranslationVisible: true,
@@ -59,8 +53,8 @@ class Audio extends Component {
           nameClass: 'audio-name-green'
         })
       }
-      else if(searchValue === ''){
-        negativeWords.push(newObj);        
+      else if(search === ''){
+        negativeWords.push(currentWord);        
         this.setState({
           correctNameVisible: true,
           negativeWords,
@@ -77,7 +71,7 @@ class Audio extends Component {
       }
 
       else {
-        negativeWords.push(newObj);
+        negativeWords.push(currentWord);
         this.setState({
           correctNameVisible: true,
           negativeWords,
@@ -94,36 +88,25 @@ class Audio extends Component {
     }
 
     continueTraining = () =>{
-      let wordsLength = this.state.words.length;
-      let newId =this.state.id;
-      newId = newId + 1;
-      const id = this.state.id;
-      const words = this.state.words;
-        if(newId < wordsLength) {
-        const currentName = words[newId].name;
-        const currentTranslation = words[newId].translation;
-        const currentImage = words[newId].image;
-        const currentDate = words[newId].date;
-        const currentCategory = words[newId].category;          
-          this.setState({
-            id: newId,
-            words, 
-            currentName, 
-            currentImage, 
-            currentTranslation, 
-            currentDate,
-            currentCategory,
-            isTranslationVisible: false,
-            showNavButtons: true,
-            showContinueButton: false,
-            isImageVisible: false,
-            isLinkVisible: true,
-            isInputVisible: true,
-            search: '',
-            correctNameVisible: false        
-          })
+      let id = this.state.id;
+      id = id + 1;
+      const result = this.state.result;
+      if(id < result.length) { 
+      const currentWord = result[id][Math.floor(Math.random() * result[0].length)];
+        this.setState({
+          id,
+          currentWord,
+          isTranslationVisible: false,
+          showNavButtons: true,
+          showContinueButton: false,
+          isImageVisible: false,
+          isLinkVisible: true,
+          isInputVisible: true,
+          search: '',
+          correctNameVisible: false        
+        })
+      } 
 
-        } 
       else this.setState({
           isFinalVisible: true,
           isTranslationVisible: false,
@@ -135,14 +118,13 @@ class Audio extends Component {
           isLinkVisible: false,
           isInputVisible: false,
           correctNameVisible: false,
-          search: ''   
-
+          search: ''
       }) 
     }
 
    voiceWord = () =>{
-      var newWord = this.state.currentName;
-      speech.say(newWord);
+      var word = this.state.currentWord.name;
+      speech.say(word);
    }  
 
    showImage = () => {
@@ -158,11 +140,6 @@ class Audio extends Component {
         negativeWords: [],
         positiveWords: [],
         id: 0,
-        currentName: '',
-        currentTranslation: '',
-        currentImage: null,
-        currentDate : null,
-        currentCategory: '',
         isCardVisible: false,
         isButtonVisible: true,
         isTranslationVisible: false,
@@ -184,31 +161,28 @@ class Audio extends Component {
 
    initialLoad = () => {
     var id = this.state.id;
-      axios.get('/words.json')
+      axios.get('/working.json')
         .then(res => {
           const words = res.data;
-          const currentName = words[id].name;
-          const currentTranslation = words[id].translation;
-          const currentImage = words[id].image;
-          const currentDate = words[id].date;
-          const currentCategory = words[id].category;           
-          this.setState({ 
-            currentName, 
-            currentImage, 
-            currentTranslation, 
-            currentDate,
-            currentCategory }, () => this.randomItem(words));
-        })
-   }
+          let result = [];
+          for (var i = 0; i < 3; i++) {
+            let item = [];
+            while(item.length < 5) {
+              var el = words[Math.floor(Math.random() * words.length)];
+              if (item.indexOf(el) === -1) {
+                item.push(el)
+              };                
+            }
+            result.push(item);
+          }
 
-   randomItem = (arr) => {
-    let words = [];
-    for (var i = 0; i < 10; i++) {
-      words.push(arr[Math.floor(Math.random() * arr.length)]);
-    }
-    this.setState({
-      words
-    })
+          const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
+
+          this.setState({ 
+            words, 
+            currentWord,
+            result }, () => console.log(this.state.result));
+        })
    }
 
   render() {
@@ -245,9 +219,9 @@ class Audio extends Component {
                   </Card.Header>
                   {this.state.isTranslationVisible ? 
                     <Fragment>
-                    {this.state.correctNameVisible ? <Card.Meta className={this.state.correctNameClass}>{this.state.currentName}</Card.Meta>: null }
+                    {this.state.correctNameVisible ? <Card.Meta className={this.state.correctNameClass}>{this.state.currentWord.name}</Card.Meta>: null }
                       <Card.Meta className={this.state.nameClass}>{this.state.tempSearch}</Card.Meta>
-                      <Card.Meta className={this.state.metaClass}>{this.state.currentTranslation}</Card.Meta>
+                      <Card.Meta className={this.state.metaClass}>{this.state.currentWord.translation}</Card.Meta>
                       <Card.Description className="audio-description">{}</Card.Description>                  
                     </Fragment>:null
                   }
@@ -256,7 +230,7 @@ class Audio extends Component {
                 <div className="audio-image-outer-wrapper">
                   {this.state.isImageVisible ?
                    <div className="audio-image-wrapper">
-                     <Image src={this.state.currentImage} />
+                     <Image src={this.state.currentWord.image} />
                    </div> :null
                  }
                  {this.state.isLinkVisible ?
@@ -289,11 +263,20 @@ class Audio extends Component {
                   <Divider/>
                   <Card.Description className="audio-list-container"> 
                   {  (this.state.negativeWords.length !== 0 ) ?
-                    <List className="audio-list">
-                    {this.state.negativeWords.map((item, index) => 
-                        <List.Item key={index} ><span>{item.name}</span>  -  {item.translation}</List.Item>  
-                      )}
-                   </List>: 
+                      <div className="answers-wrapper">
+                        <List className="audio-list">
+                        <h2>Верные ответы</h2>
+                        {this.state.positiveWords.map((item, index) => 
+                            <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
+                          )}
+                       </List>
+                        <List className="audio-list">
+                        <h2>Неверные ответы</h2>
+                        {this.state.negativeWords.map((item, index) => 
+                            <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
+                          )}
+                       </List>
+                     </div>: 
                    <Message>
                       <Message.Header>Поздравляем!</Message.Header>
                       <p>
@@ -312,7 +295,7 @@ class Audio extends Component {
                     </div>
                     <div className="negative-results-wrapper"> 
                       <div className="negative-results">
-                        {this.state.words.length - this.state.positiveWords.length}
+                        {this.state.result.length - this.state.positiveWords.length}
                       </div> 
                       <Label>Неверно</Label>                   
                     </div>
