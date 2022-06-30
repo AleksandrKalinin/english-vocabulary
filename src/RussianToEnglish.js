@@ -21,22 +21,53 @@ class RussianToEnglish extends Component {
   this.setStateOnStart()
 }
 
-
-updateComponent = () =>{
-  const id = this.state.id;
-  const words = this.state.words;
-  const currentName = words[id].name;
-  const currentTranslation = words[id].translation;
-  const currentMeaning = words[id].meaning;
-  const currentImage = words[id].image;
-  this.setState({ 
-    words, 
-    currentName, 
-    currentImage, 
-    currentTranslation, 
-    currentMeaning 
-  });
+setStateOnStart = () => {
+  this.setState({
+    words: [],
+    negativeWords: [],
+    positiveWords: [],
+    id: 0,
+    isCardVisible: false,
+    isButtonVisible: true,
+    isTranslationVisible: false,
+    showNavButtons: true,
+    showContinueButton: false,
+    isFinalVisible: false,
+    isImageVisible: false,
+    isLinkVisible: true,
+    isInputVisible: true,
+    search: '',
+    currentWord: '',
+    flagState: false,
+    result: [],
+    disabled: false    
+  }, () => this.initialLoad())
 }
+
+  initialLoad = () => {
+    var id = this.state.id;
+    axios.get('/working.json')
+      .then(res => {
+        const words = res.data;
+        let result = [];
+        for (var i = 0; i < 3; i++) {
+          let item = [];
+          while(item.length < 5) {
+            var el = words[Math.floor(Math.random() * words.length)];
+            if (item.indexOf(el) === -1) {
+              item.push(el)
+            };                
+          }
+          result.push(item);
+        }
+        const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
+        this.setState({ 
+          words, 
+          currentWord,
+          result });
+      })
+  }
+
 
 startTraining = () =>{
   this.setState({
@@ -45,36 +76,16 @@ startTraining = () =>{
   })
 }
 
-updateSearch = (event) =>{
-  this.setState({search: event.target.value.substr(0,20)});
-}  
-
 continueTraining = () =>{
-  let wordsLength = this.state.wholeList.length;
-  let newId = this.state.id;
-  newId = newId + 1;
-  const id = this.state.id;
-  const words = this.state.wholeList;
+  let id = this.state.id;
+  id = id + 1;
   const result = this.state.result;
-  if(newId < wordsLength) {
-    const currentName = words[newId].name;
-    const currentTranslation = words[newId].translation;
-    const currentMeaning = words[newId].meaning;
-    const currentImage = words[newId].image;
-    const currentDate = words[newId].date;
-    const currentCategory = words[newId].category; 
-    const currentResult = result[newId];
-    const currentWord =  result[newId][Math.floor(Math.random() * result[newId].length)]
-    const currentPicture = currentWord.image; 
+  if(id < result.length) {
+    const currentWord =  result[id][Math.floor(Math.random() * result[id].length)]
+
     this.setState({
-      id: newId,
-      words, 
-      currentName, 
-      currentImage, 
-      currentTranslation, 
-      currentMeaning,
-      currentDate,
-      currentCategory,
+      id,
+      currentWord, 
       isTranslationVisible: false,
       showNavButtons: true,
       showContinueButton: false,
@@ -82,10 +93,7 @@ continueTraining = () =>{
       isLinkVisible: true,
       isInputVisible: true,
       search: '',
-      currentWord,
-      currentPicture,
       disabled: false
-
     })
   } 
   else this.setState({
@@ -115,46 +123,33 @@ showImage = ()=>{
   })
 }
 
+   compareWord = (id) =>{
+    let selectedWord = this.state.result[this.state.id].find(x => x.id === id);
+    var positiveWords = this.state.positiveWords.slice();
+    var negativeWords = this.state.negativeWords.slice();    
+    if(this.state.currentWord.id === selectedWord.id){
+      positiveWords.push(this.state.currentWord);
+      this.setState({
+        isImageVisible: true,
+        flagState: true,
+        positiveWords,
+        negativeWords,
+        disabled: true
+      })
+    }
 
-compareWord = (e) =>{
-  var positiveWords = this.state.positiveWords.slice();
-  var negativeWords = this.state.negativeWords.slice();    
-  const param = e.target.textContent;
-  const word = this.state.currentWord;    
-  const name = this.state.currentWord.name;
-  const currentPicture = this.state.currentPicture;
-  let newObj = {}
-  newObj.id = this.state.id;
-  newObj.name = this.state.currentWord.name;
-  newObj.translation = this.state.currentWord.translation;
-  newObj.meaning = this.state.currentWord.meaning;
-  newObj.image = this.state.currentWord.image;
-  newObj.date = this.state.currentWord.date;
-  newObj.category = this.state.currentWord.category;
-
-  if(param === name){
-    positiveWords.push(newObj);
-    this.setState({
-      isImageVisible: true,
-      flagState: true,
-      currentPicture,
-      positiveWords,
-      negativeWords,
-      disabled: true
-    })
+    else {
+      negativeWords.push(this.state.currentWord);
+      this.setState({
+        isImageVisible: true,
+        flagState: true,
+        positiveWords,
+        negativeWords,
+        disabled: true
+      })
+    } 
   }
-  else{
-    negativeWords.push(newObj);
-    this.setState({
-      isImageVisible: true,
-      flagState: true,
-      currentPicture,
-      positiveWords,
-      negativeWords,
-      disabled: true
-    })
-  } 
-} 
+
 
 dontKnow = () =>{
   this.setState({
@@ -171,109 +166,6 @@ voiceWord = () =>{
   var newWords = this.state.currentWord.name;
   speech.say(newWords);
 } 
-
-setStateOnStart = () => {
-  this.setState({
-    words: [],
-    negativeWords: [],
-    positiveWords: [],
-    id: 0,
-    currentName: '',
-    currentTranslation: '',
-    currentMeaning: '',
-    currentImage: null,
-    currentDate : null,
-    currentCategory: '',
-    isCardVisible: false,
-    isButtonVisible: true,
-    isTranslationVisible: false,
-    showNavButtons: true,
-    showContinueButton: false,
-    isFinalVisible: false,
-    isImageVisible: false,
-    isLinkVisible: true,
-    isInputVisible: true,
-    search: '',
-    metaClass: 'blue',
-    nameClass: '',
-    randomValues: [],
-    list: [],
-    wholeList: [],
-    currentWord: '',
-    currentButtonColor: '',
-    flagState: false,
-    result: [],
-    currentPicture: null,
-    newColor: 'green',
-    disabled: false    
-  }, () => this.initialLoad())
-}
-
-initialLoad = () => {
-  var id = this.state.id;
-  axios.get('/words.json')
-  .then(res => {
-    const words = res.data;
-    const currentName = words[id].name;
-    const currentTranslation = words[id].translation;
-    const currentMeaning = words[id].meaning;
-    const currentImage = words[id].image;
-    const currentDate = words[id].date;
-    const currentCategory = words[id].category;
-    const list = [];
-    var wholeList = [];
-    for (var i = 0; i < words.length/5; i++) {
-      while(list.length < 5) {
-        var el = words[Math.floor(Math.random() * words.length)];
-        if(list.indexOf(el) === -1) list.push(el);
-      }
-      wholeList.push(list);
-    }
-
-    var result = [];
-
-    for (var i = 0; i < words.length/5; i++) {
-     result[i] = [];
-     for (var j = 0; j < 5; j++) {
-       var el = words[Math.floor(Math.random() * words.length)]
-       if (result[i].indexOf(el) === -1){
-        result[i][j] = el; 
-      }  
-      else {
-        el = words[Math.floor(Math.random() * words.length)]
-        if(result[i].indexOf(el) === -1){
-          result[i][j] = el;
-        }
-        else {
-          el = words[Math.floor(Math.random() * words.length)]
-          if(result[i].indexOf(el) === -1){
-            result[i][j] = el;
-          }
-          else {
-            result[i][j] = words[Math.floor(Math.random() * words.length)];
-          }
-        }
-      }    
-    }
-  }
-
-  const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
-  const currentPicture = currentWord.image;          
-  this.setState({ 
-    words, 
-    currentName, 
-    currentImage, 
-    currentTranslation, 
-    currentMeaning,
-    currentDate,
-    currentCategory,
-    list,
-    currentWord,
-    wholeList: wholeList.slice(0, 10),
-    result: result.slice(0, 10),
-    currentPicture });
-  })
-}
 
 render() {
   return (
@@ -311,7 +203,7 @@ render() {
              <List.Item key={index} className="training-list-item">
              <List.Content>
              <List.Header as='a'>
-             <Button  ref={btn => { this.btn = btn; }}  className={this.state.currentButtonColor} onClick={this.compareWord} >{word.name}</Button>
+             <Button  ref={btn => { this.btn = btn; }}  className={this.state.currentButtonColor} onClick={this.compareWord.bind(this, word.id)} >{word.name}</Button>
              </List.Header>
              </List.Content>
              </List.Item>
@@ -327,7 +219,7 @@ render() {
             {this.state.isImageVisible ?
               <div className="training-right-wrapper">
               <div className="training-image-wrapper">
-              <Image src={this.state.currentPicture} className="training-image">
+              <Image src={this.state.currentWord.image} className="training-image">
               </Image>                
               </div>
               {this.state.flagState ?
@@ -371,7 +263,7 @@ render() {
     </div>
     <div className="negative-results-wrapper"> 
     <div className="negative-results">
-    {this.state.words.length - this.state.positiveWords.length}
+    {this.state.result.length - this.state.positiveWords.length}
     </div> 
     <Label>Неверно</Label>                   
     </div>

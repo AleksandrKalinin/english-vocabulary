@@ -23,18 +23,36 @@ class EnglishToRussian extends Component {
     this.setStateOnStart();
   }
 
+   setStateOnStart = () => {
+    this.setState({
+      words: [],
+      negativeWords: [],
+      positiveWords: [],
+      id: 0,
+      isCardVisible: false,
+      isButtonVisible: true,
+      isTranslationVisible: false,
+      showNavButtons: true,
+      showContinueButton: false,
+      isFinalVisible: false,
+      isImageVisible: false,
+      isLinkVisible: true,
+      isInputVisible: true,
+      search: '',
+      currentWord: '',
+      flagState: false,
+      result: [],
+      disabled: false        
+    }, () => {
+      this.initialLoad();
+    })
+  }
 
     initialLoad = () => {
       var id = this.state.id;
       axios.get('/working.json')
         .then(res => {
           const words = res.data;
-          const currentName = words[id].name;
-          const currentTranslation = words[id].translation;
-          const currentMeaning = words[id].meaning;
-          const currentImage = words[id].image;
-          const currentDate = words[id].date;
-          const currentCategory = words[id].category;
           let result = [];
           for (var i = 0; i < 10; i++) {
             let item = [];
@@ -48,34 +66,11 @@ class EnglishToRussian extends Component {
           }
 
           const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
-          const currentPicture = currentWord.image;          
           this.setState({ 
             words, 
-            currentName, 
-            currentImage, 
-            currentTranslation, 
-            currentMeaning,
-            currentDate,
-            currentCategory,
             currentWord,
-            result,
-            currentPicture });
+            result });
         })
-    }
-
-    updateComponent = () =>{
-      const id = this.state.id;
-      const words = this.state.words;
-      const currentName = words[id].name;
-      const currentTranslation = words[id].translation;
-      const currentMeaning = words[id].meaning;
-      const currentImage = words[id].image;
-      this.setState({ 
-        words, 
-        currentName, 
-        currentImage, 
-        currentTranslation, 
-        currentMeaning});
     }
 
     startTraining = () =>{
@@ -84,10 +79,6 @@ class EnglishToRussian extends Component {
         isCardVisible: true
       })
     }
-
-    updateSearch = (event) =>{
-      this.setState({search: event.target.value.substr(0,20)});
-    }  
 
     continueTraining = () =>{
       let id = this.state.id;
@@ -169,43 +160,6 @@ class EnglishToRussian extends Component {
       flagState: true
     })
    }
-
-   setStateOnStart = () => {
-    this.setState({
-      words: [],
-      negativeWords: [],
-      positiveWords: [],
-      id: 0,
-      currentName: '',
-      currentTranslation: '',
-      currentMeaning: '',
-      currentImage: null,
-      currentDate : null,
-      currentCategory: '',
-      isCardVisible: false,
-      isButtonVisible: true,
-      isTranslationVisible: false,
-      showNavButtons: true,
-      showContinueButton: false,
-      isFinalVisible: false,
-      isImageVisible: false,
-      isLinkVisible: true,
-      isInputVisible: true,
-      search: '',
-      metaClass: 'blue',
-      nameClass: '',
-      randomValues: [],
-      currentWord: '',
-      currentButtonColor: '',
-      flagState: false,
-      result: [],
-      currentPicture: null,
-      newColor: 'green',
-      disabled: false        
-    }, () => {
-      this.initialLoad();
-    })
-  }
 
       render() {
         return (
