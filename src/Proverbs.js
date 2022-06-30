@@ -45,11 +45,11 @@ class Proverbs extends Component {
               [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
           }                    
           this.setState({ 
-              proverbs: proverbs, 
-              currentProverbName: currentProverbName,
-              currentTranslation: currentTranslation,
-              currentArray: currentArray
-            },()=> console.log("currentArray ", this.state.currentArray));
+              proverbs, 
+              currentProverbName,
+              currentTranslation,
+              currentArray
+            });
         })
     }
 
@@ -67,7 +67,6 @@ class Proverbs extends Component {
           const j = Math.floor(Math.random() * (i + 1));
           [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
       }
-      console.log(currentArray)      
     }
 
 
@@ -79,7 +78,7 @@ class Proverbs extends Component {
     let id = this.state.id;
     let proverbs = this.state.proverbs;
     id = id + 1;
-    if(id < 2) {
+    if (id < 2) {
       const currentProverb = proverbs[id];
       const currentProverbName = proverbs[id].proverb;
       const currentTranslation = proverbs[id].translation;
@@ -89,26 +88,26 @@ class Proverbs extends Component {
           [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
       }        
       this.setState({
-          id: id,
-          proverbs: proverbs, 
-          currentProverbName: currentProverbName,
-          currentTranslation: currentTranslation,
-          currentArray: currentArray,
+          id,
+          proverbs, 
+          currentProverbName,
+          currentTranslation,
+          currentArray,
           currentWord: [],
-          positiveWords: positiveWords,
-          negativeWords: negativeWords,
+          positiveWords,
+          negativeWords,
           isCheckButtonVisible: false,
           isDKButtonVisible: true,
           isContinueButtonVisible: false
-      }, () => console.log(this.state))
+      })
     }
     else{
       this.setState({
         isFinalVisible: true,
         isCardVisible: false,
         isStarterVisible: false,
-        positiveWords: positiveWords,
-        negativeWords: negativeWords           
+        positiveWords,
+        negativeWords           
       })
     }
   }
@@ -149,7 +148,7 @@ class Proverbs extends Component {
       currentWord.splice(indexTarget,1);
       currentArray.push(e.target.textContent);
       this.setState({
-        currentArray: currentArray
+        currentArray
       })
       if(currentArray.length > 0){
         this.setState({
@@ -169,12 +168,11 @@ class Proverbs extends Component {
     negativeWords.push(currentProverbName);
     console.log(currentWord);
     this.setState({
-      currentWord: currentWord,
       currentArray: [],
       isDKButtonVisible: false,
       isContinueButtonVisible: true,
       isCheckButtonVisible: false,
-      currentWord: currentWord
+      currentWord
     })
   }
 
@@ -197,7 +195,7 @@ class Proverbs extends Component {
         isContinueButtonVisible: true,
         isCheckButtonVisible: false,
         isDKButtonVisible: false,
-        positiveWords: positiveWords
+        positiveWords
       })      
     }
     else {
@@ -206,7 +204,6 @@ class Proverbs extends Component {
         isDKButtonVisible: true
       })      
     }
-    console.log(this.state);
   }
 
   render() {
