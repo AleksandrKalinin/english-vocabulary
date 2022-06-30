@@ -234,11 +234,20 @@ class EnglishToRussian extends Component {
                       <Divider/>
                       <Card.Description className="audio-list-container"> 
                       {(this.state.negativeWords.length !== 0 ) ?
+                      <div className="answers-wrapper">
                         <List className="audio-list">
-                        {this.state.negativeWords.map((item, index) => 
-                            <List.Item key={index} ><span>{item.name}</span>  -  {item.translation}</List.Item>  
+                        <h2>Верные ответы</h2>
+                        {this.state.positiveWords.map((item, index) => 
+                            <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
                           )}
-                       </List>: 
+                       </List>
+                        <List className="audio-list">
+                        <h2>Неверные ответы</h2>
+                        {this.state.negativeWords.map((item, index) => 
+                            <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
+                          )}
+                       </List>
+                     </div>: 
                        <Message>
                           <Message.Header>Поздравляем!</Message.Header>
                           <p>
