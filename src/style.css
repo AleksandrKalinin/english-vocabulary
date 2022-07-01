@@ -355,8 +355,16 @@ body a{
 	/*color:  #3281F0 !important; */
 }
 
+.vocab-list {
+	overflow: hidden;
+}
+
+.vocab-list .item {
+	transition: .2s all;
+}
+
 .vocab-list .item:hover{
-	transform: scale(1.002);
+	transform: translate(-10px, 0);
 	/* background: #EAECED; */
 }
 
@@ -471,6 +479,7 @@ button a.training-link{
 
 .content-wrapper{
 	min-height: calc(100vh - 60px);
+	position: relative;
 }
 
 .card-header-wrapper, .audio-header-wrapper{
@@ -3262,4 +3271,10 @@ footer{
 	width: 80%;
 	overflow-x: hidden;
 	overflow-y: auto;
+}
+
+/*new modal*/
+
+.modal-container {
+	display: none;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Vocabulary from './Vocabulary';
 import GrammarList from './GrammarList'
 import Statistics from './Statistics'
 import CoursesList from './CoursesList'
@@ -68,7 +68,7 @@ ReactDOM.render(
 		<Router basename={process.env.PUBLIC_URL}>
 			<div className="router-wrapper">
 				<Route exact path="/" component={Main}/>
-				<Route path="/vocab" component={App} />
+				<Route path="/vocabulary" component={Vocabulary} />
 				<Route path="/settings" component={Settings} />
 				<Route path="/grammar" component={GrammarList} />
 				<Route path="/materials" component={Materials} />

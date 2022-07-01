@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { List, Button} from 'semantic-ui-react';
+import { List, Button, Icon} from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import axios from 'axios';
 import VocabWord from'./VocabWord'
@@ -8,7 +8,7 @@ import TopMenu from './TopMenu'
 import VocabTopMenu from './VocabTopMenu'
 import speech from 'speech-synth';
 
-class App extends Component {
+class Vocabulary extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
@@ -152,8 +152,11 @@ class App extends Component {
    	console.log(this.state)
    }
 
+   showNewModal = (data) => {
+   	alert(data);
+   }
+
   render() {
-  	//let filteredWords = this.state.words;
   	
   	let filteredWords = this.state.words.filter(
   		(word) =>{
@@ -162,6 +165,15 @@ class App extends Component {
   	);  	
     return (
     	<Fragment>
+    		<div className="modal-container">
+    			<div className="modal-word">
+    				<div className="modal-word__image">
+    					<img src = "" />
+    				</div>
+    				<p className="modal-word__title"><span className="modal-word__icon"></span></p>
+    				<span className="modal-word__icon modal-word__icon--delete"><Icon name = 'right microphone'/></span>
+    			</div>
+    		</div>
 	    	<div className="content-wrapper">
 	    		<TopMenu></TopMenu>
 	    		<div className="vocab-side-menu">
@@ -181,10 +193,12 @@ class App extends Component {
 							{filteredWords.slice(0,this.state.visible).map((word,index) => 
 								(this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === word.category) && 
 								<VocabWord
+									showNewModal={this.showNewModal}
 									newFunction={this.newFunction}
 									voiceWord={this.voiceWord}
 									voiceWordFromModal = {this.voiceWordFromModal}
 									delete={this.delete}
+									id={word.id}
 									key={word.id} 
 									name={word.name}
 									transcription = {word.transcription} 
@@ -209,4 +223,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Vocabulary;

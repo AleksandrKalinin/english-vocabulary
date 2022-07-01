@@ -7,7 +7,7 @@ class ModalWord extends Component {
 
   render() {
     return (
-        <Modal className="modal-word" trigger={
+        <Modal className="modal-word" trigger = {
           <List.Content >
             <span className="word-icon-wrapper">
                <Icon name='right eye' />

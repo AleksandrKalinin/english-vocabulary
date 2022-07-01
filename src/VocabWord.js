@@ -23,8 +23,8 @@ class VocabWord extends Component {
       this.props.voiceWordFromModal(el);
    }   
 
-  consoleState = (el) =>{
-    var newIndex = el.target.parentElement.parentElement.parentElement.parentElement;
+  showNewModal = (id) => {
+    this.props.showNewModal(id)
   }
 
   render() {
@@ -34,7 +34,7 @@ class VocabWord extends Component {
         <Fragment>
           <Image avatar src={this.props.image} />
           <List.Content className="word-content">
-            <List.Header as='a'>{this.props.name} - {this.props.transcription} - {this.props.translation}</List.Header>
+            <List.Header onClick={this.showNewModal.bind(this, this.props.id)} as='a'>{this.props.name} - {this.props.transcription} - {this.props.translation}</List.Header>
             {descriptionVisible ?         
               <List.Description className="word-meaning">
                   <b>{this.props.meaning}</b>
