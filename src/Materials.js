@@ -24,14 +24,6 @@ class Materials extends Component {
             </Card> 
             <Card>
               <div className="training-wrapper-image">
-              <Image src='training/proverbs.jpg' />              
-              </div>          
-              <Card.Content>
-                <Card.Header><Link to="/proverbs">Пословицы и поговорки</Link></Card.Header>
-              </Card.Content>
-            </Card>
-            <Card>
-              <div className="training-wrapper-image">
               <Image src='training/words.png' />              
               </div>          
               <Card.Content>

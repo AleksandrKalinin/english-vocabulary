@@ -718,7 +718,7 @@ button a.training-link{
 	font-size: 18px !important;
 }
 
-.audio-training .content  .audio-name-red{
+.audio-training .content  .audio-name-red, .audio-name-red{
 	color: red !important;
 	font-size: 20px !important;
 	font-weight: 700 !important;
@@ -726,7 +726,7 @@ button a.training-link{
 	text-decoration: line-through;	
 }
 
-.audio-training .content  .audio-name-green{
+.audio-training .content  .audio-name-green, .audio-name-green{
 	color: green !important;
 	font-size: 20px !important;
 	font-weight: 700 !important;
@@ -1571,7 +1571,7 @@ footer{
 }
 
 .texts-cards .card:hover{
-	transform: scale(1.005);
+	transform: scale(1.05);
 }
 
 .texts-cards .card .content .description{
@@ -1959,7 +1959,7 @@ footer{
 }
 
 .fragment-variants .fragment-span{
-	background: #333333;
+	background: #3281F0;
 	color: #fff !important;
 	padding: 6px 9px;
 	margin: 5px 3px;
@@ -2248,6 +2248,7 @@ footer{
 	justify-content: center;
 	padding: 30px 20px;
 	min-height: 80px !important;
+	margin-bottom: 0 !important;
 }
 
 .proverb-button-container{

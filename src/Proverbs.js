@@ -11,47 +11,14 @@ class Proverbs extends Component {
 	constructor(props){
 		super(props);
   		this.state = {
-  			proverbs: [],
-        id: 0,
-        currentProverbName: '',
-        currentTranslation: '',
-        mistakeCount: 0,
-        positiveWords: [],
-        negativeWords: [],
-        currentArray: [],
-        isStarterVisible: true,
-        isCardVisible: false,
-        isFinalVisible: false,
-        areButtonsVisible: false,
-        isContinueButtonVisible: false,
-        isCheckButtonVisible: false,
-        isDKButtonVisible: true,
-        currentWord: []
+
   		}
 	}
 
 
   componentDidMount() {
-    var id = this.state.id;
-      axios.get('/proverbs.json')
-        .then(res => {
-          const proverbs = res.data;
-          const currentProverb = proverbs[id];
-          const currentProverbName = proverbs[id].proverb;
-          const currentTranslation = proverbs[id].translation;
-          let currentArray = currentProverbName.split(" ");
-          for (let i = currentArray.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
-          }                    
-          this.setState({ 
-              proverbs, 
-              currentProverbName,
-              currentTranslation,
-              currentArray
-            });
-        })
-    }
+    this.setStateOnStart();
+  }
 
 
     startTraining = () =>{
@@ -72,44 +39,46 @@ class Proverbs extends Component {
 
 
     continueTraining = () =>{
-	  let mistakeCount = this.state.mistakeCount;
-	  let negativeWords = this.state.negativeWords.slice();
-	  let positiveWords = this.state.positiveWords.slice();
-    let id = this.state.id;
-    let proverbs = this.state.proverbs;
-    id = id + 1;
-    if (id < 2) {
-      const currentProverb = proverbs[id];
-      const currentProverbName = proverbs[id].proverb;
-      const currentTranslation = proverbs[id].translation;
-      let currentArray = currentProverbName.split(" ");
-      for (let i = currentArray.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
-      }        
-      this.setState({
-          id,
-          proverbs, 
-          currentProverbName,
-          currentTranslation,
-          currentArray,
-          currentWord: [],
-          positiveWords,
-          negativeWords,
-          isCheckButtonVisible: false,
-          isDKButtonVisible: true,
-          isContinueButtonVisible: false
-      })
-    }
-    else{
-      this.setState({
-        isFinalVisible: true,
-        isCardVisible: false,
-        isStarterVisible: false,
-        positiveWords,
-        negativeWords           
-      })
-    }
+  	  let mistakeCount = this.state.mistakeCount;
+  	  let negativeProverbs = this.state.negativeProverbs.slice();
+  	  let positiveProverbs = this.state.positiveProverbs.slice();
+      let id = this.state.id;
+      let proverbs = this.state.proverbs;
+      id = id + 1;
+      if (id < 2) {
+        const currentProverb = proverbs[id];
+        const currentProverbName = proverbs[id].proverb;
+        const currentTranslation = proverbs[id].translation;
+        let currentArray = currentProverbName.split(" ");
+        for (let i = currentArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
+        }        
+        this.setState({
+            id,
+            proverbs, 
+            currentProverbName,
+            currentTranslation,
+            currentArray,
+            constructedProverb: [],
+            positiveProverbs,
+            negativeProverbs,
+            isCheckButtonVisible: false,
+            isDKButtonVisible: true,
+            isContinueButtonVisible: false,
+            isResultWrong: false,
+            nameClass: ''
+        })
+      }
+      else{
+        this.setState({
+          isFinalVisible: true,
+          isCardVisible: false,
+          isStarterVisible: false,
+          positiveProverbs,
+          negativeProverbs           
+        })
+      }
   }
 
    setValue = (e) =>{
@@ -119,13 +88,13 @@ class Proverbs extends Component {
         while ( (target = target.previousElementSibling) ) {
           indexTarget++
     }
-    let currentWord = this.state.currentWord;
+    let constructedProverb = this.state.constructedProverb;
     let currentArray = this.state.currentArray;
     currentArray.splice(indexTarget,1);
-    currentWord.push(e.target.textContent);
+    constructedProverb.push(e.target.textContent);
 
     this.setState({
-      currentWord: currentWord
+      constructedProverb: constructedProverb
     })
     if(currentArray.length == 0){
       this.setState({
@@ -142,10 +111,9 @@ class Proverbs extends Component {
           while ( (target = target.previousElementSibling) ) {
             indexTarget++
       }
-      console.log(indexTarget);
-      let currentWord = this.state.currentWord;
+      let constructedProverb = this.state.constructedProverb;
       let currentArray = this.state.currentArray;
-      currentWord.splice(indexTarget,1);
+      constructedProverb.splice(indexTarget,1);
       currentArray.push(e.target.textContent);
       this.setState({
         currentArray
@@ -158,52 +126,101 @@ class Proverbs extends Component {
   }
 
   dontKnow = (e) =>{
-    let negativeWords = this.state.negativeWords;    
+    let negativeProverbs = this.state.negativeProverbs;    
     let currentProverbName = this.state.currentProverbName;
     let currentArray = currentProverbName.split(" ");
-    let currentWord = [];
+    let constructedProverb = [];
     for (var i = 0; i < currentArray.length; i++) {
-      currentWord.push(currentArray[i])
+      constructedProverb.push(currentArray[i])
     }
-    negativeWords.push(currentProverbName);
-    console.log(currentWord);
+    negativeProverbs.push(currentProverbName);
     this.setState({
       currentArray: [],
       isDKButtonVisible: false,
       isContinueButtonVisible: true,
       isCheckButtonVisible: false,
-      currentWord
+      constructedProverb
     })
   }
 
   checkProverb = (e) =>{
-    let positiveWords = this.state.positiveWords;
-    let currentWord = this.state.currentWord;
-    let sentence = '';
-    for (var i = 0; i < currentWord.length; i++) {
-      if(i !== currentWord.length-1){
-        sentence = sentence + currentWord[i]+ ' ';
-      }
-      else{
-        sentence = sentence + currentWord[i];
-      }
-    }
+    let positiveProverbs = this.state.positiveProverbs.slice();
+    let negativeProverbs = this.state.negativeProverbs.slice();
+    var sentence = this.state.constructedProverb.slice().join(' ');
     if(sentence === this.state.currentProverbName){
-      console.log("correct!");
-      positiveWords.push(sentence)
+      positiveProverbs.push(this.state.currentProverbName)
+      this.setState({
+        nameClass: 'audio-name-green',
+        isContinueButtonVisible: true,
+        isCheckButtonVisible: false,
+        isDKButtonVisible: false,
+        positiveProverbs
+      })      
+    }
+    else {
+      negativeProverbs.push(this.state.currentProverbName)
       this.setState({
         isContinueButtonVisible: true,
         isCheckButtonVisible: false,
         isDKButtonVisible: false,
-        positiveWords
+        nameClass: 'audio-name-red',
+        isResultWrong: true,
+        negativeProverbs
       })      
     }
-    else {
-      console.log("incorrect!");
-      this.setState({
-        isDKButtonVisible: true
-      })      
-    }
+  }
+
+  setStateOnStart = () => {
+    this.setState({
+      proverbs: [],
+      id: 0,
+      currentProverbName: '',
+      currentTranslation: '',
+      mistakeCount: 0,
+      positiveProverbs: [],
+      negativeProverbs: [],
+      currentArray: [],
+      isStarterVisible: true,
+      isCardVisible: false,
+      isFinalVisible: false,
+      areButtonsVisible: false,
+      isContinueButtonVisible: false,
+      isCheckButtonVisible: false,
+      isDKButtonVisible: true,
+      constructedProverb: [],
+      nameClass: '',
+      isResultWrong: false      
+    }, () => this.initialLoad())
+  }
+
+  initialLoad = () => {
+    let id = this.state.id;
+    axios.get('/proverbs.json')
+      .then(res => {
+        const proverbs = res.data;
+        let random = [];
+        while(random.length < 2) {
+          var el = proverbs[Math.floor(Math.random() * proverbs.length)];
+          if (random.indexOf(el) === -1) {
+            random.push(el)
+          };                
+        }
+  
+        const currentProverb = random[id];
+        const currentProverbName = random[id].proverb;
+        const currentTranslation = random[id].translation;
+        let currentArray = currentProverbName.split(" ");
+        for (let i = currentArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
+        }                    
+        this.setState({ 
+            proverbs: random, 
+            currentProverbName,
+            currentTranslation,
+            currentArray
+          });
+      })
   }
 
   render() {
@@ -233,11 +250,16 @@ class Proverbs extends Component {
 	       		<Label>
               {this.state.currentTranslation}
             </Label>
-              <div className="proverb-result">
-                  {this.state.currentWord.map((item,index) =>
+              <div className={`proverb-result ${this.state.nameClass}`} >
+                  {this.state.constructedProverb.map((item,index) =>
                       <span key={index} className="proverb-span" onClick={this.removeValue}>{item}</span>
                   )}
               </div>
+              {this.state.isResultWrong ?
+                <div className={`proverb-result audio-name-green`}>
+                  {this.state.currentProverbName}
+                </div> : null
+              }
               <div className="fragment-variants">
                 {this.state.currentArray.map((item, index) =>
                   <span onClick={this.setValue} key={index} className="fragment-span">{item}</span>
@@ -245,13 +267,13 @@ class Proverbs extends Component {
               </div>
               <div className="proverb-button-container">
               {this.state.isCheckButtonVisible ? 
-                <Button primary onClick={this.checkProverb} >Проверить</Button> :null
+                <Button primary onClick={this.checkProverb} >Проверить</Button> : null
               }
               {this.state.isDKButtonVisible ? 
                 <Button primary onClick={this.dontKnow}>Не знаю</Button> :null
               }
               {this.state.isContinueButtonVisible ? 
-                <Button primary onClick={this.continueTraining} >Продолжить</Button> :null
+                <Button primary onClick={this.continueTraining} >Продолжить</Button> : null
               }                
               </div>
        		</Card>
@@ -262,20 +284,24 @@ class Proverbs extends Component {
          <Card.Group itemsPerRow={1} className="card-header-wrapper card-final-wrapper" >
              <Card className="card-training" >
                 <Card.Content>
-                  <Card.Header>Results</Card.Header>
+                  <Card.Header>Результаты</Card.Header>
                   <Divider/>
                   <Card.Description className="audio-list-container"> 
-                  {  (this.state.negativeWords.length !== 0 ) ?
-                    <List className="audio-list">
-                    <h3>Верно</h3>
-                      {this.state.positiveWords.map((item, index) => 
-                        <List.Item key={index} >{item}</List.Item>  
-                      )}
-                    <h3>Неверно</h3>
-                      {this.state.negativeWords.map((item, index) => 
-                        <List.Item key={index} >{item}</List.Item>  
-                      )}                      
-                   </List>: 
+                  {  (this.state.negativeProverbs.length !== 0 ) ?
+                      <div className="answers-wrapper">
+                        <List className="audio-list">
+                        <h2>Верные ответы</h2>
+                        {this.state.positiveProverbs.length ? this.state.positiveProverbs.map((item, index) => 
+                            <List.Item key={index} ><span>{item}</span></List.Item>  
+                          ) : null}
+                       </List>
+                        <List className="audio-list">
+                        <h2>Неверные ответы</h2>
+                        {this.state.negativeProverbs.map((item, index) => 
+                            <List.Item key={index} ><span>{item}</span></List.Item>  
+                          )}
+                       </List>
+                     </div>: 
                    <Message>
                       <Message.Header>Поздравляем!</Message.Header>
                       <p>
@@ -287,20 +313,20 @@ class Proverbs extends Component {
                   <Card.Description className="results-wrapper">
                     <div className="positive-results-wrapper"> 
                       <div className="positive-results">
-                        {this.state.positiveWords.length}
+                        {this.state.positiveProverbs.length}
                       </div>
                       <Label>Верно</Label>                    
                     </div>
                     <div className="negative-results-wrapper"> 
                       <div className="negative-results">
-                        {2 - this.state.positiveWords.length}
+                        {2 - this.state.positiveProverbs.length}
                       </div> 
                       <Label>Неверно</Label>                   
                     </div>
                   </Card.Description>
                   <Button.Group className="card-buttons-wrapper">
-                    <Button primary>Продолжить</Button>
-                    <Button primary><Link to="/materials">Вернуться</Link></Button>
+                    <Button primary onClick={this.setStateOnStart}>Продолжить</Button>
+                    <Button primary><Link className="training-link" to="/training">К тренировкам</Link></Button>
                   </Button.Group>
                 </Card.Content>
               </Card>          

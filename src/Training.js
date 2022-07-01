@@ -112,7 +112,16 @@ class Training extends Component {
                 <Card.Header><Link to="/rightwrong">Верно-неверно</Link></Card.Header>
 
               </Card.Content>
-            </Card>                                                                                                   
+            </Card>
+            <Card>
+              <div className="training-wrapper-image">
+              <Image src='../training/proverbs.jpg' />              
+              </div>          
+              <Card.Content>
+                <Card.Header><Link to="/proverbs">Пословицы и поговорки</Link></Card.Header>
+
+              </Card.Content>
+            </Card>                                                                                                               
           </Card.Group>
           </div> 
         <footer></footer>
