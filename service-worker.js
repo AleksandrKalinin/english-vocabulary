@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/english-vocabulary/precache-manifest.dc401652947a07620cf7024108851e5e.js"
+  "/english-vocabulary/precache-manifest.d2ca9f2cddb9b0466f80b892600352ca.js"
 );
 
 workbox.clientsClaim();

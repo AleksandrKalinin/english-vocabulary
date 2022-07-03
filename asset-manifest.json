@@ -1,7 +1,7 @@
 {
   "main.css": "/english-vocabulary/static/css/main.069a2918.chunk.css",
-  "main.js": "/english-vocabulary/static/js/main.82b35a1e.chunk.js",
-  "main.js.map": "/english-vocabulary/static/js/main.82b35a1e.chunk.js.map",
+  "main.js": "/english-vocabulary/static/js/main.fe1523aa.chunk.js",
+  "main.js.map": "/english-vocabulary/static/js/main.fe1523aa.chunk.js.map",
   "static/css/1.36342b9c.chunk.css": "/english-vocabulary/static/css/1.36342b9c.chunk.css",
   "static/js/1.80d55cdf.chunk.js": "/english-vocabulary/static/js/1.80d55cdf.chunk.js",
   "static/js/1.80d55cdf.chunk.js.map": "/english-vocabulary/static/js/1.80d55cdf.chunk.js.map",
@@ -10,9 +10,9 @@
   "static/media/style.css": "/english-vocabulary/static/media/main.2a06c19c.jpg",
   "static/media/semantic.min.css": "/english-vocabulary/static/media/brand-icons.a1a749e8.svg",
   "static/media/all.css": "/english-vocabulary/static/media/fa-solid-900.0724bb8b.svg",
-  "static/css/main.069a2918.chunk.css.map": "/english-vocabulary/static/css/main.069a2918.chunk.css.map",
   "static/css/1.36342b9c.chunk.css.map": "/english-vocabulary/static/css/1.36342b9c.chunk.css.map",
+  "static/css/main.069a2918.chunk.css.map": "/english-vocabulary/static/css/main.069a2918.chunk.css.map",
   "index.html": "/english-vocabulary/index.html",
-  "precache-manifest.dc401652947a07620cf7024108851e5e.js": "/english-vocabulary/precache-manifest.dc401652947a07620cf7024108851e5e.js",
+  "precache-manifest.d2ca9f2cddb9b0466f80b892600352ca.js": "/english-vocabulary/precache-manifest.d2ca9f2cddb9b0466f80b892600352ca.js",
   "service-worker.js": "/english-vocabulary/service-worker.js"
 }
