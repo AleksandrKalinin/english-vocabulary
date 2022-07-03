@@ -18,6 +18,7 @@ class Vocabulary extends Component {
 		super(props);
 		this.state = {
 			words: [],
+			filteredWords: [],
 			isOldestFirst: true,
 			visible: 15,
 			query: '',
@@ -49,7 +50,7 @@ class Vocabulary extends Component {
 
 //сортировка по дате
 	sortByDate = () => {
-    const words = this.state.words.slice();
+    const words = this.state.filteredWords.slice();
     let newWords = [];
     if(this.state.isOldestFirst){
       newWords = words.sort(function(a,b){
@@ -63,13 +64,13 @@ class Vocabulary extends Component {
     }
     this.setState({
       isOldestFirst: !this.state.isOldestFirst,
-      words: newWords
+      filteredWords: newWords
     })
 	} 
 
 //сортировка по имени
 	sortByName = () =>{
-		const words = this.state.words;
+		const words = this.state.filteredWords.slice();
 		let newWords = words;
 		if(this.state.isOldestFirst){
 			newWords = words.sort((a,b) => a.name.localeCompare(b.name) /*console.log('a,b ', a,b) */ );
@@ -78,13 +79,13 @@ class Vocabulary extends Component {
 		}
 		this.setState({
 			isOldestFirst: !this.state.isOldestFirst,
-			words: newWords
+			filteredWords: newWords
 		})		
 	}
 
 //сортировка по переводу
 	sortByTranslation = () =>{
-		const words = this.state.words;
+		const words = this.state.filteredWords.slice();
 		let newWords = words;
 		if(this.state.isOldestFirst){
 			newWords = words.sort((a,b) => a.translation.localeCompare(b.translation));
@@ -93,7 +94,7 @@ class Vocabulary extends Component {
 		}
 		this.setState({
 			isOldestFirst: !this.state.isOldestFirst,
-			words: newWords
+			filteredWords: newWords
 		})		
 	}
 
@@ -101,7 +102,7 @@ class Vocabulary extends Component {
 	    axios.get('/working.json')
 	      .then(res => {
 	        const words = res.data;
-	        this.setState({ words });
+	        this.setState({ words, filteredWords: words });
 	      })
 	  }
 
@@ -122,7 +123,15 @@ class Vocabulary extends Component {
    }
 
    myCallback = (dataFromChild) =>{
+	   	let words = this.state.words.slice();
+	   	let filteredWords;
+	   	if (dataFromChild.value !== '') {
+	   		filteredWords = words.filter(item => item.category == dataFromChild.value); 
+	   	} else {
+	   		filteredWords = words;
+	   	} 	
    		this.setState({
+   			filteredWords,
    			categoryValue: dataFromChild.value,
    			options: dataFromChild.options
    		}) 
@@ -141,7 +150,7 @@ class Vocabulary extends Component {
    } 
 
    consoleState = () => {
-   	console.log(this.state)
+   	console.log(this.state.categoryValue);
    }
 
    toggleModal = () => {
@@ -152,7 +161,7 @@ class Vocabulary extends Component {
 
 
   render() {  	
-  	let filteredWords = this.state.words.filter(
+  	let filteredWords = this.state.filteredWords.slice().filter(
   		(word) =>{
   			return word.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
   		}
@@ -186,7 +195,7 @@ class Vocabulary extends Component {
 	    					>
 						</VocabTopMenu>
 			 			<List className="vocab-list" relaxed='very'>
-							{filteredWords.slice(0,this.state.visible).map((word,index) => 
+							{filteredWords.slice(0, this.state.visible).map((word,index) => 
 								(this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === word.category) && 
 								<VocabWord
 									word = {word}
