@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import {Image, Button,Card, Menu, Input,Dropdown, Icon} from 'semantic-ui-react'
+import {Image, Button,Card, Menu, Dropdown, Icon} from 'semantic-ui-react'
 import TopMenu from './TopMenu'
-import {Link} from "react-router-dom";
 import axios from 'axios';
 
 class Decks extends Component {
@@ -9,6 +8,172 @@ class Decks extends Component {
   constructor(props){
     super(props);
     this.state = {
+
+    }
+  }
+
+  componentDidMount() {
+    this.setStateOnStart()
+  }
+
+    constructMenu = () =>{
+      let options = [];
+      this.state.words.map((item, i) =>
+                    options.push({ 
+                        key: item.id, 
+                        text: item.level, 
+                        value: item.level
+                     }))
+      this.setState({
+        options
+      }, () => this.getUnique())
+    } 
+
+    getUnique = () => {
+      var arr = this.state.options;
+      var comp = 'text';
+      const options = arr
+        .map(e => e[comp])
+        .map((e, i, final) => final.indexOf(e) === i && i)
+        .filter(e => arr[e]).map(e => arr[e]);
+      this.setState({
+        options,
+      })    
+    }  
+
+    setValue = () =>{
+      var categoryValue = this.state.value;
+      this.setState({
+        categoryValue
+      })
+    }
+
+    handleChange = (e, { value }) => this.setState({ value }, () => this.setValue() )  
+
+    readMore = (id) =>{
+      let arrayOfButtons = [];    	
+      let iconsArray = [];
+      let disabled = [];
+      let colors = this.state.arrayOfColors.slice(); 
+      let words = this.state.words.slice();
+      let allWords = this.state.allWords.slice();
+      let currentWords = [];
+      let currentColor = colors[Math.floor(Math.random()*colors.length)];
+      let activeTargetTitle = this.state.words.find(x => x.id === id).name;
+
+      for (var i = 0; i < allWords.length; i++) {
+      	if(allWords[i]["category"] === activeTargetTitle ){
+      		currentWords.push(allWords[i])
+          arrayOfButtons.push("Добавить");
+          iconsArray.push(true);
+          disabled.push(false);          
+      	} 
+      }
+
+      this.setState({
+        areTextsVisible: false,
+        isSingleTextVisible: true,
+        isDropdownVisible: false,
+        currentWords,
+        currentColor,
+        arrayOfButtons,
+        iconsArray,
+        disabled      	
+      })
+    }
+
+
+    addToList = (id) =>{
+      let addedItems = this.state.addedItems.slice();
+      let currentWords = this.state.currentWords.slice();
+      let arrayOfButtons = this.state.arrayOfButtons.slice();
+      let disabled = this.state.disabled.slice();
+      let iconsArray = this.state.iconsArray.slice();
+      let selected = currentWords.find(x => x.id === id);      
+      arrayOfButtons[id] = "Добавлено !";
+      iconsArray[id] = false;
+      disabled[id] = "disabled";
+      addedItems.push(selected);
+      this.setState({
+      	addedItems,
+      	arrayOfButtons,
+      	iconsArray,
+      	disabled
+      })
+
+    }
+
+    addedFirst = () =>{
+    	let state = this.state.sortedByTranslationUp;
+    	this.setState({
+    		addedUp: !state
+    	})
+    }
+
+  //сортировка по имени
+  	sortByName = () =>{
+      let sortedByNameUp = this.state.sortedByNameUp;
+  		const words = this.state.currentWords.slice();
+  		let currentWords;
+  		if(this.state.isOldestFirst){
+  			currentWords = words.sort((a,b) => a.name.localeCompare(b.name));
+  		} else {
+  			currentWords = words.sort((a,b) => b.name.localeCompare(a.name));
+  		}
+  		this.setState({
+  			isOldestFirst: !this.state.isOldestFirst,
+  			currentWords,
+  			sortedByNameUp: !sortedByNameUp			
+  		})		
+  	}
+
+  //сортировка по переводу
+  	sortByTranslation = () =>{
+  		const words = this.state.currentWords.slice();
+  		let currentWords;
+  		if(this.state.isOldestFirst){
+  			currentWords = words.sort((a,b) => a.translation.localeCompare(b.translation));
+  		} else {
+  			currentWords = words.sort((a,b) => b.translation.localeCompare(a.translation));
+  		}
+
+  		this.setState({
+  			isOldestFirst: !this.state.isOldestFirst,
+  			currentWords,
+  			sortedByTranslationUp: !this.state.sortedByTranslationUp			
+  		})		
+  	}
+
+   deleteItem = (id) =>{
+    let arrayOfButtons = this.state.arrayOfButtons.slice();
+    let iconsArray = this.state.iconsArray.slice(); 
+   	let addedItems = this.state.addedItems.slice();
+    let disabled = this.state.disabled.slice();
+    arrayOfButtons[id] = "Добавить";    
+    iconsArray[id] = true;
+    disabled[id] = false;
+ 	  addedItems.splice(addedItems.findIndex(function(item){
+        return item.id === id;
+    }), 1);
+    this.setState({ addedItems, disabled, iconsArray, arrayOfButtons });
+   }
+
+   deleteAll = () => {
+    let arrayOfButtons = this.state.arrayOfButtons.slice();
+    let iconsArray = this.state.iconsArray.slice(); 
+    let addedItems = this.state.addedItems.slice();
+    let disabled = this.state.disabled.slice();
+    addedItems = [];
+    for (var i = 0; i < disabled.length; i++) {
+      disabled[i] = false;
+      arrayOfButtons[i] = "Добавить";
+      iconsArray[i] = true;
+    }
+    this.setState({ addedItems, arrayOfButtons, iconsArray, disabled  })    
+   }
+
+   setStateOnStart = () => {
+    this.setState({
       words: [],
       options: [],
       categoryValue: '',
@@ -21,10 +186,9 @@ class Decks extends Component {
       content: '',
       image: null,
       contentArray: [],
-      categoryArray: [],
       allWords: [],
       currentWords: [],
-      arrayOfColors: ["tomato"],
+      arrayOfColors: ["#3281F0"],
       currentColor: "white",
       sortedByNameUp: true,
       sortedByTranslationUp: true,
@@ -32,199 +196,25 @@ class Decks extends Component {
       addedItems: [],
       arrayOfButtons: [],
       iconsArray: [],
-      disabled: []
-    }
-  }
+      disabled: [],
+      contentLoaded: false      
+    }, () => this.initialLoad())
+   }
 
-  componentDidMount() {
-  	axios.all([axios.get('/decks.json'),
+   initialLoad = () => {
+    axios.all([axios.get('/decks.json'),
                axios.get('working.json')])
-             .then(axios.spread((firstResponse, secondResponse) => { 
+          .then(axios.spread((firstResponse, secondResponse) => { 
           let words = firstResponse.data;
           let allWords = secondResponse.data;
           let contentArray = [];
           this.setState({
-          	allWords: allWords,
-            words: words,
-            contentArray: contentArray
-          }, () => this.consoleParams() );
+            allWords,
+            words,
+            contentArray,
+            contentLoaded: true
+          }, () => this.constructMenu());
        }))
-    }
-
-    consoleParams = () =>{
-      let newItems = [];
-      this.state.words.map((item, i) =>
-                    newItems.push({ 
-                        key: item.id, 
-                        text: item.level, 
-                        value: item.level
-                     }))
-      this.setState({
-        options: newItems
-      }, () => this.getUnique())
-    } 
-
-    getUnique = () => {
-      var tempArray = [];
-      var arr = this.state.options;
-      var comp = 'text';
-        const unique = arr
-            .map(e => e[comp])
-          .map((e, i, final) => final.indexOf(e) === i && i)
-          .filter(e => arr[e]).map(e => arr[e]);
-      this.setState({
-        options: unique,
-        categoryArray: tempArray
-      })    
-    }  
-
-    newFunc = () =>{
-      var options = this.state.options.slice();
-      var categoryValue = this.state.value;
-      console.log(categoryValue);
-      this.setState({
-        categoryValue: categoryValue
-      })
-    }
-
-    handleChange = (e, { value }) => this.setState({ value }, () => this.newFunc() )  
-
-    readMore = (e) =>{
-      let arrayOfButtons = [];    	
-      let iconsArray = [];
-      let disabled = [];
-      let colors = this.state.arrayOfColors.slice(); 
-      let words = this.state.words.slice();
-      let allWords = this.state.allWords.slice();
-      let currentWords = [];
-      let target = e.target.parentElement;
-      let color = colors[Math.floor(Math.random()*colors.length)];
-      var index = 0;
-        while ( (target = target.previousElementSibling) ) {
-          index++;
-      }
-      let activeTargetTitle = e.target.parentElement.children[0].textContent;
-      for (var i = 0; i < allWords.length; i++) {
-      	if(allWords[i]["category"] === activeTargetTitle ){
-      		currentWords.push(allWords[i])
-      	} 
-      }
-
-      for (var i = 0; i < currentWords.length; i++) {
-      		arrayOfButtons.push("Добавить");
-      		iconsArray.push(true);
-      		disabled.push("");
-      }
-      
-      this.setState({
-        areTextsVisible: false,
-        isSingleTextVisible: true,
-        isDropdownVisible: false,
-        currentWords: currentWords,
-        currentColor: color,
-        arrayOfButtons: arrayOfButtons,
-        iconsArray: iconsArray,
-        disabled: disabled      	
-      })
-    }
-
-    backToTexts = () =>{
-      this.setState({
-        areTextsVisible: true,
-        isSingleTextVisible: false        
-      })
-    }
-
-    consoleState = () =>{
-
-    }
-
-    getUniqueCategory = () =>{
-      
-    }
-
-    addToList = (e) =>{
-      let array = this.state.addedItems.slice();
-      let buttons = this.state.arrayOfButtons.slice();
-      let disabled = this.state.disabled.slice();
-      let icons = this.state.iconsArray.slice();
-      let target = e.target.parentElement.parentElement.parentElement.parentElement;
-      let name = e.target.parentElement.children[0].textContent;
-      let translation = e.target.parentElement.children[1].textContent;
-      var index = 0;
-        while ((target = target.previousElementSibling)) {
-          index++;
-      }
-      buttons[index] = "Добавлено !";
-      icons[index] = false;
-      disabled[index] = "disabled";
-      let temp = {}
-      temp["name"] = name;
-      temp["translation"] = translation;
-      array.push(temp);
-      this.setState({
-      	addedItems: array,
-      	arrayOfButtons: buttons,
-      	iconsArray: icons,
-      	disabled: disabled
-      })
-
-    }
-
-    addedFirst = () =>{
-    	console.log(this.state);
-    	let state = this.state.sortedByTranslationUp;
-    	this.setState({
-    		addedUp: !state
-    	})
-    }
-
-  //сортировка по имени
-  	sortByName = () =>{
-      	let state = this.state.sortedByNameUp;
-      	console.log("current words", this.state.currentWords);
-  		const words = this.state.currentWords.slice();
-  		let newWords = words;
-  		if(this.state.isOldestFirst){
-  			newWords = words.sort((a,b) => a.name.localeCompare(b.name));
-  		} else {
-  			newWords = words.sort((a,b) => b.name.localeCompare(a.name));
-  		}
-  		console.log("new words", newWords);
-  		this.setState({
-  			isOldestFirst: !this.state.isOldestFirst,
-  			currentWords: newWords,
-  			sortedByNameUp: !state			
-  		})		
-  	}
-  //сортировка по переводу
-  	sortByTranslation = () =>{
-      	let state = this.state.sortedByTranslationUp;
-  		const words = this.state.currentWords.slice();
-  		console.log("current translation", this.state.currentWords);
-  		let newWords = words;
-  		if(this.state.isOldestFirst){
-  			newWords = words.sort((a,b) => a.translation.localeCompare(b.translation));
-  		} else {
-  			newWords = words.sort((a,b) => b.translation.localeCompare(a.translation));
-  		}
-  		console.log("new words", newWords);
-  		this.setState({
-  			isOldestFirst: !this.state.isOldestFirst,
-  			currentWords: newWords,
-  			sortedByTranslationUp: !state			
-  		})		
-  	}
-
-   deleteItem = (id) =>{
-   	var newWords = this.state.addedItems.slice();
-   	console.log(newWords);
- 	  var newIndex = (id.target.parentElement.parentElement);
-    console.log(newIndex);
-	  const index = [...newIndex.parentElement.children].indexOf(newIndex);
-	  console.log(index);
-	  newWords.splice(index,1);
-    this.setState({addedItems: newWords});
    }
 	
 
@@ -235,112 +225,107 @@ class Decks extends Component {
       <Fragment>
         <div className="content-wrapper">
           <TopMenu></TopMenu>
-          <div className="texts-wrapper">
-          <Menu className="texts-menu decks-menu" vertical>
-	          {this.state.isDropdownVisible ? 
-	              <Menu.Item name='inbox' >
-	                <Dropdown 
-	                  placeholder='Выберите уровень'
-	                  fluid
-	                  value={this.state.value} 
-	                  key={this.state.options.id}
-	                  clearable
-	                  search
-	                  selection
-	                  onChange = {this.handleChange}
-	                  options={this.state.options} 
-	                />
-	              </Menu.Item> : null
-	          }
-              <Menu.Item className="no-top-padding added-title" style = {{ backgroundColor: this.state.currentColor}} >
-              	{this.state.addedItems.length ? "Добавленные" : "Добавленных пока нет"}
-              </Menu.Item>
-              <Menu.Item className="no-padding decks-added-outer-wrapper">
-              	{(this.state.addedItems.length) ? 
-              	<ul className="decks-added-wrapper">
-              		{this.state.addedItems.map((item,index)=> 
-              			<li key={index}  className="decks-added-items" style = {{ backgroundColor: this.state.currentColor}}>
-              				<span className="decks-added-items-name">{item.name} - {item.translation}</span><span className="decks-added-items-icon" onClick={this.deleteItem} ><Icon name='trash alternate' size='' /></span></li>
-              		)}
-              	</ul> : null
-              } 
-              </Menu.Item>
-              { (this.state.addedItems.length && this.state.isSingleTextVisible) ? 
-              <Menu.Item className="decks-button-wrapper" >
-              	 <Button onClick={this.sendWords} style = {{ backgroundColor: this.state.currentColor}} >Изучить</Button>
-              </Menu.Item> : null
-              }           
-            </Menu>           
-              {(this.state.words.length && this.state.areTextsVisible) ? 
-              <Card.Group className="texts-cards decks-cards" itemsPerRow={3} >
-              {this.state.words.map((item, index) => (this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === item.level) &&
-                <Card key={index}>
-                  <Card.Content>
-                    <div className="texts-image-wrapper decks-image">
-                      <Image src={item.image} />
-                      <div className="decks-description">
-                      		<h2>{item.name}</h2>
-                      		<h3><span>{item.number}</span></h3>
-                      		<Button onClick={this.readMore} primary className="decks-button" >Открыть</Button>
-                      </div>
-                    </div>
-                  </Card.Content>
-                </Card>
-               )}
-              </Card.Group> : null
-             }
-             {this.state.isSingleTextVisible ?
-             	<div className="decks-outer-wrapper">
-			        <Menu text className="vocab-top-menu-wrapper decks-top-menu">
-				        <Menu.Item name='byName'> 
-				          <Button style = {{ backgroundColor: this.state.currentColor}} onClick = {this.sortByName}> 
-				            по имени 
-				            {this.state.sortedByNameUp ? <Icon name='arrow up' size='small' className="nav-icon-left" /> : <Icon name='arrow down' size='small' className="nav-icon-left" />  }
-				          </Button>
-				        </Menu.Item>
-				        <Menu.Item name='byTranslation'> 
-				          <Button style = {{ backgroundColor: this.state.currentColor}} onClick = {this.sortByTranslation}>
-				            по переводу 
-				            {this.state.sortedByTranslationUp ? <Icon name='arrow up' size='small' className="nav-icon-left" /> : <Icon name='arrow down' size='small' className="nav-icon-left" />  }
-				          </Button>
-				        </Menu.Item>
-				        <Menu.Item style={{float: "right"}} name='close'> 
-				          <Button style = {{ backgroundColor: this.state.currentColor}} onClick = {this.backToDecks}>
-				            <Icon name='window close outline' size='small' className="nav-icon-left" /> 
-				          </Button>
-				        </Menu.Item>				        
-                {/*
-				        <Menu.Item name='added'> 
-				          <Button style = {{ backgroundColor: this.state.currentColor}} onClick = {this.addedFirst}>
-				            добавленные 
-				            {this.state.addedUp ? <Icon name='arrow up' size='small' className="nav-icon-left" /> : <Icon name='arrow down' size='small' className="nav-icon-left" />  }
-				          </Button>
-				        </Menu.Item>	*/}			        
-			        </Menu>
-		            <Card.Group className="texts-cards decks-cards words-cards" itemsPerRow={4} >
-		              {this.state.currentWords.map((item, index) => 
-		                <Card key={index}>
-		                  <Card.Content>
-		                    <div className="texts-image-wrapper decks-image">
-		                      <Image src={item.image} />
-		                      <div className="words-description" style = {{ backgroundColor: this.state.currentColor}} > 
-		                      		<h3>{item.name}</h3>
-		                      		<h4>{item.translation}</h4>
-		                      		<Button className="decks-button-add" onClick={this.addToList} disabled= {this.state.disabled[index]} style = {{ color: this.state.currentColor, height: "41px"}} >
-		                      			{this.state.iconsArray[index] ? null : <Icon name='check circle outline' size='big' />
+          {this.state.contentLoaded ?
+            <div className="texts-wrapper">
+              <Menu className="texts-menu decks-menu" vertical>
+                {this.state.isDropdownVisible ? 
+                  <Menu.Item name='inbox' >
+                    <Dropdown 
+                      placeholder='Выберите уровень'
+                      fluid
+                      value={this.state.value} 
+                      key={this.state.options.id}
+                      clearable
+                      search
+                      selection
+                      onChange = {this.handleChange}
+                      options={this.state.options} 
+                    />
+                  </Menu.Item> : null
+                }
+                <Menu.Item className="no-top-padding added-title" style = {{ backgroundColor: this.state.currentColor}} >
+                  {this.state.addedItems.length ? "Добавленные" : "Добавленных пока нет"}
+                </Menu.Item>
+                <Menu.Item className="no-padding decks-added-outer-wrapper">
+                  {(this.state.addedItems.length) ? 
+                  <ul className="decks-added-wrapper">
+                    {this.state.addedItems.map((item,index)=> 
+                      <li key={index}  className="decks-added-items" style = {{ backgroundColor: this.state.currentColor}}>
+                        <span className="decks-added-items-name">{item.name} - {item.translation}</span><span className="decks-added-items-icon" onClick={this.deleteItem.bind(this, item.id)} ><Icon name='trash alternate' /></span></li>
+                    )}
+                  </ul> : null
+                } 
+                </Menu.Item>
+                { (this.state.addedItems.length && this.state.isSingleTextVisible) ? 
+                <Menu.Item className="decks-button-wrapper" >
+                   <Button onClick={this.sendWords} style = {{ backgroundColor: this.state.currentColor}} className="decks-button__learn" >Изучить <Icon name='book' className="nav-icon-left" /> </Button>
+                   <Button onClick={this.deleteAll} style = {{ backgroundColor: this.state.currentColor}} className="decks-button__learn" >Удалить <Icon name='trash alternate' className="nav-icon-left" /> </Button>
+                </Menu.Item> : null
+                }           
+              </Menu>           
+                {(this.state.words.length && this.state.areTextsVisible) ? 
+                <Card.Group className="texts-cards decks-cards" itemsPerRow={3} >
+                  {this.state.words.map((item, index) => (this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === item.level) &&
+                    <Card key={index} className="decks-single-card">
+                      <Card.Content>
+                        <div className="texts-image-wrapper decks-image">
+                          <Image src={item.image} />
+                          <div className="decks-description">
+                              <h2>{item.name}</h2>
+                              <h3>{item.number} слов</h3>
+                              <Button onClick={this.readMore.bind(this, item.id)} primary className="decks-button" >Открыть</Button>
+                          </div>
+                        </div>
+                      </Card.Content>
+                    </Card>
+                  )}
+                </Card.Group> : null
+               }
+               {this.state.isSingleTextVisible ?
+                <div className="decks-outer-wrapper">
+                <Menu text className="vocab-top-menu-wrapper decks-top-menu">
+                  <Menu.Item name='byName'> 
+                    <Button style = {{ backgroundColor: this.state.currentColor}} onClick = {this.sortByName}> 
+                      по имени 
+                      {this.state.sortedByNameUp ? <Icon name='arrow up' size='small' className="nav-icon-left" /> : <Icon name='arrow down' size='small' className="nav-icon-left" />  }
+                    </Button>
+                  </Menu.Item>
+                  <Menu.Item name='byTranslation'> 
+                    <Button style = {{ backgroundColor: this.state.currentColor}} onClick = {this.sortByTranslation}>
+                      по переводу 
+                      {this.state.sortedByTranslationUp ? <Icon name='arrow up' size='small' className="nav-icon-left" /> : <Icon name='arrow down' size='small' className="nav-icon-left" />  }
+                    </Button>
+                  </Menu.Item>
+                  <Menu.Item style={{float: "right"}} name='close'> 
+                    <Button style = {{ backgroundColor: this.state.currentColor}} onClick = {this.setStateOnStart} title="Назад">
+                      <Icon name='window close outline' className="nav-icon-left" /> 
+                    </Button>
+                  </Menu.Item>  
+                </Menu>
+                  <Card.Group className="texts-cards decks-cards words-cards" itemsPerRow={4} >
+                    {this.state.currentWords.map((item, index) => 
+                      <Card key={index}>
+                        <Card.Content>
+                          <div className="texts-image-wrapper decks-image">
+                            <Image src={item.image} />
+                            <div className="words-description" style = {{ backgroundColor: this.state.currentColor}} > 
+                                <h3>{item.name}</h3>
+                                <h4>{item.translation}</h4>
+                                <Button className="decks-button-add" onClick={this.addToList.bind(this, item.id)} disabled= {this.state.disabled[index]} style = {{ color: this.state.currentColor, height: "41px"}} >
+                                  {this.state.iconsArray[index] ? null : <Icon name='check circle outline' size='big' />
 
-		                      			} 
-		                      			{this.state.arrayOfButtons[index]}
-		                      		</Button>
-		                      </div>
-		                    </div>
-		                  </Card.Content>
-		                </Card>
-		               )}
-		            </Card.Group> 
-	            </div> : null}
-       
-          </div>
+                                  } 
+                                  {this.state.arrayOfButtons[index]}
+                                </Button>
+                            </div>
+                          </div>
+                        </Card.Content>
+                      </Card>
+                     )}
+                  </Card.Group> 
+                </div> : null}       
+            </div>
+          : null}
         </div>
         <footer></footer>
       </Fragment>

@@ -5,7 +5,9 @@ let initialState = {
 	"testsComplete": 0,
 	"wordsTotal": 0,
 	"wordsStudied": 0,
-	"wordsRemaining": 0,		
+	"wordsRemaining": 0,
+	"vocabModalOpen": false,
+	"selectedVocabWord": null		
 };
 
 let reducer = (state = initialState, action) => {
@@ -38,7 +40,27 @@ let reducer = (state = initialState, action) => {
 		case 'UPDATE_WORDS_STUDIED':
 			return {
 				...state,
-				wordsStudied: action.payload }														
+				wordsStudied: action.payload }
+		case 'CHANGE_COLOR_SCHEME':
+			return {
+				...state,
+				colorScheme: action.payload }
+		case 'CHANGE_SOUND_VOLUME':
+			return {
+				...state,
+				soundVolume: action.payload }
+		case 'TOGGLE_VOCAB_MODAL':
+			return {
+				...state,
+				vocabModalOpen: action.payload }
+		case 'SELECT_VOCAB_WORD':
+			return {
+				...state,
+				selectedVocabWord: action.payload }					
+		case 'VOICE_VOCAB_WORD':
+			return {
+				...state,
+				vocabWord: action.payload }																												
 		default: return state;		
 	}
 }

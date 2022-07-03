@@ -29,7 +29,7 @@ class Khan extends Component {
 	}
 
   componentDidMount(){
-    var API_key = "AIzaSyANIs2WwcSlrkJhfkw2z-q0Zumsu80CR28";
+    var API_key = "AIzaSyARd-RXpYp49rL4X4PPDJnv3bBBo-y-AOo";
     var channelID = "UC4a-Gbdw7vOaccHmFo40b9g";
     var maxResults = 48;
     var url =

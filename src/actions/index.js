@@ -40,7 +40,37 @@ let actions = {
 			type: 'UPDATE_WORDS_STUDIED',
 			payload: number
 		}		
-	}					
+	},
+	changeColorScheme: function(val) {
+		return {
+			type: 'CHANGE_COLOR_SCHEME',
+			payload: val
+		}		
+	},
+	changeSoundVolume: function(val) {
+		return {
+			type: 'CHANGE_SOUND_VOLUME',
+			payload: val
+		}		
+	},
+	toggleVocabModal: function(val) {
+		return {
+			type: 'TOGGLE_VOCAB_MODAL',
+			payload: val
+		}		
+	},
+	selectVocabWord: function(word) {
+		return {
+			type: 'SELECT_VOCAB_WORD',
+			payload: word
+		}
+	},
+	voiceVocabWord: function(word) {
+		return {
+			type: 'VOICE_VOCAB_WORD',
+			payload: word
+		}		
+	}							
 }
 
 export default actions;

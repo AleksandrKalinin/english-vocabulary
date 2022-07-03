@@ -20,7 +20,7 @@ class TED extends Component {
 	}
 
   componentDidMount(){
-    var API_key = "AIzaSyANIs2WwcSlrkJhfkw2z-q0Zumsu80CR28";
+    var API_key = "AIzaSyARd-RXpYp49rL4X4PPDJnv3bBBo-y-AOo";
     var channelID = "UCAuUUnT6oDeKwE6v1NGQxug";
     var maxResults = 36;
     var url =
@@ -68,19 +68,8 @@ class TED extends Component {
           <Card.Group itemsPerRow = {3} className="single-video-wrapper">
             {this.state.items.map((item, index) => 
               <Card key={index}>
-                <Modal className="video-modal" closeIcon trigger={<Button>Show Modal</Button>}>
                   <Embed  autoplay={true} id={item.id.videoId} placeholder={item.snippet.thumbnails.high.url} source='youtube' />                
-                  <Modal.Header>{item.snippet.title} </Modal.Header>
-                  <Modal.Content>
-                    <Modal.Description>
-                      <p>{item.snippet.description}</p>
-                    </Modal.Description>
-                  </Modal.Content>
-                </Modal>              
-                <div className="single-video-wrapper-image">
-                  <Image src={item.snippet.thumbnails.high.url} />                  
-                </div>
-              </Card>                
+              </Card> 
               )}
           </Card.Group>
             :null

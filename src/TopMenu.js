@@ -53,7 +53,7 @@ class TopMenu extends Component {
             <Link to="/">Главная</Link>
           </Menu.Item>
           <Menu.Item>
-            <Link to="/vocab">Словарь</Link>
+            <Link to="/vocabulary">Словарь</Link>
           </Menu.Item>          
           <Menu.Item>
             <Link to="/grammar">Грамматика</Link>
@@ -66,13 +66,19 @@ class TopMenu extends Component {
           </Menu.Item>
           <Menu.Item>
             <Link to="/materials">Материалы</Link>
-          </Menu.Item>          
-          <Menu.Item>
-            <Link to="/statistics">Статистика</Link>
-          </Menu.Item>
-          <Menu.Item>
-            <Link to="/audioplayer">Статистика</Link>
-          </Menu.Item>          
+          </Menu.Item> 
+          {/*
+            <Menu.Item>
+              <Link to="/statistics">Статистика</Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to="/audioplayer">Статистика</Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to="/settings">Настройки</Link>
+            </Menu.Item> 
+          */}         
+             
       
 
         {/*

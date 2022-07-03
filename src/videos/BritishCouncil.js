@@ -19,10 +19,10 @@ class BritishCouncil extends Component {
 	}
 
   componentDidMount(){
-    var API_key = "AIzaSyANIs2WwcSlrkJhfkw2z-q0Zumsu80CR28";
-    var channelID = "UCOtnu-KKoAbN47IuYMeDPOg";
-    var maxResults = 36;
-    var url =
+    let API_key = "AIzaSyARd-RXpYp49rL4X4PPDJnv3bBBo-y-AOo";
+    let channelID = "UCOtnu-KKoAbN47IuYMeDPOg";
+    let maxResults = 36;
+    let url =
       "https://www.googleapis.com/youtube/v3/search?key=" +
       API_key +
       "&channelId=" +
@@ -33,7 +33,7 @@ class BritishCouncil extends Component {
         .then(res => {
           const videos = res.data;
           this.setState({
-            videos: videos,
+            videos,
             items: videos.items
         })
       })
@@ -41,7 +41,6 @@ class BritishCouncil extends Component {
 
   
   consoleState = () =>{
-    console.log(this.state.videos);
     this.setState({
       loaded: true,
     })
@@ -55,18 +54,7 @@ class BritishCouncil extends Component {
           <Card.Group itemsPerRow = {3} className="single-video-wrapper">
             {this.state.items.map((item, index) => 
               <Card key={index}>
-                <Modal className="video-modal" closeIcon trigger={<Button>Show Modal</Button>}>
                   <Embed  autoplay={true} id={item.id.videoId} placeholder={item.snippet.thumbnails.high.url} source='youtube' />                
-                  <Modal.Header>{item.snippet.title} </Modal.Header>
-                  <Modal.Content>
-                    <Modal.Description>
-                      <p>{item.snippet.description}</p>
-                    </Modal.Description>
-                  </Modal.Content>
-                </Modal>              
-                <div className="single-video-wrapper-image">
-                  <Image src={item.snippet.thumbnails.high.url} />                  
-                </div>
               </Card> 
               )}
           </Card.Group>

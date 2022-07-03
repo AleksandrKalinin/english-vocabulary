@@ -1030,6 +1030,11 @@
   "resolved" "https://registry.npmjs.org/@types/domhandler/-/domhandler-2.4.1.tgz"
   "version" "2.4.1"
 
+"@types/lodash@^4.14.105":
+  "integrity" "sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q=="
+  "resolved" "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.182.tgz"
+  "version" "4.14.182"
+
 "@types/prop-types@*":
   "integrity" "sha512-CFzn9idOEpHrgdw8JsoTkaDDyRWk1jrzIV8djzcgpq0y9tG4B4lFT+Nxh52DVpDXV+n4+NPNv7M1Dj5uMp6XFg=="
   "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.1.tgz"
@@ -1047,7 +1052,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@^16.0.40":
   "integrity" "sha512-C3O1yVqk4sUXqWyx0wlys76eQfhrQhiDhDlHBrjER76lR2S2Agiid/KpOU9oCqj1dISStscz7xXz1Cg8+sCQeA=="
   "resolved" "https://registry.npmjs.org/@types/react/-/react-16.8.22.tgz"
   "version" "16.8.22"
@@ -8912,7 +8917,7 @@
     "object-assign" "4.1.1"
     "react-15" "0.2.0"
 
-"react-dom@^0.14.0 || ^15.0.0-0 || ^16.0.0", "react-dom@^15.0.0 || ^16.0.0", "react-dom@^16.0.0", "react-dom@^16.3.0", "react-dom@^16.8.0", "react-dom@>=15.0.0", "react-dom@>=16.6.0":
+"react-dom@^0.14.0 || ^15.0.0-0 || ^16.0.0", "react-dom@^15.0.0 || ^16.0.0", "react-dom@^16.0.0", "react-dom@^16.3.0", "react-dom@^16.8.0", "react-dom@>=15.0.0", "react-dom@>=16.3.0", "react-dom@>=16.6.0":
   "integrity" "sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.8.6.tgz"
   "version" "16.8.6"
@@ -8972,6 +8977,14 @@
   "integrity" "sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA=="
   "resolved" "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
   "version" "3.0.4"
+
+"react-rating@^2.0.3":
+  "integrity" "sha512-csnehSKasrtkTXOEh39kKUa1YxDnXyc1XUm5dbi2UNvTUNRQ50ilBMpda/gzoCLd9bhhH5trYa4SljI/GHSRpQ=="
+  "resolved" "https://registry.npmjs.org/react-rating/-/react-rating-2.0.3.tgz"
+  "version" "2.0.3"
+  dependencies:
+    "@types/lodash" "^4.14.105"
+    "@types/react" "^16.0.40"
 
 "react-redux@^7.2.0":
   "integrity" "sha512-EvCAZYGfOLqwV7gh849xy9/pt55rJXPwmYvI4lilPM5rUT/1NxuuN59ipdBksRVSvz0KInbPnp4IfoXJXCqiDA=="
@@ -9101,7 +9114,7 @@
     "prop-types" "^15.6.2"
     "react-lifecycles-compat" "^3.0.4"
 
-"react@^0.14 || ^15 || ^16", "react@^0.14.0 || ^15.0.0 || ^16.0.0-0", "react@^0.14.0 || ^15.0.0-0 || ^16.0.0", "react@^0.14.7 || ^15.0.0 || ^16.0.0", "react@^15.0.0 || ^16.0.0", "react@^16.0.0", "react@^16.3.0", "react@^16.8.0", "react@^16.8.3", "react@>=15", "react@>=15.0.0", "react@>=16.6.0", "react@15.x.x - 16.x.x":
+"react@^0.14 || ^15 || ^16", "react@^0.14.0 || ^15.0.0 || ^16.0.0-0", "react@^0.14.0 || ^15.0.0-0 || ^16.0.0", "react@^0.14.7 || ^15.0.0 || ^16.0.0", "react@^15.0.0 || ^16.0.0", "react@^16.0.0", "react@^16.3.0", "react@^16.8.0", "react@^16.8.3", "react@>=15", "react@>=15.0.0", "react@>=16.3.0", "react@>=16.6.0", "react@15.x.x - 16.x.x":
   "integrity" "sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.8.6.tgz"
   "version" "16.8.6"

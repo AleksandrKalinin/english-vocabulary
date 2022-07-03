@@ -23,7 +23,7 @@ class Main extends Component {
           	  <div className="section-overlay">
           	  	<div className="section-header">
           	  		<h2>Лучший способ выучить язык</h2>
-          	  		<Link to="/training">Начать учиться</Link>
+          	  		<Link to="/training" className="outline-link">Начать учиться</Link>
           	  	</div>
           	  </div>              
             </div>
@@ -33,13 +33,13 @@ class Main extends Component {
           	  			<span>
           	  				<Image  src="icons/settings.png" />
           	  			</span>
-          	  			<p>Удобный интерфейс</p>
+          	  			<p>Простой интерфейс</p>
           	  		</div>
           	  		<div className="advantage-icon">
           	  			<span>
           	  				<Image  src="icons/notebook.png" />
           	  			</span>
-          	  			<p>Множество возможностей</p>
+          	  			<p>Удобный словарь</p>
           	  		</div>
           	  		<div className="advantage-icon">
           	  			<span>
@@ -53,19 +53,19 @@ class Main extends Component {
           	  			<span>
           	  				<Image  src="icons/notepad.png" />
           	  			</span>
-          	  			<p>Большой каталог материалов</p>
+          	  			<p>Большое количество обучающих материалов</p>
           	  		</div>
           	  		<div className="advantage-icon">
           	  			<span>
           	  				<Image  src="icons/house.png" />
           	  			</span>
-          	  			<p>Полностью бесплатно</p>
+          	  			<p>Грамматика и тесты</p>
           	  		</div>
           	  		<div className="advantage-icon">
           	  			<span>
           	  				<Image  src="icons/pen.png" />
           	  			</span>
-          	  			<p>Разные уровни обучения</p>
+          	  			<p>Полностью бесплатно</p>
           	  		</div>          	  		          	  		
           	  </div>          	                
             </div>            
@@ -80,11 +80,11 @@ class Main extends Component {
 	            		<h3>Изучайте слова</h3>
 	            		<ul>
 	            			<li>20 тематических наборов</li>
-	            			<li>4000 слов</li>
+	            			<li>Более 2000 слов</li>
 	            			<li>Словарь с расширенным функционалом</li>            			            			
 	            			<li>Возможность изучать добавленные слова</li>            			
 	            		</ul>
-	            		<Link to="/vocabulary">Перейти</Link>
+	            		<Link to="/vocabulary" className="outline-link">Перейти</Link>
             		</div>
             	</div>
             </div>
@@ -93,11 +93,11 @@ class Main extends Component {
             		<div className="half-section-text-wrapper">	
 	            		<h3>Тренируйтесь</h3>
 	            		<ul>
-	            			<li>10 видов тренировок</li>
-	            			<li>Тренировка чтения, говорения  и понимания на слух</li>
+	            			<li>11 видов тренировок</li>
+	            			<li>Тренировка чтения, говорения и понимания на слух</li>
 	            			<li>Возможность добавлять на тренировку изучаемые слова</li>
 	            		</ul>
-	            		<Link to="/training">Перейти</Link>
+	            		<Link to="/training" className="outline-link">Перейти</Link>
             		</div>
             	</div>
             	<div className="half-section-image training-section">
@@ -116,10 +116,11 @@ class Main extends Component {
             		<div className="half-section-text-wrapper">	
 	            		<h3>Учите грамматику</h3>
 	            		<ul>
-	            			<li>Изучение времен английского языка</li>
-	            			<li>Примеры употребления</li>
+	            			<li>Изучение грамматики английского языка</li>
+	            			<li>Наглядные примеры</li>
+	            			<li>Тесты на любую тематику</li>
 	            		</ul>
-	            		<Link to="/grammar">Перейти</Link>
+	            		<Link to="/grammar" className="outline-link">Перейти</Link>
             		</div>
             	</div>
             </div>
@@ -128,11 +129,10 @@ class Main extends Component {
             		<div className="half-section-text-wrapper">	
 	            		<h3>Улучшайте навыки чтения</h3>
 	            		<ul>
-	            			<li>120 учебных текстов</li>
-	            			<li>Различная тематика</li>
+	            			<li>Множество текстов и аудиотекстов различной тематики</li>
 	            			<li>Тексты разного уровня сложности</li>
 	            		</ul>
-	            		<Link to="/texts">Перейти</Link>
+	            		<Link to="/texts" className="outline-link">Перейти</Link>
             		</div>
             	</div>
             	<div className="half-section-image texts-section">
@@ -141,6 +141,7 @@ class Main extends Component {
             		</div>
             	</div>            	
             </div>
+          {/*
             <div className="half-section">
             	<div className="half-section-image books-section">
             		<div className="half-section-image-overlay">
@@ -155,10 +156,11 @@ class Main extends Component {
 	            			<li>Возможность слушать аудиокниги</li>
 	            			<li>Книги различного уровня сложности</li>
 	            		</ul>
-	            		<Link to="/books">Перейти</Link>
+	            		<Link to="/books" className="outline-link">Перейти</Link>
             		</div>
             	</div>
-            </div>     
+            </div> 
+          */}  
           </div>
         </div>
         <footer></footer>

@@ -29,7 +29,6 @@ class Training extends Component {
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/russiantoenglish">С русского на английский</Link></Card.Header>
-
               </Card.Content>
             </Card>
             <Card>
@@ -38,7 +37,6 @@ class Training extends Component {
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/cards">Словарные карточки</Link></Card.Header>
-
               </Card.Content>
             </Card>
             <Card>
@@ -47,7 +45,6 @@ class Training extends Component {
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/audio">Аудиотренировка</Link></Card.Header>
-
               </Card.Content>
             </Card>
             <Card>
@@ -56,25 +53,24 @@ class Training extends Component {
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/constructword">Конструктор слов</Link></Card.Header>
-
               </Card.Content>
             </Card>
+          {/*
             <Card>
               <div className="training-wrapper-image">
               <Image src='../training/pronunciation.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/pronunciation">Произношение</Link></Card.Header>
-
               </Card.Content>
-            </Card>          
+            </Card>  
+          */}
             <Card>
               <div className="training-wrapper-image">
               <Image src='../training/fillthegaps.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/fragments">Заполни пробелы</Link></Card.Header>
-
               </Card.Content>
             </Card>
             <Card>
@@ -83,7 +79,6 @@ class Training extends Component {
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/recreatetext">Воспроизведи текст</Link></Card.Header>
-
               </Card.Content>
             </Card>
             <Card>
@@ -92,7 +87,6 @@ class Training extends Component {
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/recreateaudiotext">Воспроизведи аудиоисторию</Link></Card.Header>
-
               </Card.Content>
             </Card>
             <Card>
@@ -101,7 +95,6 @@ class Training extends Component {
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/insertspaces">Расставьте пробелы</Link></Card.Header>
-
               </Card.Content>
             </Card>
             <Card>
@@ -110,7 +103,6 @@ class Training extends Component {
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/rightwrong">Верно-неверно</Link></Card.Header>
-
               </Card.Content>
             </Card>
             <Card>
@@ -119,7 +111,6 @@ class Training extends Component {
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/proverbs">Пословицы и поговорки</Link></Card.Header>
-
               </Card.Content>
             </Card>                                                                                                               
           </Card.Group>

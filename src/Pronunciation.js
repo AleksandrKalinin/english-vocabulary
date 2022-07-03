@@ -26,7 +26,7 @@ class Pronunciation extends Component {
 		isFinalVisible: false,
 		showSubmitButtons: true,
 		options: {
-		autostart: false
+		  autostart: false
 		},
 		transcript: '',
 		resetTranscript: null,
@@ -88,13 +88,12 @@ class Pronunciation extends Component {
       let currentSentenceContent = this.state.currentSentenceContent;
    
       if(currentSentenceContent === objectTranscription){
-        alert('true')
         positiveSentences.push(currentSentence);     
       }
 
       else {
-        alert('false')
         negativeSentences.push(currentSentence);
+        console.log(negativeSentences);
       }
       this.setState({
         isTranslationVisible: true,
@@ -161,111 +160,112 @@ class Pronunciation extends Component {
     return (
       <Fragment>
       <div className="content-wrapper">
-      <TopMenu/>
-       {this.state.isButtonVisible ?
-        <Card.Group className="card-header-wrapper">
-          <Card>
-            <div className="training-wrapper-image">
-              <Image src='training/microphone.jpg' />
-            </div>  
-            <Card.Content>
-              <Card.Header>Произношение</Card.Header>
-              <Card.Description>
-                <Button primary onClick={this.startTraining} >Начать</Button>
-              </Card.Description>
-            </Card.Content>
-          </Card>          
-        </Card.Group>:
-        null
-      }
-       {this.state.isCardVisible ?
-       <Card.Group itemsPerRow={1} className="card-header-wrapper" >
-           <Card className="card-training pronunciation-card"  >
+        <TopMenu/>
+         {this.state.isButtonVisible ?
+          <Card.Group className="card-header-wrapper">
+            <Card>
+              <div className="training-wrapper-image">
+                <Image src='training/microphone.jpg' />
+              </div>  
               <Card.Content>
-                <Card.Header className="pronunciation-header">
-                  Произнесите предложение в микрофон
-                </Card.Header>
-                <Card.Header className="pronunciation-text">{this.state.currentSentence}
-                </Card.Header>                
-                <Card.Description id="transcription" className="pronunciation-transcription">
-                <span className="transcription-text">
-                  {transcript} </span>
-                  {this.props.transcript.length ?
-                  <div className="pronunciation-clear-wrapper" onClick = {this.clearTranscription}>
-	                  <span className="triangle"> </span>
-	                  <span className="pronunciation-clear">
-	                  	<Icon name = 'delete'/>
-	                  </span>                  	
-                  </div> : null
-              }
+                <Card.Header>Произношение</Card.Header>
+                <Card.Description>
+                  <Button primary onClick={this.startTraining} >Начать</Button>
                 </Card.Description>
               </Card.Content>
-              <Card.Content extra>
-                <Button.Group className="card-buttons-wrapper">
-                {this.state.showNavButtons ?
-                <Fragment>
-                  <Button onClick={this.submitResponse} primary>Проверить</Button>
-                </Fragment>:null
-                }  
-                {this.state.showContinueButton ?
-                  <Button onClick={this.callSubmit} primary>Продолжить</Button>:null
-                }
-                </Button.Group>
-              </Card.Content>
             </Card>          
-      </Card.Group> :
-           null
-        }
-        {this.state.isFinalVisible ?
-         <Card.Group itemsPerRow={1} className="card-header-wrapper card-final-wrapper" >
-             <Card className="card-training pronunciation-card" >
-                <Card.Content>
-                  <Card.Header>Результаты</Card.Header>
-                  <Divider/>
-                  <Card.Description className="audio-list-container"> 
-                  {  (this.state.negativeSentences.length !== 0 ) ?
-                    <List className="audio-list">
-                    <h4>Верно</h4>
-                    {this.state.positiveSentences.map((item, index) => 
-                        <List.Item  className="audio-list-item" key={index} >{item}</List.Item>  
-                      )}
-                      <h4>Неверно</h4>                    
-                    {this.state.negativeSentences.map((item, index) => 
-                        <List.Item  className="audio-list-item" key={index} >{item}</List.Item>  
-                      )}
-                   </List> : 
-                   <Message>
-                      <Message.Header>Поздравляем!</Message.Header>
-                      <p>
-                        Все задания выполнены правильно
-                      </p>
-                   </Message> 
+          </Card.Group> : null
+         }
+         {this.state.isCardVisible ?
+           <Card.Group itemsPerRow={1} className="card-header-wrapper" >
+               <Card className="card-training pronunciation-card"  >
+                  <Card.Content>
+                    <Card.Header className="pronunciation-header">
+                      Произнесите слово в микрофон
+                    </Card.Header>
+                    <Card.Header className="pronunciation-text">{this.state.currentSentence}
+                    </Card.Header>                
+                    <Card.Description id="transcription" className="pronunciation-transcription">
+                    <span className="transcription-text">
+                      {transcript} </span>
+                      {this.props.transcript.length ?
+                      <div className="pronunciation-clear-wrapper" onClick = {this.clearTranscription}>
+    	                  <span className="triangle"> </span>
+    	                  <span className="pronunciation-clear">
+    	                  	<Icon name = 'delete'/>
+    	                  </span>                  	
+                      </div> : null
                   }
+                    </Card.Description>
+                  </Card.Content>
+                  <Card.Content extra>
+                    <Button.Group className="card-buttons-wrapper">
+                    {this.state.showNavButtons ?
+                    <Fragment>
+                      <Button onClick={this.submitResponse} primary>Проверить</Button>
+                    </Fragment>:null
+                    }  
+                    {this.state.showContinueButton ?
+                      <Button onClick={this.callSubmit} primary>Продолжить</Button>:null
+                    }
+                    </Button.Group>
+                  </Card.Content>
+                </Card>          
+           </Card.Group> : null
+          }
+          {this.state.isFinalVisible ?
+           <Card.Group itemsPerRow={1} className="card-header-wrapper card-final-wrapper" >
+               <Card className="card-training pronunciation-card" >
+                  <Card.Content>
+                    <Card.Header>Результаты</Card.Header>
+                    <Divider/>
+                    <Card.Description className="audio-list-container"> 
+                    {  (this.state.negativeSentences.length !== 0 ) ?
+                        <div className="answers-wrapper">
+                          <List className="audio-list">
+                          <h2>Верные ответы</h2>
+                          {this.state.positiveSentences.map((item, index) => 
+                              <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
+                            )}
+                         </List>
+                          <List className="audio-list">
+                          <h2>Неверные ответы</h2>
+                          {this.state.negativeSentences.map((item, index) => 
+                              <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
+                            )}
+                         </List>
+                       </div> : 
+                     <Message>
+                        <Message.Header>Поздравляем!</Message.Header>
+                        <p>
+                          Все задания выполнены правильно
+                        </p>
+                     </Message> 
+                    }
 
-                  </Card.Description>
-                  <Card.Description className="results-wrapper">
-                    <div className="positive-results-wrapper"> 
-                      <div className="positive-results">
-                        {this.state.positiveSentences.length}
+                    </Card.Description>
+                    <Card.Description className="results-wrapper">
+                      <div className="positive-results-wrapper"> 
+                        <div className="positive-results">
+                          {this.state.positiveSentences.length}
+                        </div>
+                        <Label>Верно</Label>                    
                       </div>
-                      <Label>Верно</Label>                    
-                    </div>
-                    <div className="negative-results-wrapper"> 
-                      <div className="negative-results">
-                        {this.state.negativeSentences.length}
-                      </div> 
-                      <Label>Неверно</Label>                   
-                    </div>
-                  </Card.Description>
-                  <Button.Group className="card-buttons-wrapper">
-                    <Button primary>Продолжить</Button>
-                    <Button primary><Link className="training-link" to="/training">К тренировкам</Link></Button>
-                  </Button.Group>
-                </Card.Content>
-              </Card>          
-        </Card.Group>         
-           : null
-        }
+                      <div className="negative-results-wrapper"> 
+                        <div className="negative-results">
+                          {this.state.negativeSentences.length}
+                        </div> 
+                        <Label>Неверно</Label>                   
+                      </div>
+                    </Card.Description>
+                    <Button.Group className="card-buttons-wrapper">
+                      <Button primary>Продолжить</Button>
+                      <Button primary><Link className="training-link" to="/training">К тренировкам</Link></Button>
+                    </Button.Group>
+                  </Card.Content>
+                </Card>          
+           </Card.Group> : null
+          }
         </div>
         <footer></footer>
     </Fragment>

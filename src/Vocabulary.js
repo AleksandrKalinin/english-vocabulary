@@ -8,6 +8,11 @@ import TopMenu from './TopMenu'
 import VocabTopMenu from './VocabTopMenu'
 import speech from 'speech-synth';
 
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+
+import {connect} from 'react-redux';
+
 class Vocabulary extends Component {
 	constructor(props){
 		super(props);
@@ -22,14 +27,11 @@ class Vocabulary extends Component {
 			categoryValue: 'all'	
 		};
 		this.delete = this.delete;
-		this.voiceWord = this.voiceWord;
-		this.voiceWordFromModal = this.voiceWordFromModal;
 		this.handler = this.handler.bind(this);	
 		this.sortByName = this.sortByName;
 		this.sortByTranslation = this.sortByTranslation;
 		this.sortByDate = this.sortByDate;
-		this.newFunction = this.newFunction;	
-		
+	
 	}
 
  handler() {
@@ -103,30 +105,20 @@ class Vocabulary extends Component {
 	      })
 	  }
 
-
    delete = (id) =>{
-   	var newWords = this.state.words.slice();
- 		var newIndex = (id.target.parentElement.parentElement.parentElement.parentElement);
-		const index = [...newIndex.parentElement.children].indexOf(newIndex);
-		newWords.splice(index,1);
-    this.setState({words: newWords});
+   	let words = this.state.words.slice();
+   	words.splice(words.findIndex(function(i){
+    	return i.id === id;
+		}), 1);
+   	this.setState({	words	})
    }
 
-   newFunction = () =>{
-   	console.log('new');
-   }
-
-   voiceWord = (el) =>{
-   		var newWords = this.state.words.slice();
-   		var newIndex = (el.target.parentElement.parentElement.parentElement.parentElement);
-   		var first = newIndex.children[1].firstChild.firstChild.textContent;
-   		speech.say(first);
-   }
-
-   voiceWordFromModal = (el) =>{
-   		var newWords = this.state.words.slice();
-   		var newIndex = (el.target.parentElement.parentElement.children[1].textContent);
-   		speech.say(newIndex);
+   deleteWord = (id) => {
+   	let words = this.state.words.slice();
+   	words.splice(words.findIndex(function(i){
+    	return i.id === id;
+		}), 1);
+   	this.setState({	words	}, () => this.toggleModal());
    }
 
    myCallback = (dataFromChild) =>{
@@ -148,16 +140,18 @@ class Vocabulary extends Component {
    		}) 
    } 
 
-   consoleState = ()=>{
+   consoleState = () => {
    	console.log(this.state)
    }
 
-   showNewModal = (data) => {
-   	alert(data);
+   toggleModal = () => {
+   	let value = this.props.store.vocabModalOpen;
+   	this.props.actions.toggleVocabModal(!value);
    }
 
-  render() {
-  	
+
+
+  render() {  	
   	let filteredWords = this.state.words.filter(
   		(word) =>{
   			return word.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
@@ -165,22 +159,24 @@ class Vocabulary extends Component {
   	);  	
     return (
     	<Fragment>
-    		<div className="modal-container">
-    			<div className="modal-word">
-    				<div className="modal-word__image">
-    					<img src = "" />
-    				</div>
-    				<p className="modal-word__title"><span className="modal-word__icon"></span></p>
-    				<span className="modal-word__icon modal-word__icon--delete"><Icon name = 'right microphone'/></span>
-    			</div>
-    		</div>
+    		{this.props.store.vocabModalOpen ?
+	    		<div className="modal-container">
+	    			<div className="modal-word">
+	    				<span title="Закрыть" onClick={this.toggleModal} className="modal-word__icon modal-word__icon--close"><Icon name = 'close' size="large" /></span>
+	    				<div className="modal-word__image">
+	    					<img src = {this.props.store.selectedVocabWord.image} />
+	    				</div>
+	    				<p className="modal-word__title">{this.props.store.selectedVocabWord.name} - <span className="modal-word__translation">{this.props.store.selectedVocabWord.translation}</span></p>
+	    				<span onClick={this.deleteWord.bind(this, this.props.store.selectedVocabWord.id)} title="Удалить" className="modal-word__icon modal-word__icon--delete"><Icon size="large" name = 'trash alternate outline'/></span>
+	    			</div>
+	    		</div>
+    		: null}
 	    	<div className="content-wrapper">
 	    		<TopMenu></TopMenu>
 	    		<div className="vocab-side-menu">
 	    			<VocabSideMenu callbackFromParent={this.myCallback} items={this.state.words} ></VocabSideMenu>
 	    			<div className="vocab-top-menu">
 	    				<VocabTopMenu 
-	    					words ={this.state.words} 
 	    					handler = {this.handler}
 	    					sortByName={this.sortByName}
 	    					sortByTranslation={this.sortByTranslation}
@@ -193,10 +189,7 @@ class Vocabulary extends Component {
 							{filteredWords.slice(0,this.state.visible).map((word,index) => 
 								(this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === word.category) && 
 								<VocabWord
-									showNewModal={this.showNewModal}
-									newFunction={this.newFunction}
-									voiceWord={this.voiceWord}
-									voiceWordFromModal = {this.voiceWordFromModal}
+									word = {word}
 									delete={this.delete}
 									id={word.id}
 									key={word.id} 
@@ -223,4 +216,13 @@ class Vocabulary extends Component {
   }
 }
 
-export default Vocabulary;
+function mapStateToProps(state){
+  return {store: state.reducer};
+}
+
+function mapDispatchToProps(dispatch) {
+    return { actions: bindActionCreators(actions, dispatch)}
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Vocabulary);

@@ -53,13 +53,13 @@ import GrammarPresentPerfectContinuous from './grammar/GrammarPresentPerfectCont
 import GrammarPastPerfectContinuous from './grammar/GrammarPastPerfectContinuous'
 import GrammarFuturePerfectContinuous from './grammar/GrammarFuturePerfectContinuous'
 import AudioPlayer from './AudioPlayer'
+import Books from './books/Books'
 import {BrowserRouter as Router, Route } from "react-router-dom";
 
 import {Provider} from "react-redux";
 import configureStore from "./store/index";
 
 let initialState = [];
-
 let store = configureStore(initialState);
 
 
@@ -68,6 +68,7 @@ ReactDOM.render(
 		<Router basename={process.env.PUBLIC_URL}>
 			<div className="router-wrapper">
 				<Route exact path="/" component={Main}/>
+				<Route path="/newbooks" component={Books} />
 				<Route path="/vocabulary" component={Vocabulary} />
 				<Route path="/settings" component={Settings} />
 				<Route path="/grammar" component={GrammarList} />

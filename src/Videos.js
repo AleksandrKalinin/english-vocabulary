@@ -17,7 +17,7 @@ class Videos extends Component {
       channelId: null,
       image: '',
       link: '',
-      visible: 4
+      visible: 8
     }
   }
 
@@ -26,18 +26,18 @@ class Videos extends Component {
       axios.get('/videos.json')
         .then(res => {
           const videos = res.data;
-          const currentName = videos[id].name;
-          const currentDescription = videos[id].description;
-          const currentChannelId = videos[id].channelId;
-          const currentImage = videos[id].image;
-          const currentLink = videos[id].link;
+          const name = videos[id].name;
+          const description = videos[id].description;
+          const channelId = videos[id].channelId;
+          const image = videos[id].image;
+          const link = videos[id].link;
            this.setState({ 
-            videos: videos, 
-            name: currentName, 
-            description: currentDescription, 
-            channelId: currentChannelId, 
-            image: currentImage,
-            link: currentLink });
+            videos, 
+            name, 
+            description, 
+            channelId, 
+            image,
+            link });
         })
     }
 
@@ -45,7 +45,7 @@ class Videos extends Component {
       console.log(this.state);
     }
 
-  loadMore = () => {
+    loadMore = () => {
       this.setState((prev) => {
         return {visible: prev.visible + 4};
       });

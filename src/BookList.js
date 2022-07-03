@@ -497,10 +497,10 @@ class BookList extends Component {
 
     setRange = (e) =>{      
       let rangeValue = this.state.currentRange;
-      var player = this.state.newAudio;
-      player.currentTime = e.target.value;
+      var newAudio = this.state.newAudio;
+      newAudio.currentTime = e.target.value;
       this.setState({
-        newAudio: player,
+        newAudio,
         currentRange: e.target.value
       })
 
@@ -536,7 +536,7 @@ class BookList extends Component {
             {(this.state.books.length && this.state.areBooksVisible) ? 
             <Card.Group className="texts-cards" itemsPerRow={3} >
             {this.state.books.map((item, index) => (this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === item.genre) &&
-              <Card key={index}>
+              <Card key={index} className="single-book">
                 <Card.Content>
                   <div className="texts-image-wrapper books-image-wrapper">
                     <Image src={item.image} />
@@ -564,24 +564,24 @@ class BookList extends Component {
             </Card.Group> : null
            }
            {this.state.isPreviewVisible ?
-                    <div className="book-preview-wrapper">
-                      <div className="book-preview-image">
-                        <Image src={this.state.image} />
-                      </div>
-                      <div className="book-preview-description">
-                          <h3>{this.state.title}</h3>
-                          <h6>By: {this.state.author}</h6>
-                          <h6>Pages: {this.state.currentArrayBooks.length} </h6>
-                          <h6 className="book-preview-text">{this.state.description} </h6>
-                          <div className="book-preview-rating">
-                             <Rating icon="star" className = "books-rating" maxRating={5} onRate={this.handleRate} />
-                             <span >{this.state.rating}/{this.state.maxRating}</span>
-                          </div>
-                          <Button primary onClick={this.consoleState}>
-                            Начать
-                          </Button>
-                      </div>
+              <div className="book-preview-wrapper">
+                <div className="book-preview-image">
+                  <Image src={this.state.image} />
+                </div>
+                <div className="book-preview-description">
+                    <h3>{this.state.title}</h3>
+                    <h6>By: {this.state.author}</h6>
+                    <h6>Pages: {this.state.currentArrayBooks.length} </h6>
+                    <h6 className="book-preview-text">{this.state.description} </h6>
+                    <div className="book-preview-rating">
+                       <Rating icon="star" className = "books-rating" maxRating={5} onRate={this.handleRate} />
+                       <span >{this.state.rating}/{this.state.maxRating}</span>
                     </div>
+                    <Button primary onClick={this.consoleState}>
+                      Начать
+                    </Button>
+                </div>
+              </div>
            :null}
            {this.state.isSingleBookVisible ?
            	<Fragment>
