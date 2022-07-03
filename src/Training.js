@@ -16,16 +16,16 @@ class Training extends Component {
           <Card.Group className="training-wrapper training-cards">
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/englishtorussian.jpg' />              
+              <Image src='./training/englishtorussian.jpg' />              
               </div>
               <Card.Content>
-                <Card.Header><Link to="/englishtorussian">С английского на русский</Link></Card.Header>
+                <Card.Header><Link to="/englishtorussian">С английского на русский </Link></Card.Header>
 
               </Card.Content>
             </Card>
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/russiantoenglish.jpg' />              
+              <Image src='./training/russiantoenglish.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/russiantoenglish">С русского на английский</Link></Card.Header>
@@ -33,7 +33,7 @@ class Training extends Component {
             </Card>
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/memory.png' />              
+              <Image src='./training/memory.png' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/cards">Словарные карточки</Link></Card.Header>
@@ -41,7 +41,7 @@ class Training extends Component {
             </Card>
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/audio.jpg' />              
+              <Image src='./training/audio.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/audio">Аудиотренировка</Link></Card.Header>
@@ -49,7 +49,7 @@ class Training extends Component {
             </Card>
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/construct.jpg' />              
+              <Image src='./training/construct.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/constructword">Конструктор слов</Link></Card.Header>
@@ -58,7 +58,7 @@ class Training extends Component {
           {/*
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/pronunciation.jpg' />              
+              <Image src='./training/pronunciation.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/pronunciation">Произношение</Link></Card.Header>
@@ -67,7 +67,7 @@ class Training extends Component {
           */}
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/fillthegaps.jpg' />              
+              <Image src='./training/fillthegaps.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/fragments">Заполни пробелы</Link></Card.Header>
@@ -75,7 +75,7 @@ class Training extends Component {
             </Card>
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/recreatetext.jpg' />              
+              <Image src='./training/recreatetext.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/recreatetext">Воспроизведи текст</Link></Card.Header>
@@ -83,7 +83,7 @@ class Training extends Component {
             </Card>
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/recreateaudiotext.jpg' />              
+              <Image src='./training/recreateaudiotext.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/recreateaudiotext">Воспроизведи аудиоисторию</Link></Card.Header>
@@ -91,7 +91,7 @@ class Training extends Component {
             </Card>
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/insertspaces.jpg' />              
+              <Image src='./training/insertspaces.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/insertspaces">Расставьте пробелы</Link></Card.Header>
@@ -99,7 +99,7 @@ class Training extends Component {
             </Card>
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/truefalse.png' />              
+              <Image src='./training/truefalse.png' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/rightwrong">Верно-неверно</Link></Card.Header>
@@ -107,7 +107,7 @@ class Training extends Component {
             </Card>
             <Card>
               <div className="training-wrapper-image">
-              <Image src='../training/proverbs.jpg' />              
+              <Image src='./training/proverbs.jpg' />              
               </div>          
               <Card.Content>
                 <Card.Header><Link to="/proverbs">Пословицы и поговорки</Link></Card.Header>

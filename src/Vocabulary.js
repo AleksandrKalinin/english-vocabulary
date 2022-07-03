@@ -99,7 +99,7 @@ class Vocabulary extends Component {
 	}
 
 	UNSAFE_componentWillMount(){
-	    axios.get('/working.json')
+	    axios.get('./working.json')
 	      .then(res => {
 	        const words = res.data;
 	        this.setState({ words, filteredWords: words });
