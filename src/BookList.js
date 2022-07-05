@@ -7,6 +7,9 @@ import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from
 import parse from 'html-react-parser';
 import HTMLReactParser from 'html-react-parser';
 
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
 
 class BookList extends Component {
 
@@ -157,41 +160,26 @@ class BookList extends Component {
   	    }
   	}
 
-    readMore = (e) =>{
-      var currentElement = e.target.parentElement.children[0].children[1];
+    readMore = (id) =>{
       let books = this.state.books.slice();
-      let target = e.target.parentElement;
-      setInterval(this.checkInterval, 1000);
-      var index = 0;
-        while ( (target = target.previousElementSibling) ) {
-          index++;
-      }
-      let audiobooks = books[index].audio;
-      let image = books[index].image;
-      var link = books[index].link;
+      let selected = books.find(x => x.id === id);
+      let image = selected.image;
+      var link = selected.link;
       axios.all([axios.get('/books/'+ link)])
                    .then(axios.spread((firstResponse) => {           
                     let currentBook = firstResponse.data;
                     var parsedBook = HTMLReactParser(currentBook);
                     this.setState({ 
                       currentBook,
-                      parsedBook,
-                      audiobooks
+                      parsedBook
                     }, () => this.splitBook(this.state.currentBook));
               }))
-      let activeTargetTitle = e.target.parentElement.children[0].children[2].children[0].textContent;
-      let activeTargetDescription = e.target.parentElement.children[0].children[4].textContent;
-      let activeTargetAuthor = e.target.parentElement.children[0].children[1].children[0].textContent;
-      let activeTargetContent = this.state.currentBook;
-      let activeTargetImage = e.target.parentElement.children[0].children[0].children[0].src;
+      this.props.actions.selectBook(selected);             
       this.setState({
-        areBooksVisible: false,
-        isMenuVisible: false,
-        isPreviewVisible: true,
-        title: activeTargetTitle,
-        content: activeTargetContent,
-        author: activeTargetAuthor,
-        description: activeTargetDescription,
+        title: selected.title,
+        content: selected.content,
+        author: selected.author,
+        description: selected.author,
         image
       }, () => this.populateDropdown())
     }
@@ -223,7 +211,7 @@ class BookList extends Component {
     		currentArrayBooks,
     		currentPage: currentArrayBooks[0],
     		currentIndexArray: indexArray
-    	})
+    	}, () => console.log(this.state));
     }
 
     renderPagination = (book) =>{
@@ -558,7 +546,7 @@ class BookList extends Component {
                     {item.content.substr(0,250) + ' ...'}
                   </Card.Description>
                 </Card.Content>
-                <Button onClick={this.readMore} >Читать</Button>
+                <Button onClick={this.readMore.bind(this, item.id)} >Читать</Button>
               </Card>
              )}
             </Card.Group> : null
@@ -697,7 +685,7 @@ class BookList extends Component {
                    )}												
       					</div>
       				</Card>
-      			</Fragment>:null
+      			</Fragment> : null
             }          
         </div>
         </div>
@@ -708,4 +696,13 @@ class BookList extends Component {
   }
 }
 
-export default BookList;
+function mapStateToProps(state){
+  return {store: state.reducer};
+}
+
+function mapDispatchToProps(dispatch) {
+    return { actions: bindActionCreators(actions, dispatch)}
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);

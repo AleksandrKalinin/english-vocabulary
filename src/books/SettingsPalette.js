@@ -9,24 +9,11 @@ class SettingsPalette extends Component {
 			activeBgColor: '#f6f6f6',
 			fontState: [false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false],
 			bgState: [false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false],
-			colorScheme: [
-				'#000000',
-				'#111111',
-				'#222222',
-				'#333333',
-				'#444444',
-				'#555555',
-				'#666666',
-				'#777777',
-				'#888888',
-				'#999999',
-				'#a7a7a7',
-				'#b8b8b8',
-				'#d0d0d0',
-				'#dcdcdc',
-				'#f6f6f6',
-				'#ffffff'
-			]
+			colorScheme: [	
+							'#000000','#111111','#222222','#333333',
+							'#444444','#555555','#666666','#777777',
+							'#888888','#999999','#a7a7a7','#b8b8b8',
+							'#d0d0d0','#dcdcdc','#f6f6f6','#ffffff' 	]
 		}
 	}
 

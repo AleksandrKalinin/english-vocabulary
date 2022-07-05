@@ -129,8 +129,8 @@ class EnglishToRussian extends Component {
 
    compareWord = (id) =>{
     let selectedWord = this.state.result[this.state.id].find(x => x.id === id);
-    var positiveWords = this.state.positiveWords.slice();
-    var negativeWords = this.state.negativeWords.slice();    
+    let positiveWords = this.state.positiveWords.slice();
+    let negativeWords = this.state.negativeWords.slice();    
     if(this.state.currentWord.id === selectedWord.id){
       positiveWords.push(this.state.currentWord);
       this.setState({

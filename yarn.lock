@@ -8978,10 +8978,10 @@
   "resolved" "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
   "version" "3.0.4"
 
-"react-rating@^2.0.3":
-  "integrity" "sha512-csnehSKasrtkTXOEh39kKUa1YxDnXyc1XUm5dbi2UNvTUNRQ50ilBMpda/gzoCLd9bhhH5trYa4SljI/GHSRpQ=="
-  "resolved" "https://registry.npmjs.org/react-rating/-/react-rating-2.0.3.tgz"
-  "version" "2.0.3"
+"react-rating@^2.0.5":
+  "integrity" "sha512-uldxgLCe5bzqGX7V+7/bPgQQj2Kok6eiMgTMxjKOhfhnQkFLDlc4TjMlp7gaJFAHWdbiOnqpiShI7z8as6oWtg=="
+  "resolved" "https://registry.npmjs.org/react-rating/-/react-rating-2.0.5.tgz"
+  "version" "2.0.5"
   dependencies:
     "@types/lodash" "^4.14.105"
     "@types/react" "^16.0.40"

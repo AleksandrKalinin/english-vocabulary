@@ -54,6 +54,7 @@ import GrammarPastPerfectContinuous from './grammar/GrammarPastPerfectContinuous
 import GrammarFuturePerfectContinuous from './grammar/GrammarFuturePerfectContinuous'
 import AudioPlayer from './AudioPlayer'
 import Books from './books/Books'
+import SelectedBook from './SelectedBook'
 import {BrowserRouter as Router, Route } from "react-router-dom";
 
 import {Provider} from "react-redux";
@@ -70,6 +71,7 @@ ReactDOM.render(
 				<Route exact path="/" component={Main}/>
 				<Route path="/newbooks" component={Books} />
 				<Route path="/vocabulary" component={Vocabulary} />
+				<Route path="/selectedbook" component={SelectedBook} />
 				<Route path="/settings" component={Settings} />
 				<Route path="/grammar" component={GrammarList} />
 				<Route path="/materials" component={Materials} />

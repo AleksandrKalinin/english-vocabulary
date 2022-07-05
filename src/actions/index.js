@@ -70,7 +70,50 @@ let actions = {
 			type: 'VOICE_VOCAB_WORD',
 			payload: word
 		}		
-	}							
+	},
+	selectBook: function(book) {
+		return {
+			type: 'SELECT_BOOK',
+			payload: book
+		}		
+	},
+	selectFontSize: function(fontSize) {
+		return {
+			type: 'SELECT_FONT_SIZE',
+			payload: fontSize
+		}		
+	},
+	selectFontFamily: function(fontFamily) {
+		return {
+			type: 'SELECT_FONT_FAMILY',
+			payload: fontFamily
+		}		
+	},
+	selectFontSpacing: function(fontSpacing) {
+		return {
+			type: 'SELECT_FONT_SPACING',
+			payload: fontSpacing
+		}		
+	},
+	selectFontWeight: function(fontWeight) {
+		return {
+			type: 'SELECT_FONT_WEIGHT',
+			payload: fontWeight
+		}		
+	},				
+	selectFontColor: function(fontColor) {
+		return {
+			type: 'SELECT_FONT_COLOR',
+			payload: fontColor
+		}		
+	},
+	selectBgColor: function(bgColor) {
+		return {
+			type: 'SELECT_BG_COLOR',
+			payload: bgColor
+		}		
+	}		
+
 }
 
 export default actions;
