@@ -12,27 +12,40 @@ class SplittedWords extends Component {
       wordsEl: [],
       words: [],
       loaded: false,
-      sentence: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+      isModalOpen: false,
+      sentence: "arched owl Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
     }
   }
 
   componentDidMount(){
-    let sentence = this.state.sentence;
-    let wordsEl = [];
-    let words = this.state.sentence.split(" ");
-    this.setState({
-      words, loaded: true
+    axios.get('/working.json')
+      .then(res => {
+        const words = res.data;
+        let splitted = this.state.sentence.split(" ");
+        this.setState({ 
+          words, splitted, loaded: true
+      })    
     })
-    /*
-    for (var i = 0; i < words.length; i++) {
-      wordsEl.push(`<span>${words[i]}</span>`)
-    } */
-    console.log(wordsEl);
   } 
 
-  showModal = (item) => {
-    alert(item);
+  searchForWord = (item) => {
+    let words = this.state.words.slice()
+    let newItem = item.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    let found = words.find(x => x.name.toLowerCase() === newItem);
+    if (found) {
+      this.setState({
+        found
+      }, () => this.toggleModal())
+    } else {
+      console.log('not found')
+    }
   } 
+
+  toggleModal = () => {
+    this.setState({
+      isModalOpen: !this.state.isModalOpen
+    })
+  }
 
   render() {
 
@@ -40,10 +53,24 @@ class SplittedWords extends Component {
       <Fragment>
         <div className="content-wrapper">
           <TopMenu></TopMenu>
+          {this.state.isModalOpen ?
+            <div className = "word-modal__overlay">
+              <div className="word-modal">
+                <div className="word-modal__image">
+                  <img src="word-modal__picture" src = {this.state.found.image}/>
+                </div>
+                <div className="word-modal__description">
+                  <p className="word-modal__title">{this.state.found.name} - {this.state.found.translation}</p>
+                  <p className="word-modal__meaning">{this.state.found.meaning}</p>   
+                  <button onClick={this.toggleModal}>Закрыть</button>               
+                </div>
+              </div>              
+            </div>
+          : null}
           {this.state.loaded ?
             <div className="splitted-wrapper">
-              {this.state.words.map((item, index) => 
-                <span onClick={this.showModal.bind(this, item)}>{`${item} `}</span>
+              {this.state.splitted.map((item, index) => 
+                <span onClick={this.searchForWord.bind(this, item)}>{`${item} `}</span>
               )}
             </div>
           : null}
