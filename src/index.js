@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Vocabulary from './Vocabulary';
+import SplittedWords from './SplittedWords';
 import GrammarList from './GrammarList'
 import Statistics from './Statistics'
 import CoursesList from './CoursesList'
@@ -71,6 +72,7 @@ ReactDOM.render(
 				<Route exact path="/" component={Main}/>
 				<Route path="/newbooks" component={Books} />
 				<Route path="/vocabulary" component={Vocabulary} />
+				<Route path="/splitted" component={SplittedWords} />
 				<Route path="/selectedbook" component={SelectedBook} />
 				<Route path="/settings" component={Settings} />
 				<Route path="/grammar" component={GrammarList} />

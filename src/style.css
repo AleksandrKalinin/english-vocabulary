@@ -3780,3 +3780,9 @@ a.outline-link:hover {
 .settings-block select option{
 	background: #555;
 }
+
+.splitted-wrapper {
+	padding: 40px;
+	font-size: 20px;
+	line-height: 34px;
+}
