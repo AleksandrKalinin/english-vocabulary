@@ -1,11 +1,14 @@
 import React, { Component, Fragment } from 'react';
-import {Table,  Image, Button, Menu, Icon } from 'semantic-ui-react'
+import {Table,  Image, Button, Menu, Icon, TextArea, Form, Checkbox, Input } from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import {Link} from "react-router-dom";
 import axios from 'axios';
+
+import iconv from 'iconv-lite';
+//import {decode, encode, labels} from 'iso-8859-2';
+
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
-
 import {connect} from 'react-redux';
 
 
@@ -15,7 +18,7 @@ class SelectedBook extends Component {
     super(props);
     this.myRef = React.createRef();
     this.state = {
-      text: '',
+      text: null,
       pageIndexes: [],
       currentPageId: 0,
       loaded: false,
@@ -25,7 +28,6 @@ class SelectedBook extends Component {
       fontFamily: "'Times New Roman', sans-serif",
       lineHeight: 32,
       fontWeight: 400,
-
       pages: 0,
       isFontModalOpen: false,
       fontState: [false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false],
@@ -35,7 +37,6 @@ class SelectedBook extends Component {
       lineHeightTemp: 32,
       fontFamilyTemp: "'Times New Roman', sans-serif",
       fontWeightTemp: 400,
-
 
       color: '#222222',
       backgroundColor: '#f6f6f6',
@@ -49,17 +50,60 @@ class SelectedBook extends Component {
               '#000000','#111111','#222222','#333333',
               '#444444','#555555','#666666','#777777',
               '#888888','#999999','#a7a7a7','#b8b8b8',
-              '#d0d0d0','#dcdcdc','#f6f6f6','#ffffff'   ]      
+              '#d0d0d0','#dcdcdc','#f6f6f6','#ffffff'   ],
+      errors: {},
+      comments: [{
+        "author": "Author 1",
+        "comment": "simple comment"
+      }],   
+      commentsVisible: false          
     }
   }
+/*
+  componentDidMount(){
+    axios.get('/books.json')
+      .then(res => {
+        let books = res.data; 
+        let selectedBook = books.find(x => x.id == this.props.match.params.id);
+        let options = {
+          method: 'GET',
+          url: selectedBook.link,
+          responseType: 'text/plain',
+          charset: 'ISO-8859-2',
+          headers: {
+            'Content-Type': 'text/plain;charset=ISO-8859-2',
+          },
+          responseEncoding: 'ISO-8859-2'          
+    
+        }
+        axios.request(options)
+        .then(book => {
+          this.setState({
+            text: book.data.toString().split("\n")
+          }, () => this.splitIntoPages())
+        })
+      })
+  } 
+*/
 
   componentDidMount(){
-    axios.get('/books/' + this.props.store.selectedBook.link)
+    var myHeaders = new Headers();
+    myHeaders.append('Content-Type','text/plain; charset=UTF-8');  
+    const that = this;
+    axios.get('/books.json')
       .then(res => {
-        this.setState({
-          text: res.data.toString().split("\n")
-        }, () => this.splitIntoPages())
+        let books = res.data; 
+        let selectedBook = books.find(x => x.id == this.props.match.params.id);
+        fetch(selectedBook.link, myHeaders)
+          .then(response => response.arrayBuffer())
+          .then(function (buffer) {
+              const decoder = new TextDecoder('iso-8859-1');
+              let text = decoder.decode(buffer).split("\n");
+              return text
+          })
+          .then((text) => that.setState({ text}, () => that.splitIntoPages() ))
       })
+
   } 
 
   splitIntoPages = () => {
@@ -80,7 +124,7 @@ class SelectedBook extends Component {
       this.setState({ pages, 
                       pageIndexes, 
                       currentPage: pages[0],
-                      loaded: true }, () => console.log(this.state));
+                      loaded: true });
   }  
 
     prevButton = () =>{
@@ -203,6 +247,64 @@ class SelectedBook extends Component {
     })    
   }
 
+//comments
+
+    addComment = () =>{
+      let comments = this.state.comments.slice();
+      let errors = this.state.errors;
+      let currentComment = this.state.currentComment;
+      let currentName = this.state.currentName;
+      let currentEmail = this.state.currentEmail;
+      let temp = {};
+      if( (currentName !== '') && (currentComment !== '') && (currentEmail !== '')){
+        temp['author'] = currentName;
+        temp['comment'] = currentComment;
+        comments.unshift(temp);
+        this.setState({
+          comments,
+          currentName: '',
+          currentComment: '',
+          currentEmail: ''
+        })
+      }
+      else if (currentName == ''){
+        errors['name'] = "Заполните поле имени!";
+        this.setState({
+          errors
+        })
+      }
+      else if(currentComment == ''){
+        errors['comment'] = "Комментария должен быть не короче 30 символов";
+        this.setState({
+          errors
+        })        
+      }
+      else if(currentEmail == ''){
+        errors['email'] = "Заполните поле почты";
+        this.setState({
+          errors
+        })        
+      }
+
+    }
+
+    updateComment = (event) =>{
+      this.setState({currentComment: event.target.value.substr(0,500)});
+    }
+
+
+    updateName = (event) =>{
+      this.setState({currentName: event.target.value.substr(0,500)});
+    }
+
+    updateEmail = (event) =>{
+      this.setState({currentEmail: event.target.value.substr(0,500)});
+    }
+
+    toggleComments = () => {
+      this.setState({ commentsVisible: !this.state.commentsVisible })
+    }
+
   render() {
     return (     
       <Fragment>
@@ -322,6 +424,41 @@ class SelectedBook extends Component {
               </div>
             : null}
           </div>
+          <div className="single-text-form__wrapper">
+            <div className="comments__header">
+              <span className="comments-header__counter">{this.state.comments.length} комментариев</span>
+              <span className="comments-header__button" onClick={this.toggleComments}>{this.state.commentsVisible ? 'Скрыть комментарии': 'Показать комментарии'}</span>
+            </div>
+            {this.state.commentsVisible ?
+              <>
+                <div className="single-text-card-form">
+                  <Form>
+                    <Form.Field>
+                      <Input value={this.state.currentName} onChange={this.updateName} focus placeholder='Имя'/>
+                      <span>{this.state.errors['name']}</span>
+                    </Form.Field>
+                    <Form.Field>
+                      <Input value={this.state.currentEmail} onChange={this.updateEmail} focus placeholder='Email'/>
+                      <span>{this.state.errors['email']}</span>
+                    </Form.Field>
+                    <Form.Field>
+                      <TextArea value={this.state.currentComment} onChange={this.updateComment} maxLength="50" placeholder='Ваш комментарий' />
+                      <span>{this.state.errors['comment']}</span>
+                    </Form.Field>                           
+                    <Button onClick={this.addComment} type='submit'>Отправить</Button>
+                  </Form>         
+                </div>
+                <div className="single-text-card-comments">
+                  {this.state.comments.map((item, index) =>
+                    <div className="single-text-card-comment" key={index}>
+                      <h3>{item.author}</h3>
+                      <p>{item.comment}</p>                              
+                    </div>
+                   )}                       
+                </div>
+              </> 
+            : null}           
+          </div>      
         </div>
         <footer></footer>        
       </Fragment>

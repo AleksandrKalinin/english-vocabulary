@@ -370,11 +370,6 @@ body{
 	height: 60px !important;
 }
 
-/*
-.vocab-list .item img:hover{
-	transform: scale(1.1);
-}
-*/
 .vocab-list .item button{
 	border-radius: 0 !important;
 }
@@ -1577,7 +1572,7 @@ footer {
 }
 
 .texts-cards .card:hover{
-	transform: scale(1.05);
+	transform: scale(1.03);
 }
 
 .texts-cards .card .content .description{
@@ -2139,7 +2134,7 @@ footer {
 
 .books-header .books-genre{
 	display: block;
-	background: #333333;
+	background: #3281F0;
 	color: #fff;
 	font-size: 14px;
 	height: 
@@ -2166,6 +2161,10 @@ footer {
 .book-index-panel button:hover{
 	background: #222 !important;
 	color: #fff !important;
+}
+
+.single-text-form__wrapper {
+	padding: 0 40px;
 }
 
 .single-text-card-form form {
@@ -2202,18 +2201,20 @@ footer {
 	height: 150px !important;
 }
 
+
 .single-text-card-form form button{
-	background: #fff !important;
-	border: 2px #222 solid !important;
-	border-radius: 0 !important;
-	color: #222 !important;
+	background: #444444 !important;
+	border: 2px solid #444444 !important;
+	color: #fff !important;
+	transition: .2s all;
 	margin-left: 5px !important;
 	cursor: pointer;	
 }
 
 .single-text-card-form form button:hover{
-	background: #222 !important;
-	color: #fff !important;	
+	background: #3281F0 !important;
+	border: 2px solid #3281F0 !important;
+	color: #FFFFFF !important;
 }
 
 .single-text-card-comments{
@@ -2238,6 +2239,24 @@ footer {
 	padding: 15px 0 15px 15px;
 	margin: 0;
 }
+
+.comments__header {
+	background: #E0E1E2;
+	padding: 30px 60px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.comments-header__counter {
+	font-size: 25px;
+}
+
+.comments-header__button {
+	font-size: 17px;
+	cursor: pointer;
+}
+
 .checkbox-container label{
 	display: block !important;
 	margin-bottom: 10px;
@@ -2246,7 +2265,6 @@ footer {
 .checkbox-container label div{
 	margin-left: 5px;
 }
-
 
 .proverb-result{
 	font-size: 20px;
@@ -3852,4 +3870,11 @@ a.outline-link:hover {
 
 .word-modal__file {
 	width: 100%;
+}
+
+.books-link {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
 }

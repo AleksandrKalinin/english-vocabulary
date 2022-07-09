@@ -66,7 +66,10 @@ class TopMenu extends Component {
           </Menu.Item>
           <Menu.Item>
             <Link to="/materials">Материалы</Link>
-          </Menu.Item> 
+          </Menu.Item>
+          <Menu.Item>
+            <Link to="/books">Книги</Link>
+          </Menu.Item>           
           {/*
             <Menu.Item>
               <Link to="/statistics">Статистика</Link>

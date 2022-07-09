@@ -54,7 +54,6 @@ import GrammarPresentPerfectContinuous from './grammar/GrammarPresentPerfectCont
 import GrammarPastPerfectContinuous from './grammar/GrammarPastPerfectContinuous'
 import GrammarFuturePerfectContinuous from './grammar/GrammarFuturePerfectContinuous'
 import AudioPlayer from './AudioPlayer'
-import Books from './books/Books'
 import SelectedBook from './SelectedBook'
 import {BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -70,7 +69,6 @@ ReactDOM.render(
 		<Router basename={process.env.PUBLIC_URL}>
 			<div className="router-wrapper">
 				<Route exact path="/" component={Main}/>
-				<Route path="/newbooks" component={Books} />
 				<Route path="/vocabulary" component={Vocabulary} />
 				<Route path="/splitted" component={SplittedWords} />
 				<Route path="/selectedbook" component={SelectedBook} />
@@ -108,7 +106,8 @@ ReactDOM.render(
 				<Route path="/jamescorden" component={JamesCorden} />
 				<Route path="/sethmeyers" component={SethMeyers} />
 				<Route path="/texts" component={TextsList} />
-				<Route path="/books" component={BookList} />		
+				<Route path="/books" exact component={BookList} />
+				<Route path="/books/:id" component={SelectedBook} />						
 				<Route path="/tests" component={Example} />
 				<Route path="/audiolist" component={AudioList} />
 				<Route path="/grammarpresentsimple" component={GrammarPresentSimple} />

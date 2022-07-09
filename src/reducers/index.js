@@ -1,14 +1,5 @@
-let selectedBook = 	
-	{	"id": 40,
-		"genre": "detective",
-		"author": "Arthur Conan-Doyle",
-		"title": "The Hound of the Baskervilles",
-		"page_number": 135,
-		"rating": 1,
-		"link": "Baskervilles.txt",
-        "image": "../books/Baskervilles.jpg",
-        "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them"
-	}
+let selectedBook = {}
+
 
 let initialState = {
 	"totalScore": 0,
