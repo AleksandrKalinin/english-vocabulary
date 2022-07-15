@@ -32,19 +32,27 @@ class SplittedWords extends Component {
     })
   } 
 
-  searchForWord = (item) => {
-    let words = this.state.words.slice()
-    let newItem = item.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-    let found = words.find(x => x.name === newItem);
-    if (found) {
-      this.setState({
-        found
-      }, () => this.toggleFoundModal())
-    } else {
-      this.setState({
-        selected: newItem
-      }, () => this.toggleInputModal())
-    }
+  searchForWord = (item, e) => {
+    switch (e.detail) {
+      case 1:
+        break;
+      case 2:
+        let words = this.state.words.slice();
+        let newItem = item.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+        let found = words.find(x => x.name === newItem);
+        if (found) {
+          this.setState({
+            found
+          }, () => this.toggleFoundModal())
+        } else {
+          this.setState({
+            selected: newItem
+          }, () => this.toggleInputModal())
+        }
+        break;
+      default:
+        return;
+    }    
   } 
 
   toggleFoundModal = () => {
@@ -88,8 +96,6 @@ class SplittedWords extends Component {
     word.date = new Date();
     word.definition = this.state.definition;
     word.image = this.state.filePath;
-    //pronounce(this.state.selected);
-    console.log(word);
   }
 
   render() {

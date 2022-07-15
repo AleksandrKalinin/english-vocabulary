@@ -16,6 +16,7 @@ class SelectedBook extends Component {
 
   constructor(props){
     super(props);
+    this.fileInputRef = React.createRef();    
     this.myRef = React.createRef();
     this.state = {
       text: null,
@@ -52,11 +53,13 @@ class SelectedBook extends Component {
               '#888888','#999999','#a7a7a7','#b8b8b8',
               '#d0d0d0','#dcdcdc','#f6f6f6','#ffffff'   ],
       errors: {},
-      comments: [{
-        "author": "Author 1",
-        "comment": "simple comment"
-      }],   
-      commentsVisible: false          
+      commentsVisible: false,
+
+      wordsEl: [],
+      words: [],
+      selected: '',
+      isModalFoundOpen: false,
+      isModalInputOpen: false                
     }
   }
 
@@ -72,31 +75,47 @@ class SelectedBook extends Component {
     var myHeaders = new Headers();
     myHeaders.append('Content-Type','text/plain; charset=UTF-8');  
     const that = this;
-    axios.get('/books.json')
-      .then(res => {
-        let books = res.data; 
-        let selectedBook = books.find(x => x.id == this.props.match.params.id);
-        fetch(selectedBook.link, myHeaders)
-          .then(response => response.arrayBuffer())
-          .then(function (buffer) {
-              const decoder = new TextDecoder('iso-8859-1');
-              let text = decoder.decode(buffer).split("\n");
-              return text
-          })
-          .then((text) => that.setState({ text, comments: selectedComments.comments }, () => that.splitIntoPages() ))
-      })
+    axios.all([
+      axios.get('/books.json'), 
+      axios.get('/words.json')
+    ])   
+    .then(axios.spread((obj1, obj2) => {
+      let books = obj1.data; 
+      let words = obj2.data;
+      let selectedBook = books.find(x => x.id == this.props.match.params.id);
+      fetch(selectedBook.link, myHeaders)
+        .then(response => response.arrayBuffer())
+        .then(function (buffer) {
+            const decoder = new TextDecoder('iso-8859-1');
+            let text = decoder.decode(buffer).split("\n");
+            return text
+        })
+        .then((text) => that.setState({words, text, comments: selectedComments.comments }, () => that.splitIntoPages() ))
+    })) 
 
   } 
 
   splitIntoPages = () => {
     let text = this.state.text;
-    let pages = []; let pageIndexes = [];
+    let pages = [];
+    let words = [];
+    let pageIndexes = [];
     let value = 1600 / this.state.lineHeight;
     let pagesCount = Math.ceil(text.length / value);
     let currentMin = 0;
     let currentMax = 50;
       for (var i = 0; i < pagesCount; i++) {
-        pages.push(text.slice(currentMin,currentMax));
+        let txt = text.slice(currentMin, currentMax);
+        if (currentMin === 0 ) {
+          let newTxt = [];
+          for (var i = 0; i < txt.length; i++) {
+            let newSentence = [];
+            newSentence.push(txt[i].split(' '));
+            newTxt.push(newSentence);
+          }
+          words.push(newTxt);
+        }
+        pages.push(txt);
         currentMin = currentMin + 50;
         currentMax = currentMax + 50;
       }
@@ -106,6 +125,7 @@ class SelectedBook extends Component {
       this.setState({ pages, 
                       pageIndexes, 
                       currentPage: pages[0],
+                      splittedPage: words,
                       loaded: true });
   }  
 
@@ -116,7 +136,17 @@ class SelectedBook extends Component {
         currentPageId--;
       }
       let currentPage = pages[currentPageId];
+
+      let newTxt = []; let words = [];
+      for (var i = 0; i < currentPage.length; i++) {
+        let newSentence = [];
+        newSentence.push(currentPage[i].split(' '));
+        newTxt.push(newSentence);
+      }
+      words.push(newTxt);  
+      console.log(words);
       this.setState({
+          splittedPage: words,
           currentPageId,
           currentPage
       }, () => this.scrollToTop())
@@ -129,7 +159,18 @@ class SelectedBook extends Component {
         currentPageId++;
       }
       let currentPage = pages[currentPageId];
+      console.log(currentPage);
+      let newTxt = []; let words = [];
+      for (var i = 0; i < currentPage.length; i++) {
+        let newSentence = [];
+        newSentence.push(currentPage[i].split(' '));
+        newTxt.push(newSentence);
+      }
+      words.push(newTxt);  
+      console.log(words);
+
       this.setState({
+          splittedPage: words,
           currentPageId,
           currentPage
       }, () => this.scrollToTop())
@@ -291,8 +332,76 @@ class SelectedBook extends Component {
       this.setState({ commentsVisible: !this.state.commentsVisible })
     }
 
-    consoleState = () => {
 
+  searchForWord = (item, e) => {
+    switch (e.detail) {
+      case 1:
+        break;
+      case 2:
+        let words = this.state.words.slice();
+        let newItem = item.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+        let found = words.find(x => x.name === newItem);
+        if (found) {
+          this.setState({
+            found
+          }, () => this.toggleFoundModal())
+        } else {
+          this.setState({
+            selected: newItem
+          }, () => this.toggleInputModal())
+        }
+        break;
+      default:
+        return;
+    }    
+  } 
+
+  toggleFoundModal = () => {
+    this.setState({
+      isModalFoundOpen: !this.state.isModalFoundOpen
+    })
+  }
+
+  toggleInputModal = () => {
+    this.setState({
+      isModalInputOpen: !this.state.isModalInputOpen
+    })
+  }
+
+  changeFile = (e) => {
+    console.log(e);
+    this.setState({
+      filePath: e.target.value
+    })
+  }
+
+  changeTranslation = (e) => {
+    this.setState({
+      translation: e.target.value
+    })
+  }
+
+  changeDefinition = (e) => {
+    this.setState({
+      definition: e.target.value
+    })
+  }
+
+  addToWords = () => {
+    let word = {};
+    word.name = this.state.selected;
+    word.transription = this.state.transcription;
+    word.translation = this.state.translation;
+    word.category = "common";
+    word.id = 1;
+    word.date = new Date();
+    word.definition = this.state.definition;
+    word.image = this.state.filePath;
+  }
+
+
+    consoleState = () => {
+      console.log(this.state);
     }
 
   render() {
@@ -300,6 +409,47 @@ class SelectedBook extends Component {
       <Fragment>
         <div className="content-wrapper">
           <TopMenu></TopMenu>
+          {this.state.isModalFoundOpen ?
+            <div className = "word-modal__overlay">
+              <div className="word-modal">
+                <div className="word-modal__image">
+                  <img src="word-modal__picture" src = {this.state.found.image}/>
+                </div>
+                <div className="word-modal__description">
+                  <p className="word-modal__title">{this.state.found.name} - {this.state.found.translation}</p>
+                  <p className="word-modal__meaning">{this.state.found.definition}</p>   
+                  <Button primary onClick={this.toggleFoundModal}>Закрыть</Button>              
+                </div>
+              </div>              
+            </div>
+          : null}
+          {this.state.isModalInputOpen ?
+            <div className = "word-modal__overlay">
+              <div className="word-modal">
+                <div className="word-modal__description">
+                  <p className="word-modal__title">{this.state.selected}</p>
+                  <textarea value = {this.state.translation} onChange = {this.changeTranslation} type = "text" className="word-modal__textarea" placeholder="Добавить перевод" />
+                  <textarea value = {this.state.definition} onChange = {this.changeDefinition} type = "text" className="word-modal__textarea" placeholder="Добавить значение" />   
+                  <Button
+                      primary
+                      content="Выбрать картинку"
+                      labelPosition="left"
+                      icon="file"
+                      onClick={() => this.fileInputRef.current.click()}
+                      className="word-modal__file"
+                  />
+                  <input ref={this.fileInputRef}
+                         type="file"
+                         hidden
+                         onChange={this.changeFile} />
+                  <div className="word-modal__buttons">
+                    <Button primary onClick={this.addToWords}>Добавить</Button>
+                    <Button primary onClick={this.toggleInputModal}>Закрыть</Button>                      
+                  </div>
+                </div>
+              </div>              
+            </div>
+          : null}          
           {this.state.isFontModalOpen ?
             <div className="settings-overlay">
               <div className="select-palette-wrapper select-font-wrapper">
@@ -403,6 +553,7 @@ class SelectedBook extends Component {
               <span onClick={this.changeColor} className="navigation-links__item" title="Настройки цвета"><Icon name='tint' size='large' /> </span>
             </div>
           </div>
+          {/*
           <div className="selected-book" style={{ backgroundColor: this.state.backgroundColor, color: this.state.color}}>
             {this.state.loaded ?
               <div className="selected-book__content book-content" style= 
@@ -413,11 +564,40 @@ class SelectedBook extends Component {
                   {this.state.currentPage.map((item,index) => <p key={index}>{item}</p>) }             
               </div>
             : null}
-          </div>
+          </div> */}
+          <div className="selected-book" style={{ backgroundColor: this.state.backgroundColor, color: this.state.color}}>
+            {this.state.loaded ?
+              <div className="selected-book__content book-content" style= 
+                                          {{ lineHeight: this.state.lineHeight + "px",
+                                             fontWeight: this.state.fontWeight, 
+                                             fontSize:   this.state.fontSize + "px", 
+                                             fontFamily: this.state.fontFamily }}>
+                  {this.state.splittedPage.map((page, index1) => 
+                    <>
+                      {page.map((sentence, index2) => 
+                        <>
+                          {sentence.map((word, index3) => 
+                            <p>
+                              {word.map((item, index4) => 
+                                <span onClick={this.searchForWord.bind(this, item)}>{`${item} `}</span>
+                              )}
+                            </p>
+                          )}
+                        </>
+                      )}
+                    </> 
+                  )}
+              </div>
+            : null}
+          </div>          
           <div className="single-text-form__wrapper">
             <div className="comments__header">
-              <span className="comments-header__counter">Комментариев: {this.state.comments.length}</span>
-              <span className="comments-header__button" onClick={this.toggleComments}>{this.state.commentsVisible ? 'Скрыть комментарии': 'Показать комментарии'}</span>
+              {this.state.comments ?
+                <>
+                <span className="comments-header__counter">Комментариев: {this.state.comments.length}</span>
+                <span className="comments-header__button" onClick={this.toggleComments}>{this.state.commentsVisible ? 'Скрыть комментарии': 'Показать комментарии'}</span>
+                </>
+              : null}
             </div>
             {this.state.commentsVisible ?
               <>

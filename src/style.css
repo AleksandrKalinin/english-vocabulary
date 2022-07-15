@@ -3414,6 +3414,10 @@ a.outline-link:hover {
 	padding: 40px;
 }
 
+.selected-book__content {
+	text-align: justify;
+}
+
 .navigation-panel {
 	padding: 10px 40px;
 	height: 70px;
@@ -3827,7 +3831,7 @@ a.outline-link:hover {
 
 .word-modal {
 	width: 380px;
-	height: 380px;
+	height: 420px;
 	background: #fff;
 }
 
