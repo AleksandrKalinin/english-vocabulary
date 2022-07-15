@@ -39,7 +39,8 @@
     "speak-tts": "^2.0.8",
     "speech-synth": "^1.0.1",
     "text-2-json": "^1.0.4",
-    "typeface-roboto": "0.0.54"
+    "typeface-roboto": "0.0.54",
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "predeploy": "npm run build",

@@ -112,7 +112,13 @@ let actions = {
 			type: 'SELECT_BG_COLOR',
 			payload: bgColor
 		}		
-	}		
+	},
+	addCommentToBook: function(id,comment) {
+		return {
+			type: 'ADD_COMMENT_TO_BOOK',
+			payload: {id, comment}
+		}		
+	}			
 
 }
 

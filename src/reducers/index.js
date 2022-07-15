@@ -11,7 +11,60 @@ let initialState = {
 	"wordsRemaining": 0,
 	"vocabModalOpen": false,
 	"selectedVocabWord": null,
-	"selectedBook": selectedBook		
+	"selectedBook": selectedBook,
+	"booksComments": [
+		{
+			"id": 1,
+			"comments": [
+				{
+					"commentId": 1,
+					"date": "Sun, 17 Mar 2019 16:50:49 GMT",
+					"author": "John Doe",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				},
+				{
+					"commentId": 2,
+					"date": "Sun, 17 Mar 2019 16:50:49 GMT",
+					"author": "Bob Davis",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				}
+			]
+		},
+		{
+			"id": 2,
+			"comments": [
+				{
+					"commentId": 11,
+					"date": "Sun, 17 Mar 2019 16:50:49 GMT",
+					"author": "John Doe",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				},
+				{
+					"commentId": 12,
+					"date": "Sun, 17 Mar 2019 16:50:49 GMT",
+					"author": "Bob Davis",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				}
+			]
+		},
+		{
+			"id": 40,
+			"comments": [
+				{
+					"commentId": 34,
+					"date": "Sun, 17 Mar 2019 16:50:49 GMT",
+					"author": "John Doe",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				},
+				{
+					"commentId": 35,
+					"date": "Sun, 17 Mar 2019 16:50:49 GMT",
+					"author": "Bob Davis",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				}
+			]
+		}				
+	]		
 };
 
 
@@ -112,6 +165,14 @@ let reducer = (state = initialState, action) => {
 			return {
 				...state,
 				bgColor: action.payload }
+
+		case 'ADD_COMMENT_TO_BOOK':
+			const index = state.booksComments.findIndex(book => book.id == action.payload.id);
+			const newComments = [...state.booksComments];
+			newComments[index].comments.push(action.payload.comment);
+			return {
+				...state,
+				booksComments: [...newComments] }
 
 		default: return state;		
 	}

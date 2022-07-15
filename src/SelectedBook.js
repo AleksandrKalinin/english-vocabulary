@@ -3,9 +3,9 @@ import {Table,  Image, Button, Menu, Icon, TextArea, Form, Checkbox, Input } fro
 import TopMenu from './TopMenu'
 import {Link} from "react-router-dom";
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 
 import iconv from 'iconv-lite';
-//import {decode, encode, labels} from 'iso-8859-2';
 
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
@@ -59,34 +59,16 @@ class SelectedBook extends Component {
       commentsVisible: false          
     }
   }
-/*
-  componentDidMount(){
-    axios.get('/books.json')
-      .then(res => {
-        let books = res.data; 
-        let selectedBook = books.find(x => x.id == this.props.match.params.id);
-        let options = {
-          method: 'GET',
-          url: selectedBook.link,
-          responseType: 'text/plain',
-          charset: 'ISO-8859-2',
-          headers: {
-            'Content-Type': 'text/plain;charset=ISO-8859-2',
-          },
-          responseEncoding: 'ISO-8859-2'          
-    
-        }
-        axios.request(options)
-        .then(book => {
-          this.setState({
-            text: book.data.toString().split("\n")
-          }, () => this.splitIntoPages())
-        })
-      })
-  } 
-*/
 
   componentDidMount(){
+    let allComments = this.props.store.booksComments;
+    let selectedComments = allComments.find(x => x.id == this.props.match.params.id);
+    for (var i = 0; i < selectedComments.comments.length; i++) {
+      let date = new Date(selectedComments.comments[i].date);
+      let datestring = ("0" + date.getDate()).slice(-2) + "-" + ("0"+(date.getMonth()+1)).slice(-2) + "-" +
+        date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+      selectedComments.comments[i].date = datestring;
+    }
     var myHeaders = new Headers();
     myHeaders.append('Content-Type','text/plain; charset=UTF-8');  
     const that = this;
@@ -101,7 +83,7 @@ class SelectedBook extends Component {
               let text = decoder.decode(buffer).split("\n");
               return text
           })
-          .then((text) => that.setState({ text}, () => that.splitIntoPages() ))
+          .then((text) => that.setState({ text, comments: selectedComments.comments }, () => that.splitIntoPages() ))
       })
 
   } 
@@ -257,11 +239,16 @@ class SelectedBook extends Component {
       let currentEmail = this.state.currentEmail;
       let temp = {};
       if( (currentName !== '') && (currentComment !== '') && (currentEmail !== '')){
+        let date = new Date();
+        let datestring = ("0" + date.getDate()).slice(-2) + "-" + ("0"+(date.getMonth()+1)).slice(-2) + "-" +
+        date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);        
+        temp['commentId'] = uuidv4();
         temp['author'] = currentName;
-        temp['comment'] = currentComment;
-        comments.unshift(temp);
+        temp['text'] = currentComment;        
+        temp['date'] = datestring;
+        let id = this.props.match.params.id;
+        this.props.actions.addCommentToBook(id, temp);        
         this.setState({
-          comments,
           currentName: '',
           currentComment: '',
           currentEmail: ''
@@ -292,7 +279,6 @@ class SelectedBook extends Component {
       this.setState({currentComment: event.target.value.substr(0,500)});
     }
 
-
     updateName = (event) =>{
       this.setState({currentName: event.target.value.substr(0,500)});
     }
@@ -303,6 +289,10 @@ class SelectedBook extends Component {
 
     toggleComments = () => {
       this.setState({ commentsVisible: !this.state.commentsVisible })
+    }
+
+    consoleState = () => {
+
     }
 
   render() {
@@ -426,7 +416,7 @@ class SelectedBook extends Component {
           </div>
           <div className="single-text-form__wrapper">
             <div className="comments__header">
-              <span className="comments-header__counter">{this.state.comments.length} комментариев</span>
+              <span className="comments-header__counter">Комментариев: {this.state.comments.length}</span>
               <span className="comments-header__button" onClick={this.toggleComments}>{this.state.commentsVisible ? 'Скрыть комментарии': 'Показать комментарии'}</span>
             </div>
             {this.state.commentsVisible ?
@@ -434,25 +424,26 @@ class SelectedBook extends Component {
                 <div className="single-text-card-form">
                   <Form>
                     <Form.Field>
-                      <Input value={this.state.currentName} onChange={this.updateName} focus placeholder='Имя'/>
+                      <Input value={this.state.currentName || ''} onChange={this.updateName} focus placeholder='Имя'/>
                       <span>{this.state.errors['name']}</span>
                     </Form.Field>
                     <Form.Field>
-                      <Input value={this.state.currentEmail} onChange={this.updateEmail} focus placeholder='Email'/>
+                      <Input value={this.state.currentEmail || ''} onChange={this.updateEmail} focus placeholder='Email'/>
                       <span>{this.state.errors['email']}</span>
                     </Form.Field>
                     <Form.Field>
-                      <TextArea value={this.state.currentComment} onChange={this.updateComment} maxLength="50" placeholder='Ваш комментарий' />
+                      <TextArea value={this.state.currentComment || ''} onChange={this.updateComment} maxLength="50" placeholder='Ваш комментарий' />
                       <span>{this.state.errors['comment']}</span>
                     </Form.Field>                           
                     <Button onClick={this.addComment} type='submit'>Отправить</Button>
                   </Form>         
                 </div>
                 <div className="single-text-card-comments">
+                  <button onClick={this.consoleState}>Console</button>
                   {this.state.comments.map((item, index) =>
                     <div className="single-text-card-comment" key={index}>
-                      <h3>{item.author}</h3>
-                      <p>{item.comment}</p>                              
+                      <h3>{item.author}<span className="single-text-card-date">{item.date}</span></h3>
+                      <p>{item.text}</p>                              
                     </div>
                    )}                       
                 </div>
