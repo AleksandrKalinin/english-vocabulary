@@ -89,10 +89,10 @@ let actions = {
 			payload: fontFamily
 		}		
 	},
-	selectFontSpacing: function(fontSpacing) {
+	selectFontSpacing: function(lineHeight) {
 		return {
 			type: 'SELECT_FONT_SPACING',
-			payload: fontSpacing
+			payload: lineHeight
 		}		
 	},
 	selectFontWeight: function(fontWeight) {
@@ -107,18 +107,36 @@ let actions = {
 			payload: fontColor
 		}		
 	},
-	selectBgColor: function(bgColor) {
+	selectBgColor: function(backgroundColor) {
 		return {
 			type: 'SELECT_BG_COLOR',
-			payload: bgColor
+			payload: backgroundColor
 		}		
 	},
-	addCommentToBook: function(id,comment) {
+	addCommentToBook: function(id, comment) {
 		return {
 			type: 'ADD_COMMENT_TO_BOOK',
 			payload: {id, comment}
 		}		
-	}			
+	},
+	toggleFontModal: function(state) {
+		return {
+			type: 'TOGGLE_FONT_MODAL',
+			payload: state
+		}		
+	},
+	toggleColorModal: function(state) {
+		return {
+			type: 'TOGGLE_COLOR_MODAL',
+			payload: state
+		}		
+	},
+	toggleSearchModal: function(state) {
+		return {
+			type: 'TOGGLE_SEARCH_MODAL',
+			payload: state
+		}		
+	}						
 
 }
 

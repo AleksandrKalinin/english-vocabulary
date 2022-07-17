@@ -1,6 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import {Table,  Image, Button, Menu, Icon, TextArea, Form, Checkbox, Input } from 'semantic-ui-react'
-import TopMenu from './TopMenu'
+import {Table,  Image, Button, Menu, Icon, TextArea, Form, Checkbox, Input } from 'semantic-ui-react';
+import TopMenu from './TopMenu';
+import Comments from './Comments';
+import ModalFont from './ModalFont';
+import ModalColor from './ModalColor';
 import {Link} from "react-router-dom";
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
@@ -34,25 +37,9 @@ class SelectedBook extends Component {
       fontState: [false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false],
       bgState: [false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false],
       
-      fontSizeTemp: 16,
-      lineHeightTemp: 32,
-      fontFamilyTemp: "'Times New Roman', sans-serif",
-      fontWeightTemp: 400,
-
       color: '#222222',
       backgroundColor: '#f6f6f6',
 
-      isColorModalOpen: false,
-      activeFontColor: '#222222',
-      activeBgColor: '#f6f6f6',
-      fontState: [false,false,true,false,false,false,false,false,false,false,false,false,false,false,false,false],
-      bgState: [false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,false],
-      colorScheme: [  
-              '#000000','#111111','#222222','#333333',
-              '#444444','#555555','#666666','#777777',
-              '#888888','#999999','#a7a7a7','#b8b8b8',
-              '#d0d0d0','#dcdcdc','#f6f6f6','#ffffff'   ],
-      errors: {},
       commentsVisible: false,
 
       wordsEl: [],
@@ -64,20 +51,15 @@ class SelectedBook extends Component {
   }
 
   componentDidMount(){
+    console.log(this.props);
     let allComments = this.props.store.booksComments;
     let selectedComments = allComments.find(x => x.id == this.props.match.params.id);
-    for (var i = 0; i < selectedComments.comments.length; i++) {
-      let date = new Date(selectedComments.comments[i].date);
-      let datestring = ("0" + date.getDate()).slice(-2) + "-" + ("0"+(date.getMonth()+1)).slice(-2) + "-" +
-        date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
-      selectedComments.comments[i].date = datestring;
-    }
     var myHeaders = new Headers();
     myHeaders.append('Content-Type','text/plain; charset=UTF-8');  
     const that = this;
     axios.all([
       axios.get('/books.json'), 
-      axios.get('/words.json')
+      axios.get('/words_full.json')
     ])   
     .then(axios.spread((obj1, obj2) => {
       let books = obj1.data; 
@@ -90,7 +72,7 @@ class SelectedBook extends Component {
             let text = decoder.decode(buffer).split("\n");
             return text
         })
-        .then((text) => that.setState({words, text, comments: selectedComments.comments }, () => that.splitIntoPages() ))
+        .then((text) => that.setState({words, text, commentsLength: selectedComments.comments.length }, () => that.splitIntoPages() ))
     })) 
 
   } 
@@ -180,19 +162,6 @@ class SelectedBook extends Component {
       window.scrollTo(0, this.myRef.offsetTop)
     }  
 
-    changeFont = () => {
-      this.setState({
-        isFontModalOpen: true
-      })
-    } 
-
-    changeColor = () => {
-      this.setState({
-        isColorModalOpen: true
-      })
-    }     
-
-
   changePage = (e) =>{
       let currentPageId = Number(e.target.value);
       let pages = this.state.pages;
@@ -202,135 +171,9 @@ class SelectedBook extends Component {
       })  
   }
 
-  closeModal = () => {
-    this.setState({
-      isFontModalOpen: false,
-      isColorModalOpen: false
-    })
+  toggleComments = () => {
+    this.setState({ commentsVisible: !this.state.commentsVisible })
   }
-
-  changeValue = (e) =>{
-    this.setState({fontSizeTemp: e.target.value})
-  }
-
-  changeFontFamily = (e) =>{
-    this.setState({fontFamilyTemp: e.target.value})
-  }
-
-  changeFontWeight = (e) =>{
-    this.setState({fontWeightTemp: e.target.value})
-  }
-
-  changeLineHeight = (e) =>{
-    this.setState({lineHeightTemp: e.target.value})
-  } 
-
-  applyFontSettings = () => {
-    this.setState({
-      fontSize: this.state.fontSizeTemp,
-      lineHeight: this.state.lineHeightTemp,
-      fontFamily: this.state.fontFamilyTemp,
-      fontWeight: this.state.fontWeightTemp,
-      isFontModalOpen: false
-    })
-  }
-
-
-  setFontColor = (e) =>{
-    let fontState = this.state.fontState.slice();
-    let index = e.currentTarget.getAttribute("data-index");
-    for (var i = 0; i < fontState.length; i++) {
-      fontState[i] = false;
-    }
-    fontState[index] = true;
-    this.setState({
-      activeFontColor: e.currentTarget.getAttribute("colorvalue"),
-      fontState
-    })
-  }
-
-  setBgColor = (e) =>{
-    let bgState = this.state.bgState.slice();
-    let index = e.currentTarget.getAttribute("data-index");
-    for (var i = 0; i < bgState.length; i++) {
-      bgState[i] = false
-    }
-    bgState[index] = true;
-    this.setState({
-      activeBgColor: e.currentTarget.getAttribute("colorvalue"),
-      bgState
-    })
-  }
-
-  applyColorSettings = () =>{
-    this.setState({
-      color: this.state.activeFontColor,
-      backgroundColor: this.state.activeBgColor,
-      isColorModalOpen: false
-    })    
-  }
-
-//comments
-
-    addComment = () =>{
-      let comments = this.state.comments.slice();
-      let errors = this.state.errors;
-      let currentComment = this.state.currentComment;
-      let currentName = this.state.currentName;
-      let currentEmail = this.state.currentEmail;
-      let temp = {};
-      if( (currentName !== '') && (currentComment !== '') && (currentEmail !== '')){
-        let date = new Date();
-        let datestring = ("0" + date.getDate()).slice(-2) + "-" + ("0"+(date.getMonth()+1)).slice(-2) + "-" +
-        date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);        
-        temp['commentId'] = uuidv4();
-        temp['author'] = currentName;
-        temp['text'] = currentComment;        
-        temp['date'] = datestring;
-        let id = this.props.match.params.id;
-        this.props.actions.addCommentToBook(id, temp);        
-        this.setState({
-          currentName: '',
-          currentComment: '',
-          currentEmail: ''
-        })
-      }
-      else if (currentName == ''){
-        errors['name'] = "Заполните поле имени!";
-        this.setState({
-          errors
-        })
-      }
-      else if(currentComment == ''){
-        errors['comment'] = "Комментария должен быть не короче 30 символов";
-        this.setState({
-          errors
-        })        
-      }
-      else if(currentEmail == ''){
-        errors['email'] = "Заполните поле почты";
-        this.setState({
-          errors
-        })        
-      }
-
-    }
-
-    updateComment = (event) =>{
-      this.setState({currentComment: event.target.value.substr(0,500)});
-    }
-
-    updateName = (event) =>{
-      this.setState({currentName: event.target.value.substr(0,500)});
-    }
-
-    updateEmail = (event) =>{
-      this.setState({currentEmail: event.target.value.substr(0,500)});
-    }
-
-    toggleComments = () => {
-      this.setState({ commentsVisible: !this.state.commentsVisible })
-    }
 
 
   searchForWord = (item, e) => {
@@ -357,9 +200,11 @@ class SelectedBook extends Component {
   } 
 
   toggleFoundModal = () => {
+    this.props.actions.toggleSearchModal(true);
+    /*
     this.setState({
       isModalFoundOpen: !this.state.isModalFoundOpen
-    })
+    }) */
   }
 
   toggleInputModal = () => {
@@ -399,17 +244,30 @@ class SelectedBook extends Component {
     word.image = this.state.filePath;
   }
 
+  changeFont = () => {
+    this.props.actions.toggleFontModal(true);
+  }
 
-    consoleState = () => {
-      console.log(this.state);
-    }
+  changeColor = () => {
+    this.props.actions.toggleColorModal(true);
+  }
+
+  closeSearchModal = () => {
+    this.props.actions.toggleSearchModal(false);
+  }
+
+  closeInputModal = () => {
+    this.setState({
+      isModalInputOpen: false
+    });
+  }  
 
   render() {
     return (     
       <Fragment>
         <div className="content-wrapper">
           <TopMenu></TopMenu>
-          {this.state.isModalFoundOpen ?
+          {this.props.store.isSearchModalOpen ?
             <div className = "word-modal__overlay">
               <div className="word-modal">
                 <div className="word-modal__image">
@@ -418,12 +276,22 @@ class SelectedBook extends Component {
                 <div className="word-modal__description">
                   <p className="word-modal__title">{this.state.found.name} - {this.state.found.translation}</p>
                   <p className="word-modal__meaning">{this.state.found.definition}</p>   
-                  <Button primary onClick={this.toggleFoundModal}>Закрыть</Button>              
+                  <Button primary onClick={this.closeSearchModal}>Закрыть</Button>              
                 </div>
               </div>              
             </div>
           : null}
           {this.state.isModalInputOpen ?
+            <div className = "word-modal__overlay">
+              <div className="word-modal">
+                <div className="word-modal__reject">
+                   <p>Sorry, cannot find selected word is our vocabulary</p>
+                   <Button primary onClick={this.closeInputModal}>Закрыть</Button>
+                </div>
+              </div>              
+            </div>
+          : null}           
+          {/*this.state.isModalInputOpen ?
             <div className = "word-modal__overlay">
               <div className="word-modal">
                 <div className="word-modal__description">
@@ -449,92 +317,12 @@ class SelectedBook extends Component {
                 </div>
               </div>              
             </div>
-          : null}          
-          {this.state.isFontModalOpen ?
-            <div className="settings-overlay">
-              <div className="select-palette-wrapper select-font-wrapper">
-                <span className="close-button" onClick={this.closeModal}>
-                  <i className="fas fa-times"></i>
-                </span>
-                <div className="select-font">
-                  <div className="select-font-block">
-                    <span>Размер</span>
-                    <div className="select-font-input">
-                      <input onChange={this.changeValue} type="range" min="8" max="24" value={this.state.fontSizeTemp} name=""/>               
-                      <span className="select-font-value">{this.state.fontSizeTemp}</span>
-                    </div>
-                  </div>
-                  <div className="select-font-block">
-                    <span>Интервал</span>         
-                    <div className="select-font-input">
-                      <input onChange={this.changeLineHeight} type="range" min="16" max="72" value={this.state.lineHeightTemp} name=""/>                
-                      <span className="select-font-value">{this.state.lineHeightTemp}</span>
-                    </div>
-                  </div>
-                  <div className="select-font-block">
-                    <span>Жирность</span>
-                    <div className="select-font-input">
-                      <input onChange={this.changeFontWeight} type="range" min="200" max="900" step="100" value={this.state.fontWeightTemp} name=""/>               
-                      <span className="select-font-value">{this.state.fontWeightTemp}</span>
-                    </div>  
-                  </div>
-                </div>
-                <select className="select-font-family" onChange={this.changeFontFamily} value={this.state.fontFamily}>
-                  <option value ="'Times New Roman', sans-serif">Times New Roman</option>
-                  <option value ="'Arial', sans-serif">Arial</option>
-                  <option value ="'Verdana', sans-serif">Verdana</option>
-                  <option value ="'Lucida Console', sans-serif">Lucida Console</option>
-                  <option value ="'Georgia', serif">Georgia</option>
-                  <option value ="'Courier New', monospace">Gourier New</option>
-                </select>
-                <p className="select-font-example" style={{ 
-                                      fontSize: this.state.fontSizeTemp + "px", 
-                                      fontFamily: this.state.fontFamilyTemp,
-                                      lineHeight: this.state.lineHeightTemp + "px",
-                                      fontWeight: this.state.fontWeightTemp }} >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>                  
-                <button className="normal-button" onClick={this.applyFontSettings} >Применить</button>
-              </div>    
-            </div>
+          : null */}          
+          {this.props.store.isFontModalOpen ?
+            <ModalFont />
           : null}
-          {this.state.isColorModalOpen ?
-            <div className="settings-overlay">
-              <div className="select-palette-wrapper">
-                <span className="close-button" onClick={this.closeModal} >
-                  <i className="fas fa-times"></i>
-                </span>
-                <div className="select-palette-container">
-                  <div className="palette-container-item">
-                    <p>Шрифт</p>
-                    <div className="select-palette">
-                      {this.state.colorScheme.map((item,index) =>
-                        <div key={index} className="palette-item" data-index={index} onClick={this.setFontColor} style={{ backgroundColor: item }} colorvalue={item}>
-                          {this.state.fontState[index] ? 
-                            <span><i className="fas fa-check"></i></span>  : null
-                          }
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                  <div className="palette-container-item">
-                    <p>Фон</p>
-                    <div className="select-palette">
-                      {this.state.colorScheme.map((item,index) =>
-                        <div key={index} className="palette-item" data-index={index} onClick={this.setBgColor} style={{ backgroundColor: item }} colorvalue={item}>
-                          {this.state.bgState[index] ?
-                            <span><i className="fas fa-check"></i></span> 
-                             : null
-                          }
-                        </div>
-                      )}          
-                    </div>
-                  </div>
-                </div>
-                <div className="palette-item-selected" style={{ backgroundColor: this.state.activeBgColor }} >
-                  <span style={{ color: this.state.activeFontColor  }} >Lorem ipsum </span>
-                </div>                
-                <button className="normal-button" onClick={this.applyColorSettings} >Применить</button>          
-              </div>              
-            </div>
+          {this.props.store.isColorModalOpen ?
+            <ModalColor />
           : null}
           <div className="navigation-panel">
             <div className="navigation-progress"> 
@@ -565,13 +353,13 @@ class SelectedBook extends Component {
               </div>
             : null}
           </div> */}
-          <div className="selected-book" style={{ backgroundColor: this.state.backgroundColor, color: this.state.color}}>
+          <div className="selected-book" style={{ backgroundColor: this.props.store.backgroundColor, color: this.props.store.color}}>
             {this.state.loaded ?
               <div className="selected-book__content book-content" style= 
-                                          {{ lineHeight: this.state.lineHeight + "px",
-                                             fontWeight: this.state.fontWeight, 
-                                             fontSize:   this.state.fontSize + "px", 
-                                             fontFamily: this.state.fontFamily }}>
+                                          {{ lineHeight: this.props.store.lineHeight + "px",
+                                             fontWeight: this.props.store.fontWeight, 
+                                             fontSize:   this.props.store.fontSize + "px", 
+                                             fontFamily: this.props.store.fontFamily }}>
                   {this.state.splittedPage.map((page, index1) => 
                     <>
                       {page.map((sentence, index2) => 
@@ -592,42 +380,15 @@ class SelectedBook extends Component {
           </div>          
           <div className="single-text-form__wrapper">
             <div className="comments__header">
-              {this.state.comments ?
+              {this.state.commentsLength ?
                 <>
-                <span className="comments-header__counter">Комментариев: {this.state.comments.length}</span>
+                <span className="comments-header__counter">Комментариев: {this.state.commentsLength}</span>
                 <span className="comments-header__button" onClick={this.toggleComments}>{this.state.commentsVisible ? 'Скрыть комментарии': 'Показать комментарии'}</span>
                 </>
               : null}
             </div>
             {this.state.commentsVisible ?
-              <>
-                <div className="single-text-card-form">
-                  <Form>
-                    <Form.Field>
-                      <Input value={this.state.currentName || ''} onChange={this.updateName} focus placeholder='Имя'/>
-                      <span>{this.state.errors['name']}</span>
-                    </Form.Field>
-                    <Form.Field>
-                      <Input value={this.state.currentEmail || ''} onChange={this.updateEmail} focus placeholder='Email'/>
-                      <span>{this.state.errors['email']}</span>
-                    </Form.Field>
-                    <Form.Field>
-                      <TextArea value={this.state.currentComment || ''} onChange={this.updateComment} maxLength="50" placeholder='Ваш комментарий' />
-                      <span>{this.state.errors['comment']}</span>
-                    </Form.Field>                           
-                    <Button onClick={this.addComment} type='submit'>Отправить</Button>
-                  </Form>         
-                </div>
-                <div className="single-text-card-comments">
-                  <button onClick={this.consoleState}>Console</button>
-                  {this.state.comments.map((item, index) =>
-                    <div className="single-text-card-comment" key={index}>
-                      <h3>{item.author}<span className="single-text-card-date">{item.date}</span></h3>
-                      <p>{item.text}</p>                              
-                    </div>
-                   )}                       
-                </div>
-              </> 
+              <Comments id={this.props.match.params.id} />
             : null}           
           </div>      
         </div>
@@ -639,11 +400,11 @@ class SelectedBook extends Component {
 
 
 function mapStateToProps(state){
-  return {store: state.reducer};
+  return { store: state.reducer };
 }
 
 function mapDispatchToProps(dispatch) {
-    return { actions: bindActionCreators(actions, dispatch)}
+  return { actions: bindActionCreators(actions, dispatch) }
 }
 
 

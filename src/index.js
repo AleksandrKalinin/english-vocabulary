@@ -55,6 +55,7 @@ import GrammarPastPerfectContinuous from './grammar/GrammarPastPerfectContinuous
 import GrammarFuturePerfectContinuous from './grammar/GrammarFuturePerfectContinuous'
 import AudioPlayer from './AudioPlayer'
 import SelectedBook from './SelectedBook'
+import Comments from './Comments'
 import {BrowserRouter as Router, Route } from "react-router-dom";
 
 import {Provider} from "react-redux";
@@ -72,6 +73,7 @@ ReactDOM.render(
 				<Route path="/vocabulary" component={Vocabulary} />
 				<Route path="/splitted" component={SplittedWords} />
 				<Route path="/selectedbook" component={SelectedBook} />
+				<Route path="/comments" component={Comments} />
 				<Route path="/settings" component={Settings} />
 				<Route path="/grammar" component={GrammarList} />
 				<Route path="/materials" component={Materials} />

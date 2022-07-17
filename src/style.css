@@ -3818,7 +3818,7 @@ a.outline-link:hover {
 }
 
 .word-modal__overlay {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	background: rgba(51, 51, 51, 0.8);
@@ -3826,13 +3826,27 @@ a.outline-link:hover {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 }
 
 .word-modal {
 	width: 380px;
-	height: 420px;
+	min-height: 420px;
 	background: #fff;
+}
+
+.word-modal__reject {
+	width: 100%;
+	height: 420px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 20px;
+}
+
+.word-modal__reject p{
+	margin-bottom: 100px;
 }
 
 .word-modal__image {
@@ -3851,6 +3865,7 @@ a.outline-link:hover {
 
 .word-modal__description {
 	padding: 0 20px 20px;
+	min-height: 250px;
 	text-align: center;
 }
 
@@ -3862,7 +3877,7 @@ a.outline-link:hover {
 
 
 .word-modal__meaning {
-	height: 70px;
+	height: 100px;
 	overflow-x: hidden;
 	overflow-y: auto;
 }

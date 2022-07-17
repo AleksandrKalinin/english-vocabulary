@@ -12,7 +12,7 @@
 		"date": "Sun, 17 Mar 2019 16:40:49 GMT",
 		"rating": 3,
 		"link": "../books/Baskervilles.txt",
-		"audio": ["Baskervilles0","Baskervilles0","Baskervilles0","Baskervilles0","Baskervilles0"],
+
         "image": "../books/Baskervilles.jpg",
         "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them"
 	},	
@@ -30,7 +30,7 @@
 		"rating": 3,
 		"link": "../books/EqualRites.txt",
         "image": "../books/EqualRites.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them, and of course THE EDGE of the planet..."		
 	},
 	{
@@ -48,7 +48,7 @@
 		"rating": 4,
 		"link": "../books/Pyramids.txt",
         "image": "../books/Pyramids.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "On Discworld, a dying wizard tries to pass on his powers to an eighth son of an eighth son, who is just at that moment being born. The fact that the son is actually a daughter is discovered just a little too late. The town witch insists on turning the baby into a perfectly normal witch, thus mending the magical damage of the wizard's mistake."		
 	},
 	{
@@ -66,7 +66,7 @@
 		"rating": 5,
 		"link": "../books/Eric.txt",
         "image": "../books/Eric.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "Once upon a time, there was an eighth son of an eighth son who was, of course, a wizard. As if that wasn't complicated enough, said wizard then had seven sons. And then he had an eighth son - a wizard squared (that's all the math, really). Who of course, was a source of magic - a sourcerer."		
 	},
 	{
@@ -84,7 +84,7 @@
 		"rating": 2,
 		"link": "../books/Guards!Guards!.txt",
         "image": "../books/GuardsGuards.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them, and of course THE EDGE of the planet..."			
 	},
 	{
@@ -102,7 +102,7 @@
 		"rating": 4,
 		"link": "../books/CarpeJugulum.txt",
         "image": "../books/CarpeJugulum.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "For a policeman, there can be few things worse than a serial killer at loose in your city. Except, perhaps, a serial killer who targets coppers, and a city on the brink of bloody revolution. The people have found their voice at last, the flags and barricades are rising...And the question for a policeman, an officer of the law, a defender of the peace, is: are you with them, or are you against them?"		
 	},
 	{
@@ -120,7 +120,7 @@
 		"rating": 5,
 		"link": "../books/FeetOfClay.txt",
         "image": "../books/FeetOfClay.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "In this Discworld installment, Death comes to Mort with an offer he can't refuse -- especially since being, well, dead isn't compulsory. As Death's apprentice, he'll have free board and lodging, use of the company horse, and he won't need time off for family funerals. The position is everything Mort thought he'd ever wanted, until he discovers that this perfect job can be a killer on his love life."		
 	},
 	{
@@ -138,7 +138,7 @@
 		"rating": 4,
 		"link": "../books/Hogfather.txt",
         "image": "../books/Hogfather.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "For a policeman, there can be few things worse than a serial killer at loose in your city. Except, perhaps, a serial killer who targets coppers, and a city on the brink of bloody revolution. The people have found their voice at last, the flags and barricades are rising...And the question for a policeman, an officer of the law, a defender of the peace, is: are you with them, or are you against them?"		
 	},
 	{
@@ -156,7 +156,7 @@
 		"rating": 2,
 		"link": "../books/InterestingTimes.txt",
         "image": "../books/InterestingTimes.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them, and of course THE EDGE of the planet..."			
 	},							
 	{
@@ -174,7 +174,7 @@
 		"rating": 4,
 		"link": "../books/Jingo.txt",
         "image": "../books/Jingo.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them, and of course THE EDGE of the planet..."			
 	},
 	{
@@ -192,7 +192,7 @@
 		"rating": 5,
 		"link": "../books/LordsAndLadies.txt",
         "image": "../books/LordsAndLadies.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "For a policeman, there can be few things worse than a serial killer at loose in your city. Except, perhaps, a serial killer who targets coppers, and a city on the brink of bloody revolution. The people have found their voice at last, the flags and barricades are rising...And the question for a policeman, an officer of the law, a defender of the peace, is: are you with them, or are you against them?"			
 	},
 	{
@@ -210,7 +210,7 @@
 		"rating": 2,
 		"link": "../books/Maskerade.txt",
         "image": "../books/Maskerade.jpg",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],        
+		        
         "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them, and of course THE EDGE of the planet..."			
 	},
 	{
@@ -227,7 +227,7 @@
 		"date": "Sun, 17 Mar 2019 16:40:49 GMT",
 		"rating": 5,
 		"link": "../books/MenAtArms.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/MenAtArms.jpg",
         "content": "But it can. And it has. So what happens after death is now less of a philosophical question than a question of actual reality. On the Disc, as here, they need Death. If Death doesn't come for you, then what are you supposed to do in the meantime? You can't have the undead wandering about like lost souls. There's no telling what might happen, particularly when they discover that life really is only for the living..."		
 	},
@@ -245,7 +245,7 @@
 		"date": "Sun, 17 Mar 2019 16:10:49 GMT",
 		"rating": 3,
 		"link": "../books/Mort.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/Mort.jpg",
         "content": "For a policeman, there can be few things worse than a serial killer at loose in your city. Except, perhaps, a serial killer who targets coppers, and a city on the brink of bloody revolution. The people have found their voice at last, the flags and barricades are rising...And the question for a policeman, an officer of the law, a defender of the peace, is: are you with them, or are you against them?"		
 	},
@@ -263,7 +263,7 @@
 		"date": "Sun, 17 Mar 2019 16:23:49 GMT",
 		"rating": 4,
 		"link": "../books/MovingPictures.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/MovingPictures.jpg",
         "content": "In The Light Fantastic only one individual can save the world from a disastrous collision. Unfortunately, the hero happens to be the singularly inept wizard Rincewind, who was last seen falling off the edge of the world..."		
 	},
@@ -281,7 +281,7 @@
 		"date": "Sun, 17 Mar 2019 16:56:49 GMT",
 		"rating": 3,
 		"link": "../books/ReaperMan.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/ReaperMan.jpg",
         "content": "But it can. And it has. So what happens after death is now less of a philosophical question than a question of actual reality. On the Disc, as here, they need Death. If Death doesn't come for you, then what are you supposed to do in the meantime? You can't have the undead wandering about like lost souls. There's no telling what might happen, particularly when they discover that life really is only for the living..."		
 	},
@@ -299,7 +299,7 @@
 		"date": "Sun, 17 Mar 2019 16:23:49 GMT",
 		"rating": 5,
 		"link": "../books/SmallGods.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/SmallGods.jpg",
         "content": "It's hard to grow up normally when Grandfather rides a white horse and wields a scythe – especially when you have to take over the family business, and everyone mistakes you for the Tooth Fairy. And especially when you have to face the new and addictive music that has entered Discworld. It's lawless. It changes people. It's called Music With Rocks In. It's got a beat and you can dance to it, but... It's alive. And it won't fade away."		
 	},								
@@ -317,7 +317,7 @@
 		"date": "Sun, 17 Mar 2019 16:56:49 GMT",
 		"rating": 3,
 		"link": "../books/SoulMusic.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/SoulMusic.jpg",
         "content": "In The Light Fantastic only one individual can save the world from a disastrous collision. Unfortunately, the hero happens to be the singularly inept wizard Rincewind, who was last seen falling off the edge of the world..."				
 	},
@@ -335,7 +335,7 @@
 		"date": "Sun, 17 Mar 2019 16:21:49 GMT",
 		"rating": 5,
 		"link": "../books/TheFifthElephant.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/TheFifthElephant.jpg",
         "content": "But it can. And it has. So what happens after death is now less of a philosophical question than a question of actual reality. On the Disc, as here, they need Death. If Death doesn't come for you, then what are you supposed to do in the meantime? You can't have the undead wandering about like lost souls. There's no telling what might happen, particularly when they discover that life really is only for the living..."				
 	},
@@ -353,7 +353,7 @@
 		"date": "Sun, 17 Mar 2019 16:11:49 GMT",
 		"rating": 2,
 		"link": "../books/TheLastContinent.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/TheLastContinent.jpg",
         "content": "On Discworld, a dying wizard tries to pass on his powers to an eighth son of an eighth son, who is just at that moment being born. The fact that the son is actually a daughter is discovered just a little too late. The town witch insists on turning the baby into a perfectly normal witch, thus mending the magical damage of the wizard's mistake."					
 	},
@@ -371,7 +371,7 @@
 		"date": "Sun, 17 Mar 2019 16:17:49 GMT",
 		"rating": 4,
 		"link": "../books/TheTruth.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/TheTruth.jpg",
         "content": "On Discworld, a dying wizard tries to pass on his powers to an eighth son of an eighth son, who is just at that moment being born. The fact that the son is actually a daughter is discovered just a little too late. The town witch insists on turning the baby into a perfectly normal witch, thus mending the magical damage of the wizard's mistake."				
 	},				
@@ -389,7 +389,7 @@
 		"date": "Sun, 17 Mar 2019 16:18:49 GMT",
 		"rating": 5,
 		"link": "../books/ThiefOfTime.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/ThiefOfTime.jpg",
         "content": "For a policeman, there can be few things worse than a serial killer at loose in your city. Except, perhaps, a serial killer who targets coppers, and a city on the brink of bloody revolution. The people have found their voice at last, the flags and barricades are rising...And the question for a policeman, an officer of the law, a defender of the peace, is: are you with them, or are you against them?"					
 	},
@@ -407,7 +407,7 @@
 		"date": "Sun, 17 Mar 2019 16:40:19 GMT",
 		"rating": 2,
 		"link": "../books/WitchesAbroad.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/WitchesAbroad.jpg",
         "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them, and of course THE EDGE of the planet..."				
 	},
@@ -425,7 +425,7 @@
 		"date": "Sun, 17 Mar 2019 16:22:49 GMT",
 		"rating": 4,
 		"link": "../books/TheLightFantastic.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/TheLightFantastic.jpg",
         "content": "In this Discworld installment, Death comes to Mort with an offer he can't refuse -- especially since being, well, dead isn't compulsory. As Death's apprentice, he'll have free board and lodging, use of the company horse, and he won't need time off for family funerals. The position is everything Mort thought he'd ever wanted, until he discovers that this perfect job can be a killer on his love life."				
 	},
@@ -443,7 +443,7 @@
 		"date": "Sun, 17 Mar 2019 16:26:49 GMT",
 		"rating": 1,
 		"link": "../books/Soursery.txt",
-		"audio": ["Baskervilles1","Baskervilles2","Baskervilles3","Baskervilles4","Baskervilles5" ],		
+				
         "image": "../books/Sourcery.jpg",
         "content": "For a policeman, there can be few things worse than a serial killer at loose in your city. Except, perhaps, a serial killer who targets coppers, and a city on the brink of bloody revolution. The people have found their voice at last, the flags and barricades are rising...And the question for a policeman, an officer of the law, a defender of the peace, is: are you with them, or are you against them?"					
 	},
@@ -460,7 +460,7 @@
 		"date": "Sun, 04 Mar 2019 12:40:49 GMT",
 		"rating": 5,
 		"link": "../books/ValleyOfFear.txt",
-		"audio": ["Baskervilles0","Baskervilles0","Baskervilles0","Baskervilles0","Baskervilles0"],
+
         "image": "../books/ValleyOfFear.jpg",
         "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them"
 	},
@@ -477,7 +477,7 @@
 		"date": "Sun, 04 Mar 2019 12:40:49 GMT",
 		"rating": 4.5,
 		"link": "../books/SpaceOdyssey2001.txt",
-		"audio": ["Baskervilles0","Baskervilles0","Baskervilles0","Baskervilles0","Baskervilles0"],
+
         "image": "../books/SpaceOdyssey2001.jpg",
         "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them"
 	},
@@ -494,7 +494,7 @@
 		"date": "Sun, 04 Mar 2017 12:40:49 GMT",
 		"rating": 4.5,
 		"link": "../books/1984.txt",
-		"audio": ["Baskervilles0","Baskervilles0","Baskervilles0","Baskervilles0","Baskervilles0"],
+
         "image": "../books/1984.jpg",
         "content": "On a world supported on the back of a giant turtle (sex unknown), a gleeful, explosive, wickedly eccentric expedition sets out. There's an avaricious but inept wizard, a naive tourist whose luggage moves on hundreds of dear little legs, dragons who only exist if you believe in them"
 	}								
