@@ -27,7 +27,6 @@ class BookList extends Component {
       content: '',
       description: null,
       image: null,
-      contentArray: [],
       currentBook: '',
       currentPage: '',
       currentPageIndex: 0,
@@ -50,7 +49,6 @@ class BookList extends Component {
       newAudio: null,
       playState: false,
       currentAudioId: 0,
-      thumbArray: [],
       scrollForwardState: true,
       scrollBackwardState: false,
       currentVolume: 50,
@@ -59,71 +57,77 @@ class BookList extends Component {
       minutes: 0,
       hours: 0,
       seconds: 0,
-      rating: 0,
-      maxRating: 5
-
+      rating: null,
+      size: null
     }
-  }
-
-  handleCheckChange = (e) => {
-    const item = e.target.name;
-    const isChecked = e.target.checked;
-    this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(item, isChecked) }));
   }
 
   componentDidMount() {
       axios.get('/books.json')
         .then(res => {
           let books = res.data;
-          let contentArray = [];
-          let thumbArray = [];
-          books.map((item, index) =>{ 
-            contentArray.push(item.content); 
-            thumbArray.push(item.image); 
-          })
           this.setState({ 
-            books,
-            contentArray
+            books
           }, () => this.createMenu() );
         })
     }
 
-    callFunctions = () =>{
-    	this.createMenu();
-    }
-
     createMenu = () =>{
-      let options = [];
-      this.state.books.map((item, i) =>
-                    options.push({ 
-                        key: item.id, 
-                        text: item.genre, 
-                        value: item.genre 
-                     }))
+      let options = [], age = [], genres = {}, ageRestriction = [];
+
+      for (var i = 0; i < this.state.books.length; i++) {
+        let item = this.state.books[i].genre;
+        for (var j = 0; j < item.length; j++) {
+          if (!genres.hasOwnProperty(item[j])) {
+            genres[item[j]] = [];
+            genres[item[j]].push(this.state.books[i].id);
+          } else {
+            genres[item[j]].push(this.state.books[i].id);
+          }
+        }
+      }
+
+      for (var i = 0; i < this.state.books.length; i++) {
+        if (ageRestriction.indexOf(this.state.books[i].age_restriction) === -1) {
+          ageRestriction.push(this.state.books[i].age_restriction);
+        }
+      }
+
+      for (const item in ageRestriction) {
+        age.push({
+          key: item,
+          text: item,
+          value: ageRestriction[item]
+        })
+      }      
+
+      for (const item in genres) {
+        options.push({
+          key: item,
+          text: item,
+          value: genres[item]
+        })
+      }
+
       this.setState({
         options
-      }, () => this.getUnique())
+      })
     } 
-
+/*
     getUnique = () => {
       var arr = this.state.options;
+      console.log(arr);
       var comp = 'text';
       const options = arr
           .map(e => e[comp])
           .map((e, i, final) => final.indexOf(e) === i && i)
           .filter(e => arr[e]).map(e => arr[e]);
+      console.log(options);    
       this.setState({
         options
       })    
     }  
-
-    newFunc = () =>{
-      var categoryValue = this.state.value;
-      this.setState({
-        categoryValue
-      })
-    }
-
+*/
     selectValue = () =>{
       var bookVal = this.state.bookValue;
       this.setState({
@@ -132,7 +136,10 @@ class BookList extends Component {
     }
 
 
-    handleChange = (e, { value }) => this.setState({ value }, () => this.selectValue())         
+    handleDropdownChange = (e, { value }) => {
+      console.log(value);
+      this.setState({ value, categoryValue: value })
+    }        
 
 
     scrollToTop = () =>{
@@ -198,8 +205,6 @@ class BookList extends Component {
       })
     } 
 
-    handleRate = (e, { rating, maxRating }) => this.setState({ rating, maxRating })
-
   render() {
     return (
       <Fragment>
@@ -217,32 +222,58 @@ class BookList extends Component {
                 clearable
                 search
                 selection
-                onChange = {this.handleChange}
+                onChange = {this.handleDropdownChange}
                 options={this.state.options} 
               />
             </Menu.Item>
+            <Menu.Item name='inbox' >
+              <Dropdown 
+                placeholder='Выберите размер'
+                fluid
+                value={this.state.value} 
+                key={this.state.options.id}
+                clearable
+                search
+                selection
+                onChange = {this.handleDropdownChange}
+                options={this.state.options} 
+              />
+            </Menu.Item>
+            <Menu.Item name='inbox' >
+              <Dropdown 
+                placeholder='Выберите рейтинг'
+                fluid
+                value={this.state.value} 
+                key={this.state.options.id}
+                clearable
+                search
+                selection
+                onChange = {this.handleDropdownChange}
+                options={this.state.options} 
+              />
+            </Menu.Item>                        
           </Menu>:null
         }
             {(this.state.books.length && this.state.areBooksVisible) ? 
             <Card.Group className="texts-cards" itemsPerRow={3} >
-            {this.state.books.map((item, index) => (this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue === item.genre) &&
+            {this.state.books.map((item, index) => (this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue.indexOf(item.id) !== -1) &&
               <Card key={index} className="single-book">
                 <Card.Content>
                   <div className="texts-image-wrapper books-image-wrapper">
                     <Image src={item.image} />
                   </div>
                   <Card.Header className="books-header"><span className="books-author">{item.author}</span></Card.Header>
-                  <Card.Header className="books-header"><span className="books-title">{item.title}</span> <span className="books-genre">{item.genre.map((genre, ind) => <span>{`#${genre}`}</span>)}</span></Card.Header>
+                  <Card.Header className="books-header"><span className="books-title">{item.title}</span> {/*<span className="books-genre">{item.genre.map((genre, ind) => <span>{`#${genre}`}</span>)}</span>*/}</Card.Header>
                   <div className="books-information">
                     <div className="books-views">
-                      <span><Icon name='eye' size='' /> </span>
-                      <span>1234</span>
+                      <span><Icon name='eye' size='large' /> </span>
+                      <span>{item.views}</span>
                     </div>
                     <div className="books-favourites">
                       <span><Icon name='heart' size='' /></span> 
-                      <span>39</span>
+                      <span>{item.likes}</span>
                     </div>
-                    <Rating className = "books-rating" maxRating={5} onRate={this.handleRate} />
+                    <Rating icon='star' defaultRating={item.rating} className = "books-rating" maxRating={5} disabled/>
                   </div>
                   <Card.Description>
                     {item.content.substr(0,250) + ' ...'}

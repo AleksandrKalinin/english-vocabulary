@@ -2101,10 +2101,20 @@ footer {
 
 .books-title{
 	font-size: 18px !important;
+	font-weight: 600;
+}
+
+.books-information {
+	width: 200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
 }
 
 .books-information, .books-favourites, .books-views{
 	display: flex !important;
+	align-items: center;
 }
 
 .books-favourites, .books-views{
@@ -3846,6 +3856,8 @@ a.outline-link:hover {
 }
 
 .word-modal__reject p{
+	padding: 0 20px;
+	text-align: center;
 	margin-bottom: 100px;
 }
 
@@ -3913,4 +3925,13 @@ a.outline-link:hover {
 	align-items: center;
 	height: 45px;
 	border: none !important;
+}
+
+.single-word {
+	cursor: pointer;
+	transition: .1s ease;
+}
+
+.single-word:hover {
+	text-decoration: underline;
 }

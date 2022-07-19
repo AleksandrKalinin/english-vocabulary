@@ -4,10 +4,8 @@ import Vocabulary from './Vocabulary';
 import SplittedWords from './SplittedWords';
 import GrammarList from './GrammarList'
 import Statistics from './Statistics'
-import CoursesList from './CoursesList'
 import Training from './Training'
 import Main from './Main'
-import CoursesSimple from './CoursesSimple'
 import ConstructWord from './ConstructWord'
 import Proverbs from './Proverbs'
 import Cards from './Cards'
@@ -55,7 +53,6 @@ import GrammarPastPerfectContinuous from './grammar/GrammarPastPerfectContinuous
 import GrammarFuturePerfectContinuous from './grammar/GrammarFuturePerfectContinuous'
 import AudioPlayer from './AudioPlayer'
 import SelectedBook from './SelectedBook'
-import Comments from './Comments'
 import {BrowserRouter as Router, Route } from "react-router-dom";
 
 import {Provider} from "react-redux";
@@ -69,17 +66,14 @@ ReactDOM.render(
 	<Provider store={store}>
 		<Router basename={process.env.PUBLIC_URL}>
 			<div className="router-wrapper">
-				<Route exact path="/" component={Main}/>
-				<Route path="/vocabulary" component={Vocabulary} />
+				<Route exact path="/" component={Main} />
 				<Route path="/splitted" component={SplittedWords} />
 				<Route path="/selectedbook" component={SelectedBook} />
-				<Route path="/comments" component={Comments} />
 				<Route path="/settings" component={Settings} />
+				<Route path="/vocabulary" component={Vocabulary} />				
 				<Route path="/grammar" component={GrammarList} />
 				<Route path="/materials" component={Materials} />
 				<Route path="/statistics" component={Statistics} />
-				<Route path="/courses" component={CoursesList} />
-				<Route path="/coursessimple" component={CoursesSimple} />
 				<Route path="/training" component={Training} />		  
 				<Route path="/cards" component={Cards} />
 				<Route path="/rightwrong" component={Rightwrong} />		

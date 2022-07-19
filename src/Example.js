@@ -232,7 +232,7 @@ class Example extends Component {
             <Card className="single-text-card tests-wrapper">
               <h1>
               	{this.state.activeTest.title}
-              	<span onClick={this.backToTests} ><Icon name='window close outline'/></span>
+              	<span onClick={this.backToTests} title="Назад к тестам" ><Icon name='window close outline'/></span>
               </h1>
               <Card.Content>
                 {this.state.activeTest.tasks.slice().map((item, index) =>

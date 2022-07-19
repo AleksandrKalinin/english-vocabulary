@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import {Table,  Image, Button, Menu, TextArea, Form, Checkbox, Input } from 'semantic-ui-react'
-import axios from 'axios';
+import React, { Component } from 'react';
+import {Button, TextArea, Form, Input } from 'semantic-ui-react'
+
 import { v4 as uuidv4 } from 'uuid';
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
@@ -18,18 +18,25 @@ class Comments extends Component {
 
   componentDidMount() {
     let allComments = this.props.store.booksComments;
-    let selectedComments = allComments.find(x => x.id == this.props.id);
-    for (var i = 0; i < selectedComments.comments.length; i++) {
-      let date = new Date(selectedComments.comments[i].date);
-      let datestring = ("0" + date.getDate()).slice(-2) + "-" + ("0"+(date.getMonth()+1)).slice(-2) + "-" +
-        date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
-      //selectedComments.comments[i].date = datestring;
+    let item = allComments.find(x => x.id === Number(this.props.id));
+    if (item) {
+      for (var i = 0; i < item.comments.length; i++) {
+        let date = new Date(item.comments[i].date);
+        let datestring = ("0" + date.getDate()).slice(-2) + "-" + ("0"+(date.getMonth()+1)).slice(-2) + "-" +
+          date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+        item.comments[i].date = datestring;
+      }
+      this.setState({
+        comments: item.comments,
+        loaded: true
+      }, () => console.log(this.state))      
+    } else {
+      this.setState({
+        noComments: true,
+        loaded: true
+      })
     }
-
-    this.setState({
-      comments: selectedComments.comments,
-      loaded: true
-    })
+    
   } 
 
     addComment = () =>{
@@ -57,21 +64,21 @@ class Comments extends Component {
         })
       }
 
-      else if (currentName == ''){
+      else if (currentName === ''){
         errors['name'] = "Заполните поле имени!";
         this.setState({
           errors
         })
       }
 
-      else if(currentComment == ''){
+      else if(currentComment === ''){
         errors['comment'] = "Комментария должен быть не короче 30 символов";
         this.setState({
           errors
         })        
       }
 
-      else if(currentEmail == ''){
+      else if(currentEmail === ''){
         errors['email'] = "Заполните поле почты";
         this.setState({
           errors
@@ -113,7 +120,7 @@ class Comments extends Component {
             <Button onClick={this.addComment} type='submit'>Отправить</Button>
           </Form>         
         </div>
-        {this.state.loaded ?
+        {this.state.loaded && this.state.comments ?
           <div className="single-text-card-comments">
             {this.state.comments.map((item, index) =>
               <div className="single-text-card-comment" key={index}>

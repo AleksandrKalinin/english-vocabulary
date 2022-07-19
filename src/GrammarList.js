@@ -38,7 +38,7 @@ class GrammarList extends Component {
               </Table.Row>
             </Table.Header>        
             {this.state.grammar[0].rules.map((item,index) =>
-              <Table.Body>
+              <Table.Body key={index}>
                 <Table.Row columns={3}>
                   <Table.Cell className="grammar-title">
                     {item.name}
