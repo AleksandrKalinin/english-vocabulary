@@ -3846,19 +3846,20 @@ a.outline-link:hover {
 }
 
 .word-modal__reject {
-	width: 100%;
-	height: 420px;
+	width: 300px;
+	height: 200px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	font-size: 20px;
+	background: #fff;
 }
 
 .word-modal__reject p{
 	padding: 0 20px;
 	text-align: center;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 }
 
 .word-modal__image {

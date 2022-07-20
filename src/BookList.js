@@ -15,8 +15,10 @@ class BookList extends Component {
     this.state = {
       books: [],
       options: [],
-      categoryValue: '',
+      currentGenre: '',
       value: null,
+      rating: null,
+      size: null,      
       areBooksVisible: true,
       isMenuVisible: true,
       isPreviewVisible: false,
@@ -56,9 +58,7 @@ class BookList extends Component {
       currentDuration: null,
       minutes: 0,
       hours: 0,
-      seconds: 0,
-      rating: null,
-      size: null
+      seconds: 0
     }
   }
 
@@ -73,7 +73,8 @@ class BookList extends Component {
     }
 
     createMenu = () =>{
-      let options = [], age = [], genres = {}, ageRestriction = [];
+
+      let options = [], age = [], genres = {}, sizes = {}, ageRestriction = [];
 
       for (var i = 0; i < this.state.books.length; i++) {
         let item = this.state.books[i].genre;
@@ -87,20 +88,6 @@ class BookList extends Component {
         }
       }
 
-      for (var i = 0; i < this.state.books.length; i++) {
-        if (ageRestriction.indexOf(this.state.books[i].age_restriction) === -1) {
-          ageRestriction.push(this.state.books[i].age_restriction);
-        }
-      }
-
-      for (const item in ageRestriction) {
-        age.push({
-          key: item,
-          text: item,
-          value: ageRestriction[item]
-        })
-      }      
-
       for (const item in genres) {
         options.push({
           key: item,
@@ -109,8 +96,35 @@ class BookList extends Component {
         })
       }
 
+      for (var i = 0; i < this.state.books.length; i++) {
+        if (ageRestriction.indexOf(this.state.books[i].age_restriction) === -1) {
+          ageRestriction.push(this.state.books[i].age_restriction);
+        }
+      }
+
+      for (var i = 0; i < ageRestriction.length; i++) {
+        age.push({
+          key: ageRestriction[i],
+          text: ageRestriction[i],
+          value: ageRestriction[i]
+        })
+      }
+
+      for (var i = 0; i < this.state.books.length; i++) {
+        let item = this.state.books[i].length;
+        if (item <= 10000) {
+          sizes["Менее 10000"].push(this.state.books[i].id);
+        } else if(item > 10000 && item < 50000) {
+          sizes["От 10000 до 50000"].push(this.state.books[i].id);
+        } else {
+          sizes["Более 50000"].push(this.state.books[i].id);
+        }
+      }
+
+      console.log(sizes);
+
       this.setState({
-        options
+        options, age
       })
     } 
 /*
@@ -136,11 +150,17 @@ class BookList extends Component {
     }
 
 
-    handleDropdownChange = (e, { value }) => {
-      console.log(value);
-      this.setState({ value, categoryValue: value })
+    handleGenreChange = (e, { value }) => {
+      this.setState({ currentGenre: value })
     }        
 
+    handleRatingChange = (e, { value }) => {
+      this.setState({ rating: value })
+    }  
+
+    handleLengthChange = (e, { value }) => {
+      this.setState({ currentLength: value })
+    } 
 
     scrollToTop = () =>{
       window.scrollTo(0, this.myRef.offsetTop)
@@ -217,12 +237,12 @@ class BookList extends Component {
               <Dropdown 
                 placeholder='Выберите жанр'
                 fluid
-                value={this.state.value} 
+                value={this.state.currentGenre} 
                 key={this.state.options.id}
                 clearable
                 search
                 selection
-                onChange = {this.handleDropdownChange}
+                onChange = {this.handleGenreChange}
                 options={this.state.options} 
               />
             </Menu.Item>
@@ -230,33 +250,33 @@ class BookList extends Component {
               <Dropdown 
                 placeholder='Выберите размер'
                 fluid
-                value={this.state.value} 
-                key={this.state.options.id}
+                value={this.state.currentLength} 
+                //key={this.state.length.id}
                 clearable
                 search
                 selection
-                onChange = {this.handleDropdownChange}
-                options={this.state.options} 
+                onChange = {this.handleLengthChange}
+                options={this.state.length} 
               />
             </Menu.Item>
             <Menu.Item name='inbox' >
               <Dropdown 
                 placeholder='Выберите рейтинг'
                 fluid
-                value={this.state.value} 
-                key={this.state.options.id}
+                value={this.state.rating} 
+                //key={this.state.age.key}
                 clearable
                 search
                 selection
-                onChange = {this.handleDropdownChange}
-                options={this.state.options} 
+                onChange = {this.handleRatingChange}
+                options={this.state.age} 
               />
             </Menu.Item>                        
           </Menu>:null
         }
             {(this.state.books.length && this.state.areBooksVisible) ? 
             <Card.Group className="texts-cards" itemsPerRow={3} >
-            {this.state.books.map((item, index) => (this.state.categoryValue === 'all'|| this.state.categoryValue === '' || this.state.categoryValue.indexOf(item.id) !== -1) &&
+            {this.state.books.map((item, index) => (this.state.currentGenre === 'all'|| this.state.currentGenre === '' || this.state.currentGenre.indexOf(item.id) !== -1 ||  this.state.rating === '' || this.state.rating === item.age_restriction) &&
               <Card key={index} className="single-book">
                 <Card.Content>
                   <div className="texts-image-wrapper books-image-wrapper">

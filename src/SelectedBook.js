@@ -4,6 +4,7 @@ import TopMenu from './TopMenu';
 import Comments from './Comments';
 import ModalFont from './ModalFont';
 import ModalColor from './ModalColor';
+import WordFound from './WordFound';
 import {Link} from "react-router-dom";
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
@@ -38,7 +39,6 @@ class SelectedBook extends Component {
   }
 
   componentDidMount(){
-    console.log(this.props);
     let allComments = this.props.store.booksComments;
     let item = allComments.find(x => x.id == this.props.match.params.id);
     if (item) {
@@ -74,7 +74,6 @@ class SelectedBook extends Component {
     let pages = [], words = [], pageIndexes = [];
     let value = 1600 / this.props.store.lineHeight;
     let pagesCount = Math.ceil(text.length / value);
-    console.log(pagesCount);
     let currentMin = 0;
     let currentMax = 50;
     for (var i = 0; i < pagesCount; i++) {
@@ -99,7 +98,7 @@ class SelectedBook extends Component {
                       pageIndexes, 
                       currentPage: pages[0],
                       splittedPage: words,
-                      loaded: true }, () => console.log(this.state));
+                      loaded: true });
   }  
 
     prevButton = () =>{
@@ -117,7 +116,6 @@ class SelectedBook extends Component {
         newTxt.push(newSentence);
       }
       words.push(newTxt);  
-      console.log(words);
       this.setState({
           splittedPage: words,
           currentPageId,
@@ -132,7 +130,6 @@ class SelectedBook extends Component {
         currentPageId++;
       }
       let currentPage = pages[currentPageId];
-      //console.log(currentPage);
       let newTxt = []; let words = [];
       for (var i = 0; i < currentPage.length; i++) {
         let newSentence = [];
@@ -140,8 +137,6 @@ class SelectedBook extends Component {
         newTxt.push(newSentence);
       }
       words.push(newTxt);  
-      //console.log(words);
-
       this.setState({
           splittedPage: words,
           currentPageId,
@@ -192,10 +187,6 @@ class SelectedBook extends Component {
 
   toggleFoundModal = () => {
     this.props.actions.toggleSearchModal(true);
-    /*
-    this.setState({
-      isModalFoundOpen: !this.state.isModalFoundOpen
-    }) */
   }
 
   toggleInputModal = () => {
@@ -204,36 +195,7 @@ class SelectedBook extends Component {
     })
   }
 
-  changeFile = (e) => {
-    console.log(e);
-    this.setState({
-      filePath: e.target.value
-    })
-  }
 
-  changeTranslation = (e) => {
-    this.setState({
-      translation: e.target.value
-    })
-  }
-
-  changeDefinition = (e) => {
-    this.setState({
-      definition: e.target.value
-    })
-  }
-
-  addToWords = () => {
-    let word = {};
-    word.name = this.state.selected;
-    word.transription = this.state.transcription;
-    word.translation = this.state.translation;
-    word.category = "common";
-    word.id = 1;
-    word.date = new Date();
-    word.definition = this.state.definition;
-    word.image = this.state.filePath;
-  }
 
   changeFont = () => {
     this.props.actions.toggleFontModal(true);
@@ -259,27 +221,14 @@ class SelectedBook extends Component {
         <div className="content-wrapper">
           <TopMenu></TopMenu>
           {this.props.store.isSearchModalOpen ?
-            <div className = "word-modal__overlay">
-              <div className="word-modal">
-                <div className="word-modal__image">
-                  <img src="word-modal__picture" src = {this.state.found.image}/>
-                </div>
-                <div className="word-modal__description">
-                  <p className="word-modal__title">{this.state.found.name} - {this.state.found.translation}</p>
-                  <p className="word-modal__meaning">{this.state.found.definition}</p>   
-                  <Button primary onClick={this.closeSearchModal}>Закрыть</Button>              
-                </div>
-              </div>              
-            </div>
+            <WordFound word = {this.state.found} />
           : null}
           {this.state.isModalInputOpen ?
             <div className = "word-modal__overlay">
-              <div className="word-modal">
                 <div className="word-modal__reject">
                    <p>Sorry, cannot find selected word is our vocabulary</p>
                    <Button primary onClick={this.closeInputModal}>Закрыть</Button>
                 </div>
-              </div>              
             </div>
           : null}        
      
