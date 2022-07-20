@@ -14,11 +14,13 @@ class BookList extends Component {
     this.myRef = React.createRef();
     this.state = {
       books: [],
+      allBoooks: [],
       options: [],
       currentGenre: '',
+      currentLength: '',
       value: null,
-      rating: null,
-      size: null,      
+      rating: '',
+      size: '',      
       areBooksVisible: true,
       isMenuVisible: true,
       isPreviewVisible: false,
@@ -67,14 +69,14 @@ class BookList extends Component {
         .then(res => {
           let books = res.data;
           this.setState({ 
-            books
+            books, allBooks: res.data
           }, () => this.createMenu() );
         })
     }
 
     createMenu = () =>{
 
-      let options = [], age = [], genres = {}, sizes = {}, ageRestriction = [];
+      let options = [], age = [], genres = {}, sizes = [], ageTemp = [], sizesTemp = {};
 
       for (var i = 0; i < this.state.books.length; i++) {
         let item = this.state.books[i].genre;
@@ -97,34 +99,46 @@ class BookList extends Component {
       }
 
       for (var i = 0; i < this.state.books.length; i++) {
-        if (ageRestriction.indexOf(this.state.books[i].age_restriction) === -1) {
-          ageRestriction.push(this.state.books[i].age_restriction);
+        if (ageTemp.indexOf(this.state.books[i].age_restriction) === -1) {
+          ageTemp.push(this.state.books[i].age_restriction);
         }
       }
 
-      for (var i = 0; i < ageRestriction.length; i++) {
+      for (var i = 0; i < ageTemp.length; i++) {
         age.push({
-          key: ageRestriction[i],
-          text: ageRestriction[i],
-          value: ageRestriction[i]
+          key: ageTemp[i],
+          text: ageTemp[i],
+          value: ageTemp[i]
         })
       }
+
+      sizesTemp["Менее 10000"] = [];
+      sizesTemp["От 10000 до 50000"] = [];
+      sizesTemp["Более 50000"] = [];
 
       for (var i = 0; i < this.state.books.length; i++) {
         let item = this.state.books[i].length;
         if (item <= 10000) {
-          sizes["Менее 10000"].push(this.state.books[i].id);
+          sizesTemp["Менее 10000"].push(this.state.books[i].id);
         } else if(item > 10000 && item < 50000) {
-          sizes["От 10000 до 50000"].push(this.state.books[i].id);
+          sizesTemp["От 10000 до 50000"].push(this.state.books[i].id);
         } else {
-          sizes["Более 50000"].push(this.state.books[i].id);
+          sizesTemp["Более 50000"].push(this.state.books[i].id);
         }
+      }
+
+      for (const item in sizesTemp) {
+        sizes.push({
+          key: item,
+          text: item,
+          value: sizesTemp[item]
+        })
       }
 
       console.log(sizes);
 
       this.setState({
-        options, age
+        options, age, sizes
       })
     } 
 /*
@@ -166,65 +180,6 @@ class BookList extends Component {
       window.scrollTo(0, this.myRef.offsetTop)
     } 
 
-
-	  addComment = () =>{
-	    let comments = this.state.comments.slice();
-	    let errors = this.state.errors;
-	    let currentComment = this.state.currentComment;
-	    let currentName = this.state.currentName;
-	    let currentEmail = this.state.currentEmail;
-	    let temp = {};
-	    if( (currentName !== '') && (currentComment !== '') && (currentEmail !== '')){
-		    temp['author'] = currentName;
-		    temp['comment'] = currentComment;
-		    comments.unshift(temp);
-		    this.setState({
-		      comments,
-		      currentName: '',
-		      currentComment: '',
-		      currentEmail: ''
-		    })
-	    }
-	    else if (currentName == ''){
-	    	errors['name'] = "Заполните поле имени!";
-	    	this.setState({
-	    		errors
-	    	})
-	    }
-	    else if(currentComment == ''){
-	    	errors['comment'] = "Комментария должен быть не короче 30 символов";
-	    	this.setState({
-	    		errors
-	    	})	    	
-	    }
-	    else if(currentEmail == ''){
-	    	errors['email'] = "Заполните поле почты";
-	    	this.setState({
-	    		errors
-	    	})	    	
-	    }
-
-	  }
-
-    updateComment = (event) =>{
-      this.setState({currentComment: event.target.value.substr(0,500)});
-    }
-
-
-    updateName = (event) =>{
-      this.setState({currentName: event.target.value.substr(0,500)});
-    }
-
-    updateEmail = (event) =>{
-      this.setState({currentEmail: event.target.value.substr(0,500)});
-    }      
-
-    checkChange = (e) =>{
-      this.setState({
-      	checked: !this.state.checked
-      })
-    } 
-
   render() {
     return (
       <Fragment>
@@ -256,7 +211,7 @@ class BookList extends Component {
                 search
                 selection
                 onChange = {this.handleLengthChange}
-                options={this.state.length} 
+                options={this.state.sizes} 
               />
             </Menu.Item>
             <Menu.Item name='inbox' >
@@ -276,7 +231,10 @@ class BookList extends Component {
         }
             {(this.state.books.length && this.state.areBooksVisible) ? 
             <Card.Group className="texts-cards" itemsPerRow={3} >
-            {this.state.books.map((item, index) => (this.state.currentGenre === 'all'|| this.state.currentGenre === '' || this.state.currentGenre.indexOf(item.id) !== -1 ||  this.state.rating === '' || this.state.rating === item.age_restriction) &&
+            {this.state.books.map((item, index) => ( 
+              (this.state.currentGenre === 'all'|| this.state.currentGenre === '' || this.state.currentGenre.indexOf(item.id) !== -1) && 
+              (this.state.rating === 'all'|| this.state.rating === '' || this.state.rating === item.age_restriction) &&
+              (this.state.currentLength === 'all' || this.state.currentLength === '' || this.state.currentLength.indexOf(item.id) !== -1)) &&
               <Card key={index} className="single-book">
                 <Card.Content>
                   <div className="texts-image-wrapper books-image-wrapper">
@@ -304,87 +262,11 @@ class BookList extends Component {
              )}
             </Card.Group> : null
            }
-           {this.state.isSingleBookVisible ?
-           	<Fragment>
-              <Menu className="texts-menu audio-menu" vertical>
-                <Menu.Item name='inbox' >
-                  <List className="audiobooks-list">
-                  {this.state.audiobooks.map((item,index) =>
-                    <List.Item key={index}>
-                      <div className="audiobooks-image-wrapper">
-                        <Image src={this.state.image} />
-                      </div>
-                      <div className="audiobooks-content-wrapper">
-                         <div className="audio-name-wrapper">
-                           <h4>Chapter {index + 1} </h4>
-                           <p>{this.state.title}</p>
-                         </div>
-                         <div className="audio-range-control">
-                            <input id="range-control" type="range" value={this.state.currentRange} min="0" max={this.state.currentDuration} step="1" onInput={this.setRange} onChange={this.setRange}></input>                           
-                         </div>
-                         <div className="audiobooks-controls-wrapper">
-                            <span className="audiobooks-icon" onClick={this.startPlayer}>
-                              {this.state.playState ?
-                                <Icon name='pause circle outline' size='' /> : <Icon name='play circle outline' size='' />  
-                              } 
-                           </span>
-                            <span className="audiobooks-icon" onClick={this.scrollBackward}>
-                                <Icon name='backward' size='' /> 
-                           </span>                            
-                            <span className="audiobooks-icon" onClick={this.scrollForward}>
-                                <Icon name='forward' size='' />
-                           </span>
-                           <div className="audiobooks-icon audiobooks-input">
-                             <Icon name='volume up' size='' />
-                             <input id="vol-control" type="range" value={this.state.currentVolume} min="0" max="100" step="1" onInput={this.setVolume} onChange={this.setVolume}></input>
-                             <span className="audiobooks-time">{this.state.hours}.{this.state.minutes}.{this.state.seconds}</span>
-                           </div>
-                         </div>
-                       </div>
-                    </List.Item>
-                  )}
-                  </List>
-                </Menu.Item>
-              </Menu>            
-      				<Card className="single-text-card">
-      					<Card.Content>
-      					<div className="book-index">
-                  <span className="nav-icon-close" onClick={this.backToBooks} >
-                    <Icon name='window close outline' size="big"/>
-                  </span>
-      						<ul className="pagination-container">
-      						  <li className="pagination-nav-button" onClick={this.prevButton}><Icon name='arrow left' size='small'  className="nav-icon-right"/> Previous page</li>
-      						  <li className="pagination-nav-button" onClick={this.nextButton}>Next page <Icon name='arrow right' size='small' className="nav-icon-left" /> </li>
-      						  <li className="pagination-nav-button" onClick={this.chapterIndex}>Pages index 
-                      {this.state.isBookNavPanelVisible ?
-                      <Icon name='arrow up' size='small' className="nav-icon-left" /> : <Icon name='arrow down' size='small' className="nav-icon-left" />  } 
-                    </li>
-      						  <li className="pagination-nav-button" onClick={this.downloadBook}>Download  <Icon name='download' size='small' className="nav-icon-left" /></li>
-      						</ul>           		
-      					</div>
-      					  <Card.Header className="single-book-title">{this.state.title}</Card.Header>
-      					  <Card.Description className="single-text-card-description">
-      					    <div className="p-wrap">
-      					      {this.state.currentPage}
-      					    </div>
-      					  </Card.Description>
-      					</Card.Content>
-      					<ul className="pagination-container">
-      						{this.renderFirstButton()}
-      					  <li className="pagination-nav-button" onClick={this.scrollToTop}>Top <Icon name='arrow up' size='small' className="nav-icon-left" /></li>
-      					  <li className="pagination-nav-button" onClick={this.prevButton}><Icon name='arrow left' size='small'  className="nav-icon-right"/> Previous page </li>
-      					  <li className="pagination-nav-button" onClick={this.nextButton}>Next page <Icon name='arrow right' size='small' className="nav-icon-left" /></li>
-      					    {this.renderLastButton()}                	
-      					</ul>
-      				</Card>
-      			</Fragment> : null
-            }          
         </div>
-        </div>
-        <footer></footer>
-      </Fragment>
-
-	);
+      </div>
+    <footer></footer>
+    </Fragment>
+	 );
   }
 }
 

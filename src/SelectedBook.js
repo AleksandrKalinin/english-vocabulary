@@ -257,8 +257,9 @@ class SelectedBook extends Component {
               </div>
             </div>
           : null}
-          <div className="selected-book" style={{ backgroundColor: this.props.store.backgroundColor, color: this.props.store.color}}>
-            {this.state.loaded ?
+          {this.state.loaded ?
+            <>
+              <div className="selected-book" style={{ backgroundColor: this.props.store.backgroundColor, color: this.props.store.color}}>
               <div className="selected-book__content book-content" style= 
                                           {{ lineHeight: this.props.store.lineHeight + "px",
                                              fontWeight: this.props.store.fontWeight, 
@@ -280,23 +281,26 @@ class SelectedBook extends Component {
                     </Fragment> 
                   )}
               </div>
-            : null}
-          </div>          
-          <div className="single-text-form__wrapper">
-            <div className="comments__header">
-              {this.state.comments.length ?
-                <>
-                <span className="comments-header__counter">Комментариев: {this.state.comments.length}</span>
-                <span className="comments-header__button" onClick={this.toggleComments}>{this.state.commentsVisible ? 'Скрыть комментарии': 'Показать комментарии'}</span>
-                </>
-              : null}
-            </div>
-            {this.state.commentsVisible && this.state.comments?
-              <Comments id={this.props.match.params.id} />
-            : null}           
-          </div>      
+              </div>          
+              <div className="single-text-form__wrapper">
+                <div className="comments__header">
+                  {this.state.comments.length ?
+                    <>
+                    <span className="comments-header__counter">Комментариев: {this.state.comments.length}</span>
+                    <span className="comments-header__button" onClick={this.toggleComments}>{this.state.commentsVisible ? 'Скрыть комментарии': 'Показать комментарии'}</span>
+                    </>
+                  : null}
+                </div>
+                {this.state.commentsVisible && this.state.comments?
+                  <Comments id={this.props.match.params.id} />
+                : null}           
+              </div>              
+            </>
+          : <div className="preloader">
+            <img src = "../preloader.gif"/>
+          </div> }
+          <footer></footer> 
         </div>
-        <footer></footer>        
       </Fragment>
     );
   }
