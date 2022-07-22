@@ -6,6 +6,10 @@ import speech from 'speech-synth';
 import SpeechRecognition from 'react-speech-recognition'
 import {LineChart, Line, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
+
 class Statistics extends Component {
 
 	constructor(props){
@@ -35,25 +39,21 @@ class Statistics extends Component {
       nameArrays: null,
       barChartData: [],
       lineChartData: [],
-      active: "#F9B707",
-
+      active: "#F9B707"
 		}
 	}
 
 
 
   componentDidMount() {
-    axios.get('/working.json')
+    console.log(this.props.store)
+    axios.get('/words_full.json')
       .then(res => {
         let words = res.data;
-
         this.setState({ 
           words
         }, () => this.splitIntoArrays());
-      })
-
-
-        
+      })        
   }   
 
   splitIntoArrays = () =>{
@@ -74,14 +74,14 @@ class Statistics extends Component {
   		let lng = values[i].length;
   		let fin = Math.floor(lng/3);
       	tmp['Всего слов'] = lng;
-      	tmp['Добавлено слов'] = fin;
+      	tmp['Изучено слов'] = fin;
       	tmp['name'] = names[i];
       	finalData.push(tmp);
   	}
   	this.setState({
   		nameArrays: nameArrays,
   		barChartData: finalData
-  	}, () => this.getYesterdaysDate() )     
+  	}, () => this.getYesterdaysDate())     
 
   }
 
@@ -102,9 +102,7 @@ class Statistics extends Component {
     }
     this.setState({
       lineChartData: data
-    }, () => console.log(this.state))
-
-
+    })
 	}
 
   consoleState = () =>{
@@ -112,7 +110,6 @@ class Statistics extends Component {
   }
 
   render() {
-
     return (
       <Fragment>
         <div className="content-wrapper">
@@ -145,7 +142,7 @@ class Statistics extends Component {
     		                <Tooltip />
     		                <Legend />
     		                <Bar dataKey="Всего слов" fill="#3281F0" />
-    		                <Bar dataKey="Добавлено слов" fill="#444444" />
+    		                <Bar dataKey="Изучено слов" fill="#444444" />
     		              </BarChart>
                     </Card.Description>
                     <Card.Description className="statistics-inner-wrapper">
@@ -163,7 +160,7 @@ class Statistics extends Component {
                         <Tooltip />
                         <Legend />
                         <Line type="monotone" dataKey="Всего слов" stroke="#3281F0" activeDot={{ r: 8 }} />
-                        <Line type="monotone" dataKey="Добавлено слов" stroke="#444444" />
+                        <Line type="monotone" dataKey="Изучено слов" stroke="#444444" />
                       </LineChart>
                     </Card.Description>                    
                   </Card.Content>
@@ -252,4 +249,13 @@ class Statistics extends Component {
   }
 }
 
-export default Statistics;
+function mapStateToProps(state){
+  return {store: state.reducer};
+}
+
+function mapDispatchToProps(dispatch) {
+    return { actions: bindActionCreators(actions, dispatch)}
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Statistics);

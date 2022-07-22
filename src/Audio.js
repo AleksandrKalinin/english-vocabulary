@@ -107,19 +107,29 @@ class Audio extends Component {
         })
       } 
 
-      else this.setState({
-          isFinalVisible: true,
-          isTranslationVisible: false,
-          showNavButtons: false,
-          showContinueButton: false, 
-          isCardVisible: false,
-          isButtonVisible: false,
-          isImageVisible: false,
-          isLinkVisible: false,
-          isInputVisible: false,
-          correctNameVisible: false,
-          search: ''
-      }) 
+      else {
+        let words = this.state.positiveWords.slice();
+        let audioWords = this.props.store.audioWords.slice();
+        for (var i = 0; i < words.length; i++) {
+          if (!(audioWords.find(el => el.id === words[i].id))) {
+            words[i]["learnedDate"] = new Date();
+            this.props.actions.updateAudioWords(words[i])
+          }
+        }        
+        this.setState({
+            isFinalVisible: true,
+            isTranslationVisible: false,
+            showNavButtons: false,
+            showContinueButton: false, 
+            isCardVisible: false,
+            isButtonVisible: false,
+            isImageVisible: false,
+            isLinkVisible: false,
+            isInputVisible: false,
+            correctNameVisible: false,
+            search: ''
+        })
+      }
     }
 
    voiceWord = () =>{

@@ -95,19 +95,29 @@ continueTraining = () =>{
       disabled: false
     })
   } 
-  else this.setState({
-    isFinalVisible: true,
-    isTranslationVisible: false,
-    showNavButtons: false,
-    showContinueButton: false, 
-    isCardVisible: false,
-    isButtonVisible: false,
-    isImageVisible: false,
-    isLinkVisible: false,
-    isInputVisible: false,
-    search: ''   
 
-  }) 
+  else {
+    let words = this.state.positiveWords.slice();
+    let rusToEngWords = this.props.store.rusToEngWords.slice();
+    for (var i = 0; i < words.length; i++) {
+      if (!(rusToEngWords.find(el => el.id === words[i].id))) {
+        words[i]["learnedDate"] = new Date();
+        this.props.actions.updateRusToEng(words[i])
+      }
+    }
+    this.setState({
+        isFinalVisible: true,
+        isTranslationVisible: false,
+        showNavButtons: false,
+        showContinueButton: false, 
+        isCardVisible: false,
+        isButtonVisible: false,
+        isImageVisible: false,
+        isLinkVisible: false,
+        isInputVisible: false,
+        search: ''
+    })
+  }  
 }
 
 voiceWord = () =>{

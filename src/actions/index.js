@@ -136,7 +136,38 @@ let actions = {
 			type: 'TOGGLE_SEARCH_MODAL',
 			payload: state
 		}		
-	}						
+	},
+	updateEngToRus: function(word) {
+		return {
+			type: 'UPDATE_ENG_TO_RUS',
+			payload: word
+		}		
+	},
+	updateRusToEng: function(word) {
+		return {
+			type: 'UPDATE_RUS_TO_ENG',
+			payload: word
+		}		
+	},
+	updateConstructedWords: function(word) {
+		return {
+			type: 'UPDATE_CONSTRUCT_WORDS',
+			payload: word
+		}		
+	},
+	updateAudioWords: function(word) {
+		return {
+			type: 'UPDATE_AUDIO_WORDS',
+			payload: word
+		}		
+	},
+
+	updateTrueOrFalse: function(word) {
+		return {
+			type: 'UPDATE_TRUE_OR_FALSE',
+			payload: word
+		}		
+	}														
 
 }
 

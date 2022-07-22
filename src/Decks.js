@@ -246,16 +246,15 @@ class Decks extends Component {
                 <Menu.Item className="no-top-padding added-title" style = {{ backgroundColor: this.state.currentColor}} >
                   {this.state.addedItems.length ? "Добавленные" : "Добавленных пока нет"}
                 </Menu.Item>
+                {(this.state.addedItems.length) ? 
                 <Menu.Item className="no-padding decks-added-outer-wrapper">
-                  {(this.state.addedItems.length) ? 
                   <ul className="decks-added-wrapper">
                     {this.state.addedItems.map((item,index)=> 
                       <li key={index}  className="decks-added-items" style = {{ backgroundColor: this.state.currentColor}}>
                         <span className="decks-added-items-name">{item.name} - {item.translation}</span><span className="decks-added-items-icon" onClick={this.deleteItem.bind(this, item.id)} ><Icon name='trash alternate' /></span></li>
                     )}
-                  </ul> : null
-                } 
-                </Menu.Item>
+                  </ul>
+                </Menu.Item> : null }
                 { (this.state.addedItems.length && this.state.isSingleTextVisible) ? 
                 <Menu.Item className="decks-button-wrapper" >
                    <Button onClick={this.sendWords} style = {{ backgroundColor: this.state.currentColor}} className="decks-button__learn" >Изучить <Icon name='book' className="nav-icon-left" /> </Button>
@@ -298,7 +297,7 @@ class Decks extends Component {
                   </Menu.Item>
                   <Menu.Item style={{float: "right"}} name='close'> 
                     <Button style = {{ backgroundColor: this.state.currentColor}} onClick = {this.setStateOnStart} title="Назад">
-                      <Icon name='window close outline' className="nav-icon-left" /> 
+                      <Icon name='window close outline' className="nav-icon-left" size="" /> 
                     </Button>
                   </Menu.Item>  
                 </Menu>

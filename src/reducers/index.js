@@ -2,6 +2,12 @@ let selectedBook = {}
 
 
 let initialState = {
+	"engToRusWords": [],
+	"rusToEngWords": [],
+	"audioWords": [],
+	"constructWords": [],
+	"trueOrFalseWords": [],
+
 	"totalScore": 0,
 	"todayScore": 0,
 	"exercisesComplete": 0,
@@ -198,6 +204,31 @@ let reducer = (state = initialState, action) => {
 			return {
 				...state,
 				booksComments: [...newComments] }
+
+		case 'UPDATE_ENG_TO_RUS':
+			return {
+				...state,
+				engToRusWords: [...state.engToRusWords, action.payload] }
+
+		case 'UPDATE_RUS_TO_ENG':
+			return {
+				...state,
+				rusToEngWords: [...state.rusToEngWords, action.payload] }
+
+		case 'UPDATE_AUDIO_WORDS':
+			return {
+				...state,
+				audioWords: [...state.audioWords, action.payload] }
+
+		case 'UPDATE_CONSTRUCT_WORDS':
+			return {
+				...state,
+				constructWords: [...state.constructWords, action.payload] }
+
+		case 'UPDATE_TRUE_OR_FALSE':
+			return {
+				...state,
+				trueOrFalseWords: [...state.trueOrFalseWords, action.payload] }
 
 		default: return state;		
 	}

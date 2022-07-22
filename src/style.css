@@ -1266,7 +1266,7 @@ footer {
 	margin-bottom: 0 !important;
 }
 
-.top-menu .item:hover{
+.top-menu .item-link:hover{
 	background: #3281F0 !important;
 }
 
@@ -1293,8 +1293,6 @@ footer {
 	position: relative !important;
 }
 
-
-
 .top-menu .menu-image p{
 	margin-bottom: 0 !important;
 	color: #fff !important;
@@ -1319,7 +1317,7 @@ footer {
 }
 
 .user-avatar:hover{
-	 box-shadow: 0 0 2pt 3pt #3281F0;
+	 box-shadow: 0 0 1pt 1pt #3281F0;
 }
 
 .user-modal{
@@ -1356,8 +1354,11 @@ footer {
 }
 
 .user-modal p:hover{
-	background: #444444 !important;
-	
+	background: #444444 !important;	
+}
+
+.user-modal p i {
+	margin-bottom: 3px;
 }
 
 .user-modal-name h5{
@@ -1569,7 +1570,8 @@ footer {
 
 .texts-cards{
 	margin: 7.85px 6px !important;
-	min-width: 1134px;
+	flex-wrap: wrap;
+	/*min-width: 1134px; */
 }
 
 .texts-cards .card:hover{
@@ -3040,6 +3042,16 @@ footer {
 *
 .login-form{
 
+}
+
+.ui.button.login-button {
+	background: transparent;
+	color: #3281F0;
+	transition: .1s all;
+}
+
+.ui.button.login-button:hover {
+	text-decoration: underline;
 }
 
 .login-modal{

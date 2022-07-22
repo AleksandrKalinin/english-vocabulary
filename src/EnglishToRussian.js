@@ -100,7 +100,16 @@ class EnglishToRussian extends Component {
           })
         }  
 
-      else this.setState({
+      else {
+        let words = this.state.positiveWords.slice();
+        let engToRusWords = this.props.store.engToRusWords.slice();
+        for (var i = 0; i < words.length; i++) {
+          if (!(engToRusWords.find(el => el.id === words[i].id))) {
+            words[i]["learnedDate"] = new Date();
+            this.props.actions.updateEngToRus(words[i])
+          }
+        }
+        this.setState({
           isFinalVisible: true,
           isTranslationVisible: false,
           showNavButtons: false,
@@ -111,7 +120,8 @@ class EnglishToRussian extends Component {
           isLinkVisible: false,
           isInputVisible: false,
           search: ''
-      }) 
+        })
+      } 
     }
 
    voiceWord = () =>{
@@ -164,24 +174,22 @@ class EnglishToRussian extends Component {
       render() {
         return (
           <Fragment>
-          <div className="content-wrapper">
-          <TopMenu/>
-           {this.state.isButtonVisible ?
-            <Card.Group className="card-header-wrapper">
-              <Card>
-              <div className="training-wrapper-image">
-                <Image src='training/englishtorussian.jpg' />
-              </div>  
-                <Card.Content>
-                  <Card.Header>Перевод</Card.Header>
-                  <Card.Description>
-                    <Button primary onClick={this.startTraining} >Начать тренировку</Button>
-                  </Card.Description>
-                </Card.Content>
-              </Card>          
-            </Card.Group>:
-            null
-          }
+            <div className="content-wrapper">
+            <TopMenu/>
+             {this.state.isButtonVisible ?
+              <Card.Group className="card-header-wrapper">
+                <Card>
+                <div className="training-wrapper-image">
+                  <Image src='training/englishtorussian.jpg' />
+                </div>  
+                  <Card.Content>
+                    <Card.Header>Перевод</Card.Header>
+                    <Card.Description>
+                      <Button primary onClick={this.startTraining} >Начать тренировку</Button>
+                    </Card.Description>
+                  </Card.Content>
+                </Card>          
+              </Card.Group> : null }
            {this.state.isCardVisible ?
            	<Container className="list-container">
            		<Card className="training-card">
