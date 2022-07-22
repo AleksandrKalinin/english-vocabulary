@@ -73,9 +73,6 @@ class TopMenu extends Component {
             <Menu.Item className="item-link">
               <Link to="/statistics">Статистика</Link>
             </Menu.Item>
-            <Menu.Item className="item-link">
-              <Link to="/settings">Настройки</Link>
-            </Menu.Item> 
             <Menu.Menu position='right'>
               <Menu.Item className="login-item">
                 <Modal className="modal-form login-modal" trigger={<Button className="login-button">Войти</Button>} closeIcon>

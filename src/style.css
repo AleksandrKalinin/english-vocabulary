@@ -847,8 +847,9 @@ button a.training-link{
 }
 
 
-.training-cards{
-	
+.training-cards.training-cards{
+	width: 1264px;
+	margin: 0 auto;
 }
 
 .training-image-wrapper{
@@ -1467,8 +1468,7 @@ footer {
 
 /* training-тренировки */
 
-.training-wrapper{
-	margin: 0 !important;
+.training-wrapper {	
 	padding: 20px !important;
 }
 
@@ -2490,16 +2490,25 @@ footer {
 }
 
 .statistics-container{
+	width: 645px;
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-start;
 }
 
 .statistics-item{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 20px;
-	width: 175px !important;
+	padding: 20px;
+	width: 215px !important;
+	cursor: pointer;
+	transition: .1s all;
+}
+
+.statistics-item:hover{
+	transform: scale(1.1);
+	box-shadow: 0 0 2px 2px #ccc;
 }
 
 .statistics-item span{
@@ -2512,7 +2521,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	
+	cursor: pointer;	
 }
 
 .statistics-item i{
@@ -3956,4 +3965,24 @@ a.outline-link:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+/* statistics-overlay*/
+
+.statistics-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(51, 51, 51, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	z-index: 999;
+}
+
+.statistics-modal {
+	width: 550px;
+	min-height: 400px;
+	background: #fff;
 }

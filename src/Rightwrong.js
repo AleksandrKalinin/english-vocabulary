@@ -5,6 +5,10 @@ import axios from 'axios';
 import speech from 'speech-synth';
 import {Link} from "react-router-dom";
 
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
+
 class Rightwrong extends Component {
 
 	constructor(props){
@@ -104,14 +108,24 @@ class Rightwrong extends Component {
         })
 
       }
-      else this.setState({
-          isFinalVisible: true,
-          isTranslationVisible: false,
-          showNavButtons: false,
-          showContinueButton: false, 
-          isCardVisible: false,
-          isButtonVisible: false
-      })
+      else {
+        let words = this.state.positiveWords.slice();
+        let trueOrFalseWords = this.props.store.trueOrFalseWords.slice();
+        for (var i = 0; i < words.length; i++) {
+          if (!(trueOrFalseWords.find(el => el.id === words[i].id))) {
+            words[i]["learnedDate"] = new Date();
+            this.props.actions.updateTrueOrFalse(words[i])
+          }
+        } 
+        this.setState({
+            isFinalVisible: true,
+            isTranslationVisible: false,
+            showNavButtons: false,
+            showContinueButton: false, 
+            isCardVisible: false,
+            isButtonVisible: false
+        })                
+      }
     }
 
    voiceWord = () =>{
@@ -234,4 +248,12 @@ class Rightwrong extends Component {
   }
 }
 
-export default Rightwrong;
+function mapStateToProps(state) {
+  return {store: state.reducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Rightwrong);

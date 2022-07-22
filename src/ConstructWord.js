@@ -6,6 +6,9 @@ import speech from 'speech-synth';
 import './style.css';
 import {Link} from "react-router-dom";
 
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
 
 class ConstructWord extends Component {
 
@@ -16,7 +19,6 @@ class ConstructWord extends Component {
 
   		}
 	}
-
 
   componentDidMount() {
     this.setStateOnStart();
@@ -133,57 +135,57 @@ class ConstructWord extends Component {
           isCardVisible: false
         })        
       }
-  }    
-    startTraining = () =>{
-      this.setState({
-          isStarterVisible: false,
-          isCardVisible: true
-      })
-    }
+  }   
 
+  startTraining = () =>{
+    this.setState({
+        isStarterVisible: false,
+        isCardVisible: true
+    })
+  }
 
 
     continueTraining = () =>{
-	  let mistakeCount = this.state.mistakeCount;
-	  let currentFullWord = this.state.currentFullWord;
-	  let negativeWords = this.state.negativeWords.slice();
-	  let positiveWords = this.state.positiveWords.slice();
-	  let currentValue = this.state.currentValue;
-	  let currentWord = this.state.currentWord;	  
-		if (mistakeCount > 2){
-			negativeWords.push(currentFullWord);
-		}
+  	  let mistakeCount = this.state.mistakeCount;
+  	  let currentFullWord = this.state.currentFullWord;
+  	  let negativeWords = this.state.negativeWords.slice();
+  	  let positiveWords = this.state.positiveWords.slice();
+  	  let currentValue = this.state.currentValue;
+  	  let currentWord = this.state.currentWord;	  
+  		if (mistakeCount > 2){
+  			negativeWords.push(currentFullWord);
+  		}
 
-		else if(currentWord !== currentValue){
-		  	negativeWords.push(currentFullWord);
-		  	this.setState({
-		  		negativeWords
-		  	})
-		}
-		else{
-			positiveWords.push(currentFullWord)
-		} 
+  		else if(currentWord !== currentValue){
+  		  	negativeWords.push(currentFullWord);
+  		  	this.setState({
+  		  		negativeWords
+  		  	})
+  		}
+  		else{
+  			positiveWords.push(currentFullWord)
+  		} 
       let id = this.state.id;
       let wordsLength = this.state.words.length;
       let words = this.state.words; 
 
       id = id + 1;
-       if(id < wordsLength) {
-       	const currentFullWord = words[id];
-        const currentWord = words[id].name;
-		const currentTranslation = words[id].translation;
-		const currentImage = words[id].image;
-		const currentMeaning = words[id].meaning;        
-		const nameArray = currentWord.split('');
-		const randomNameArray = currentWord.split('');
-		for (let i = randomNameArray.length - 1; i > 0; i--) {
-		    const j = Math.floor(Math.random() * (i + 1));
-		    [randomNameArray[i], randomNameArray[j]] = [randomNameArray[j], randomNameArray[i]];
-		}
-		const wordNameArray = [];
-		for (var i = 0; i < nameArray.length; i++) {
-			wordNameArray.push(' ');
-		}
+      if(id < wordsLength) {
+      const currentFullWord = words[id];
+      const currentWord = words[id].name;
+  		const currentTranslation = words[id].translation;
+  		const currentImage = words[id].image;
+  		const currentMeaning = words[id].meaning;        
+  		const nameArray = currentWord.split('');
+  		const randomNameArray = currentWord.split('');
+  		for (let i = randomNameArray.length - 1; i > 0; i--) {
+  		    const j = Math.floor(Math.random() * (i + 1));
+  		    [randomNameArray[i], randomNameArray[j]] = [randomNameArray[j], randomNameArray[i]];
+  		}
+  		const wordNameArray = [];
+  		for (var i = 0; i < nameArray.length; i++) {
+  			wordNameArray.push(' ');
+  		}
         this.setState({
             id,
             words, 
@@ -204,7 +206,15 @@ class ConstructWord extends Component {
             negativeWords
         })
       }
-        else{
+        else {
+          let words = this.state.positiveWords.slice();
+          let constructWords = this.props.store.constructWords.slice();
+          for (var i = 0; i < words.length; i++) {
+            if (!(constructWords.find(el => el.id === words[i].id))) {
+              words[i]["learnedDate"] = new Date();
+              this.props.actions.updateConstructWords(words[i])
+            }
+          } 
           this.setState({
            isFinalVisible: true,
            isCardVisible: false,
@@ -382,4 +392,12 @@ class ConstructWord extends Component {
   }
 }
 
-export default ConstructWord;
+function mapStateToProps(state) {
+  return {store: state.reducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ConstructWord);

@@ -7,7 +7,7 @@ let initialState = {
 	"audioWords": [],
 	"constructWords": [],
 	"trueOrFalseWords": [],
-
+	"cardWords": [],
 	"totalScore": 0,
 	"todayScore": 0,
 	"exercisesComplete": 0,
@@ -79,8 +79,7 @@ let initialState = {
 	fontWeight: 400,
 	isFontModalOpen: false,
 	isColorModalOpen: false,
-	isSearchModalOpen: false	
-
+	isSearchModalOpen: false
 };
 
 
@@ -230,6 +229,10 @@ let reducer = (state = initialState, action) => {
 				...state,
 				trueOrFalseWords: [...state.trueOrFalseWords, action.payload] }
 
+		case 'UPDATE_CARD_WORDS':
+			return {
+				...state,
+				cardWords: [...state.trueOrFalseWords, action.payload] }
 		default: return state;		
 	}
 }

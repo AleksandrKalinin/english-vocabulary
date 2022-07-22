@@ -5,6 +5,10 @@ import axios from 'axios';
 import speech from 'speech-synth';
 import {Link} from "react-router-dom";
 
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
+
 class Audio extends Component {
 
 	constructor(props){
@@ -326,4 +330,12 @@ class Audio extends Component {
   }
 }
 
-export default Audio;
+function mapStateToProps(state) {
+  return {store: state.reducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Audio);

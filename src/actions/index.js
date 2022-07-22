@@ -162,6 +162,13 @@ let actions = {
 		}		
 	},
 
+	updateCardWords: function(word) {
+		return {
+			type: 'UPDATE_CARD_WORDS',
+			payload: word
+		}		
+	},
+
 	updateTrueOrFalse: function(word) {
 		return {
 			type: 'UPDATE_TRUE_OR_FALSE',

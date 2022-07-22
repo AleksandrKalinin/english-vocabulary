@@ -5,6 +5,10 @@ import TopMenu from './TopMenu';
 import axios from 'axios';
 import speech from 'speech-synth';
 
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
+
 class Cards extends Component {
 
 	constructor(props){
@@ -102,14 +106,24 @@ class Cards extends Component {
         })
 
       }
-      else this.setState({
-          isFinalVisible: true,
-          isTranslationVisible: false,
-          showNavButtons: false,
-          showContinueButton: false, 
-          isCardVisible: false,
-          isButtonVisible: false
-      })
+      else {
+        let words = this.state.positiveWords.slice();
+        let cardWords = this.props.store.cardWords.slice();
+        for (var i = 0; i < words.length; i++) {
+          if (!(cardWords.find(el => el.id === words[i].id))) {
+            words[i]["learnedDate"] = new Date();
+            this.props.actions.updateCardWords(words[i])
+          }
+        } 
+        this.setState({
+            isFinalVisible: true,
+            isTranslationVisible: false,
+            showNavButtons: false,
+            showContinueButton: false, 
+            isCardVisible: false,
+            isButtonVisible: false
+        })
+      }
     }
 
 
@@ -236,4 +250,12 @@ class Cards extends Component {
   }
 }
 
-export default Cards;
+function mapStateToProps(state) {
+  return {store: state.reducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cards);

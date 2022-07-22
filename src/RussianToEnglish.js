@@ -6,6 +6,10 @@ import speech from 'speech-synth';
 import classnames from 'classnames';
 import {Link} from "react-router-dom";
 
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
+
 class RussianToEnglish extends Component {
 
 	constructor(props){
@@ -289,4 +293,12 @@ render() {
 }
 }
 
-export default RussianToEnglish;
+function mapStateToProps(state) {
+  return {store: state.reducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RussianToEnglish);

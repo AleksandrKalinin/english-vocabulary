@@ -39,7 +39,8 @@ class Statistics extends Component {
       nameArrays: null,
       barChartData: [],
       lineChartData: [],
-      active: "#F9B707"
+      active: "#F9B707",
+      isModalOpen: false
 		}
 	}
 
@@ -109,10 +110,23 @@ class Statistics extends Component {
     console.log(this.state);
   }
 
+  openModal = () => {
+    this.setState({
+      isModalOpen: !this.state.isModalOpen
+    })
+  }
+
   render() {
     return (
       <Fragment>
         <div className="content-wrapper">
+          {this.state.isModalOpen ?
+            <div className="statistics-overlay">
+              <div className="statistics-modal">
+                
+              </div>
+            </div>
+          : null}
           <TopMenu></TopMenu>
           <div className="texts-wrapper fragments-wrapper">
               {this.state.isMenuVisible ?
@@ -202,16 +216,28 @@ class Statistics extends Component {
 	                      		<p>Страниц прочитано</p>
 	                      	</div>
 	                      	<div className="statistics-item">
-	                      		<span><Icon name = 'cogs'/></span>
+	                      		<span><Icon name = 'question circle outline'/></span>
 	                      		<h1>1</h1>
-	                      		<p>Курсов изучено</p>
+	                      		<p>Верно - неверно</p>
 	                      	</div>
 	                      	<div className="statistics-item">
 	                      		<span><Icon name = 'check circle outline'/></span>
 	                      		<h1>1</h1>
 	                      		<p>Тестов пройдено</p>
 	                      	</div>                    		
-                    	</div>           	                      	
+                    	</div>
+                      <div className="statistics-container">
+                          <div className="statistics-item">
+                            <span><Icon name = 'book'/></span>
+                            <h1>14</h1>
+                            <p>Страниц прочитано</p>
+                          </div>
+                          <div className="statistics-item">
+                            <span><Icon name = 'question circle outline'/></span>
+                            <h1>1</h1>
+                            <p>Верно - неверно</p>
+                          </div>
+                      </div>                                 	                      	
                     </Card.Description>
                   </Card.Content>
                 </Card>
@@ -220,7 +246,7 @@ class Statistics extends Component {
                     <Card.Header className="statistics-wrapper-header">Слова</Card.Header>
                     <Card.Description className="statistics-inner-wrapper">
                     	<div className="statistics-container">
-	                      	<div className="statistics-item">
+	                      	<div className="statistics-item" onClick={this.openModal}>
 	                      		<span><Icon name = 'book'/></span>
 	                      		<h1>1210</h1>
 	                      		<p>Слов всего</p>
