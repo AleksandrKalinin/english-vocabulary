@@ -226,7 +226,7 @@ class Vocabulary extends Component {
 }
 
 function mapStateToProps(state){
-  return {store: state.reducer};
+  return {store: state.vocabularyReducer};
 }
 
 function mapDispatchToProps(dispatch) {

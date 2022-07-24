@@ -308,7 +308,7 @@ class SelectedBook extends Component {
 
 
 function mapStateToProps(state){
-  return { store: state.reducer };
+  return { store: state.booksReducer };
 }
 
 function mapDispatchToProps(dispatch) {

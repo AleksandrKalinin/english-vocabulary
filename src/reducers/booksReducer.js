@@ -2,21 +2,6 @@ let selectedBook = {}
 
 
 let initialState = {
-	"engToRusWords": [],
-	"rusToEngWords": [],
-	"audioWords": [],
-	"constructWords": [],
-	"trueOrFalseWords": [],
-	"cardWords": [],
-	"totalScore": 0,
-	"todayScore": 0,
-	"exercisesComplete": 0,
-	"testsComplete": 0,
-	"wordsTotal": 0,
-	"wordsStudied": 0,
-	"wordsRemaining": 0,
-	"vocabModalOpen": false,
-	"selectedVocabWord": null,
 	"selectedBook": selectedBook,
 	"booksComments": [
 		{
@@ -84,68 +69,8 @@ let initialState = {
 
 
 
-let reducer = (state = initialState, action) => {
+let booksReducer = (state = initialState, action) => {
 	switch(action.type){
-		case 'UPDATE_TOTAL_SCORE':
-			return {
-				...state,
-				totalScore: action.payload }
-
-		case 'UPDATE_TODAY_SCORE':
-			return {
-				...state,
-				todayScore: action.payload }
-
-		case 'UPDATE_EXERCISES_COMPLETE':
-			return {
-				...state,
-				exercisesComplete: action.payload }
-
-		case 'UPDATE_TESTS_COMPLETE':
-			return {
-				...state,
-				testsComplete: action.payload }
-
-		case 'UPDATE_WORDS_TOTAL':
-			return {
-				...state,
-				wordsTotal: action.payload }
-
-		case 'UPDATE_WORDS_REMAINING':
-			return {
-				...state,
-				wordsRemaining: action.payload }
-
-		case 'UPDATE_WORDS_STUDIED':
-			return {
-				...state,
-				wordsStudied: action.payload }
-
-		case 'CHANGE_COLOR_SCHEME':
-			return {
-				...state,
-				colorScheme: action.payload }
-
-		case 'CHANGE_SOUND_VOLUME':
-			return {
-				...state,
-				soundVolume: action.payload }
-
-		case 'TOGGLE_VOCAB_MODAL':
-			return {
-				...state,
-				vocabModalOpen: action.payload }
-
-		case 'SELECT_VOCAB_WORD':
-			return {
-				...state,
-				selectedVocabWord: action.payload }		
-
-		case 'VOICE_VOCAB_WORD':
-			return {
-				...state,
-				vocabWord: action.payload }
-
 		case 'SELECT_BOOK':
 			return {
 				...state,
@@ -196,45 +121,8 @@ let reducer = (state = initialState, action) => {
 				...state,
 				backgroundColor: action.payload }
 
-		case 'ADD_COMMENT_TO_BOOK':
-			const index = state.booksComments.findIndex(book => book.id == action.payload.id);
-			const newComments = [...state.booksComments];
-			newComments[index].comments.push(action.payload.comment);
-			return {
-				...state,
-				booksComments: [...newComments] }
-
-		case 'UPDATE_ENG_TO_RUS':
-			return {
-				...state,
-				engToRusWords: [...state.engToRusWords, action.payload] }
-
-		case 'UPDATE_RUS_TO_ENG':
-			return {
-				...state,
-				rusToEngWords: [...state.rusToEngWords, action.payload] }
-
-		case 'UPDATE_AUDIO_WORDS':
-			return {
-				...state,
-				audioWords: [...state.audioWords, action.payload] }
-
-		case 'UPDATE_CONSTRUCT_WORDS':
-			return {
-				...state,
-				constructWords: [...state.constructWords, action.payload] }
-
-		case 'UPDATE_TRUE_OR_FALSE':
-			return {
-				...state,
-				trueOrFalseWords: [...state.trueOrFalseWords, action.payload] }
-
-		case 'UPDATE_CARD_WORDS':
-			return {
-				...state,
-				cardWords: [...state.trueOrFalseWords, action.payload] }
-		default: return state;		
+	    default: return state 		
 	}
 }
 
-export default reducer;
+export default booksReducer;

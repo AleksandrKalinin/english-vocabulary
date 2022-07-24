@@ -24,6 +24,7 @@ class EnglishToRussian extends Component {
   }
 
    setStateOnStart = () => {
+    console.log(this.props.store.engToRusWords)
     this.setState({
       words: [],
       negativeWords: [],
@@ -54,7 +55,7 @@ class EnglishToRussian extends Component {
         .then(res => {
           const words = res.data;
           let result = [];
-          for (var i = 0; i < 10; i++) {
+          for (var i = 0; i < 3; i++) {
             let item = [];
             while(item.length < 5) {
               var el = words[Math.floor(Math.random() * words.length)];
@@ -105,10 +106,11 @@ class EnglishToRussian extends Component {
         let engToRusWords = this.props.store.engToRusWords.slice();
         for (var i = 0; i < words.length; i++) {
           if (!(engToRusWords.find(el => el.id === words[i].id))) {
-            words[i]["learnedDate"] = new Date();
+            words[i]["date"] = new Date();
             this.props.actions.updateEngToRus(words[i])
           }
         }
+        console.log(this.props.store.engToRusWords);
         this.setState({
           isFinalVisible: true,
           isTranslationVisible: false,
@@ -295,7 +297,7 @@ class EnglishToRussian extends Component {
 }
 
 function mapStateToProps(state) {
-  return {store: state.reducer}
+  return {store: state.exercisesReducer}
 }
 
 function mapDispatchToProps(dispatch) {

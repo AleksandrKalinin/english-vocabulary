@@ -1,8 +1,14 @@
 import {combineReducers} from 'redux';
-import reducer from './index';
+import commonReducer from './commonReducer';
+import exercisesReducer from './exercisesReducer';
+import booksReducer from './booksReducer';
+import vocabularyReducer from './vocabularyReducer';
 
 let createRootReducer = () => combineReducers({
-	reducer
+	exercisesReducer: exercisesReducer, 
+	commonReducer: commonReducer, 
+	booksReducer: booksReducer,
+	vocabularyReducer: vocabularyReducer	
 })
 
 export default createRootReducer;
