@@ -5,11 +5,11 @@ let initialState = {
 			"wordsTrained": [
 				{
 					"id": 234,
-					"date": "Sun Jul 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
 				},
 				{
 					"id": 34,
-					"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
 				}
 			]
 		},
@@ -18,11 +18,11 @@ let initialState = {
 			"wordsTrained": [
 				{
 					"id": 234,
-					"date": "Sun Jul 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 26 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
 				},
 				{
 					"id": 34,
-					"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 25 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
 				}
 			]
 		},
@@ -31,11 +31,11 @@ let initialState = {
 			"wordsTrained": [
 				{
 					"id": 234,
-					"date": "Sun Jul 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 14 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
 				},
 				{
 					"id": 34,
-					"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 18 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
 				}
 			]
 		},
@@ -48,7 +48,7 @@ let initialState = {
 				},
 				{
 					"id": 34,
-					"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 26 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
 				}
 			]
 		},
@@ -57,7 +57,7 @@ let initialState = {
 			"wordsTrained": [
 				{
 					"id": 234,
-					"date": "Sun Jul 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun May 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
 				},
 				{
 					"id": 34,
@@ -77,37 +77,87 @@ let initialState = {
 					"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
 				}
 			]
-		}												
+		},
+		"recreateTxt": {
+			"completed": 5,
+			"wordsTrained": [
+				{
+					"id": 234,
+					"date": "Sun May 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+				},
+				{
+					"id": 34,
+					"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+				}
+			]
+		},
+		"recreateAudioTxt": {
+			"completed": 5,
+			"wordsTrained": [
+				{
+					"id": 234,
+					"date": "Sun May 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+				},
+				{
+					"id": 34,
+					"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+				}
+			]
+		},
+		"placeSpaces": {
+			"completed": 5,
+			"wordsTrained": [
+				{
+					"id": 234,
+					"date": "Sun May 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+				},
+				{
+					"id": 34,
+					"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+				}
+			]
+		}, 
+		"fillTheGaps": {
+			"completed": 5,
+			"wordsTrained": [
+				{
+					"id": 234,
+					"date": "Sun May 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+				},
+				{
+					"id": 34,
+					"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+				}
+			]
+		},
+		"commonPhrases": {
+			"completed": 5,
+			"wordsTrained": [
+				{
+					"id": 234,
+					"date": "Sun May 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+				},
+				{
+					"id": 34,
+					"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+				}
+			]
+		},						 		 												
 	},
-	"engToRusWords": [
+
+	"tests": [
 		{
-			"date": "Sun Jul 24 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+			"score": 35,
+			"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
+			"percentage": 82.5
 		},
 		{
-			"date": "Sun Jul 24 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+			"score": 38,
+			"date": "Sun Jul 20 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
+			"percentage": 34.5
 		},
-		{
-			"date": "Sun Jul 23 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
-		},
-		{
-			"date": "Sun Jul 23 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
-		}					
 	],
-	"rusToEngWords": [],
-	"audioWords": [],
-	"constructWords": [],
-	"trueOrFalseWords": [],
-	"cardWords": [],
 
-	"recreateTxt": 0,
-	"recreateAudioTxt": 0,
-	"placeSpaces": 0,
-	"fillTheGaps": 0,
-	"commonPhrases": 0,
-
-	"testsComplete": 0,
-	"testsScore": 0,
-	"testsRate": 0,
 
 	"wordsTotal": 0,
 	"totalScore": 0,

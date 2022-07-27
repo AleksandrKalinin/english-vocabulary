@@ -16,6 +16,7 @@ class Statistics extends Component {
 		super(props);
 		this.state = {
       loaded: false,
+      testsLoaded: false,
       words: [],
       contentArray: [],
       isMenuVisible: true,
@@ -53,14 +54,23 @@ class Statistics extends Component {
   componentDidMount() {
     console.log(this.props.store)
     this.setState({
-      engToRusWords: this.props.store.engToRusWords,
-      rusToEngWords: this.props.store.rusToEngWords,
-      cardWords: this.props.store.cardWords,
-      constructWords: this.props.store.constructWords,
-      audioWords: this.props.store.audioWords,
-      trueOrFalseWords: this.props.store.trueOrFalseWords,
+      engToRusWords: this.props.store.exercises.engToRusWords.wordsTrained,
+      rusToEngWords: this.props.store.exercises.rusToEngWords.wordsTrained,
+      cardWords: this.props.store.exercises.cardWords.wordsTrained,
+      constructWords: this.props.store.exercises.constructWords.wordsTrained,
+      audioWords: this.props.store.exercises.audioWords.wordsTrained,
+      trueOrFalseWords: this.props.store.exercises.trueOrFalseWords.wordsTrained,
+      recreateTxt: this.props.store.exercises.recreateTxt.wordsTrained,
+      recreateAudioTxt: this.props.store.exercises.recreateAudioTxt.wordsTrained,
+      placeSpaces: this.props.store.exercises.placeSpaces.wordsTrained,
+      fillTheGaps: this.props.store.exercises.fillTheGaps.wordsTrained,
+      commonPhrases: this.props.store.exercises.commonPhrases.wordsTrained,  
+
+      tests: this.props.store.tests,    
       loaded: true
-    })
+    }, () => this.countTests(this.state.tests))
+
+
     axios.get('/words_full.json')
       .then(res => {
         let words = res.data;
@@ -69,6 +79,14 @@ class Statistics extends Component {
         }, () => this.splitIntoArrays());
       })        
   }   
+
+  countTests = (params) => {
+    let percentage = params.reduce((a, b) => a.percentage + b.percentage) / this.state.tests.length;
+    let mark = params.reduce((a, b) => a.score + b.score); 
+    this.setState({
+      percentage, mark, testsLoaded: true
+    }) 
+  }
 
   splitIntoArrays = () =>{
     var nameArrays = Object.create(null);
@@ -156,57 +174,45 @@ class Statistics extends Component {
     })
   }
 
-  inDayRange = () => {
-    let engToRusWords = this.props.store.engToRusWords;
-    let rusToEngWords = this.props.store.rusToEngWords;
-    let audioWords = this.props.store.audioWords;
-    let constructWords = this.props.store.constructWords;
-    let trueOrFalseWords = this.props.store.trueOrFalseWords;
-    let cardWords = this.props.store.cardWords;
+  inDayRange = (option) => {
 
     let current = new Date();
-    console.log(current);
     let year = current.getFullYear();
     let month = current.getMonth();
     let day = current.getDate();
     let today = new Date(`${year}-${month + 1}-${day}`);
-
-    engToRusWords = engToRusWords.filter(ifInRange);
-    rusToEngWords = rusToEngWords.filter(ifInRange);
-    audioWords = audioWords.filter(ifInRange);
-    constructWords = constructWords.filter(ifInRange);
-    trueOrFalseWords = trueOrFalseWords.filter(ifInRange);
-    cardWords = cardWords.filter(ifInRange);
 
     function ifInRange(item) {
       let date = new Date(item.date);
       return (date.getTime() <= today.getTime() + 86400000 && date.getTime() >= today.getTime())
     }
 
-    this.setState({
-      engToRusWords, rusToEngWords, audioWords, constructWords, trueOrFalseWords, cardWords
-    })
-
-    console.log(engToRusWords);
+    this.applyFunction(ifInRange)    
 
   }
 
-  inWeekRange = () => {
+  inWeekRange = (option) => {
+
     let current = new Date();
     let year = current.getFullYear();
     let month = current.getMonth();
     let day = current.getDate();
     let weekDay = current.getDay();
     let weekDays = 7;
-    console.log(weekDay);
     let start = new Date(`${year}-${month + 1}-${day}`);
+    
     function ifInRange(item) {
       let date = new Date(item.date);
-      return (date.getTime() <= start.getTime() + (86400000 * (7 - weekDay)) && date.getTime() >= start.getTime() - (86400000 * (7 - weekDay)))
+      return ( 
+        date.getTime() <= (start.getTime() + (86400000 * (7 - weekDay))) && date.getTime() >= (start.getTime() - (86400000 * weekDay))
+      )
     }
+
+    this.applyFunction(ifInRange)
   }
 
-  inMonthRange = () => {
+  inMonthRange = (option) => {
+
     let current = new Date();
     let year = current.getFullYear();
     let month = current.getMonth();
@@ -222,21 +228,61 @@ class Statistics extends Component {
     function daysInMonth (month, year) {
         return new Date(year, month, 0).getDate();
     }
+
+    this.applyFunction(ifInRange);
+
   }
 
   inAllRange = () => {
 
+    function ifInRange(item) {
+      return item;
+    }
+
+    this.applyFunction(ifInRange)
   }  
 
+  applyFunction = (func) => {
+
+    let engToRusWords = this.props.store.exercises.engToRusWords.wordsTrained;
+    let rusToEngWords = this.props.store.exercises.rusToEngWords.wordsTrained;
+    let audioWords = this.props.store.exercises.audioWords.wordsTrained;
+    let constructWords = this.props.store.exercises.constructWords.wordsTrained;
+    let trueOrFalseWords = this.props.store.exercises.trueOrFalseWords.wordsTrained;
+    let cardWords = this.props.store.exercises.cardWords.wordsTrained;
+    let recreateTxt = this.props.store.exercises.recreateTxt.wordsTrained;
+    let recreateAudioTxt = this.props.store.exercises.recreateAudioTxt.wordsTrained;
+    let placeSpaces = this.props.store.exercises.placeSpaces.wordsTrained;
+    let fillTheGaps = this.props.store.exercises.fillTheGaps.wordsTrained;
+    let commonPhrases = this.props.store.exercises.commonPhrases.wordsTrained;
+
+    engToRusWords = engToRusWords.filter(func);
+    rusToEngWords = rusToEngWords.filter(func);
+    audioWords = audioWords.filter(func);
+    constructWords = constructWords.filter(func);
+    trueOrFalseWords = trueOrFalseWords.filter(func);
+    cardWords = cardWords.filter(func);
+    recreateTxt = recreateTxt.filter(func);
+    recreateAudioTxt = recreateAudioTxt.filter(func);
+    placeSpaces = placeSpaces.filter(func);
+    fillTheGaps = fillTheGaps.filter(func);
+    commonPhrases = commonPhrases.filter(func);    
+
+    this.setState({
+      engToRusWords, rusToEngWords, audioWords, constructWords, trueOrFalseWords, cardWords, recreateTxt, recreateAudioTxt, placeSpaces, fillTheGaps, commonPhrases
+    })
+
+  }
+
   switchTab = (tab) => {
-    if (tab === 'today') {
-      this.inDayRange();
+    if (tab[0] === 'today') {
+      this.inDayRange(tab[1]);
     } else if (tab === 'week') {
-      this.inWeekRange();
+      this.inWeekRange(tab[1]);
     } else if (tab === 'month') {
-      this.inMonthRange();
+      this.inMonthRange(tab[1]);
     } else {
-      this.inAllRange();
+      this.inAllRange(tab[1]);
     }
   }
 
@@ -344,10 +390,10 @@ class Statistics extends Component {
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Упражнений выполнено</Card.Header>
                     <div className="statistics-menu">
-                    	<a className="active">сегодня</a>
-                    	<a>за неделю</a>
-                    	<a>за месяц</a>
-                      <a>за всё время</a>
+                      <a onClick={this.switchTab.bind(this, "today")} className="active">сегодня</a>
+                      <a onClick={this.switchTab.bind(this, "week")}>за неделю</a>
+                      <a onClick={this.switchTab.bind(this, "month")}>за месяц</a>
+                      <a onClick={this.switchTab.bind(this, "all")}>за всё время</a>
                     </div>
                     {this.state.loaded ?
                       <Card.Description className="statistics-inner-wrapper">
@@ -390,29 +436,29 @@ class Statistics extends Component {
                         <div className="statistics-container">
                           <div className="statistics-item" onClick={this.openModal}>
                             <span><Icon name = 'book'/></span>
-                            <h1>{this.props.store.recreateTxt}</h1>
+                            <h1>{this.state.recreateTxt.length}</h1>
                             <p>Воспроизведи текст</p>
                           </div>
                           <div className="statistics-item">
                             <span><Icon name = 'check circle outline'/></span>
-                            <h1>{this.props.store.recreateAudioTxt}</h1>
+                            <h1>{this.state.recreateAudioTxt.length}</h1>
                             <p>Воспроизведи аудиотекст</p>
                           </div>
                           <div className="statistics-item">
                             <span><Icon name = 'question circle outline'/></span>
-                            <h1>{this.props.store.fillTheGaps}</h1>
+                            <h1>{this.state.fillTheGaps.length}</h1>
                             <p>Заполни пробелы</p>
                           </div>                        
                         </div>
                         <div className="statistics-container">
                           <div className="statistics-item">
                             <span><Icon name = 'book'/></span>
-                            <h1>{this.props.store.placeSpaces}</h1>
+                            <h1>{this.state.placeSpaces.length}</h1>
                             <p>Расставь пробелы</p>
                           </div>
                           <div className="statistics-item">
                             <span><Icon name = 'question circle outline'/></span>
-                            <h1>{this.props.store.commonPhrases}</h1>
+                            <h1>{this.state.commonPhrases.length}</h1>
                             <p>Крылатые фразы</p>
                           </div>
                         </div>                                              
@@ -424,10 +470,10 @@ class Statistics extends Component {
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Слов изучено</Card.Header>
                     <div className="statistics-menu">
-                      <a className="active">сегодня</a>
-                      <a>за неделю</a>
-                      <a>за месяц</a>
-                      <a>за всё время</a>
+                      <a onClick={this.switchTab.bind(this, "today")} className="active">сегодня</a>
+                      <a onClick={this.switchTab.bind(this, "week")}>за неделю</a>
+                      <a onClick={this.switchTab.bind(this, "month")}>за месяц</a>
+                      <a onClick={this.switchTab.bind(this, "all")}>за всё время</a>
                     </div>
                     {this.state.loaded ?
                     <Card.Description className="statistics-inner-wrapper">
@@ -475,30 +521,32 @@ class Statistics extends Component {
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Тесты</Card.Header>
                     <div className="statistics-menu">
-                      <a className="active">сегодня</a>
-                      <a>за неделю</a>
-                      <a>за месяц</a>
-                      <a>за всё время</a>
-                    </div>                    
+                      <a onClick={this.switchTab.bind(this, ["test", "today"])} className="active">сегодня</a>
+                      <a onClick={this.switchTab.bind(this, ["test", "week"])}>за неделю</a>
+                      <a onClick={this.switchTab.bind(this, ["test", "month"])}>за месяц</a>
+                      <a onClick={this.switchTab.bind(this, ["test", "all"])}>за всё время</a>
+                    </div>     
+                    {this.state.testsLoaded ?               
                     <Card.Description className="statistics-inner-wrapper">
                       <div className="statistics-container">
                         <div className="statistics-item" onClick={this.openModal}>
                           <span><Icon name = 'book'/></span>
-                          <h1>{this.props.store.testsComplete}</h1>
+                          <h1>{this.state.tests.length}</h1>
                           <p>Тестов пройдено</p>
                         </div>
                         <div className="statistics-item">
                           <span><Icon name = 'check circle outline'/></span>
-                          <h1>{this.props.store.testsRate}</h1>
+                          <h1>{this.state.percentage}</h1>
                           <p>Процент выполнения</p>
                         </div>
                         <div className="statistics-item">
                           <span><Icon name = 'question circle outline'/></span>
-                          <h1>{this.props.store.testsScore}</h1>
+                          <h1>{this.state.mark}</h1>
                           <p>Баллов набрано</p>
                         </div>                        
                       </div>
                     </Card.Description>
+                    : null }
                   </Card.Content>
                 </Card>                                
               </Card.Group>
