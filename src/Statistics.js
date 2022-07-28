@@ -17,6 +17,7 @@ class Statistics extends Component {
 		this.state = {
       loaded: false,
       testsLoaded: false,
+      wordsLoaded: false,
       words: [],
       contentArray: [],
       isMenuVisible: true,
@@ -41,34 +42,43 @@ class Statistics extends Component {
       barChartData: [],
       lineChartData: [],
       active: "#F9B707",
-      isModalOpen: false,
-      tabs: [
-        {
-        }
-      ]
+      isModalOpen: false
 		}
 	}
 
-
-
   componentDidMount() {
-    console.log(this.props.store)
+      let learnedWords = {}
+      learnedWords.engToRusWords = this.props.store.exercises.engToRusWords;
+      learnedWords.rusToEngWords = this.props.store.exercises.rusToEngWords;
+      learnedWords.cardWords = this.props.store.exercises.cardWords;
+      learnedWords.constructWords = this.props.store.exercises.constructWords;
+      learnedWords.audioWords = this.props.store.exercises.audioWords;
+      learnedWords.trueOrFalseWords = this.props.store.exercises.trueOrFalseWords;
     this.setState({
-      engToRusWords: this.props.store.exercises.engToRusWords.wordsTrained,
-      rusToEngWords: this.props.store.exercises.rusToEngWords.wordsTrained,
-      cardWords: this.props.store.exercises.cardWords.wordsTrained,
-      constructWords: this.props.store.exercises.constructWords.wordsTrained,
-      audioWords: this.props.store.exercises.audioWords.wordsTrained,
-      trueOrFalseWords: this.props.store.exercises.trueOrFalseWords.wordsTrained,
-      recreateTxt: this.props.store.exercises.recreateTxt.wordsTrained,
-      recreateAudioTxt: this.props.store.exercises.recreateAudioTxt.wordsTrained,
-      placeSpaces: this.props.store.exercises.placeSpaces.wordsTrained,
-      fillTheGaps: this.props.store.exercises.fillTheGaps.wordsTrained,
-      commonPhrases: this.props.store.exercises.commonPhrases.wordsTrained,  
+      learnedWords,
+      engToRusWords: this.props.store.exercises.engToRusWords,
+      rusToEngWords: this.props.store.exercises.rusToEngWords,
+      cardWords: this.props.store.exercises.cardWords,
+      constructWords: this.props.store.exercises.constructWords,
+      audioWords: this.props.store.exercises.audioWords,
+      trueOrFalseWords: this.props.store.exercises.trueOrFalseWords,
+      recreateTxt: this.props.store.exercises.recreateTxt,
+      recreateAudioTxt: this.props.store.exercises.recreateAudioTxt,
+      placeSpaces: this.props.store.exercises.placeSpaces,
+      fillTheGaps: this.props.store.exercises.fillTheGaps,
+      commonPhrases: this.props.store.exercises.commonPhrases,
 
       tests: this.props.store.tests,    
       loaded: true
-    }, () => this.countTests(this.state.tests))
+    }, () => { this.countTests(this.state.tests); 
+               this.countWords(this.state.learnedWords.engToRusWords, "engToRusWordsTotal");
+               this.countWords(this.state.learnedWords.rusToEngWords, "rusToEngWordsTotal");
+               this.countWords(this.state.learnedWords.cardWords, "cardWordsTotal");
+               this.countWords(this.state.learnedWords.constructWords, "constructWordsTotal");
+               this.countWords(this.state.learnedWords.audioWords, "audioWordsTotal");
+               this.countWords(this.state.learnedWords.trueOrFalseWords, "trueOrFalseWordsTotal");
+               this.setState({ wordsLoaded: true})               
+             })
 
 
     axios.get('/words_full.json')
@@ -81,11 +91,34 @@ class Statistics extends Component {
   }   
 
   countTests = (params) => {
-    let percentage = params.reduce((a, b) => a.percentage + b.percentage) / this.state.tests.length;
-    let mark = params.reduce((a, b) => a.score + b.score); 
+    let percentage, mark;
+    if (params.length > 1) {
+      percentage = params.reduce((a, b) => a.percentage + b.percentage) / this.state.tests.length;
+      mark = params.reduce((a, b) => a.score + b.score);
+    } else if (params.length === 1){
+      percentage = params[0].percentage;
+      mark = params[0].score;
+    } else {
+      percentage = 0;
+      mark = 0;
+    }
     this.setState({
       percentage, mark, testsLoaded: true
     }) 
+  }
+
+  countWords = (params, name) => {
+    let total;
+    if (params.length > 1) {
+      total = params.reduce((a, b) => a.wordsTrained.length + b.wordsTrained.length);
+    } else if (params.length === 1) {
+      total = params[0].wordsTrained.length;
+    } else {
+      total = 0;
+    }    
+    this.setState({
+      [name]: total
+    })
   }
 
   splitIntoArrays = () =>{
@@ -175,7 +208,6 @@ class Statistics extends Component {
   }
 
   inDayRange = (option) => {
-
     let current = new Date();
     let year = current.getFullYear();
     let month = current.getMonth();
@@ -187,7 +219,7 @@ class Statistics extends Component {
       return (date.getTime() <= today.getTime() + 86400000 && date.getTime() >= today.getTime())
     }
 
-    this.applyFunction(ifInRange)    
+    this.applyFunction(ifInRange, option)    
 
   }
 
@@ -208,7 +240,7 @@ class Statistics extends Component {
       )
     }
 
-    this.applyFunction(ifInRange)
+    this.applyFunction(ifInRange, option)
   }
 
   inMonthRange = (option) => {
@@ -229,60 +261,81 @@ class Statistics extends Component {
         return new Date(year, month, 0).getDate();
     }
 
-    this.applyFunction(ifInRange);
+    this.applyFunction(ifInRange, option);
 
   }
 
-  inAllRange = () => {
+  inAllRange = (option) => {
 
     function ifInRange(item) {
       return item;
     }
 
-    this.applyFunction(ifInRange)
+    this.applyFunction(ifInRange, option)
   }  
 
-  applyFunction = (func) => {
+  applyFunction = (func, option) => {
 
-    let engToRusWords = this.props.store.exercises.engToRusWords.wordsTrained;
-    let rusToEngWords = this.props.store.exercises.rusToEngWords.wordsTrained;
-    let audioWords = this.props.store.exercises.audioWords.wordsTrained;
-    let constructWords = this.props.store.exercises.constructWords.wordsTrained;
-    let trueOrFalseWords = this.props.store.exercises.trueOrFalseWords.wordsTrained;
-    let cardWords = this.props.store.exercises.cardWords.wordsTrained;
-    let recreateTxt = this.props.store.exercises.recreateTxt.wordsTrained;
-    let recreateAudioTxt = this.props.store.exercises.recreateAudioTxt.wordsTrained;
-    let placeSpaces = this.props.store.exercises.placeSpaces.wordsTrained;
-    let fillTheGaps = this.props.store.exercises.fillTheGaps.wordsTrained;
-    let commonPhrases = this.props.store.exercises.commonPhrases.wordsTrained;
+    let engToRusWords = this.props.store.exercises.engToRusWords;
+    let rusToEngWords = this.props.store.exercises.rusToEngWords;
+    let audioWords = this.props.store.exercises.audioWords;
+    let constructWords = this.props.store.exercises.constructWords;
+    let trueOrFalseWords = this.props.store.exercises.trueOrFalseWords;
+    let cardWords = this.props.store.exercises.cardWords;
+    let recreateTxt = this.props.store.exercises.recreateTxt;
+    let recreateAudioTxt = this.props.store.exercises.recreateAudioTxt;
+    let placeSpaces = this.props.store.exercises.placeSpaces;
+    let fillTheGaps = this.props.store.exercises.fillTheGaps;
+    let commonPhrases = this.props.store.exercises.commonPhrases;
 
-    engToRusWords = engToRusWords.filter(func);
-    rusToEngWords = rusToEngWords.filter(func);
-    audioWords = audioWords.filter(func);
-    constructWords = constructWords.filter(func);
-    trueOrFalseWords = trueOrFalseWords.filter(func);
-    cardWords = cardWords.filter(func);
-    recreateTxt = recreateTxt.filter(func);
-    recreateAudioTxt = recreateAudioTxt.filter(func);
-    placeSpaces = placeSpaces.filter(func);
-    fillTheGaps = fillTheGaps.filter(func);
-    commonPhrases = commonPhrases.filter(func);    
+    let tests = this.props.store.tests;
 
-    this.setState({
-      engToRusWords, rusToEngWords, audioWords, constructWords, trueOrFalseWords, cardWords, recreateTxt, recreateAudioTxt, placeSpaces, fillTheGaps, commonPhrases
-    })
+    if (option === 'exercise') {
+      engToRusWords = engToRusWords.filter(func);
+      rusToEngWords = rusToEngWords.filter(func);
+      audioWords = audioWords.filter(func);
+      constructWords = constructWords.filter(func);
+      trueOrFalseWords = trueOrFalseWords.filter(func);
+      cardWords = cardWords.filter(func);
+      recreateTxt = recreateTxt.filter(func);
+      recreateAudioTxt = recreateAudioTxt.filter(func);
+      placeSpaces = placeSpaces.filter(func);
+      fillTheGaps = fillTheGaps.filter(func);
+      commonPhrases = commonPhrases.filter(func);    
+
+      this.setState({
+        engToRusWords, rusToEngWords, audioWords, constructWords, trueOrFalseWords, cardWords, recreateTxt, recreateAudioTxt, placeSpaces, fillTheGaps, commonPhrases
+      })
+    } else if (option === 'test') {
+        tests = tests.filter(func);
+        this.setState({
+          tests
+        }, () => this.countTests(this.state.tests))
+    } else if (option === 'word') {
+        let learnedWords = {}
+        learnedWords.engToRusWords = this.props.store.exercises.engToRusWords;
+        learnedWords.rusToEngWords = this.props.store.exercises.rusToEngWords;
+        learnedWords.cardWords = this.props.store.exercises.cardWords;
+        learnedWords.constructWords = this.props.store.exercises.constructWords;
+        learnedWords.audioWords = this.props.store.exercises.audioWords;
+        learnedWords.trueOrFalseWords = this.props.store.exercises.trueOrFalseWords;
+        for (var prop in learnedWords) {
+          learnedWords[prop] = learnedWords[prop].filter(func);
+          this.countWords(learnedWords[prop], prop + "Total");
+        }
+    }
 
   }
 
   switchTab = (tab) => {
-    if (tab[0] === 'today') {
-      this.inDayRange(tab[1]);
-    } else if (tab === 'week') {
-      this.inWeekRange(tab[1]);
-    } else if (tab === 'month') {
-      this.inMonthRange(tab[1]);
+    if (tab[1] === 'today') {
+      this.inDayRange(tab[0]);
+    } else if (tab[1] === 'week') {
+      this.inWeekRange(tab[0]);
+    } else if (tab[1] === 'month') {
+      this.inMonthRange(tab[0]);
     } else {
-      this.inAllRange(tab[1]);
+      this.inAllRange(tab[0]);
     }
   }
 
@@ -293,7 +346,21 @@ class Statistics extends Component {
           {this.state.isModalOpen ?
             <div className="statistics-overlay">
               <div className="statistics-modal">
-                
+                  <BarChart
+                    width={600}
+                    height={350}
+                    data={this.state.barChartData}
+                    margin={{
+                      top: 20, right: 20, left: 20, bottom: 20,
+                    }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Bar dataKey="Всего слов" fill="#3281F0" />
+                  </BarChart>                
               </div>
             </div>
           : null}
@@ -350,10 +417,10 @@ class Statistics extends Component {
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Общая статистика</Card.Header>
                     <div className="statistics-menu">
-                      <a onClick={this.switchTab.bind(this, "today")} className="active">сегодня</a>
-                      <a onClick={this.switchTab.bind(this, "week")}>за неделю</a>
-                      <a onClick={this.switchTab.bind(this, "month")}>за месяц</a>
-                      <a onClick={this.switchTab.bind(this, "all")}>за всё время</a>
+                      <a onClick={this.switchTab.bind(this, ["main", "today"])} className="active">сегодня</a>
+                      <a onClick={this.switchTab.bind(this, ["main", "week"])}>за неделю</a>
+                      <a onClick={this.switchTab.bind(this, ["main", "month"])}>за месяц</a>
+                      <a onClick={this.switchTab.bind(this, ["main", "all"])}>за всё время</a>
                     </div>
                     <Card.Description className="statistics-inner-wrapper">
                       <div className="statistics-container">
@@ -390,44 +457,44 @@ class Statistics extends Component {
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Упражнений выполнено</Card.Header>
                     <div className="statistics-menu">
-                      <a onClick={this.switchTab.bind(this, "today")} className="active">сегодня</a>
-                      <a onClick={this.switchTab.bind(this, "week")}>за неделю</a>
-                      <a onClick={this.switchTab.bind(this, "month")}>за месяц</a>
-                      <a onClick={this.switchTab.bind(this, "all")}>за всё время</a>
+                      <a onClick={this.switchTab.bind(this, ["exercise", "today"])} className="active">сегодня</a>
+                      <a onClick={this.switchTab.bind(this, ["exercise", "week"])}>за неделю</a>
+                      <a onClick={this.switchTab.bind(this, ["exercise", "month"])}>за месяц</a>
+                      <a onClick={this.switchTab.bind(this, ["exercise", "all"])}>за всё время</a>
                     </div>
                     {this.state.loaded ?
                       <Card.Description className="statistics-inner-wrapper">
                         <div className="statistics-container">
-                            <div className="statistics-item">
+                            <div className="statistics-item" onClick={this.openModal}>
                               <span>
                                 <Icon name = 'plus square outline'/>
                               </span>
                               <h1>{this.state.engToRusWords.length}</h1>
                               <p>Перевод с английского</p>
                             </div>
-                            <div className="statistics-item">
+                            <div className="statistics-item" onClick={this.openModal}>
                               <span><Icon name = 'file text'/></span>
                               <h1>{this.state.rusToEngWords.length}</h1>
                               <p>Перевод с русского</p>
                             </div>
-                            <div className="statistics-item">
+                            <div className="statistics-item" onClick={this.openModal}>
                               <span><Icon name = 'gem outline'/></span>
                               <h1>{this.state.audioWords.length}</h1>
                               <p>Аудиотренировка</p>
                             </div>                        
                         </div>
-                        <div className="statistics-container">
+                        <div className="statistics-container" onClick={this.openModal}>
                             <div className="statistics-item">
                               <span><Icon name = 'book'/></span>
                               <h1>{this.state.cardWords.length}</h1>
                               <p>Словарные карточки</p>
                             </div>
-                            <div className="statistics-item">
+                            <div className="statistics-item" onClick={this.openModal}>
                               <span><Icon name = 'question circle outline'/></span>
                               <h1>{this.state.trueOrFalseWords.length}</h1>
                               <p>Верно - неверно</p>
                             </div>
-                            <div className="statistics-item">
+                            <div className="statistics-item" onClick={this.openModal}>
                               <span><Icon name = 'check circle outline'/></span>
                               <h1>{this.state.constructWords.length}</h1>
                               <p>Конструктор слов</p>
@@ -439,24 +506,24 @@ class Statistics extends Component {
                             <h1>{this.state.recreateTxt.length}</h1>
                             <p>Воспроизведи текст</p>
                           </div>
-                          <div className="statistics-item">
+                          <div className="statistics-item" onClick={this.openModal}>
                             <span><Icon name = 'check circle outline'/></span>
                             <h1>{this.state.recreateAudioTxt.length}</h1>
                             <p>Воспроизведи аудиотекст</p>
                           </div>
-                          <div className="statistics-item">
+                          <div className="statistics-item" onClick={this.openModal}>
                             <span><Icon name = 'question circle outline'/></span>
                             <h1>{this.state.fillTheGaps.length}</h1>
                             <p>Заполни пробелы</p>
                           </div>                        
                         </div>
                         <div className="statistics-container">
-                          <div className="statistics-item">
+                          <div className="statistics-item" onClick={this.openModal}>
                             <span><Icon name = 'book'/></span>
                             <h1>{this.state.placeSpaces.length}</h1>
                             <p>Расставь пробелы</p>
                           </div>
-                          <div className="statistics-item">
+                          <div className="statistics-item" onClick={this.openModal}>
                             <span><Icon name = 'question circle outline'/></span>
                             <h1>{this.state.commonPhrases.length}</h1>
                             <p>Крылатые фразы</p>
@@ -470,46 +537,46 @@ class Statistics extends Component {
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Слов изучено</Card.Header>
                     <div className="statistics-menu">
-                      <a onClick={this.switchTab.bind(this, "today")} className="active">сегодня</a>
-                      <a onClick={this.switchTab.bind(this, "week")}>за неделю</a>
-                      <a onClick={this.switchTab.bind(this, "month")}>за месяц</a>
-                      <a onClick={this.switchTab.bind(this, "all")}>за всё время</a>
+                      <a onClick={this.switchTab.bind(this, ["word", "today"])} className="active">сегодня</a>
+                      <a onClick={this.switchTab.bind(this, ["word", "week"])}>за неделю</a>
+                      <a onClick={this.switchTab.bind(this, ["word", "month"])}>за месяц</a>
+                      <a onClick={this.switchTab.bind(this, ["word", "all"])}>за всё время</a>
                     </div>
-                    {this.state.loaded ?
+                    {this.state.wordsLoaded ?
                     <Card.Description className="statistics-inner-wrapper">
                       <div className="statistics-container">
-                          <div className="statistics-item">
+                          <div className="statistics-item" onClick={this.openModal}>
                             <span>
                               <Icon name = 'plus square outline'/>
                             </span>
-                            <h1>{this.state.engToRusWords.length}</h1>
+                            <h1>{this.state.engToRusWordsTotal}</h1>
                             <p>Перевод с английского</p>
                           </div>
-                          <div className="statistics-item">
+                          <div className="statistics-item" onClick={this.openModal}>
                             <span><Icon name = 'file text'/></span>
-                            <h1>{this.state.rusToEngWords.length}</h1>
+                            <h1>{this.state.rusToEngWordsTotal}</h1>
                             <p>Перевод с русского</p>
                           </div>
-                          <div className="statistics-item">
+                          <div className="statistics-item" onClick={this.openModal}>
                             <span><Icon name = 'gem outline'/></span>
-                            <h1>{this.state.audioWords.length}</h1>
+                            <h1>{this.state.audioWordsTotal}</h1>
                             <p>Аудиотренировка</p>
                           </div>                        
                       </div>
                       <div className="statistics-container">
-                          <div className="statistics-item">
+                          <div className="statistics-item" onClick={this.openModal}>
                             <span><Icon name = 'book'/></span>
-                            <h1>{this.state.cardWords.length}</h1>
+                            <h1>{this.state.cardWordsTotal}</h1>
                             <p>Словарные карточки</p>
                           </div>
-                          <div className="statistics-item">
+                          <div className="statistics-item" onClick={this.openModal}>
                             <span><Icon name = 'question circle outline'/></span>
-                            <h1>{this.state.trueOrFalseWords.length}</h1>
+                            <h1>{this.state.trueOrFalseWordsTotal}</h1>
                             <p>Верно - неверно</p>
                           </div>
-                          <div className="statistics-item">
+                          <div className="statistics-item" onClick={this.openModal}>
                             <span><Icon name = 'check circle outline'/></span>
-                            <h1>{this.state.constructWords.length}</h1>
+                            <h1>{this.state.constructWordsTotal}</h1>
                             <p>Конструктор слов</p>
                           </div>                        
                       </div>             
