@@ -42,7 +42,111 @@ class Statistics extends Component {
       barChartData: [],
       lineChartData: [],
       active: "#F9B707",
-      isModalOpen: false
+      isModalOpen: false,
+      exerciseMenu: [
+        {
+          "id": 1,
+          "name": "сегодня",
+          "action": ["exercise", "today"],
+          "active": false
+        },
+        {
+          "id": 2,
+          "name": "за неделю",
+          "action": ["exercise", "week"],
+          "active": false         
+        },
+        {
+          "id": 3,
+          "name": "за месяц",
+          "action": ["exercise", "month"],
+          "active": false
+        },
+        {
+          "id": 4,
+          "name": "за все время",
+          "action": ["exercise", "all"],
+          "active": true         
+        } 
+      ],
+      wordMenu: [
+        {
+          "id": 1,
+          "name": "сегодня",
+          "action": ["word", "today"],
+          "active": false
+        },
+        {
+          "id": 2,
+          "name": "за неделю",
+          "action": ["word", "week"],
+          "active": false         
+        },
+        {
+          "id": 3,
+          "name": "за месяц",
+          "action": ["word", "month"],
+          "active": false
+        },
+        {
+          "id": 4,
+          "name": "за все время",
+          "action": ["word", "all"],
+          "active": true         
+        } 
+      ],
+      testMenu: [
+        {
+          "id": 1,
+          "name": "сегодня",
+          "action": ["test", "today"],
+          "active": false
+        },
+        {
+          "id": 2,
+          "name": "за неделю",
+          "action": ["test", "week"],
+          "active": false         
+        },
+        {
+          "id": 3,
+          "name": "за месяц",
+          "action": ["test", "month"],
+          "active": false
+        },
+        {
+          "id": 4,
+          "name": "за все время",
+          "action": ["test", "all"],
+          "active": true         
+        }        
+      ],
+      generalMenu: [
+        {
+          "id": 1,
+          "name": "сегодня",
+          "action": ["general", "today"],
+          "active": false
+        },
+        {
+          "id": 2,
+          "name": "за неделю",
+          "action": ["general", "week"],
+          "active": false         
+        },
+        {
+          "id": 3,
+          "name": "за месяц",
+          "action": ["general", "month"],
+          "active": false
+        },
+        {
+          "id": 4,
+          "name": "за все время",
+          "action": ["general", "all"],
+          "active": true         
+        } 
+      ]
 		}
 	}
 
@@ -106,6 +210,35 @@ class Statistics extends Component {
       percentage, mark, testsLoaded: true
     }) 
   }
+
+  countTotalWords = () => {
+
+  }
+
+  countTotalExercises = () => {
+    let exercises = this.props.store.exercises;
+    let count = 0;
+    for (var prop in exercises) {
+      count += exercises[prop].length;
+    }   
+    console.log(count);
+  }
+
+  countTotalScore = () => {
+    let exercises = this.props.store.exercises;
+    let count = 0;
+    for (var prop in exercises) {
+      let category = exercises[prop];
+      for (var i = 0; i < category.length; i++) {
+        count += category[i].score
+      }
+    }
+
+   console.log(count);
+
+  }
+
+
 
   countWords = (params, name) => {
     let total;
@@ -202,9 +335,10 @@ class Statistics extends Component {
   }
 
   openModal = () => {
+    /*
     this.setState({
       isModalOpen: !this.state.isModalOpen
-    })
+    }) */
   }
 
   inDayRange = (option) => {
@@ -327,7 +461,8 @@ class Statistics extends Component {
 
   }
 
-  switchTab = (tab) => {
+  switchTab = (tab, id) => {
+    this.selectMenuItem(tab[0], id);
     if (tab[1] === 'today') {
       this.inDayRange(tab[0]);
     } else if (tab[1] === 'week') {
@@ -337,6 +472,19 @@ class Statistics extends Component {
     } else {
       this.inAllRange(tab[0]);
     }
+  }
+
+  selectMenuItem = (category, id) => {
+    let val = category + "Menu";
+    let menu = this.state[val].slice();
+    for (var i = 0; i < menu.length; i++) {
+      if (menu[i].id === id) {
+        menu[i].active = true;
+      } else {
+        menu[i].active = false;
+      }
+    }
+    this.setState({ [val]: menu });
   }
 
   render() {
@@ -366,12 +514,8 @@ class Statistics extends Component {
           : null}
           <TopMenu></TopMenu>
           <div className="texts-wrapper fragments-wrapper">
-              <Menu className="texts-menu" vertical>
-                <Menu.Item>
-                  <Button onClick={this.consoleState}>Press</Button>
-                </Menu.Item>
-              </Menu> : null 
               <Card.Group className="texts-cards statistics-wrapper" itemsPerRow={1} >
+            {/*
                 <Card>
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Графики</Card.Header>
@@ -412,24 +556,19 @@ class Statistics extends Component {
                       </LineChart>
                     </Card.Description>                    
                   </Card.Content>
-                </Card>
+                </Card> */}
                 <Card>
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Общая статистика</Card.Header>
-                    <div className="statistics-menu">
-                      <a onClick={this.switchTab.bind(this, ["main", "today"])} className="active">сегодня</a>
-                      <a onClick={this.switchTab.bind(this, ["main", "week"])}>за неделю</a>
-                      <a onClick={this.switchTab.bind(this, ["main", "month"])}>за месяц</a>
-                      <a onClick={this.switchTab.bind(this, ["main", "all"])}>за всё время</a>
-                    </div>
+                    {(this.state.testsLoaded && this.state.wordsLoaded && this.state.loaded) ?
                     <Card.Description className="statistics-inner-wrapper">
                       <div className="statistics-container">
                           <div className="statistics-item">
                             <span>
                               <Icon name = 'plus square outline'/>
                             </span>
-                            <h1>{this.props.store.wordsTotal}</h1>
-                            <p>Слов всего</p>
+                            <h1>{this.state.words.length}</h1>
+                            <p>Слов в словаре</p>
                           </div>
                           <div className="statistics-item">
                             <span><Icon name = 'file text'/></span>
@@ -449,18 +588,16 @@ class Statistics extends Component {
                             <p>Баллов набрано</p>
                           </div>
                       </div>
-
-                    </Card.Description>
+                    </Card.Description> : null } 
                   </Card.Content>
                 </Card>                
                 <Card>
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Упражнений выполнено</Card.Header>
                     <div className="statistics-menu">
-                      <a onClick={this.switchTab.bind(this, ["exercise", "today"])} className="active">сегодня</a>
-                      <a onClick={this.switchTab.bind(this, ["exercise", "week"])}>за неделю</a>
-                      <a onClick={this.switchTab.bind(this, ["exercise", "month"])}>за месяц</a>
-                      <a onClick={this.switchTab.bind(this, ["exercise", "all"])}>за всё время</a>
+                      {this.state.exerciseMenu.map((item, index) => 
+                        <a onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
+                      )}
                     </div>
                     {this.state.loaded ?
                       <Card.Description className="statistics-inner-wrapper">
@@ -537,10 +674,9 @@ class Statistics extends Component {
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Слов изучено</Card.Header>
                     <div className="statistics-menu">
-                      <a onClick={this.switchTab.bind(this, ["word", "today"])} className="active">сегодня</a>
-                      <a onClick={this.switchTab.bind(this, ["word", "week"])}>за неделю</a>
-                      <a onClick={this.switchTab.bind(this, ["word", "month"])}>за месяц</a>
-                      <a onClick={this.switchTab.bind(this, ["word", "all"])}>за всё время</a>
+                      {this.state.wordMenu.map((item, index) => 
+                        <a onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
+                      )}
                     </div>
                     {this.state.wordsLoaded ?
                     <Card.Description className="statistics-inner-wrapper">
@@ -588,10 +724,15 @@ class Statistics extends Component {
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Тесты</Card.Header>
                     <div className="statistics-menu">
-                      <a onClick={this.switchTab.bind(this, ["test", "today"])} className="active">сегодня</a>
+                      {this.state.testMenu.map((item, index) => 
+                        <a onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
+                      )}
+                    {/*
+                      <a onClick={this.switchTab.bind(this, ["test", "today"])} className="statistics-link_active">сегодня</a>
                       <a onClick={this.switchTab.bind(this, ["test", "week"])}>за неделю</a>
                       <a onClick={this.switchTab.bind(this, ["test", "month"])}>за месяц</a>
                       <a onClick={this.switchTab.bind(this, ["test", "all"])}>за всё время</a>
+                    */}
                     </div>     
                     {this.state.testsLoaded ?               
                     <Card.Description className="statistics-inner-wrapper">
@@ -599,7 +740,7 @@ class Statistics extends Component {
                         <div className="statistics-item" onClick={this.openModal}>
                           <span><Icon name = 'book'/></span>
                           <h1>{this.state.tests.length}</h1>
-                          <p>Тестов пройдено</p>
+                          <p>Тестов выполнено</p>
                         </div>
                         <div className="statistics-item">
                           <span><Icon name = 'check circle outline'/></span>

@@ -5,12 +5,14 @@ let initialState = {
 				{
 					"id": 234,
 					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987]
+					"wordsTrained": [32, 47, 987],
+					"score": 3
 				},
 				{
 					"id": 34,
 					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987]
+					"wordsTrained": [32, 47, 987],
+					"score": 3
 				}
 			],
 		"rusToEngWords":
@@ -18,12 +20,14 @@ let initialState = {
 				{
 					"id": 234,
 					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987]
+					"wordsTrained": [32, 47, 987],
+					"score": 3
 				},
 				{
 					"id": 34,
 					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987]
+					"wordsTrained": [32, 47, 987],
+					"score": 3
 				}
 			],
 		"audioWords": 
@@ -31,12 +35,14 @@ let initialState = {
 				{
 					"id": 234,
 					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987]
+					"wordsTrained": [32, 47, 987],
+					"score": 3
 				},
 				{
 					"id": 34,
 					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987]
+					"wordsTrained": [32, 47, 987],
+					"score": 3
 				}
 			],
 
@@ -45,12 +51,14 @@ let initialState = {
 				{
 					"id": 234,
 					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987, 15, 16, 19, 20]
+					"wordsTrained": [32, 47, 987, 15, 16, 19, 20],
+					"score": 7
 				},
 				{
 					"id": 34,
 					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987]
+					"wordsTrained": [32, 47, 987],
+					"score": 3
 				}
 			],
 
@@ -59,12 +67,14 @@ let initialState = {
 				{
 					"id": 234,
 					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987, 14]
+					"wordsTrained": [32, 47, 987, 14],
+					"score": 4
 				},
 				{
 					"id": 34,
 					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987]
+					"wordsTrained": [32, 47, 987],
+					"score": 3
 				}
 			],
 
@@ -73,12 +83,14 @@ let initialState = {
 				{
 					"id": 234,
 					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987]
+					"wordsTrained": [32, 47, 987],
+					"score": 3
 				},
 				{
 					"id": 34,
 					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987, 43, 89]
+					"wordsTrained": [32, 47, 987, 43, 89],
+					"score": 5
 				}								
 			],
 
@@ -86,11 +98,13 @@ let initialState = {
 			[
 				{
 					"id": 234,
-					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
+					"score": 5
 				},
 				{
 					"id": 34,
-					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
+					"score": 5
 				}
 			],
 		
@@ -98,11 +112,13 @@ let initialState = {
 			[
 				{
 					"id": 234,
-					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
+					"score": 5
 				},
 				{
 					"id": 34,
-					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
+					"score": 5
 				}
 			],
 		
@@ -110,11 +126,13 @@ let initialState = {
 			[
 				{
 					"id": 234,
-					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
+					"score": 6
 				},
 				{
 					"id": 34,
-					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
+					"score": 7
 				}
 			],
 		 
@@ -122,11 +140,13 @@ let initialState = {
 			[
 				{
 					"id": 234,
-					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
+					"score": 5
 				},
 				{
 					"id": 34,
-					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
+					"score": 5
 				}
 			],
 		
@@ -134,11 +154,13 @@ let initialState = {
 			[
 				{
 					"id": 234,
-					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
+					"score": 5
 				},
 				{
 					"id": 34,
-					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)"
+					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
+					"score": 5
 				}
 			]
 					 		 												
@@ -158,13 +180,9 @@ let initialState = {
 	],
 
 
-	"wordsTotal": 0,
-	"totalScore": 0,
-	"exercisesComplete": 0,
-
-	"todayScore": 0,
-	"wordsStudied": 0,
-	"wordsRemaining": 0
+	"totalScore": 187,
+	"exercisesComplete": 22,
+	"testsComplete": 2
 
 };
 
@@ -177,11 +195,6 @@ let exercisesReducer = (state = initialState, action) => {
 				...state,
 				totalScore: action.payload }
 
-		case 'UPDATE_TODAY_SCORE':
-			return {
-				...state,
-				todayScore: action.payload }
-
 		case 'UPDATE_EXERCISES_COMPLETE':
 			return {
 				...state,
@@ -191,21 +204,6 @@ let exercisesReducer = (state = initialState, action) => {
 			return {
 				...state,
 				testsComplete: action.payload }
-
-		case 'UPDATE_WORDS_TOTAL':
-			return {
-				...state,
-				wordsTotal: action.payload }
-
-		case 'UPDATE_WORDS_REMAINING':
-			return {
-				...state,
-				wordsRemaining: action.payload }
-
-		case 'UPDATE_WORDS_STUDIED':
-			return {
-				...state,
-				wordsStudied: action.payload }
 
 		case 'UPDATE_ENG_TO_RUS':
 			let words = [...state.engToRusWords];

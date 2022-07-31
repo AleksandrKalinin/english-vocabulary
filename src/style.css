@@ -2469,10 +2469,12 @@ footer {
 
 /* statistics */
 
-.statistics-wrapper{
+..ui.one.cards.texts-cards.statistics-wrapper{
 	width: calc(100% - 310px);
+	margin-left: auto;
+	/*
 	margin-left: 20px !important;
-	margin-right: 20px !important; 
+	margin-right: 20px !important; */
 }
 
 .statistics-inner-wrapper{
@@ -2485,8 +2487,9 @@ footer {
 	transform: scale(1.000) !important;
 }
 
-.statistics-wrapper-header{
-	text-align: center !important;
+.ui.cards .ui.card .content .header.statistics-wrapper-header{
+	font-size: 26px;
+	text-align: center;
 }
 
 .statistics-container{
@@ -2544,14 +2547,14 @@ footer {
 }
 
 .statistics-menu a{
-	color: #333333 !important;
-	font-weight: 700 !important;
+	color: #333333;
+	font-weight: 700;
 	display: block;
 	margin: 0 10px;
 }
 
-.statistics-menu a.active{
-	color: #3281F0 !important;
+.statistics-menu a.statistics-link_active{
+	color: #3281F0;
 }
 
 .rightwrong-header{
