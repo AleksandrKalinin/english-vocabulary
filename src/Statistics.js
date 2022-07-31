@@ -151,36 +151,29 @@ class Statistics extends Component {
 	}
 
   componentDidMount() {
-      let learnedWords = {}
+    let exercises = this.props.store.exercises;
+      for (var prop in exercises) {
+        let val = exercises[prop];
+        this.setState({
+          [prop]: val
+        })
+      } 
+      let learnedWords = {}      
       learnedWords.engToRusWords = this.props.store.exercises.engToRusWords;
       learnedWords.rusToEngWords = this.props.store.exercises.rusToEngWords;
       learnedWords.cardWords = this.props.store.exercises.cardWords;
       learnedWords.constructWords = this.props.store.exercises.constructWords;
       learnedWords.audioWords = this.props.store.exercises.audioWords;
       learnedWords.trueOrFalseWords = this.props.store.exercises.trueOrFalseWords;
+      for (var prop in learnedWords) {
+        let val = learnedWords[prop];
+        this.countWords(val, prop + "Total")
+      } 
     this.setState({
       learnedWords,
-      engToRusWords: this.props.store.exercises.engToRusWords,
-      rusToEngWords: this.props.store.exercises.rusToEngWords,
-      cardWords: this.props.store.exercises.cardWords,
-      constructWords: this.props.store.exercises.constructWords,
-      audioWords: this.props.store.exercises.audioWords,
-      trueOrFalseWords: this.props.store.exercises.trueOrFalseWords,
-      recreateTxt: this.props.store.exercises.recreateTxt,
-      recreateAudioTxt: this.props.store.exercises.recreateAudioTxt,
-      placeSpaces: this.props.store.exercises.placeSpaces,
-      fillTheGaps: this.props.store.exercises.fillTheGaps,
-      commonPhrases: this.props.store.exercises.commonPhrases,
-
       tests: this.props.store.tests,    
       loaded: true
     }, () => { this.countTests(this.state.tests); 
-               this.countWords(this.state.learnedWords.engToRusWords, "engToRusWordsTotal");
-               this.countWords(this.state.learnedWords.rusToEngWords, "rusToEngWordsTotal");
-               this.countWords(this.state.learnedWords.cardWords, "cardWordsTotal");
-               this.countWords(this.state.learnedWords.constructWords, "constructWordsTotal");
-               this.countWords(this.state.learnedWords.audioWords, "audioWordsTotal");
-               this.countWords(this.state.learnedWords.trueOrFalseWords, "trueOrFalseWordsTotal");
                this.setState({ wordsLoaded: true})               
              })
 
@@ -210,35 +203,6 @@ class Statistics extends Component {
       percentage, mark, testsLoaded: true
     }) 
   }
-
-  countTotalWords = () => {
-
-  }
-
-  countTotalExercises = () => {
-    let exercises = this.props.store.exercises;
-    let count = 0;
-    for (var prop in exercises) {
-      count += exercises[prop].length;
-    }   
-    console.log(count);
-  }
-
-  countTotalScore = () => {
-    let exercises = this.props.store.exercises;
-    let count = 0;
-    for (var prop in exercises) {
-      let category = exercises[prop];
-      for (var i = 0; i < category.length; i++) {
-        count += category[i].score
-      }
-    }
-
-   console.log(count);
-
-  }
-
-
 
   countWords = (params, name) => {
     let total;
@@ -409,37 +373,17 @@ class Statistics extends Component {
   }  
 
   applyFunction = (func, option) => {
-
-    let engToRusWords = this.props.store.exercises.engToRusWords;
-    let rusToEngWords = this.props.store.exercises.rusToEngWords;
-    let audioWords = this.props.store.exercises.audioWords;
-    let constructWords = this.props.store.exercises.constructWords;
-    let trueOrFalseWords = this.props.store.exercises.trueOrFalseWords;
-    let cardWords = this.props.store.exercises.cardWords;
-    let recreateTxt = this.props.store.exercises.recreateTxt;
-    let recreateAudioTxt = this.props.store.exercises.recreateAudioTxt;
-    let placeSpaces = this.props.store.exercises.placeSpaces;
-    let fillTheGaps = this.props.store.exercises.fillTheGaps;
-    let commonPhrases = this.props.store.exercises.commonPhrases;
-
+    let exercises = this.props.store.exercises;
     let tests = this.props.store.tests;
 
     if (option === 'exercise') {
-      engToRusWords = engToRusWords.filter(func);
-      rusToEngWords = rusToEngWords.filter(func);
-      audioWords = audioWords.filter(func);
-      constructWords = constructWords.filter(func);
-      trueOrFalseWords = trueOrFalseWords.filter(func);
-      cardWords = cardWords.filter(func);
-      recreateTxt = recreateTxt.filter(func);
-      recreateAudioTxt = recreateAudioTxt.filter(func);
-      placeSpaces = placeSpaces.filter(func);
-      fillTheGaps = fillTheGaps.filter(func);
-      commonPhrases = commonPhrases.filter(func);    
+      for (var prop in exercises) {
+        let val = exercises[prop].filter(func)
+        this.setState({
+          [prop]: val
+        })
+      } 
 
-      this.setState({
-        engToRusWords, rusToEngWords, audioWords, constructWords, trueOrFalseWords, cardWords, recreateTxt, recreateAudioTxt, placeSpaces, fillTheGaps, commonPhrases
-      })
     } else if (option === 'test') {
         tests = tests.filter(func);
         this.setState({
@@ -727,12 +671,6 @@ class Statistics extends Component {
                       {this.state.testMenu.map((item, index) => 
                         <a onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
                       )}
-                    {/*
-                      <a onClick={this.switchTab.bind(this, ["test", "today"])} className="statistics-link_active">сегодня</a>
-                      <a onClick={this.switchTab.bind(this, ["test", "week"])}>за неделю</a>
-                      <a onClick={this.switchTab.bind(this, ["test", "month"])}>за месяц</a>
-                      <a onClick={this.switchTab.bind(this, ["test", "all"])}>за всё время</a>
-                    */}
                     </div>     
                     {this.state.testsLoaded ?               
                     <Card.Description className="statistics-inner-wrapper">
