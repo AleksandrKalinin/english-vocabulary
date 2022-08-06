@@ -29,7 +29,7 @@ class VocabWord extends Component {
    }
 
   render() {
-    var descriptionVisible = false;
+    var descriptionVisible = true;
     return (
       <List.Item >
         <Fragment>
