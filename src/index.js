@@ -32,7 +32,6 @@ import SethMeyers from './videos/SethMeyers'
 import StephenColbert from './videos/StephenColbert'
 import TextsList from './TextsList'
 import Decks from './Decks'
-import AudioList from './AudioList'
 import Settings from './Settings'
 import BookList from './BookList'
 import Materials from './Materials'
@@ -105,7 +104,6 @@ ReactDOM.render(
 				<Route path="/books" exact component={BookList} />
 				<Route path="/books/:id" component={SelectedBook} />						
 				<Route path="/tests" component={Example} />
-				<Route path="/audiolist" component={AudioList} />
 				<Route path="/grammarpresentsimple" component={GrammarPresentSimple} />
 				<Route path="/grammarpastsimple" component={GrammarPastSimple} />
 				<Route path="/grammarfuturesimple" component={GrammarFutureSimple} />

@@ -123,13 +123,12 @@ class GrammarFutureContinuos extends Component {
 
     }
 
-   voiceWord = () =>{
-      var newfullData = this.state.currentName;
-      speech.say(newfullData);
+   voiceWord = () => {
+      speech.say(this.state.currentName);
    }  
 
 
-   consoleFunction = () =>{
+   consoleFunction = () => {
     console.log(this.state);
    }
 
