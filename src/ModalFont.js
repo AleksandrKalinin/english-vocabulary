@@ -92,7 +92,7 @@ class ModalFont extends Component {
                                 fontFamily: this.state.fontFamilyTemp,
                                 lineHeight: this.state.lineHeightTemp + "px",
                                 fontWeight: this.state.fontWeightTemp }} >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>                  
-          <button className="normal-button" onClick={this.applyFontSettings} >Применить</button>
+          <Button primary className="normal-button" onClick={this.applyFontSettings} >Применить</Button>
         </div>    
       </div>
     );

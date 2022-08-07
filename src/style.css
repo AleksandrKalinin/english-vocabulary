@@ -199,8 +199,8 @@ body.app-body {
 	width: 600px;
 }
 
-.text .item {
-	height: 40px !important;
+.text.ui.menu .item {
+	height: 40px;
 }
 
 
@@ -244,21 +244,21 @@ div.vocab-side-menu{
 	width: 20%;
 }
 
-.input-form{
-	width: 100% !important;
+.input-form.ui.form {
+	width: 100%;
 }
 
 .input-form .field input[type="file"]{
 
 }
 
-.modal-form {
-	padding: 15px !important;
+.modal-form.ui.modal {
+	padding: 15px;
 }
 
 /* vocab list */
 
-.vocab-list.list{
+.vocab-list.list {
 	width: 100%;
 	margin-bottom: 0;
 	background: #fff; 
@@ -272,16 +272,16 @@ div.vocab-side-menu{
 	justify-content: space-between;
 }
 
-.ui.list.vocab-list .item .content{
+.ui.list.vocab-list .item .content {
 	display: flex;
 	align-items: center;
 }
 
-.vocab-list .item .content button{
+.vocab-list .item .content button {
 	margin: 0 5px;	
 }
 
-.ui.buttons .word-icon-wrapper{
+.ui.buttons .word-icon-wrapper {
 	width: 40px;
 	height: 40px;
 	display: flex;
@@ -293,25 +293,25 @@ div.vocab-side-menu{
 	margin: 0 10px;
 }
 
-.ui.buttons .word-icon-wrapper:hover{
+.ui.buttons .word-icon-wrapper:hover {
 	color: #3281F0;
 	border-color: #3281F0; 
 }
 
-.ui.buttons .word-icon-wrapper i{
+.ui.buttons .word-icon-wrapper i {
 	font-size: 20px;
 	margin: 0;
 }
 
-.vocab-list .item:hover .vocab-list .item .content button{
+.vocab-list .item:hover .vocab-list .item .content button {
 	visibility: visible;
 }
 
-.vocab-list .item .content .description{
+.vocab-list .item .content .description {
 	color: #fff;
 }
 
-.ui.list.vocab-list .item .content.word-content{
+.ui.list.vocab-list .item .content.word-content {
 	padding-left: 12px;
 	padding-right: 12px;
 	display: flex;
@@ -544,20 +544,22 @@ button.ui.button a.training-link{
 .card-final-wrapper .card .content{
 	height: auto !important;
 }
+
 /* Image wrapper in card section */
-.card-image-wrapper{
-	width: 100% !important;
-	height: 230px !important;
-	overflow: hidden !important;	
+
+.ui.card.card-training .card-image-wrapper {
+	width: 100%;
+	height: 230px;
+	overflow: hidden;	
 }
 
-.card-image-wrapper img{
-	width: 100% !important;
-	height: auto !important;
+.ui.card.card-training .card-image-wrapper img.ui.image {
+	width: 100%;
+	height: auto;
 }
 
-.ui .buttons:after{
-	display: none !important;
+.ui.buttons:after {
+	display: none;
 }
 
 /* Audio */
@@ -572,9 +574,7 @@ button.ui.button a.training-link{
 	align-items: center !important;
 	justify-content: center !important;
 	width: 100% !important;
-	height: 200px !important;
-	
-	
+	height: 200px !important;	
 }
 
 .audio-training .content {
@@ -1014,7 +1014,7 @@ button.ui.button a.training-link{
 	cursor: pointer;	
 }
 
-.construct-word-container.ui.container ul input,.construct-word-container.ui.container ul li{
+.construct-word-container.ui.container ul input, .construct-word-container.ui.container ul li{
 	height: 40px;
 	width: 50px;
 	display: flex;
@@ -1024,7 +1024,7 @@ button.ui.button a.training-link{
 	font-size: 26px;
 	border-radius: 2px;
 	margin: 0 2px;
-	outline: none !important;
+	outline: none;
 	border: 1px solid grey;
 	text-align: center;
 }
@@ -1039,8 +1039,12 @@ button.ui.button a.training-link{
 
 /* vocab-top-menu */
 
+.vocab-top-menu .ui.menu:not(.vertical) .item > .input.ui.icon {
+	margin-top: 0;
+}
+
 .vocab-top-menu .item input{
-	margin-top: -4px !important;
+	margin-top: -4px;
 }
 
 .vocab-top-menu-wrapper.ui.text{
@@ -1161,9 +1165,9 @@ footer {
 	background: #3281F0;
 }
 
-.top-menu.ui.menu .item {
-	padding: 0 !important;
-	border-radius: 0 !important;
+.top-menu.ui.menu .item.item-link {
+	padding: 0;
+	border-radius: 0;
 }
 
 .top-menu.ui.menu .item a {
@@ -1421,9 +1425,9 @@ footer {
 	min-height: 150px;
 }
 
-.grammar-item-description {
-	background: #f6f6f6 !important;
-	margin-bottom: 10px !important;
+.content .description.grammar-item-description {
+	background: #f6f6f6;
+	margin-bottom: 10px;
 }
 
 .ui.card > .grammar-button-container.content {
@@ -1517,81 +1521,10 @@ footer {
 	margin-bottom: 14px;
 }
 
-
 .card-final-wrapper .audio-list-container{
 	height: 250px !important;
 }
 
-/* Pronunciation */
-
-/*
-.pronunciation-card{
-	width: 450px !important;
-}
-
-.pronunciation-card{
-	margin: 40px 0 !important;
-}
-
-.pronunciation-text{
-	border-bottom: 1px solid #E5E5E5;
-}
-
-.pronunciation-text, .pronunciation-transcription{
-	text-align: center !important;
-	width: 600px !important;
-	height: 100px !important;
-	display: flex !important;
-	justify-content: center !important;
-	align-items: center !important;
-}
-
-.pronunciation-clear-wrapper{
-	display: flex;
-	cursor: pointer !important;
-	margin-left: 10px;
-}
-.pronunciation-clear-wrapper:hover .triangle{
-	border-color: transparent #444444 transparent transparent;
-}
-
-.pronunciation-clear-wrapper:hover .pronunciation-clear{
-	background: #444444;
-}
-
-.transcription-text{
-	font-size: 18px; 
-}
-
-.triangle{
-	display: block;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 15px 15px 15px 0;
-	border-color: transparent #333333 transparent transparent;	
-}
-
-.pronunciation-clear{
-	background: #333333;
-	color: #fff !important;
-	padding: 5px;
-}
-
-.pronunciation-clear i{
-	margin: 0 !important;
-}
-
-.pronunciation-header{
-	background: #333333;
-	color: #fff !important;
-}
-
-.pronunciation-transcription{
-	height: 100px !important;
-	margin: 0 !important;
-}
-*/
 /* tests */
 
 .single-test-form.ui.form {
@@ -1669,8 +1602,8 @@ footer {
 	color: #fff;
 }
 
-.test-card .ui.button {
-	color: #fff !important;
+.test-card.ui.card.test-item .ui.button {
+	color: #fff;
 }
 
 .tests-card-title.header h3 {
@@ -2598,9 +2531,9 @@ footer {
 
 /* main section */
 
-.main-section{
+.main-section {
 	width: 100%;
-	height: 700px !important;
+	height: 700px;
 }
 
 .content-wrapper .section-1 {
@@ -2805,7 +2738,7 @@ footer {
 }
 
 .settings-list {
-	width: 100% !important;
+	width: 100%;
 }
 
 .settings-list .item{
@@ -3438,7 +3371,7 @@ a.outline-link:hover {
 	top: 60px;
 	left: -60px;
 	margin: 0 10px;
-	width: 100px !important;
+	width: 100px;
 	-webkit-transform: rotate(270deg);
 	-ms-transform: rotate(270deg);
 	transform: rotate(270deg);
