@@ -103,14 +103,13 @@ class EnglishToRussian extends Component {
 
       else {
         let words = this.state.positiveWords.slice();
-        let engToRusWords = this.props.store.engToRusWords.slice();
+        let engToRusWords = this.props.store.exercises.engToRusWords.slice();
         for (var i = 0; i < words.length; i++) {
           if (!(engToRusWords.find(el => el.id === words[i].id))) {
             words[i]["date"] = new Date();
             this.props.actions.updateEngToRus(words[i])
           }
         }
-        console.log(this.props.store.engToRusWords);
         this.setState({
           isFinalVisible: true,
           isTranslationVisible: false,

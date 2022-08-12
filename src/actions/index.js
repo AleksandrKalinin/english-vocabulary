@@ -175,7 +175,42 @@ let actions = {
 			type: 'UPDATE_TRUE_OR_FALSE',
 			payload: word
 		}		
-	}														
+	},
+
+	updateRecreateTxt: function(word) {
+		return {
+			type: 'UPDATE_RECREATE_TXT',
+			payload: word
+		}		
+	},
+
+	updateRecreateAudioTxt: function(word) {
+		return {
+			type: 'UPDATE_RECREATE_AUDIOTXT',
+			payload: word
+		}		
+	},
+
+	updateFillTheGaps: function(word) {
+		return {
+			type: 'UPDATE_FILL_THE_GAPS',
+			payload: word
+		}		
+	},
+
+	updatePlaceSpaces: function(word) {
+		return {
+			type: 'UPDATE_PLACE_SPACES',
+			payload: word
+		}		
+	},	
+
+	updateCommonPhrases: function(word) {
+		return {
+			type: 'UPDATE_COMMON_PHRASES',
+			payload: word
+		}		
+	}	
 
 }
 

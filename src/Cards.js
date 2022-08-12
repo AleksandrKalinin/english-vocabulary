@@ -108,7 +108,7 @@ class Cards extends Component {
       }
       else {
         let words = this.state.positiveWords.slice();
-        let cardWords = this.props.store.cardWords.slice();
+        let cardWords = this.props.store.exercises.cardWords.slice();
         for (var i = 0; i < words.length; i++) {
           if (!(cardWords.find(el => el.id === words[i].id))) {
             words[i]["learnedDate"] = new Date();
@@ -251,7 +251,7 @@ class Cards extends Component {
 }
 
 function mapStateToProps(state) {
-  return {store: state.reducer}
+  return {store: state.exercisesReducer}
 }
 
 function mapDispatchToProps(dispatch) {

@@ -5,6 +5,9 @@ import axios from 'axios';
 import speech from 'speech-synth';
 import {Link} from "react-router-dom";
 
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
 
 class Proverbs extends Component {
 
@@ -340,4 +343,13 @@ class Proverbs extends Component {
   }
 }
 
-export default Proverbs;
+
+function mapStateToProps(state) {
+  return {store: state.exercisesReducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Proverbs);

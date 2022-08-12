@@ -102,7 +102,7 @@ continueTraining = () =>{
 
   else {
     let words = this.state.positiveWords.slice();
-    let rusToEngWords = this.props.store.rusToEngWords.slice();
+    let rusToEngWords = this.props.store.exercises.rusToEngWords.slice();
     for (var i = 0; i < words.length; i++) {
       if (!(rusToEngWords.find(el => el.id === words[i].id))) {
         words[i]["learnedDate"] = new Date();
@@ -136,20 +136,20 @@ showImage = ()=>{
   })
 }
 
-   compareWord = (id) =>{
-    let selectedWord = this.state.result[this.state.id].find(x => x.id === id);
-    var positiveWords = this.state.positiveWords.slice();
-    var negativeWords = this.state.negativeWords.slice();    
-    if(this.state.currentWord.id === selectedWord.id){
-      positiveWords.push(this.state.currentWord);
-      this.setState({
-        isImageVisible: true,
-        flagState: true,
-        positiveWords,
-        negativeWords,
-        disabled: true
-      })
-    }
+ compareWord = (id) =>{
+  let selectedWord = this.state.result[this.state.id].find(x => x.id === id);
+  var positiveWords = this.state.positiveWords.slice();
+  var negativeWords = this.state.negativeWords.slice();    
+  if(this.state.currentWord.id === selectedWord.id){
+    positiveWords.push(this.state.currentWord);
+    this.setState({
+      isImageVisible: true,
+      flagState: true,
+      positiveWords,
+      negativeWords,
+      disabled: true
+    })
+  }
 
     else {
       negativeWords.push(this.state.currentWord);
@@ -294,7 +294,7 @@ render() {
 }
 
 function mapStateToProps(state) {
-  return {store: state.reducer}
+  return {store: state.exercisesReducer}
 }
 
 function mapDispatchToProps(dispatch) {

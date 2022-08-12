@@ -162,7 +162,7 @@
     all: unset;
 }
 
-button{
+button.button:not(.audio-button) {
 	border-radius: 0 !important;
 }
 
@@ -359,15 +359,7 @@ div.vocab-side-menu{
 .card-image-wrapper .ui.image {
 
 }
-/*
-.card-container {
-	display: flex !important;
-	justify-content: center;
-	align-items: center !important;
-	width: 100% !important;
-	height: 100% !important;
-}
-*/
+
 .ui.one.cards>.ui.card.card-training {
 	width: 400px;
 }
@@ -564,49 +556,49 @@ button.ui.button a.training-link{
 
 /* Audio */
 
-.audio-header-wrapper .card{
-	width: 600px !important;
+.audio-header-wrapper .card.ui.audio-training{
+	width: 600px;
 }
 
-.audio-header{
-	display: flex !important;
-	flex-direction: column !important;
-	align-items: center !important;
-	justify-content: center !important;
-	width: 100% !important;
-	height: 200px !important;	
+.audio-header-wrapper .card.ui.audio-training .content .audio-header.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 200px;	
 }
 
-.audio-training .content {
-	padding: 0 !important;
+.audio-header-wrapper .card.ui.audio-training .content {
+	padding: 0;
 	text-align: center;
-	padding: 15px 0 !important;
+	padding: 15px 0;
 }
 
-.audio-training .extra{
-	padding: 0.75em !important;
-	background: #F6F6F6 !important;
+.audio-header-wrapper .card.ui.audio-training .extra.content {
+	padding: 0.75em;
+	background: #F6F6F6;
 	height: 150px;
 }
 
-.audio-header button{
-	margin-bottom: 30px !important;
-	margin-right: 0 !important;
-	width: 80px !important;
-	height: 80px !important;
-	border-radius: 50% !important;
+.audio-header.header button.ui.primary.button.audio-button {
+	margin-bottom: 30px;
+	margin-right: 0;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
 }
 
-.audio-header button i{
-	margin: 0 !important;
+.audio-header.header button.ui.button > .icon:not(.button):not(.dropdown){
+	margin: 0;
 }
 
-.audio-header .input input{
-	width: 400px !important;
-	background: #F6F6F6 !important;
+.audio-header.header .input.ui input {
+	width: 400px;
+	background: #F6F6F6;
 }
 
-.audio-buttons-wrapper{
+.audio-buttons-wrapper {
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -614,32 +606,33 @@ button.ui.button a.training-link{
 	align-items: center;
 }
 
-.audio-buttons-wrapper button{
-	height: 40px !important;
+.audio-buttons-wrapper button.ui.primary.button {
+	height: 40px;
 }
 
-.audio-image-wrapper{
-	width: 120px !important;
-	height: 120px !important;
-	overflow: hidden !important;
-	position: relative !important;
+.extra.content .audio-image-outer-wrapper .audio-image-wrapper {
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;	
 }
 
-.audio-image-outer-wrapper{
-	position: absolute !important;
-	width: 120px !important;
-	height: 120px !important;	
+.extra.content .audio-image-outer-wrapper {
+	position: absolute;
+	width: 120px;
+	height: 120px;	
 }
 
-.audio-image-wrapper img{
-	width: 100% !important;
-	height: auto !important;
+.extra.content .audio-image-outer-wrapper .audio-image-wrapper img.ui.image {
+	width: 100%;
+	height: auto;
 	object-fit: cover;
 }
-.audio-image-text{
+
+.extra.content .audio-image-outer-wrapper .audio-image-text {
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -651,22 +644,22 @@ button.ui.button a.training-link{
 	color: white;
 }
 
-.audio-image-text a{
+.audio-image-text a {
 	color: white;
 }
 
-.audio-training.ui.card .content .audio-name{
+.audio-training.ui.card .content .audio-name {
 	color: green;
 	font-size: 20px;
 	font-weight: 700;
 	margin-bottom: 15px;
 }
 
-.audio-training.ui.card .content .audio-description{
-	font-size: 18px !important;
+.audio-training.ui.card .content .audio-description.description {
+	font-size: 18px;
 }
 
-.audio-training.ui.card .content  .audio-name-red, .audio-name-red{
+.audio-training.ui.card .content  .audio-name-red, .audio-name-red {
 	color: red;
 	font-size: 20px;
 	font-weight: 700;
@@ -674,25 +667,25 @@ button.ui.button a.training-link{
 	text-decoration: line-through;	
 }
 
-.audio-training.ui.card .content  .audio-name-green, .audio-name-green{
+.audio-training.ui.card .content  .audio-name-green, .audio-name-green {
 	color: green;
 	font-size: 20px;
 	font-weight: 700;
 	margin-bottom: 15px;	
 }
 
-.audio-list-container{
-	height: 150px !important;
+.audio-list-container.description {
+	height: 150px;
 	display: flex;
 	justify-content: center;
 	margin: 15px 0;
 }
 
-.audio-list-item{
-	text-align: left !important;
+.audio-list-item {
+	text-align: left;
 }
 
-.audio-list-container .message{
+.audio-list-container .message {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -702,21 +695,20 @@ button.ui.button a.training-link{
 	margin-bottom: 6px;
 }
 
-.audio-list{
-	height: auto !important;
+.audio-list.ui.list {
+	height: auto;
 }
 
-.audio-list .item{
-	padding: 7px 0 !important;
+.audio-list.ui.list .item{
+	padding: 7px 0;
 	font-size: 18px;
-	text-align: left !important;
-
+	text-align: left;
 }
 
-.audio-list .item span{
+.audio-list.ui.list .item span{
 	font-weight: 700;
-	color: #3281F0 !important;
-	margin-right: 5px !important;
+	color: #3281F0;
+	margin-right: 5px;
 }
 
 /* english to russian training */
@@ -1521,8 +1513,8 @@ footer {
 	margin-bottom: 14px;
 }
 
-.card-final-wrapper .audio-list-container{
-	height: 250px !important;
+.card-final-wrapper .card-training .content .audio-list-container{
+	height: 250px;
 }
 
 /* tests */

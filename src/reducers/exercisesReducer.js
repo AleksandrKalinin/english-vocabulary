@@ -235,7 +235,32 @@ let exercisesReducer = (state = initialState, action) => {
 		case 'UPDATE_CARD_WORDS':
 			return {
 				...state,
-				cardWords: [...state.trueOrFalseWords, action.payload] }
+				cardWords: [...state.cardWords, action.payload] }
+
+		case 'UPDATE_RECREATE_TXT':
+			return {
+				...state,
+				recreateTxt : [...state.recreateTxt, action.payload] }
+
+		case 'UPDATE_RECREATE_AUDIOTXT':
+			return {
+				...state,
+				recreateAudioTxt: [...state.recreateAudioTxt, action.payload] }
+
+		case 'UPDATE_FILL_THE_GAPS':
+			return {
+				...state,
+				fillTheGaps: [...state.fillTheGaps, action.payload] }
+
+		case 'UPDATE_PLACE_SPACES':
+			return {
+				...state,
+				placeSpaces: [...state.placeSpaces, action.payload] }
+
+		case 'UPDATE_COMMON_PHRASES':
+			return {
+				...state,
+				commonPhrases: [...state.commonPhrases, action.payload] }																						
 
 		default: return state;		
 	}

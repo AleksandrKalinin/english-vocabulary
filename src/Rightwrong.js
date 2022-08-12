@@ -110,7 +110,7 @@ class Rightwrong extends Component {
       }
       else {
         let words = this.state.positiveWords.slice();
-        let trueOrFalseWords = this.props.store.trueOrFalseWords.slice();
+        let trueOrFalseWords = this.props.store.exercises.trueOrFalseWords.slice();
         for (var i = 0; i < words.length; i++) {
           if (!(trueOrFalseWords.find(el => el.id === words[i].id))) {
             words[i]["learnedDate"] = new Date();
@@ -249,7 +249,7 @@ class Rightwrong extends Component {
 }
 
 function mapStateToProps(state) {
-  return {store: state.reducer}
+  return {store: state.exercisesReducer}
 }
 
 function mapDispatchToProps(dispatch) {

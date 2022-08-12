@@ -4,6 +4,11 @@ import TopMenu from './TopMenu'
 import axios from 'axios';
 import speech from 'speech-synth';
 import SpeechRecognition from 'react-speech-recognition'
+import { v4 as uuidv4 } from 'uuid';
+
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
 
 class RecreateText extends Component {
 
@@ -269,7 +274,11 @@ class RecreateText extends Component {
       let time = this.state.totalSecondsSpent;
       let minutesSpent = Math.floor(time / 60);
       let secondsSpent = this.state.totalSecondsSpent - (minutesSpent * 60);
-
+      let exercise = {};
+      exercise.id = uuidv4();
+      exercise.date = new Date();
+      exercise.score = this.state.rightAnswers;
+      this.props.updateRecreateTxt(exercise);
       clearInterval(this.state.intervalHandle);
       this.setState({
         isResultVisible: true,
@@ -455,4 +464,12 @@ class RecreateText extends Component {
   }
 }
 
-export default RecreateText;
+function mapStateToProps(state) {
+  return {store: state.exercisesReducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecreateText);

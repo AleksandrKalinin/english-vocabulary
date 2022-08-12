@@ -5,6 +5,12 @@ import axios from 'axios';
 import speech from 'speech-synth';
 import SpeechRecognition from 'react-speech-recognition';
 import {Link} from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
+
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
+
 
 class InsertSpaces extends Component {
 
@@ -265,4 +271,12 @@ setCaretPosition = (ctrl, pos) => {
   }
 }
 
-export default InsertSpaces;
+function mapStateToProps(state) {
+  return {store: state.exercisesReducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(InsertSpaces);

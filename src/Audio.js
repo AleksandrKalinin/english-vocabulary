@@ -23,6 +23,57 @@ class Audio extends Component {
     this.setStateOnStart()
   }
 
+   setStateOnStart = () => {
+      this.setState({
+        words: [],
+        negativeWords: [],
+        positiveWords: [],
+        id: 0,
+        isCardVisible: false,
+        isButtonVisible: true,
+        isTranslationVisible: false,
+        showNavButtons: true,
+        showContinueButton: false,
+        isFinalVisible: false,
+        correctNameVisible: false,
+        correctName: null,
+        correctNameClass: 'audio-name-green',
+        isImageVisible: false,
+        isLinkVisible: true,
+        isInputVisible: true,
+        search: '',
+        tempSearch: '',
+        metaClass: 'blue',
+        nameClass: ''         
+      }, () => this.initialLoad())
+   }
+
+   initialLoad = () => {
+    var id = this.state.id;
+      axios.get('/working.json')
+        .then(res => {
+          const words = res.data;
+          let result = [];
+          for (var i = 0; i < 3; i++) {
+            let item = [];
+            while(item.length < 5) {
+              var el = words[Math.floor(Math.random() * words.length)];
+              if (item.indexOf(el) === -1) {
+                item.push(el)
+              };                
+            }
+            result.push(item);
+          }
+
+          const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
+
+          this.setState({ 
+            words, 
+            currentWord,
+            result });
+        })
+   }
+
     startTraining = () =>{
       this.setState({
         isButtonVisible: false,
@@ -113,7 +164,7 @@ class Audio extends Component {
 
       else {
         let words = this.state.positiveWords.slice();
-        let audioWords = this.props.store.audioWords.slice();
+        let audioWords = this.props.store.exercises.audioWords.slice();
         for (var i = 0; i < words.length; i++) {
           if (!(audioWords.find(el => el.id === words[i].id))) {
             words[i]["learnedDate"] = new Date();
@@ -148,57 +199,6 @@ class Audio extends Component {
     })
    }
 
-   setStateOnStart = () => {
-      this.setState({
-        words: [],
-        negativeWords: [],
-        positiveWords: [],
-        id: 0,
-        isCardVisible: false,
-        isButtonVisible: true,
-        isTranslationVisible: false,
-        showNavButtons: true,
-        showContinueButton: false,
-        isFinalVisible: false,
-        correctNameVisible: false,
-        correctName: null,
-        correctNameClass: 'audio-name-green',
-        isImageVisible: false,
-        isLinkVisible: true,
-        isInputVisible: true,
-        search: '',
-        tempSearch: '',
-        metaClass: 'blue',
-        nameClass: ''         
-      }, () => this.initialLoad())
-   }
-
-   initialLoad = () => {
-    var id = this.state.id;
-      axios.get('/working.json')
-        .then(res => {
-          const words = res.data;
-          let result = [];
-          for (var i = 0; i < 3; i++) {
-            let item = [];
-            while(item.length < 5) {
-              var el = words[Math.floor(Math.random() * words.length)];
-              if (item.indexOf(el) === -1) {
-                item.push(el)
-              };                
-            }
-            result.push(item);
-          }
-
-          const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
-
-          this.setState({ 
-            words, 
-            currentWord,
-            result }, () => console.log(this.state.result));
-        })
-   }
-
   render() {
     return (
       <Fragment>
@@ -225,7 +225,7 @@ class Audio extends Component {
              <Card className="audio-training"  >
                 <Card.Content>
                   <Card.Header className="audio-header">
-                    <Button onClick={this.voiceWord} primary><Icon size="big" name="microphone"></Icon></Button>
+                    <Button onClick={this.voiceWord} primary className="audio-button"><Icon size="big" name="microphone"></Icon></Button>
                     {this.state.isInputVisible ?
                       <Input placeholder="Введите прослушанное слово" id="audo-input" onChange={this.updateSearch}/>:null
 
@@ -250,7 +250,7 @@ class Audio extends Component {
                  {this.state.isLinkVisible ?
                    <div className="audio-image-text">
                        <a onClick={this.showImage}>Show hint</a>
-                   </div> :null
+                   </div> : null
                   }                 
                 </div>
                   <Button.Group className="audio-buttons-wrapper">
@@ -331,7 +331,7 @@ class Audio extends Component {
 }
 
 function mapStateToProps(state) {
-  return {store: state.reducer}
+  return {store: state.exercisesReducer}
 }
 
 function mapDispatchToProps(dispatch) {

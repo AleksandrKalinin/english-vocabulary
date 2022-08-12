@@ -2,10 +2,14 @@ import React, { Component, Fragment } from 'react';
 import { Card, Image, Button, Divider, Icon, List, Message, Label, Menu, Dropdown} from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import axios from 'axios';
-//import speech from 'speech-synth';
-import Speech from 'speak-tts'
-import SpeechRecognition from 'react-speech-recognition'
+import Speech from 'speak-tts';
+import SpeechRecognition from 'react-speech-recognition';
 import { Howl } from "howler";
+ import { v4 as uuidv4 } from 'uuid';
+
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
 
 class RecreateAudioText extends Component {
 
@@ -27,7 +31,7 @@ class RecreateAudioText extends Component {
         currentTrack: null,
         playing: false,
         seconds: '00',   // responsible for the seconds 
-        minutes: '0.1',  // responsible for the minutes
+        minutes: '5',  // responsible for the minutes
         secondsRemaining: 0,
         intervalHandle: 0,
         wrongIndexes: [],
@@ -317,7 +321,11 @@ class RecreateAudioText extends Component {
       let time = this.state.totalSecondsSpent;
       let minutesSpent = Math.floor(time / 60);
       let secondsSpent = this.state.totalSecondsSpent - (minutesSpent * 60);
-
+      let exercise = {};
+      exercise.id = uuidv4();
+      exercise.date = new Date();
+      exercise.score = this.state.rightAnswers;
+      this.props.updateRecreateAudioTxt(exercise);
       clearInterval(intervalHandle);
       this.setState({
         isResultVisible: true,
@@ -469,4 +477,12 @@ class RecreateAudioText extends Component {
   }
 }
 
-export default RecreateAudioText;
+function mapStateToProps(state) {
+  return {store: state.exercisesReducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecreateAudioText);

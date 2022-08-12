@@ -208,7 +208,7 @@ class ConstructWord extends Component {
       }
         else {
           let words = this.state.positiveWords.slice();
-          let constructWords = this.props.store.constructWords.slice();
+          let constructWords = this.props.store.exercises.constructWords.slice();
           for (var i = 0; i < words.length; i++) {
             if (!(constructWords.find(el => el.id === words[i].id))) {
               words[i]["learnedDate"] = new Date();
@@ -393,7 +393,7 @@ class ConstructWord extends Component {
 }
 
 function mapStateToProps(state) {
-  return {store: state.reducer}
+  return {store: state.exercisesReducer}
 }
 
 function mapDispatchToProps(dispatch) {
