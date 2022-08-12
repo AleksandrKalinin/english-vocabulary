@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import TopMenu from './TopMenu';
 import axios from 'axios';
 import speech from 'speech-synth';
+import { v4 as uuidv4 } from 'uuid';
 
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
@@ -108,13 +109,17 @@ class Cards extends Component {
       }
       else {
         let words = this.state.positiveWords.slice();
-        let cardWords = this.props.store.exercises.cardWords.slice();
+        let exercise = {}, wordsTrained = [];
+        exercise.id = uuidv4();
+        exercise.date = new Date();
+        exercise.score = this.state.positiveWords.length;
         for (var i = 0; i < words.length; i++) {
-          if (!(cardWords.find(el => el.id === words[i].id))) {
-            words[i]["learnedDate"] = new Date();
-            this.props.actions.updateCardWords(words[i])
-          }
-        } 
+          wordsTrained.push(words[i].id)
+        }
+        exercise.wordsTrained = wordsTrained;
+
+        this.props.actions.updateCardWords(exercise);
+
         this.setState({
             isFinalVisible: true,
             isTranslationVisible: false,
@@ -235,6 +240,7 @@ class Cards extends Component {
                     </div>
                   </Card.Description>
                   <Button.Group className="card-buttons-wrapper">
+                    <Button primary onClick={() => console.log(this.props.store.exercises)}>Console</Button>
                     <Button primary onClick={this.setStateOnStart}>Продолжить</Button>
                     <Button primary><Link className="training-link" to="/training">К тренировкам</Link></Button>
                   </Button.Group>

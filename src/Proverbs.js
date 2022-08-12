@@ -4,13 +4,13 @@ import TopMenu from './TopMenu';
 import axios from 'axios';
 import speech from 'speech-synth';
 import {Link} from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
 
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
 import {connect} from 'react-redux';
 
 class Proverbs extends Component {
-
 	constructor(props){
 		super(props);
   		this.state = {
@@ -73,7 +73,12 @@ class Proverbs extends Component {
             nameClass: ''
         })
       }
-      else{
+      else {
+        let exercise = {};
+        exercise.id = uuidv4();
+        exercise.date = new Date();
+        exercise.score = this.state.positiveProverbs.length; 
+        this.props.updateCommonPhrases(exercise);       
         this.setState({
           isFinalVisible: true,
           isCardVisible: false,
@@ -95,9 +100,8 @@ class Proverbs extends Component {
     let currentArray = this.state.currentArray;
     currentArray.splice(indexTarget,1);
     constructedProverb.push(e.target.textContent);
-
     this.setState({
-      constructedProverb: constructedProverb
+      constructedProverb
     })
     if(currentArray.length == 0){
       this.setState({

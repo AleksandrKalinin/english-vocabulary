@@ -5,7 +5,7 @@ import axios from 'axios';
 import Speech from 'speak-tts';
 import SpeechRecognition from 'react-speech-recognition';
 import { Howl } from "howler";
- import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
@@ -304,7 +304,6 @@ class RecreateAudioText extends Component {
       wrongIndexes,
       rightAnswers
     })
-
   }
 
 

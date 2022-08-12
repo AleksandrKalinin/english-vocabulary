@@ -89,13 +89,11 @@ class InsertSpaces extends Component {
   showFinal = () =>{
       this.setState({
         isResultVisible: true,
-        isTaskStarted: false
-   
+        isTaskStarted: false   
       })
   }
 
 setCaretPosition = (ctrl, pos) => {
-
   if (ctrl.setSelectionRange) {
     ctrl.focus();
     ctrl.setSelectionRange(pos, pos);

@@ -15,6 +15,7 @@ let initialState = {
 					"score": 3
 				}
 			],
+
 		"rusToEngWords":
 			[
 				{
@@ -30,6 +31,7 @@ let initialState = {
 					"score": 3
 				}
 			],
+
 		"audioWords": 
 			[
 				{
@@ -183,7 +185,6 @@ let initialState = {
 	"totalScore": 187,
 	"exercisesComplete": 22,
 	"testsComplete": 2
-
 };
 
 
@@ -232,10 +233,10 @@ let exercisesReducer = (state = initialState, action) => {
 				...state,
 				trueOrFalseWords: [...state.trueOrFalseWords, action.payload] }
 
-		case 'UPDATE_CARD_WORDS':
+		case 'UPDATE_CARD_WORDS':			
 			return {
 				...state,
-				cardWords: [...state.cardWords, action.payload] }
+				state.exercises: {...state.exercises, [exercises.cardWords]: [] } }
 
 		case 'UPDATE_RECREATE_TXT':
 			return {

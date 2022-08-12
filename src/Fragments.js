@@ -3,6 +3,12 @@ import {Image, Button,Card, Menu, Input,Dropdown, Icon } from 'semantic-ui-react
 import TopMenu from './TopMenu'
 import {Link} from "react-router-dom";
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
+
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
+
 
 class Fragments extends Component {
 
@@ -277,6 +283,7 @@ class Fragments extends Component {
     		
     	}
     	let rightAnswers = count;
+      let exercise = {};
     	this.setState({
     		isCheckButtonVisible: false,
     		isResultVisible: true,
@@ -393,4 +400,12 @@ class Fragments extends Component {
   }
 }
 
-export default Fragments;
+function mapStateToProps(state) {
+  return {store: state.exercisesReducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Fragments);

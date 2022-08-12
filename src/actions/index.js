@@ -138,7 +138,6 @@ let actions = {
 		}		
 	},
 	updateEngToRus: function(word) {
-		console.log("fired")
 		return {
 			type: 'UPDATE_ENG_TO_RUS',
 			payload: word
