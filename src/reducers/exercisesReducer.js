@@ -85,14 +85,14 @@ let initialState = {
 				{
 					"id": 234,
 					"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987],
-					"score": 3
+					"score": 3,
+					"wordsTrained": [32, 47, 987]
 				},
 				{
 					"id": 34,
 					"date": "Sun Jul 23 2022 20:07:21 GMT+0300 (Москва, стандартное время)",
-					"wordsTrained": [32, 47, 987, 43, 89],
-					"score": 5
+					"score": 3,
+					"wordsTrained": [32, 47, 987, 43, 89]
 				}								
 			],
 

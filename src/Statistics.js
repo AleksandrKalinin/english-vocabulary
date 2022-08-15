@@ -208,14 +208,22 @@ class Statistics extends Component {
   }
 
   countWords = (params, name) => {
-    let total;
+    console.log(params, name);
+    for (var i = 0; i < params.length; i++) {
+      console.log(params[i].wordsTrained.length);
+    }
+    let total = 0;
     if (params.length > 1) {
-      total = params.reduce((a, b) => a.wordsTrained.length + b.wordsTrained.length);
+      for (var i = 0; i < params.length; i++) {
+        total += params[i].wordsTrained.length;
+      }
+      //total = params.reduce((a, b) => a.wordsTrained.length + b.wordsTrained.length);
     } else if (params.length === 1) {
       total = params[0].wordsTrained.length;
     } else {
       total = 0;
-    }    
+    }
+    console.log(total, " for ", name)    
     this.setState({
       [name]: total
     })
@@ -692,6 +700,7 @@ class Statistics extends Component {
               </Card.Group>
           </div>
         </div>
+        <Button primary onClick={() => console.log(this.props)}>Console</Button>
         <footer></footer>
       </Fragment>
 	);

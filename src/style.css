@@ -699,9 +699,13 @@ button.ui.button a.training-link{
 	height: auto;
 }
 
+.audio-list.ui.list h2 {
+	font-size: 18px;
+}
+
 .audio-list.ui.list .item{
 	padding: 7px 0;
-	font-size: 18px;
+	font-size: 16px;
 	text-align: left;
 }
 
