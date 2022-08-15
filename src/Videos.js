@@ -42,7 +42,7 @@ class Videos extends Component {
     }
 
     cons = () =>{
-      console.log(this.state);
+      console.log (this.state);
     }
 
     loadMore = () => {
@@ -55,31 +55,31 @@ class Videos extends Component {
     return (
       <Fragment>
         <div className="content-wrapper">
-        <TopMenu/>
-        <Button onClick={this.cons} >console</Button>
-        <Card.Group itemsPerRow={4} className="videos-container">
-          {this.state.videos.slice(0,this.state.visible).map((video,index) =>
-            <Card key={index}>
-              <Image src={video.image} />
-              <Card.Content className="video-wrapper">
-                <Card.Header>{video.name}</Card.Header>
-                <Card.Description>{video.description}</Card.Description>
-              </Card.Content>
-              <Card.Content extra className="video-extra">
-                 <Link to={video.link}>{video.name}</Link>
-              </Card.Content>
-            </Card> 
-          )}                                                                           
-        </Card.Group>
-           <div className="load-more-button">
+          <TopMenu/>
+          <Button onClick={this.cons} >console</Button>
+          <Card.Group itemsPerRow={4} className="videos-container">
+            {this.state.videos.slice(0,this.state.visible).map((video,index) =>
+              <Card key={index}>
+                <Image src={video.image} />
+                <Card.Content className="video-wrapper">
+                  <Card.Header>{video.name}</Card.Header>
+                  <Card.Description>{video.description}</Card.Description>
+                </Card.Content>
+                <Card.Content extra className="video-extra">
+                   <Link to={{ pathname: `/videos/${video.id}`,  query: {video } }}>{video.name}</Link>
+                </Card.Content>
+              </Card> 
+            )}                                                                           
+          </Card.Group>
+          <div className="load-more-button">
             {this.state.visible < this.state.videos.length &&
-                    <Button onClick={this.loadMore} primary>Загрузить</Button>
-                  }                 
+              <Button onClick={this.loadMore} primary>Загрузить</Button>
+            }                 
           </div>
-          </div>
-          <footer></footer>
-       </Fragment>
-  );
+        </div>
+        <footer></footer>
+      </Fragment>
+    );
   } 
 
 

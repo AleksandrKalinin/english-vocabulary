@@ -151,9 +151,6 @@ class Statistics extends Component {
 	}
 
   componentDidMount() {
-    console.log(this.props.store);
-    console.log(this.props.resultsStore);
-    console.log(this.props.testsStore);
     let exercises = this.props.store;
     for (var prop in exercises) {
       let val = exercises[prop];
@@ -208,10 +205,6 @@ class Statistics extends Component {
   }
 
   countWords = (params, name) => {
-    console.log(params, name);
-    for (var i = 0; i < params.length; i++) {
-      console.log(params[i].wordsTrained.length);
-    }
     let total = 0;
     if (params.length > 1) {
       for (var i = 0; i < params.length; i++) {
@@ -223,7 +216,6 @@ class Statistics extends Component {
     } else {
       total = 0;
     }
-    console.log(total, " for ", name)    
     this.setState({
       [name]: total
     })
@@ -621,7 +613,7 @@ class Statistics extends Component {
                     <Card.Header className="statistics-wrapper-header">Слов изучено</Card.Header>
                     <div className="statistics-menu">
                       {this.state.wordMenu.map((item, index) => 
-                        <a onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
+                        <a key={item.id} onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
                       )}
                     </div>
                     {this.state.wordsLoaded ?
@@ -671,7 +663,7 @@ class Statistics extends Component {
                     <Card.Header className="statistics-wrapper-header">Тесты</Card.Header>
                     <div className="statistics-menu">
                       {this.state.testMenu.map((item, index) => 
-                        <a onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
+                        <a key = {item.id} onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
                       )}
                     </div>     
                     {this.state.testsLoaded ?               
@@ -700,7 +692,6 @@ class Statistics extends Component {
               </Card.Group>
           </div>
         </div>
-        <Button primary onClick={() => console.log(this.props)}>Console</Button>
         <footer></footer>
       </Fragment>
 	);

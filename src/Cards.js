@@ -239,7 +239,6 @@ class Cards extends Component {
                     </div>
                   </Card.Description>
                   <Button.Group className="card-buttons-wrapper">
-                    <Button primary onClick={() => console.log(this.props)}>Console</Button>
                     <Button primary onClick={this.setStateOnStart}>Продолжить</Button>
                     <Button primary><Link className="training-link" to="/training">К тренировкам</Link></Button>
                   </Button.Group>

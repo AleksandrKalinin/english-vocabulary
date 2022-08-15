@@ -1168,13 +1168,17 @@ footer {
 	border-radius: 0;
 }
 
-.top-menu.ui.menu .item a {
+.top-menu.ui.menu .item-menu__link a {
 	color: #fff;
 	display: flex;
 	align-items: center;
 	width: 100%;
 	height: 100%;
 	padding: 13px 16px;
+}
+
+.top-menu.ui.menu .item.login-item{
+	padding: 0;
 }
 
 .top-menu.ui.menu .menu-image.item:hover {

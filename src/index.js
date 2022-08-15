@@ -29,6 +29,7 @@ import Ellen from './videos/Ellen'
 import JamesCorden from './videos/JamesCorden'
 import SethMeyers from './videos/SethMeyers'
 import StephenColbert from './videos/StephenColbert'
+import SelectedVideo from './videos/SelectedVideo'
 import TextsList from './TextsList'
 import Decks from './Decks'
 import Settings from './Settings'
@@ -86,6 +87,7 @@ ReactDOM.render(
 				<Route path="/videos" component={Videos} />
 				<Route path="/fragments" component={Fragments} />
 				<Route path="/decks" component={Decks} />		
+				<Route path="/videos/:id" component={SelectedVideo} />
 				<Route path="/ted" component={TED} />
 				<Route path="/engvideo" component={EngVid} />
 				<Route path="/britishcouncil" component={BritishCouncil} />

@@ -49,28 +49,28 @@ class TopMenu extends Component {
   render() {
     return (
         <Menu className="top-menu">
-          <Menu.Item className="item-link">
+          <Menu.Item className="item-link item-menu__link">
             <Link to="/">Главная</Link>
           </Menu.Item>
-          <Menu.Item className="item-link">
+          <Menu.Item className="item-link item-menu__link">
             <Link to="/vocabulary">Словарь</Link>
           </Menu.Item>          
-          <Menu.Item className="item-link">
+          <Menu.Item className="item-link item-menu__link">
             <Link to="/grammar">Грамматика</Link>
           </Menu.Item>
-          <Menu.Item className="item-link">
+          <Menu.Item className="item-link item-menu__link">
             <Link to="/training">Тренировки</Link>
           </Menu.Item>
-          <Menu.Item className="item-link">
+          <Menu.Item className="item-link item-menu__link">
             <Link to="/tests">Тесты</Link>
           </Menu.Item>
-          <Menu.Item className="item-link">
+          <Menu.Item className="item-link item-menu__link">
             <Link to="/materials">Материалы</Link>
           </Menu.Item>
-          <Menu.Item className="item-link">
+          <Menu.Item className="item-link item-menu__link">
             <Link to="/books">Книги</Link>
           </Menu.Item>           
-            <Menu.Item className="item-link">
+            <Menu.Item className="item-link item-menu__link">
               <Link to="/statistics">Статистика</Link>
             </Menu.Item>
             <Menu.Menu position='right'>
