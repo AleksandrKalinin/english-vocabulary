@@ -14,7 +14,6 @@ import EnglishToRussian from './EnglishToRussian'
 import RussianToEnglish from './RussianToEnglish'
 import Videos from './Videos'
 import Fragments from './Fragments'
-import Pronunciation from './Pronunciation'
 import RecreateText from './RecreateText'
 import RecreateAudioText from './RecreateAudioText'
 import InsertSpaces from './InsertSpaces'
@@ -79,7 +78,6 @@ ReactDOM.render(
 				<Route path="/constructword" component={ConstructWord} />
 				<Route path="/proverbs" component={Proverbs}/>
 				<Route path="/audio" component={Audio} />
-				<Route path="/pronunciation" component={Pronunciation} />
 				<Route path="/recreatetext" component={RecreateText} />
 				<Route path="/recreateaudiotext" component={RecreateAudioText} />
 				<Route path="/insertspaces" component={InsertSpaces} />						

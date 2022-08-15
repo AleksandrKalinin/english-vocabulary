@@ -2146,8 +2146,16 @@ footer {
 /* statistics */
 
 .ui.one.cards.texts-cards.statistics-wrapper {
-	width: calc(100% - 310px);
-	margin-left: auto;
+	width: calc(100% - 100px);
+	margin: 50px auto;
+}
+
+.ui.one.cards.texts-cards.statistics-wrapper .ui.card:hover {
+	transform: scale(1.0);
+} 
+
+.ui.one.cards.texts-cards.statistics-wrapper .ui.card.statistics-section {
+	padding: 30px;
 }
 
 .statistics-inner-wrapper.description {
@@ -2163,6 +2171,7 @@ footer {
 .ui.cards .ui.card .content .header.statistics-wrapper-header {
 	font-size: 26px;
 	text-align: center;
+	margin-bottom: 30px;
 }
 
 .statistics-container {
@@ -2216,7 +2225,7 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin: 30px 0;
+	margin: -10px 0 30px 0;
 }
 
 .statistics-menu a {

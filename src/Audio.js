@@ -4,7 +4,7 @@ import TopMenu from './TopMenu'
 import axios from 'axios';
 import speech from 'speech-synth';
 import {Link} from "react-router-dom";
-
+import { v4 as uuidv4 } from 'uuid';
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
 import {connect} from 'react-redux';
@@ -17,7 +17,6 @@ class Audio extends Component {
 
 		}
 	}
-
 
   componentDidMount() {
     this.setStateOnStart()
@@ -64,9 +63,7 @@ class Audio extends Component {
             }
             result.push(item);
           }
-
           const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
-
           this.setState({ 
             words, 
             currentWord,
@@ -74,26 +71,25 @@ class Audio extends Component {
         })
    }
 
-    startTraining = () =>{
+    startTraining = () => {
       this.setState({
         isButtonVisible: false,
         isCardVisible: true
       })
     }
 
-    updateSearch = (event) =>{
+    updateSearch = (event) => {
       this.setState({
         search: event.target.value.substr(0,20),
         tempSearch: event.target.value.substr(0,20)});
     }  
 
 
-    positiveResponse = () =>{
+    positiveResponse = () => {
       let positiveWords = this.state.positiveWords.slice();
       let negativeWords = this.state.negativeWords.slice();
       let currentWord = this.state.currentWord;
       let search = this.state.search;
-
       if(currentWord.name === search){
         positiveWords.push(currentWord);
         this.setState({
@@ -108,7 +104,7 @@ class Audio extends Component {
           nameClass: 'audio-name-green'
         })
       }
-      else if(search === ''){
+      else if(search === '') {
         negativeWords.push(currentWord);        
         this.setState({
           correctNameVisible: true,
@@ -142,11 +138,11 @@ class Audio extends Component {
       }
     }
 
-    continueTraining = () =>{
+    continueTraining = () => {
       let id = this.state.id;
       id = id + 1;
       const result = this.state.result;
-      if(id < result.length) { 
+      if (id < result.length) { 
       const currentWord = result[id][Math.floor(Math.random() * result[0].length)];
         this.setState({
           id,
@@ -164,13 +160,16 @@ class Audio extends Component {
 
       else {
         let words = this.state.positiveWords.slice();
-        let audioWords = this.props.store.exercises.audioWords.slice();
+        let exercise = {}, wordsTrained = [];
+        exercise.id = uuidv4();
+        exercise.date = new Date();
+        exercise.score = this.state.positiveWords.length;
         for (var i = 0; i < words.length; i++) {
-          if (!(audioWords.find(el => el.id === words[i].id))) {
-            words[i]["learnedDate"] = new Date();
-            this.props.actions.updateAudioWords(words[i])
-          }
-        }        
+          wordsTrained.push(words[i].id)
+        }
+        exercise.wordsTrained = wordsTrained;
+        this.props.actions.updateAudioWords(exercise);   
+
         this.setState({
             isFinalVisible: true,
             isTranslationVisible: false,

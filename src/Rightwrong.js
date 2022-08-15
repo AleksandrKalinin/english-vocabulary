@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Divider, Icon, List, Message, Label} from 'semantic-ui-react'
+import { Card, Image, Button, Divider, Icon, List, Message, Label} from 'semantic-ui-react';
 import TopMenu from './TopMenu'
 import axios from 'axios';
 import speech from 'speech-synth';
 import {Link} from "react-router-dom";
-
+import { v4 as uuidv4 } from 'uuid';
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
 import {connect} from 'react-redux';
@@ -58,7 +58,7 @@ class Rightwrong extends Component {
           }  
 
           const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
-          console.log(result);               
+              
           this.setState({ 
             words, 
             result,
@@ -110,13 +110,15 @@ class Rightwrong extends Component {
       }
       else {
         let words = this.state.positiveWords.slice();
-        let trueOrFalseWords = this.props.store.exercises.trueOrFalseWords.slice();
+        let exercise = {}, wordsTrained = [];
+        exercise.id = uuidv4();
+        exercise.date = new Date();
+        exercise.score = this.state.positiveWords.length;
         for (var i = 0; i < words.length; i++) {
-          if (!(trueOrFalseWords.find(el => el.id === words[i].id))) {
-            words[i]["learnedDate"] = new Date();
-            this.props.actions.updateTrueOrFalse(words[i])
-          }
-        } 
+          wordsTrained.push(words[i].id)
+        }
+        exercise.wordsTrained = wordsTrained;
+        this.props.actions.updateTrueOrFalse(exercise);
         this.setState({
             isFinalVisible: true,
             isTranslationVisible: false,
@@ -184,60 +186,60 @@ class Rightwrong extends Component {
                 </Button.Group>
               </Card.Content>
             </Card>          
-      </Card.Group> :
-           null
+       </Card.Group> :
+         null
         }
         {this.state.isFinalVisible ?
-         <Card.Group itemsPerRow={1} className="card-header-wrapper card-final-wrapper" >
-             <Card className="card-training" >
-                <Card.Content>
-                  <Card.Header>Результаты</Card.Header>
-                  <Divider/>
-                  <Card.Description className="audio-list-container"> 
-                  {(this.state.negativeWords.length !== 0 ) ?
-                    <div className="answers-wrapper">
-                      <List className="audio-list">
-                      <h2>Верные ответы</h2>
-                      {this.state.positiveWords.map((item, index) => 
-                          <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
-                        )}
-                     </List>
-                      <List className="audio-list">
-                      <h2>Неверные ответы</h2>
-                      {this.state.negativeWords.map((item, index) => 
-                          <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
-                        )}
-                     </List>
-                   </div> : 
-                   <Message>
-                      <Message.Header>Поздравляем!</Message.Header>
-                      <p>
-                        Все задания выполнены правильно
-                      </p>
-                   </Message> 
-                  }
+        <Card.Group itemsPerRow={1} className="card-header-wrapper card-final-wrapper" >
+          <Card className="card-training" >
+            <Card.Content>
+              <Card.Header>Результаты</Card.Header>
+              <Divider/>
+              <Card.Description className="audio-list-container"> 
+              {(this.state.negativeWords.length !== 0 ) ?
+                <div className="answers-wrapper">
+                  <List className="audio-list">
+                  <h2>Верные ответы</h2>
+                  {this.state.positiveWords.map((item, index) => 
+                      <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
+                    )}
+                 </List>
+                  <List className="audio-list">
+                  <h2>Неверные ответы</h2>
+                  {this.state.negativeWords.map((item, index) => 
+                      <List.Item key={index} ><span>{item.name}</span> - {item.translation}</List.Item>  
+                    )}
+                 </List>
+               </div> : 
+               <Message>
+                  <Message.Header>Поздравляем!</Message.Header>
+                  <p>
+                    Все задания выполнены правильно
+                  </p>
+               </Message> 
+              }
 
-                  </Card.Description>
-                  <Card.Description className="results-wrapper">
-                    <div className="positive-results-wrapper"> 
-                      <div className="positive-results">
-                        {this.state.positiveWords.length}
-                      </div>
-                      <Label>Верно</Label>                    
-                    </div>
-                    <div className="negative-results-wrapper"> 
-                      <div className="negative-results">
-                        {this.state.result.length - this.state.positiveWords.length}
-                      </div> 
-                      <Label>Неверно</Label>                   
-                    </div>
-                  </Card.Description>
-                  <Button.Group className="card-buttons-wrapper">
-                    <Button primary onClick={this.setStateOnStart}>Продолжить</Button>
-                    <Button primary><Link to="/training" className="training-link">Вернуться</Link></Button>
-                  </Button.Group>
-                </Card.Content>
-              </Card>          
+              </Card.Description>
+              <Card.Description className="results-wrapper">
+                <div className="positive-results-wrapper"> 
+                  <div className="positive-results">
+                    {this.state.positiveWords.length}
+                  </div>
+                  <Label>Верно</Label>                    
+                </div>
+                <div className="negative-results-wrapper"> 
+                  <div className="negative-results">
+                    {this.state.result.length - this.state.positiveWords.length}
+                  </div> 
+                  <Label>Неверно</Label>                   
+                </div>
+              </Card.Description>
+              <Button.Group className="card-buttons-wrapper">
+                <Button primary onClick={this.setStateOnStart}>Продолжить</Button>
+                <Button primary><Link to="/training" className="training-link">Вернуться</Link></Button>
+              </Button.Group>
+            </Card.Content>
+          </Card>          
         </Card.Group>         
            : null
         }

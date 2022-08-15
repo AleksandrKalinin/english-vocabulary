@@ -5,7 +5,7 @@ import axios from 'axios';
 import speech from 'speech-synth';
 import classnames from 'classnames';
 import {Link} from "react-router-dom";
-
+import { v4 as uuidv4 } from 'uuid';
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
 import {connect} from 'react-redux';
@@ -102,13 +102,16 @@ continueTraining = () =>{
 
   else {
     let words = this.state.positiveWords.slice();
-    let rusToEngWords = this.props.store.exercises.rusToEngWords.slice();
+    let exercise = {}, wordsTrained = [];
+    exercise.id = uuidv4();
+    exercise.date = new Date();
+    exercise.score = this.state.positiveWords.length;
     for (var i = 0; i < words.length; i++) {
-      if (!(rusToEngWords.find(el => el.id === words[i].id))) {
-        words[i]["learnedDate"] = new Date();
-        this.props.actions.updateRusToEng(words[i])
-      }
+      wordsTrained.push(words[i].id)
     }
+    exercise.wordsTrained = wordsTrained;
+    this.props.actions.updateRusToEng(exercise);
+
     this.setState({
         isFinalVisible: true,
         isTranslationVisible: false,
@@ -232,8 +235,7 @@ render() {
               </Image>                
               </div>
               {this.state.flagState ?
-                <Button onClick={this.continueTraining} primary>Продолжить тренировку</Button>:null
-
+                <Button onClick={this.continueTraining} primary>Продолжить тренировку</Button>: null
               }                                     
               </div>: null               
             }

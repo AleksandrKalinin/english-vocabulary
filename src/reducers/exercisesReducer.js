@@ -166,46 +166,13 @@ let initialState = {
 				}
 			]
 					 		 												
-	},
-
-	"tests": [
-		{
-			"score": 35,
-			"date": "Sun Jul 27 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
-			"percentage": 82.5
-		},
-		{
-			"score": 38,
-			"date": "Sun Jul 20 2022 21:07:21 GMT+0300 (Москва, стандартное время)",
-			"percentage": 34.5
-		},
-	],
-
-
-	"totalScore": 187,
-	"exercisesComplete": 22,
-	"testsComplete": 2
+	}
 };
 
 
 
-let exercisesReducer = (state = initialState, action) => {
+let exercisesReducer = (state = initialState.exercises, action) => {
 	switch(action.type){
-		case 'UPDATE_TOTAL_SCORE':
-			return {
-				...state,
-				totalScore: action.payload }
-
-		case 'UPDATE_EXERCISES_COMPLETE':
-			return {
-				...state,
-				exercisesComplete: action.payload }
-
-		case 'UPDATE_TESTS_COMPLETE':
-			return {
-				...state,
-				testsComplete: action.payload }
-
 		case 'UPDATE_ENG_TO_RUS':
 			let words = [...state.engToRusWords];
 			words.push(action.payload);		
@@ -236,7 +203,7 @@ let exercisesReducer = (state = initialState, action) => {
 		case 'UPDATE_CARD_WORDS':			
 			return {
 				...state,
-				state.exercises: {...state.exercises, [exercises.cardWords]: [] } }
+				cardWords: [...state.cardWords, action.payload] }
 
 		case 'UPDATE_RECREATE_TXT':
 			return {

@@ -5,7 +5,7 @@ import axios from 'axios';
 import speech from 'speech-synth';
 import './style.css';
 import {Link} from "react-router-dom";
-
+import { v4 as uuidv4 } from 'uuid';
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
 import {connect} from 'react-redux';
@@ -208,13 +208,15 @@ class ConstructWord extends Component {
       }
         else {
           let words = this.state.positiveWords.slice();
-          let constructWords = this.props.store.exercises.constructWords.slice();
+          let exercise = {}, wordsTrained = [];
+          exercise.id = uuidv4();
+          exercise.date = new Date();
+          exercise.score = this.state.positiveWords.length;
           for (var i = 0; i < words.length; i++) {
-            if (!(constructWords.find(el => el.id === words[i].id))) {
-              words[i]["learnedDate"] = new Date();
-              this.props.actions.updateConstructWords(words[i])
-            }
-          } 
+            wordsTrained.push(words[i].id)
+          }
+          exercise.wordsTrained = wordsTrained;
+          this.props.actions.updateConstructWord(exercise); 
           this.setState({
            isFinalVisible: true,
            isCardVisible: false,

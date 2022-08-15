@@ -151,27 +151,30 @@ class Statistics extends Component {
 	}
 
   componentDidMount() {
-    let exercises = this.props.store.exercises;
-      for (var prop in exercises) {
-        let val = exercises[prop];
-        this.setState({
-          [prop]: val
-        })
-      } 
-      let learnedWords = {}      
-      learnedWords.engToRusWords = this.props.store.exercises.engToRusWords;
-      learnedWords.rusToEngWords = this.props.store.exercises.rusToEngWords;
-      learnedWords.cardWords = this.props.store.exercises.cardWords;
-      learnedWords.constructWords = this.props.store.exercises.constructWords;
-      learnedWords.audioWords = this.props.store.exercises.audioWords;
-      learnedWords.trueOrFalseWords = this.props.store.exercises.trueOrFalseWords;
-      for (var prop in learnedWords) {
-        let val = learnedWords[prop];
-        this.countWords(val, prop + "Total")
-      } 
+    console.log(this.props.store);
+    console.log(this.props.resultsStore);
+    console.log(this.props.testsStore);
+    let exercises = this.props.store;
+    for (var prop in exercises) {
+      let val = exercises[prop];
+      this.setState({
+        [prop]: val
+      })
+    } 
+    let learnedWords = {}      
+    learnedWords.engToRusWords = this.props.store.engToRusWords;
+    learnedWords.rusToEngWords = this.props.store.rusToEngWords;
+    learnedWords.cardWords = this.props.store.cardWords;
+    learnedWords.constructWords = this.props.store.constructWords;
+    learnedWords.audioWords = this.props.store.audioWords;
+    learnedWords.trueOrFalseWords = this.props.store.trueOrFalseWords;
+    for (var prop in learnedWords) {
+      let val = learnedWords[prop];
+      this.countWords(val, prop + "Total")
+    } 
     this.setState({
       learnedWords,
-      tests: this.props.store.tests,    
+      tests: this.props.testsStore,    
       loaded: true
     }, () => { this.countTests(this.state.tests); 
                this.setState({ wordsLoaded: true})               
@@ -269,7 +272,6 @@ class Statistics extends Component {
       return sorter[item1] - sorter[item2];
     });  
 
-
 		var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     let dateArray = [];		
     var date = new Date();
@@ -296,13 +298,6 @@ class Statistics extends Component {
 
   consoleState = () =>{
     console.log(this.state);
-  }
-
-  openModal = () => {
-    /*
-    this.setState({
-      isModalOpen: !this.state.isModalOpen
-    }) */
   }
 
   inDayRange = (option) => {
@@ -373,8 +368,8 @@ class Statistics extends Component {
   }  
 
   applyFunction = (func, option) => {
-    let exercises = this.props.store.exercises;
-    let tests = this.props.store.tests;
+    let exercises = this.props.store;
+    let tests = this.props.testsStore;
 
     if (option === 'exercise') {
       for (var prop in exercises) {
@@ -391,18 +386,17 @@ class Statistics extends Component {
         }, () => this.countTests(this.state.tests))
     } else if (option === 'word') {
         let learnedWords = {}
-        learnedWords.engToRusWords = this.props.store.exercises.engToRusWords;
-        learnedWords.rusToEngWords = this.props.store.exercises.rusToEngWords;
-        learnedWords.cardWords = this.props.store.exercises.cardWords;
-        learnedWords.constructWords = this.props.store.exercises.constructWords;
-        learnedWords.audioWords = this.props.store.exercises.audioWords;
-        learnedWords.trueOrFalseWords = this.props.store.exercises.trueOrFalseWords;
+        learnedWords.engToRusWords = this.props.store.engToRusWords;
+        learnedWords.rusToEngWords = this.props.store.rusToEngWords;
+        learnedWords.cardWords = this.props.store.cardWords;
+        learnedWords.constructWords = this.props.store.constructWords;
+        learnedWords.audioWords = this.props.store.audioWords;
+        learnedWords.trueOrFalseWords = this.props.store.trueOrFalseWords;
         for (var prop in learnedWords) {
           learnedWords[prop] = learnedWords[prop].filter(func);
           this.countWords(learnedWords[prop], prop + "Total");
         }
     }
-
   }
 
   switchTab = (tab, id) => {
@@ -501,7 +495,7 @@ class Statistics extends Component {
                     </Card.Description>                    
                   </Card.Content>
                 </Card> */}
-                <Card>
+                <Card className="statistics-section">
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Общая статистика</Card.Header>
                     {(this.state.testsLoaded && this.state.wordsLoaded && this.state.loaded) ?
@@ -516,31 +510,31 @@ class Statistics extends Component {
                           </div>
                           <div className="statistics-item">
                             <span><Icon name = 'file text'/></span>
-                            <h1>{this.props.store.exercisesComplete}</h1>
+                            <h1>{this.props.resultsStore.exercisesComplete}</h1>
                             <p>Тренировок пройдено</p>
                           </div>
                           <div className="statistics-item">
                             <span><Icon name = 'gem outline'/></span>
-                            <h1>{this.props.store.testsComplete}</h1>
+                            <h1>{this.props.resultsStore.testsComplete}</h1>
                             <p>Тестов выполнено</p>
                           </div>                        
                       </div>
                       <div className="statistics-container">
                           <div className="statistics-item">
                             <span><Icon name = 'book'/></span>
-                            <h1>{this.props.store.totalScore}</h1>
+                            <h1>{this.props.resultsStore.totalScore}</h1>
                             <p>Баллов набрано</p>
                           </div>
                       </div>
                     </Card.Description> : null } 
                   </Card.Content>
                 </Card>                
-                <Card>
+                <Card className="statistics-section">
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Упражнений выполнено</Card.Header>
                     <div className="statistics-menu">
                       {this.state.exerciseMenu.map((item, index) => 
-                        <a onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
+                        <a key={item.id} onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
                       )}
                     </div>
                     {this.state.loaded ?
@@ -614,7 +608,7 @@ class Statistics extends Component {
                     : null}
                   </Card.Content>
                 </Card>
-                <Card>
+                <Card className="statistics-section">
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Слов изучено</Card.Header>
                     <div className="statistics-menu">
@@ -664,7 +658,7 @@ class Statistics extends Component {
                     : null}
                   </Card.Content>
                 </Card>                
-                <Card>
+                <Card className="statistics-section">
                   <Card.Content>
                     <Card.Header className="statistics-wrapper-header">Тесты</Card.Header>
                     <div className="statistics-menu">
@@ -705,7 +699,7 @@ class Statistics extends Component {
 }
 
 function mapStateToProps(state){
-  return {store: state.exercisesReducer};
+  return {store: state.exercisesReducer, testsStore: state.testsReducer, resultsStore: state.resultsReducer};
 }
 
 function mapDispatchToProps(dispatch) {

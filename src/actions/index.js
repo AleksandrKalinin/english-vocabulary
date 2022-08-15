@@ -1,46 +1,31 @@
 let actions = {
+	//resultsReducer
 	updateTotalScore: function(score) {
 		return {
 			type: 'UPDATE_TOTAL_SCORE',
 			payload: score
 		}
 	},
-	updateTodayScore: function(score) {
-		return {
-			type: 'UPDATE_TODAY_SCORE',
-			payload: score
-		}		
-	},
-	updateExerciseScore: function(number) {
+	updateExerciseComplete: function(number) {
 		return {
 			type: 'UPDATE_EXERCISES_COMPLETE',
 			payload: number
 		}		
 	},
-	updateTestsScore: function(number) {
+	updateTestsComplete: function(number) {
 		return {
 			type: 'UPDATE_TESTS_COMPLETE',
 			payload: number
 		}		
 	},
-	updateWordsTotal: function(number) {
+	//testsReducer
+	updateTests: function(val) {
 		return {
-			type: 'UPDATE_WORDS_TOTAL',
-			payload: number
+			type: 'UPDATE_TESTS',
+			payload: val
 		}		
 	},
-	updateWordsRemaining: function(number) {
-		return {
-			type: 'UPDATE_WORDS_REMAINING',
-			payload: number
-		}		
-	},
-	updateWordsStudied: function(number) {
-		return {
-			type: 'UPDATE_WORDS_STUDIED',
-			payload: number
-		}		
-	},
+	//settingsReducer
 	changeColorScheme: function(val) {
 		return {
 			type: 'CHANGE_COLOR_SCHEME',
@@ -53,6 +38,7 @@ let actions = {
 			payload: val
 		}		
 	},
+	//vocabularyReducer
 	toggleVocabModal: function(val) {
 		return {
 			type: 'TOGGLE_VOCAB_MODAL',
@@ -71,6 +57,7 @@ let actions = {
 			payload: word
 		}		
 	},
+	//booksReducer
 	selectBook: function(book) {
 		return {
 			type: 'SELECT_BOOK',
@@ -137,6 +124,7 @@ let actions = {
 			payload: state
 		}		
 	},
+	//exercisesReducer
 	updateEngToRus: function(word) {
 		return {
 			type: 'UPDATE_ENG_TO_RUS',

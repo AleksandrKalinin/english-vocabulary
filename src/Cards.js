@@ -5,7 +5,6 @@ import TopMenu from './TopMenu';
 import axios from 'axios';
 import speech from 'speech-synth';
 import { v4 as uuidv4 } from 'uuid';
-
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
 import {connect} from 'react-redux';
@@ -240,7 +239,6 @@ class Cards extends Component {
                     </div>
                   </Card.Description>
                   <Button.Group className="card-buttons-wrapper">
-                    <Button primary onClick={() => console.log(this.props.store.exercises)}>Console</Button>
                     <Button primary onClick={this.setStateOnStart}>Продолжить</Button>
                     <Button primary><Link className="training-link" to="/training">К тренировкам</Link></Button>
                   </Button.Group>

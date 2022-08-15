@@ -1,4 +1,3 @@
-
 let initialState = {
 	"colorScheme": null,
 	"soundVolume": null
@@ -6,7 +5,7 @@ let initialState = {
 
 
 
-let commonReducer = (state = initialState, action) => {
+let settingsReducer = (state = initialState, action) => {
 	switch(action.type){
 		case 'CHANGE_COLOR_SCHEME':
 			return {
@@ -22,4 +21,4 @@ let commonReducer = (state = initialState, action) => {
 	}
 }
 
-export default commonReducer;
+export default settingsReducer;
