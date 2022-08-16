@@ -164,38 +164,38 @@ let actions = {
 		}		
 	},
 
-	updateRecreateTxt: function(word) {
+	updateRecreateTxt: function(value) {
 		return {
 			type: 'UPDATE_RECREATE_TXT',
-			payload: word
+			payload: value
 		}		
 	},
 
-	updateRecreateAudioTxt: function(word) {
+	updateRecreateAudioTxt: function(value) {
 		return {
 			type: 'UPDATE_RECREATE_AUDIOTXT',
-			payload: word
+			payload: value
 		}		
 	},
 
-	updateFillTheGaps: function(word) {
+	updateFillTheGaps: function(value) {
 		return {
 			type: 'UPDATE_FILL_THE_GAPS',
-			payload: word
+			payload: value
 		}		
 	},
 
-	updatePlaceSpaces: function(word) {
+	updatePlaceSpaces: function(value) {
 		return {
 			type: 'UPDATE_PLACE_SPACES',
-			payload: word
+			payload: value
 		}		
 	},	
 
-	updateCommonPhrases: function(word) {
+	updateCommonPhrases: function(value) {
 		return {
 			type: 'UPDATE_COMMON_PHRASES',
-			payload: word
+			payload: value
 		}		
 	}	
 

@@ -278,7 +278,7 @@ class RecreateText extends Component {
       exercise.id = uuidv4();
       exercise.date = new Date();
       exercise.score = this.state.rightAnswers;
-      this.props.updateRecreateTxt(exercise);
+      this.props.actions.updateRecreateTxt(exercise);
       clearInterval(this.state.intervalHandle);
       this.setState({
         isResultVisible: true,

@@ -108,7 +108,6 @@ class RecreateAudioText extends Component {
     }
 
     readMore = (id) =>{
-
       let texts = this.state.texts.slice();
       let title = texts[id - 1].title;
       let content = texts[id - 1].content;
@@ -146,14 +145,6 @@ class RecreateAudioText extends Component {
         value: null        
       })
     }
-
-
-
-  showFinal = () =>{
-    this.setState({
-      isResultVisible: true  
-    })
-  }
 
   tryAgain = () =>{
       this.setState({
@@ -240,7 +231,6 @@ class RecreateAudioText extends Component {
             secondsSpent,
             intervalHandle
           })
-
         }
         this.setState({
           secondsRemaining: this.state.secondsRemaining - 1,
@@ -271,7 +261,6 @@ class RecreateAudioText extends Component {
     }
     let items = this.state.splittedSentences.filter(item => item !== this.draggedItem);
     items.splice(index, 0, this.draggedItem);
-
     this.setState({ splittedSentences: items });
   };
 
@@ -316,23 +305,23 @@ class RecreateAudioText extends Component {
   }
 
   showFinal = () =>{
-      let intervalHandle = this.state.intervalHandle;
-      let time = this.state.totalSecondsSpent;
-      let minutesSpent = Math.floor(time / 60);
-      let secondsSpent = this.state.totalSecondsSpent - (minutesSpent * 60);
-      let exercise = {};
-      exercise.id = uuidv4();
-      exercise.date = new Date();
-      exercise.score = this.state.rightAnswers;
-      this.props.updateRecreateAudioTxt(exercise);
-      clearInterval(intervalHandle);
-      this.setState({
-        isResultVisible: true,
-        splittedSentenceVisible: false,
-        minutesSpent,
-        secondsSpent,
-        intervalHandle        
-      })
+    let intervalHandle = this.state.intervalHandle;
+    let time = this.state.totalSecondsSpent;
+    let minutesSpent = Math.floor(time / 60);
+    let secondsSpent = this.state.totalSecondsSpent - (minutesSpent * 60);
+    let exercise = {};
+    exercise.id = uuidv4();
+    exercise.date = new Date();
+    exercise.score = this.state.rightAnswers;
+    this.props.actions.updateRecreateAudioTxt(exercise);
+    clearInterval(intervalHandle);
+    this.setState({
+      isResultVisible: true,
+      splittedSentenceVisible: false,
+      minutesSpent,
+      secondsSpent,
+      intervalHandle        
+    })
   }
 
 

@@ -23,8 +23,7 @@ class InsertSpaces extends Component {
 
   componentDidMount() {
     this.setStateOnStart();
-  }   
-
+  }
 
   setStateOnStart = () => {
     this.setState({
@@ -66,7 +65,6 @@ class InsertSpaces extends Component {
       }) 
   }
 
-
     readMore = (id) =>{
       let texts = this.state.texts.slice();
       let title = texts[id].title;
@@ -87,10 +85,11 @@ class InsertSpaces extends Component {
 
 
   showFinal = () =>{
-      this.setState({
-        isResultVisible: true,
-        isTaskStarted: false   
-      })
+    let val;
+    this.setState({
+      isResultVisible: true,
+      isTaskStarted: false   
+    })
   }
 
 setCaretPosition = (ctrl, pos) => {
@@ -128,39 +127,39 @@ setCaretPosition = (ctrl, pos) => {
     })
   }
 
-    createMenuItems = () =>{
-      let newItems = [];
-      this.state.texts.map((item, i) =>
-                    newItems.push({ 
-                        key: item.id, 
-                        text: item.difficulty, 
-                        value: item.difficulty 
-                     }))
-      this.setState({
-        options: newItems
-      }, () => this.getUnique())
-    } 
+  createMenuItems = () =>{
+    let options = [];
+    this.state.texts.map((item, i) =>
+                  options.push({ 
+                      key: item.id, 
+                      text: item.difficulty, 
+                      value: item.difficulty 
+                   }))
+    this.setState({
+      options
+    }, () => this.getUnique())
+  } 
 
-    getUnique = () => {
-      var arr = this.state.options;
-      var comp = 'text';
-      const unique = arr
-        .map(e => e[comp])
-        .map((e, i, final) => final.indexOf(e) === i && i)
-        .filter(e => arr[e]).map(e => arr[e]);
-      this.setState({
-        options: unique
-      })    
-    }  
+  getUnique = () => {
+    var arr = this.state.options;
+    var comp = 'text';
+    const unique = arr
+      .map(e => e[comp])
+      .map((e, i, final) => final.indexOf(e) === i && i)
+      .filter(e => arr[e]).map(e => arr[e]);
+    this.setState({
+      options: unique
+    })    
+  }  
 
-    selectCategory = () =>{
-      var categoryValue = this.state.value;
-      this.setState({
-        categoryValue
-      })
-    }
+  selectCategory = () =>{
+    var categoryValue = this.state.value;
+    this.setState({
+      categoryValue
+    })
+  }
 
-    handleChange = (e, { value }) => this.setState({ value }, () => this.selectCategory() )
+  handleChange = (e, { value }) => this.setState({ value }, () => this.selectCategory() )
 
   render() {
     return (

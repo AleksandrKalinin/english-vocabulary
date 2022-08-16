@@ -78,7 +78,7 @@ class Proverbs extends Component {
         exercise.id = uuidv4();
         exercise.date = new Date();
         exercise.score = this.state.positiveProverbs.length; 
-        this.props.updateCommonPhrases(exercise);       
+        this.props.actions.updateCommonPhrases(exercise);       
         this.setState({
           isFinalVisible: true,
           isCardVisible: false,
@@ -211,8 +211,7 @@ class Proverbs extends Component {
           if (random.indexOf(el) === -1) {
             random.push(el)
           };                
-        }
-  
+        }  
         const currentProverb = random[id];
         const currentProverbName = random[id].proverb;
         const currentTranslation = random[id].translation;
