@@ -123,7 +123,6 @@ class TopMenu extends Component {
                       </div>                
                     </div>
                     <p><Link to="/statistics"> <Icon name='chart bar outline' size='' />Статистика</Link></p>
-                    <p><Link to="/settings"> <Icon name='setting' size=''  />Настройки</Link></p>
                     <p><Link to="/statistics"> <Icon name='log out' size=''  />Выйти</Link></p>
                   </div> : null
                 }
