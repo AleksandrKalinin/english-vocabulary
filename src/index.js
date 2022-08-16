@@ -35,7 +35,7 @@ import Decks from './Decks'
 import Settings from './Settings'
 import BookList from './BookList'
 import Materials from './Materials'
-import Example from './Example'
+import Tests from './Tests'
 import Rightwrong from './Rightwrong'
 import GrammarItem from './grammar/GrammarItem'
 import GrammarPresentSimple from './grammar/GrammarPresentSimple'
@@ -103,7 +103,7 @@ ReactDOM.render(
 				<Route path="/texts" component={TextsList} />
 				<Route path="/books" exact component={BookList} />
 				<Route path="/books/:id" component={SelectedBook} />						
-				<Route path="/tests" component={Example} />
+				<Route path="/tests" component={Tests} />
 				<Route path="/grammarpresentsimple" component={GrammarPresentSimple} />
 				<Route path="/grammarpastsimple" component={GrammarPastSimple} />
 				<Route path="/grammarfuturesimple" component={GrammarFutureSimple} />

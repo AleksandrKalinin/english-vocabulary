@@ -110,7 +110,9 @@ continueTraining = () =>{
       wordsTrained.push(words[i].id)
     }
     exercise.wordsTrained = wordsTrained;
+    
     this.props.actions.updateRusToEng(exercise);
+    this.props.actions.updateExerciseComplete();
 
     this.setState({
         isFinalVisible: true,

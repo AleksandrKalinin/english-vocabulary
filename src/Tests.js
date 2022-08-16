@@ -6,7 +6,11 @@ import {Link} from "react-router-dom";
 import axios from 'axios';
 import update from 'immutability-helper';
 
-class Example extends Component {
+import {bindActionCreators} from 'redux';
+import actions from './actions/index';
+import {connect} from 'react-redux';
+
+class Tests extends Component {
 
   constructor(props){
     super(props);
@@ -168,6 +172,12 @@ class Example extends Component {
             incorrectAnswers.push(i)
           }
         }
+        let test = {};
+        test.score = correctAnswers.length;
+        test.date = new Date();
+        test.percentage = Math.round(test.score / this.state.activeTest.tasks.length * 1000) / 10;
+        this.props.actions.updateTestsComplete();
+        this.props.actions.updateTests(test);
         this.setState({
           isResultVisible: true,
           isSingleTestVisible: false,
@@ -273,8 +283,8 @@ class Example extends Component {
                   <Card.Header>Результаты</Card.Header>
                   <Divider/>
     						  <div className="grades-results-wrapper">
-    							  <h3>Количество правильных ответов - <span>{this.state.correctAnswers.length}</span> </h3>
-                    <h3>Количество набранных баллов - <span>{this.state.correctAnswers.length}</span> </h3>
+    							  <h3>Количество правильных ответов - <span>{this.state.correctAnswers.length}</span> из <span>{this.state.activeTest.tasks.length}</span> </h3>
+                    <h3>Ваша оценка - <span>{this.state.correctAnswers.length} </span> баллов </h3>
     						  </div>		                  
                   <Card.Description className="results-wrapper">
                     <div className="positive-results-wrapper"> 
@@ -301,9 +311,16 @@ class Example extends Component {
         </div>  
         <footer></footer>
       </Fragment>
-
-	);
+   );
   }
 }
 
-export default Example;
+function mapStateToProps(state) {
+  return {store: state.testsReducer}
+}
+
+function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Tests);

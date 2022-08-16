@@ -119,6 +119,7 @@ class Rightwrong extends Component {
         }
         exercise.wordsTrained = wordsTrained;
         this.props.actions.updateTrueOrFalse(exercise);
+        this.props.actions.updateExerciseComplete();
         this.setState({
             isFinalVisible: true,
             isTranslationVisible: false,

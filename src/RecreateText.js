@@ -29,7 +29,7 @@ class RecreateText extends Component {
       spllittedSentences: [],
       reservedSentences: [],
       seconds: '00',   // responsible for the seconds 
-      minutes: '3',  // responsible for the minutes
+      minutes: '5',  // responsible for the minutes
       secondsRemaining: 0,
       intervalHandle: 0,
       wrongIndexes: [],

@@ -15,12 +15,12 @@ let initialState = {
 
 
 
-let testsReducer = (state = initialState.tests, action) => {
+let testsReducer = (state = initialState, action) => {
 	switch(action.type) {
 		case 'UPDATE_TESTS':			
 			return {
 				...state,
-				tests: [...state.cardWords, action.payload] }
+				tests: [...state.tests, action.payload] }
 
 		default: return state;		
 	}

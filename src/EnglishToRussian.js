@@ -111,6 +111,7 @@ class EnglishToRussian extends Component {
         }
         exercise.wordsTrained = wordsTrained;
         this.props.actions.updateEngToRus(exercise);
+        this.props.actions.updateExerciseComplete();
 
         this.setState({
           isFinalVisible: true,

@@ -169,6 +169,7 @@ class Audio extends Component {
         }
         exercise.wordsTrained = wordsTrained;
         this.props.actions.updateAudioWords(exercise);   
+        this.props.actions.updateExerciseComplete();
 
         this.setState({
             isFinalVisible: true,

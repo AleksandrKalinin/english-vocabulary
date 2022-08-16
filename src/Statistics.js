@@ -19,6 +19,8 @@ class Statistics extends Component {
       testsLoaded: false,
       wordsLoaded: false,
       words: [],
+      testsScore: 0,
+      testsPercentage: 0,
       contentArray: [],
       isMenuVisible: true,
       isSingleTextVisible: false,
@@ -176,8 +178,6 @@ class Statistics extends Component {
     }, () => { this.countTests(this.state.tests); 
                this.setState({ wordsLoaded: true})               
              })
-
-
     axios.get('/words_full.json')
       .then(res => {
         let words = res.data;
@@ -188,19 +188,19 @@ class Statistics extends Component {
   }   
 
   countTests = (params) => {
-    let percentage, mark;
+    let testsPercentage, testsScore;
     if (params.length > 1) {
-      percentage = params.reduce((a, b) => a.percentage + b.percentage) / this.state.tests.length;
-      mark = params.reduce((a, b) => a.score + b.score);
+      testsPercentage = Math.round(params.reduce(( sum , cur ) => sum + cur.percentage, 0) / this.state.tests.length * 10) / 10;
+      testsScore = params.reduce(( sum , cur ) => sum + cur.score , 0);
     } else if (params.length === 1){
-      percentage = params[0].percentage;
-      mark = params[0].score;
+      testsPercentage = params[0].testsPercentage;
+      testsScore = params[0].score;
     } else {
-      percentage = 0;
-      mark = 0;
+      testsPercentage = 0;
+      testsScore = 0;
     }
     this.setState({
-      percentage, mark, testsLoaded: true
+      testsPercentage, testsScore, testsLoaded: true
     }) 
   }
 
@@ -313,11 +313,9 @@ class Statistics extends Component {
     }
 
     this.applyFunction(ifInRange, option)    
-
   }
 
   inWeekRange = (option) => {
-
     let current = new Date();
     let year = current.getFullYear();
     let month = current.getMonth();
@@ -337,7 +335,6 @@ class Statistics extends Component {
   }
 
   inMonthRange = (option) => {
-
     let current = new Date();
     let year = current.getFullYear();
     let month = current.getMonth();
@@ -355,7 +352,6 @@ class Statistics extends Component {
     }
 
     this.applyFunction(ifInRange, option);
-
   }
 
   inAllRange = (option) => {
@@ -370,6 +366,7 @@ class Statistics extends Component {
   applyFunction = (func, option) => {
     let exercises = this.props.store;
     let tests = this.props.testsStore;
+    console.log(tests);
 
     if (option === 'exercise') {
       for (var prop in exercises) {
@@ -377,8 +374,7 @@ class Statistics extends Component {
         this.setState({
           [prop]: val
         })
-      } 
-
+      }
     } else if (option === 'test') {
         tests = tests.filter(func);
         this.setState({
@@ -676,12 +672,12 @@ class Statistics extends Component {
                         </div>
                         <div className="statistics-item">
                           <span><Icon name = 'check circle outline'/></span>
-                          <h1>{this.state.percentage}</h1>
+                          <h1>{this.state.testsPercentage}</h1>
                           <p>Процент выполнения</p>
                         </div>
                         <div className="statistics-item">
                           <span><Icon name = 'question circle outline'/></span>
-                          <h1>{this.state.mark}</h1>
+                          <h1>{this.state.testsScore}</h1>
                           <p>Баллов набрано</p>
                         </div>                        
                       </div>
@@ -699,7 +695,7 @@ class Statistics extends Component {
 }
 
 function mapStateToProps(state){
-  return {store: state.exercisesReducer, testsStore: state.testsReducer, resultsStore: state.resultsReducer};
+  return {store: state.exercisesReducer, testsStore: state.testsReducer.tests, resultsStore: state.resultsReducer};
 }
 
 function mapDispatchToProps(dispatch) {
