@@ -24,77 +24,77 @@ class Proverbs extends Component {
   }
 
 
-    startTraining = () =>{
-      this.setState({
-          isStarterVisible: false,
-          isCardVisible: true
-      })
-    }
-
-    shuffleArray = () =>{
-      let currentArray = this.state.currentArray.slice();
-      for (let i = currentArray.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
-      }
-    }
-
-
-
-    continueTraining = () =>{
-  	  let mistakeCount = this.state.mistakeCount;
-  	  let negativeProverbs = this.state.negativeProverbs.slice();
-  	  let positiveProverbs = this.state.positiveProverbs.slice();
-      let id = this.state.id;
-      let proverbs = this.state.proverbs;
-      id = id + 1;
-      if (id < 2) {
-        const currentProverb = proverbs[id];
-        const currentProverbName = proverbs[id].proverb;
-        const currentTranslation = proverbs[id].translation;
-        let currentArray = currentProverbName.split(" ");
-        for (let i = currentArray.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
-        }        
-        this.setState({
-            id,
-            proverbs, 
-            currentProverbName,
-            currentTranslation,
-            currentArray,
-            constructedProverb: [],
-            positiveProverbs,
-            negativeProverbs,
-            isCheckButtonVisible: false,
-            isDKButtonVisible: true,
-            isContinueButtonVisible: false,
-            isResultWrong: false,
-            nameClass: ''
-        })
-      }
-      else {
-        let exercise = {};
-        exercise.id = uuidv4();
-        exercise.date = new Date();
-        exercise.score = this.state.positiveProverbs.length; 
-        this.props.actions.updateCommonPhrases(exercise);       
-        this.setState({
-          isFinalVisible: true,
-          isCardVisible: false,
-          isStarterVisible: false,
-          positiveProverbs,
-          negativeProverbs           
-        })
-      }
+  startTraining = () =>{
+    this.setState({
+        isStarterVisible: false,
+        isCardVisible: true
+    })
   }
 
-   setValue = (e) =>{
+  shuffleArray = () =>{
+    let currentArray = this.state.currentArray.slice();
+    for (let i = currentArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
+    }
+  }
+
+  continueTraining = () =>{
+	  let mistakeCount = this.state.mistakeCount;
+	  let negativeProverbs = this.state.negativeProverbs.slice();
+	  let positiveProverbs = this.state.positiveProverbs.slice();
+    let id = this.state.id;
+    let proverbs = this.state.proverbs;
+    id = id + 1;
+    if (id < 2) {
+      const currentProverb = proverbs[id];
+      const currentProverbName = proverbs[id].proverb;
+      const currentTranslation = proverbs[id].translation;
+      let currentArray = currentProverbName.split(" ");
+      for (let i = currentArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
+      }        
+      this.setState({
+        id,
+        proverbs, 
+        currentProverbName,
+        currentTranslation,
+        currentArray,
+        constructedProverb: [],
+        positiveProverbs,
+        negativeProverbs,
+        isCheckButtonVisible: false,
+        isDKButtonVisible: true,
+        isContinueButtonVisible: false,
+        isResultWrong: false,
+        nameClass: ''
+      })
+    }
+    else {
+      let exercise = {};
+      exercise.id = uuidv4();
+      exercise.date = new Date();
+      exercise.score = this.state.positiveProverbs.length; 
+      this.props.actions.updateCommonPhrases(exercise); 
+      this.props.actions.updateTotalExercises(1);
+      this.props.actions.updateTotalScore(exercise.score);      
+      this.setState({
+        isFinalVisible: true,
+        isCardVisible: false,
+        isStarterVisible: false,
+        positiveProverbs,
+        negativeProverbs           
+      })
+    }
+  }
+
+  setValue = (e) => {
     let target = e.target;
     let parent = e.target.parentElement.children;
-    var indexTarget = 0;
-        while ( (target = target.previousElementSibling) ) {
-          indexTarget++
+    let indexTarget = 0;
+    while ( (target = target.previousElementSibling) ) {
+      indexTarget++
     }
     let constructedProverb = this.state.constructedProverb;
     let currentArray = this.state.currentArray;
@@ -111,25 +111,25 @@ class Proverbs extends Component {
     }
   } 
 
-    removeValue = (e) =>{
-      let target = e.target;
-      let parent = e.target.parentElement.children;
-      var indexTarget = 0;
-          while ( (target = target.previousElementSibling) ) {
-            indexTarget++
-      }
-      let constructedProverb = this.state.constructedProverb;
-      let currentArray = this.state.currentArray;
-      constructedProverb.splice(indexTarget,1);
-      currentArray.push(e.target.textContent);
+  removeValue = (e) =>{
+    let target = e.target;
+    let parent = e.target.parentElement.children;
+    var indexTarget = 0;
+        while ( (target = target.previousElementSibling) ) {
+          indexTarget++
+    }
+    let constructedProverb = this.state.constructedProverb;
+    let currentArray = this.state.currentArray;
+    constructedProverb.splice(indexTarget,1);
+    currentArray.push(e.target.textContent);
+    this.setState({
+      currentArray
+    })
+    if(currentArray.length > 0){
       this.setState({
-        currentArray
+        isCheckButtonVisible: false
       })
-      if(currentArray.length > 0){
-        this.setState({
-          isCheckButtonVisible: false
-        })
-      }
+    }
   }
 
   dontKnow = (e) =>{
@@ -207,7 +207,7 @@ class Proverbs extends Component {
         const proverbs = res.data;
         let random = [];
         while(random.length < 2) {
-          var el = proverbs[Math.floor(Math.random() * proverbs.length)];
+          let el = proverbs[Math.floor(Math.random() * proverbs.length)];
           if (random.indexOf(el) === -1) {
             random.push(el)
           };                
@@ -217,8 +217,8 @@ class Proverbs extends Component {
         const currentTranslation = random[id].translation;
         let currentArray = currentProverbName.split(" ");
         for (let i = currentArray.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
+          const j = Math.floor(Math.random() * (i + 1));
+          [currentArray[i], currentArray[j]] = [currentArray[j], currentArray[i]];
         }                    
         this.setState({ 
             proverbs: random, 

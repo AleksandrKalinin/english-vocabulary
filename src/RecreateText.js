@@ -69,7 +69,7 @@ class RecreateText extends Component {
       spllittedSentences: [],
       reservedSentences: [],
       seconds: '00',   // responsible for the seconds 
-      minutes: '5',  // responsible for the minutes
+      minutes: '3',  // responsible for the minutes
       secondsRemaining: 0,
       intervalHandle: 0,
       wrongIndexes: [],
@@ -79,135 +79,131 @@ class RecreateText extends Component {
     }, () => this.initialLoad())
   }
 
-
   componentDidMount() {
     this.setStateOnStart();   
   }   
 
 
+  readMore = (id) =>{
+    let texts = this.state.texts.slice();
 
-    readMore = (id) =>{
-      let texts = this.state.texts.slice();
+    let title = texts[id].title;
+    let content = texts[id].content;
+    let image = texts[id].image
+    this.setState({
+      areTextsVisible: false,
+      isSingleTextVisible: true,
+      isMenuVisible: false,
+      title,
+      content,
+      image
+    })      
+  }
 
-      let title = texts[id].title;
-      let content = texts[id].content;
-      let image = texts[id].image
+  makeTextsVisible = () =>{
+    this.setState({
+      areTextsVisible: true        
+    }, () => this.createMenuItems());
+  }
+
+  backToTexts = () =>{
+    this.setState({
+      areTextsVisible: true,
+      isSingleTextVisible: false,
+      isMenuVisible: true,
+      contentArray: [],
+      currentTempArray: [],
+      currentStringArray: [],
+      currentRandomWord: '',
+      currentFinalArray: [],
+      currentRandomArray: [],
+      currentOneArray: [],
+      activeInput: 0,
+      activeArray: [],
+      sortedRandomArray: [],
+      comparativeRandomArray: [],
+      fragmentArrayIndexes: [],
+      isResultVisible: false,
+      isResultWrong: false,
+      seconds: '00',   // responsible for the seconds 
+      minutes: '5',  // responsible for the minutes
+      secondsRemaining: 0,
+      intervalHandle: 0,
+      wrongIndexes: [],
+      totalSecondsSpent: 0,
+      secondsSpent: 0,
+      minutesSpent: 0
+    })
+  }
+
+  splitText = () =>{
+    let wrongIndexes = [];
+    let content = this.state.content;
+    let currentStringArray = content.split(". ");
+    currentStringArray.pop();
+    let reservedSentences = content.split(". ");
+    reservedSentences.pop();   
+    for (var i = 0; i < currentStringArray.length; i++) {
+         wrongIndexes.push("recreate-text-right");
+    }   
+    for (let i = currentStringArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [currentStringArray[i], currentStringArray[j]] = [currentStringArray[j], currentStringArray[i]];
+    }             
+    this.setState({
+      isSingleTextVisible: false,
+      splittedSentenceVisible: true,
+      spllittedSentences: currentStringArray,
+      reservedSentences,
+      wrongIndexes
+
+    }, () => this.startCountDown())
+  }  
+
+  handleChange = (event) => {
+   this.setState({
+     minutes: event.target.value
+   })
+  }  
+
+  tick = () => {
+      var minutes = Math.floor(this.state.secondsRemaining / 60);
+      var seconds = this.state.secondsRemaining - (minutes * 60);
       this.setState({
-        areTextsVisible: false,
-        isSingleTextVisible: true,
-        isMenuVisible: false,
-        title,
-        content,
-        image
-      })      
-    }
-
-
-    makeTextsVisible = () =>{
-      this.setState({
-        areTextsVisible: true        
-      }, () => this.createMenuItems());
-    }
-
-    backToTexts = () =>{
-      this.setState({
-        areTextsVisible: true,
-        isSingleTextVisible: false,
-        isMenuVisible: true,
-        contentArray: [],
-        currentTempArray: [],
-        currentStringArray: [],
-        currentRandomWord: '',
-        currentFinalArray: [],
-        currentRandomArray: [],
-        currentOneArray: [],
-        activeInput: 0,
-        activeArray: [],
-        sortedRandomArray: [],
-        comparativeRandomArray: [],
-        fragmentArrayIndexes: [],
-        isResultVisible: false,
-        isResultWrong: false,
-        seconds: '00',   // responsible for the seconds 
-        minutes: '5',  // responsible for the minutes
-        secondsRemaining: 0,
-        intervalHandle: 0,
-        wrongIndexes: [],
-        totalSecondsSpent: 0,
-        secondsSpent: 0,
-        minutesSpent: 0
+        minutes,
+        seconds
       })
-    }
-
-    splitText = () =>{
-      let wrongIndexes = [];
-      let content = this.state.content;
-      let currentStringArray = content.split(". ");
-      currentStringArray.pop();
-      let reservedSentences = content.split(". ");
-      reservedSentences.pop();   
-      for (var i = 0; i < currentStringArray.length; i++) {
-           wrongIndexes.push("recreate-text-right");
-      }   
-      for (let i = currentStringArray.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [currentStringArray[i], currentStringArray[j]] = [currentStringArray[j], currentStringArray[i]];
-      }             
-      this.setState({
-        isSingleTextVisible: false,
-        splittedSentenceVisible: true,
-        spllittedSentences: currentStringArray,
-        reservedSentences,
-        wrongIndexes
-
-      }, () => this.startCountDown())
-    }  
-
-    handleChange = (event) => {
-     this.setState({
-       minutes: event.target.value
-     })
-    }  
-
-    tick = () => {
-        var minutes = Math.floor(this.state.secondsRemaining / 60);
-        var seconds = this.state.secondsRemaining - (minutes * 60);
+      if (seconds < 10) {
         this.setState({
-          minutes,
-          seconds
+          seconds: "0" + this.state.seconds,
         })
-        if (seconds < 10) {
-          this.setState({
-            seconds: "0" + this.state.seconds,
-          })
-        }
-        if (minutes < 10) {
-          this.setState({
-            value: "0" + minutes,
-           })
-        }
-        if (minutes === 0 & seconds === 0) {
-          let time = this.state.totalSecondsSpent;
-          let minutesSpent = Math.floor(time / 60);
-          let secondsSpent = this.state.totalSecondsSpent - (minutes * 60);
-          clearInterval(this.state.intervalHandle);
-          this.timeIsOut();
-          this.setState({
-            minutesSpent,
-            secondsSpent
-          })
+      }
+      if (minutes < 10) {
+        this.setState({
+          value: "0" + minutes,
+         })
+      }
+      if (minutes === 0 & seconds === 0) {
+        let time = this.state.totalSecondsSpent;
+        let minutesSpent = Math.floor(time / 60);
+        let secondsSpent = this.state.totalSecondsSpent - (minutes * 60);
+        clearInterval(this.state.intervalHandle);
+        this.timeIsOut();
+        this.setState({
+          minutesSpent,
+          secondsSpent
+        })
 
-        }
-        this.state.secondsRemaining--;
-        this.state.totalSecondsSpent++;
+      }
+      this.state.secondsRemaining--;
+      this.state.totalSecondsSpent++; 
+    }
 
-   
-    }
-    startCountDown = () => {
-        this.state.intervalHandle = setInterval(this.tick, 1000);
-        let time = this.state.minutes;
-        this.state.secondsRemaining = time * 60;
-    }
+  startCountDown = () => {
+      this.state.intervalHandle = setInterval(this.tick, 1000);
+      let time = this.state.minutes;
+      this.state.secondsRemaining = time * 60;
+  }
 
   onDragStart = (e, index) => {
     this.draggedItem = this.state.spllittedSentences[index];
@@ -279,6 +275,8 @@ class RecreateText extends Component {
       exercise.date = new Date();
       exercise.score = this.state.rightAnswers;
       this.props.actions.updateRecreateTxt(exercise);
+      this.props.actions.updateExerciseComplete(1);
+      this.props.actions.updateTotalScore(this.state.rightAnswers);      
       clearInterval(this.state.intervalHandle);
       this.setState({
         isResultVisible: true,
@@ -288,53 +286,33 @@ class RecreateText extends Component {
       })
   }
 
-  tryAgain = () =>{
-      this.setState({
-        areTextsVisible: false,
-        isSingleTextVisible: true,
-        isMenuVisible: false,
-        isResultVisible: false,
-        isResultWrong: false,
-        seconds: '00',   // responsible for the seconds 
-        minutes: '3',  // responsible for the minutes
-        secondsRemaining: 0,
-        intervalHandle: 0,
-        wrongIndexes: [],
-        totalSecondsSpent: 0,
-        secondsSpent: 0,
-        minutesSpent: 0        
-      }) 
-  }
-
-
     createMenuItems = () =>{
-      let newItems = [];
+      let options = [];
       this.state.texts.map((item, i) =>
-                    newItems.push({ 
+                    options.push({ 
                         key: item.id, 
                         text: item.difficulty, 
                         value: item.difficulty 
                      }))
       this.setState({
-        options: newItems
+        options
       }, () => this.getUnique())
     } 
 
     getUnique = () => {
       var arr = this.state.options;
       var comp = 'text';
-      const unique = arr
+      const options = arr
         .map(e => e[comp])
         .map((e, i, final) => final.indexOf(e) === i && i)
         .filter(e => arr[e]).map(e => arr[e]);
       this.setState({
-        options: unique,
+        options,
         isMenuVisible: true
       })    
     }  
 
     selectCategory = () =>{
-      var options = this.state.options.slice();
       var categoryValue = this.state.value;
       this.setState({
         categoryValue
@@ -433,7 +411,6 @@ class RecreateText extends Component {
                     </Card.Description>
                   </Card.Content>
                   <div className="fragment-variants recreate-text-buttons">
-                    <Button primary onClick={this.tryAgain}>Заново</Button>
                     <Button primary onClick={this.backToTexts}>Назад к текстам</Button>
                   </div> 
                 </Card> : null
@@ -451,7 +428,6 @@ class RecreateText extends Component {
                     </Card.Description>
                   </Card.Content>
                   <div className="fragment-variants recreate-text-buttons">
-                    <Button primary onClick={this.tryAgain}>Заново</Button>
                     <Button primary onClick={this.backToTexts}>Назад к текстам</Button>
                   </div> 
                 </Card> : null

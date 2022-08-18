@@ -314,6 +314,8 @@ class RecreateAudioText extends Component {
     exercise.date = new Date();
     exercise.score = this.state.rightAnswers;
     this.props.actions.updateRecreateAudioTxt(exercise);
+    this.props.actions.updateExerciseComplete(1);
+    this.props.actions.updateTotalScore(this.state.rightAnswers);
     clearInterval(intervalHandle);
     this.setState({
       isResultVisible: true,

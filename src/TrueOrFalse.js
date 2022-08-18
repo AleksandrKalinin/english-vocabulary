@@ -9,7 +9,7 @@ import {bindActionCreators} from 'redux';
 import actions from './actions/index';
 import {connect} from 'react-redux';
 
-class Rightwrong extends Component {
+class TrueOrFalse extends Component {
 
 	constructor(props){
 		super(props);
@@ -18,123 +18,120 @@ class Rightwrong extends Component {
 		}
 	}
 
-
   componentDidMount() {
     this.setStateOnStart();
   }
 
-   setStateOnStart = () => {
+  setStateOnStart = () => {
+    this.setState({
+      words: [],
+      negativeWords: [],
+      positiveWords: [],
+      id: 0,
+      isCardVisible: false,
+      isImageVisible: false,
+      isButtonVisible: true,
+      isTranslationVisible: false,
+      showNavButtons: true,
+      showContinueButton: false,
+      isFinalVisible: false         
+    }, () => this.initialLoad())
+  } 
+
+  initialLoad = () => {
+    let id = this.state.id;
+    axios.get('/working.json')
+      .then(res => {
+        const words = res.data;
+        let result = []; 
+        for (var i = 0; i < 3; i++) {
+          let item = [];
+          while(item.length < 5) {
+            let el = words[Math.floor(Math.random() * words.length)];
+            if (item.indexOf(el) === -1) {
+              item.push(el)
+            };                
+          }
+          result.push(item);
+        }  
+
+        const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
+            
+        this.setState({ 
+          words, 
+          result,
+          currentWord });
+      })
+  }
+
+  renderComponent = () =>{
+    this.setState({
+      isButtonVisible: false,
+      isCardVisible: true
+    })
+  }
+
+  checkResponse = (response) => {
+    if (response) {
+      let positiveWords = this.state.positiveWords.slice();        
+      positiveWords.push(this.state.currentWord); 
+      this.setState({ positiveWords })       
+    } else {
+        let negativeWords = this.state.negativeWords.slice();          
+        negativeWords.push(this.state.currentWord);
+        this.setState({ negativeWords })          
+    }
+    this.setState({
+      isTranslationVisible: true,
+      showNavButtons: false,
+      showContinueButton: true,
+      isImageVisible: true
+    })      
+  }
+
+  continueTraining = () =>{
+    let id =this.state.id;
+    id = id + 1;
+    const result = this.state.result;
+    if(id < this.state.result.length){
+      const currentWord =  result[id][Math.floor(Math.random() * result[0].length)];     
       this.setState({
-        words: [],
-        negativeWords: [],
-        positiveWords: [],
-        id: 0,
-        isCardVisible: false,
+        id,
+        currentWord, 
         isImageVisible: false,
-        isButtonVisible: true,
         isTranslationVisible: false,
         showNavButtons: true,
-        showContinueButton: false,
-        isFinalVisible: false         
-      }, () => this.initialLoad())
-   } 
-
-   initialLoad = () => {
-      var id = this.state.id;
-      axios.get('/working.json')
-        .then(res => {
-          const words = res.data;
-          let result = [];
- 
-          for (var i = 0; i < 3; i++) {
-            let item = [];
-            while(item.length < 5) {
-              var el = words[Math.floor(Math.random() * words.length)];
-              if (item.indexOf(el) === -1) {
-                item.push(el)
-              };                
-            }
-            result.push(item);
-          }  
-
-          const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
-              
-          this.setState({ 
-            words, 
-            result,
-            currentWord });
-        })
-   }
-
-
-    renderComponent = () =>{
-      this.setState({
-        isButtonVisible: false,
-        isCardVisible: true
+        showContinueButton: false        
       })
-    }
 
-    checkResponse = (response) => {
-      if (response) {
-        let positiveWords = this.state.positiveWords.slice();        
-        positiveWords.push(this.state.currentWord); 
-        this.setState({ positiveWords })       
-      } else {
-          let negativeWords = this.state.negativeWords.slice();          
-          negativeWords.push(this.state.currentWord);
-          this.setState({ negativeWords })          
+    }
+    else {
+      let words = this.state.positiveWords.slice();
+      let exercise = {}, wordsTrained = [];
+      exercise.id = uuidv4();
+      exercise.date = new Date();
+      exercise.score = this.state.positiveWords.length;
+      for (var i = 0; i < words.length; i++) {
+        wordsTrained.push(words[i].id)
       }
+      exercise.wordsTrained = wordsTrained;
+      this.props.actions.updateTrueOrFalse(exercise);
+      this.props.actions.updateExerciseComplete(1);
+      this.props.actions.updateTotalScore(exercise.score);
       this.setState({
-        isTranslationVisible: true,
+        isFinalVisible: true,
+        isTranslationVisible: false,
         showNavButtons: false,
-        showContinueButton: true,
-        isImageVisible: true
-      })      
+        showContinueButton: false, 
+        isCardVisible: false,
+        isButtonVisible: false
+      })                
     }
+  }
 
-    continueTraining = () =>{
-      let id =this.state.id;
-      id = id + 1;
-      const result = this.state.result;
-      if(id < this.state.result.length){
-        const currentWord =  result[id][Math.floor(Math.random() * result[0].length)];     
-        this.setState({
-          id,
-          currentWord, 
-          isImageVisible: false,
-          isTranslationVisible: false,
-          showNavButtons: true,
-          showContinueButton: false        
-        })
-
-      }
-      else {
-        let words = this.state.positiveWords.slice();
-        let exercise = {}, wordsTrained = [];
-        exercise.id = uuidv4();
-        exercise.date = new Date();
-        exercise.score = this.state.positiveWords.length;
-        for (var i = 0; i < words.length; i++) {
-          wordsTrained.push(words[i].id)
-        }
-        exercise.wordsTrained = wordsTrained;
-        this.props.actions.updateTrueOrFalse(exercise);
-        this.props.actions.updateExerciseComplete();
-        this.setState({
-            isFinalVisible: true,
-            isTranslationVisible: false,
-            showNavButtons: false,
-            showContinueButton: false, 
-            isCardVisible: false,
-            isButtonVisible: false
-        })                
-      }
-    }
-
-   voiceWord = () =>{
-      var newWord = this.state.currentName;
-      speech.say(newWord);
-   }   
+  voiceWord = () =>{
+    speech.say(this.state.currentName);
+  }   
 
   render() {
     return (
@@ -259,4 +256,4 @@ function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Rightwrong);
+export default connect(mapStateToProps, mapDispatchToProps)(TrueOrFalse);

@@ -49,7 +49,7 @@ setStateOnStart = () => {
 }
 
   initialLoad = () => {
-    var id = this.state.id;
+    let id = this.state.id;
     axios.get('/working.json')
       .then(res => {
         const words = res.data;
@@ -57,7 +57,7 @@ setStateOnStart = () => {
         for (var i = 0; i < 3; i++) {
           let item = [];
           while(item.length < 5) {
-            var el = words[Math.floor(Math.random() * words.length)];
+            let el = words[Math.floor(Math.random() * words.length)];
             if (item.indexOf(el) === -1) {
               item.push(el)
             };                
@@ -112,8 +112,8 @@ continueTraining = () =>{
     exercise.wordsTrained = wordsTrained;
     
     this.props.actions.updateRusToEng(exercise);
-    this.props.actions.updateExerciseComplete();
-
+    this.props.actions.updateExerciseComplete(1);
+    this.props.actions.updateTotalScore(exercise.score);
     this.setState({
         isFinalVisible: true,
         isTranslationVisible: false,
@@ -130,8 +130,7 @@ continueTraining = () =>{
 }
 
 voiceWord = () =>{
-  var newWords = this.state.currentName;
-  speech.say(newWords);
+  speech.say(this.state.currentName);
 }  
 
 showImage = ()=>{
@@ -143,8 +142,8 @@ showImage = ()=>{
 
  compareWord = (id) =>{
   let selectedWord = this.state.result[this.state.id].find(x => x.id === id);
-  var positiveWords = this.state.positiveWords.slice();
-  var negativeWords = this.state.negativeWords.slice();    
+  let positiveWords = this.state.positiveWords.slice();
+  let negativeWords = this.state.negativeWords.slice();    
   if(this.state.currentWord.id === selectedWord.id){
     positiveWords.push(this.state.currentWord);
     this.setState({
@@ -177,8 +176,7 @@ dontKnow = () =>{
 }
 
 voiceWord = () =>{
-  var newWords = this.state.currentWord.name;
-  speech.say(newWords);
+  speech.say(this.state.currentWord.name);
 } 
 
 render() {

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Vocabulary from './Vocabulary';
-import SplittedWords from './SplittedWords';
 import GrammarList from './GrammarList'
 import Statistics from './Statistics'
 import Training from './Training'
@@ -13,7 +12,7 @@ import Audio from './Audio'
 import EnglishToRussian from './EnglishToRussian'
 import RussianToEnglish from './RussianToEnglish'
 import Videos from './Videos'
-import Fragments from './Fragments'
+import FillTheGaps from './FillTheGaps'
 import RecreateText from './RecreateText'
 import RecreateAudioText from './RecreateAudioText'
 import InsertSpaces from './InsertSpaces'
@@ -36,7 +35,7 @@ import Settings from './Settings'
 import BookList from './BookList'
 import Materials from './Materials'
 import Tests from './Tests'
-import Rightwrong from './Rightwrong'
+import TrueOrFalse from './TrueOrFalse'
 import GrammarItem from './grammar/GrammarItem'
 import GrammarPresentSimple from './grammar/GrammarPresentSimple'
 import GrammarPastSimple from './grammar/GrammarPastSimple'
@@ -60,13 +59,11 @@ import configureStore from "./store/index";
 let initialState = [];
 let store = configureStore(initialState);
 
-
 ReactDOM.render(  
 	<Provider store={store}>
 		<Router basename={process.env.PUBLIC_URL}>
 			<div className="router-wrapper">
 				<Route exact path="/" component={Main} />
-				<Route path="/splitted" component={SplittedWords} />
 				<Route path="/selectedbook" component={SelectedBook} />
 				<Route path="/settings" component={Settings} />
 				<Route path="/vocabulary" component={Vocabulary} />				
@@ -75,7 +72,7 @@ ReactDOM.render(
 				<Route path="/statistics" component={Statistics} />
 				<Route path="/training" component={Training} />		  
 				<Route path="/cards" component={Cards} />
-				<Route path="/rightwrong" component={Rightwrong} />		
+				<Route path="/trueorfalse" component={TrueOrFalse} />		
 				<Route path="/constructword" component={ConstructWord} />
 				<Route path="/proverbs" component={Proverbs}/>
 				<Route path="/audio" component={Audio} />
@@ -85,7 +82,7 @@ ReactDOM.render(
 				<Route path="/englishtorussian" component={EnglishToRussian} />
 				<Route path="/russiantoenglish" component={RussianToEnglish} />
 				<Route path="/videos" component={Videos} />
-				<Route path="/fragments" component={Fragments} />
+				<Route path="/fillthegaps" component={FillTheGaps} />
 				<Route path="/decks" component={Decks} />		
 				<Route path="/videos/:id" component={SelectedVideo} />
 				<Route path="/ted" component={TED} />

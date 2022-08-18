@@ -46,7 +46,7 @@ class Cards extends Component {
           for (var i = 0; i < 3; i++) {
             let item = [];
             while(item.length < 5) {
-              var el = words[Math.floor(Math.random() * words.length)];
+              let el = words[Math.floor(Math.random() * words.length)];
               if (item.indexOf(el) === -1) {
                 item.push(el)
               };                
@@ -71,7 +71,7 @@ class Cards extends Component {
 
     checkResponse = (val) => {
       if (val) {
-        var positiveWords = this.state.positiveWords.slice();
+        let positiveWords = this.state.positiveWords.slice();
         positiveWords.push(this.state.currentWord);
         this.setState({
           positiveWords,
@@ -80,7 +80,7 @@ class Cards extends Component {
           showContinueButton: true,
         })        
       } else {
-        var negativeWords = this.state.negativeWords.slice();
+        let negativeWords = this.state.negativeWords.slice();
         negativeWords.push(this.state.currentWord);      
         this.setState({
           negativeWords,
@@ -104,7 +104,6 @@ class Cards extends Component {
           showNavButtons: true,
           showContinueButton: false        
         })
-
       }
       else {
         let words = this.state.positiveWords.slice();
@@ -117,24 +116,23 @@ class Cards extends Component {
         }
         exercise.wordsTrained = wordsTrained;
         this.props.actions.updateCardWords(exercise);
-        this.props.actions.updateExerciseComplete();
-
+        this.props.actions.updateExerciseComplete(1);
+        this.props.actions.updateTotalScore(exercise.score);
         this.setState({
-            isFinalVisible: true,
-            isTranslationVisible: false,
-            showNavButtons: false,
-            showContinueButton: false, 
-            isCardVisible: false,
-            isButtonVisible: false
+          isFinalVisible: true,
+          isTranslationVisible: false,
+          showNavButtons: false,
+          showContinueButton: false, 
+          isCardVisible: false,
+          isButtonVisible: false
         })
       }
     }
 
 
-   voiceWord = () =>{
-      var newWord = this.state.currentName;
-      speech.say(newWord);
-   }    
+  voiceWord = () =>{
+    speech.say(this.state.currentName);
+  }    
 
   render() {
     return (

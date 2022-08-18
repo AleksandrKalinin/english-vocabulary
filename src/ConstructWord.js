@@ -54,7 +54,7 @@ class ConstructWord extends Component {
     }
 
     initialLoad = () => {
-      var id = this.state.id;
+      let id = this.state.id;
       axios.get('/vocabulary2.json')
       .then(res => {
         const words = res.data;
@@ -137,40 +137,39 @@ class ConstructWord extends Component {
       }
   }   
 
-  startTraining = () =>{
+  startTraining = () => {
     this.setState({
-        isStarterVisible: false,
-        isCardVisible: true
+      isStarterVisible: false,
+      isCardVisible: true
     })
   }
 
 
-    continueTraining = () =>{
-  	  let mistakeCount = this.state.mistakeCount;
-  	  let currentFullWord = this.state.currentFullWord;
-  	  let negativeWords = this.state.negativeWords.slice();
-  	  let positiveWords = this.state.positiveWords.slice();
-  	  let currentValue = this.state.currentValue;
-  	  let currentWord = this.state.currentWord;	  
-  		if (mistakeCount > 2){
-  			negativeWords.push(currentFullWord);
-  		}
+  continueTraining = () => {
+	  let mistakeCount = this.state.mistakeCount;
+	  let currentFullWord = this.state.currentFullWord;
+	  let negativeWords = this.state.negativeWords.slice();
+	  let positiveWords = this.state.positiveWords.slice();
+	  let currentValue = this.state.currentValue;
+	  let currentWord = this.state.currentWord;	  
+		if (mistakeCount > 2){
+			negativeWords.push(currentFullWord);
+		}
 
-  		else if(currentWord !== currentValue){
-  		  	negativeWords.push(currentFullWord);
-  		  	this.setState({
-  		  		negativeWords
-  		  	})
-  		}
-  		else{
-  			positiveWords.push(currentFullWord)
-  		} 
-      let id = this.state.id;
-      let wordsLength = this.state.words.length;
-      let words = this.state.words; 
-
-      id = id + 1;
-      if(id < wordsLength) {
+		else if(currentWord !== currentValue){
+	  	negativeWords.push(currentFullWord);
+	  	this.setState({
+	  		negativeWords
+	  	})
+		}
+		else{
+			positiveWords.push(currentFullWord)
+		} 
+    let id = this.state.id;
+    let wordsLength = this.state.words.length;
+    let words = this.state.words; 
+    id = id + 1;
+    if(id < wordsLength) {
       const currentFullWord = words[id];
       const currentWord = words[id].name;
   		const currentTranslation = words[id].translation;
@@ -186,72 +185,70 @@ class ConstructWord extends Component {
   		for (var i = 0; i < nameArray.length; i++) {
   			wordNameArray.push(' ');
   		}
-        this.setState({
-            id,
-            words, 
-            currentWord,
-            currentFullWord,
-            currentTranslation,
-            currentImage,
-            currentMeaning,
-            randomNameArray,
-            nameArray,
-            wordNameArray,
-            isImageVisible: false,
-            areButtonsVisible: true,
-            currentValue: '',
-            nameArrayId: 0,
-            mistakeCount: 0,
-            positiveWords,
-            negativeWords
-        })
-      }
-        else {
-          let words = this.state.positiveWords.slice();
-          let exercise = {}, wordsTrained = [];
-          exercise.id = uuidv4();
-          exercise.date = new Date();
-          exercise.score = this.state.positiveWords.length;
-          for (var i = 0; i < words.length; i++) {
-            wordsTrained.push(words[i].id)
-          }
-          exercise.wordsTrained = wordsTrained;
-          this.props.actions.updateConstructWord(exercise); 
-          this.props.actions.updateExerciseComplete();
-          this.setState({
-           isFinalVisible: true,
-           isCardVisible: false,
-           isStarterVisible: false,
-      			positiveWords,
-      			negativeWords           
-          })
-        }
+      this.setState({
+          id,
+          words, 
+          currentWord,
+          currentFullWord,
+          currentTranslation,
+          currentImage,
+          currentMeaning,
+          randomNameArray,
+          nameArray,
+          wordNameArray,
+          isImageVisible: false,
+          areButtonsVisible: true,
+          currentValue: '',
+          nameArrayId: 0,
+          mistakeCount: 0,
+          positiveWords,
+          negativeWords
+      })
     }
+    else {
+      let words = this.state.positiveWords.slice();
+      let exercise = {}, wordsTrained = [];
+      exercise.id = uuidv4();
+      exercise.date = new Date();
+      exercise.score = this.state.positiveWords.length;
+      for (var i = 0; i < words.length; i++) {
+        wordsTrained.push(words[i].id)
+      }
+      exercise.wordsTrained = wordsTrained;
+      this.props.actions.updateConstructWord(exercise); 
+      this.props.actions.updateExerciseComplete(1);
+      this.props.actions.updateTotalScore(exercise.score);
+      this.setState({
+        isFinalVisible: true,
+        isCardVisible: false,
+        isStarterVisible: false,
+        positiveWords,
+    	  negativeWords           
+      })
+    }
+  }
   
-   voiceWord = () =>{
-      var newWord = this.state.currentName;
-      speech.say(newWord);
-   }  
+  voiceWord = () => {
+    speech.say(this.state.currentName);
+  }  
 
-   checkValue = () =>{
-   	var currentWord = this.state.currentWord;
-    var currentValue = this.state.currentValue;
-    if(currentWord.length === currentValue.length){
+  checkValue = () => {
+    if(this.state.currentWord.length === this.state.currentValue.length){
     	this.setState({
     		areButtonsVisible: false,
     		isImageVisible: true
     	})
     }   	
-   }
+  }
 
-   compareWord = (e) =>{
-    var id = this.state.nameArrayId;
-    var currentWord = this.state.currentWord;
-    var nameArray = this.state.nameArray;
-    var randomNameArray = this.state.randomNameArray;
-    var currentValue = this.state.currentValue;
-    var currentLetter = e.target.textContent.slice(0,1);
-    var mistakeCount = this.state.mistakeCount;
+  compareWord = (e) => {
+    let id = this.state.nameArrayId;
+    let currentWord = this.state.currentWord;
+    let nameArray = this.state.nameArray;
+    let randomNameArray = this.state.randomNameArray;
+    let currentValue = this.state.currentValue;
+    let currentLetter = e.target.textContent.slice(0,1);
+    let mistakeCount = this.state.mistakeCount;
       if( (currentLetter === nameArray[id]) && (currentValue.length < currentWord.length) ){
         e.target.className = "hidden";
         currentValue = currentValue + currentLetter;
@@ -276,7 +273,7 @@ class ConstructWord extends Component {
       		isCardVisible: false
       	})      	
       }
-} 
+  } 
 
 
 

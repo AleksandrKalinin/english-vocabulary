@@ -48,7 +48,7 @@ class Audio extends Component {
    }
 
    initialLoad = () => {
-    var id = this.state.id;
+    let id = this.state.id;
       axios.get('/working.json')
         .then(res => {
           const words = res.data;
@@ -56,7 +56,7 @@ class Audio extends Component {
           for (var i = 0; i < 3; i++) {
             let item = [];
             while(item.length < 5) {
-              var el = words[Math.floor(Math.random() * words.length)];
+              let el = words[Math.floor(Math.random() * words.length)];
               if (item.indexOf(el) === -1) {
                 item.push(el)
               };                
@@ -169,35 +169,34 @@ class Audio extends Component {
         }
         exercise.wordsTrained = wordsTrained;
         this.props.actions.updateAudioWords(exercise);   
-        this.props.actions.updateExerciseComplete();
-
+        this.props.actions.updateExerciseComplete(1);
+        this.props.actions.updateTotalScore(exercise.score);
         this.setState({
-            isFinalVisible: true,
-            isTranslationVisible: false,
-            showNavButtons: false,
-            showContinueButton: false, 
-            isCardVisible: false,
-            isButtonVisible: false,
-            isImageVisible: false,
-            isLinkVisible: false,
-            isInputVisible: false,
-            correctNameVisible: false,
-            search: ''
+          isFinalVisible: true,
+          isTranslationVisible: false,
+          showNavButtons: false,
+          showContinueButton: false, 
+          isCardVisible: false,
+          isButtonVisible: false,
+          isImageVisible: false,
+          isLinkVisible: false,
+          isInputVisible: false,
+          correctNameVisible: false,
+          search: ''
         })
       }
     }
 
-   voiceWord = () =>{
-      var word = this.state.currentWord.name;
-      speech.say(word);
-   }  
+  voiceWord = () =>{
+    speech.say(this.state.currentWord.name);
+  }  
 
-   showImage = () => {
+  showImage = () => {
     this.setState({
       isImageVisible: true,
       isLinkVisible: false
     })
-   }
+  }
 
   render() {
     return (

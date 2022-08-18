@@ -43,13 +43,11 @@ class EnglishToRussian extends Component {
       flagState: false,
       result: [],
       disabled: false        
-    }, () => {
-      this.initialLoad();
-    })
+    }, () => { this.initialLoad() })
   }
 
     initialLoad = () => {
-      var id = this.state.id;
+      let id = this.state.id;
       axios.get('/working.json')
         .then(res => {
           const words = res.data;
@@ -57,7 +55,7 @@ class EnglishToRussian extends Component {
           for (var i = 0; i < 3; i++) {
             let item = [];
             while(item.length < 5) {
-              var el = words[Math.floor(Math.random() * words.length)];
+              let el = words[Math.floor(Math.random() * words.length)];
               if (item.indexOf(el) === -1) {
                 item.push(el)
               };                
@@ -111,8 +109,8 @@ class EnglishToRussian extends Component {
         }
         exercise.wordsTrained = wordsTrained;
         this.props.actions.updateEngToRus(exercise);
-        this.props.actions.updateExerciseComplete();
-
+        this.props.actions.updateExerciseComplete(1);
+        this.props.actions.updateTotalScore(exercise.score);
         this.setState({
           isFinalVisible: true,
           isTranslationVisible: false,
@@ -129,8 +127,7 @@ class EnglishToRussian extends Component {
     }
 
    voiceWord = () =>{
-      var name = this.state.currentName;
-      speech.say(name);
+      speech.say(this.state.currentName);
    }  
 
    showImage = ()=>{
@@ -139,7 +136,6 @@ class EnglishToRussian extends Component {
       isLinkVisible: false
     })
    }
-
 
    compareWord = (id) =>{
     let selectedWord = this.state.result[this.state.id].find(x => x.id === id);

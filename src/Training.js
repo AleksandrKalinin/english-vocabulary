@@ -55,22 +55,12 @@ class Training extends Component {
                 <Card.Header><Link to="/constructword">Конструктор слов</Link></Card.Header>
               </Card.Content>
             </Card>
-          {/*
-            <Card>
-              <div className="training-wrapper-image">
-              <Image src='./training/pronunciation.jpg' />              
-              </div>          
-              <Card.Content>
-                <Card.Header><Link to="/pronunciation">Произношение</Link></Card.Header>
-              </Card.Content>
-            </Card>  
-          */}
             <Card>
               <div className="training-wrapper-image">
               <Image src='./training/fillthegaps.jpg' />              
               </div>          
               <Card.Content>
-                <Card.Header><Link to="/fragments">Заполни пробелы</Link></Card.Header>
+                <Card.Header><Link to="/fillthegaps">Заполни пробелы</Link></Card.Header>
               </Card.Content>
             </Card>
             <Card>
@@ -102,7 +92,7 @@ class Training extends Component {
               <Image src='./training/truefalse.png' />              
               </div>          
               <Card.Content>
-                <Card.Header><Link to="/rightwrong">Верно-неверно</Link></Card.Header>
+                <Card.Header><Link to="/trueorfalse">Верно-неверно</Link></Card.Header>
               </Card.Content>
             </Card>
             <Card>

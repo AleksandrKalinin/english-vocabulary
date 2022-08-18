@@ -11,7 +11,7 @@ let resultsReducer = (state = initialState, action) => {
 		case 'UPDATE_TOTAL_SCORE':
 			return {
 				...state,
-				totalScore: ++state.totalScore }
+				totalScore: state.totalScore + action.payload }
 
 		case 'UPDATE_EXERCISES_COMPLETE':
 			console.log(state.exercisesComplete);
