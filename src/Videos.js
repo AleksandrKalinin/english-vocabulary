@@ -47,7 +47,7 @@ class Videos extends Component {
 
     loadMore = () => {
       this.setState((prev) => {
-        return {visible: prev.visible + 4};
+        return {visible: prev.visible + 8};
       });
     }    
 
@@ -66,16 +66,16 @@ class Videos extends Component {
                   <Card.Description>{video.description}</Card.Description>
                 </Card.Content>
                 <Card.Content extra className="video-extra">
-                   <Link to={{ pathname: `/videos/${video.id}`,  query: {video } }}>{video.name}</Link>
+                  <Link to={{ pathname: `/videos/${video.id}`,  query: { video } }}>{video.name}</Link>
                 </Card.Content>
               </Card> 
             )}                                                                           
           </Card.Group>
-          <div className="load-more-button">
-            {this.state.visible < this.state.videos.length &&
-              <Button onClick={this.loadMore} primary>Загрузить</Button>
-            }                 
-          </div>
+          {this.state.visible < this.state.videos.length &&
+            <div className="videos-load">
+              <Button primary onClick={this.loadMore}>Load more</Button>
+            </div> 
+          }         
         </div>
         <footer></footer>
       </Fragment>

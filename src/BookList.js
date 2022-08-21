@@ -65,13 +65,13 @@ class BookList extends Component {
   }
 
   componentDidMount() {
-      axios.get('/books.json')
-        .then(res => {
-          let books = res.data;
-          this.setState({ 
-            books, allBooks: res.data
-          }, () => this.createMenu() );
-        })
+    axios.get('/books.json')
+      .then(res => {
+        let books = res.data;
+        this.setState({ 
+          books, allBooks: res.data
+        }, () => this.createMenu() );
+      })
     }
 
     createMenu = () =>{
@@ -257,7 +257,9 @@ class BookList extends Component {
                     {item.content.substr(0,250) + ' ...'}
                   </Card.Description>
                 </Card.Content>
-                <Button primary><Link className="training-link books-link"  to={{ pathname: `/books/${item.id}`,  query: { item } }}>Читать</Link></Button>
+                <Button primary>
+                  <Link className="training-link books-link"  to={{ pathname: `/books/${item.id}`,  query: { item } }}>Читать</Link>
+                  </Button>
               </Card>
              )}
             </Card.Group> : null

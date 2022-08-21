@@ -16,19 +16,7 @@ import FillTheGaps from './FillTheGaps'
 import RecreateText from './RecreateText'
 import RecreateAudioText from './RecreateAudioText'
 import InsertSpaces from './InsertSpaces'
-import TED from './videos/TED'
-import EngVid from './videos/EngVid'
-import BritishCouncil from './videos/BritishCouncil'
-import Khan from './videos/Khan'
-import Coursera from './videos/Coursera'
-import JimmyFallon from './videos/JimmyFallon'
-import JimmyKimmel from './videos/JimmyKimmel'
-import ConanOBrien from './videos/ConanOBrien'
-import Ellen from './videos/Ellen'
-import JamesCorden from './videos/JamesCorden'
-import SethMeyers from './videos/SethMeyers'
-import StephenColbert from './videos/StephenColbert'
-import SelectedVideo from './videos/SelectedVideo'
+import SelectedVideo from './SelectedVideo'
 import TextsList from './TextsList'
 import Decks from './Decks'
 import Settings from './Settings'
@@ -81,22 +69,10 @@ ReactDOM.render(
 				<Route path="/insertspaces" component={InsertSpaces} />						
 				<Route path="/englishtorussian" component={EnglishToRussian} />
 				<Route path="/russiantoenglish" component={RussianToEnglish} />
-				<Route path="/videos" component={Videos} />
+				<Route path="/videos" exact component={Videos} />
 				<Route path="/fillthegaps" component={FillTheGaps} />
 				<Route path="/decks" component={Decks} />		
 				<Route path="/videos/:id" component={SelectedVideo} />
-				<Route path="/ted" component={TED} />
-				<Route path="/engvideo" component={EngVid} />
-				<Route path="/britishcouncil" component={BritishCouncil} />
-				<Route path="/khan" component={Khan} />
-				<Route path="/conanobrien" component={ConanOBrien} />
-				<Route path="/jimmyfallon" component={JimmyFallon} />
-				<Route path="/jimmykimmel" component={JimmyKimmel} />
-				<Route path="/coursera" component={Coursera} />
-				<Route path="/ellen" component={Ellen} />
-				<Route path="/stephencolbert" component={StephenColbert} />
-				<Route path="/jamescorden" component={JamesCorden} />
-				<Route path="/sethmeyers" component={SethMeyers} />
 				<Route path="/texts" component={TextsList} />
 				<Route path="/books" exact component={BookList} />
 				<Route path="/books/:id" component={SelectedBook} />						

@@ -73,6 +73,7 @@ class TopMenu extends Component {
             <Menu.Item className="item-link item-menu__link">
               <Link to="/statistics">Статистика</Link>
             </Menu.Item>
+            {/*
             <Menu.Menu position='right'>
               <Menu.Item className="login-item">
                 <Modal className="modal-form login-modal" trigger={<Button className="login-button">Войти</Button>} closeIcon>
@@ -128,7 +129,8 @@ class TopMenu extends Component {
                 }
                 <Image className="user-avatar" onClick={this.showModal} src="/icons/member.png" />
               </Menu.Item>                
-            </Menu.Menu>                                                                     
+            </Menu.Menu>
+            */}                                                                     
         </Menu>
  	);
   }
