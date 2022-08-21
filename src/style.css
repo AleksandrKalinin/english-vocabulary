@@ -167,9 +167,9 @@ button.button:not(.audio-button) {
 }
 
 .ui.primary.button:hover{
-	background: #3281F0;
-	border: 2px solid #3281F0;
-	color: #FFFFFF;
+	background: #3281F0 !important;
+	border: 2px solid #3281F0 !important;
+	color: #FFFFFF !important;
 }
 .ui.primary.button:active {
 	background: #3281F0;
@@ -178,10 +178,10 @@ button.button:not(.audio-button) {
 }
 
 .ui.primary.button{
-	background: #444444;
-	border: 2px solid #444444;
-	color: #fff;
-	transition: .2s all;
+	background: #444444 !important;
+	border: 2px solid #444444 !important;
+	color: #fff !important;
+	transition: .2s all !important;
 }
 
 body.app-body {
@@ -1179,6 +1179,21 @@ button.ui.button a.training-link{
 	color: #fff;
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
+}
+
+.link-wrapper .grammar-link {
+	background: #444444;
+	border: 2px solid #444444;
+	color: #fff;
+	transition: .2s all;
+	outline: none;
+	padding: 13px 16px;
+}
+
+.link-wrapper .grammar-link:hover {
+	background: #3281F0;
+	border: 2px solid #3281F0;
+	color: #FFFFFF;
 }
 
 /* footer */

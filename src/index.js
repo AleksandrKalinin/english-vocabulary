@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Vocabulary from './Vocabulary';
 import GrammarList from './GrammarList'
+import SelectedGrammar from './SelectedGrammar'
 import Statistics from './Statistics'
 import Training from './Training'
 import Main from './Main'
@@ -24,19 +25,6 @@ import BookList from './BookList'
 import Materials from './Materials'
 import Tests from './Tests'
 import TrueOrFalse from './TrueOrFalse'
-import GrammarItem from './grammar/GrammarItem'
-import GrammarPresentSimple from './grammar/GrammarPresentSimple'
-import GrammarPastSimple from './grammar/GrammarPastSimple'
-import GrammarFutureSimple from './grammar/GrammarFutureSimple'
-import GrammarPresentContinuous from './grammar/GrammarPresentContinuous'
-import GrammarPastContinuous from './grammar/GrammarPastContinuous'
-import GrammarFutureContinuous from './grammar/GrammarFutureContinuous'
-import GrammarPresentPerfect from './grammar/GrammarPresentPerfect'
-import GrammarFuturePerfect from './grammar/GrammarFuturePerfect'
-import GrammarPastPerfect from './grammar/GrammarPastPerfect'
-import GrammarPresentPerfectContinuous from './grammar/GrammarPresentPerfectContinuous'
-import GrammarPastPerfectContinuous from './grammar/GrammarPastPerfectContinuous'
-import GrammarFuturePerfectContinuous from './grammar/GrammarFuturePerfectContinuous'
 import AudioPlayer from './AudioPlayer'
 import SelectedBook from './SelectedBook'
 import {BrowserRouter as Router, Route } from "react-router-dom";
@@ -55,7 +43,8 @@ ReactDOM.render(
 				<Route path="/selectedbook" component={SelectedBook} />
 				<Route path="/settings" component={Settings} />
 				<Route path="/vocabulary" component={Vocabulary} />				
-				<Route path="/grammar" component={GrammarList} />
+				<Route path="/grammar" exact component={GrammarList} />
+				<Route path="/grammar/:id" component={SelectedGrammar} />
 				<Route path="/materials" component={Materials} />
 				<Route path="/statistics" component={Statistics} />
 				<Route path="/training" component={Training} />		  
@@ -69,26 +58,14 @@ ReactDOM.render(
 				<Route path="/insertspaces" component={InsertSpaces} />						
 				<Route path="/englishtorussian" component={EnglishToRussian} />
 				<Route path="/russiantoenglish" component={RussianToEnglish} />
-				<Route path="/videos" exact component={Videos} />
 				<Route path="/fillthegaps" component={FillTheGaps} />
 				<Route path="/decks" component={Decks} />		
+				<Route path="/videos" exact component={Videos} />
 				<Route path="/videos/:id" component={SelectedVideo} />
 				<Route path="/texts" component={TextsList} />
 				<Route path="/books" exact component={BookList} />
 				<Route path="/books/:id" component={SelectedBook} />						
 				<Route path="/tests" component={Tests} />
-				<Route path="/grammarpresentsimple" component={GrammarPresentSimple} />
-				<Route path="/grammarpastsimple" component={GrammarPastSimple} />
-				<Route path="/grammarfuturesimple" component={GrammarFutureSimple} />
-				<Route path="/grammarpresentcontinuous" component={GrammarPresentContinuous} />
-				<Route path="/grammarpastcontinuous" component={GrammarPastContinuous} />
-				<Route path="/grammarfuturecontinuous" component={GrammarFutureContinuous} />
-				<Route path="/grammarpresentperfect" component={GrammarPresentPerfect} />
-				<Route path="/grammarpastperfect" component={GrammarPastPerfect} />
-				<Route path="/grammarfutureperfect" component={GrammarFuturePerfect} />
-				<Route path="/grammarpresentperfectcontinuous" component={GrammarPresentPerfectContinuous} />
-				<Route path="/grammarpastperfectcontinuous" component={GrammarPastPerfectContinuous} />
-				<Route path="/grammarfutureperfectcontinuous" component={GrammarFuturePerfectContinuous} />
 				<Route path="/audioplayer" component={AudioPlayer} />
 			</div>
 		</Router>	

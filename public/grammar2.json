@@ -4,6 +4,7 @@
     "difficulty": "simple",
     "rules":[
       {
+        "id": 1,
         "name": "Present Simple",
         "link": "/grammarpresentsimple",
         "description": "Время Present Simple обозначает действие в настоящем в широком смысле слова.",
@@ -126,6 +127,7 @@
         ]
       },
       {
+        "id": 2,
         "name": "Past Simple",
         "link": "/grammarpastsimple",
         "description": "Время Past Simple используется для обозначения действия, которое произошло в определенное время в прошлом и время совершения которого уже истекло.",
@@ -233,6 +235,7 @@
         ]
       },
       {
+        "id": 3,
         "name": "Future Simple",
         "link": "/grammarfuturesimple",
         "description": "Время Future Simple ссылается на действие, которое совершится в неопределенном или отдаленном будущем.",
@@ -335,6 +338,7 @@
         ]
       },
       {
+        "id": 4,
         "name": "Present Continuous",
         "link": "/grammarpresentcontinuous",
         "description": "Present Continuous указывает на процесс, действие, длящееся в определенный момент в прошлом, настоящем или будущем.",
@@ -437,6 +441,7 @@
         ]
       },
       {
+        "id": 5,
         "name": "Past Continuous",
         "link": "/grammarpastcontinuous",
         "description": "Время Past Continuous указывает на процесс, длившийся в определенный момент или период в прошлом.",
@@ -514,6 +519,7 @@
         ]
       },
       {
+        "id": 6,
         "name": "Future Continuous",
         "link": "/grammarfuturecontinuous",
         "description": "Время Future Continuous указывает на процесс, который будет длиться в определенный момент в будущем.",
@@ -586,6 +592,7 @@
         ]
       },
       {
+        "id": 7,
         "name": "Present Perfect",
         "link": "/grammarpresentperfect",
         "description": "Время Present Perfect обозначает действие, которое завершилось к настоящему моменту или завершено в период настоящего времени.",
@@ -683,6 +690,7 @@
         ]
       },
       {
+        "id": 8,
         "name": "Past Perfect",
         "link": "/grammarpastperfect",
         "description": "Время Past Perfect обозначает действие, которое завершилось до определенного момента в прошлом",
@@ -770,6 +778,7 @@
         ]
       },
       {
+        "id": 9,
         "name": "Future Perfect",
         "link": "/grammarfutureperfect",
         "description": "Время Future Perfect используется довольно редко, оно обозначает действие, которое закончится до определенного момента или начала другого действия в будущем или будет продолжать длиться после него.",
@@ -842,6 +851,7 @@
         ]
       },
       {
+        "id": 10,
         "name": "Present Perfect Continuous",
         "link": "/grammarpresentperfectcontinuous",
         "description": "Время Present Perfect Continuous указывает на действие, которое началось в прошлом, продолжалось в течение некоторого времени и либо закончилось непосредственно перед разговором или все еще продолжается в момент разговора.",
@@ -924,6 +934,7 @@
         ]
       },
       {
+        "id": 11,
         "name": "Past Perfect Continuous",
         "link": "/grammarpastperfectcontinuous",
         "description": "Время Past Perfect Continuous указывает на действие, которое началось в прошлом, продолжалось в течение некоторого времени и либо закончилось непосредственно перед неким моментом в прошлом или все еще не закончилось к некоему моменту в прошлом.",
@@ -1006,6 +1017,7 @@
         ]
       },
       {
+        "id": 12,
         "name": "Future Perfect Continuous",
         "link": "/grammarfutureperfectcontinuous",
         "description": "Время Future Perfect Continuous указывает на действие, которое началось и продолжалось в течение некоторого времени до определенного момента в будущем.",

@@ -14,14 +14,13 @@ class GrammarList extends Component {
   }
 
   componentDidMount(){
-      axios.get('/grammar2.json')
-        .then(res => {
-          const grammar = res.data;
-          this.setState({ grammar });
-        })
-    } 
-
-
+    axios.get('/grammar2.json')
+      .then(res => {
+        const grammar = res.data;
+        console.log(grammar);
+        this.setState({ grammar });
+      })
+  } 
 
   render() {
 
@@ -48,7 +47,7 @@ class GrammarList extends Component {
                   </Table.Cell>
                   <Table.Cell className="grammar-button">
                     <div className="link-wrapper">
-                      <Link to={item.link}>Начать</Link>
+                      <Link to={{ pathname: `/grammar/${item.id}`,  query: { item } }}>Начать</Link>
                     </div>
                   </Table.Cell>
                 </Table.Row>

@@ -1,12 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { Card, Button, List} from 'semantic-ui-react'
-import TopMenu from '../TopMenu'
+import TopMenu from './TopMenu'
 import axios from 'axios';
 import speech from 'speech-synth';
 import {Link} from "react-router-dom";
 
-
-class GrammarPresentPerfect extends Component {
+class SelectedGrammar extends Component {
 
 	constructor(props){
 		super(props);
@@ -25,112 +24,109 @@ class GrammarPresentPerfect extends Component {
       isButtonVisible: true,
       isBackButtonVisible: false,
       array: []
-
 		}
 	}
 
 
   componentDidMount() {
     var stepId = this.state.stepId;
-      axios.get('/grammar2.json')
-        .then(res => {
-          let main_points = res.data[0].rules[6].main_points;
-          const fullData = res.data[0].rules[6].steps;
-          let currentTitle = fullData[stepId].title;
-          let currentDescription = fullData[stepId].description;
-          let currentExamples = fullData[stepId].examples;
-          this.setState({ 
-            fullData,
-            currentTitle,
-            currentDescription,
-            currentExamples,
-            main_points
-          });
-        })
+    axios.get('/grammar2.json')
+      .then(res => {
+        let selectedGrammar = res.data[0].rules.find(x => x.id == this.props.match.params.id);
+        let main_points = selectedGrammar.main_points;
+        let fullData = selectedGrammar.steps;
+        let currentTitle = fullData[stepId].title;
+        let currentDescription = fullData[stepId].description;
+        let currentExamples = fullData[stepId].examples;
+        this.setState({ 
+          fullData,
+          currentTitle,
+          currentDescription,
+          currentExamples,
+          main_points
+        });
+      })
+  }
+
+  startTraining = () =>{
+    this.setState({
+      isButtonVisible: false,
+      isCardVisible: true
+    })
+  }
+
+  goBack = () =>{
+    let fullData = this.state.fullData.slice();
+    let length = fullData.length;
+    let newId = this.state.stepId;
+    newId  = newId - 1;
+    console.log(newId);
+    if( (newId < length) && (newId > 0) ){
+        let currentTitle = fullData[newId].title;
+        let currentDescription = fullData[newId].description;
+        let currentExamples = fullData[newId].examples;
+        this.setState({
+          stepId: newId,
+          currentTitle,
+          currentDescription,
+          currentExamples            
+        })       
     }
 
-    startTraining = () =>{
+    else if(newId == 0){
+      let currentTitle = fullData[newId].title;
+      let currentDescription = fullData[newId].description;
+      let currentExamples = fullData[newId].examples;        
       this.setState({
-        isButtonVisible: false,
-        isCardVisible: true
+        isBackButtonVisible: false,
+        stepId: newId,
+        currentTitle,
+        currentDescription,
+        currentExamples            
+      })         
+    }
+
+    else if(newId < 0 ) {
+      this.setState({
+        isBackButtonVisible: false         
       })
     }
+  }
 
-   goBack = () =>{
-      let fullData = this.state.fullData.slice();
-      let length = fullData.length;
-      let newId = this.state.stepId;
-      newId  = newId - 1;
-      if( (newId < length) && (newId > 0) ){
-          let currentTitle = fullData[newId].title;
-          let currentDescription = fullData[newId].description;
-          let currentExamples = fullData[newId].examples;
-          this.setState({
-            stepId: newId,
-            currentTitle,
-            currentDescription,
-            currentExamples            
-          })       
-      }
-
-      else if(newId === 0){
-          let currentTitle = fullData[newId].title;
-          let currentDescription = fullData[newId].description;
-          let currentExamples = fullData[newId].examples;        
-          this.setState({
-            isBackButtonVisible: false,
-            stepId: newId,
-            currentTitle,
-            currentDescription,
-            currentExamples            
-          })         
-      }
-
-
-      else if(newId < 0 ) {
+  continueTraining = () => {
+    let fullData = this.state.fullData.slice();
+    let length = fullData.length;
+    let newId = this.state.stepId;
+    newId  = newId + 1;
+    if(newId < length){
+        let currentTitle = fullData[newId].title;
+        let currentDescription = fullData[newId].description;
+        let currentExamples = fullData[newId].examples;
         this.setState({
-          isBackButtonVisible: false         
-        })
-      }
-
+          isBackButtonVisible: true,
+          stepId: newId,
+          currentTitle,
+          currentDescription,
+          currentExamples            
+        })       
     }
 
-    continueTraining = () =>{
-      let fullData = this.state.fullData.slice();
-      let length = fullData.length;
-      let newId = this.state.stepId;
-      newId  = newId + 1;
-      if(newId < length){
-          let currentTitle = fullData[newId].title;
-          let currentDescription = fullData[newId].description;
-          let currentExamples = fullData[newId].examples;
-          this.setState({
-            isBackButtonVisible: true,
-            stepId: newId,
-            currentTitle,
-            currentDescription,
-            currentExamples            
-          })       
-      }
-
-      else{
-        this.setState({
-          isFinalVisible: true,
-          isCardVisible: false          
-        })
-      }
-
+    else{
+      this.setState({
+        isFinalVisible: true,
+        isCardVisible: false          
+      })
     }
+  }
 
-   voiceWord = () =>{
-      var newfullData = this.state.currentName;
-      speech.say(newfullData);
-   }  
+  voiceWord = () => {
+    speech.say(this.state.currentName);
+  }  
 
 
-   consoleFunction = () =>{
+  consoleFunction = () => {
     console.log(this.state);
-   }
+  }
 
   render() {
     return (
@@ -171,7 +167,7 @@ class GrammarPresentPerfect extends Component {
                     )}
                   </List>
                   <div className="link-wrapper">
-                    <Link to="/grammar">Вернуться к курсам</Link>                    
+                    <Link className="grammar-link" to="/grammar">Вернуться к курсам</Link>                    
                   </div>
                 </Card.Content>
               </Card>          
@@ -184,4 +180,4 @@ class GrammarPresentPerfect extends Component {
   }
 }
 
-export default GrammarPresentPerfect;
+export default SelectedGrammar;
