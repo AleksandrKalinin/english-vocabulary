@@ -2,10 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Card, Image, Button, Icon, Menu, Input, Dropdown} from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import axios from 'axios';
-import speech from 'speech-synth';
-import SpeechRecognition from 'react-speech-recognition';
 import {Link} from "react-router-dom";
-import { v4 as uuidv4 } from 'uuid';
 
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
@@ -85,7 +82,6 @@ class InsertSpaces extends Component {
 
 
   showFinal = () =>{
-    let val;
     this.setState({
       isResultVisible: true,
       isTaskStarted: false   
@@ -109,7 +105,6 @@ setCaretPosition = (ctrl, pos) => {
   updateValue = (event) =>{
   	let newContent = this.state.newContent;
   	let target = event.target;
-    let str = event.target.value;
     let indexOfSpace = event.target.value.indexOf(" ") + 1;
     let word = event.target.value.substr(0, indexOfSpace - 1);
     let newstr = event.target.value.substring(indexOfSpace);

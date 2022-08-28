@@ -1,9 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Divider, Icon, List, Message, Label, Menu, Dropdown } from 'semantic-ui-react'
+import { Card, Image, Button, Icon, Menu, Dropdown } from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import axios from 'axios';
-import speech from 'speech-synth';
-import SpeechRecognition from 'react-speech-recognition'
 import { v4 as uuidv4 } from 'uuid';
 
 import {bindActionCreators} from 'redux';

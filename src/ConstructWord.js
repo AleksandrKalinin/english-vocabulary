@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Divider, Icon, Container, Label, List, Message, TextArea} from 'semantic-ui-react'
+import { Card, Image, Button, Divider, Container, Label, List, Message} from 'semantic-ui-react'
 import TopMenu from './TopMenu';
 import axios from 'axios';
 import speech from 'speech-synth';
@@ -24,76 +24,72 @@ class ConstructWord extends Component {
     this.setStateOnStart();
   }
 
-    setStateOnStart = () => {
-      this.setState({
-        words: [],
-        negativeWords: [],
-        positiveWords: [],
-        id: 0,
-        currentWord: '',
-        currentFullWord: null,
-        currentTranslation: '',
-        currentMeaning: '',
-        isStarterVisible: true,
-        isCardVisible: false,
-        isFinalVisible: false,
-        inputValue: null,
-        nameArray: [],
-        wordNameArray: [],
-        nameArrayId: 0,
-        currentValue: '',
-        search: '',
-        currentImage: null,
-        areButtonsVisible: true,
-        isImageVisible: false,
-        wordId: 0,
-        mistakeCount: 0,
-        animationState: false,
-        fade: false        
-      }, () => this.initialLoad())
-    }
+  setStateOnStart = () => {
+    this.setState({
+      words: [],
+      negativeWords: [],
+      positiveWords: [],
+      id: 0,
+      currentWord: '',
+      currentFullWord: null,
+      currentTranslation: '',
+      currentMeaning: '',
+      isStarterVisible: true,
+      isCardVisible: false,
+      isFinalVisible: false,
+      inputValue: null,
+      nameArray: [],
+      wordNameArray: [],
+      nameArrayId: 0,
+      currentValue: '',
+      search: '',
+      currentImage: null,
+      areButtonsVisible: true,
+      isImageVisible: false,
+      wordId: 0,
+      mistakeCount: 0,
+      animationState: false,
+      fade: false        
+    }, () => this.initialLoad())
+  }
 
-    initialLoad = () => {
-      let id = this.state.id;
-      axios.get('/vocabulary2.json')
-      .then(res => {
-        const words = res.data;
-        const currentFullWord = words[id];
-        const currentWord = words[id].name;
-        const currentTranslation = words[id].translation;
-        const currentImage = words[id].image;
-        const currentMeaning = words[id].meaning;
-        const nameArray = currentWord.split('');
-        const randomNameArray = currentWord.split('');
-        for (let i = randomNameArray.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              [randomNameArray[i], randomNameArray[j]] = [randomNameArray[j], randomNameArray[i]];
-        }
-        const wordNameArray = [];
-        for (var i = 0; i < nameArray.length; i++) {
-          wordNameArray.push(' ');
-        }
-        this.setState({ 
-          words, 
-          currentWord,
-          currentTranslation,
-          currentImage,
-          currentMeaning,
-          randomNameArray,
-          nameArray,
-          wordNameArray,
-          currentFullWord
-          });
-      })
-      document.body.addEventListener("keydown", this.myHandler);
-    }
+  initialLoad = () => {
+    let id = this.state.id;
+    axios.get('/vocabulary2.json')
+    .then(res => {
+      const words = res.data;
+      const currentFullWord = words[id];
+      const currentWord = words[id].name;
+      const currentTranslation = words[id].translation;
+      const currentImage = words[id].image;
+      const currentMeaning = words[id].meaning;
+      const nameArray = currentWord.split('');
+      const randomNameArray = currentWord.split('');
+      for (let i = randomNameArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [randomNameArray[i], randomNameArray[j]] = [randomNameArray[j], randomNameArray[i]];
+      }
+      const wordNameArray = [];
+      for (var i = 0; i < nameArray.length; i++) {
+        wordNameArray.push(' ');
+      }
+      this.setState({ 
+        words, 
+        currentWord,
+        currentTranslation,
+        currentImage,
+        currentMeaning,
+        randomNameArray,
+        nameArray,
+        wordNameArray,
+        currentFullWord
+        });
+    })
+    document.body.addEventListener("keydown", this.myHandler);
+  }
  
   myHandler = (e) =>{
-    const fade = this.state.fade;
     let mistakeCount = this.state.mistakeCount;
-    let currentFullWord = this.state.currentFullWord;
-    let negativeWords = this.state.negativeWords.slice();
-    let positiveWords = this.state.positiveWords.slice();
     let currentValue = this.state.currentValue;
     let currentWord = this.state.currentWord;      
     let id = this.state.nameArrayId;
@@ -143,7 +139,6 @@ class ConstructWord extends Component {
       isCardVisible: true
     })
   }
-
 
   continueTraining = () => {
 	  let mistakeCount = this.state.mistakeCount;
@@ -249,33 +244,31 @@ class ConstructWord extends Component {
     let currentValue = this.state.currentValue;
     let currentLetter = e.target.textContent.slice(0,1);
     let mistakeCount = this.state.mistakeCount;
-      if( (currentLetter === nameArray[id]) && (currentValue.length < currentWord.length) ){
-        e.target.className = "hidden";
-        currentValue = currentValue + currentLetter;
-        this.state.wordNameArray[id] = currentLetter;
-        ++id;
-        this.setState({
-          currentValue,
-          nameArrayId: id,
-          inputValue: currentLetter
-        }, () => this.checkValue() )
-      }
-      else if((currentLetter !== nameArray[id]) && (currentValue.length < currentWord.length)) {
-	      mistakeCount++;
-	      this.setState({
-	      	mistakeCount,
-          fade: true
-	      })
-      }
-      else {
-      	this.setState({
-      		isFinalVisible: true,
-      		isCardVisible: false
-      	})      	
-      }
+    if( (currentLetter === nameArray[id]) && (currentValue.length < currentWord.length) ){
+      e.target.className = "hidden";
+      currentValue = currentValue + currentLetter;
+      this.state.wordNameArray[id] = currentLetter;
+      ++id;
+      this.setState({
+        currentValue,
+        nameArrayId: id,
+        inputValue: currentLetter
+      }, () => this.checkValue() )
+    }
+    else if((currentLetter !== nameArray[id]) && (currentValue.length < currentWord.length)) {
+      mistakeCount++;
+      this.setState({
+      	mistakeCount,
+        fade: true
+      })
+    }
+    else {
+    	this.setState({
+    		isFinalVisible: true,
+    		isCardVisible: false
+    	})      	
+    }
   } 
-
-
 
   render() {
     const fade = this.state.fade;

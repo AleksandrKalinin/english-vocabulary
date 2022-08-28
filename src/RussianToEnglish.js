@@ -1,9 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Divider, Icon, Input, List, Container, Label, Message} from 'semantic-ui-react'
+import { Card, Image, Button, Divider, Icon, List, Container, Label, Message} from 'semantic-ui-react'
 import TopMenu from './TopMenu';
 import axios from 'axios';
 import speech from 'speech-synth';
-import classnames from 'classnames';
 import {Link} from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 import {bindActionCreators} from 'redux';
@@ -49,7 +48,6 @@ setStateOnStart = () => {
 }
 
   initialLoad = () => {
-    let id = this.state.id;
     axios.get('/working.json')
       .then(res => {
         const words = res.data;

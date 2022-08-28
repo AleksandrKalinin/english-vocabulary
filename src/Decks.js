@@ -16,18 +16,18 @@ class Decks extends Component {
     this.setStateOnStart()
   }
 
-    constructMenu = () =>{
-      let options = [];
-      this.state.words.map((item, i) =>
-                    options.push({ 
-                        key: item.id, 
-                        text: item.level, 
-                        value: item.level
-                     }))
-      this.setState({
-        options
-      }, () => this.getUnique())
-    } 
+  constructMenu = () =>{
+    let options = [];
+    this.state.words.map((item, i) =>
+                  options.push({ 
+                      key: item.id, 
+                      text: item.level, 
+                      value: item.level
+                   }))
+    this.setState({
+      options
+    }, () => this.getUnique())
+  } 
 
     getUnique = () => {
       var arr = this.state.options;
@@ -55,7 +55,6 @@ class Decks extends Component {
       let iconsArray = [];
       let disabled = [];
       let colors = this.state.arrayOfColors.slice(); 
-      let words = this.state.words.slice();
       let allWords = this.state.allWords.slice();
       let currentWords = [];
       let currentColor = colors[Math.floor(Math.random()*colors.length)];

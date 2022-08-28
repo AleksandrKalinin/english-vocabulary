@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import {Image, Button,Card, Menu, Input, Dropdown, TextArea, Form, Checkbox ,Icon, Rating, List } from 'semantic-ui-react'
+import {Image, Button, Card, Menu, Dropdown, Checkbox, Icon, Rating } from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import {Link} from "react-router-dom";
 import axios from 'axios';
@@ -78,14 +78,14 @@ class BookList extends Component {
 
       let options = [], age = [], genres = {}, sizes = [], ageTemp = [], sizesTemp = {};
 
-      for (var i = 0; i < this.state.books.length; i++) {
+      for (var x = 0; x < this.state.books.length; x++) {
         let item = this.state.books[i].genre;
         for (var j = 0; j < item.length; j++) {
           if (!genres.hasOwnProperty(item[j])) {
             genres[item[j]] = [];
-            genres[item[j]].push(this.state.books[i].id);
+            genres[item[j]].push(this.state.books[x].id);
           } else {
-            genres[item[j]].push(this.state.books[i].id);
+            genres[item[j]].push(this.state.books[x].id);
           }
         }
       }
@@ -104,11 +104,11 @@ class BookList extends Component {
         }
       }
 
-      for (var i = 0; i < ageTemp.length; i++) {
+      for (var y = 0; y < ageTemp.length; y++) {
         age.push({
-          key: ageTemp[i],
-          text: ageTemp[i],
-          value: ageTemp[i]
+          key: ageTemp[y],
+          text: ageTemp[y],
+          value: ageTemp[y]
         })
       }
 
@@ -116,14 +116,14 @@ class BookList extends Component {
       sizesTemp["От 10000 до 50000"] = [];
       sizesTemp["Более 50000"] = [];
 
-      for (var i = 0; i < this.state.books.length; i++) {
-        let item = this.state.books[i].length;
+      for (var a = 0; a < this.state.books.length; a++) {
+        let item = this.state.books[a].length;
         if (item <= 10000) {
-          sizesTemp["Менее 10000"].push(this.state.books[i].id);
+          sizesTemp["Менее 10000"].push(this.state.books[a].id);
         } else if(item > 10000 && item < 50000) {
-          sizesTemp["От 10000 до 50000"].push(this.state.books[i].id);
+          sizesTemp["От 10000 до 50000"].push(this.state.books[a].id);
         } else {
-          sizesTemp["Более 50000"].push(this.state.books[i].id);
+          sizesTemp["Более 50000"].push(this.state.books[a].id);
         }
       }
 
@@ -135,34 +135,17 @@ class BookList extends Component {
         })
       }
 
-      console.log(sizes);
-
       this.setState({
         options, age, sizes
       })
     } 
-/*
-    getUnique = () => {
-      var arr = this.state.options;
-      console.log(arr);
-      var comp = 'text';
-      const options = arr
-          .map(e => e[comp])
-          .map((e, i, final) => final.indexOf(e) === i && i)
-          .filter(e => arr[e]).map(e => arr[e]);
-      console.log(options);    
-      this.setState({
-        options
-      })    
-    }  
-*/
+
     selectValue = () =>{
       var bookVal = this.state.bookValue;
       this.setState({
         bookVal
       })  
     }
-
 
     handleGenreChange = (e, { value }) => {
       this.setState({ currentGenre: value })

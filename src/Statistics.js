@@ -1,10 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Divider, Icon, List, Message, Label, Menu} from 'semantic-ui-react'
+import { Card, Icon } from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import axios from 'axios';
-import speech from 'speech-synth';
-import SpeechRecognition from 'react-speech-recognition'
-import {LineChart, Line, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
@@ -296,10 +294,6 @@ class Statistics extends Component {
     })
 	}
 
-  consoleState = () =>{
-    console.log(this.state);
-  }
-
   inDayRange = (option) => {
     let current = new Date();
     let year = current.getFullYear();
@@ -366,7 +360,6 @@ class Statistics extends Component {
   applyFunction = (func, option) => {
     let exercises = this.props.store;
     let tests = this.props.testsStore;
-    console.log(tests);
 
     if (option === 'exercise') {
       for (var prop in exercises) {

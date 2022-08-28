@@ -1,9 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Divider, Icon, List, Message, Label, Menu, Dropdown} from 'semantic-ui-react'
+import { Card, Image, Button, Icon, Menu, Dropdown} from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import axios from 'axios';
-import Speech from 'speak-tts';
-import SpeechRecognition from 'react-speech-recognition';
 import { Howl } from "howler";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -82,7 +80,6 @@ class RecreateAudioText extends Component {
     }  
 
     selectCategory = () =>{
-      var options = this.state.options.slice();
       var categoryValue = this.state.value;
       this.setState({
         categoryValue
@@ -271,7 +268,6 @@ class RecreateAudioText extends Component {
   checkSentences = () =>{
     let reservedSentences = this.state.reservedSentences;
     let splittedSentences = this.state.splittedSentences;
-    let currentProgress;
     let wrongIndexes = this.state.wrongIndexes.slice();
     let rightAnswers = 0;
     let wrongCount = 0;
@@ -285,7 +281,7 @@ class RecreateAudioText extends Component {
         rightAnswers++;
       }
     }
-    if (wrongCount == 0) {
+    if (wrongCount === 0) {
       this.showFinal();
     }
 

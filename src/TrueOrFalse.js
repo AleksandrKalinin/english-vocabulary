@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Divider, Icon, List, Message, Label} from 'semantic-ui-react';
+import { Card, Image, Button, Divider, List, Message, Label} from 'semantic-ui-react';
 import TopMenu from './TopMenu'
 import axios from 'axios';
 import speech from 'speech-synth';
@@ -39,7 +39,6 @@ class TrueOrFalse extends Component {
   } 
 
   initialLoad = () => {
-    let id = this.state.id;
     axios.get('/working.json')
       .then(res => {
         const words = res.data;

@@ -2,31 +2,26 @@ import React, { Component, Fragment } from 'react';
 import { Button, Icon, Image } from 'semantic-ui-react'
 import { List} from 'semantic-ui-react'
 import './style.css'
-import ModalWord from './ModalWord';
 import speech from 'speech-synth';
 
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
-
 import {connect} from 'react-redux';
 
 class VocabWord extends Component {
-
 
   delete(id){
     this.props.delete(id);
   }
 
+  voiceWord = (word) =>{
+    speech.say(word);
+  }
 
-   voiceWord = (word) =>{
-      speech.say(word);
-   }
-
-   openWord = (word) => {
-    console.log(word);
+  openWord = (word) => {
     this.props.actions.selectVocabWord(word);
     this.props.actions.toggleVocabModal(true);
-   }
+  }
 
   render() {
     var descriptionVisible = true;
@@ -63,7 +58,7 @@ function mapStateToProps(state){
 }
 
 function mapDispatchToProps(dispatch) {
-    return { actions: bindActionCreators(actions, dispatch)}
+  return { actions: bindActionCreators(actions, dispatch)}
 }
 
 

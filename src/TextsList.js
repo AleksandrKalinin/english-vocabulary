@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import {Image, Button,Card, Menu, Input,Dropdown } from 'semantic-ui-react'
+import {Image, Button,Card, Menu, Dropdown } from 'semantic-ui-react'
 import TopMenu from './TopMenu'
-import {Link} from "react-router-dom";
 import axios from 'axios';
 
 class TextsList extends Component {
@@ -24,87 +23,82 @@ class TextsList extends Component {
   }
 
   componentDidMount() {
-      axios.get('/texts.json')
-        .then(res => {
-          let texts = res.data;
-          let contentArray = [];
-          texts.map((item, index) => contentArray.push(item.content))
-          this.setState({ 
-            texts: texts,
-            contentArray: contentArray
-          }, () => {
-            this.setState({
-              textsLoaded: true
-            })
-            this.createMenuItems()
-          });
-        })
-    }
-
-    createMenuItems = () =>{
-      let newItems = [];
-      this.state.texts.map((item, i) =>
-                    newItems.push({ 
-                        key: item.id, 
-                        text: item.difficulty, 
-                        value: item.difficulty 
-                     }))
-      this.setState({
-        options: newItems
-      }, () => this.getUnique())
-    } 
-
-    getUnique = () => {
-      var arr = this.state.options;
-      var comp = 'text';
-      const unique = arr
-        .map(e => e[comp])
-        .map((e, i, final) => final.indexOf(e) === i && i)
-        .filter(e => arr[e]).map(e => arr[e]);
-      this.setState({
-        options: unique
-      })    
-    }  
-
-    selectCategory = () =>{
-      var options = this.state.options.slice();
-      var categoryValue = this.state.value;
-      this.setState({
-        categoryValue: categoryValue
+    axios.get('/texts.json')
+      .then(res => {
+        let texts = res.data;
+        let contentArray = [];
+        texts.map((item, index) => contentArray.push(item.content))
+        this.setState({ 
+          texts: texts,
+          contentArray: contentArray
+        }, () => {
+          this.setState({
+            textsLoaded: true
+          })
+          this.createMenuItems()
+        });
       })
-    }
+  }
 
-    handleChange = (e, { value }) => this.setState({ value }, () => this.selectCategory() )         
+  createMenuItems = () =>{
+    let newItems = [];
+    this.state.texts.map((item, i) =>
+                  newItems.push({ 
+                      key: item.id, 
+                      text: item.difficulty, 
+                      value: item.difficulty 
+                   }))
+    this.setState({
+      options: newItems
+    }, () => this.getUnique())
+  } 
 
-    readMore = (e) =>{
-      let texts = this.state.texts.slice();
-      let target = e.target.parentElement;
-      var index = 0;
-        while ( (target = target.previousElementSibling) ) {
-          index++;
-      }
-      let activeTargetTitle = e.target.parentElement.children[0].children[1].textContent;
-      let activeTargetContent = texts[index].content;
-      let activeTargetImage = e.target.parentElement.children[0].children[0].children[0].src;
-      this.setState({
-        areTextsVisible: false,
-        isSingleTextVisible: true,
-        title: activeTargetTitle,
-        content: activeTargetContent,
-        image: activeTargetImage
-      })
-    }
+  getUnique = () => {
+    var arr = this.state.options;
+    var comp = 'text';
+    const unique = arr
+      .map(e => e[comp])
+      .map((e, i, final) => final.indexOf(e) === i && i)
+      .filter(e => arr[e]).map(e => arr[e]);
+    this.setState({
+      options: unique
+    })    
+  }  
 
-    backToTexts = () =>{
-      this.setState({
-        areTextsVisible: true,
-        isSingleTextVisible: false        
-      })
-    }
+  selectCategory = () =>{
+    var categoryValue = this.state.value;
+    this.setState({
+      categoryValue
+    })
+  }
 
-    consoleState = () =>{
-      console.log(this.state)
+  handleChange = (e, { value }) => this.setState({ value }, () => this.selectCategory() )         
+
+  readMore = (e) =>{
+    let texts = this.state.texts.slice();
+    let target = e.target.parentElement;
+    var index = 0;
+      while ( (target = target.previousElementSibling) ) {
+        index++;
     }
+    let activeTargetTitle = e.target.parentElement.children[0].children[1].textContent;
+    let activeTargetContent = texts[index].content;
+    let activeTargetImage = e.target.parentElement.children[0].children[0].children[0].src;
+    this.setState({
+      areTextsVisible: false,
+      isSingleTextVisible: true,
+      title: activeTargetTitle,
+      content: activeTargetContent,
+      image: activeTargetImage
+    })
+  }
+
+  backToTexts = () =>{
+    this.setState({
+      areTextsVisible: true,
+      isSingleTextVisible: false        
+    })
+  }
 
   render() {
     return (

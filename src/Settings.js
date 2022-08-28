@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import {  List, Icon, Dropdown} from 'semantic-ui-react'
+import { Dropdown} from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 
 

@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Button, Divider, Icon, Container, Label, List, Message} from 'semantic-ui-react'
+import { Card, Image, Button, Divider, Container, Label, List, Message} from 'semantic-ui-react'
 import TopMenu from './TopMenu';
 import axios from 'axios';
-import speech from 'speech-synth';
 import {Link} from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -40,14 +39,12 @@ class Proverbs extends Component {
   }
 
   continueTraining = () =>{
-	  let mistakeCount = this.state.mistakeCount;
 	  let negativeProverbs = this.state.negativeProverbs.slice();
 	  let positiveProverbs = this.state.positiveProverbs.slice();
     let id = this.state.id;
     let proverbs = this.state.proverbs;
     id = id + 1;
     if (id < 2) {
-      const currentProverb = proverbs[id];
       const currentProverbName = proverbs[id].proverb;
       const currentTranslation = proverbs[id].translation;
       let currentArray = currentProverbName.split(" ");
@@ -91,7 +88,6 @@ class Proverbs extends Component {
 
   setValue = (e) => {
     let target = e.target;
-    let parent = e.target.parentElement.children;
     let indexTarget = 0;
     while ( (target = target.previousElementSibling) ) {
       indexTarget++
@@ -103,7 +99,7 @@ class Proverbs extends Component {
     this.setState({
       constructedProverb
     })
-    if(currentArray.length == 0){
+    if(currentArray.length === 0){
       this.setState({
         isCheckButtonVisible: true,
         isDKButtonVisible: false
@@ -113,10 +109,9 @@ class Proverbs extends Component {
 
   removeValue = (e) =>{
     let target = e.target;
-    let parent = e.target.parentElement.children;
     var indexTarget = 0;
-        while ( (target = target.previousElementSibling) ) {
-          indexTarget++
+    while ( (target = target.previousElementSibling) ) {
+      indexTarget++
     }
     let constructedProverb = this.state.constructedProverb;
     let currentArray = this.state.currentArray;
@@ -212,7 +207,6 @@ class Proverbs extends Component {
             random.push(el)
           };                
         }  
-        const currentProverb = random[id];
         const currentProverbName = random[id].proverb;
         const currentTranslation = random[id].translation;
         let currentArray = currentProverbName.split(" ");

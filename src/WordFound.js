@@ -1,7 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import {Button} from 'semantic-ui-react'
-
-
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
 import {connect} from 'react-redux';
@@ -26,12 +24,11 @@ class WordFound extends Component {
 
 
   render() {
-
     return (     
       <div className = "word-modal__overlay">
         <div className="word-modal">
           <div className="word-modal__image">
-            <img src="word-modal__picture" src = {this.props.word.image}/>
+            <img src="word-modal__picture" src = {this.props.word.image} alt="" />
           </div>
           <div className="word-modal__description">
             <p className="word-modal__title">{this.props.word.name} - {this.props.word.translation}</p>

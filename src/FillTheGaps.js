@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import {Image, Button,Card, Menu, Input,Dropdown, Icon } from 'semantic-ui-react'
+import {Image, Button,Card, Menu, Dropdown, Icon } from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import {Link} from "react-router-dom";
 import axios from 'axios';
@@ -86,7 +86,7 @@ class FillTheGaps extends Component {
       .map(e => e[comp])
       .map((e, i, final) => final.indexOf(e) === i && i)
       .filter(e => options[e]).map(e => options[e]);
-    this.setState({ options })    
+    this.setState({ options: unique })    
   }  
 
   selectValue = () => {
@@ -183,16 +183,13 @@ class FillTheGaps extends Component {
   setValue = (e) => {
     let activeInput = this.state.activeInput;
     let activeArray = [];
-    let currentFullArray = this.state.currentFullArray.slice();
-    let currentFinalArray = this.state.currentFinalArray.slice();
     let currentRandomArray = this.state.currentRandomArray.slice();
-    let currentRandomIndexes = this.state.currentRandomIndexes.slice();
     let activeTargetTitle = e.target.textContent;
     let fragmentArray = [];
     let fragmentArrayIndexes = [];
     let fragmentDescription = document.getElementsByClassName('fragment-description')[0].children;
     for (var i = 0; i < fragmentDescription.length; i++) {
-    	if(fragmentDescription[i].className == "fragment-input"){
+    	if(fragmentDescription[i].className === "fragment-input"){
     		fragmentArrayIndexes.push(i);
     		fragmentArray.push(fragmentDescription[i]);
     	}
@@ -201,7 +198,7 @@ class FillTheGaps extends Component {
     	activeArray.push(i);
     }
     for (var i = 0; i < fragmentDescription.length; i++) {
-    	if( (fragmentDescription[i].className == "fragment-input") && (i == fragmentArrayIndexes[activeInput])){
+    	if( (fragmentDescription[i].className === "fragment-input") && (i === fragmentArrayIndexes[activeInput])){
     		fragmentDescription[i].textContent = activeTargetTitle;
     	}
     }

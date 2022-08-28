@@ -1,10 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import {Image, Button,Card, Menu, Input,Dropdown, Checkbox,Icon, Form, Divider, Label } from 'semantic-ui-react'
+import { Button, Card, Menu, Dropdown, Icon, Form, Divider, Label } from 'semantic-ui-react'
 import TopMenu from './TopMenu'
-import ReactDOM from 'react-dom';
-import {Link} from "react-router-dom";
 import axios from 'axios';
-import update from 'immutability-helper';
 
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
@@ -19,7 +16,6 @@ class Tests extends Component {
       options: [],
       categoryValue: '',
       categoryArray: [],
-      value: null,
       areTestsVisible: true,
       isSingleTestVisible: false,
       title: '',
@@ -37,7 +33,6 @@ class Tests extends Component {
       isMenuVisible: true,
       isTooltipVisible: false,
       currentColor: null
-
     }
   }
 
@@ -85,10 +80,9 @@ class Tests extends Component {
     }  
 
     selectCategory = () =>{
-      var options = this.state.options.slice();
       var categoryValue = this.state.value;
       this.setState({
-        categoryValue: categoryValue
+        categoryValue
       })
     }
 
@@ -98,7 +92,6 @@ class Tests extends Component {
       let parentid = e.target.getAttribute("parentid");   
       let id = e.target.getAttribute("id");
       let currentTest = this.state.currentTest.slice();
-      let currentState = currentTest[parentid][id];
       const arr = new Array(3).fill(false);
       arr[id] = true;
       currentTest[parentid] = arr;
@@ -106,7 +99,6 @@ class Tests extends Component {
         currentTest
       })
     }
-
 
     selectTest = (testId) =>{
       let tests = this.state.tests.slice();

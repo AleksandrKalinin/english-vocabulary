@@ -1,16 +1,11 @@
 import React, { Component, Fragment } from 'react';
-import {Table,  Image, Button, Menu, Icon, TextArea, Form, Checkbox, Input } from 'semantic-ui-react';
+import {Button, Icon } from 'semantic-ui-react';
 import TopMenu from './TopMenu';
 import Comments from './Comments';
 import ModalFont from './ModalFont';
 import ModalColor from './ModalColor';
 import WordFound from './WordFound';
-import {Link} from "react-router-dom";
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
-
-import iconv from 'iconv-lite';
-
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
 import {connect} from 'react-redux';
@@ -40,7 +35,7 @@ class SelectedBook extends Component {
 
   componentDidMount(){
     let allComments = this.props.store.booksComments;
-    let item = allComments.find(x => x.id == this.props.match.params.id);
+    let item = allComments.find(x => x.id === this.props.match.params.id);
     if (item) {
       this.setState({
         comments: item.comments
@@ -56,7 +51,7 @@ class SelectedBook extends Component {
     .then(axios.spread((obj1, obj2) => {
       let books = obj1.data; 
       let words = obj2.data;
-      let selectedBook = books.find(x => x.id == this.props.match.params.id);
+      let selectedBook = books.find(x => x.id === this.props.match.params.id);
       fetch(selectedBook.link, myHeaders)
         .then(response => response.arrayBuffer())
         .then(function (buffer) {
@@ -65,8 +60,7 @@ class SelectedBook extends Component {
             return text
         })
         .then((text) => that.setState({words, text }, () => that.splitIntoPages() ))
-    })) 
-
+    }))
   } 
 
   splitIntoPages = () => {
@@ -297,7 +291,7 @@ class SelectedBook extends Component {
               </div>              
             </>
           : <div className="preloader">
-            <img src = "../preloader.gif"/>
+            <img src = "../preloader.gif" alt="" />
           </div> }
           <footer></footer> 
         </div>

@@ -32,7 +32,7 @@ class SelectedGrammar extends Component {
     var stepId = this.state.stepId;
     axios.get('/grammar2.json')
       .then(res => {
-        let selectedGrammar = res.data[0].rules.find(x => x.id == this.props.match.params.id);
+        let selectedGrammar = res.data[0].rules.find(x => x.id === this.props.match.params.id);
         let main_points = selectedGrammar.main_points;
         let fullData = selectedGrammar.steps;
         let currentTitle = fullData[stepId].title;
@@ -73,7 +73,7 @@ class SelectedGrammar extends Component {
         })       
     }
 
-    else if(newId == 0){
+    else if(newId === 0){
       let currentTitle = fullData[newId].title;
       let currentDescription = fullData[newId].description;
       let currentExamples = fullData[newId].examples;        
