@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6c4ffd2eb9fc6d471d2d",
+    "revision": "9146395dd42133b2e9d1",
     "url": "/english-vocabulary/static/css/main.eefbaf11.chunk.css"
   },
   {
-    "revision": "6c4ffd2eb9fc6d471d2d",
-    "url": "/english-vocabulary/static/js/main.6c4ffd2e.chunk.js"
+    "revision": "9146395dd42133b2e9d1",
+    "url": "/english-vocabulary/static/js/main.9146395d.chunk.js"
   },
   {
     "revision": "1ac9da10e74154b6232a",
@@ -20,16 +20,16 @@ self.__precacheManifest = [
     "url": "/english-vocabulary/static/js/runtime~main.67d99bd6.js"
   },
   {
-    "revision": "d3dd7bc2f45719d25a394d4f29952767",
-    "url": "/english-vocabulary/static/media/books.d3dd7bc2.jpg"
-  },
-  {
     "revision": "6149e42c4b1515f4ae0c63f0c2d87361",
     "url": "/english-vocabulary/static/media/words.6149e42c.jpg"
   },
   {
     "revision": "7b6c5ee70a9349c8f7412e172287e86c",
     "url": "/english-vocabulary/static/media/texts.7b6c5ee7.jpg"
+  },
+  {
+    "revision": "d3dd7bc2f45719d25a394d4f29952767",
+    "url": "/english-vocabulary/static/media/books.d3dd7bc2.jpg"
   },
   {
     "revision": "a18b7b388a3b5ebc250e5b5ec018f51a",
@@ -40,16 +40,12 @@ self.__precacheManifest = [
     "url": "/english-vocabulary/static/media/main.2a06c19c.jpg"
   },
   {
-    "revision": "9c74e172f87984c48ddf5c8108cabe67",
-    "url": "/english-vocabulary/static/media/flags.9c74e172.png"
+    "revision": "0ab54153eeeca0ce03978cc463b257f7",
+    "url": "/english-vocabulary/static/media/icons.0ab54153.woff2"
   },
   {
     "revision": "faff92145777a3cbaf8e7367b4807987",
     "url": "/english-vocabulary/static/media/icons.faff9214.woff"
-  },
-  {
-    "revision": "cd6c777f1945164224dee082abaea03a",
-    "url": "/english-vocabulary/static/media/outline-icons.cd6c777f.woff2"
   },
   {
     "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
@@ -60,20 +56,28 @@ self.__precacheManifest = [
     "url": "/english-vocabulary/static/media/icons.b87b9ba5.ttf"
   },
   {
-    "revision": "0ab54153eeeca0ce03978cc463b257f7",
-    "url": "/english-vocabulary/static/media/icons.0ab54153.woff2"
+    "revision": "701ae6abd4719e9c2ada3535a497b341",
+    "url": "/english-vocabulary/static/media/outline-icons.701ae6ab.eot"
+  },
+  {
+    "revision": "cd6c777f1945164224dee082abaea03a",
+    "url": "/english-vocabulary/static/media/outline-icons.cd6c777f.woff2"
+  },
+  {
+    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
+    "url": "/english-vocabulary/static/media/outline-icons.ef60a4f6.woff"
+  },
+  {
+    "revision": "962a1bf31c081691065fe333d9fa8105",
+    "url": "/english-vocabulary/static/media/icons.962a1bf3.svg"
   },
   {
     "revision": "ad97afd3337e8cda302d10ff5a4026b8",
     "url": "/english-vocabulary/static/media/outline-icons.ad97afd3.ttf"
   },
   {
-    "revision": "701ae6abd4719e9c2ada3535a497b341",
-    "url": "/english-vocabulary/static/media/outline-icons.701ae6ab.eot"
-  },
-  {
-    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
-    "url": "/english-vocabulary/static/media/outline-icons.ef60a4f6.woff"
+    "revision": "13db00b7a34fee4d819ab7f9838cc428",
+    "url": "/english-vocabulary/static/media/brand-icons.13db00b7.eot"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
@@ -84,76 +88,72 @@ self.__precacheManifest = [
     "url": "/english-vocabulary/static/media/brand-icons.e8c322de.woff2"
   },
   {
-    "revision": "a046592bac8f2fd96e994733faf3858c",
-    "url": "/english-vocabulary/static/media/brand-icons.a046592b.woff"
-  },
-  {
-    "revision": "13db00b7a34fee4d819ab7f9838cc428",
-    "url": "/english-vocabulary/static/media/brand-icons.13db00b7.eot"
-  },
-  {
-    "revision": "962a1bf31c081691065fe333d9fa8105",
-    "url": "/english-vocabulary/static/media/icons.962a1bf3.svg"
-  },
-  {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
     "url": "/english-vocabulary/static/media/brand-icons.c5ebe0b3.ttf"
+  },
+  {
+    "revision": "a046592bac8f2fd96e994733faf3858c",
+    "url": "/english-vocabulary/static/media/brand-icons.a046592b.woff"
   },
   {
     "revision": "a1a749e89f578a49306ec2b055c073da",
     "url": "/english-vocabulary/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "9ec698d1a597bff5df337094b71ddaaf",
-    "url": "/english-vocabulary/static/media/fa-brands-400.9ec698d1.ttf"
-  },
-  {
-    "revision": "57dcda6f368ea90179f75cbdae96c263",
-    "url": "/english-vocabulary/static/media/fa-brands-400.57dcda6f.eot"
-  },
-  {
-    "revision": "73cf49a2232c06c920b7a34e36bfb58c",
-    "url": "/english-vocabulary/static/media/fa-regular-400.73cf49a2.woff"
-  },
-  {
-    "revision": "4165c2688309cbfb1b877caf8f75afb5",
-    "url": "/english-vocabulary/static/media/fa-regular-400.4165c268.woff2"
-  },
-  {
-    "revision": "067595ad77ecc0db9c81c8905a7eef32",
-    "url": "/english-vocabulary/static/media/fa-brands-400.067595ad.woff2"
-  },
-  {
-    "revision": "a0e3ac82940c1998c5977fd4bc1f5ef6",
-    "url": "/english-vocabulary/static/media/fa-regular-400.a0e3ac82.ttf"
-  },
-  {
-    "revision": "3351f435b3c9037fd88aeb04dc1e43bc",
-    "url": "/english-vocabulary/static/media/fa-regular-400.3351f435.eot"
-  },
-  {
-    "revision": "5d0861781aeef6c82fda3a3076954a1b",
-    "url": "/english-vocabulary/static/media/fa-regular-400.5d086178.svg"
-  },
-  {
-    "revision": "89e02bae13c9131c7468b1e729339ac1",
-    "url": "/english-vocabulary/static/media/fa-solid-900.89e02bae.eot"
+    "revision": "9c74e172f87984c48ddf5c8108cabe67",
+    "url": "/english-vocabulary/static/media/flags.9c74e172.png"
   },
   {
     "revision": "b564da88bbf0c4aa446fa19653713cd1",
     "url": "/english-vocabulary/static/media/fa-brands-400.b564da88.woff"
   },
   {
+    "revision": "57dcda6f368ea90179f75cbdae96c263",
+    "url": "/english-vocabulary/static/media/fa-brands-400.57dcda6f.eot"
+  },
+  {
+    "revision": "067595ad77ecc0db9c81c8905a7eef32",
+    "url": "/english-vocabulary/static/media/fa-brands-400.067595ad.woff2"
+  },
+  {
+    "revision": "4165c2688309cbfb1b877caf8f75afb5",
+    "url": "/english-vocabulary/static/media/fa-regular-400.4165c268.woff2"
+  },
+  {
+    "revision": "3351f435b3c9037fd88aeb04dc1e43bc",
+    "url": "/english-vocabulary/static/media/fa-regular-400.3351f435.eot"
+  },
+  {
+    "revision": "9ec698d1a597bff5df337094b71ddaaf",
+    "url": "/english-vocabulary/static/media/fa-brands-400.9ec698d1.ttf"
+  },
+  {
     "revision": "55eb2a60e8181f0e68b558c991973bf0",
     "url": "/english-vocabulary/static/media/fa-solid-900.55eb2a60.woff2"
   },
   {
-    "revision": "75f38a159982b6bd1704891332d95fa7",
-    "url": "/english-vocabulary/static/media/fa-solid-900.75f38a15.ttf"
+    "revision": "73cf49a2232c06c920b7a34e36bfb58c",
+    "url": "/english-vocabulary/static/media/fa-regular-400.73cf49a2.woff"
+  },
+  {
+    "revision": "a0e3ac82940c1998c5977fd4bc1f5ef6",
+    "url": "/english-vocabulary/static/media/fa-regular-400.a0e3ac82.ttf"
+  },
+  {
+    "revision": "89e02bae13c9131c7468b1e729339ac1",
+    "url": "/english-vocabulary/static/media/fa-solid-900.89e02bae.eot"
+  },
+  {
+    "revision": "5d0861781aeef6c82fda3a3076954a1b",
+    "url": "/english-vocabulary/static/media/fa-regular-400.5d086178.svg"
   },
   {
     "revision": "cdfec5cf5e9840889790bcf2c4042583",
     "url": "/english-vocabulary/static/media/fa-solid-900.cdfec5cf.woff"
+  },
+  {
+    "revision": "75f38a159982b6bd1704891332d95fa7",
+    "url": "/english-vocabulary/static/media/fa-solid-900.75f38a15.ttf"
   },
   {
     "revision": "9d67fa1429375bd2a899a17eb77d0342",
@@ -164,7 +164,7 @@ self.__precacheManifest = [
     "url": "/english-vocabulary/static/media/fa-solid-900.0724bb8b.svg"
   },
   {
-    "revision": "336d3d76dcf0e2166d910363ec07dc12",
+    "revision": "484cee32004a570d277f8a211b3a59eb",
     "url": "/english-vocabulary/index.html"
   }
 ];
