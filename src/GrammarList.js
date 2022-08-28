@@ -14,7 +14,7 @@ class GrammarList extends Component {
   }
 
   componentDidMount(){
-    axios.get('/grammar2.json')
+    axios.get('./grammar2.json')
       .then(res => {
         const grammar = res.data;
         console.log(grammar);

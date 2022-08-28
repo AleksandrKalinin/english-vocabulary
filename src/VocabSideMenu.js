@@ -12,13 +12,11 @@ class VocabSideMenu extends Component {
        items: [],
        options: [],
        value: null
-
     }
   }
 
-  	UNSAFE_componentWillMount() {
-   
-	    axios.get('/working.json')
+  	UNSAFE_componentWillMount() {   
+	    axios.get('./working.json')
 	      .then(res => {
 	        const items = res.data;
 	        this.setState({ items }, () => this.consoleParams() );

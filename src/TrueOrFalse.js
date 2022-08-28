@@ -39,7 +39,7 @@ class TrueOrFalse extends Component {
   } 
 
   initialLoad = () => {
-    axios.get('/working.json')
+    axios.get('./working.json')
       .then(res => {
         const words = res.data;
         let result = []; 

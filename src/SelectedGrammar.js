@@ -30,7 +30,7 @@ class SelectedGrammar extends Component {
 
   componentDidMount() {
     var stepId = this.state.stepId;
-    axios.get('/grammar2.json')
+    axios.get('./grammar2.json')
       .then(res => {
         let selectedGrammar = res.data[0].rules.find(x => x.id === this.props.match.params.id);
         let main_points = selectedGrammar.main_points;

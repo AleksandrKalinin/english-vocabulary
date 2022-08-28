@@ -10,9 +10,7 @@ import {bindActionCreators} from 'redux';
 import actions from './actions/index';
 import {connect} from 'react-redux';
 
-
 class SelectedBook extends Component {
-
   constructor(props){
     super(props);
     this.fileInputRef = React.createRef();    
@@ -45,8 +43,8 @@ class SelectedBook extends Component {
     myHeaders.append('Content-Type','text/plain; charset=UTF-8');  
     const that = this;
     axios.all([
-      axios.get('/books.json'), 
-      axios.get('/words_full.json')
+      axios.get('./books.json'), 
+      axios.get('./words_full.json')
     ])   
     .then(axios.spread((obj1, obj2) => {
       let books = obj1.data; 
@@ -154,7 +152,6 @@ class SelectedBook extends Component {
   toggleComments = () => {
     this.setState({ commentsVisible: !this.state.commentsVisible })
   }
-
 
   searchForWord = (item, e) => {
     switch (e.detail) {

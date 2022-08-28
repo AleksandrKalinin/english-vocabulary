@@ -39,7 +39,7 @@ class RecreateText extends Component {
 	}
 
   initialLoad = () => {
-    axios.get('/texts.json')
+    axios.get('./texts.json')
       .then(res => {
         let texts = res.data;
         let contentArray = [];
@@ -80,7 +80,6 @@ class RecreateText extends Component {
   componentDidMount() {
     this.setStateOnStart();   
   }   
-
 
   readMore = (id) =>{
     let texts = this.state.texts.slice();

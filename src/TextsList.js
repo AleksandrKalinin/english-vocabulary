@@ -23,7 +23,7 @@ class TextsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('/texts.json')
+    axios.get('./texts.json')
       .then(res => {
         let texts = res.data;
         let contentArray = [];

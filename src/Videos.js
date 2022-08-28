@@ -23,7 +23,7 @@ class Videos extends Component {
 
   componentDidMount() {
     var id = this.state.id;
-      axios.get('/videos.json')
+      axios.get('./videos.json')
         .then(res => {
           const videos = res.data;
           const name = videos[id].name;

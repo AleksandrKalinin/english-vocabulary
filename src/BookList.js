@@ -65,7 +65,7 @@ class BookList extends Component {
   }
 
   componentDidMount() {
-    axios.get('/books.json')
+    axios.get('./books.json')
       .then(res => {
         let books = res.data;
         this.setState({ 

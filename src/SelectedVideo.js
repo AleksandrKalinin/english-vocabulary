@@ -32,7 +32,7 @@ class SelectedVideo extends Component {
 
   componentDidMount(){
     let selectedVideo;
-    axios.get('/videos.json')
+    axios.get('./videos.json')
       .then(res => {
         let channels = res.data;
         selectedVideo = channels.find(x => x.id == this.props.match.params.id);

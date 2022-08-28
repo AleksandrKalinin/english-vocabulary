@@ -201,8 +201,8 @@ class Decks extends Component {
    }
 
    initialLoad = () => {
-    axios.all([axios.get('/decks.json'),
-               axios.get('working.json')])
+    axios.all([axios.get('./decks.json'),
+               axios.get('./working.json')])
           .then(axios.spread((firstResponse, secondResponse) => { 
           let words = firstResponse.data;
           let allWords = secondResponse.data;
@@ -214,8 +214,7 @@ class Decks extends Component {
             contentLoaded: true
           }, () => this.constructMenu());
        }))
-   }
-	
+   }	
 
   render() {
     let color = this.state.currentColor;

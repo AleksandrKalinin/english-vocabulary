@@ -94,7 +94,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-	    axios.get('/vocabulary.json')
+	    axios.get('./vocabulary.json')
 	      .then(res => {
 	        const words = res.data;
 	        this.setState({ words });

@@ -176,7 +176,7 @@ class Statistics extends Component {
     }, () => { this.countTests(this.state.tests); 
                this.setState({ wordsLoaded: true})               
              })
-    axios.get('/words_full.json')
+    axios.get('./words_full.json')
       .then(res => {
         let words = res.data;
         this.setState({ 

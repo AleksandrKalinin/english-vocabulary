@@ -6,50 +6,7 @@ import Pagination from "react-js-pagination";
 import axios from 'axios';
 
 class PaginationExample extends Component {
-/*	
-	constructor(props){
-		super(props);
-		this.state = {
-			words: [],
-			activePage: 15	
-		};
-		
-	}
 
- 
-	componentDidMount() {
-	    axios.get('/vocabulary.json')
-	      .then(res => {
-	        const words = res.data;
-	        this.setState({ words });
-	      })
-	  }
-
-   consoleState = ()=>{
-   	console.log(this.state)
-   }
-
-  render() {
- 	
-    return (
-    	<Fragment>
-	    	<div className="content-wrapper">
-	    		<TopMenu></TopMenu>
-				<div>
-					<Pagination
-					activePage={this.state.activePage}
-					itemsCountPerPage={10}
-					totalItemsCount={450}
-					pageRangeDisplayed={5}
-					//onChange={::this.handlePageChange}
-					/>
-				</div>	    		
-	    	</div>
-	    	<footer></footer>
-	    </Fragment>	
-	);
-  }
- */
 constructor() {
     super();
     this.state = {
@@ -63,14 +20,14 @@ constructor() {
   }
 
 	componentDidMount() {
-	    axios.get('/vocabulary.json')
+	    axios.get('./vocabulary.json')
 	      .then(res => {
 	        const words = res.data;
 	        const wordsArray = [];
 	        for (var i = 0; i < words.length; i++) {
 	        	wordsArray.push(words[i].name);
 	        }
-	        this.setState({ words: words, wordsArray: wordsArray });
+	        this.setState({ words, wordsArray });
 
 	      })
 	  }

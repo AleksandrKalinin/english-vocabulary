@@ -197,7 +197,7 @@ class Proverbs extends Component {
 
   initialLoad = () => {
     let id = this.state.id;
-    axios.get('/proverbs.json')
+    axios.get('./proverbs.json')
       .then(res => {
         const proverbs = res.data;
         let random = [];

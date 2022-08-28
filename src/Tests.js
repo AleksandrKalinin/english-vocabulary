@@ -37,7 +37,7 @@ class Tests extends Component {
   }
 
   componentDidMount() {
-      axios.get('/tests.json')
+      axios.get('./tests.json')
         .then(res => {
           let tests = res.data;
           this.setState({ 
