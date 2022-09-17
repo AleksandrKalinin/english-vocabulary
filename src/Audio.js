@@ -47,145 +47,143 @@ class Audio extends Component {
       }, () => this.initialLoad())
    }
 
-   initialLoad = () => {
-    let id = this.state.id;
-      axios.get('./working.json')
-        .then(res => {
-          const words = res.data;
-          let result = [];
-          for (var i = 0; i < 3; i++) {
-            let item = [];
-            while(item.length < 5) {
-              let el = words[Math.floor(Math.random() * words.length)];
-              if (item.indexOf(el) === -1) {
-                item.push(el)
-              };                
-            }
-            result.push(item);
+  initialLoad = () => {
+    axios.get('./working.json')
+      .then(res => {
+        const words = res.data;
+        let result = [];
+        for (var i = 0; i < 3; i++) {
+          let item = [];
+          while(item.length < 5) {
+            let el = words[Math.floor(Math.random() * words.length)];
+            if (item.indexOf(el) === -1) {
+              item.push(el)
+            };                
           }
-          const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
-          this.setState({ 
-            words, 
-            currentWord,
-            result });
-        })
-   }
+          result.push(item);
+        }
+        const currentWord = result[0][Math.floor(Math.random() * result[0].length)];
+        this.setState({ 
+          words, 
+          currentWord,
+          result });
+      })
+  }
 
-    startTraining = () => {
+  startTraining = () => {
+    this.setState({
+      isButtonVisible: false,
+      isCardVisible: true
+    })
+  }
+
+  updateSearch = (event) => {
+    this.setState({
+      search: event.target.value.substr(0,20),
+      tempSearch: event.target.value.substr(0,20)});
+  }  
+
+  positiveResponse = () => {
+    let positiveWords = this.state.positiveWords.slice();
+    let negativeWords = this.state.negativeWords.slice();
+    let currentWord = this.state.currentWord;
+    let search = this.state.search;
+    if(currentWord.name === search){
+      positiveWords.push(currentWord);
       this.setState({
-        isButtonVisible: false,
-        isCardVisible: true
+        positiveWords,
+        isTranslationVisible: true,
+        showNavButtons: false,
+        showContinueButton: true,
+        isImageVisible: true,
+        isInputVisible: false,
+        isLinkVisible: false,
+        search: '',
+        nameClass: 'audio-name-green'
       })
     }
-
-    updateSearch = (event) => {
+    else if(search === '') {
+      negativeWords.push(currentWord);        
       this.setState({
-        search: event.target.value.substr(0,20),
-        tempSearch: event.target.value.substr(0,20)});
-    }  
-
-
-    positiveResponse = () => {
-      let positiveWords = this.state.positiveWords.slice();
-      let negativeWords = this.state.negativeWords.slice();
-      let currentWord = this.state.currentWord;
-      let search = this.state.search;
-      if(currentWord.name === search){
-        positiveWords.push(currentWord);
-        this.setState({
-          positiveWords,
-          isTranslationVisible: true,
-          showNavButtons: false,
-          showContinueButton: true,
-          isImageVisible: true,
-          isInputVisible: false,
-          isLinkVisible: false,
-          search: '',
-          nameClass: 'audio-name-green'
-        })
-      }
-      else if(search === '') {
-        negativeWords.push(currentWord);        
-        this.setState({
-          correctNameVisible: true,
-          negativeWords,
-          isTranslationVisible: true,
-          showNavButtons: false,
-          showContinueButton: true,
-          isImageVisible: true,
-          isInputVisible: false,
-          isLinkVisible: false,
-          search: '',
-          nameClass: 'audio-name-red',
-          tempSearch: 'нет ответа'
-        }) 
-      }
-
-      else {
-        negativeWords.push(currentWord);
-        this.setState({
-          correctNameVisible: true,
-          negativeWords,
-          isTranslationVisible: true,
-          showNavButtons: false,
-          showContinueButton: true,
-          isImageVisible: true,
-          isInputVisible: false,
-          isLinkVisible: false,
-          search: '',
-          nameClass: 'audio-name-red'
-        })        
-      }
+        correctNameVisible: true,
+        negativeWords,
+        isTranslationVisible: true,
+        showNavButtons: false,
+        showContinueButton: true,
+        isImageVisible: true,
+        isInputVisible: false,
+        isLinkVisible: false,
+        search: '',
+        nameClass: 'audio-name-red',
+        tempSearch: 'нет ответа'
+      }) 
     }
 
-    continueTraining = () => {
-      let id = this.state.id;
-      id = id + 1;
-      const result = this.state.result;
-      if (id < result.length) { 
-      const currentWord = result[id][Math.floor(Math.random() * result[0].length)];
-        this.setState({
-          id,
-          currentWord,
-          isTranslationVisible: false,
-          showNavButtons: true,
-          showContinueButton: false,
-          isImageVisible: false,
-          isLinkVisible: true,
-          isInputVisible: true,
-          search: '',
-          correctNameVisible: false        
-        })
-      } 
-
-      else {
-        let words = this.state.positiveWords.slice();
-        let exercise = {}, wordsTrained = [];
-        exercise.id = uuidv4();
-        exercise.date = new Date();
-        exercise.score = this.state.positiveWords.length;
-        for (var i = 0; i < words.length; i++) {
-          wordsTrained.push(words[i].id)
-        }
-        exercise.wordsTrained = wordsTrained;
-        this.props.actions.updateAudioWords(exercise);   
-        this.props.actions.updateExerciseComplete(1);
-        this.props.actions.updateTotalScore(exercise.score);
-        this.setState({
-          isFinalVisible: true,
-          isTranslationVisible: false,
-          showNavButtons: false,
-          showContinueButton: false, 
-          isCardVisible: false,
-          isButtonVisible: false,
-          isImageVisible: false,
-          isLinkVisible: false,
-          isInputVisible: false,
-          correctNameVisible: false,
-          search: ''
-        })
-      }
+    else {
+      negativeWords.push(currentWord);
+      this.setState({
+        correctNameVisible: true,
+        negativeWords,
+        isTranslationVisible: true,
+        showNavButtons: false,
+        showContinueButton: true,
+        isImageVisible: true,
+        isInputVisible: false,
+        isLinkVisible: false,
+        search: '',
+        nameClass: 'audio-name-red'
+      })        
     }
+  }
+
+  continueTraining = () => {
+    let id = this.state.id;
+    id = id + 1;
+    const result = this.state.result;
+    if (id < result.length) { 
+    const currentWord = result[id][Math.floor(Math.random() * result[0].length)];
+      this.setState({
+        id,
+        currentWord,
+        isTranslationVisible: false,
+        showNavButtons: true,
+        showContinueButton: false,
+        isImageVisible: false,
+        isLinkVisible: true,
+        isInputVisible: true,
+        search: '',
+        correctNameVisible: false        
+      })
+    } 
+
+    else {
+      let words = this.state.positiveWords.slice();
+      let exercise = {}, wordsTrained = [];
+      exercise.id = uuidv4();
+      exercise.date = new Date();
+      exercise.score = this.state.positiveWords.length;
+      for (var i = 0; i < words.length; i++) {
+        wordsTrained.push(words[i].id)
+      }
+      exercise.wordsTrained = wordsTrained;
+      this.props.actions.updateAudioWords(exercise);   
+      this.props.actions.updateExerciseComplete(1);
+      this.props.actions.updateTotalScore(exercise.score);
+      this.setState({
+        isFinalVisible: true,
+        isTranslationVisible: false,
+        showNavButtons: false,
+        showContinueButton: false, 
+        isCardVisible: false,
+        isButtonVisible: false,
+        isImageVisible: false,
+        isLinkVisible: false,
+        isInputVisible: false,
+        correctNameVisible: false,
+        search: ''
+      })
+    }
+  }
 
   voiceWord = () =>{
     speech.say(this.state.currentWord.name);
@@ -248,7 +246,7 @@ class Audio extends Component {
                  }
                  {this.state.isLinkVisible ?
                    <div className="audio-image-text">
-                       <a onClick={this.showImage}>Show hint</a>
+                       <span onClick={this.showImage}>Show hint</span>
                    </div> : null
                   }                 
                 </div>

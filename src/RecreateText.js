@@ -233,7 +233,6 @@ class RecreateText extends Component {
   checkSentences = () =>{
     let reservedSentences = this.state.reservedSentences;
     let splittedSentences = this.state.spllittedSentences;
-    let currentProgress;
     let wrongIndexes = this.state.wrongIndexes.slice();
     let wrongCount = 0;
     for (var i = 0; i < splittedSentences.length; i++) {
@@ -245,7 +244,7 @@ class RecreateText extends Component {
         wrongIndexes[i] = "recreate-text-right"
       }
     }
-    if(wrongCount==0){
+    if(wrongCount === 0){
       this.showFinal();
     }
 

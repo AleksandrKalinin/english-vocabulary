@@ -14,7 +14,7 @@ class WordFound extends Component {
   }
 
   componentDidMount(){
-
+    console.log(this.props.word)
   } 
 
 

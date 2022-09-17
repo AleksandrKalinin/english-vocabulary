@@ -152,7 +152,8 @@ class Statistics extends Component {
 
   componentDidMount() {
     let exercises = this.props.store;
-    for (var prop in exercises) {
+    let prop;
+    for (prop in exercises) {
       let val = exercises[prop];
       this.setState({
         [prop]: val
@@ -165,7 +166,7 @@ class Statistics extends Component {
     learnedWords.constructWords = this.props.store.constructWords;
     learnedWords.audioWords = this.props.store.audioWords;
     learnedWords.trueOrFalseWords = this.props.store.trueOrFalseWords;
-    for (var prop in learnedWords) {
+    for (prop in learnedWords) {
       let val = learnedWords[prop];
       this.countWords(val, prop + "Total")
     } 
@@ -253,7 +254,7 @@ class Statistics extends Component {
 	getYesterdaysDate = () => {
 
     let data = this.state.barChartData.slice(0,7);
-    let params = this.state.barChartData.slice(0,7);
+    //let params = this.state.barChartData.slice(0,7);
     const sorter = {
       "monday": 1,
       "tuesday": 2,
@@ -264,12 +265,13 @@ class Statistics extends Component {
       "sunday": 7
     }
 
+/*
     let newParams = params.sort((a, b) => {
       let item1 = a.name.toLowerCase();
       let item2 = b.name.toLowerCase();
       return sorter[item1] - sorter[item2];
     });  
-
+*/
 		var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     let dateArray = [];		
     var date = new Date();
@@ -315,7 +317,7 @@ class Statistics extends Component {
     let month = current.getMonth();
     let day = current.getDate();
     let weekDay = current.getDay();
-    let weekDays = 7;
+    //let weekDays = 7;
     let start = new Date(`${year}-${month + 1}-${day}`);
     
     function ifInRange(item) {
@@ -332,7 +334,7 @@ class Statistics extends Component {
     let current = new Date();
     let year = current.getFullYear();
     let month = current.getMonth();
-    let day = current.getDate();
+    //let day = current.getDate();
     let totalDays = daysInMonth(month, year);
     let start = new Date(`${year}-${month + 1}-${1}`);
 
@@ -360,9 +362,10 @@ class Statistics extends Component {
   applyFunction = (func, option) => {
     let exercises = this.props.store;
     let tests = this.props.testsStore;
+    let prop;
 
     if (option === 'exercise') {
-      for (var prop in exercises) {
+      for (prop in exercises) {
         let val = exercises[prop].filter(func)
         this.setState({
           [prop]: val
@@ -381,7 +384,7 @@ class Statistics extends Component {
         learnedWords.constructWords = this.props.store.constructWords;
         learnedWords.audioWords = this.props.store.audioWords;
         learnedWords.trueOrFalseWords = this.props.store.trueOrFalseWords;
-        for (var prop in learnedWords) {
+        for (prop in learnedWords) {
           learnedWords[prop] = learnedWords[prop].filter(func);
           this.countWords(learnedWords[prop], prop + "Total");
         }
@@ -523,7 +526,7 @@ class Statistics extends Component {
                     <Card.Header className="statistics-wrapper-header">Упражнений выполнено</Card.Header>
                     <div className="statistics-menu">
                       {this.state.exerciseMenu.map((item, index) => 
-                        <a key={item.id} onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
+                        <span key={item.id} onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</span>
                       )}
                     </div>
                     {this.state.loaded ?
@@ -602,7 +605,7 @@ class Statistics extends Component {
                     <Card.Header className="statistics-wrapper-header">Слов изучено</Card.Header>
                     <div className="statistics-menu">
                       {this.state.wordMenu.map((item, index) => 
-                        <a key={item.id} onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
+                        <span key={item.id} onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</span>
                       )}
                     </div>
                     {this.state.wordsLoaded ?
@@ -652,7 +655,7 @@ class Statistics extends Component {
                     <Card.Header className="statistics-wrapper-header">Тесты</Card.Header>
                     <div className="statistics-menu">
                       {this.state.testMenu.map((item, index) => 
-                        <a key = {item.id} onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</a>
+                        <span key = {item.id} onClick={this.switchTab.bind(this, item.action, item.id)} className={item.active ? "statistics-link_active" : ""}>{item.name}</span>
                       )}
                     </div>     
                     {this.state.testsLoaded ?               

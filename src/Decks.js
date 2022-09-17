@@ -217,8 +217,6 @@ class Decks extends Component {
    }	
 
   render() {
-    let color = this.state.currentColor;
-    let filteredWords = this.state.currentWords;
     return (
       <Fragment>
         <div className="content-wrapper">

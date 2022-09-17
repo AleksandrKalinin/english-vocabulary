@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {Button, TextArea, Form, Input } from 'semantic-ui-react'
-
+import {Button, TextArea, Form, Input } from 'semantic-ui-react';
 import { v4 as uuidv4 } from 'uuid';
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
@@ -29,7 +28,7 @@ class Comments extends Component {
       this.setState({
         comments: item.comments,
         loaded: true
-      }, () => console.log(this.state))      
+      })      
     } else {
       this.setState({
         noComments: true,
@@ -39,65 +38,64 @@ class Comments extends Component {
     
   } 
 
-    addComment = () =>{
-      let comments = this.state.comments.slice();
-      let errors = this.state.errors;
-      let currentComment = this.state.currentComment;
-      let currentName = this.state.currentName;
-      let currentEmail = this.state.currentEmail;
-      let temp = {};
+  addComment = () => {
+    let errors = this.state.errors;
+    let currentComment = this.state.currentComment;
+    let currentName = this.state.currentName;
+    let currentEmail = this.state.currentEmail;
+    let temp = {};
 
-      if( (currentName !== '') && (currentComment !== '') && (currentEmail !== '')){
-        let date = new Date();
-        let datestring = ("0" + date.getDate()).slice(-2) + "-" + ("0"+(date.getMonth()+1)).slice(-2) + "-" +
-        date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);        
-        temp['commentId'] = uuidv4();
-        temp['author'] = currentName;
-        temp['text'] = currentComment;        
-        temp['date'] = datestring;
-        let id = this.props.id;
-        this.props.actions.addCommentToBook(id, temp);        
-        this.setState({
-          currentName: '',
-          currentComment: '',
-          currentEmail: ''
-        })
-      }
-
-      else if (currentName === ''){
-        errors['name'] = "Заполните поле имени!";
-        this.setState({
-          errors
-        })
-      }
-
-      else if(currentComment === ''){
-        errors['comment'] = "Комментария должен быть не короче 30 символов";
-        this.setState({
-          errors
-        })        
-      }
-
-      else if(currentEmail === ''){
-        errors['email'] = "Заполните поле почты";
-        this.setState({
-          errors
-        })        
-      }
-
+    if( (currentName !== '') && (currentComment !== '') && (currentEmail !== '')){
+      let date = new Date();
+      let datestring = ("0" + date.getDate()).slice(-2) + "-" + ("0"+(date.getMonth()+1)).slice(-2) + "-" +
+      date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);        
+      temp['commentId'] = uuidv4();
+      temp['author'] = currentName;
+      temp['text'] = currentComment;        
+      temp['date'] = datestring;
+      let id = this.props.id;
+      this.props.actions.addCommentToBook(id, temp);        
+      this.setState({
+        currentName: '',
+        currentComment: '',
+        currentEmail: ''
+      })
     }
 
-    updateComment = (event) =>{
-      this.setState({currentComment: event.target.value.substr(0,500)});
+    else if (currentName === ''){
+      errors['name'] = "Заполните поле имени!";
+      this.setState({
+        errors
+      })
     }
 
-    updateName = (event) =>{
-      this.setState({currentName: event.target.value.substr(0,500)});
+    else if(currentComment === ''){
+      errors['comment'] = "Комментария должен быть не короче 30 символов";
+      this.setState({
+        errors
+      })        
     }
 
-    updateEmail = (event) =>{
-      this.setState({currentEmail: event.target.value.substr(0,500)});
+    else if(currentEmail === ''){
+      errors['email'] = "Заполните поле почты";
+      this.setState({
+        errors
+      })        
     }
+
+  }
+
+  updateComment = (event) =>{
+    this.setState({currentComment: event.target.value.substr(0,500)});
+  }
+
+  updateName = (event) =>{
+    this.setState({currentName: event.target.value.substr(0,500)});
+  }
+
+  updateEmail = (event) =>{
+    this.setState({currentEmail: event.target.value.substr(0,500)});
+  }
 
 
   render() {

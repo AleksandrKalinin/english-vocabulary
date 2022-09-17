@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import {Image, Button, Card, Menu, Dropdown, Checkbox, Icon, Rating } from 'semantic-ui-react'
+import {Image, Button, Card, Menu, Dropdown, Icon, Rating } from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import {Link} from "react-router-dom";
 import axios from 'axios';
@@ -65,7 +65,7 @@ class BookList extends Component {
   }
 
   componentDidMount() {
-    axios.get('./books.json')
+    axios.get('books.json')
       .then(res => {
         let books = res.data;
         this.setState({ 
@@ -76,16 +76,15 @@ class BookList extends Component {
 
     createMenu = () =>{
 
-      let options = [], age = [], genres = {}, sizes = [], ageTemp = [], sizesTemp = {};
-
-      for (var x = 0; x < this.state.books.length; x++) {
+      let options = [], age = [], genres = {}, sizes = [], ageTemp = [], sizesTemp = {}, i;
+      for (i = 0; i < this.state.books.length; i++) {
         let item = this.state.books[i].genre;
         for (var j = 0; j < item.length; j++) {
           if (!genres.hasOwnProperty(item[j])) {
             genres[item[j]] = [];
-            genres[item[j]].push(this.state.books[x].id);
+            genres[item[j]].push(this.state.books[i].id);
           } else {
-            genres[item[j]].push(this.state.books[x].id);
+            genres[item[j]].push(this.state.books[i].id);
           }
         }
       }
@@ -98,17 +97,17 @@ class BookList extends Component {
         })
       }
 
-      for (var i = 0; i < this.state.books.length; i++) {
+      for (i = 0; i < this.state.books.length; i++) {
         if (ageTemp.indexOf(this.state.books[i].age_restriction) === -1) {
           ageTemp.push(this.state.books[i].age_restriction);
         }
       }
 
-      for (var y = 0; y < ageTemp.length; y++) {
+      for (i = 0; i < ageTemp.length; i++) {
         age.push({
-          key: ageTemp[y],
-          text: ageTemp[y],
-          value: ageTemp[y]
+          key: ageTemp[i],
+          text: ageTemp[i],
+          value: ageTemp[i]
         })
       }
 
@@ -116,14 +115,14 @@ class BookList extends Component {
       sizesTemp["От 10000 до 50000"] = [];
       sizesTemp["Более 50000"] = [];
 
-      for (var a = 0; a < this.state.books.length; a++) {
-        let item = this.state.books[a].length;
+      for (i = 0; i < this.state.books.length; i++) {
+        let item = this.state.books[i].length;
         if (item <= 10000) {
-          sizesTemp["Менее 10000"].push(this.state.books[a].id);
+          sizesTemp["Менее 10000"].push(this.state.books[i].id);
         } else if(item > 10000 && item < 50000) {
-          sizesTemp["От 10000 до 50000"].push(this.state.books[a].id);
+          sizesTemp["От 10000 до 50000"].push(this.state.books[i].id);
         } else {
-          sizesTemp["Более 50000"].push(this.state.books[a].id);
+          sizesTemp["Более 50000"].push(this.state.books[i].id);
         }
       }
 

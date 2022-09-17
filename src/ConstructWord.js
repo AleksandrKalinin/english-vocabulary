@@ -98,7 +98,8 @@ class ConstructWord extends Component {
     let tempParam;
     if ((e.key=== nameArray[id]) && (currentValue.length < currentWord.length) && (this.state.isCardVisible) ) {
         currentValue = currentValue + e.key;
-        this.state.wordNameArray[id] = e.key;
+        let wordNameArray = this.state.wordNameArray.slice();
+        wordNameArray[id] = e.key;
         for (var i = 0; i < randomNameArray.length; i++) {
           if (randomNameArray[i] === e.key) {
             tempParam = i;
@@ -108,6 +109,7 @@ class ConstructWord extends Component {
         randomNameArray.splice(tempParam,1);       
         ++id;
         this.setState({
+          wordNameArray,
           currentValue,
           nameArrayId: id,
           inputValue: e.key,
@@ -121,7 +123,7 @@ class ConstructWord extends Component {
           fade: true
         })
       }
-      else if((e.keyCode == '13') && (this.state.isCardVisible) ){
+      else if((e.keyCode === '13') && (this.state.isCardVisible) ){
         this.continueTraining();
       }
 
@@ -157,14 +159,14 @@ class ConstructWord extends Component {
 	  		negativeWords
 	  	})
 		}
-		else{
+		else {
 			positiveWords.push(currentFullWord)
 		} 
     let id = this.state.id;
     let wordsLength = this.state.words.length;
     let words = this.state.words; 
     id = id + 1;
-    if(id < wordsLength) {
+    if (id < wordsLength) {
       const currentFullWord = words[id];
       const currentWord = words[id].name;
   		const currentTranslation = words[id].translation;
@@ -177,7 +179,7 @@ class ConstructWord extends Component {
   		    [randomNameArray[i], randomNameArray[j]] = [randomNameArray[j], randomNameArray[i]];
   		}
   		const wordNameArray = [];
-  		for (var i = 0; i < nameArray.length; i++) {
+  		for (let i = 0; i < nameArray.length; i++) {
   			wordNameArray.push(' ');
   		}
       this.setState({
@@ -206,7 +208,7 @@ class ConstructWord extends Component {
       exercise.id = uuidv4();
       exercise.date = new Date();
       exercise.score = this.state.positiveWords.length;
-      for (var i = 0; i < words.length; i++) {
+      for (let i = 0; i < words.length; i++) {
         wordsTrained.push(words[i].id)
       }
       exercise.wordsTrained = wordsTrained;
@@ -240,16 +242,17 @@ class ConstructWord extends Component {
     let id = this.state.nameArrayId;
     let currentWord = this.state.currentWord;
     let nameArray = this.state.nameArray;
-    let randomNameArray = this.state.randomNameArray;
     let currentValue = this.state.currentValue;
     let currentLetter = e.target.textContent.slice(0,1);
     let mistakeCount = this.state.mistakeCount;
     if( (currentLetter === nameArray[id]) && (currentValue.length < currentWord.length) ){
       e.target.className = "hidden";
       currentValue = currentValue + currentLetter;
-      this.state.wordNameArray[id] = currentLetter;
+      let wordNameArray = this.state.wordNameArray.slice();
+      wordNameArray[id] = currentLetter;
       ++id;
       this.setState({
+        wordNameArray,
         currentValue,
         nameArrayId: id,
         inputValue: currentLetter
