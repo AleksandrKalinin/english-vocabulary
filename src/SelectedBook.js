@@ -43,13 +43,13 @@ class SelectedBook extends Component {
     myHeaders.append('Content-Type','text/plain; charset=UTF-8');  
     const that = this;
     axios.all([
-      axios.get('./books.json'), 
-      axios.get('./words_full.json')
+      axios.get('../books.json'), 
+      axios.get('../words_full.json')
     ])   
     .then(axios.spread((obj1, obj2) => {
       let books = obj1.data; 
       let words = obj2.data;
-      let selectedBook = books.find(x => x.id === this.props.match.params.id);
+      let selectedBook = books.find(x => x.id == this.props.match.params.id);
       fetch(selectedBook.link, myHeaders)
         .then(response => response.arrayBuffer())
         .then(function (buffer) {

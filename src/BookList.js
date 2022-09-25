@@ -75,11 +75,11 @@ class BookList extends Component {
     }
 
     createMenu = () =>{
-
+      console.log(this.state);
       let options = [], age = [], genres = {}, sizes = [], ageTemp = [], sizesTemp = {};
 
       for (var x = 0; x < this.state.books.length; x++) {
-        let item = this.state.books[i].genre;
+        let item = this.state.books[x].genre;
         for (var j = 0; j < item.length; j++) {
           if (!genres.hasOwnProperty(item[j])) {
             genres[item[j]] = [];

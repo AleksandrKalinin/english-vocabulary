@@ -90,7 +90,7 @@ class RecreateAudioText extends Component {
 
     createTrack = (id) => {
       axios
-        .get("tracks.json")
+        .get("./tracks.json")
         .then((res) => {
           let currentTrack = new Howl({
             src: "tracks/" + res.data.slice(id - 1, id),

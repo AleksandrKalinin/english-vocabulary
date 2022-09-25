@@ -17,7 +17,6 @@ class GrammarList extends Component {
     axios.get('./grammar2.json')
       .then(res => {
         const grammar = res.data;
-        console.log(grammar);
         this.setState({ grammar });
       })
   } 
