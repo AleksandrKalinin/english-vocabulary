@@ -47,7 +47,6 @@ class EnglishToRussian extends Component {
   }
 
     initialLoad = () => {
-      let id = this.state.id;
       axios.get('./working.json')
         .then(res => {
           const words = res.data;

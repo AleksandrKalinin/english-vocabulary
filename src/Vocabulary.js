@@ -6,7 +6,6 @@ import VocabWord from'./VocabWord'
 import VocabSideMenu from'./VocabSideMenu'
 import TopMenu from './TopMenu'
 import VocabTopMenu from './VocabTopMenu'
-import speech from 'speech-synth';
 
 import {bindActionCreators} from 'redux';
 import actions from './actions/index';
@@ -126,7 +125,7 @@ class Vocabulary extends Component {
 	   	let words = this.state.words.slice();
 	   	let filteredWords;
 	   	if (dataFromChild.value !== '') {
-	   		filteredWords = words.filter(item => item.category == dataFromChild.value); 
+	   		filteredWords = words.filter(item => item.category === dataFromChild.value); 
 	   	} else {
 	   		filteredWords = words;
 	   	} 	
@@ -173,7 +172,7 @@ class Vocabulary extends Component {
 	    			<div className="modal-word">
 	    				<span title="Закрыть" onClick={this.toggleModal} className="modal-word__icon modal-word__icon--close"><Icon name = 'close' size="large" /></span>
 	    				<div className="modal-word__image">
-	    					<img src = {this.props.store.selectedVocabWord.image} />
+	    					<img src = {this.props.store.selectedVocabWord.image} alt=""/>
 	    				</div>
 	    				<p className="modal-word__title">{this.props.store.selectedVocabWord.name} - <span className="modal-word__translation">{this.props.store.selectedVocabWord.translation}</span></p>
 	    				<span onClick={this.deleteWord.bind(this, this.props.store.selectedVocabWord.id)} title="Удалить" className="modal-word__icon modal-word__icon--delete"><Icon size="large" name = 'trash alternate outline'/></span>

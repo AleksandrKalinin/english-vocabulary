@@ -1,12 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Image, Icon} from 'semantic-ui-react'
+import { Card, Image} from 'semantic-ui-react'
 import TopMenu from './TopMenu'
 import {Link} from "react-router-dom";
 
-
 class Training extends Component {
-
-	   
 
   render() {
     return (

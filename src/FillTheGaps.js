@@ -15,7 +15,7 @@ class FillTheGaps extends Component {
   constructor(props){
     super(props);
     this.state = {
-        texts: []
+      texts: []
     }
   }
 
@@ -140,13 +140,14 @@ class FillTheGaps extends Component {
     let currentStringArray = activeTargetContent.split(". ");
     currentStringArray.pop();
     let currentFullArray = [];
-    for (var i = 0; i < currentStringArray.length; i++) {
+    let i;
+    for (i = 0; i < currentStringArray.length; i++) {
     	currentFullArray.push(currentStringArray[i].split(" "));
     }
     let currentWordArray = currentStringArray[0].split(" ");
     let currentRandomArray = [];
     let currentRandomIndexes = [];
-    for (var i = 0; i < currentFullArray.length; i++) {
+    for (i = 0; i < currentFullArray.length; i++) {
     	let j = Math.floor(Math.random()*currentFullArray[i].length);
     	currentRandomArray.push(currentFullArray[i][j]);
     	currentRandomIndexes.push(j);
@@ -154,7 +155,7 @@ class FillTheGaps extends Component {
     let random = currentWordArray[Math.floor(Math.random()*currentWordArray.length)];
     let currentFinalArray = [];
   
-    for (var i = 0; i < currentFullArray.length; i++) {
+    for (i = 0; i < currentFullArray.length; i++) {
     	let curArr = currentFullArray[i];
       	for (var j = 0; j < curArr.length; j++) {
           currentOneArray.push(curArr[j]);
@@ -187,17 +188,18 @@ class FillTheGaps extends Component {
     let activeTargetTitle = e.target.textContent;
     let fragmentArray = [];
     let fragmentArrayIndexes = [];
+    let i;
     let fragmentDescription = document.getElementsByClassName('fragment-description')[0].children;
-    for (var i = 0; i < fragmentDescription.length; i++) {
+    for (i = 0; i < fragmentDescription.length; i++) {
     	if(fragmentDescription[i].className === "fragment-input"){
     		fragmentArrayIndexes.push(i);
     		fragmentArray.push(fragmentDescription[i]);
     	}
     }
-    for (var i = 0; i < fragmentArrayIndexes.length; i++) {
+    for (i = 0; i < fragmentArrayIndexes.length; i++) {
     	activeArray.push(i);
     }
-    for (var i = 0; i < fragmentDescription.length; i++) {
+    for (i = 0; i < fragmentDescription.length; i++) {
     	if( (fragmentDescription[i].className === "fragment-input") && (i === fragmentArrayIndexes[activeInput])){
     		fragmentDescription[i].textContent = activeTargetTitle;
     	}
@@ -241,53 +243,54 @@ class FillTheGaps extends Component {
 	    })
 	}
 
-    resetValue = (e) =>{
-	    let sortedRandomArray = this.state.sortedRandomArray.slice(); 
-      let element = e.target;
-      if (e.target.textContent !== "") {
-    	  sortedRandomArray.push(e.target.textContent);
-    	  element.innerText = "";
-	      this.setState({
-	      	sortedRandomArray: sortedRandomArray
-	      })
-        let indexTarget = 0;
-        while ( (element = element.previousElementSibling) ) {
-          indexTarget++
-        }
-      }
+  resetValue = (e) =>{
+    let sortedRandomArray = this.state.sortedRandomArray.slice(); 
+    let element = e.target;
+    if (e.target.textContent !== "") {
+  	  sortedRandomArray.push(e.target.textContent);
+  	  element.innerText = "";
+      this.setState({
+      	sortedRandomArray: sortedRandomArray
+      })
+      /*
+      let indexTarget = 0;
+      while ( (element = element.previousElementSibling) ) {
+        indexTarget++
+      } */
     }
+  }
 
-    submitText = (e) =>{
-    	let comparativeRandomArray = this.state.comparativeRandomArray.slice();
-    	let currentSortedArray = this.state.currentRandomArray.slice();
-    	let sortedRandomArray = this.state.sortedRandomArray.slice();
-    	let count = 0;
-    	for (var i = 0; i < currentSortedArray.length; i++) {
-    		if (currentSortedArray[i] === comparativeRandomArray[i]) {
-    			count++;
-    		}
-    		else {
-    			sortedRandomArray.push(comparativeRandomArray[i])
-    		}
-    		
-    	}
-    	let rightAnswers = count;
+  submitText = (e) =>{
+  	let comparativeRandomArray = this.state.comparativeRandomArray.slice();
+  	let currentSortedArray = this.state.currentRandomArray.slice();
+  	let sortedRandomArray = this.state.sortedRandomArray.slice();
+  	let count = 0;
+  	for (var i = 0; i < currentSortedArray.length; i++) {
+  		if (currentSortedArray[i] === comparativeRandomArray[i]) {
+  			count++;
+  		}
+  		else {
+  			sortedRandomArray.push(comparativeRandomArray[i])
+  		}
+  		
+  	}
+  	let rightAnswers = count;
 
-      let exercise = {};
-      exercise.id = uuidv4();
-      exercise.date = new Date();
-      exercise.score = count;
-      this.props.actions.updateFillTheGaps(exercise);
-      this.props.actions.updateExerciseComplete(1);
-      this.props.actions.updateTotalScore(count);
-    	this.setState({
-    		isCheckButtonVisible: false,
-    		isResultVisible: true,
-    		isSingleTextVisible: false,
-    		rightAnswers,
-    		sortedRandomArray
-    	})
-    }
+    let exercise = {};
+    exercise.id = uuidv4();
+    exercise.date = new Date();
+    exercise.score = count;
+    this.props.actions.updateFillTheGaps(exercise);
+    this.props.actions.updateExerciseComplete(1);
+    this.props.actions.updateTotalScore(count);
+  	this.setState({
+  		isCheckButtonVisible: false,
+  		isResultVisible: true,
+  		isSingleTextVisible: false,
+  		rightAnswers,
+  		sortedRandomArray
+  	})
+  }
 
   render() {
     return (

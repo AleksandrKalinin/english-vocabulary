@@ -109,12 +109,13 @@ class Tests extends Component {
       let correctResults = [];
 
       activeTest.tasks.map((item, index) => correctResults.push(item.correct_answer));      
-      for (var i = 0; i < 3; i++) {
+      for (let i = 0; i < 3; i++) {
         testItem.push(false);
       }
-      for (var i = 0; i < activeTest.tasks.length; i++) {
+      for (let x = 0; x < activeTest.tasks.length; x++) {
         currentTest.push(testItem);
       }
+
       this.setState({
         activeTest,
         currentTest,
@@ -146,7 +147,8 @@ class Tests extends Component {
     	let finalResults = [];
     	let correctAnswers = [];
     	let incorrectAnswers = [];
-    	for (var i = 0; i < resultsArray.length; i++) {
+      let i;
+    	for (i = 0; i < resultsArray.length; i++) {
     		let item = resultsArray[i];
     		for (var j = 0; j < item.length; j++) {
     			if (item[j]) {
@@ -155,8 +157,8 @@ class Tests extends Component {
     		}
     	}
 
-      if(finalResults.length == this.state.activeTest.tasks.length) {
-        for (var i = 0; i < finalResults.length; i++) {
+      if(finalResults.length === this.state.activeTest.tasks.length) {
+        for (i = 0; i < finalResults.length; i++) {
           if(correctResults[i] === finalResults[i]){
             correctAnswers.push(i)
           }

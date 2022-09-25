@@ -35,7 +35,7 @@ class SelectedVideo extends Component {
     axios.get('./videos.json')
       .then(res => {
         let channels = res.data;
-        selectedVideo = channels.find(x => x.id == this.props.match.params.id);
+        selectedVideo = channels.find(x => x.id === this.props.match.params.id);
         this.setState({ selectedVideo }, () => this.getItems())
     })
   }

@@ -68,7 +68,7 @@ class SelectedBook extends Component {
     let pagesCount = Math.ceil(text.length / value);
     let currentMin = 0;
     let currentMax = 50;
-    for (var i = 0; i < pagesCount; i++) {
+    for (let i = 0; i < pagesCount; i++) {
       let txt = text.slice(currentMin, currentMax);
       if (currentMin === 0 ) {
         let newTxt = [];
@@ -83,14 +83,14 @@ class SelectedBook extends Component {
       currentMin = currentMin + 50;
       currentMax = currentMax + 50;
     }
-      for (var i = 0; i < pagesCount; i++) {
-        pageIndexes.push(i);
-      }
-      this.setState({ pages, 
-                      pageIndexes, 
-                      currentPage: pages[0],
-                      splittedPage: words,
-                      loaded: true });
+    for (let i = 0; i < pagesCount; i++) {
+      pageIndexes.push(i);
+    }
+    this.setState({ pages, 
+                    pageIndexes, 
+                    currentPage: pages[0],
+                    splittedPage: words,
+                    loaded: true });
   }  
 
     prevButton = () =>{
