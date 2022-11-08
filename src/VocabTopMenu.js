@@ -116,7 +116,7 @@ class VocabTopMenu extends Component {
    return (
       <Menu text className="vocab-top-menu-wrapper vocab-top-menu-wrapper-color">
         <Menu.Item>
-          <Modal className="modal-form" trigger={<Button primary>Добавить слово</Button>} closeIcon>
+          <Modal className="modal-form" trigger={<Button primary>Добавить</Button>} closeIcon>
             <Form className="input-form">
               <Form.Field>
                 <label>Введите слово</label>

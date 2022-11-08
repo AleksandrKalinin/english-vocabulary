@@ -1088,7 +1088,7 @@ button.ui.button a.training-link{
 
 .vocab-top-menu-wrapper.ui.text{
 	margin:  0;
-	padding: 12px 30px;
+	padding: 12px 10px;
 	background-color: rgba(0,0,0,0.05);
 	box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
 }
@@ -3636,4 +3636,92 @@ a.outline-link:hover {
 	width: 550px;
 	min-height: 400px;
 	background: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+	.content.word-content a.header {
+		min-width: 300px;
+	}
+
+	.vocab-top-menu-wrapper.ui.text {
+		justify-content: space-between;
+	}
+
+	.vocab-top-menu-wrapper.ui.text .item{
+		max-width: 130px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 5px;
+		transform: scale(0.8);
+	}
+
+	.vocab-top-menu-wrapper.ui.text .item button.ui.button{		
+		padding: 7px 12px;
+	}
+
+}
+
+@media screen and (max-width: 992px) {
+	.vocab-top-menu-wrapper.ui.text {
+		flex-wrap: wrap;
+	}
+
+	.vocab-top-menu-wrapper.ui.text .item{
+		transform: scale(1);
+		max-width: auto;
+	}
+
+	.list.vocab-list .item{
+		padding: 12px;
+		justify-content: space-between;
+		width: 100%;
+	}	
+
+	.vocab-list.list .item, .ui.list.vocab-list > .item:first-child {
+		padding: 12px;
+		justify-content: space-between;
+	}	
+
+	.list.vocab-list .item .ui.buttons {
+		width:  80px;
+	}
+
+	.list.vocab-list .item .word-meaning.description {
+		display: none;
+	}
+
+	.list.vocab-list .item .ui.buttons .word-icon-wrapper {
+		margin: 0;
+	}
+
+	.ui.list.vocab-list .item .content.word-content {
+		width: calc(100% - 140px);
+	}	
+	.content.word-content a.header {
+		width: auto;
+		min-width: auto;
+		font-size: 10px;
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.ui.vertical.side-menu.menu {
+		width: 150px;
+	}
+
+	div.vocab-top-menu {
+		width: calc(100% - 210px);
+	}
+}
+
+@media screen and (max-width: 510px) {
+	.ui.vertical.side-menu.menu {
+		display: none;
+	}
+
+	div.vocab-top-menu {
+		width: calc(100% - 40px);
+	}
 }
